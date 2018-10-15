@@ -1,0 +1,198 @@
+%-------------------------------------------------------------------------------------
+%\documentclass[a4paper, 11pt, oneside, openany]{ThesisStyle}
+\documentclass[a4paper, 11pt, twoside, openany]{ThesisStyle}
+
+%-------------------------------------------------------------------------------------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{url}
+\usepackage{cite}
+\usepackage[nottoc]{tocbibind}
+\usepackage{multirow}
+\usepackage[left=1.2in, right=1in, top=1in, bottom=1in, includefoot, headheight=13.6pt]{geometry}
+\usepackage{array} %allow commands for the table columns specification
+\usepackage{subfigure} %for column figures
+\usepackage{floatflt} %for floating (wrapped) figures
+\usepackage[british]{babel} % For british english hyphenation patterns
+\usepackage[font=small, labelfont=bf]{caption} % Captions
+\usepackage{url} % Formatting for URL's i.e. http://www.rhizobia.co.nz
+\usepackage{microtype} % makes pdf look better
+\usepackage[nottoc]{tocbibind} % Table of contents
+\usepackage[hyperindex=true,pdftitle={Search for diboson resonances in the dijet final state with CMS},pdfauthor={Thea Klaeboe  Aarrestad},colorlinks=false,pagebackref=false,citecolor=blue,plainpages=false,filecolor=blue,linkcolor=blue,urlcolor=blue,pdfpagelabels]{hyperref} % colourlinks=false for printing 
+\usepackage{xspace}
+\usepackage{fancyhdr}
+\usepackage{wrapfig}
+\usepackage{afterpage}
+%\usepackage{feynman}
+%\usepackage[colorlinks=true,citecolor=blue,filecolor=blue,linkcolor=blue,urlcolor=blue,pdftex]{hyperref}
+%\usepackage{capt-of} % needed to put table next to a figure and have captions
+%\usepackage{natbib} % The best package for bibliographies
+%\usepackage[width=11cm,font=footnotesize,labelfont=bf, format=default,justification=centerlast]{caption} % Captions\usepackage{fancyhdr} % Change caption style; changes headers and page styles etc.
+%\usepackage{natbib}
+
+
+\usepackage{titlesec}
+
+\titleformat{\chapter}
+{\color{PineGreen}\normalfont\Large\bfseries}
+{\color{PineGreen}\thechapter}{1em}{}
+
+\titleformat{\section}
+{\color{PineGreen}\normalfont\Large\bfseries}
+{\color{PineGreen}\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\color{PineGreen}\normalfont\Large\bfseries}
+{\color{PineGreen}\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\color{PineGreen}\normalfont\Large\bfseries}
+{\color{PineGreen}\thesubsection}{1em}{}
+
+%-------------------------------------------------------------------------------------
+\pagestyle{fancy}
+% with this we ensure that the chapter and section
+% headings are in lowercase.
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{} % delete current setting for header and footer
+\fancyhead[LE,RO]{\bfseries\thepage}
+\fancyhead[LO]{\bfseries\rightmark}
+\fancyhead[RE]{\bfseries\leftmark}
+%\renewcommand{\headrulewidth}{0.5pt}
+%\renewcommand{\footrulewidth}{0pt}
+\addtolength{\headheight}{0.5pt} % make space for the rule
+%\fancypagestyle{plain}{%
+%\fancyhead{} % get rid of headers on plain pages
+%\renewcommand{\headrulewidth}{0pt} % and the line
+%-------------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------------------
+\providecommand{\FIXME}[1]{\textcolor{red}{{\sffamily{\bfseries{}FIXME:} #1}}}
+
+\newcommand{\mJ}{\ensuremath{m_{\text{jet}}}\xspace} 
+
+
+%-------------------------------------------------------------------------------------
+\input{ptdr-definitions.tex}
+
+%-------------------------------------------------------------------------------------
+%redefine the include macro - no page break with includes (doesn't work)
+%\usepackage{filehook}
+%\AtEndOfIncludes{%
+%  \global\let\savedclearpage\clearpage
+%  \global\let\clearpage\relax
+%}
+%\AfterIncludes{%
+%  \global\let\clearpage\savedclearpage
+%}
+
+%-------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------
+%\usepackage{lineno}
+%\linenumbers
+
+\begin{document}
+
+%TITLE
+\begin{titlepage}
+\input{titlepage.tex}
+\end{titlepage}
+
+\newpage\thispagestyle{empty}\mbox{}
+\newpage\thispagestyle{empty}\mbox{}
+
+% ABSTRACT		
+\vspace*{\fill}
+\begin{center}
+\Large
+{\color{PineGreen}\textbf{Abstract}}
+\input{abstract.tex}
+\end{center}
+\vspace*{\fill}
+
+
+\newpage\thispagestyle{empty}\mbox{}
+\newpage\thispagestyle{empty}\mbox{}
+
+% GERMAN ABSTRACT
+\vspace*{\fill}
+\begin{center}
+\Large
+{\color{PineGreen}\textbf{Zusammenfassung}}
+\end{center}
+\input{Zusammenfassung}
+\vspace*{\fill}
+
+% TABLE OF CONTENT
+\newpage\thispagestyle{empty}\mbox{}
+\normalsize
+\tableofcontents
+
+%chapter*{Acknowledgements}
+\newpage
+\pagenumbering{arabic}
+
+% INTRODUCTION
+\chapter*{Introduction}
+\label{ch:Introduction}
+\input{introduction.tex}
+
+% THEORY
+\chapter{The Standard Model and Beyond} %make HVT chapter, rename formalism
+\label{ch:theory}
+\input{theory.tex}
+
+% CMS
+\chapter{LHC and the CMS Detector}
+\label{ch:CMS}
+\input{cms.tex}
+
+% OBJECT RECONSTRUCTION
+\chapter{Object reconstruction} %..and simulation
+\label{ch:objreco}
+\input{objreco}
+
+% JET SUBSTRUCTURE TECHNIQUES
+\chapter{Jet substructure} 
+\label{ch:substr}
+\input{substr.tex}
+
+% DIBOSON SEARCHES
+\chapter{Diboson resonance searches in CMS}
+\label{ch:diboson}
+\input{diboson.tex}
+
+% LoLa
+\chapter{LoLa: A novel Machine Learning W-tagger for future analyses}
+\label{ch:lola}
+\input{lola.tex}
+	
+% SUMMARY			
+\chapter{Summary}					
+\input{summary.tex}
+
+% APPENDIX		
+\appendix
+\input{appendix.tex}
+
+%-------------------------------------------------------------------------------------
+\newpage
+\bibliographystyle{auto_generated}
+\bibliography{Bibliography}
+
+
+
+%-------------------------------------------------------------------------------------
+\end{document}
+%-------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------
