@@ -82,15 +82,6 @@ Integrated luminosity   &                                            &         &
 \end{table}
 
 
-
- % with the full Run 2 (2016-2017) dataset corresponding to around$\sim 80\textrm{fb}^{-1}$.
-
-
-
-
-
-
-
 \section{The CMS detector}
 
 The Compact Muon Solenoid (CMS) detector is true to its name; with a diameter of 15 meters and a weight of 14000 tons, it is 60 \% smaller but two times heavier than its general purpose counterpart, the ATLAS detector.
@@ -108,22 +99,43 @@ The muon detectors are alternated with three layers of steel return yoke respons
 
 \subsection{Coordinate system}
 To describe locations within the CMS detector, a Euclidian space coordinate system is used. Here, the positive z axis points along the beam pipe towards the west, the positive x axis points towards the center of the LHC ring, and the positive y axis upw towards the earths surface. Due to the cylindrical symmetry of the detector, polar coordinates are more convenient and most frequently encountered. In this scheme, the azimuthal angle $\phi$ is measured in the xy-plane, where $\phi=0$ correspond to the positive x axis and $\phi=\pi/2$ correspond to the positive y axis. The polar angle $\theta$ is measured with respect to the z axis, $\theta=0$ aligning with the positive and $\theta=\pi$ with the negative z axis.
-To define a particles angle with respect to the beam line, the pseudorapidity $\eta = -\textrm{ln tan}(\theta/2)$ is preferred over $\theta$. This is due to the fact that particle production is approximately constant as a function of pseudorapidity and, more importantly, because differences in pseudorapidity are Lorentz invariant under boosts along the z-axis when assuming massless particles.
-To measure angular difference between particles in the detector, the variable $\textrm{R}=\sqrt{\eta^2+\phi^2}$ is used, again Lorentz invariant under longitudinal boosts. A summary of the CMS coordinate system together with some example values are shown in Figure~\ref{fig:cms:cooordinates}.
+To define a particles angle with respect to the beam line, the pseudorapidity $\eta = -\ln{}\textrm{tan}(\theta/2)$ is preferred over $\theta$. This is due to the fact that particle production is approximately constant as a function of pseudorapidity and, more importantly, because differences in pseudorapidity are Lorentz invariant under boosts along the z-axis when assuming massless particles.
+To measure angular difference between particles in the detector, the variable $\textrm{R}=\sqrt{\eta^2+\phi^2}$ is used, again Lorentz invariant under longitudinal boosts. A summary of the CMS coordinate system together with some example values are shown in Figure~\ref{fig:cms:coordinates}.
 
 
 \begin{figure}[h] 
     \centering
-    \includegraphics[width=0.5\textwidth]{figures/cms/img_cms_coordinates.png}
+    \includegraphics[width=0.45\textwidth]{figures/cms/img_cms_coordinates.png}
     \caption{The CMS coordinate system~\cite{Lenzi:2013xpa}}
-    \label{fig:cms:cooordinates}
+    \label{fig:cms:coordinates}
 \end{figure}
 
 
 \subsection{Tracking detectors}
-The CMS tracker is responsible for accurately reconstructing the momentum of charged particles and consists of two parts: closest to the interaction point, and where the particle intensity is the highest, you find the silicon pixel detector. The pixel detector itself is s
+The CMS tracker is responsible for accurately reconstructing the momentum of charged particles and consists of two sub-detectors. Closest to the interaction point, and where the particle intensity is the highest, the silicon pixel detector is located. Upgraded in 2017, from the so-called Phase-0 to the Phase-1 layout, it is structured in four cylindrical barrel layers at radii 2.9, 6.8, 10.9 and 16.0 cm (the barrel pixel) and three disks in each of the forward regions placed at a distance from the nominal interaction point of 29.1, 39.6 and 51.6 cm (the forward pixel). A sketch of the current Phase-I pixel detector compared to the Phase-0 detector is shown in Figure~\ref{fig:cms:pixel}. The sensors located closest to the beam pipe are subject to hit intensities of $\mathcal{O}( \textrm{MHz}/\textrm{mm}^2 )$ which puts strict constraints on the maximum sensor size in order to minimize occupancy in the detector. The pixel sensors are \SI{100}{\micro\metre} x \SI{150}{\micro\metre} with a thickness of \SI{285}{\micro\metre}, and when counting both barrel and pixel sensors, sum up to a total of 79 million.
+
+\begin{figure}[h] 
+    \centering
+    \includegraphics[height=4cm,keepaspectratio]{figures/cms/20120828_01_pixel_phase1_largesharp.png}
+    \includegraphics[height=4cm,keepaspectratio]{figures/cms/20120827_01_pixel_phase1_04.png}
+    \caption{Left: The forward pixel detector layout before (bottom) and after (top) the Phase-I upgrade. Right: The barrel pixel detector before (left) and after (right) the Phase-I upgrade~\cite{Dominguez:1481838}.}
+    \label{fig:cms:pixel}
+\end{figure}
+
+As the hit intensity reduces as you go further away from the beam pipe, the pixel sensors are replaced by silicon strip sensors, making up the second of the two tracker sub-systems, the silicon strip tracker. There are ten strip layers in total, stretching out to a radius of roughly 130 cm. These are divided into four sections: The inner barrel (TIB) with four strip layers, the two inner endcaps (TID) consisting of three disks each, the outer barrel (TOB) consisting of 6 cylindrical layers and the two endcaps (TEC) with 9 strip layers each. A schematic overview of the strip tracker layout is shown in Figure~\ref{fig:cms:tracker}.
+The strips in the TIB and TID are 10 cm long, with a width of \SI{80}{\micro\metre} and a thickness of \SI{320}{\micro\metre}. The TOB and TEC sections consist of slightly larger strips of 25 cm x \SI{180}{\micro\metre} and a thickness of \SI{500}{\micro\metre}. The strip tracker has a total of 10 million detector strips and covers an area of $\sim 200 \textrm{ m}^2$.
+To prolong the silicon detector lifetime, the entire tracker (pixel and strip) is kept at a temperature of \SI{-20}{\celsius} through a liquid cooling system.
+THe tracker has a coverage up to $|\eta|<2.6$ and a resolution of roughly $\sigma / \PT \approx 1.5 \times 10^{-5} \PT \oplus 0.005$.
+
+\begin{figure}[h] 
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/cms/fig_cmstracker.png}
+    \caption{Schematic of the CMS silicon strip tracker and its four subsections: The inner barrel (TIB), inner endcaps (TID), the outer barrel (TOB) and the two endcaps (TEC)~\cite{Chatrchyan:2008aa}.}
+    \label{fig:cms:tracker}
+\end{figure}
 
 \subsection{Electromagnetic calorimeter}
+Following the tracking detectors is the electromagnetic crystal calorimeter (ECAL). Consisting of 76000 laterally segmented scintillating $\textrm{PbWO}_4$ crystals, the ECAL provides excellent photon energy reconstruction at the cost of
 \subsection{Hadronic calorimeter}
 \subsection{Muon chambers}
 \section{Trigger system: From collision to disk}
