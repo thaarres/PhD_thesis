@@ -108,15 +108,15 @@ The muon detectors are alternated with three layers of steel return yoke respons
 
 \subsection{Coordinate system}
 To describe locations within the CMS detector, a Euclidian space coordinate system is used. Here, the positive z axis points along the beam pipe towards the west, the positive x axis points towards the center of the LHC ring, and the positive y axis upw towards the earths surface. Due to the cylindrical symmetry of the detector, polar coordinates are more convenient and most frequently encountered. In this scheme, the azimuthal angle $\phi$ is measured in the xy-plane, where $\phi=0$ correspond to the positive x axis and $\phi=\pi/2$ correspond to the positive y axis. The polar angle $\theta$ is measured with respect to the z axis, $\theta=0$ aligning with the positive and $\theta=\pi$ with the negative z axis.
-To define a particles angle with respect to the beam line, the pseudorapidity $\eta = -ln tan(\theta/2)$ is preferred over $\theta$. This is due to the fact that particle production is approximately constant as a function of pseudorapidity and, more importantly, because differences in pseudorapidity are Lorentz invariant under boosts along the z-axis.
-To mearuring angular difference between particles in the detector
+To define a particles angle with respect to the beam line, the pseudorapidity $\eta = -\textrm{ln tan}(\theta/2)$ is preferred over $\theta$. This is due to the fact that particle production is approximately constant as a function of pseudorapidity and, more importantly, because differences in pseudorapidity are Lorentz invariant under boosts along the z-axis when assuming massless particles.
+To measure angular difference between particles in the detector, the variable $\textrm{R}=\sqrt{\eta^2+\phi^2}$ is used, again Lorentz invariant under longitudinal boosts. A summary of the CMS coordinate system together with some example values are shown in Figure~\ref{fig:cms:cooordinates}.
 
 
 \begin{figure}[h] 
     \centering
-    \includegraphics[width=1.0\textwidth]{figures/cms/img_cms_coordinates.png}
+    \includegraphics[width=0.5\textwidth]{figures/cms/img_cms_coordinates.png}
     \caption{The CMS coordinate system~\cite{Lenzi:2013xpa}}
-    \label{fig:cms:CMS}
+    \label{fig:cms:cooordinates}
 \end{figure}
 
 
