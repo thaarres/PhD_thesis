@@ -64,19 +64,19 @@ Run 2, and where this thesis begins, started in June 2015. With the accelerator 
 \begin{table}[]
 \begin{tabular}{| l | lllll |}
 \hline
-Parameter               & Units                                   & Nominal & 2015 & 2016 & 2017     \\
+Parameter               & Units                                      & Nominal & 2015 & 2016 & 2017     \\
 \hline
-Energy                  & {[}TeV{]}                               & 7.0     & 6.5  & 6.5  & 6.5      \\
-Bunch spacing           & {[}ns{]}                                & 25      & 25   & 25   & 25       \\
-Bunch intensity         & $\times10^{11}${[}protons/bunch{]}              & 1.15    & 1.15 & 1.15 & 1.2-1.45 \\
-Bunches per train       &                                         & 144     & 144  & 96   & 144      \\
-Total number of bunches &                                         & 2808    & 2244 & 2220 & 2556     \\
-$\beta*$                & {[}cm{]}                                       & 55      & 80   & 40   & 27/25    \\
+Energy                  & {[}TeV{]}                                  & 7.0     & 6.5  & 6.5  & 6.5      \\
+Bunch spacing           & {[}ns{]}                                   & 25      & 25   & 25   & 25       \\
+Bunch intensity         & $\times10^{11}${[}protons/bunch{]}         & 1.15    & 1.15 & 1.15 & 1.2-1.45 \\
+Bunches per train       &                                            & 144     & 144  & 96   & 144      \\
+Total number of bunches &                                            & 2808    & 2244 & 2220 & 2556     \\
+$\beta*$                & {[}cm{]}                                   & 55      & 80   & 40   & 27/25    \\
 Peak luminosity         & $\times 10^{34} [\textrm{cm}^{-2} s^{-1}]$ & 1.0     & 0.5  & 1.4  & 2.0      \\
-Integrated luminosity   &                                         &         & 4.2  & 39.7 & 50.2    \\
+Integrated luminosity   &                                            &         & 4.2  & 39.7 & 50.2     \\
 \hline
 \end{tabular}
-\caption{Some key LHC detector parameters achieved during the first years of 13 TeV data taking, 2015-2017.}
+\caption{Some key LHC detector parameters achieved during the first years of 13 TeV data taking}
 \label{tab:LHCparameters}
 %https://indico.cern.ch/event/663598/contributions/2782540/,https://indico.cern.ch/event/580313/contributions/2359285/attachments/1396590/2135891/Operation_in_2016_v1_1.pdf, http://iopscience.iop.org/article/10.1088/1748-0221/3/08/S08001/pdf
 \end{table}
@@ -94,19 +94,35 @@ Integrated luminosity   &                                         &         & 4.
 \section{The CMS detector}
 
 The Compact Muon Solenoid (CMS) detector is true to its name; with a diameter of 15 meters and a weight of 14000 tons, it is 60 \% smaller but two times heavier than its general purpose counterpart, the ATLAS detector.
-Its large weight is due to the CMS housing the worlds largest and most powerful solenoid, a superconducting niobium titanium coil circulating 18500 Amps capable of generating a magnetic field of 3.8 Tesla.
-The CMS detector is cylindrically symmetric and organized in the following way: closest to the beam pipe
+Its large weight is due to the CMS housing the worlds largest and most powerful solenoid: A superconducting niobium titanium coil circulating 18500 Amps and capable of generating a magnetic field of 3.8 Tesla. Together with its corresponding iron return yoke, responsible for reflecting the escaping magnetic flux, it accounts for 90\% of the total detector weight.
+The CMS detector is cylindrically symmetric and organized in the following way: closest to the beam pipe and at a radius of about 3 cm, the inner tracking system begins. It consists of an inner silicon pixel detector and an outer silicon strip tracker, stretching out to a radius of roughly 1.2 meters. Following the tracker are two calorimeter layers: the electromagnetic calorimeter (ECAL) consisting of lead tungstate scintillating crystals and responsible for measuring the energy of electromagnetically interacting particles, followed by the hermetic hadronic calorimeter (HCAL) measuring the energy of hadrons.
+Contrary to "standard" configurations for general purpose detectors, the CMS calorimeters are located inside the superconducting solenoid. This allows the detector to be rather compact, by reducing the necessary radius of the calorimeters, and additionally for the magnet to be strong enough (the magnetic field strength depends on the coil radius) to allow muon detectors to be located within the magnetic field so their momentum can be measured.
+The muon detectors are alternated with three layers of steel return yoke responsible for containing and reflecting the magnetic field and which only allows muons and weakly interacting particles to pass. A schematic overview of the CMS detector is shown in Figure~\ref{fig:cms:CMS}. In the following, the different sub-detectors will be described in detail.
 
 \begin{figure}[h] 
     \centering
     \includegraphics[width=1.0\textwidth]{figures/cms/CMS.png}
-    \caption{The CMS detector and its subsystems: The silicon tracker, electromagnetic and hadron calorimeters, the superconducting solenoid and muon chambers~\cite{CMS}.}
+    \caption{The CMS detector and its subsystems: The silicon tracker, electromagnetic and hadron calorimeters, the superconducting solenoid and the muon chambers inter-layered with the steel return yoke~\cite{CMS}.}
+    \label{fig:cms:CMS}
+\end{figure}
+
+\subsection{Coordinate system}
+To describe locations within the CMS detector, a Euclidian space coordinate system is used. Here, the positive z axis points along the beam pipe towards the west, the positive x axis points towards the center of the LHC ring, and the positive y axis upw towards the earths surface. Due to the cylindrical symmetry of the detector, polar coordinates are more convenient and most frequently encountered. In this scheme, the azimuthal angle $\phi$ is measured in the xy-plane, where $\phi=0$ correspond to the positive x axis and $\phi=\pi/2$ correspond to the positive y axis. The polar angle $\theta$ is measured with respect to the z axis, $\theta=0$ aligning with the positive and $\theta=\pi$ with the negative z axis.
+To define a particles angle with respect to the beam line, the pseudorapidity $\eta = -ln tan(\theta/2)$ is preferred over $\theta$. This is due to the fact that particle production is approximately constant as a function of pseudorapidity and, more importantly, because differences in pseudorapidity are Lorentz invariant under boosts along the z-axis.
+To mearuring angular difference between particles in the detector
+
+
+\begin{figure}[h] 
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/cms/img_cms_coordinates.png}
+    \caption{The CMS coordinate system~\cite{Lenzi:2013xpa}}
     \label{fig:cms:CMS}
 \end{figure}
 
 
-Contrary to "standard" configurations for general purpose detectors,
-\subsection{Pixel detector and strip tracker}
+\subsection{Tracking detectors}
+The CMS tracker is responsible for accurately reconstructing the momentum of charged particles and consists of two parts: closest to the interaction point, and where the particle intensity is the highest, you find the silicon pixel detector. The pixel detector itself is s
+
 \subsection{Electromagnetic calorimeter}
 \subsection{Hadronic calorimeter}
 \subsection{Muon chambers}
