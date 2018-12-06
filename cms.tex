@@ -138,20 +138,42 @@ The tracker has a coverage up to $|\eta|<2.6$ and a resolution of roughly $\sigm
 Following the tracking detectors is the electromagnetic crystal calorimeter (ECAL). Consisting of 75 848 laterally segmented scintillating lead tungstate ($\textrm{PbWO}_4$) crystals, it was designed to have the highest possible photon energy and position resolution in order to resolve a Higgs boson decaying into two photons, the cleanest of the Higgs discovery channels. 
 With a goal of a photon/electron energy resolution of 0.5\% above 100 \GeV, the choice of detector material for the ECAL has been its most crucial design feature. 
 In order to withstand the high doses of radiation and the high magnetic field present within the detector, while at the same time generating well-defined signal responses within the 25 nanoseconds between particle collisions, an extremely dense and transparent material capable of producing fast and clean photon bursts when hit, is required. 
-The choice fell on the metal heavy lead tungstate crystals. With a density of $\delta=8.28 \textrm{ g}/\textrm{ cm}^3$, the crystals are compact enough to yield excellent performance without taking up too much volume, allowing the ECAL to sit within the CMS superconducting solenoid. The homogeneous medium allows for a better energy resolution as it minimizes sampling fluctuation effects and it additionally contains enough oxygen in crystalline form to make it highly transparent to their entire scintillation
-emission spectrum. With an extremely short radiation length and small Moliére radius ($\textrm{X}_0=0.85$ \cm, $$\textrm{R}_M=2.19$$ \cm), the required homogeneity, granularity and compactness could be achieved while at the same time emitting 80\% of generated light within the 25 ns timeframe required. 
-The ECAL is sorted into a barrel part (EB), covering pseudorapidities up to $|\eta|<1.48$, and two endcap parts (EE) extending the total coverage to $|\eta|<3.0$ in order to match the tracker coverage of $|\eta|<2.5$. In order to improve the $\gamma/\pi_0$ separation power, a pre-shower detector (ES) using lead absorbers and silicon sensors covers the forward region between $1.65<|\eta|<2.6$. The  crystals in the barrel are organized into supermodules, each consisting of about 1700 crystals, while the endcap is divided into to half disks consisting of 3662 crystals each. The ECAL detector layout is illustrated in Figure~\ref{fig:cms:ecal}.
+The choice eventually fell on  metal-heavy lead tungstate crystals, each taking roughly two days to artificially grow (and a total of about ten years to grow all of them). With a density of $\delta=8.28 \textrm{ g}/\textrm{ cm}^3$ (slightly higher than for stainless steel), the crystals are compact enough to yield excellent performance without taking up too much volume, allowing the ECAL to sit within the CMS superconducting solenoid. The homogeneous medium allows for a better energy resolution as it minimizes sampling fluctuation effects and it additionally contains enough oxygen in crystalline form to make it highly transparent to their entire scintillation
+emission spectrum. With an extremely short radiation length and small Moliére radius ($\textrm{X}_0=0.85$ \cm, $$\textrm{R}_M=2.19$$ \cm), the required homogeneity, granularity and compactness is obtained while at the same time emitting 80\% of generated light within the 25 ns timeframe required. The largest drawbacks with  a lead tungstate detector is the low light yield (100 $\gamma$ per MeV), requiring dedicated avalanche photodiodes to increase the gain, as well as a light yield which strongly depends on the temperature. The detector response to an
+incident electron changes by 3.8 $\pm$ 0.4 \% per degree Celsius which requires the ECAL temperature to be kept stable around 18 \SI{18 \pm 0.05}{\degreeCelsius}, obtained through an intricate water cooling system.
+The ECAL is completely hermetic and sorted into a barrel part (EB), covering pseudorapidities up to $|\eta|<1.48$, and two endcap parts (EE) extending the total coverage to $|\eta|<3.0$ in order to match the tracker coverage of $|\eta|<2.5$. In order to improve the $\gamma/\pi_0$ separation power, a pre-shower detector (ES) using lead absorbers and silicon sensors covers the forward region between $1.65<|\eta|<2.6$.
+The  crystals in the barrel are organized into supermodules, each consisting of about 1700 crystals, while the endcap is divided into to half disks consisting of 3662 crystals each (so-called "Dees").
+Each $\textrm{PbWO}_4$ crystal weighs around 1.5 kilogram and has a slightly tapered shape with a front face of 2.2 x 2.2 $\cm^2$ in the barrel and 2.86 x 2.86 $\cm^2$ in the endcaps. The crystals are 2.3 and 2.2 \cm long in the barrel and endcaps, respectively. The total volume of the calorimeter including barrel and endcaps is 11 $\textrm{m}^2$ and weighs a total of 92 tons.
+The ECAL detector layout is illustrated in Figure~\ref{fig:cms:ecal}.
 
 
 \begin{figure}[h] 
     \centering
-    \includegraphics[width=1.0\textwidth]{figures/cms/ecal.jpg}
-    \caption{A schematic of the CMS electromagnetic calorimeter showing the barrel supermodules (yellow), the individual barrel crystals (top left), the endcap modules (green) and the pre-shower detectors (pink)~\cite{Chatrchyan:2008aa}.}
+    \includegraphics[width=0.7\textwidth]{figures/cms/ecal.jpg}
+    \caption{A schematic of the CMS electromagnetic calorimeter showing the barrel supermodules (yellow), the individual barrel crystals (black,top left), the endcap modules (green) and the pre-shower detectors (pink)~\cite{Chatrchyan:2008aa}.}
     \label{fig:cms:ecal}
 \end{figure}
 
+Having no longitudinal segmentation, the ECAL relies on an accurate reconstruction of the event primary vertex, provided by the tracker, in order to reconstruct the photon angle correctly.
 
-Each $\textrm{PbWO}_4$ crystal weighs around 1.5 kilogram and has a slightly tapered shape with a front face of 2.2 x 2.2 $\cm^2$ in the barrel and 2.86 x 2.86 $\cm^2$ in the endcaps.
-\subsection{Hadronic calorimeter}
+The obtained energy resolution of the ECAL can be parametrized in three parts: a stochastic, a noise and a constant term~\cite{Adzic:2007mi}. It is given as
+
+\begin{equation*}
+  \frac{\sigma \textrm{E}}{\textrm{E}} = \frac{2.8 \%}{\sqrt{\textrm{E}}}\oplus\frac{0.128 \GeV}{\textrm{E}}\oplus 0.3 \%
+\end{equation*}
+
+where the constant values were estimated in an electron test beam. The constant term of $0.3 \%$ is dominated by the non-uniformity in longitudinal light collection~\cite{1742-6596-587-1-012001}, and one of the main goals of the detector design was to get this term below 1\%. The energy resolution as a function of electron energy is shown in Figure~\ref{fig:cms:ecal-res}.
+
+\begin{figure}[h] 
+    \centering
+    \includegraphics[width=0.6\textwidth]{figures/cms/ECAL-energy-resolution.pdf}
+    \caption{The ECAL energy resolution as a function of electron energy as measured in an electron test beam.}
+    \label{fig:cms:ecal-res}
+\end{figure}
+
+
+\subsection{Hadron calorimeter}
+Hadrons are heavier than electrons and muons and usually traverses the ECAL without decaying. Instead they are stopped in the hadronic calorimeter (HCAL) by alternating layers of dense absorber material and plastic scintillators. The hadron calorimeter is split into two parts: the inner
+
 \subsection{Muon chambers}
 \section{Trigger system: From collision to disk}
