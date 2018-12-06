@@ -173,7 +173,12 @@ where the constant values were estimated in an electron test beam. The constant 
 
 
 \subsection{Hadron calorimeter}
-Hadrons are heavier than electrons and muons and usually traverses the ECAL without decaying. Instead they are stopped in the hadronic calorimeter (HCAL) by alternating layers of dense absorber material and plastic scintillators. The hadron calorimeter is split into two parts: the inner
+Outside the crystal calorimeter is the hadron calorimeter (HCAL). It is the combined response of the ECAL and the HCAL that are responsible for measuring the energy of quarks, gluons and neutrinos through the reconstruction of particle jet energy and missing transverse energy. 
+The HCAL is a sampling calorimeter, meaning it consists of alternating layers of dense brass absorber material and plastic scintillators. When a particle hits an absorber plate, it interacts with the absorber material and generates a shower of secondary particles which themselves generate new particle showers. These particles then generate light in the scintillating material which is proportional to their energy, and summing up the total amount of generated light over consecutive layers within a region, called a "tower", is representative of the initial particles energy.
+The hadron calorimeter is split into four regions: the inner (HB) and outer (HO) barrel, the endcap (HE) and the forward region (HF).
+The inner barrel lies within the superconducting solenoid volume and covers the pseudorapidity range $|\eta|<1.3$.
+It consists of 36 identical wedges, each of which weighing 26 tonnes, split into two half barrels (HB+ and HB-).
+The wedges are made up of flat brass absorber plates oriented parallel to the beam axis. 
 
 \subsection{Muon chambers}
 \section{Trigger system: From collision to disk}
