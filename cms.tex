@@ -112,10 +112,10 @@ To measure angular difference between particles in the detector, the variable $\
 
 
 \subsection{Tracking detectors}
-The CMS tracker is responsible for accurately reconstructing the momentum of charged particles and consists of two sub-detectors. Closest to the interaction point, and where the particle intensity is the highest, the silicon pixel detector is located. Upgraded in 2017, from the so-called Phase-0 to the Phase-1 layout, it is structured in four cylindrical barrel layers at radii 2.9, 6.8, 10.9 and 16.0 cm (the barrel pixel) and three disks in each of the forward regions placed at a distance from the nominal interaction point of 29.1, 39.6 and 51.6 cm (the forward pixel). A sketch of the current Phase-I pixel detector compared to the Phase-0 detector is shown in Figure~\ref{fig:cms:pixel}. The sensors located closest to the beam pipe are subject to hit intensities of $\mathcal{O}( \textrm{MHz}/\textrm{mm}^2 )$ which puts strict constraints on the maximum sensor size in order to minimize occupancy in the detector. The pixel sensors are \SI{100}{\micro\metre} x \SI{150}{\micro\metre} with a thickness of \SI{285}{\micro\metre}, and when counting both barrel and pixel sensors, sum up to a total of 79 million.
+The CMS tracker is responsible for accurately reconstructing the momentum of charged particles and consists of two sub-detectors. Closest to the interaction point, and where the particle intensity is the highest, the silicon pixel detector is located. Upgraded in 2017, from the so-called Phase-0 to the Phase-1 layout, it is structured in four cylindrical barrel layers at radii 2.9, 6.8, 10.9 and 16.0 cm (the barrel pixel) and three disks in each of the forward regions placed at a distance from the nominal interaction point of 29.1, 39.6 and 51.6 cm (the forward pixel). A sketch of the current Phase-I pixel detector compared to the Phase-0 detector is shown in Figure~\ref{fig:cms:pixel}. The sensors located closest to the beam pipe are subject to hit intensities of $\mathcal{O}( \textrm{MHz}/\textrm{mm}^2 )$ which puts strict constraints on the maximum sensor size in order to minimize occupancy in the detector. The pixel sensors are \SI{100}{\micro\metre} x \SI{150}{\micro\metre} with a thickness of \SI{285}{\micro\metre}, and when counting both barrel and pixel sensors, sum up to a total of 79 million. The pixel sensors are mounted on detector modules with 16 read-out chips each, where the type of read-out chip depends on how close the module is to the beam pipe: the inner layer uses read-out chips with a rate capability of 600 MHz/$\textrm{cm}^2$ while for the outer layers, read-out chips with a rate capability of up to 200 MHz/$\textrm{cm}^2$ are sufficient.
 
 \begin{figure}[h] 
-    \centering
+    \centering  
     \includegraphics[height=4cm,keepaspectratio]{figures/cms/20120828_01_pixel_phase1_largesharp.png}
     \includegraphics[height=4cm,keepaspectratio]{figures/cms/20120827_01_pixel_phase1_04.png}
     \caption{Left: The forward pixel detector layout before (bottom) and after (top) the Phase-I upgrade. Right: The barrel pixel detector before (left) and after (right) the Phase-I upgrade~\cite{Dominguez:1481838}.}
@@ -125,7 +125,7 @@ The CMS tracker is responsible for accurately reconstructing the momentum of cha
 As the hit intensity reduces as you go further away from the beam pipe, the pixel sensors are replaced by silicon strip sensors, making up the second of the two tracker sub-systems, the silicon strip tracker. There are ten strip layers in total, stretching out to a radius of roughly 130 cm. These are divided into four sections: The inner barrel (TIB) with four strip layers, the two inner endcaps (TID) consisting of three disks each, the outer barrel (TOB) consisting of 6 cylindrical layers and the two endcaps (TEC) with 9 strip layers each. A schematic overview of the strip tracker layout is shown in Figure~\ref{fig:cms:tracker}.
 The strips in the TIB and TID are 10 cm long, with a width of \SI{80}{\micro\metre} and a thickness of \SI{320}{\micro\metre}. The TOB and TEC sections consist of slightly larger strips of 25 cm x \SI{180}{\micro\metre} and a thickness of \SI{500}{\micro\metre}. The strip tracker has a total of 10 million detector strips and covers an area of $\sim 200 \textrm{ m}^2$.
 To prolong the silicon detector lifetime, the entire tracker (pixel and strip) is kept at a temperature of \SI{-20}{\celsius} through a liquid cooling system.
-THe tracker has a coverage up to $|\eta|<2.6$ and a resolution of roughly $\sigma / \PT \approx 1.5 \times 10^{-5} \PT \oplus 0.005$.
+The tracker has a coverage up to $|\eta|<2.6$ and a resolution of roughly $\sigma / \PT \approx 1.5 \times 10^{-5} \PT \oplus 0.005$.
 
 \begin{figure}[h] 
     \centering
@@ -135,7 +135,14 @@ THe tracker has a coverage up to $|\eta|<2.6$ and a resolution of roughly $\sigm
 \end{figure}
 
 \subsection{Electromagnetic calorimeter}
-Following the tracking detectors is the electromagnetic crystal calorimeter (ECAL). Consisting of 76000 laterally segmented scintillating $\textrm{PbWO}_4$ crystals, the ECAL provides excellent photon energy reconstruction at the cost of
+Following the tracking detectors is the electromagnetic crystal calorimeter (ECAL). Consisting of 75 848 laterally segmented scintillating lead tungstate ($\textrm{PbWO}_4$) crystals, it was designed to have the highest possible photon energy and position resolution in order to resolve a Higgs boson decaying into two photons, the cleanest of the Higgs discovery channels. 
+With a goal of a photon/electron energy resolution of 0.5\% above 100 GeV, the choice of detector material for the ECAL has been its most crucial design feature. 
+In order to withstand the high doses of radiation and the high magnetic field present within the detector, while at the same time generating well-defined signal responses within the 25 nanoseconds between particle collisions, an extremely dense and transparent material capable of producing fast and clean photon bursts when hit, is required. 
+The choice fell on the metal heavy lead tungstate crystals. With a density of $\delta=8.28 \textrm{ g}/\textrm{ cm}^3$, the crystals are compact enough to yield excellent performance without taking up too much volume, allowing the ECAL to sit within the CMS superconducting solenoid. The homogeneous medium allows for a better energy resolution as it minimizes sampling fluctuation effects and it additionally contains enough oxygen in crystalline form to make it highly transparent to their entire scintillation
+emission spectrum. With an extremely short radiation length and small Moliére radius ($\textrm{X}_0=0.85$ cm, $$\textrm{R}_M=2.19$$ cm), the required homogeneity, granularity and compactness could be achieved
+Each crystal weighs around 1.5 kilogram and has a slightly tapered shape with a front face of 22 × 22 mm2 and
+28.6×28.6 mm2
+in the barrel and the endcaps, respectively, a fine granularity is ensured.
 \subsection{Hadronic calorimeter}
 \subsection{Muon chambers}
 \section{Trigger system: From collision to disk}
