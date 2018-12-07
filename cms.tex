@@ -167,7 +167,7 @@ where the constant values were estimated in an electron test beam. The constant 
 \begin{figure}[h] 
     \centering
     \includegraphics[width=0.6\textwidth]{figures/cms/ECAL-energy-resolution.pdf}
-    \caption{The ECAL energy resolution as a function of electron energy as measured in an electron test beam.}
+    \caption{The ECAL energy resolution as a function of electron energy as measured in an electron test beam.~\cite{Adzic:2007mi}}
     \label{fig:cms:ecal-res}
 \end{figure}
 
@@ -176,9 +176,35 @@ where the constant values were estimated in an electron test beam. The constant 
 Outside the crystal calorimeter is the hadron calorimeter (HCAL). It is the combined response of the ECAL and the HCAL that are responsible for measuring the energy of quarks, gluons and neutrinos through the reconstruction of particle jet energy and missing transverse energy. 
 The HCAL is a sampling calorimeter, meaning it consists of alternating layers of dense brass absorber material and plastic scintillators. When a particle hits an absorber plate, it interacts with the absorber material and generates a shower of secondary particles which themselves generate new particle showers. These particles then generate light in the scintillating material which is proportional to their energy, and summing up the total amount of generated light over consecutive layers within a region, called a "tower", is representative of the initial particles energy.
 The hadron calorimeter is split into four regions: the inner (HB) and outer (HO) barrel, the endcap (HE) and the forward region (HF).
+A schematic of the CMS HCAL is shown in Figure~\ref{fig:cms:hcal}.
+
+\begin{figure}[h] 
+    \centering
+    \includegraphics[width=0.6\textwidth]{figures/cms/HCAL.png}
+    \caption{The four regions of the CMS hadron calorimeter:  the inner (HB) and outer (HO) barrel, the endcap (HE) and the forward region (HF)~\cite{Chatrchyan:2008aa}}
+    \label{fig:cms:hcal}
+\end{figure}
+
 The inner barrel lies within the superconducting solenoid volume and covers the pseudorapidity range $|\eta|<1.3$.
 It consists of 36 identical wedges, each of which weighing 26 tonnes, split into two half barrels (HB+ and HB-).
-The wedges are made up of flat brass absorber plates oriented parallel to the beam axis. The absorber plates consist of a 4 \cm thick front steel plate followed by eight 5 \cm thick brass plates, six 5.6 \cm thick brass plates and ending with a 7.5 \cm thick steel back plate. These plates are
+A photograph of the wedges taken during installation is shown in Figure~\ref{fig:cms:hcal-wedges}. 
+
+\begin{figure}[h] 
+    \centering
+    \includegraphics[width=0.6\textwidth]{figures/cms/hcal-2000-010_02.jpg}
+    \caption{The installation of the barrel HCAL wedges consisting of alternating layers of brass absorber plates and plastic scintillator, each weighing roughly 26 tonnes~\cite{Veillet:41645}.}
+    \label{fig:cms:hcal-wedges}
+\end{figure}
+
+The wedges are made up of flat brass absorber plates oriented parallel to the beam axis. These plates consist of a 4 \cm thick front steel plate followed by eight 5 \cm thick brass plates, six 5.6 \cm thick brass plates and ending with a 7.5 \cm thick steel back plate. The absorber plates are then alternated by 4 mm thick plastic scintillator tiles, the detectors active medium, which are read out using wavelength-shifting plastic fibers. The effective thickness of the barrel hadron calorimeter in terms of interaction lengths increases with the polar angle $\theta$, starting out at about 5.8 $\lambda_I$ at an angle of 90 degrees, and increases to 10.6 $\lambda_I$ at $|\eta|<1.3$.
+As the energy resolution of the calorimeter depends on how much of the particles shower can be absorbed by the calorimeter, the quality of the energy measurement depends on its thickness. Due to the CMS design, the HB is confined to the volume between the ECAL (ending at a radius of 1.77 m) and the magnetic coil (starting at a radius of 2.95 m).
+In the central $\eta$ region, the combined ECAL and HCAL interaction length is too small to sufficiently contain hadron showers. 
+In order to ensure adequate sampling, especially of late starting showers, an additionally layer of scintillator has therefore been added outside of the solenoid coil. This is the outer barrel (HO). It uses the coil itself as absorbing material and increases the total barrel calorimeter interaction length to 11.8 $\lambda_I$.
+The hadron calorimeter endcaps (HE) are located in the forward region close to the beam pipe and covers the pseudorapidity range $1.3 < |\eta|< 3.0$, a region containing about 35 \% of the particles produced in collisions. Due to its close proximity to the beam pipe, the endcaps need to handle extremely high rates as well as have a high radiation tolerance.
+As the resolution in the endcap region anyways is limited by pile-up and magnetic field effects, the hadron calorimeter endcaps were designed to minimize the cracks between HB and HE rather than having the best single-particle resolution (as is the case for the barrel).
+The absorber plates in the endcaps are mounted in a staggered geometry rather than on top of each other as is done in the barrel, in order to contain no dead material and provide a hermetic self-supporting construction.
+In the very forward region, to achieve the most hermetic calorimeter possible, you find the hadron forward calorimeter (HF).
+Stretching out to a pseudorapidity of $|\eta|= 5.2$, this detector is located so close to the beam pipe that the particle rate exceeds 10
 
 \subsection{Muon chambers}
 \section{Trigger system: From collision to disk}
