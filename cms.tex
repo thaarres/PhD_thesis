@@ -203,6 +203,7 @@ In order to ensure adequate sampling, especially of late starting showers, an ad
 The hadron calorimeter endcaps (HE) are located in the forward region close to the beam pipe and covers the pseudorapidity range $1.3 < |\eta|< 3.0$, a region containing about 35 \% of the particles produced in collisions. Due to its close proximity to the beam pipe, the endcaps need to handle extremely high rates as well as have a high radiation tolerance.
 As the resolution in the endcap region anyways is limited by pile-up and magnetic field effects, the hadron calorimeter endcaps were designed to minimize the cracks between HB and HE rather than having the best single-particle resolution (as is the case for the barrel).
 The absorber plates in the endcaps are mounted in a staggered geometry rather than on top of each other as is done in the barrel, in order to contain no dead material and provide a hermetic self-supporting construction.
+The HCAL is read out in individual towers with a size $\Delta \eta \times \Delta \phi = 0.087 \times 0.087$ in the barrel, and $0.17 \times 0.17$ at larger pseudorapidities. 
 In order to obtain a ~completely hermetic calorimeter, an additional hadron forward calorimeter (HF) is added in the very forward region.
 Stretching out to a pseudorapidity of $|\eta|= 5.2$, this detector is located so close to the beam pipe that the particle rate exceeds $10^{11}$ per $\cm^2$, receiving roughly 760 GeV per proton-proton collision compared to an average of 100 GeV for the rest of the detector. It consists of a cylindrical steel structure with an outer radius of 130 \cm and and inner radius of 12.5 \cm, located 11.2 meters from the interaction points. Also a sampling calorimeter, it consists of grooved 5 mm thick steel absorber plates, where the quartz fiber active medium is inserted into these grooves.
 The energy resolution of the CMS ECAL and HCAL for pions is measured in a test beam as a function of energy and is shown in Figure~\ref{fig:cms:hcal-res}.
@@ -214,7 +215,7 @@ The energy resolution of the CMS ECAL and HCAL for pions is measured in a test b
     \caption{The calorimeter energy resolution as a function of pion energy using the HB only or HB+HO (left) and when adding ECal and HCal measurements (right)~\cite{Sharma2007}.}
     \label{fig:cms:hcal-res}
 \end{figure}
-
+The typical HCAL electronics noise is measured to be ~200 \MeV per tower.
 The inclusion of the HO increases the resolution by 10 \% for a pion energy of 300 GeV.
 The final energy resolution parametrization when using ECal+HB+HO is given by a stochastic and a constant term, as for ECAL, and is
 \begin{equation*}
@@ -227,13 +228,13 @@ In order to do so, the muon system is made up of three types of gaseous particle
 In the barrel region, where particle rates are low and the magnetic field uniform, DT chambers are used and cover the pseudorapidity region $|\eta|< 1.2$. In the endcap regions, however, the muon rates and background levels are considerably higher and the magnetic field itself is large and non-uniform. Here; faster, finer segmented and more radiation hard CSCs are used, covering the region $0.9 < |\eta|< 2.4$.
 To ensure accurate muon triggering, a complimentary dedicated muon triggering system has been added both in the barrel and in the endcaps. Made out of RPCs, they provide an excellent time resolution at a sharp $\PT$ threshold and cover the region $|\eta|< 1.6$
 These chambers also assist in resolving ambiguities if multiple hits are present within a DT/CS chamber.
-A schematic overview of the muon system is shown in
+A schematic overview of the muon system is shown in Figure~\ref{fig:cms:muon-sys}.
 
 \begin{figure}[h] 
     \centering
     \includegraphics[width=0.49\textwidth]{figures/cms/MuonSys.png}
     \caption{A schematic overview of the muon chambers: the DT chambers in the barrel, the CSCs in the endcaps and the redundant RPC system stretching out to $|\eta|< 1.6$ and used for triggering purposes~\cite{Kim:1477844}.}
-    \label{fig:cms:hcal-res}
+    \label{fig:cms:muon-sys}
 \end{figure}
 
 

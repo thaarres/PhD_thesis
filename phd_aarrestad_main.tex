@@ -38,10 +38,24 @@
 
 
 \usepackage{titlesec}
+\usepackage{lipsum}
 
-\titleformat{\chapter}
-{\color{CadetBlue}\normalfont\Large\bfseries}
-{\color{CadetBlue}\thechapter}{1em}{}
+\titleformat{\chapter}[display]
+{\color{CadetBlue}\normalfont\Large\filcenter\sffamily}
+{\vspace*{\fill}
+ \titlerule[1pt]%
+ \vspace{1pt}%
+ \titlerule
+ \vspace{1pc}%
+ \LARGE\MakeUppercase{\chaptertitlename}~\thechapter}
+{1pc}
+{\titlerule\Huge}
+
+
+
+%\titleformat{\chapter}
+%{\color{CadetBlue}\normalfont\Large\bfseries}
+%{\color{CadetBlue}\thechapter}{1em}{}
 
 \titleformat{\section}
 {\color{CadetBlue}\normalfont\Large\bfseries}
@@ -149,16 +163,20 @@
 % THEORY
 \chapter{The Standard Model and Beyond} %make HVT chapter, rename formalism
 \label{ch:theory}
+\vspace*{\fill}\newpage
 \input{theory.tex}
+\vspace*{\fill}\newpage
 
 % CMS
 \chapter{Experimental setup}
 \label{ch:CMS}
+\vspace*{\fill}\newpage
 \input{cms.tex}
 
 % OBJECT RECONSTRUCTION
 \chapter{Event reconstruction} %..and simulation
 \label{ch:objreco}
+\vspace*{\fill}\newpage
 \input{objreco}
 
 % JET SUBSTRUCTURE TECHNIQUES
@@ -169,15 +187,18 @@
 % DIBOSON SEARCHES
 \chapter{Diboson resonance searches in CMS}
 \label{ch:diboson}
+\vspace*{\fill}\newpage
 \input{diboson.tex}
 
 % LoLa
 \chapter{LoLa: A novel Machine Learning W-tagger for future analyses}
 \label{ch:lola}
+\vspace*{\fill}\newpage
 \input{lola.tex}
 	
 % SUMMARY			
-\chapter{Summary}					
+\chapter{Summary}		
+\vspace*{\fill}\newpage			
 \input{summary.tex}
 
 % APPENDIX		

@@ -1,5 +1,14 @@
 \section{Track and primary vertex reconstruction}
 The CMS tracker gets traversed by $\mathcal{O}~1000$ charged particles at each bunch crossing, produced by an average of roughly 34 proton-proton interactions happening ~simultaneously. This makes track reconstructions extremely challenging, and is the reason why a high granularity of the tracker is vital.
+The average number or vertices per event for the whole Run 2 is shown in Figure~\ref{fig:objreco:pu}, with a combined average of 34 number of interactions per bunch crossing.
+
+\begin{figure}[h] 
+    \centering
+    \includegraphics[width=0.49\textwidth]{figures/event_reconstruction/pu.pdf}
+    \caption{The average number of vertices per event in CMS during the Run 2 datataking~\cite{CMSlumi}.}
+    \label{fig:objreco:pu}
+\end{figure}
+
 Track reconstruction describes the process of taking hits from the pixel and strip detectors, combining them and estimating the momentum and flight direction of the charged particle responsible for producing the hits. It is an extremely computationally heavy process and is based on what is called a combinatorial Kalman filter~\cite{BILLOIR1989390}. A Kalman filter is an algorithm that uses time-dependent observations in order to estimate unknown variables, by proceeding progressively from one measurement to the next, improving the knowledge of the
 trajectory with each new measurement. The track reconstruction software in CMS (called the Combinatorial Track Finder (CTF)) constructs its collection of tracks by iteratively looping over the hits and reconstructing tracks, then removing those which are already used as inputs for a previous track. It starts from a seed in the inner most tracker layers, usually two or three hits, and then extrapolates the seed trajectories searching for additional hits to associate to that candidate. It then disregards tracks that fail certain criteria  based on a $\chi^2$ calculation taking both hit and trajectory uncertainties into account, as well as the number of missing hits.
 The track reconstruction algorithm is effective over the full tracker coverage range up to $|\eta|<2.5$ and can reconstruct particles with momenta as low as 0.1 GeV or particles which are produced up to 60 \cm from the beam line. In the central region, particles with a momentum of 100 GeV have a \PT-resolution of roughly 2.8 \%, a transverse impact parameter resolution of 10 $\micron$ and a longitudinal impact parameter of 30 $\micron$. 
@@ -12,6 +21,46 @@ Offline, all events are required to have at least one primary vertex reconstruct
 
 \section{The Particle Flow Algorithm}
 
+After track reconstruction, what remains is an incoherent collection of tracks, calorimeter clusters and hits in the muon chambers. In order to connect these, CMS uses an algorithm called Particle Flow (PF)~\cite{1748-0221-12-10-P10003} to combine the information obtained from all sub-detectors in order to infer which particles were actually produced in the event.
+The reconstructed physics object in the order of which they are reconstructed are
+\begin{itemize}
+  \item Muons, through hits in the tracker and in the muon chambers
+  \item Charged hadrons, through hits in the tracker and energy deposits in the calorimeters
+  \item Neutral hadrons, through energy deposits in the calorimeters but no hits in the tracker
+  \item Photons, through energy deposits in the ECAL but not in the HCAL and no hits in the tracker
+  \item Electrons, through hits in the tracker and energy deposits in the ECAL
+\end{itemize}
+
+\subsection{Reconstruction of the Particle Flow inputs}
+\subsubsection{Electron tracking}
+Electron seeding is done in two different ways: ECAL-based  or tracker-based electron seeding. In the ECAL-based method, electrons are seeded from  ECAL clusters with $E_T > 4 \GeV$, where the position of the cluster is used to infer which hits in the inner tracker belongs to a given electron or positron. As a large fraction of the electron/positron energy is emitted through bremsstrahlung before even reaching the ECAL, ECAL superclusters covering a small window in $\eta$ and a larger window in $\phi$ are defined in order to fully contain the electron as well as its bremsstrahlung photons. As these superclusters are prone to contamination, tight isolation requirements need to be applied, leading to reconstruction inefficiencies. Therefore, an additional tracker-based seeding approach has been developed. All tracks with $\PT>2\GeV$ are used as potential electron seeds 
+\subsubsection{Muon tracking}
+Muon tracking consists of two part: the muon spectrometer allows muons to be identified with high efficiency over the full pseudorapidity range, while maintaining a low background due to the absorbing calorimeter layers upstream. The inner tracker on the other hand, provides an accurate measurement of the muon momentum. Three muon quality flags are defined
+\begin{itemize}
+  \item Standalone muon: Muon tracks based on hits in the DT or CSC only
+  \item Global muon: A standalone muon track matched to a track in the tracker if the track parameters of the two are compatible
+  \item Tracker muon: An inner track with $\PT> 0.5 \GeV$, a total momentum greater than 2.5 \GeV and at least one muon segment matching the extrapolated inner track
+\end{itemize}
+Around 99\% of muons produced within $|\eta|<2.4$ are reconstructed as a global muon or a tracker muon, and very often as both. If the global and tracker muon share the same inner tracker segment, the two are combined.
+
+\subsubsection{Calorimeter clusters}
+ The calorimeter clustering is performed separately for each calorimeter subdetector (ECAL barrel and endcaps, HCAL barrel and endcaps and the preshower layers).
+The first step is to define cluster seeds from cells with an energy exceeding some predefined threshold and in addition is larger than the energy in its neighboring cells. Topological clusters are then formed by adding cells to the seed which has at least one corner in common with a cell already in the cluster, and that has an energy which is at least twice the noise level of the detector. In Figure~\ref{fig:objreco:caloclustering}, an example of calorimeter clustering for a five-particle jet is shown for the HCAL (left) and ECAL (right). In the HCAL (left), two seeds have been identified (gray filled areas) inside a topological cluster consisting of 9 cells. These are then defined as two HCAL clusters, with a position as indicated by the red circles. The green solid lines correspond to charged tracks reconstructed in the tracker, both pointing to the center of the HCAL cluster seeds. The observed deposits left by the same particles are shown on the right in Figure~\ref{fig:objreco:caloclustering}, where the $K^0_L$, $\pi^-$ and the two photons from the decay of a $\pi^0$ leave distinct clusters in the ECAL. The $\pi^+$ leaves no energy deposit in this case. 
+
+\begin{figure}[h] 
+    \centering
+    \includegraphics[width=0.49\textwidth]{figures/event_reconstruction/PF_HCAL.png}
+    \includegraphics[width=0.49\textwidth]{figures/event_reconstruction/PF_ECAL.png}
+    \caption{The $\eta-\phi$ vies of calorimeter clusters generated by a five-particle jet in the HCAL (left) and in the ECAL (right). The squares correspond to calorimeter cells, where the inner area is proportional to the logarith of the cell energy. Cluster seeds are depicted in dark gray. The dotted blue lines correspond to the simulated particle trajectory, while the green lines correspond to charged tracks reconstructed in the tracker~\cite{1748-0221-12-10-P10003}.}
+    \label{fig:objreco:caloclustering}
+\end{figure} 
+
+
+\subsection{Particle Flow identification}
+
+First, muons are reconstructed. This is done be linking a track in the inner tracker to a track in the muon chamber
+Starting with the reconstructed tracks, the PF algorithm extrapolates them through the calorimeters and checks whether they fall within the boundaries of one or several energy clusters. If they do, the clusters are associated to the tracks.
+This set of track and clusters then define a charged hadron, and are not used in any further reconstruction
 
 \section{Pile-up removal}
 
@@ -19,63 +68,62 @@ Particles originating from proton-proton interactions not associated with the ha
 These distorts observables of interest from the hard scattering event and must be mitigated through dedicated pileup removal techniques
 
 \subsection{Charged Hadron Subtraction}
-As mentioned previously, primary vertices are reconstructed using tracks from charged hadrons. If a primary vertex does not correspond to the hard scattering vertex of the event, the charged hadrons associated to this vertex (called pileup vertex) are removed from the event collection of particles and will not participate in any further object reconstruction. This method is denoted charged hadron subtraction (CHS)
+As mentioned previously, primary vertices are reconstructed using tracks from charged hadrons. If a primary vertex does not correspond to the hard scattering vertex of the event, the charged hadrons associated to this vertex (called pileup vertex) are removed from the event collection of particles and will not participate in any further object reconstruction. This method is denoted charged hadron subtraction (CHS).
 
 \subsection{Pile up per particle identification (PUPPI)}
-In order to mitigate the effect of pileup on jet observables, we take advantage of pileup per particle identification (PUPPI)~\cite{Bertolini2014}.
-This method uses local shape information, event pileup properties and tracking information
-together in order to compute a weight describing the degree to which a particle is pileup-like.
-A local variable $\alpha$ is computed which contrasts the collinear structure of QCD with the soft diffuse radiation coming from pileup.  
-The local shape for charged pileup, assumed as a proxy for all pileup particles, is used on an event-by-event basis to calculate a weight for each particle. The weights describe the degree to which particles are pileup-like and are used to rescale their four-momenta, superseding the need for jet-based corrections.
+CHS was the default pileup removal algorithm in CMS until very recently. In 2014, a new pileup removal algorithm with improved performance was proposed; the pileup per particle identification (PUPPI)~\cite{Bertolini2014} algorithm.
+PUPPI uses a combination of local shape information, event pileup properties and tracking information to compute a weight describing the degree of "pileup-likeness" of a given particle.
+First, a variable denoted $\alpha$ is computed based on the difference between soft radiation coming from pileup and the harder collinear QCD pattern. The shape of $\alpha$ for charged particles is then used as a proxy for all pileup particles and is used on an event-by-event basis to calculate a weight for each particle. This weight in turn describes the degree to which particles are pileup-like and are used to rescale the particle four-momenta.
 
-As discussed in Ref.~\cite{Bertolini2014}, various definitions of the discriminating variable $\alpha$ are possible. 
-We adopted a configuration to obtain the best discriminating power between pileup and particles from the hard scattering vertex in the pileup scenario under study. Different definitions of $\alpha$ are used for particles in the central ($|\eta| < $ 2.5) and forward region ($|\eta| > $ 2.5) of the detector, where tracking information is not available. However, here we only use particles in the central region and therefore focus only on the usage in this region.\\
-In the central region, the shape variable for a given particle $i$ is defined as
-%
-\begin{linenomath}
+The shape variable for a given particle $i$ is defined as
+
 \begin{equation}
   \alpha_i = \log \sum_{\substack{j \in \mathrm{Ch,PV} \\ j \neq i}} \left(\frac{p_{T,j}}{\Delta R_{ij}}\right)^{2} \Theta(R_0 - \Delta R_{ij}),
 \end{equation}
-\end{linenomath}
-%
-where $\Theta$ is the step function, $i$ refers to the particle in question and $j$ to the neighboring charged particles from the primary vertex within a cone of radius $R_0$. We consider charged particles as coming from the primary vertex if their track is associated to the leading vertex of the event or is unassociated but with $d_z < $0.3~cm, where $d_z$ is the distance along the $z$ axis with respect to the leading vertex. 
 
-%We found that in the forward region, characterized by a lower detector granularity, 
-%the usage of both the variables defined in Eq.~\ref{eq:puppiFwd1} and Eq.~\ref{eq:puppiFwd2} improves the performance.
-A $\chi^{2}$ approximation
-\begin{linenomath}
+where $\Theta$ is the step function and $j$ refers to the neighboring charged particles from the primary vertex within a cone of radius $R_0=0.4$. Charged particles are defined as coming from the primary vertex if they are associated to the leading vertex of the event or are within a distance of $d_z < $0.3~\cm from the leading vertex. 
+
+In order to determine the probability that a particle comes from pileup, a $\chi^{2}$ calculation is performed. The probability is defined as
+
 \begin{equation}
-%\chi^{2}_{i} = \frac{(\alpha_i -  <\alpha_{PU}>)^{2}}{RMS_{PU}^{2}},
 \chi^{2}_{i} = \frac{(\alpha_i -  \bar{\alpha}_{PU})^{2}}{RMS_{PU}^{2}},
 \end{equation}
-\end{linenomath}
-where $\bar{\alpha}_{PU}$ is the median value of the $\alpha_i$ distribution for pileup particles in the event and $RMS_{PU}$ is the corresponding RMS,
-is used to determine the probability of a particle to be from pileup. 
-The variables $\bar{\alpha}_{PU}$ and $RMS_{PU}$ are calculated using all charged pileup particles (i.e. all charged particles not from PV).
-%The pseudorapidity dependence of $\alpha_{PU}$ and $RMS_{PU}$ is accounted for by computing 
-%their values separately in three pseudorapidity bins ($0<|\eta|<2.5$, $2.5<|\eta|<3$ and $|\eta|>3$).
-%In the forward region, where the two variables defined in Eq.~\ref{eq:puppiFwd1} and Eq.~\ref{eq:puppiFwd2} are used, 
-%the corresponding $\chi^2$ are summed.
-Particles are then assigned a weight given by $w_i = F_{\chi^2,NDF=1}(\chi^2_i)$ where $F_{\chi^2,NDF=1}$ is the cumulative distribution function of the $\chi^2$ distribution with one degree of freedom.
 
-The algorithm parameter choices are similar to what is recommended in Ref.~\cite{Bertolini2014}. 
-The radius of the cone $R_0$ is set to 0.4.
-Particles with weights $w_i$ smaller than 0.01 are rejected.
-In addition a cut on the minimum scaled \pt of the neutral particles is applied: 
-%$w_i \cdot \pt_i >  (0.2 + 0.02 \cdot n_{PV})$~GeV, 
-$w_i \cdot \pt_i >  (A + B \cdot n_{PV})$~GeV, 
-where $n_{PV}$ is the reconstructed vertex multiplicity in the event, 
-and A and B are tuneable parameters. % which are tuned separately in three pseudorapidity bins. 
-%In the pseudorapidity regions $0<|\eta|<2.5$ and $2.5<|\eta|<3$ 
-%the parameters are chosen such that jet mass and $\pt$ resolution are optimized, 
-%and in the forward region $|\eta|>3$ the parameters are chosen such that MET resolution is optimized. 
-No additional pileup corrections are applied to jets clustered from these weighted inputs. 
+where $\bar{\alpha}_{PU}$ is the median value of the $\alpha_i$ distribution for pileup particles in the given event and $RMS_{PU}$ is its RMS.
+
+Each particle (neutral and charged) is then assigned a weight $w_i = F_{\chi^2,NDF=1}(\chi^2_i)$, where $F_{\chi^2,NDF=1}$ is the cumulative distribution function of the $\chi^2$ distribution with one degree of freedom. Particles with $w_{i}<0.01$ are rejected.
+In addition, a cut on the weighted \PT of neutral particles of $w_{i} \cdot p_{T,i} >  (A + B \cdot N_{PV})$ \GeV is applied, where $N_{PV}$ correspond to the number of reconstructed vertices in the event and A and B are tunable parameters. 
+
+The performance of the PUPPI algorithm compared to CHS for jet observables is shown in Figure~\ref{fig:objreco:puppi}.
+
+\begin{figure}[ht] 
+    \centering
+    
+    \includegraphics[height=5cm]{figures/event_reconstruction/puppi_mres_hiPt.pdf}
+    \includegraphics[height=5cm]{figures/event_reconstruction/puppi_mresVsPu.pdf}\\
+    \includegraphics[height=5cm]{figures/event_reconstruction/puppi_ptres_hiPt.pdf}
+    \includegraphics[height=5cm]{figures/event_reconstruction/puppi_ptresVsPu.pdf}
+    \caption{The mass (top) and \PT (bottom) resolution comparing PF only (blue), PF+CHS (red) and PUPPI (pink) jets. The absolute resolution (left) as well as the resolution as a function of the number of reconstructed primary vertices in the event (right)is shown~\cite{Bertolini2014}.}
+    \label{fig:objreco:puppi}
+\end{figure}
+
+The top row shows the absolute mass resolution (left) as well as the mass resolution as a function of $N_{PV}$ for CHS jets (red) and PUPPI (pink) jets. The bottom row shows the corresponding quantities but for jet transverse momentum. A significantly better resolution on jet observables can be achieved using PUPPI compared to CHS.
+
+
 
 \section{Jet reconstruction}
+\textcolor{red}{\textbf{TODO!!!}}
 \subsection{Jet clustering}
+\textcolor{red}{\textbf{TODO!!!}}
 \subsection{Jet substructure reconstruction}
+\textcolor{red}{\textbf{TODO!!!}}
 \subsubsection{Grooming}
+\textcolor{red}{\textbf{TODO!!!}}
 \subsubsection{N-subjettiness}
+\textcolor{red}{\textbf{TODO!!!}}
 \section{Monte Carlo Simulation}
+\textcolor{red}{\textbf{TODO!!!}}
 \subsection{Matrix Element Generators}
+\textcolor{red}{\textbf{TODO!!!}}
 \subsection{Shower Generators}
+\textcolor{red}{\textbf{TODO!!!}}
