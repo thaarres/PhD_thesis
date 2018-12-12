@@ -31,10 +31,24 @@ The reconstructed physics object in the order of which they are reconstructed ar
   \item Electrons, through hits in the tracker and energy deposits in the ECAL
 \end{itemize}
 
+How these different particles propagate through the CMS detector is illustrated in Figure~\ref{fig:objreco:PF}.
+
+\begin{figure}[h] 
+    \centering
+    \includegraphics[width=0.79\textwidth]{figures/event_reconstruction/PF.png}
+    \caption{Particle interactions in the different subdetectors for a transverse slice through the CMS detector~\cite{1748-0221-12-10-P10003}.}
+    \label{fig:objreco:PF}
+\end{figure} 
+
 \subsection{Reconstruction of the Particle Flow inputs}
+
 \subsubsection{Electron tracking}
-Electron seeding is done in two different ways: ECAL-based  or tracker-based electron seeding. In the ECAL-based method, electrons are seeded from  ECAL clusters with $E_T > 4 \GeV$, where the position of the cluster is used to infer which hits in the inner tracker belongs to a given electron or positron. As a large fraction of the electron/positron energy is emitted through bremsstrahlung before even reaching the ECAL, ECAL superclusters covering a small window in $\eta$ and a larger window in $\phi$ are defined in order to fully contain the electron as well as its bremsstrahlung photons. As these superclusters are prone to contamination, tight isolation requirements need to be applied, leading to reconstruction inefficiencies. Therefore, an additional tracker-based seeding approach has been developed. All tracks with $\PT>2\GeV$ are used as potential electron seeds 
+\label{subsub:objreco:electrontracking}
+Electron seeding is done in two different ways: ECAL-based  or tracker-based electron seeding. In the ECAL-based method, electrons are seeded from  ECAL clusters with $E_T > 4 \GeV$, where the position of the cluster is used to infer which hits in the inner tracker belongs to a given electron or positron. As a large fraction of the electron/positron energy is emitted through bremsstrahlung before even reaching the ECAL, ECAL superclusters covering a small window in $\eta$ and a larger window in $\phi$ are defined in order to fully contain the electron as well as its bremsstrahlung photons. As these superclusters are prone to contamination, tight isolation requirements need to be applied, leading to reconstruction inefficiencies. Therefore, an additional tracker-based seeding approach has been developed. All tracks with $\PT>2\GeV$ are used as potential electron seeds. These tracks are then extrapolated to the ECAL and matched to the closest ECAL cluster. The ratio of the cluster energy to the track
+momentum is required to be ~1. The electron candidates are then fit with a Gaussian-sum filter (GSF)~\cite{0954-3899-31-9-N01} and required to pass certain criteria based on the score of a boosted-decision-tree (BDT) which combines the number of tracker hits, the $\chi^2$ of the GSF track, the energy loss along the  track, and the distance between the extrapolated track to the closest ECAL cluster.
+
 \subsubsection{Muon tracking}
+\label{subsub:objreco:muontracking}
 Muon tracking consists of two part: the muon spectrometer allows muons to be identified with high efficiency over the full pseudorapidity range, while maintaining a low background due to the absorbing calorimeter layers upstream. The inner tracker on the other hand, provides an accurate measurement of the muon momentum. Three muon quality flags are defined
 \begin{itemize}
   \item Standalone muon: Muon tracks based on hits in the DT or CSC only
@@ -58,9 +72,37 @@ The first step is to define cluster seeds from cells with an energy exceeding so
 
 \subsection{Particle Flow identification}
 
-First, muons are reconstructed. This is done be linking a track in the inner tracker to a track in the muon chamber
-Starting with the reconstructed tracks, the PF algorithm extrapolates them through the calorimeters and checks whether they fall within the boundaries of one or several energy clusters. If they do, the clusters are associated to the tracks.
-This set of track and clusters then define a charged hadron, and are not used in any further reconstruction
+\subsubsection{The link algorithm}
+
+The link algorithm is the algorithm responsible for combining the particle flow elements from different subdetectors.
+It can test any pair of elements in the event based on specific requirements depending on the nature of the element, but is restricted to the nearest neighbors in the $\eta-\phi$ plane.
+The outputs of the link algorithm are so-called \textit{PF blocks} of linked elements, either directly linked or linked through having common elements.
+\begin{itemize}
+  \item \textbf{Inner track - calorimeter cluster link:} The track is interpolated from its last hit, through the preshower layers, the ECAL and ending in the HCAL at an interaction length depth of 1. A link is made if the track is within the cluster area, where the areas is enlarged by up to a cell in each direction to account for detector gaps. In case several ECAL/HCAL clusters are linked to the same track, only the one with the smallest distance in $\eta-\phi$ is kept.
+
+\item \textbf{Calorimeter cluster - cluster link:} A link between ECAL and HCAL clusters as well as between ECAL and preshower clusters
+is made when the cluster position of the more granular calorimeter is within the cluster envelope in the less granular calorimeter. Also here, if there is link overlap, only the link with the smallest distance is kept
+
+\item \textbf{Inner tracker -muon chamber link:} As described in Section~\ref{subsub:objreco:muontracking} 
+\end{itemize}
+
+For each PF block, the reconstruction proceeds in the following order.
+First, muons are reconstructed and their corresponding PF elements removed from the PF block. Then the electrons are reconstructed, with the hopes of removing their corresponding bremsstrahlung photons from the list of PF elements. Energetic photons are reconstructed in the same step. Finally, neutral and charged hadrons are reconstructed.
+
+\subsubsection{Muons}
+
+First, isolated global muons are selected by requiring the sum of track \PT and calorimeter energy deposits within a cone of $\Delta R = 0.3$ not belonging to the muon track, to be smaller than 10 \% of the muon \PT.
+If the muons are non-isolated, they are required to pass the tight muon requirement~\cite{1748-0221-7-10-P10002} and have at least three matching track segments in the muon detector or have matched calorimeter deposits compatible with being a minimum ionizing particle.
+Muons failing both the requirements above are kept if the standalone muon track is of high quality and have a lot of hits in the muon detectors, otherwise they are discarded.
+The muon momentum is defined from the inner tracker measurement if the muon \PT is less than 200 \GeV. Otherwise, its chosen according to the track fit with the smallest $\chi^2$ probability.
+
+\subsubsection{Electrons}
+The electrons are seeded from a GSF track, as described in Section~\ref{subsub:objreco:electrontracking}. To differentiate electrons from charged hadrons, the energy deposit in the HCAL within a distance of 0.15 in the $\eta-\phi$ plane of the supercluster , is required to be less than 10 \% of that of the supercluster. The electron candidate must further pass a requirement on the output of a dedicated electron-identification BDT, using inputs such as track-cluster distance, track $\chi^2$ and number of hits as input.  In this step, isolated photons are also reconstructed, seeded from ECAL superclusters with $|E_T>10 \GeV|$ and no link to a GSF track.
+All the tracks and calorimeter deposits used to reconstruct electrons and isolated photons are further removed from the list of PF blocks.
+
+\subsubsection{Hadrons}
+Finally, after the removal of muons and electrons, the remaining hadrons and non-isolated photons are identified. HCAL clusters with no track link are defined as neutral hadrons, while ECAL clusters with no track link are defined as photons (photons are exclusively associated to the ECAL deposits as neutral hadrons leave only 3 \% of their energy in the ECAL).
+The remaining HCAL clusters are then linked to one or more tracks from the inner tracker. In order to determine the particle content within a cluster, the sum of track momenta and the calorimeter energy is compared.If the calorimeter energy is compatible with the sum of track momenta, a particle for each track is inferred, with its corresponding energy taken from the track momentum.  If the calorimeter energy is larger than the sum of track momenta, a photon or a neutral hadron is added, togehter with one charged hadron for each track within the cluster area.
 
 \section{Pile-up removal}
 
@@ -68,7 +110,7 @@ Particles originating from proton-proton interactions not associated with the ha
 These distorts observables of interest from the hard scattering event and must be mitigated through dedicated pileup removal techniques
 
 \subsection{Charged Hadron Subtraction}
-As mentioned previously, primary vertices are reconstructed using tracks from charged hadrons. If a primary vertex does not correspond to the hard scattering vertex of the event, the charged hadrons associated to this vertex (called pileup vertex) are removed from the event collection of particles and will not participate in any further object reconstruction. This method is denoted charged hadron subtraction (CHS).
+As mentioned previously, primary vertices are reconstructed using tracks from charged hadrons. If a primary vertex does not correspond to the hard scattering vertex of the event, the charged hadrons (as reconstructed through Particle Flow) associated to this vertex (called pileup vertex) are removed from the event collection of particles and will not participate in any further object reconstruction. This method is denoted charged hadron subtraction (CHS).
 
 \subsection{Pile up per particle identification (PUPPI)}
 CHS was the default pileup removal algorithm in CMS until very recently. In 2014, a new pileup removal algorithm with improved performance was proposed; the pileup per particle identification (PUPPI)~\cite{Bertolini2014} algorithm.
@@ -98,7 +140,6 @@ The performance of the PUPPI algorithm compared to CHS for jet observables is sh
 
 \begin{figure}[ht] 
     \centering
-    
     \includegraphics[height=5cm]{figures/event_reconstruction/puppi_mres_hiPt.pdf}
     \includegraphics[height=5cm]{figures/event_reconstruction/puppi_mresVsPu.pdf}\\
     \includegraphics[height=5cm]{figures/event_reconstruction/puppi_ptres_hiPt.pdf}
@@ -112,9 +153,11 @@ The top row shows the absolute mass resolution (left) as well as the mass resolu
 
 
 \section{Jet reconstruction}
-\textcolor{red}{\textbf{TODO!!!}}
+When a hadron decays, it hadronises and produces a shower of particles originating from roughly the same vertex. These decay products mainly consist of charged and neutral pions, neutrons or kaons.  With PF objects like charged hadrons, neutral hadrons and photons defined, an attempt to associate these particles to one common origin, a mother particle, is performed. This is done through the clustering of PF objects associated to the same HCAL cluster, one containing several particles in close vicinity of one another.
+
 \subsection{Jet clustering}
-\textcolor{red}{\textbf{TODO!!!}}
+
+The default jet clustering algorithm in CMS, is the anti-\kt algorithm~\cite{Cacciari:2008gp}. The anti-\kt algorithm,
 \subsection{Jet substructure reconstruction}
 \textcolor{red}{\textbf{TODO!!!}}
 \subsubsection{Grooming}
