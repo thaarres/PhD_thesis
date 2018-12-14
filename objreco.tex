@@ -153,11 +153,43 @@ The top row shows the absolute mass resolution (left) as well as the mass resolu
 
 
 \section{Jet reconstruction}
-When a hadron decays, it hadronises and produces a shower of particles originating from roughly the same vertex. These decay products mainly consist of charged and neutral pions, neutrons or kaons.  With PF objects like charged hadrons, neutral hadrons and photons defined, an attempt to associate these particles to one common origin, a mother particle, is performed. This is done through the clustering of PF objects associated to the same HCAL cluster, one containing several particles in close vicinity of one another.
+As explained in Section~\ref{sec:theory:qcd}, quarks and gluons are never themselves visible in a detector. Within $10^{-23}$ seconds, the timescale of the strong interactions, they fragment and hadronize into a collimated spray of hadrons, a so-called jet. In order to infer the properties of the original parton generating the jet, the properties of the full particle spray needs to be evaluated.
+Combining these particles algorithmically is non-trivial, and several algorithms designed to do, called jet clustering algorithms, exist.
+These provide a set of rules for grouping particles together into jets and are usually based on certain distance requirements between particles as well as rules for how to recombine their momenta.
+Thanks to Particle Flow, objects like charged hadrons, neutral hadrons and photons together with their estimated energy and direction are already defined, and jet clustering in CMS therefore consists of
+associating these particles to one common origin.
+
 
 \subsection{Jet clustering}
 
-The default jet clustering algorithm in CMS, is the anti-\kt algorithm~\cite{Cacciari:2008gp}. The anti-\kt algorithm,
+The most common jet clustering algorithms used in hadron colliders are the Cambridge/Aachen algorithm~\cite{Dokshitzer:1997in}, the \kt algorithm~\cite{Ellis:1993tq} and the anti-\kt algorithm~\cite{Cacciari:2008gp}. These are all sequential recombination algorithms, meaning they systematically go through each particle pair in the event and recombines them into one particle if the combination satisfies certain criteria. The rules, shared by all three algorithms, are as follows:
+\begin{enumerate}
+\item For each pair of particles $i$ and $j$, compute the longitudinally invariant distances
+  \begin{align}  
+  d_{ij} &= \textrm{min}(p_{ti}^{2p},p_{tj}^{2p})\frac{\Delta R^2_{ij}}{R^2} \textrm{, with } \quad \Delta R^2_{ij}&=(\eta_i - \eta_j)^2+(\phi_i - \phi_j)^2\\
+  d_{iB} &= p_{ti}^{2p},
+  \end{align}  
+  where $d_{ij}$ is a measure of the relative transverse momenta between the particles, $\Delta R^2_{ij}$ is the distance between them in the $\eta-\phi$ plane (which can be roughly translated into a jet radius), $\Delta R^2$ corresponds to the desired jet cone size and $d_{iB}$ is the distance between the particle and the beam. The parameter $p$ is what separates the three algorithms from one another. For the anti-\kt algorithm, it is defined as $p=-1$, for the \kt algorithm $p=1$ and in the case of the C/A algorithm, $p=0$. The consequences of these choices are explained in detail below.
+  \item Find the minimum distance of $d_{ij}$ and $d_{iB}$.
+  \item If this is $d_{ij}$, recombine particles $i$ and $j$ and return to step 1.
+  \item If it is $d_{iB}$, the particle is $i$is defined to be a final state jet, and is removed from the list of particles. The algorithms proceeds back to step 1.
+  \item Repeat until no particles remain.
+\end{enumerate}
+
+\subsubsection{Infrared and collinear safety}
+There are two requirements that are extremely important when defining a jet algorithm: It must be 1) infrared and 2) collinear safe.
+Infrared safety correspond to the requirement that if the final state particles for some reason are modified by the presence of a soft emission, then the set of hard jets should remain unchanged. This is illustrated in the
+found should be unchanged
+\subsubsection{The \kt algorithm}
+The \kt algorithm is the oldest of the first sequential recombination algorithms. 
+\subsubsection{The Cambridge/Aachen algorithm}
+
+
+\subsubsection{The anti-\kt algorithm}
+The default jet clustering algorithm in CMS is the anti-\kt algorithm~\cite{Cacciari:2008gp}, defined through the rules above with $p=-1$. The reason the anti-\kt algorithm is so successful, and the reason why it is used in CMS, is that when using $p=-1$, the algorithm favors the clustering of hard 
+
+%It uses PF candidates as input. Before this clustering occurs, a pileup removal algorithm is applied. If using CHS, charged hadrons not associated to the primary vertex are discarded before clustering. If PUPPI is used, all the PF candidates are reweighted based on how likely they are to have originated from pileup. 
+
 \subsection{Jet substructure reconstruction}
 \textcolor{red}{\textbf{TODO!!!}}
 \subsubsection{Grooming}
