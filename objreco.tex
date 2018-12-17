@@ -351,9 +351,21 @@ The distribution of $\tau_{21}$ for signal and background jets with different pi
 
 \section{Monte Carlo Simulation}
 
-Simulated events are produced in three steps: First, a matrix element generator simulates the hard scattering process and subsequent decays. Secondly, the showering and subsequent hadronization of unstable particles is performed and then finally the final state particles are passed through a full detector simulation in order to reproduce a range of experimental effects 
+Monte Carlo event generators offer a realistic estimate of high-energy collisions on an event-by-event basis, allowing us to estimate signal and background processes accurately.
 
-\textcolor{red}{\textbf{TODO!!!}}
+Simulated events are usually produced in three steps, describing a process from very short timescales up until hadronization and decay:
+First, a matrix element generator simulates the hard scattering process and subsequent decays. Secondly, the showering and hadronization of unstable particles is performed and, lastly, the final state particles are passed through a full detector simulation in order to reproduce a range of experimental effects.
+
+General-purpose Monte Carlo (GPMC) generators, like \HERWIG++~\cite{Bahr:2008pv} and \PYTHIA8~\cite{Sjostrand:2014zea}, deal with both perturbative as well as hadronization phenomena, simulating an event all the way up until detector simulation
+
+% Simulated samples of the SM background processes are used to optimize the analysis and provide flexible background templates.
+% QCD multijet production is simulated with four generator configurations: 1. \PYTHIA{} standalone, 2. the LO mode of \MGvATNLO{} matched with \PYTHIA{}, 3. \POWHEG{} matched with \PYTHIA{} and 4. \HERWIG{++}~2.7.1 with tune CUETHS1~\cite{Khachatryan:2015pea}.
+% Top quark pair production is modeled with \POWHEG{} showered with \PYTHIA{}.
+% W+jets and Z+jets production are simulated with the leading-order (LO) mode of \MGvATNLO{} matched with \PYTHIA{}.
+%
+% All samples are processed through a \GEANTfour-based simulation of the CMS detector. To simulate the effect of additional proton-proton collisions within the same or adjacent bunch crossings (pileup), additional inelastic events are generated using \PYTHIA and superimposed on the hard-scattering events. The MC simulated events are weighted to reproduce the distribution of the number of pileup interactions observed in data. All the 2016 samples are from the RunIISummer16MiniAODv2-PUMoriond17 campaign with Global Tag\\ 80X\tus{}mcRun2\tus{}asymptotic\tus{}2016\tus{}TrancheIV\tus{}v6. The 2017 samples are from the RunIIFall17MiniAOD-94X campaign with Global Tag 94X\tus{}mc2017\tus{}realistic\tus{}v12.
+
+
 \subsection{Matrix Element Generators}
 \textcolor{red}{\textbf{TODO!!!}}
 \subsection{Shower Generators}
