@@ -224,13 +224,13 @@ CMS by default uses two jet cone sizes: R=0.4 and R=0.8. Jets with R=0.4, called
 
 \section{Jet substructure reconstruction}
 \label{sec:objreco:substructure}
-In analyses looking for highly energetic ("boosted") vector bosons, a main theme of this thesis, the opening angle between the vector boson quark decay products become so small that the highly boosted boson appears as a single large jet instead of two well-separated smaller jets. The distance between the two quarks, in the case of an hadronic decay, depends on the mass of the vector boson and its \PT and goes as
+In analyses looking for highly energetic ("boosted") vector bosons like, a main theme of this thesis, the opening angle between the vector boson quark decay products become so small that the highly boosted boson appears as a single large jet instead of two well-separated smaller jets. The distance between the two quarks, in the case of an hadronic decay, depends on the mass of the vector boson and its \PT and goes as
 
 \begin{equation}  
 \Delta R = \frac{2 M_{V}}{p_{T,V}}.  
 \end{equation}
 
-Above a W \PT of 200 GeV, the two quarks are therefore merged into a single large cone jet of size R = 0.8. A sketch of the two different situation is shown below. If the W \PT is well below 200 GeV, its decay products are well-defined jets in their own right as shown in Figure~\ref{fig:objreco:unmerged}. However, once the W transverse momenta starts exceeding 200 GeV, both the quarks are completely contained within a single jet as is illustrated in Figure~\ref{fig:objreco:merged}.
+Above a W boson \PT of 200 GeV, the two quarks are therefore merged into a single large cone jet of size R = 0.8. A sketch of the two different situation is shown below. If the W \PT is well below 200 GeV, its decay products are well-defined jets in their own right as shown in Figure~\ref{fig:objreco:unmerged}. However, once the W transverse momenta starts exceeding 200 GeV, both the quarks are completely contained within a single jet as is illustrated in Figure~\ref{fig:objreco:merged}.
    
 \begin{figure}[ht] 
     \centering
@@ -251,13 +251,17 @@ Therefore, being able to accurately and efficiently separate highly boosted QCD 
 In order to get red of UE and pileup, algorithms like PUPPI and CHS can be used. Then, to improve the mass resolution further, dedicated grooming algorithms must be applied.
 
 \subsection{Grooming}
-Grooming was introduces as a tool to improve the signal, most often \PW\PZ\PH, mass resolution without significantly changing the background and signal event numbers. It mainly consists of removing the softest parts of a jet in various ways in order to resolve its "true" mass.
+Grooming was introduces as a tool to improve the signal, most often \PW/\PZ/, mass resolution without significantly changing the background and signal event numbers. It consists of removing the softest parts of a jet in order to resolve its "true" mass, by means of reclustering and identifying soft particles within the jet which then are removed.
 
 \subsubsection{Trimming}
-The trimming algorithm~\cite{Krohn:2009th} is a grooming algorithm mostly used at trigger level in CMS (also where it is used in this thesis) due to it being less aggressive than other grooming algorithms. It works in the following way: Starting from a large jet clustered with either anti-\kt or C/A (in the case of CMS), it reclusters the jet using the \kt algorithm in order to create subjets of some size $R_{sub}$, where the tuned parameter $R_{sub}$ in CMS $1 \geq R_{sub} \leq 0.3$. It then proceeds to check whether each subjet has a momentum fraction above a certain threshold, $p_{T,i}/p_{T,jet}>p_{T,frac}$ (where, in CMS, $p_{T,frac}= 0.03-0.05$), and if not the subjet is removed. The remaining subjets are then assembled into a new "trimmed" jet.
+The trimming algorithm~\cite{Krohn:2009th} is a grooming algorithm mostly used at trigger level in CMS (also where it is used in this thesis) due to it being less aggressive than other grooming algorithms. It works in the following way: Starting from a large jet clustered with either anti-\kt or C/A (in the case of CMS), it reclusters the jet using the \kt algorithm in order to create subjets of some size $R_{sub}$.  It then proceeds to check whether each subjet has a momentum fraction above a certain threshold,
+\begin{equation*}
+p_{T,i}/p_{T,jet}>p_{T,frac}.
+\end{equation*}
+If the subjet fails this requirement, it is removed. The remaining subjets are then assembled into a new "trimmed" jet.
 The effect of trimming on real W jets and QCD quark/gluon jets for different values of $r_{sub}$ and $p_{T,frac}$ is shown in Figure~\ref{fig:objreco:trimming}. 
-The best signal mass resolution is obtained with $r_{sub}=0.2$ and $p_{T,frac}=0.03$, which is also the parameter setting which provides the best signal and background 
-discrimination by pushing the QCD jet mass closer to zero.
+The best signal mass resolution is obtained with $r_{sub}=0.2$ and $p_{T,frac}=0.03$, which is also the parameter setting that provides the best signal and background 
+discrimination by pushing the QCD jet mass closer to zero. These are the default values of the tuned parameters of the trimming algorithm in CMS ($r_{sub}=0.2$ and $p_{T,frac}=0.03$).
 
 \begin{figure}[ht] 
     \centering 
@@ -268,7 +272,14 @@ discrimination by pushing the QCD jet mass closer to zero.
 \end{figure}
 
 \subsubsection{Pruning}
+The pruning algorithm, in addition to removing soft particles, has an additional requirement on the distance between any recombination that are at wide angle.
+It proceeds by reclustering the jet with the C/A algorithm, requiring at each step that
 
+\begin{equation*}
+\frac{ \textrm{min}(p_{T,i},p_{T,j}) }{ p_{T,P} } > z_{cut} \quad \textrm{ and } \quad \Delta R_{i,j} < D_{cut} = \frac{2 r_{cut} m_{jet}}{\PT}.
+\end{equation*}
+
+The first requirement is a requirement on the hardness of the combination. $p_{T,i}$ and $,p_{T,j}$ correspond to the transverse momenta of each protojet (single particle or group of particles already combined in a previous step) and $p_{T,P}$ is the combined \PT of the two. The protojet with the lowest transverse momenta is removed if its hardness is below $z_{cut}$, or if it forms an angle wider than $D_{cut}$ relative to the axis of the recombination of the two protojets. In CMS, the tuned parameters are set to $r_{cut}=0.5$ and where $z_{cut}=0.1$. Figure~\ref{fig:objreco:pruning} shows the ungroomed as well as the pruned jet mass distribution for signal (left) and background jets. The highest amount of signal and background separation in CMS, is achieved with $r_{cut}=0.5$ and $z_{cut}=0.1$.
 
 \begin{figure}[ht] 
     \centering
@@ -280,7 +291,17 @@ discrimination by pushing the QCD jet mass closer to zero.
 
 
 
-\subsubsection{MMDT and Softdrop}
+\subsubsection{Modified Mass Drop Tagger and Soft Drop}
+
+The modified mass drop tagger (mMDT)~\cite{Dasgupta:2013ihk} (a modified version of the originally suggested mass drop tagger ~\cite{Butterworth:2008iy}) is based on the idea that a \PW/\PZ jet is formed by two quark subjets and that, therefore, the mass of each subjet is much smaller than their combined mass (and much smaller than the mass of the boson itself). A QCD jet is, on the other hand, formed by continuous soft radiation, meaning that its heaviest subjet should be close to the mass of the jet itself. The mMDT tagger therefore starts from an already clustered jet, reclusters it with the C/A algorithm and then declusters it again defining subjets $s_1$ and $s_2$. It then looks for a significant mass drop going from total jet mass to the mass of each subjet, and checks that the splitting is not too asymmetric. The modified mass drop condition is generalized through the soft drop declustering method~\cite{Larkoski:2014wba}, simply called Soft Drop, which allows for different types of angular requirements to enter the condition. The Soft Drop condition is the following
+
+\begin{equation*}
+\frac{ \textrm{min}(p_{T,1},p_{T,2}) }{ p_{T,1}+p_{T,2} } > z_{cut} \frac{\Delta R_{12}}{R_0}^\beta.
+\end{equation*}
+
+If no significant mass drop occurred and the splitting is not to asymmetric, the condition is met and the full jet is deemed the softdrop jet. Otherwise only the highest-\PT subjet is kept and the declustering continues. If the jet can not be declustered any further, it can either be removed from consideration, so-called "tagging"-mode, or deemed the final soft-dropped jet, "grooming"-mode. A $\beta=0$ corresponds to the modified mass drop tagger and removes all soft emission from the jet. For $\beta>0$, soft radiation is removed, but some fraction of soft-collinear radiation is kept. Lastly, with $\beta<0$, Soft Drop can remove soft as well as collinear radiation.
+The performance of Soft Drop on W jets and QCD quark/gluon jets for different values of $\beta$ is shown in Figure~\ref{fig:objreco:softdrop}. The modified mass drop tagger (Softdrop with $\beta$=0) is the default Soft Drop settings in CMS, due to it providing the best signal/background discrimination while maintaining an excellent signal mass resolution.
+
 
 \begin{figure}[ht] 
     \centering 
@@ -291,7 +312,17 @@ discrimination by pushing the QCD jet mass closer to zero.
  \end{figure}
 
 \subsection{N-subjettiness}
-\textcolor{red}{\textbf{TODO!!!}}
+After having resolved the parton mass with one of the grooming algorithms above, there is still discriminating information to be gathered from the jet structure itself.
+A \PW or \PZ jet consists of two well-defined high-\PT subjets. A quark/gluon jet on the other hand, made from a single parton, consists of several large angle, asymmetric splittings, as illustrated in Figure~\ref{fig:objreco:onevstwoprong}
+
+\begin{figure}[ht] 
+    \centering 
+    \includegraphics[width=0.790\textwidth]{figures/event_reconstruction/tau21_sketch.pdf}
+     \caption{A jet stemming from the decay of a \PW will usually have two well-separated high-\pt subjets, while a jet with a single-prong origin consists of several large angel splittings.}
+     \label{fig:objreco:onevstwoprong}
+ \end{figure}
+ 
+ The N-subjettiness algorithm~\cite{Thaler:2010tr} takes advantage of this fact by attempting to count the number of hard subelements within a jet.
 
 \section{Monte Carlo Simulation}
 \textcolor{red}{\textbf{TODO!!!}}
