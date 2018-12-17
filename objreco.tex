@@ -110,9 +110,11 @@ Particles originating from proton-proton interactions not associated with the ha
 These distorts observables of interest from the hard scattering event and must be mitigated through dedicated pileup removal techniques
 
 \subsection{Charged Hadron Subtraction}
+\label{subsub:objreco:chs}
 As mentioned previously, primary vertices are reconstructed using tracks from charged hadrons. If a primary vertex does not correspond to the hard scattering vertex of the event, the charged hadrons (as reconstructed through Particle Flow) associated to this vertex (called pileup vertex) are removed from the event collection of particles and will not participate in any further object reconstruction. This method is denoted charged hadron subtraction (CHS).
 
 \subsection{Pile up per particle identification (PUPPI)}
+\label{subsub:objreco:puppi}
 CHS was the default pileup removal algorithm in CMS until very recently. In 2014, a new pileup removal algorithm with improved performance was proposed; the pileup per particle identification (PUPPI)~\cite{Bertolini2014} algorithm.
 PUPPI uses a combination of local shape information, event pileup properties and tracking information to compute a weight describing the degree of "pileup-likeness" of a given particle.
 First, a variable denoted $\alpha$ is computed based on the difference between soft radiation coming from pileup and the harder collinear QCD pattern. The shape of $\alpha$ for charged particles is then used as a proxy for all pileup particles and is used on an event-by-event basis to calculate a weight for each particle. This weight in turn describes the degree to which particles are pileup-like and are used to rescale the particle four-momenta.
@@ -169,7 +171,8 @@ The most common jet clustering algorithms used in hadron colliders are the Cambr
   d_{ij} &= \textrm{min}(p_{ti}^{2p},p_{tj}^{2p})\frac{\Delta R^2_{ij}}{R^2} \textrm{, with } \quad \Delta R^2_{ij}&=(\eta_i - \eta_j)^2+(\phi_i - \phi_j)^2\\
   d_{iB} &= p_{ti}^{2p},
   \end{align}  
-  where $d_{ij}$ is a measure of the relative transverse momenta between the particles, $\Delta R^2_{ij}$ is the distance between them in the $\eta-\phi$ plane (which can be roughly translated into a jet radius), $\Delta R^2$ corresponds to the desired jet cone size and $d_{iB}$ is the distance between the particle and the beam. The parameter $p$ is what separates the three algorithms from one another. For the anti-\kt algorithm, it is defined as $p=-1$, for the \kt algorithm $p=1$ and in the case of the C/A algorithm, $p=0$. The consequences of these choices are explained in detail below.
+  where $d_{ij}$ is a measure of the relative transverse momenta between the particles, $\Delta R^2_{ij}$ is the distance between them in the $\eta-\phi$ plane (which can be roughly translated into a jet radius), $\Delta R^2$ corresponds to the configurable desired jet cone size and $d_{iB}$ is the distance between the particle and the beam. The parameter $p$ is what separates the three algorithms from one another and controls the relative power of energy versus geometrical
+scales. For the anti-\kt algorithm, it is defined as $p=-1$, for the \kt algorithm $p=1$ and in the case of the C/A algorithm, $p=0$. The consequences of these choices are explained in detail below.
   \item Find the minimum distance of $d_{ij}$ and $d_{iB}$.
   \item If this is $d_{ij}$, recombine particles $i$ and $j$ and return to step 1.
   \item If it is $d_{iB}$, the particle is $i$is defined to be a final state jet, and is removed from the list of particles. The algorithms proceeds back to step 1.
@@ -177,25 +180,119 @@ The most common jet clustering algorithms used in hadron colliders are the Cambr
 \end{enumerate}
 
 \subsubsection{Infrared and collinear safety}
-There are two requirements that are extremely important when defining a jet algorithm: It must be 1) infrared and 2) collinear safe.
-Infrared safety correspond to the requirement that if the final state particles for some reason are modified by the presence of a soft emission, then the set of hard jets should remain unchanged. This is illustrated in the
-found should be unchanged
-\subsubsection{The \kt algorithm}
-The \kt algorithm is the oldest of the first sequential recombination algorithms. 
-\subsubsection{The Cambridge/Aachen algorithm}
+There are two requirements that are extremely important when defining jet algorithms: They must be 1) \textit{infrared} (IR) and 2) \textit{collinear} (C) safe.
+\textit{Infrared} safety corresponds to the requirement that if the final state particles are modified by the presence of a soft emission, and there are always soft emission in QCD events (both perturbative and non-perturbative), then the set of hard jets should remain unchanged. This is illustrated by the two left figures in Figure~\ref{fig:objreco:IRC}.
 
+\begin{figure}[ht] 
+    \centering
+    \includegraphics[width=0.49\textwidth]{figures/event_reconstruction/IR_safety.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/event_reconstruction/Collinear_safety.pdf}
+    \caption{An illustration of what would happen for an infrared (left) and collinear (right) unsafe jet algorithm. If an algorithm is infrared unsafe, the presence of a soft emission changes the jet configuration. If an algorithm is collinear unsafe, then if a parton undergoes a collinear splitting this will change the configuration of the jet}
+    \label{fig:objreco:IRC}
+\end{figure}
+
+Here, the algorithm is infrared unsafe: the presence of an additional soft gluon changes the jet configuration from 2 to 1 jets. If an algorithm is \textit{collinear} unsafe, it means that the jet configuration would change if the hard parton undergoes collinear splitting (which a hard parton often does as part of the fragmentation process and which are also part of non-perturbative dynamics, like the decay of highly energetic hadrons). This is shown in the two left figures of Figure~\ref{fig:objreco:IRC}, where a hard parton undergoing collinear splitting fails to be reconstructed due to its daughters being below the energy threshold of the algorithm.
+
+
+All sequential recombination algorithms are trivially infrared safe.
+ 
+\subsubsection{The \kt algorithm}
+The \kt algorithm is the oldest of the sequential recombination algorithms and, due to its $p=1$ definition in the distance measures, follows the QCD branching structure in both \PT and in angle (in reverse). Soft particles are clustered together first, and the final step is the clustering of the two hardest particles. A consequence of this definition is that there is nothing that keeps arbitrarily soft particles from being defined as jets, and a minimum cut on the jet \PT should be introduced.
+Despite several favorable qualities, the \kt algorithm is not the algorithm of choice in most hadron collider experiments due to the irregular jets it produces, a consequence of clustering soft particles first.
+
+\subsubsection{The Cambridge/Aachen algorithm}
+The Cambridge/Aachen algorithm, with $p=0$ in the distance measures, follows the QCD branching structure only in angle as the clustering order is based solely on spatial separation. The simplest of the algorithms, it recombines all pairs close in $\Delta R$ until $\Delta R_{ij} > R$.
+The benefits of this is that the clustering history contains information about the presence of any geometrical substructure within a jet, a feature that will become important in Section~\ref{sec:objreco:substructure}.
 
 \subsubsection{The anti-\kt algorithm}
-The default jet clustering algorithm in CMS is the anti-\kt algorithm~\cite{Cacciari:2008gp}, defined through the rules above with $p=-1$. The reason the anti-\kt algorithm is so successful, and the reason why it is used in CMS, is that when using $p=-1$, the algorithm favors the clustering of hard 
+The default jet clustering algorithm in CMS is the anti-\kt algorithm~\cite{Cacciari:2008gp}, which follows the rules and distance measures above with $p=-1$. The algorithm favors the clustering of high-\PT - high-\PT and high-\PT – low-\PT particles first, disfavoring clustering between soft particles. That means the algorithm grows around a hard core, yielding jets with a well-defined cone shaped area. Together with being IRC-safe and insensitive to the underlying event (any event not arising the primary hard scattering process) and pileup, makes it the main jet algorithm in CMS.
 
-%It uses PF candidates as input. Before this clustering occurs, a pileup removal algorithm is applied. If using CHS, charged hadrons not associated to the primary vertex are discarded before clustering. If PUPPI is used, all the PF candidates are reweighted based on how likely they are to have originated from pileup. 
 
-\subsection{Jet substructure reconstruction}
+
+A comparison of the resulting jet area in the $\phi-\eta$ plane after clustering with either \kt, C/A and anti-\kt, is shown in Figure~\ref{fig:objreco:jetalgo_comp}. The z-axis correspond to the parton \PT. One can clearly see that when clustering with the anti-\kt algorithm, the produced jets are circular, with a radius set by $R$, around the hardest parton.
+
+\begin{figure}[ht] 
+    \centering
+    \includegraphics[width=0.99\textwidth]{figures/event_reconstruction/clustering_algos.pdf}
+    \caption{A comparison of the resulting jet cone area in the $\phi-\eta-\PT$ plane after clustering the same event with three different jet algorithms: \kt, C/A and anti-\kt. ~\cite{Cacciari:2008gp}}
+    \label{fig:objreco:jetalgo_comp}
+\end{figure}
+
+\subsubsection{Particle Flow, anti-\kt and pileup subtraction }
+Jet algorithms in CMS mainly uses PF candidate four-vectors as input and, before clustering occurs, a pileup removal algorithm is usually applied. If using CHS (Section~\ref{subsub:objreco:chs}), charged hadrons not associated to the primary vertex are discarded before clustering. If PUPPI is used (Section~\ref{subsub:objreco:puppi}), all the PF candidates are reweighted based on how likely they are to have originated from pileup. 
+CMS by default uses two jet cone sizes: R=0.4 and R=0.8. Jets with R=0.4, called PFAK4, are used for single-prong jets while the larger R=0.8 jets, PFAK8, are more often used when looking for jets containing multiple hard quarks/gluons in order to contain all the hadronization products.
+
+\section{Jet substructure reconstruction}
+\label{sec:objreco:substructure}
+In analyses looking for highly energetic ("boosted") vector bosons, a main theme of this thesis, the opening angle between the vector boson quark decay products become so small that the highly boosted boson appears as a single large jet instead of two well-separated smaller jets. The distance between the two quarks, in the case of an hadronic decay, depends on the mass of the vector boson and its \PT and goes as
+
+\begin{equation}  
+\Delta R = \frac{2 M_{V}}{p_{T,V}}.  
+\end{equation}
+
+Above a W \PT of 200 GeV, the two quarks are therefore merged into a single large cone jet of size R = 0.8. A sketch of the two different situation is shown below. If the W \PT is well below 200 GeV, its decay products are well-defined jets in their own right as shown in Figure~\ref{fig:objreco:unmerged}. However, once the W transverse momenta starts exceeding 200 GeV, both the quarks are completely contained within a single jet as is illustrated in Figure~\ref{fig:objreco:merged}.
+   
+\begin{figure}[ht] 
+    \centering
+    \includegraphics[width=0.90\textwidth]{figures/event_reconstruction/WWqqqq_unmerged_small.pdf}\\
+    \caption{If the mass of the resonance is low enough, the quark decay products of each vector boson are well separated and clustered into distinguishable AK4 jets.}
+    \label{fig:objreco:unmerged}
+\end{figure}
+
+\begin{figure}[ht] 
+    \centering
+    \includegraphics[width=0.90\textwidth]{figures/event_reconstruction/WWqqqq_merged_small.pdf}
+    \caption{If the transverse momentum of the vector boson is greater than 200 GeV, the vector boson decay products are merged into one single large cone AK8 jet.}
+    \label{fig:objreco:merged}
+\end{figure}
+
+In order to distinguish hadronically decaying vector boson from QCD quark/gluon jets, the jet mass would in principle be a good discriminant as we know the W has a mass of around 80 GeV while the quark/gluon mass is close to ~zero. At very high transverse momenta, however, the width (and therefore the mass) of QCD jets may become equally large. In addition, diffuse radiation caused by the Underlying Event and pileup give rise to a significant number of additional particles in the event contributing to the total jet mass.
+Therefore, being able to accurately and efficiently separate highly boosted QCD jets from highly boosted vector bosons, requires other methods.
+In order to get red of UE and pileup, algorithms like PUPPI and CHS can be used. Then, to improve the mass resolution further, dedicated grooming algorithms must be applied.
+
+\subsection{Grooming}
+Grooming was introduces as a tool to improve the signal, most often \PW\PZ\PH, mass resolution without significantly changing the background and signal event numbers. It mainly consists of removing the softest parts of a jet in various ways in order to resolve its "true" mass.
+
+\subsubsection{Trimming}
+The trimming algorithm~\cite{Krohn:2009th} is a grooming algorithm mostly used at trigger level in CMS (also where it is used in this thesis) due to it being less aggressive than other grooming algorithms. It works in the following way: Starting from a large jet clustered with either anti-\kt or C/A (in the case of CMS), it reclusters the jet using the \kt algorithm in order to create subjets of some size $R_{sub}$, where the tuned parameter $R_{sub}$ in CMS $1 \geq R_{sub} \leq 0.3$. It then proceeds to check whether each subjet has a momentum fraction above a certain threshold, $p_{T,i}/p_{T,jet}>p_{T,frac}$ (where, in CMS, $p_{T,frac}= 0.03-0.05$), and if not the subjet is removed. The remaining subjets are then assembled into a new "trimmed" jet.
+The effect of trimming on real W jets and QCD quark/gluon jets for different values of $r_{sub}$ and $p_{T,frac}$ is shown in Figure~\ref{fig:objreco:trimming}. 
+The best signal mass resolution is obtained with $r_{sub}=0.2$ and $p_{T,frac}=0.03$, which is also the parameter setting which provides the best signal and background 
+discrimination by pushing the QCD jet mass closer to zero.
+
+\begin{figure}[ht] 
+    \centering 
+    \includegraphics[height=6cm]{figures/event_reconstruction/sig_trimming.pdf}
+    \includegraphics[height=6cm]{figures/event_reconstruction/bkg_trimming-noData.pdf}
+    \caption{The effect of trimming on a signal jet (left) and a background jet (right) for different values of the tuned parameters $r_{sub}$ and $p_{T,frac}$~\cite{CMS-PAS-JME-14-001}.}
+    \label{fig:objreco:trimming}
+\end{figure}
+
+\subsubsection{Pruning}
+
+
+\begin{figure}[ht] 
+    \centering
+    \includegraphics[height=6cm]{figures/event_reconstruction/sig_pruning.pdf}
+    \includegraphics[height=6cm]{figures/event_reconstruction/bkg_pruning-noData.pdf}
+    \caption{The effect of pruning on a signal jet (left) and a background jet (right) for different values of the tuned parameters $z_{cut}$ and $r_{cut}$~\cite{CMS-PAS-JME-14-001}.}
+    \label{fig:objreco:pruning}
+\end{figure}
+
+
+
+\subsubsection{MMDT and Softdrop}
+
+\begin{figure}[ht] 
+    \centering 
+    \includegraphics[height=6cm]{figures/event_reconstruction/sig_sd.pdf}
+    \includegraphics[height=6cm]{figures/event_reconstruction/bkg_softdrop-noData.pdf}
+     \caption{The effect of softdrop on a signal jet (left) and a background jet (right) for different values of the tuned parameters $\beta$. $\beta=0$ corresponds to the Modified Mass Drop Tagger, which is the default Softdrop setting in CMS ~\cite{CMS-PAS-JME-14-001}.}
+     \label{fig:objreco:softdrop}
+ \end{figure}
+
+\subsection{N-subjettiness}
 \textcolor{red}{\textbf{TODO!!!}}
-\subsubsection{Grooming}
-\textcolor{red}{\textbf{TODO!!!}}
-\subsubsection{N-subjettiness}
-\textcolor{red}{\textbf{TODO!!!}}
+
 \section{Monte Carlo Simulation}
 \textcolor{red}{\textbf{TODO!!!}}
 \subsection{Matrix Element Generators}
