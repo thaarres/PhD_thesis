@@ -234,14 +234,14 @@ Above a W boson \PT of 200 GeV, the two quarks are therefore merged into a singl
    
 \begin{figure}[ht] 
     \centering
-    \includegraphics[width=0.90\textwidth]{figures/event_reconstruction/WWqqqq_unmerged_small.pdf}\\
+    \includegraphics[width=0.70\textwidth]{figures/event_reconstruction/WWqqqq_unmerged_small.pdf}\\
     \caption{If the mass of the resonance is low enough, the quark decay products of each vector boson are well separated and clustered into distinguishable AK4 jets.}
     \label{fig:objreco:unmerged}
 \end{figure}
 
 \begin{figure}[ht] 
     \centering
-    \includegraphics[width=0.90\textwidth]{figures/event_reconstruction/WWqqqq_merged_small.pdf}
+    \includegraphics[width=0.70\textwidth]{figures/event_reconstruction/WWqqqq_merged_small.pdf}
     \caption{If the transverse momentum of the vector boson is greater than 200 GeV, the vector boson decay products are merged into one single large cone AK8 jet.}
     \label{fig:objreco:merged}
 \end{figure}
@@ -312,7 +312,7 @@ The performance of Soft Drop on W jets and QCD quark/gluon jets for different va
  \end{figure}
 
 \subsection{N-subjettiness}
-After having resolved the parton mass with one of the grooming algorithms above, there is still discriminating information to be gathered from the jet structure itself.
+After hopefully having resolved the particle mass with one of the grooming algorithms above, there is still discriminating information to be gathered from the jet structure itself.
 A \PW or \PZ jet consists of two well-defined high-\PT subjets. A quark/gluon jet on the other hand, made from a single parton, consists of several large angle, asymmetric splittings, as illustrated in Figure~\ref{fig:objreco:onevstwoprong}
 
 \begin{figure}[ht] 
@@ -322,9 +322,37 @@ A \PW or \PZ jet consists of two well-defined high-\PT subjets. A quark/gluon je
      \label{fig:objreco:onevstwoprong}
  \end{figure}
  
- The N-subjettiness algorithm~\cite{Thaler:2010tr} takes advantage of this fact by attempting to count the number of hard subelements within a jet.
+ The N-subjettiness algorithm~\cite{Thaler:2010tr} takes advantage of this fact by attempting to count the number of hard subelements within a jet. This is quantified through the n-subjettiness variable, $\tau_N$, defined as
+ 
+
+ \begin{equation}
+ \tau_N = \frac{1}{d_0} \sum_k p_{T,k}\textrm{min}( \Delta R_{1,k},\Delta R_{2,k}...,\Delta R_{N,k})
+ \end{equation} 
+
+where k runs over all the jet constituents, $p_{T,k}$ is the constituent transverse momentum and $\Delta R_{i,k}$ is the distance between the constituent and candidate subjet axes. These subjet axes are obtained through a one-pass optimization procedure which minimizes N-subjettiness~\cite{Thaler2012}. The normalization factor in front is given as
+
+ \begin{equation}
+d_0 = \sum_k p_{T,k} R_0
+ \end{equation} 
+
+where $R_0$ corresponds to the cone size of the initial jet. With this definition, jets with $\tau_N=0$ have most of its constituents aligned along the subjet axes. However, if $\tau_N>>0$, a large fraction of the energy is radiated away from the subjet directions and are more likely to have more than N subjets.
+In CMS, and as recommended by the authors in~\cite{Thaler:2010tr}, the ratio $\tau_2/\tau_1$ is used to discriminate W jets from QCD jets. The reason for this is that, while 
+signal jets are expected to have a large $\tau_1$, quark/gluon can similarly have large $\tau_1$ due to the diffuse radiation present. However, QCD jets with a large $\tau_1$ tend to have an equally large $\tau_2$, while signal jets do not, hence the ratio of the two provides greater separation power. In CMS, the n-subjettiness algorithm is by default applied to ungroomed jets.
+The distribution of $\tau_{21}$ for signal and background jets with different pileup subtraction algorithms applied are shown in Figure~\ref{fig:objreco:tau21}, where $\tau_21$ in combination with PF+PUPPI (green) yields a distribution most similar to the generated one (black).
+
+\begin{figure}[ht] 
+    \centering 
+    \includegraphics[width=0.490\textwidth]{figures/event_reconstruction/sig_tau21.pdf}
+    \includegraphics[width=0.490\textwidth]{figures/event_reconstruction/bkg_tau21.pdf}
+     \caption{The distribution of the n-subjettiness ratio $\tau_{21}$ for signal jets (left) and background jets (right) with different combinations of pileup subtraction algorithms applied. The solid lines corresponds to the $\tau_{21}$ distribution with no mass cut applied, while the dotted lines are within a mass window of 60-100 \GeV~\cite{CMS-PAS-JME-14-001}.}
+     \label{fig:objreco:tau21}
+ \end{figure}
+
 
 \section{Monte Carlo Simulation}
+
+Simulated events are produced in three steps: First, a matrix element generator simulates the hard scattering process and subsequent decays. Secondly, the showering and subsequent hadronization of unstable particles is performed and then finally the final state particles are passed through a full detector simulation in order to reproduce a range of experimental effects 
+
 \textcolor{red}{\textbf{TODO!!!}}
 \subsection{Matrix Element Generators}
 \textcolor{red}{\textbf{TODO!!!}}
