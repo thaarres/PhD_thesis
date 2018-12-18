@@ -155,6 +155,7 @@ The top row shows the absolute mass resolution (left) as well as the mass resolu
 
 
 \section{Jet reconstruction}
+\label{sec:objreco:jets}
 As explained in Section~\ref{sec:theory:qcd}, quarks and gluons are never themselves visible in a detector. Within $10^{-23}$ seconds, the timescale of the strong interactions, they fragment and hadronize into a collimated spray of hadrons, a so-called jet. In order to infer the properties of the original parton generating the jet, the properties of the full particle spray needs to be evaluated.
 Combining these particles algorithmically is non-trivial, and several algorithms designed to do, called jet clustering algorithms, exist.
 These provide a set of rules for grouping particles together into jets and are usually based on certain distance requirements between particles as well as rules for how to recombine their momenta.
@@ -171,7 +172,7 @@ The most common jet clustering algorithms used in hadron colliders are the Cambr
   d_{ij} &= \textrm{min}(p_{ti}^{2p},p_{tj}^{2p})\frac{\Delta R^2_{ij}}{R^2} \textrm{, with } \quad \Delta R^2_{ij}&=(\eta_i - \eta_j)^2+(\phi_i - \phi_j)^2\\
   d_{iB} &= p_{ti}^{2p},
   \end{align}  
-  where $d_{ij}$ is a measure of the relative transverse momenta between the particles, $\Delta R^2_{ij}$ is the distance between them in the $\eta-\phi$ plane (which can be roughly translated into a jet radius), $\Delta R^2$ corresponds to the configurable desired jet cone size and $d_{iB}$ is the distance between the particle and the beam. The parameter $p$ is what separates the three algorithms from one another and controls the relative power of energy versus geometrical
+  where $d_{ij}$ is a measure of the relative transverse momenta between the particles, $\Delta R^2_{ij}$ is the distance between them in the $\eta-\phi$ plane (which can be roughly translated into a jet radius), $\Delta R^2$ corresponds to a distance parameter which controls the extension of the jet and $d_{iB}$ is the distance between the particle and the beam. The parameter $p$ is what separates the three algorithms from one another and controls the relative power of energy versus geometrical
 scales. For the anti-\kt algorithm, it is defined as $p=-1$, for the \kt algorithm $p=1$ and in the case of the C/A algorithm, $p=0$. The consequences of these choices are explained in detail below.
   \item Find the minimum distance of $d_{ij}$ and $d_{iB}$.
   \item If this is $d_{ij}$, recombine particles $i$ and $j$ and return to step 1.
@@ -218,9 +219,9 @@ A comparison of the resulting jet area in the $\phi-\eta$ plane after clustering
     \label{fig:objreco:jetalgo_comp}
 \end{figure}
 
-\subsubsection{Particle Flow, anti-\kt and pileup subtraction }
-Jet algorithms in CMS mainly uses PF candidate four-vectors as input and, before clustering occurs, a pileup removal algorithm is usually applied. If using CHS (Section~\ref{subsub:objreco:chs}), charged hadrons not associated to the primary vertex are discarded before clustering. If PUPPI is used (Section~\ref{subsub:objreco:puppi}), all the PF candidates are reweighted based on how likely they are to have originated from pileup. 
-CMS by default uses two jet cone sizes: R=0.4 and R=0.8. Jets with R=0.4, called PFAK4, are used for single-prong jets while the larger R=0.8 jets, PFAK8, are more often used when looking for jets containing multiple hard quarks/gluons in order to contain all the hadronization products.
+\subsection{PF jets in CMS}
+Jet algorithms in CMS mainly use PF candidate four-vectors as input and a pileup removal algorithm is usually applied before clustering occurs. If using CHS (Section~\ref{subsub:objreco:chs}), charged hadrons not associated to the primary vertex are discarded before clustering. If PUPPI is used (Section~\ref{subsub:objreco:puppi}), all the PF candidates are reweighted based on how likely they are to have originated from pileup. 
+For the anti-\kt algorithm, CMS by default uses two jet cone sizes: R=0.4 and R=0.8. Jets with R=0.4, called PFAK4, are used for single-prong jets while the larger R=0.8 jets, PFAK8, are more often used when looking for jets containing multiple hard quarks/gluons in order to contain all the hadronization products.
 
 \section{Jet substructure reconstruction}
 \label{sec:objreco:substructure}
@@ -230,21 +231,15 @@ In analyses looking for highly energetic ("boosted") vector bosons like, a main 
 \Delta R = \frac{2 M_{V}}{p_{T,V}}.  
 \end{equation}
 
-Above a W boson \PT of 200 GeV, the two quarks are therefore merged into a single large cone jet of size R = 0.8. A sketch of the two different situation is shown below. If the W \PT is well below 200 GeV, its decay products are well-defined jets in their own right as shown in Figure~\ref{fig:objreco:unmerged}. However, once the W transverse momenta starts exceeding 200 GeV, both the quarks are completely contained within a single jet as is illustrated in Figure~\ref{fig:objreco:merged}.
+Above a W boson \PT of 200 GeV, the two quarks are therefore merged into a single large cone jet of size R = 0.8. A sketch of the two different situation is shown in Figure~\ref{fig:objreco:mergedvsunmerged}. If the W \PT is well below 200 GeV, its decay products are well-defined jets in their own right (left). However, once the W transverse momenta starts exceeding 200 GeV, both the quarks are completely contained within a single jet (right).
    
 \begin{figure}[ht] 
     \centering
-    \includegraphics[width=0.70\textwidth]{figures/event_reconstruction/WWqqqq_unmerged_small.pdf}\\
-    \caption{If the mass of the resonance is low enough, the quark decay products of each vector boson are well separated and clustered into distinguishable AK4 jets.}
-    \label{fig:objreco:unmerged}
+    \includegraphics[width=0.70\textwidth]{figures/event_reconstruction/merged_vs_unmerged.pdf}
+    \caption{If the mass of the resonance is low enough, the quark decay products of each vector boson are well separated and clustered into distinguishable AK4 jets (left). If the transverse momentum of the vector boson is greater than 200 GeV, the vector boson decay products are merged into one single large cone AK8 jet.}
+    \label{fig:objreco:mergedvsunmerged}
 \end{figure}
 
-\begin{figure}[ht] 
-    \centering
-    \includegraphics[width=0.70\textwidth]{figures/event_reconstruction/WWqqqq_merged_small.pdf}
-    \caption{If the transverse momentum of the vector boson is greater than 200 GeV, the vector boson decay products are merged into one single large cone AK8 jet.}
-    \label{fig:objreco:merged}
-\end{figure}
 
 In order to distinguish hadronically decaying vector boson from QCD quark/gluon jets, the jet mass would in principle be a good discriminant as we know the W has a mass of around 80 GeV while the quark/gluon mass is close to ~zero. At very high transverse momenta, however, the width (and therefore the mass) of QCD jets may become equally large. In addition, diffuse radiation caused by the Underlying Event and pileup give rise to a significant number of additional particles in the event contributing to the total jet mass.
 Therefore, being able to accurately and efficiently separate highly boosted QCD jets from highly boosted vector bosons, requires other methods.
@@ -254,6 +249,7 @@ In order to get red of UE and pileup, algorithms like PUPPI and CHS can be used.
 Grooming was introduces as a tool to improve the signal, most often \PW/\PZ/, mass resolution without significantly changing the background and signal event numbers. It consists of removing the softest parts of a jet in order to resolve its "true" mass, by means of reclustering and identifying soft particles within the jet which then are removed.
 
 \subsubsection{Trimming}
+\label{sec:objreco:trimming}
 The trimming algorithm~\cite{Krohn:2009th} is a grooming algorithm mostly used at trigger level in CMS (also where it is used in this thesis) due to it being less aggressive than other grooming algorithms. It works in the following way: Starting from a large jet clustered with either anti-\kt or C/A (in the case of CMS), it reclusters the jet using the \kt algorithm in order to create subjets of some size $R_{sub}$.  It then proceeds to check whether each subjet has a momentum fraction above a certain threshold,
 \begin{equation*}
 p_{T,i}/p_{T,jet}>p_{T,frac}.
@@ -272,6 +268,7 @@ discrimination by pushing the QCD jet mass closer to zero. These are the default
 \end{figure}
 
 \subsubsection{Pruning}
+\label{sec:objreco:pruning}
 The pruning algorithm, in addition to removing soft particles, has an additional requirement on the distance between any recombination that are at wide angle.
 It proceeds by reclustering the jet with the C/A algorithm, requiring at each step that
 
@@ -292,7 +289,7 @@ The first requirement is a requirement on the hardness of the combination. $p_{T
 
 
 \subsubsection{Modified Mass Drop Tagger and Soft Drop}
-
+\label{sec:objreco:softdrop}
 The modified mass drop tagger (mMDT)~\cite{Dasgupta:2013ihk} (a modified version of the originally suggested mass drop tagger ~\cite{Butterworth:2008iy}) is based on the idea that a \PW/\PZ jet is formed by two quark subjets and that, therefore, the mass of each subjet is much smaller than their combined mass (and much smaller than the mass of the boson itself). A QCD jet is, on the other hand, formed by continuous soft radiation, meaning that its heaviest subjet should be close to the mass of the jet itself. The mMDT tagger therefore starts from an already clustered jet, reclusters it with the C/A algorithm and then declusters it again defining subjets $s_1$ and $s_2$. It then looks for a significant mass drop going from total jet mass to the mass of each subjet, and checks that the splitting is not too asymmetric. The modified mass drop condition is generalized through the soft drop declustering method~\cite{Larkoski:2014wba}, simply called Soft Drop, which allows for different types of angular requirements to enter the condition. The Soft Drop condition is the following
 
 \begin{equation*}
@@ -351,22 +348,10 @@ The distribution of $\tau_{21}$ for signal and background jets with different pi
 
 \section{Monte Carlo Simulation}
 
-Monte Carlo event generators offer a realistic estimate of high-energy collisions on an event-by-event basis, allowing us to estimate signal and background processes accurately.
+Monte Carlo event generators offer a realistic estimate of high-energy collisions on an event-by-event basis, allowing us to estimate signal and background processes accurately. Simulated events are usually produced in three steps, describing a process from very short timescales up until hadronization and decay. First, a matrix element generator simulates the hard scattering process and subsequent decays. Secondly, the showering and hadronization of unstable particles is performed and, lastly, the final state particles are passed through a full detector simulation in order to reproduce a range of experimental effects.\par
 
-Simulated events are usually produced in three steps, describing a process from very short timescales up until hadronization and decay:
-First, a matrix element generator simulates the hard scattering process and subsequent decays. Secondly, the showering and hadronization of unstable particles is performed and, lastly, the final state particles are passed through a full detector simulation in order to reproduce a range of experimental effects.
+General-purpose Monte Carlo (GPMC) generators, like \HERWIG++~\cite{Bahr:2008pv} and \PYTHIA8~\cite{Sjostrand:2014zea}, deal with both perturbative as well as hadronization phenomena, simulating an event all the way up until detector simulation. In \HERWIG++ and \PYTHIA8, the hardest processes are only simulated at the lowest order of perturbative expansion, meaning $2 \rightarrow 2$ or $2 \rightarrow 3$ scatterings. In order to have  tree-level matrix elements with an arbitrary final-state multiplicity, they can be combined with programs used to generate parton-level events at higher accuracy, which are then processed through showering and hadronization with the GPMC generators. One popular program for generating matrix elements is \MADGRAPH~\cite{Aad2015}.This, however, still correspond to a tree-level (leading order) approach. To go to next-to-leading-order (NLO), meaning the inclusion of virtual corrections, two methods exist: \MCATNLO~\cite{Frixione:2002ik,Frixione:2003ei} and \POWHEG~\cite{Frixione:2007vw}. These combine the full next-to-leading-order prediction for inclusive processes with the subsequent parton showers, either by a subtraction method regularizing the real contributions, or by a matrix-element correction of the parton shower branching probability. After hadronization, all final state particles are passed through a full simulation of the CMS detector. This is done with \GEANTfour~\cite{AGOSTINELLI2003250}, where experimental effects like object reconstruction and detector resolution are accounted for.\par
 
-General-purpose Monte Carlo (GPMC) generators, like \HERWIG++~\cite{Bahr:2008pv} and \PYTHIA8~\cite{Sjostrand:2014zea}, deal with both perturbative as well as hadronization phenomena, simulating an event all the way up until detector simulation
+For the work presented in this thesis, simulated samples of the Standard Model background processes are used to optimize the analysis and in some cases provide flexible background templates. QCD multijet production is simulated with four generator configurations: 1. \PYTHIA standalone, 2. the LO mode of \MADGRAPH matched with \PYTHIA, 3. \POWHEG matched with \PYTHIA and 4. \HERWIG{++}~2.7.1 with tune CUETHS1~\cite{Khachatryan:2015pea}. Top quark pair production is modeled with \POWHEG and showered with \PYTHIA unless otherwise stated. W+jets and Z+jets production are simulated with the leading-order (LO) mode of \MADGRAPH matched with \PYTHIA. Signal samples are generate with standalone \PYTHIA.
 
-% Simulated samples of the SM background processes are used to optimize the analysis and provide flexible background templates.
-% QCD multijet production is simulated with four generator configurations: 1. \PYTHIA{} standalone, 2. the LO mode of \MGvATNLO{} matched with \PYTHIA{}, 3. \POWHEG{} matched with \PYTHIA{} and 4. \HERWIG{++}~2.7.1 with tune CUETHS1~\cite{Khachatryan:2015pea}.
-% Top quark pair production is modeled with \POWHEG{} showered with \PYTHIA{}.
-% W+jets and Z+jets production are simulated with the leading-order (LO) mode of \MGvATNLO{} matched with \PYTHIA{}.
-%
-% All samples are processed through a \GEANTfour-based simulation of the CMS detector. To simulate the effect of additional proton-proton collisions within the same or adjacent bunch crossings (pileup), additional inelastic events are generated using \PYTHIA and superimposed on the hard-scattering events. The MC simulated events are weighted to reproduce the distribution of the number of pileup interactions observed in data. All the 2016 samples are from the RunIISummer16MiniAODv2-PUMoriond17 campaign with Global Tag\\ 80X\tus{}mcRun2\tus{}asymptotic\tus{}2016\tus{}TrancheIV\tus{}v6. The 2017 samples are from the RunIIFall17MiniAOD-94X campaign with Global Tag 94X\tus{}mc2017\tus{}realistic\tus{}v12.
-
-
-\subsection{Matrix Element Generators}
-\textcolor{red}{\textbf{TODO!!!}}
-\subsection{Shower Generators}
-\textcolor{red}{\textbf{TODO!!!}}
+All samples are processed through a \GEANTfour-based simulation of the CMS detector. To simulate the effect of additional proton-proton collisions within the same or adjacent bunch crossings (pileup), additional inelastic events are generated using \PYTHIA and superimposed on the hard-scattering events. The MC simulated events are finally weighted to reproduce the distribution of the number of pileup interactions observed in data.
