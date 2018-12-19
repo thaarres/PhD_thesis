@@ -140,7 +140,7 @@ In addition, a cut on the weighted \PT of neutral particles of $w_{i} \cdot p_{T
 
 The performance of the PUPPI algorithm compared to CHS for jet observables is shown in Figure~\ref{fig:objreco:puppi}.
 
-\begin{figure}[ht] 
+\begin{figure}[h] 
     \centering
     \includegraphics[height=5cm]{figures/event_reconstruction/puppi_mres_hiPt.pdf}
     \includegraphics[height=5cm]{figures/event_reconstruction/puppi_mresVsPu.pdf}\\
@@ -184,7 +184,7 @@ scales. For the anti-\kt algorithm, it is defined as $p=-1$, for the \kt algorit
 There are two requirements that are extremely important when defining jet algorithms: They must be 1) \textit{infrared} (IR) and 2) \textit{collinear} (C) safe.
 \textit{Infrared} safety corresponds to the requirement that if the final state particles are modified by the presence of a soft emission, and there are always soft emission in QCD events (both perturbative and non-perturbative), then the set of hard jets should remain unchanged. This is illustrated by the two left figures in Figure~\ref{fig:objreco:IRC}.
 
-\begin{figure}[ht] 
+\begin{figure}[h] 
     \centering
     \includegraphics[width=0.49\textwidth]{figures/event_reconstruction/IR_safety.pdf}
     \includegraphics[width=0.49\textwidth]{figures/event_reconstruction/Collinear_safety.pdf}
@@ -212,7 +212,7 @@ The default jet clustering algorithm in CMS is the anti-\kt algorithm~\cite{Cacc
 
 A comparison of the resulting jet area in the $\phi-\eta$ plane after clustering with either \kt, C/A and anti-\kt, is shown in Figure~\ref{fig:objreco:jetalgo_comp}. The z-axis correspond to the parton \PT. One can clearly see that when clustering with the anti-\kt algorithm, the produced jets are circular, with a radius set by $R$, around the hardest parton.
 
-\begin{figure}[ht] 
+\begin{figure}[h] 
     \centering
     \includegraphics[width=0.99\textwidth]{figures/event_reconstruction/clustering_algos.pdf}
     \caption{A comparison of the resulting jet cone area in the $\phi-\eta-\PT$ plane after clustering the same event with three different jet algorithms: \kt, C/A and anti-\kt. ~\cite{Cacciari:2008gp}}
@@ -233,7 +233,7 @@ In analyses looking for highly energetic ("boosted") vector bosons like, a main 
 
 Above a W boson \PT of 200 GeV, the two quarks are therefore merged into a single large cone jet of size R = 0.8. A sketch of the two different situation is shown in Figure~\ref{fig:objreco:mergedvsunmerged}. If the W \PT is well below 200 GeV, its decay products are well-defined jets in their own right (left). However, once the W transverse momenta starts exceeding 200 GeV, both the quarks are completely contained within a single jet (right).
    
-\begin{figure}[ht] 
+\begin{figure}[h] 
     \centering
     \includegraphics[width=0.70\textwidth]{figures/event_reconstruction/merged_vs_unmerged.pdf}
     \caption{If the mass of the resonance is low enough, the quark decay products of each vector boson are well separated and clustered into distinguishable AK4 jets (left). If the transverse momentum of the vector boson is greater than 200 GeV, the vector boson decay products are merged into one single large cone AK8 jet.}
@@ -246,7 +246,7 @@ Therefore, being able to accurately and efficiently separate highly boosted QCD 
 In order to get red of UE and pileup, algorithms like PUPPI and CHS can be used. Then, to improve the mass resolution further, dedicated grooming algorithms must be applied.
 
 \subsection{Grooming}
-Grooming was introduces as a tool to improve the signal, most often \PW/\PZ/, mass resolution without significantly changing the background and signal event numbers. It consists of removing the softest parts of a jet in order to resolve its "true" mass, by means of reclustering and identifying soft particles within the jet which then are removed.
+Grooming was introduced as a tool to improve the signal, most often \PW/\PZ/, mass resolution without significantly changing the background and signal event numbers. It consists of removing the softest parts of a jet in order to resolve its "true" mass, by means of reclustering and identifying soft particles within the jet which then are removed.
 
 \subsubsection{Trimming}
 \label{sec:objreco:trimming}
@@ -259,7 +259,7 @@ The effect of trimming on real W jets and QCD quark/gluon jets for different val
 The best signal mass resolution is obtained with $r_{sub}=0.2$ and $p_{T,frac}=0.03$, which is also the parameter setting that provides the best signal and background 
 discrimination by pushing the QCD jet mass closer to zero. These are the default values of the tuned parameters of the trimming algorithm in CMS ($r_{sub}=0.2$ and $p_{T,frac}=0.03$).
 
-\begin{figure}[ht] 
+\begin{figure}[h] 
     \centering 
     \includegraphics[height=6cm]{figures/event_reconstruction/sig_trimming.pdf}
     \includegraphics[height=6cm]{figures/event_reconstruction/bkg_trimming-noData.pdf}
@@ -278,7 +278,7 @@ It proceeds by reclustering the jet with the C/A algorithm, requiring at each st
 
 The first requirement is a requirement on the hardness of the combination. $p_{T,i}$ and $,p_{T,j}$ correspond to the transverse momenta of each protojet (single particle or group of particles already combined in a previous step) and $p_{T,P}$ is the combined \PT of the two. The protojet with the lowest transverse momenta is removed if its hardness is below $z_{cut}$, or if it forms an angle wider than $D_{cut}$ relative to the axis of the recombination of the two protojets. In CMS, the tuned parameters are set to $r_{cut}=0.5$ and where $z_{cut}=0.1$. Figure~\ref{fig:objreco:pruning} shows the ungroomed as well as the pruned jet mass distribution for signal (left) and background jets. The highest amount of signal and background separation in CMS, is achieved with $r_{cut}=0.5$ and $z_{cut}=0.1$.
 
-\begin{figure}[ht] 
+\begin{figure}[h] 
     \centering
     \includegraphics[height=6cm]{figures/event_reconstruction/sig_pruning.pdf}
     \includegraphics[height=6cm]{figures/event_reconstruction/bkg_pruning-noData.pdf}
@@ -300,7 +300,7 @@ If no significant mass drop occurred and the splitting is not to asymmetric, the
 The performance of Soft Drop on W jets and QCD quark/gluon jets for different values of $\beta$ is shown in Figure~\ref{fig:objreco:softdrop}. The modified mass drop tagger (Softdrop with $\beta$=0) is the default Soft Drop settings in CMS, due to it providing the best signal/background discrimination while maintaining an excellent signal mass resolution.
 
 
-\begin{figure}[ht] 
+\begin{figure}[h] 
     \centering 
     \includegraphics[height=6cm]{figures/event_reconstruction/sig_sd.pdf}
     \includegraphics[height=6cm]{figures/event_reconstruction/bkg_softdrop-noData.pdf}
@@ -310,9 +310,9 @@ The performance of Soft Drop on W jets and QCD quark/gluon jets for different va
 
 \subsection{N-subjettiness}
 After hopefully having resolved the particle mass with one of the grooming algorithms above, there is still discriminating information to be gathered from the jet structure itself.
-A \PW or \PZ jet consists of two well-defined high-\PT subjets. A quark/gluon jet on the other hand, made from a single parton, consists of several large angle, asymmetric splittings, as illustrated in Figure~\ref{fig:objreco:onevstwoprong}
+A \PW or \PZ jet consists of two well-defined high-\PT subjets. A quark/gluon jet on the other hand, made from a single parton, consists of several large angle, asymmetric splittings, as illustrated in Figure~\ref{fig:objreco:onevstwoprong}.
 
-\begin{figure}[ht] 
+\begin{figure}[h] 
     \centering 
     \includegraphics[width=0.790\textwidth]{figures/event_reconstruction/tau21_sketch.pdf}
      \caption{A jet stemming from the decay of a \PW will usually have two well-separated high-\pt subjets, while a jet with a single-prong origin consists of several large angel splittings.}
@@ -337,7 +337,7 @@ In CMS, and as recommended by the authors in~\cite{Thaler:2010tr}, the ratio $\t
 signal jets are expected to have a large $\tau_1$, quark/gluon can similarly have large $\tau_1$ due to the diffuse radiation present. However, QCD jets with a large $\tau_1$ tend to have an equally large $\tau_2$, while signal jets do not, hence the ratio of the two provides greater separation power. In CMS, the n-subjettiness algorithm is by default applied to ungroomed jets.
 The distribution of $\tau_{21}$ for signal and background jets with different pileup subtraction algorithms applied are shown in Figure~\ref{fig:objreco:tau21}, where $\tau_21$ in combination with PF+PUPPI (green) yields a distribution most similar to the generated one (black).
 
-\begin{figure}[ht] 
+\begin{figure}[h] 
     \centering 
     \includegraphics[width=0.490\textwidth]{figures/event_reconstruction/sig_tau21.pdf}
     \includegraphics[width=0.490\textwidth]{figures/event_reconstruction/bkg_tau21.pdf}
@@ -345,8 +345,45 @@ The distribution of $\tau_{21}$ for signal and background jets with different pi
      \label{fig:objreco:tau21}
  \end{figure}
 
+\subsection{Vector boson tagging}
+In order to discriminate \PW and \PZ bosons from quark/gluon jets a combination of a groomer and shape-tagger (like n-subjettiness) is usually used.
+Typical values for a W-tagger are jet groomed mass between 60 and 100 \GeV and $\tau_{21}<0.5$.
+Which combination and which cuts to use is analysis dependent, and have been optimized for each search presented in this thesis. The details are thoroughly explained in each section.
 
-\section{Monte Carlo Simulation}
+
+\subsubsection{Polarization effects}
+\label{sec:objreco:pol}
+The vector boson polarization has a significant effect on the W-tagging efficiency. The helicity angle $\theta$, defined as the angle between the outgoing quark daughters of the W in the W bosons rest frame relative to its direction of motion~\cite{PhysRevD.86.095031}, is very different for longitudinally polarized vector bosons, \PWL, and transversally polarized vector bosons \PWT ~\cite{Khachatryan:2014vla}. Figure~\ref{fig:objreco:wtwlcostheta} shows the $\cos \theta^*$ distribution for the outgoing quarks from a $\PWL \rightarrow q \bar {q}$ (black) and $\PWT \rightarrow q \bar{q}$ (red) decay, and it can be observed that transversely polarized W bosons decay with the quarks emitted closer to the vector boson direction of motion.
+
+\begin{figure}[h] 
+    \centering 
+    \includegraphics[width=0.5\textwidth]{figures/event_reconstruction/cosThetaJJ_GEN.png}
+     \caption{The helicity angle for generated quarks from $\PWL\rightarrow q\bar{q}$ (black) and $\PWT\rightarrow q\bar{q}$ (red) decays~\cite{Khachatryan:2014vla}.}
+     \label{fig:objreco:wtwlcostheta}
+ \end{figure}
+
+The consequence of this, is that there is a higher asymmetry in the transverse momenta of the two quarks from a \PWT decay. This in turn makes grooming algorithms, designed to remove soft constituents of a jet, tend to reject particles coming from the softer quark, resulting in a lower jet mass and a drop in tagging efficiency. Figure~\ref{fig:objreco:wtwleff} shows the W-jet tagging efficiency versus q/g jet mistagging rate for a selection on the jet pruned mass of $60 \GeV < m_{pruned} < 100 \GeV$, scanning $\tau_{21}$ cuts (here for CA R=0.8 jets).
+
+\begin{figure}[h] 
+    \centering 
+    \includegraphics[width=0.5\textwidth]{figures/event_reconstruction/substructure_pas_roc3b.png}
+     \caption{The helicity angle for generated quarks from $\PWL\rightarrow q\bar{q}$ (black) and $\PWT\rightarrow q\bar{q}$ (red) decays~\cite{Khachatryan:2014vla}.}
+     \label{fig:objreco:wtwleff}
+ \end{figure}
+
+The tagging efficiency for transversely polarized W bosons (green) is significantly lower than the tagging efficiency for longitudinally polarized bosons (red). This can be explained by looking at the  $\cos \theta^*$ distribution on reconstructed level, using the C/A subjets, with a cut on the jet pruned mass of $60 \GeV < m_{pruned} < 100 \GeV$, shown in Figure~\ref{fig:objreco:wtwlcostheta_reco}. When comparing to the distribution at generator level with no groomed mass window applied, Figure~\ref{fig:objreco:wtwlcostheta}, one can see that the \PWT jets with $\cos \theta^*~1$ are completely removed.
+
+\begin{figure}[h] 
+    \centering 
+    \includegraphics[width=0.5\textwidth]{figures/event_reconstruction/s1vs2-600_sjCosTheta_afterMass.png}
+     \caption{The helicity angle for subjets from $\PWL\rightarrow q\bar{q}$ (black) and $\PWT\rightarrow q\bar{q}$ (pink) decays.~\cite{Khachatryan:2014vla}.}
+     \label{fig:objreco:wtwlcostheta_reco}
+ \end{figure}
+
+ This is due to two effects: the \PT-asymmetry explained above and the fact that the $\Delta R$ distribution between the two quarks is much smaller in the case of \PWL, making them more likely to be fully contained within a jet cone of R=0.8.
+
+\newpage
+\section{Monte Carlo Event Generators}
 
 Monte Carlo event generators offer a realistic estimate of high-energy collisions on an event-by-event basis, allowing us to estimate signal and background processes accurately. Simulated events are usually produced in three steps, describing a process from very short timescales up until hadronization and decay. First, a matrix element generator simulates the hard scattering process and subsequent decays. Secondly, the showering and hadronization of unstable particles is performed and, lastly, the final state particles are passed through a full detector simulation in order to reproduce a range of experimental effects.\par
 
