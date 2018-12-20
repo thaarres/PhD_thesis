@@ -152,7 +152,43 @@ The \PT, $\eta$, dijet invariant mass and $|\Delta \eta|_{jj}$ distribution for 
 
 \subsubsection{Vector boson tagging}
 
-After preselections, we take advantage of the jet substructure algorithms described in Section~\ref{sec:objreco:substructure} to further separate boosted W/Z jets from the QCD multijets background. As this was an analysis due on an extremely short timescale, we decided to not explore novel taggers, but rather take advantage of the same tagger as was used for the corresponding 8 \TeV analysis~\cite{Khachatryan:1700394}. This was a tagger using a combination of the pruned jet mass and $\tau_{21}$....................
+After preselections, we take advantage of the jet substructure algorithms described in Section~\ref{sec:objreco:substructure} to further separate boosted W/Z jets from the QCD multijets background. In the 8 \TeV analysis~\cite{Khachatryan:1700394} published the previous year, the pruning algorithm was the groomer of choice. However, recent progress had been made in the development of alternative groomers which had favorable properties from a theoretical point of view (see Sections~\ref{sec:objreco:grooming} and ~\ref{sec:searchII:puppisoftdrop}). We therefore studied two different grooming algorithms: pruning and softdrop (with $\beta=0$ and $z_{cut} = 0.1$). One of the first observations we made, was that there appeared to be a strong dependence of softdrop mass on the jet \PT. Figure~\ref{fig:searchI:grommedmassshift} shows the pruned (left) and softdrop (right) mass distributions for \PW jets coming from the decay of a \BulkG with a resonance mass of $0.8 \TeV < \mX < 4 \TeV$. While the pruned jet mass mean appeared stable as the jet transverse momenta of the jet increased ($\PT\sim\mX/2$), the softdrop jet mass mean shifted towards lower values as jet \PT increased.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.49\textwidth]{figures/analysis/search1/misc/pruned_mass_shift.pdf}
+\includegraphics[width=0.49\textwidth]{figures/analysis/search1/misc/softdrop_mass_shift.pdf}
+\caption{The jet mass distribution for W jets coming from a $\textrm{G}_{\textrm{bulk}}$ of masses in the range $0.8 \TeV < \mX < 4 \TeV$ decaying to \WW, here with pruning applied (left) and softdrop (right). Charge hadron subtraction is applied to all jets before clustering. A strong shift in the jet mass mean as a function of \PT ($\sim\mX/2$), is observed for jets groomed with the softdrop algorithm.}
+\label{fig:searchI:grommedmassshift}
+\end{figure}
+
+In order to investigate whether this was a reconstruction effect or an algorithmic effect, we additionally looked at the pruned and softdrop mass for generator level jets (jets clustered with generator level particles before they are passed through the detector simulation). Figure~\ref{fig:searchI:grommedmassshift_genvsreco} shows the reconstructed (solid line) and generator level (dotted line) jet mass distributions after pruning (left) or softdrop (right) have been applied.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.49\textwidth]{figures/analysis/search1/misc/pruned_mass_shift_genvsreco.pdf}
+\includegraphics[width=0.49\textwidth]{figures/analysis/search1/misc/softdrop_mass_shift_genvsreco.pdf}
+\caption{The reconstructed (solid line) and generator level (dotted line) jet mass distribution for W jets coming from a $\BulkG \rightarrow \WW$ of mass $\mX = 0.8 \TeV$ (red), roughly $\PT\sim 400 \GeV$, and $\mX = 2.0 \TeV$ (blue), $\PT\sim 1 \TeV$. Here for the pruned (left) and softdrop (right) jet mass.}
+\label{fig:searchI:grommedmassshift_genvsreco}
+\end{figure}
+
+
+
+
+% figures/analysis/search1/misc/SDvsPruned.pdf
+
+
+%
+% figures/analysis/search1/misc/pruned_mass_shift_genvsreco.pdf
+% figures/analysis/search1/misc/softdrop_mass_shift_genvsreco.pdf
+
+ The observed softdrop mass \PT-dependence was problematic, due to the fact that it would require 
+ 
+% figures/analysis/search1/misc/WtagSigEff_vnPVs_pruned.pdf
+% figures/analysis/search1/misc/WtagSigEff_vpT_pruned.pdf
+
+% As this was an analysis due on an extremely short timescale, we decided to take advantage of the same tagger as was used in the corresponding 8 \TeV analysis~\cite{Khachatryan:1700394} published the previous year. This tagger is based on a combination of the pruned jet mass and $\tau_{21}$. We decided to use the same W-jet mass window as was optimized in Run 1, $60 \GeV < m_{pruned} < 100 \GeV$.
+
 
 % Figure~\ref{fig:wtag} shows the signal and background distribution for the two variables used as input to the W/Z tagging algorithm, namely the pruned-jet mass (left) and the n-subjettiness $\tau_{21}$ variable. The signal pruned mass distribution peaks nicely around the W mass, while the multijets background spectrum is peaked at lower pruned masses. We therefore require the pruned-jet mass to be in a window around the W/Z mass, between 65 and 105 GeV.
 % The $\tau_{21}$ cut has been optimised to give optimal average performance for four different signal mass points as described in AN-15-196. We select "high purity" (HP) W/Z jets by requiring $0<\tau_{21} \leq 0.45$. In order to enhance the overall sensitivity of the analysis, we add a low purity (LP) category for jets with $0.45<\tau_{21}\leq0.75$. As this analysis is sensitive to both (i) heavy resonances decaying into two vector bosons and (ii) excited quark resonances $q^*$ decaying to qW and qZ, we look for events with both one single W/Z-tag and events with two W/Z-tags. The events with one W/Z-tag are classified in HP and LP events according to the two categories described above. Events with two W/Z-tagged jets are always required to have one HP tagged jet, and are further divided into LP and HP categories depending on whether the other jet is of high or low purity.
