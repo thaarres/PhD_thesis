@@ -42,7 +42,7 @@ The main background for such an analysis, is QCD multijet events. As mentioned i
 
 \begin{figure}[ht] 
     \centering
-    \includegraphics[width=0.50\textwidth]{figures/analysis/search1/misc/sigExtraction.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/analysis/search1/misc/sigExtraction.pdf}
     \caption{The search strategy consists of looking for signal "bumps" in the dijet invariant mass on top of a smoothly falling QCD multijet background.}
     \label{fig:searchI:bumphunt}
 \end{figure}
@@ -185,39 +185,71 @@ Interestingly, we observe a \PT-dependent mass shift already for generator level
 \label{fig:searchI:grommedmassshift_genvsreco}
 \end{figure}
 
-A comparison of the softdrop (dotted lines) and the pruned (solid lines) jet mass for \PW, \PZ and \PH jets is shown in Figure
-The observed softdrop mass \PT-dependence was problematic, due to the fact that it would require a \PT dependent mass window. This would again require several different measurements of data to simulation tagging efficiency scale factors, for the respective mass windows, or a significantly higher uncertainty on the signal yield. Due to these observations, the grooming algorithm of choice for this analysis is pruning, with $60 \GeV < m_{pruned} < 100 \GeV$. However, this would be a study we would return to in Search II (Section~\ref{searchII}).
+The observed softdrop mass \PT-dependence was problematic, due to the fact that it would require a \PT dependent mass window. This would again require several different measurements of data to simulation tagging efficiency scale factors, for the respective mass windows, or a significantly higher uncertainty on the signal yield. Due to these observations, the grooming algorithm of choice for this analysis is pruning, with $65 \GeV < m_{pruned} < 105 \GeV$. However, this would be a study we would return to in Search II (Section~\ref{searchII}).
 \newline\newline
-The tagger we chose for this analysis was the n-subjettiness ratio $\tau_{21}$ and a thorough cut optimization was performed.
+The shape tagger we chose for this analysis was the n-subjettiness ratio \nsubj. \nsubj is strongly correlated to the pruned jet mass, and the discriminating power of the variable is reduced when applying a pruned mass cut. The \nsubj distribution for the QCD background and \PW jets from a signal decay before (left) and after (right) a pruned mass cut of $65 \GeV < m_{pruned} < 105 \GeV$ have been applied, is shown in Figure~\ref{fig:searchI:tau21_groomedvsungroomed}.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.49\textwidth]{figures/analysis/search1/misc/tau21_ungroomed.pdf}
+\includegraphics[width=0.49\textwidth]{figures/analysis/search1/misc/tau21_groomed.pdf}
+\caption{The \nsubj distribution for QCD background and signal jets before (left) and after (right) a pruned mass window is applied. The discriminating power of \nsubj is strongly reduced after grooming.}
+\label{fig:searchI:tau21_groomedvsungroomed}
+\end{figure}
+
+We therefore perform a cut optimization on \nsubj after all analysis selections, including a pruned mass window of $65 \GeV < m_{pruned} < 105 \GeV$, have been applied. This is done by scanning the \nsubj cut, and for each cut computing the Punzi significance~\cite{Punzi:2003bu} defined as
+\begin{equation*}
+\textrm{S} = \frac{\epsilon_S}{1+\sqrt{\textrm{B}}}  
+\end{equation*}  
+where $\epsilon_S$ is the signal efficiency and B is the total background. The cut with the highest significance is defined as the optimal cut value. The signals under consideration are W jets coming from the decay of a \BulkG with $\mX = 1-4 \TeV$, against a background of light flavored QCD jets. Only jets with a dijet invariant mass in a 20\% window around the resonance mass are considered. The Punzi significance as a function of the upper cut value on \nsubj is shown on the left in Figure~\ref{fig:searchI:tau21_punzi}.
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=0.49\textwidth]{figures/analysis/search1/AN-15-196/tau21optimisation/HP_Punzi_BulkWW.png}
+%\includegraphics[width=0.49\textwidth]{figures/analysis/search1/misc/tau21_punzi.pdf}
+\includegraphics[width=0.49\textwidth]{figures/analysis/search1/AN-15-196/tau21optimisation/HP_CutSignificance_bulkWW.png}\\
+\caption{Optimal upper cut on $\tau_{21}$ as a function of \BulkG mass (left).  The optimal $\tau_{21}$ selection for W' (HTV model) resembles the Bulk graviton selection.}
+\label{fig:searchI:tau21_punzi}
+\end{center}
+\end{figure}
+
+The optimal cut gets looser as the dijet invariant mass increases, something which can be understood when looking at the QCD dijet invariant mass spectrum in Figure~\ref{fig:kinematics-all}. The number of QCD jets falls of exponentially with \mjj, meaning that the background at 4 \TeV is considerably lower than at 1 \TeV. This allows for a looser cut on \nsubj as \mjj increases. In order to choose a single cut which works reasonably well for all masspoints, we look at the ratio of a given \nsubj cut over the significance of the best cut at that mass points. This is shown in the right plot of Figure~\ref{fig:searchI:tau21_punzi}. The cut $\tau_{21}<0.45$ has the most stable performance out of the investigated cut values and is due to that, and due to the desire of keeping the background as low as possible at low \mjj, chosen as the nominal cut. In order to account for the fact that background is lower at high-\mjj, we add an additional analysis category, $0.45 < \nsubj < 0.75$, which contains $>95\%$ of the signal and enhances the analysis sensitivity where the background is low.
+These categories are hereafter referred to as the "high purity" (HP) category, for jets with $0<\tau_{21} \leq 0.45$, and the low purity (LP) caegory, for jets with $0.45<\tau_{21}\leq0.75$.
+\newline
+\newline
+The W-tagging efficiency and QCD light-flavored jet mistagging rate for a W-tagger consisting of $0<\tau_{21} \leq 0.45$ and  $65 \GeV < m_{pruned} < 105 \GeV$ is shown in Figure~\ref{fig:searchI:wtageff}, both as a function of jet \PT and as a function of number of primary vertices in the event.
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.49\textwidth]{figures/analysis/search1/misc/WtagSigEff_vpT_pruned.pdf}
+\includegraphics[width=0.49\textwidth]{figures/analysis/search1/misc/WtagSigEff_vnPVs_pruned.pdf}
+\caption{The W-tagging efficiency (green) and light jet mistag rate (grey) for a pruned jet mass cut only and pruned jet mass + \nsubj cut as a function of \PT (left) and number of primary vertices (right). }
+\label{fig:searchI:wtageff}
+\end{center}
+\end{figure}
+
+
+The signal efficiency for a pruned jet mass cut only, is around 80 \% with a mistag rate of $\sim 15\%$. After adding a \nsubj cut, the signal efficiency drops to around 55\% and the mistagging rate to $\sim 2\%$. Another interesting feature is the dependence of \nsubj on \PT on pileup, compared to the resilience of the groomed mass as a function of the same variables. This will be another feature we explore in Search II (Section~\ref{searchII}).
 
 
 
 
 
-% 
+
+Figure~\ref{fig:wtag} shows the pruned-jet mass (left) and the n-subjettiness $\tau_{21}$ distribution (right) for signal and background Monte Carlo, as well as the distributions measured in data. 
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.4\textwidth]{figures/controlplots/silverjson/PrunedMass_WSignal.pdf}
+\includegraphics[width=0.4\textwidth]{figures/controlplots/silverjson/Tau21_punzi_WSignal.pdf}\\
+\caption{Pruned jet mass distribution (left) and n-subjettiness $\tau_{21}$ (right) distribution for data and simulated samples. Simulated samples are scaled to match the distribution in data. The $\tau_{21}$ distribution is shown for jets after a cut of $65 {\GeV} < M_{p} < 105 {\GeV}$ has been applied.}
+\label{fig:wtag}
+\end{figure}
+
+As the analysis requires two W/Z-tags always required to have one HP tagged jet, and are further divided into LP and HP categories depending on whether the other jet is of high or low purity.
 
 
-%
-% figures/analysis/search1/misc/pruned_mass_shift_genvsreco.pdf
-% figures/analysis/search1/misc/softdrop_mass_shift_genvsreco.pdf
-
-
- 
-% figures/analysis/search1/misc/WtagSigEff_vnPVs_pruned.pdf
-% figures/analysis/search1/misc/WtagSigEff_vpT_pruned.pdf
-
-
-
-% Figure~\ref{fig:wtag} shows the signal and background distribution for the two variables used as input to the W/Z tagging algorithm, namely the pruned-jet mass (left) and the n-subjettiness $\tau_{21}$ variable. The signal pruned mass distribution peaks nicely around the W mass, while the multijets background spectrum is peaked at lower pruned masses. We therefore require the pruned-jet mass to be in a window around the W/Z mass, between 65 and 105 GeV.
-% The $\tau_{21}$ cut has been optimised to give optimal average performance for four different signal mass points as described in AN-15-196. We select "high purity" (HP) W/Z jets by requiring $0<\tau_{21} \leq 0.45$. In order to enhance the overall sensitivity of the analysis, we add a low purity (LP) category for jets with $0.45<\tau_{21}\leq0.75$. As this analysis is sensitive to both (i) heavy resonances decaying into two vector bosons and (ii) excited quark resonances $q^*$ decaying to qW and qZ, we look for events with both one single W/Z-tag and events with two W/Z-tags. The events with one W/Z-tag are classified in HP and LP events according to the two categories described above. Events with two W/Z-tagged jets are always required to have one HP tagged jet, and are further divided into LP and HP categories depending on whether the other jet is of high or low purity.
-%
-% \begin{figure}[htb]
-% \centering
-% \includegraphics[width=0.4\textwidth]{figures/controlplots/silverjson/PrunedMass_WSignal.pdf}
-% \includegraphics[width=0.4\textwidth]{figures/controlplots/silverjson/Tau21_punzi_WSignal.pdf}\\
-% \caption{Pruned jet mass distribution (left) and n-subjettiness $\tau_{21}$ (right) distribution for data and simulated samples. Simulated samples are scaled to match the distribution in data. The $\tau_{21}$ distribution is shown for jets after a cut of $65 {\GeV} < M_{p} < 105 {\GeV}$ has been applied.}
-% \label{fig:wtag}
-% \end{figure}
 %
 % In order to enhance the analysis sensitivity, we further split the pruned jet mass window into a W and a Z boson window where the W window is defined as $65 {\GeV} < M_{p} < 85 {\GeV}$ and the Z boson window as $85 {\GeV} < M_{p} < 105 {\GeV}$.
 % This allows us to make an estimate of how WW/ZZ/WZ or qW/qZ -like our signal is by counting events in each category. We for instance expect a higher signal yield in WZ category for a W’ decaying to a W and Z boson then for a Graviton decaying to WW or ZZ. All categories are combined in the end, leading to the same or better sensitivity than when using the whole pruned mass window. With the high-purity and low-purity categories as defined above for each mass window combination, this leaves us with ten different signal categories. They are as follows:
