@@ -241,56 +241,60 @@ Figure~\ref{fig:wtag} shows the pruned-jet mass (left) and the n-subjettiness $\
 
 \begin{figure}[htb]
 \centering
-\includegraphics[width=0.4\textwidth]{figures/controlplots/silverjson/PrunedMass_WSignal.pdf}
-\includegraphics[width=0.4\textwidth]{figures/controlplots/silverjson/Tau21_punzi_WSignal.pdf}\\
+\includegraphics[width=0.4\textwidth]{figures/analysis/search1/AN-15-211/controlplots/silverjson/PrunedMass_WSignal.pdf}
+\includegraphics[width=0.4\textwidth]{figures/analysis/search1/AN-15-211/controlplots/silverjson/Tau21_punzi_WSignal.pdf}\\
 \caption{Pruned jet mass distribution (left) and n-subjettiness $\tau_{21}$ (right) distribution for data and simulated samples. Simulated samples are scaled to match the distribution in data. The $\tau_{21}$ distribution is shown for jets after a cut of $65 {\GeV} < M_{p} < 105 {\GeV}$ has been applied.}
 \label{fig:wtag}
 \end{figure}
 
-As the analysis requires two W/Z-tags always required to have one HP tagged jet, and are further divided into LP and HP categories depending on whether the other jet is of high or low purity.
+
+\subsubsection{Analysis categorization}
+As the analysis requires two W/Z-tags, we always require one HP tagged jet and then divide into LP and HP categories depending on whether the other jet is of high or low purity. In addition, in order to further enhance the analysis sensitivity, we further split the pruned jet mass window into a W and a Z boson window where the W window is defined as $65 {\GeV} < m_{pruned} < 85 {\GeV}$ and the Z boson window as $85 {\GeV} < m_{pruned} < 105 {\GeV}$. This has the added benefit of allowing us to make a discrimination between a \BulkG decaying to \WW or \ZZ, and a \PWpr decaying into \WZ through counting events in each category. We, for instance, expect a higher signal yield in \WZ category for a \PWpr decaying to a \PW and \PZ boson then for a \BulkG decaying to \WW or \ZZ. All categories are combined in the end, leading to the same or better sensitivity than when using the whole pruned mass window. 
+
+Figure~\ref{fig:searchI:massCategories} shows the expected 95\% CL upper limits on the production cross section of a \PWpr decaying to \WZ (left) and a \BulkG decaying to \WW (right) as function of the resonance mass in the HP category. The blue line corresponds to the expected limits obtained when not splitting into mass categories and the red line corresponds to the limit using the combination of two categories. The dotted and solid black lines are the limits in the \PW and \PZ categories, respectively. The combination of two mass categories leads to a slightly better (~10\%) or to the same sensitivity as when using one large mass window.
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.49\textwidth]{figures/analysis/search1/AN-15-196/massCategories/compare-HP-HPV-Wprime.png}
+  \includegraphics[width=0.49\textwidth]{figures/analysis/search1/AN-15-196/massCategories/compare-HP-HPV-BulkG.pdf}
+ \caption{Expected 95\% CL upper limits on the production cross section of a \PWpr (left) and \BulkG (right) signal as function of the resonance mass for the different mass categories for events passing the high-purity $\tau_{21}$ selections.}
+ \label{fig:searchI:massCategories}
+ \end{figure}
+
+The real benefit of splitting into mass categories becomes obvious when defining a test statistics based on the likelihood ratios of each signal hypothesis, $q = -2 \ln(L_{\BulkG}/L_{\PWpr})$, shown in Figure~\ref{fig:searchI:signalsep}. For a signal with a signal strength corresponding to a 3-4 $\sigma$ excess, the test statistics for each signal hypothesis are well separated ($\sim3.5 \sigma$), allowing us to make a statement of how \BulkG or \PWpr like a possible signal is.
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.49\textwidth]{figures/analysis/search1/AN-15-196/massCategories/sig_sep.pdf}
+ \caption{Distribution of the test statistic  $q = -2 \ln(L_{\BulkG}/L_{\PWpr})$ for a \BulkG (blue) and \PWpr signal hypothesis.}
+ \label{fig:searchI:signalsep}
+ \end{figure}
+ 
+With the high-purity and low-purity categories as defined above for each mass window combination, this leaves us with six different signal categories. They are as follows:
+\begin{itemize}
+\item High-purity, 3 mass categories: \WW, \ZZ and \WZ
+\item Low-purity , 3 mass categories: \WW, \ZZ and \WZ
+\end{itemize}
+In parallel to the mass-category based analysis, we perform an analysis without categorization in mass (similar to the 8 \TeV analysis) as a cross-check. These studies can be found in the Appendix~\ref{app:2015xcheck}.
+
+The final tagging efficiency for different signal hypothesis (top) together with the QCD mistag rate (bottom) in the different signal categories is shown in Figure~\ref{fig:search1:sigeff}. The solid lines represent the tagging efficiency in the full mass window ($65 {\GeV} < M_{p} < 105 {\GeV}$) before splitting into mass categories. A lower signal efficiency the ZZ mass category is observed in all cases. This can be explained from the pruned jet mass distribution on the left in Figure~\ref{fig:wtag}, where a cut at 85 GeV leaves a large fraction of the Z peak in the W mass window. As the main benchmark models under consideration preferably decays to W bosons (in the Bulk Graviton model the branching ratio BR($G_{Bulk}$ $\rightarrow$ \PW\PW) = 2* BR($G_{Bulk}$$\rightarrow$ ZZ), and in the HVT model W'/Z' $\rightarrow$ WZ/WW (but not ZZ) ), a high tagging efficiency for the W boson is preferred. In the limit-setting procedure all the categories are combined and the overall signal efficiency is conserved. For the combined mass-categories (solid line) the signal efficiency is between 16 and 23 \% in the double-tag categories, and between 20 and 34 \% in the single-V tag categories. The mistagging rate in the double-V tag categories is below 1 \% in the high-purity category.
+
+\begin{figure}[htb]
+\centering
+
+\includegraphics[width=0.49\textwidth]{figures/analysis/search1/AN-15-211/HP_VV_SigEff.png}
+\includegraphics[width=0.49\textwidth]{figures/analysis/search1/AN-15-211/LP_VV_SigEff.png}\\
+\includegraphics[width=0.49\textwidth]{figures/analysis/search1/AN-15-211/QCD_HP_VV_MistaggingRateEff.pdf}
+\includegraphics[width=0.49\textwidth]{figures/analysis/search1/AN-15-211/QCD_LP_VV_MistaggingRateEff.pdf}
+\caption{Tagging efficiency (top) and mistagging rate (bottom) in the different pruned mass categories in the high-purity category (left) and in the low-purity category (right)}
+\label{fig:search1:sigeff}
+\end{figure}
 
 
-%
-% In order to enhance the analysis sensitivity, we further split the pruned jet mass window into a W and a Z boson window where the W window is defined as $65 {\GeV} < M_{p} < 85 {\GeV}$ and the Z boson window as $85 {\GeV} < M_{p} < 105 {\GeV}$.
-% This allows us to make an estimate of how WW/ZZ/WZ or qW/qZ -like our signal is by counting events in each category. We for instance expect a higher signal yield in WZ category for a W’ decaying to a W and Z boson then for a Graviton decaying to WW or ZZ. All categories are combined in the end, leading to the same or better sensitivity than when using the whole pruned mass window. With the high-purity and low-purity categories as defined above for each mass window combination, this leaves us with ten different signal categories. They are as follows:
-% \begin{itemize}
-% \item High-purity double W/Z-tag, 3 mass categories: WW, ZZ and WZ
-% \item Low-purity double W/Z-tag, 3 mass categories: WW, ZZ and WZ
-% \item High-purity single W/Z-tag, 2 mass categories: qW and qZ
-% \item Low-purity single W/Z-tag, 2 mass categories:q W and qZ
-% \end{itemize}
-% While the combination of the above listed categories define the main analysis strategy, we also perform two cross check analyses in parallel. An analysis without any selection on $\tau_{21}$ and categorizations in mass is intended to be a cross check analysis without sensitivity to the nature of the W/Z bosons, e.g. will also be sensitive to 3-prong particles with the same mass as the W and Z boson. We also provide plots analogous to the Run I result \cite{CMS-PAS-EXO-14-024}, where categorizations in $\tau_{21}$  was done, but no categorization in mass, thus the selection is labeled qV or VV.
-% The tagging efficiency for different signals (RS and Bulk Graviton, W' and excited quarks q*) in the different signal categories as well as the signal efficiency in a region where no n-subjettiness cut is applied (NP), is shown in Figure~\ref{fig:sigeff}. The solid lines represent the tagging efficiency in the full mass window ($65 {\GeV} < M_{p} < 105 {\GeV}$) before splitting into mass categories. A lower signal efficiency the ZZ mass category is observed in all cases. This can be explained from the pruned jet mass distribution on the left in Figure~\ref{fig:wtag}, where a cut at 85 GeV leaves a large fraction of the Z peak in the W mass window. As the main benchmark models under consideration preferably decays to W bosons (in the Bulk Graviton model the branching ratio BR($G_{Bulk}$ $\rightarrow$ \PW\PW) = 2* BR($G_{Bulk}$$\rightarrow$ ZZ), and in the HVT model W'/Z' $\rightarrow$ WZ/WW (but not ZZ) ), a high tagging efficiency for the W boson is preferred. In the limit-setting procedure all the categories are combined and the overall signal efficiency is conserved. For the combined mass-categories (solid line) the signal efficiency is between 16 and 23 \% in the double-tag categories, and between 20 and 34 \% in the single-V tag categories. Figure~\ref{fig:bkgeff} shows the corresponding background mistagging efficiency in all channels. The mistagging rate in the double-V tag categories is below 1 \% in the high-purity category. A smooth background is expected from simulation in all cases, thus we expect to be able to describe the background with a smooth fit function.
-%
-% \begin{figure}[htb]
-% \centering
-%
-% \includegraphics[width=0.4\textwidth]{figures/HP_VV_SigEff.png}
-% \includegraphics[width=0.4\textwidth]{figures/LP_VV_SigEff.png}\\
-% \includegraphics[width=0.4\textwidth]{figures/HP_qV_SigEff.png}
-% \includegraphics[width=0.4\textwidth]{figures/LP_qV_SigEff.png}\\
-% \includegraphics[width=0.4\textwidth]{figures/NP_VV_SigEff.pdf}
-% \includegraphics[width=0.4\textwidth]{figures/NP_qV_SigEff.pdf}\\
-% \caption{Tagging efficiency in the different pruned mass categories in the high-purity double-V tag category (top left),in the low-purity double-V tag category (top right), in the high-purity single-V tag category (middle left), the low-purity single-V tag category (middle right), and in a region with no n-subjettiness cut applied for the double-V tag (left) and single-V tag (right) categories.}
-% \label{fig:sigeff}
-% \end{figure}
-%
-%
-% \begin{figure}[htb]
-% \centering
-% \includegraphics[width=0.4\textwidth]{figures/QCD_HP_VV_MistaggingRateEff.pdf}
-% \includegraphics[width=0.4\textwidth]{figures/QCD_LP_VV_MistaggingRateEff.pdf}
-% \includegraphics[width=0.4\textwidth]{figures/QCD_HP_qV_MistaggingRateEff.pdf}
-% \includegraphics[width=0.4\textwidth]{figures/QCD_LP_qV_MistaggingRateEff.pdf}
-% \includegraphics[width=0.4\textwidth]{figures/QCD_NP_VV_MistaggingRateEff.pdf}
-% \includegraphics[width=0.4\textwidth]{figures/QCD_NP_qV_MistaggingRateEff.pdf}
-% \caption{Mistagging rate in the different pruned mass categories in the high-purity double-V tag category (top left),in the low-purity double-V tag category (top right), in the high-purity single-V tag category (middle left), the low-purity single-V tag category (middle right), and in a region with no n-subjettiness cut applied for the double-V tag (left) and single-V tag (right) categories.}
-% \label{fig:bkgeff}
-% \end{figure}
-
-
-
+\clearpage
 \subsection{Background modeling}
 \label{sec:searchI:bkg}
+
+The background modeling in this analysis consists of a smoothness test performed directly on unblinded data. We assume that the QCD multijet background can be described by a smooth, monotonically decreasing function. 
 
 
