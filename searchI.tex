@@ -50,6 +50,7 @@ The main background for such an analysis, is QCD multijet events. As mentioned i
 The benefit of such a method is that there is no need for any background simulation and the strategy is simple and robust. The disadvantage is that the analysis is intrinsically limited to regions where the dijet invariant mass spectrum is smooth, hence must avoid regions with continuities due to trigger turn-ons or kinematic selections.
 
 \subsection{Data and simulated samples}
+\label{sec:searchI:samples}
 The data analyzed in this search correspond to a total integrated luminosity of 2.7\fbinv collected at a center-of mass energy of 13 \TeV between June and December 2015. The instantaneous luminosity of the LHC during this run was around half of the design luminosity ($0.5 \times 10^{34} \percms$), with an average number of primary vertices per event of $<\mu>=13$. \par\par
 
 The bulk graviton model (see Section~\ref{sec:theory:wed}) and the HVT model (\PWpr{} and \PZpr{}, see Section~\ref{sec:theory:hvt}) are used as benchmark signal processes. In these models, the vector gauge bosons are produced with a longitudinal polarization in more than 99\% of the cases, which leads to a 24\% higher acceptance per boson for reasons explained in Section~\ref{sec:objreco:pol}. For the HVT model, a scenario (model B) with $g_{\rm V}=3$, $c_{\rm H}=-0.976243$, and $c_{\rm F}=1.02433$ is chosen, where the heavy resonance predominantly couple to bosons and the coupling to fermions is suppressed. The bulk graviton samples were generated with $\ktilde = 0.5$.
@@ -239,7 +240,7 @@ The signal efficiency for a pruned jet mass cut only, is around 80 \% with a mis
 
 Figure~\ref{fig:wtag} shows the pruned-jet mass (left) and the n-subjettiness $\tau_{21}$ distribution (right) for signal and background Monte Carlo, as well as the distributions measured in data. 
 
-\begin{figure}[htb]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.4\textwidth]{figures/analysis/search1/AN-15-211/controlplots/silverjson/PrunedMass_WSignal.pdf}
 \includegraphics[width=0.4\textwidth]{figures/analysis/search1/AN-15-211/controlplots/silverjson/Tau21_punzi_WSignal.pdf}\\
@@ -253,7 +254,7 @@ As the analysis requires two W/Z-tags, we always require one HP tagged jet and t
 
 Figure~\ref{fig:searchI:massCategories} shows the expected 95\% CL upper limits on the production cross section of a \PWpr decaying to \WZ (left) and a \BulkG decaying to \WW (right) as function of the resonance mass in the HP category. The blue line corresponds to the expected limits obtained when not splitting into mass categories and the red line corresponds to the limit using the combination of two categories. The dotted and solid black lines are the limits in the \PW and \PZ categories, respectively. The combination of two mass categories leads to a slightly better (~10\%) or to the same sensitivity as when using one large mass window.
 
-\begin{figure}[htbp]
+\begin{figure}[h!p]
  \centering
  \includegraphics[width=0.49\textwidth]{figures/analysis/search1/AN-15-196/massCategories/compare-HP-HPV-Wprime.png}
   \includegraphics[width=0.49\textwidth]{figures/analysis/search1/AN-15-196/massCategories/compare-HP-HPV-BulkG.pdf}
@@ -263,7 +264,7 @@ Figure~\ref{fig:searchI:massCategories} shows the expected 95\% CL upper limits 
 
 The real benefit of splitting into mass categories becomes obvious when defining a test statistics based on the likelihood ratios of each signal hypothesis, $q = -2 \ln(L_{\BulkG}/L_{\PWpr})$, shown in Figure~\ref{fig:searchI:signalsep}. For a signal with a signal strength corresponding to a 3-4 $\sigma$ excess, the test statistics for each signal hypothesis are well separated ($\sim3.5 \sigma$), allowing us to make a statement of how \BulkG or \PWpr like a possible signal is.
 
-\begin{figure}[htbp]
+\begin{figure}[h!p]
  \centering
  \includegraphics[width=0.49\textwidth]{figures/analysis/search1/AN-15-196/massCategories/sig_sep.pdf}
  \caption{Distribution of the test statistic  $q = -2 \ln(L_{\BulkG}/L_{\PWpr})$ for a \BulkG (blue) and \PWpr signal hypothesis.}
@@ -279,7 +280,7 @@ In parallel to the mass-category based analysis, we perform an analysis without 
 
 The final tagging efficiency for different signal hypothesis (top) together with the QCD mistag rate (bottom) in the different signal categories is shown in Figure~\ref{fig:search1:sigeff}. The solid lines represent the tagging efficiency in the full mass window ($65 {\GeV} < M_{p} < 105 {\GeV}$) before splitting into mass categories. A lower signal efficiency the ZZ mass category is observed in all cases. This can be explained from the pruned jet mass distribution on the left in Figure~\ref{fig:wtag}, where a cut at 85 GeV leaves a large fraction of the Z peak in the W mass window. As the main benchmark models under consideration preferably decays to W bosons (in the Bulk Graviton model the branching ratio BR($G_{Bulk}$ $\rightarrow$ \PW\PW) = 2* BR($G_{Bulk}$$\rightarrow$ ZZ), and in the HVT model W'/Z' $\rightarrow$ WZ/WW (but not ZZ) ), a high tagging efficiency for the W boson is preferred. In the limit-setting procedure all the categories are combined and the overall signal efficiency is conserved. For the combined mass-categories (solid line) the signal efficiency is between 16 and 23 \% in the double-tag categories, and between 20 and 34 \% in the single-V tag categories. The mistagging rate in the double-V tag categories is below 1 \% in the high-purity category.
 
-\begin{figure}[htb]
+\begin{figure}[h!]
 \centering
 
 \includegraphics[width=0.49\textwidth]{figures/analysis/search1/AN-15-211/HP_VV_SigEff.png}
@@ -292,7 +293,7 @@ The final tagging efficiency for different signal hypothesis (top) together with
 
 The full analysis selections and final categories are listen in Table~\ref{tab:search1:selection}.
 
-\begin{table}[!htb]
+\begin{table}[!h!]
 \footnotesize
 \begin{center}
 \label{tab:search1:selection}
@@ -360,19 +361,19 @@ Before unblinding the signal region, we check that the QCD dijet invariant mass 
 The fits to data in the signal region using the different fit functions, are shown in Figure \ref{fig:searchI:fit-dataVV}, and the corresponding F-test output are given in Table \ref{tab:WW_enriched} through Table \ref{tab:ZZ_enriched}. The findings can be summarized as follows: for the WW enriched category a 2 parameter fit is sufficient to describe the data in both the high- and low-purity categories. In the WZ category, a two parameter fit is sufficient in the high-purity category, while three parameters are needed for the low-purity category. For the ZZ category, a 3 parameter fit is needed for both purity categories. The 2 and 3 parameters fit functions as defined in Equation \ref{eq:dijet2} will therefore be used to model the background component in the simultaneous signal and background fit.
 \par
 
-\begin{figure}[htb]
+\begin{figure}[h!]
 \centering
-\includegraphics[width=0.43\textwidth]{figures/analysis/search1/AN-15-211//ftest/no5par/WWHP_fitComp.pdf}
-\includegraphics[width=0.43\textwidth]{figures/analysis/search1/AN-15-211//ftest/no5par/WWLP_fitComp.pdf}\\
-\includegraphics[width=0.43\textwidth]{figures/analysis/search1/AN-15-211//ftest/no5par/WZHP_fitComp.pdf}
-\includegraphics[width=0.43\textwidth]{figures/analysis/search1/AN-15-211//ftest/no5par/WZLP_fitComp.pdf}\\
-\includegraphics[width=0.43\textwidth]{figures/analysis/search1/AN-15-211//ftest/no5par/ZZHP_fitComp.pdf}
-\includegraphics[width=0.43\textwidth]{figures/analysis/search1/AN-15-211//ftest/no5par/ZZLP_fitComp.pdf}\\
+\includegraphics[width=0.43\textwidth]{figures/analysis/search1/AN-15-211/ftest/no5par/WWHP_fitComp.pdf}
+\includegraphics[width=0.43\textwidth]{figures/analysis/search1/AN-15-211/ftest/no5par/WWLP_fitComp.pdf}\\
+\includegraphics[width=0.43\textwidth]{figures/analysis/search1/AN-15-211/ftest/no5par/WZHP_fitComp.pdf}
+\includegraphics[width=0.43\textwidth]{figures/analysis/search1/AN-15-211/ftest/no5par/WZLP_fitComp.pdf}\\
+\includegraphics[width=0.43\textwidth]{figures/analysis/search1/AN-15-211/ftest/no5par/ZZHP_fitComp.pdf}
+\includegraphics[width=0.43\textwidth]{figures/analysis/search1/AN-15-211/ftest/no5par/ZZLP_fitComp.pdf}\\
 \caption{Fitted dijet mass spectrum in the different mass and purity categories in data for the double V-tag category. A 2 parameter fit is sufficient to describe the data for the WW (HP and LP) and WZ (LP) enriched categories. For the ZZ enriched (HP and LP) and WZ (HP) categories, a 3 parameter fit is needed.}
 \label{fig:searchI:fit-dataVV}
 \end{figure}
 
-\begin{table}[htb]
+\begin{table}[h!]
 \centering
 \begin{tabular}{|l c c c |}
 \hline
@@ -410,7 +411,7 @@ Fishers34 & -1.191& CL & 1.0\\
 \end{table}
 
 
-\begin{table}[htb]
+\begin{table}[h!]
 \centering
 \begin{tabular}{|l c c c |}
 \hline
@@ -449,7 +450,7 @@ Fishers34 & 0.078& CL & 0.783\\
 
 
 
-\begin{table}[htb]
+\begin{table}[h!]
 \centering
 \begin{tabular}{|l c c c |}
 \hline
@@ -489,4 +490,90 @@ Fishers34 & 0.356& CL & 0.56\\
 \clearpage
 \subsection{Signal modeling}
 \label{sec:searchI:sig}
+
+The signal shape is extracted from signal MC with masses in the range from 1 to 4 TeV. A linear interpolation provides shapes for the mass points in between in steps of 100 GeV. From these shapes, pdf models are constructed as composite models with a Gaussian core due to detector resolution and an exponential tail to account for parton distribution function effects. Parametric shape uncertainties due to jet energy scale and resolution uncertainties are inserted by variations of the Gaussian peak position and width. The dijet invariant mass shape for different benchmark model signals are shown in Figure \ref{fig:sigfit}. The signal and background components are then simultaneously fitted to the data points.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.49\textwidth]{figures/analysis/search1/B2G-16-004/Figure_005-a.pdf}
+\caption{Dijet invariant mass from signal MC used to extract the signal shape. Here for 1.2, 2, 3 and 4 TeV resonances.}
+\label{fig:searchI:fit-dataVV}
+\end{figure}
+
+\clearpage
+
+\subsection{Results}
+\label{sec:searchI:results}
+The background fits for each analysis category in the data signal region are shown in Figure \ref{fig:search1:bkgfitMassCat}. Here a background only fit is performed while, as described above, a simultaneous fit is used for the limit setting procedure. The filled area correspond to the 1 sigma error band of the background fit, obtained using linear error propagation.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.44\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassHighPuriWW.pdf}
+\includegraphics[width=0.44\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassLowPuriWW.pdf}\\
+\includegraphics[width=0.44\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassHighPuriWZ.pdf}
+\includegraphics[width=0.44\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassLowPuriWZ.pdf}\\
+\includegraphics[width=0.44\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassHighPuriZZ.pdf}
+\includegraphics[width=0.44\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassLowPuriZZ.pdf}\\
+\caption{Fit to data in the signal region using the background fit only for the different mass and purity categories. The filled red area correspond to the 1 sigma statistical error of the fit.}
+\label{fig:search1:bkgfitMassCat}
+\end{figure}
+
+We proceed by setting limits on the cross section of the process $\text{X} \to \VV$, using the asymptotic $\textrm{CL}_\textrm{S}$ method as described in Section~\ref{sec:theory:statmet}. The binned likelihood is defined as
+\begin{equation}
+L = \prod_i\frac{\mu^{n_i}_ie^{-\mu_i}}{n_i!}
+\end{equation}
+with
+\begin{equation}
+\mu_i=\sigma \cdot N_i(S)+N_i(B)
+\end{equation}
+Here $\sigma$ is the signal strength scaling the expected number of signal events in the $i$-th dijet invariant mass bin $N_i(S)$, $N_i(B)$ is the expected number of background events in dijet invariant mass bin $i$ and $n_i$ is the observed number of events in the $ith$ dijet invariant mass bin. The background per bin $N_i(B)$ is estimated from the background component of the best signal+background fit to the data points with the signal cross section set to zero. The number of signal events in the $i$-th dijet invariant mass bin, $N_i(S)$, is then estimated from the signal templates, where only a dijet invariant mass in a 20\% window around the resonance mass is considered, containing most of the signal contribution while making sure to keep a good description of the core.
+\newline
+\newline
+As mentioned in Section~\ref{sec:searchI:samples}, we set limits on three different signal scenarios: $\BulkG \rightarrow \WW$, $\BulkG \rightarrow \ZZ$ and $\PWpr \rightarrow WZ$. Figure \ref{fig:searchI:Limits_CombNew} shows the asymptotic limits and corresponding p-values obtained with 2.6 \fbinv of 13 \TeV CMS data after combining all mass and purity categories.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.32\textwidth]{figures/analysis/search1/AN-15-211/limits/brazilianFlag_BulkWW_new_combined_13TeV.pdf}
+\includegraphics[width=0.32\textwidth]{figures/analysis/search1/AN-15-211/limits/brazilianFlag_WZ_new_combined_13TeV.pdf}
+\includegraphics[width=0.32\textwidth]{figures/analysis/search1/AN-15-211/limits/brazilianFlag_BulkZZ_new_combined_13TeV.pdf}\\
+\includegraphics[width=0.32\textwidth]{figures/analysis/search1/AN-15-211/pvalues/pvalue_BulkWWin_combined_new.pdf}
+\includegraphics[width=0.32\textwidth]{figures/analysis/search1/AN-15-211/pvalues/pvalue_WZin_combined_new.pdf}
+\includegraphics[width=0.32\textwidth]{figures/analysis/search1/AN-15-211/pvalues/pvalue_BulkZZin_combined_new.pdf}\\
+\caption{Expected and observed limits with corresponding p-values obtained using 2.6 $\textrm{fb}^{-1}$ of CMS data after combining all mass and purity categories. Here for a Bulk $G\rightarrow WW$ (left), $W'\rightarrow WZ$ (middle) and $G\rightarrow ZZ$ (right) signal.}
+\label{fig:searchI:Limits_CombNew}
+\end{figure}
+
+
+The statistics are too low to exclude the excess around 2 \TeV observed in the corresponding Run 1 analysis and in addition an under-fluctuation in data is present in this region. The largest excess is observed for a $\BulkG \rightarrow \ZZ$ hypothesis at a resonance mass of 2.8-3 TeV, around 2.3 $\sigma$.
+This is driven by the ZZ high-purity category, the category with the lowest statictics, where one event at 3 TeV yields a local significance of 2.8 $\sigma$. A 3 parameter fit is the default background fit function for this category, however, a 2 parameter fit could also be used to describe these data. In Figure \ref{fig:searchI:Limits_ZZHP} we compare the limits and p-values obtained using a 2 parameter and a 3 parameter fit to describe the background in this category. The significance at 3 TeV is reduced from 2.8 to 1.5 $\sigma$ with a 2 parameter fit, reflecting the fact that the fit is poorly constrained in the high mass tail due to low statistics. The fit to data using both a 2 and 3 parameter fit in the ZZHP category is shown in Figure~\ref{fig:app:ZZHP2vs3p} and we in addition see that the 2 parameter fit lies within the fit uncertainties of the nominal fit.\newline
+\newline
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.49\textwidth]{figures/analysis/search1/AN-15-211/limits/brazilianFlag_BulkZZ_ZZHP_13TeV.pdf}
+\includegraphics[width=0.49\textwidth]{figures/analysis/search1/AN-15-211/limits/brazilianFlag_BulkZZ_ZZHP_2parFit__13TeV.pdf}\\
+\includegraphics[width=0.49\textwidth]{figures/analysis/search1/AN-15-211/pvalues/pvalue_BulkZZinZZ_high_purity.pdf}
+\includegraphics[width=0.49\textwidth]{figures/analysis/search1/AN-15-211/pvalues/pvalue_BulkZZinZZ_high_purity_2par.pdf}
+\caption{Expected/observed limits and corresponding p-values obtained in the ZZHP category using a 3 (left) and two (right) parameter fit to describe the background. The significance at 3 TeV is reduced from 2.8 to 1.5 $\sigma$.}
+\label{fig:searchI:Limits_ZZHP}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.49\textwidth]{figures/analysis/search1/misc/CMS-PAS-EXO-15-002_Figure_004-e.pdf}
+\caption{Background fit to data in the ZZHP category using the default 3 (red) and an alternate 2 (blue) parameter fit to describe the background.}
+\label{fig:app:ZZHP2vs3p}
+\end{figure}
+
+
+The lack of constraint on the fit in the dijet invariant mass tail when statistics are very low, is a drawback of a method relying fully on a parametric fit and reduces the analysis sensitivity in the high-\mjj region. In Search II (Section~\ref{searchII}) we will keep taking advantage of the dijet fit, however, the integrated luminosity is $\sim 15$ times higher, resulting in more datapoints in the \mjj tail which further constrains the fit. In Search III (Section~\ref{searchIII}), we will explore alternate methods which allow more control over the background shape across the full mass spectrum. 
+
+
+
+
+
+
+
+
+
 
