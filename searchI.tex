@@ -62,6 +62,7 @@ Simulated samples of the production of QCD multijet events are generated to lead
 \subsection{Event selection}
 
 \subsubsection{Triggering}
+\label{sec:search1:trigger}
 The first selection to be confronted in any analysis, is the trigger selection. Due to an overwhelming QCD background in all-hadronic final states, the threshold for fully-hadronic triggers is very large in order to keep the trigger rate low (preferably around 10-30 Hertz). In this analysis, we therefore decided to take advantage of triggers that place requirements on the jet groomed mass in addition to the "standard" triggers based on the scalar sum of jet transverse energy \HT. These "boosted" triggers were never before tested in data, and this analysis was the first published result taking advantage of grooming at the trigger level in CMS. The following \HT-based triggers (called inclusive triggers in the following) are used
 \begin{itemize}
 \item \texttt{HLT\_PFHT650\_WideJetMJJ900DEtaJJ1p5}
@@ -73,7 +74,7 @@ where the two first triggers apply an additional cut on the $|\Delta \eta|$ betw
 \item \texttt{HLT\_AK8PFJet360\_TrimMass30}
 \item \texttt{HLT\_AK8PFHT700\_TrimR0p1PT0p03Mass50}.
 \end{itemize}
-The tuneable parameters for the trimming algorithm at HLT, were set to $r_{sub}=0.2$ and $p_{T,frac}=0.03$. The \texttt{HLT\_AK8PFJet360\_TrimMass30} trigger is seeded by single-object Level 1 triggers with jet $p_T$ thresholds of 176 or 200 GeV (\texttt{L1\_SingleJet176} or \texttt{L1\_SingleJet200}), and the remaining triggers requires an online \HT{}$>$150 or 175 GeV (\texttt{L1\_HTT150} or \texttt{L1\_HTT175}).\par
+The tuneable parameters for the trimming algorithm at HLT are $r_{sub}=0.2$ and $p_{T,frac}=0.03$. The \texttt{HLT\_AK8PFJet360\_TrimMass30} trigger is seeded by single-object Level 1 triggers with jet $p_T$ thresholds of 176 or 200 GeV (\texttt{L1\_SingleJet176} or \texttt{L1\_SingleJet200}), and the remaining triggers requires an online \HT{}$>$150 or 175 GeV (\texttt{L1\_HTT150} or \texttt{L1\_HTT175}).\par
 
 In order to avoid any kinks in the dijet invariant mass spectrum due to the presence of a trigger turn-on, we need to define for which dijet invariant mass the analysis triggers are fully efficient ($>99\%$), then cut away everything below that point.
 
@@ -106,6 +107,7 @@ As a measure of the performance of the grooming triggers, we have in addition lo
 
 
 \subsubsection{Preselection} 
+\label{sec:search1:preselection}
 After trigger selections and the corresponding requirement of a dijet invariant mass above 1 \TeV to ensure a smoothy falling background, the process of maximizing the signal significance while keeping the background low can begin. This is done through a set of jet requirements. The jets used in this analysis are clustered with the anti-\kt{} jet clustering algorithm with a clustering parameter of $R=0.8$ (see Section ~\ref{sec:objreco:jets}) to allow containment of the full vector boson decay products. These jets are further required to pass certain jet identification requirements provided by the JetMET POG~\cite{jetID_JME}, in order to distinguish them from fake jets. These are as follows:
 \begin{itemize}
 \item Number of Constituents $> 1$, for all jet $\eta$
@@ -499,6 +501,10 @@ The signal shape is extracted from signal MC with masses in the range from 1 to 
 \caption{Dijet invariant mass from signal MC used to extract the signal shape. Here for 1.2, 2, 3 and 4 TeV resonances.}
 \label{fig:searchI:fit-dataVV}
 \end{figure}
+
+\subsection{Systematic uncertainties}
+\label{sec:searchI:sys}
+TODO!!
 
 \clearpage
 
