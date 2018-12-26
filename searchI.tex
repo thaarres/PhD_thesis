@@ -62,7 +62,7 @@ Simulated samples of the production of QCD multijet events are generated to lead
 \subsection{Event selection}
 
 \subsubsection{Triggering}
-\label{sec:search1:trigger}
+\label{sec:searchI:trigger}
 The first selection to be confronted in any analysis, is the trigger selection. Due to an overwhelming QCD background in all-hadronic final states, the threshold for fully-hadronic triggers is very large in order to keep the trigger rate low (preferably around 10-30 Hertz). In this analysis, we therefore decided to take advantage of triggers that place requirements on the jet groomed mass in addition to the "standard" triggers based on the scalar sum of jet transverse energy \HT. These "boosted" triggers were never before tested in data, and this analysis was the first published result taking advantage of grooming at the trigger level in CMS. The following \HT-based triggers (called inclusive triggers in the following) are used
 \begin{itemize}
 \item \texttt{HLT\_PFHT650\_WideJetMJJ900DEtaJJ1p5}
@@ -107,7 +107,7 @@ As a measure of the performance of the grooming triggers, we have in addition lo
 
 
 \subsubsection{Preselection} 
-\label{sec:search1:preselection}
+\label{sec:searchI:preselection}
 After trigger selections and the corresponding requirement of a dijet invariant mass above 1 \TeV to ensure a smoothy falling background, the process of maximizing the signal significance while keeping the background low can begin. This is done through a set of jet requirements. The jets used in this analysis are clustered with the anti-\kt{} jet clustering algorithm with a clustering parameter of $R=0.8$ (see Section ~\ref{sec:objreco:jets}) to allow containment of the full vector boson decay products. These jets are further required to pass certain jet identification requirements provided by the JetMET POG~\cite{jetID_JME}, in order to distinguish them from fake jets. These are as follows:
 \begin{itemize}
 \item Number of Constituents $> 1$, for all jet $\eta$
@@ -252,7 +252,40 @@ Figure~\ref{fig:wtag} shows the pruned-jet mass (left) and the n-subjettiness $\
 
 
 \subsubsection{Analysis categorization}
-As the analysis requires two W/Z-tags, we always require one HP tagged jet and then divide into LP and HP categories depending on whether the other jet is of high or low purity. In addition, in order to further enhance the analysis sensitivity, we further split the pruned jet mass window into a W and a Z boson window where the W window is defined as $65 {\GeV} < m_{pruned} < 85 {\GeV}$ and the Z boson window as $85 {\GeV} < m_{pruned} < 105 {\GeV}$. This has the added benefit of allowing us to make a discrimination between a \BulkG decaying to \WW or \ZZ, and a \PWpr decaying into \WZ through counting events in each category. We, for instance, expect a higher signal yield in \WZ category for a \PWpr decaying to a \PW and \PZ boson then for a \BulkG decaying to \WW or \ZZ. All categories are combined in the end, leading to the same or better sensitivity than when using the whole pruned mass window. 
+As the analysis requires two W/Z-tags, we always require one HP tagged jet and then divide into LP and HP categories depending on whether the other jet is of high or low purity. In addition, in order to further enhance the analysis sensitivity, we further split the pruned jet mass window into a W and a Z boson window where the W window is defined as $65 {\GeV} < m_{pruned} < 85 {\GeV}$ and the Z boson window as $85 {\GeV} < m_{pruned} < 105 {\GeV}$. This has the added benefit of allowing us to make a discrimination between a \BulkG decaying to \WW or \ZZ, and a \PWpr decaying into \WZ through counting events in each category. We, for instance, expect a higher signal yield in \WZ category for a \PWpr decaying to a \PW and \PZ boson then for a \BulkG decaying to \WW or \ZZ. Figure~\ref{fig:searchI:massCatWpr} shows the relative expected signal yield (left) and expected limits (left) in the different mass categories for a 2 \TeV \PWpr.
+ 
+ \begin{figure}
+ \centering
+ \begin{minipage}{0.5\textwidth}
+ \centering
+ \includegraphics[width=0.99\textwidth]{figures/analysis/search1/misc/massCategories.pdf}
+ \end{minipage}
+ \begin{minipage}{0.29\textwidth}
+ \centering
+ \captionsetup{type=table} %% tell latex to change to table
+ \begin{tabular}{| l | c |}
+ \hline
+ \multicolumn{2}{|c|}{$\PWpr (2 \TeV) \rightarrow \WZ$}\\
+ \hline
+ Category & Expected limit \\
+ \hline
+ WWHP & 2.1984 \\ 
+ WWLP & 2.3261 \\ 
+ WZHP & 1.2419 \\ 
+ WZLP & 1.7157 \\ 
+ ZZHP & 7.0855 \\ 
+ ZZLP & 9.2012 \\ 
+ \hline
+ \end{tabular}
+ % \caption{table caption goes  here}\label{tab:searchI:massCatWpr}
+ \end{minipage}
+ \caption{The expected signal yield per mass category for \PWpr (2 \TeV) decaying to a \PW and \PZ (left) together with the expected limit per mass category for the same signal (right).}
+ \label{fig:searchI:massCatWpr}
+ \end{figure}
+ 
+ 
+
+ All categories are combined in the end, leading to the same or better sensitivity than when using the whole pruned mass window. 
 
 Figure~\ref{fig:searchI:massCategories} shows the expected 95\% CL upper limits on the production cross section of a \PWpr decaying to \WZ (left) and a \BulkG decaying to \WW (right) as function of the resonance mass in the HP category. The blue line corresponds to the expected limits obtained when not splitting into mass categories and the red line corresponds to the limit using the combination of two categories. The dotted and solid black lines are the limits in the \PW and \PZ categories, respectively. The combination of two mass categories leads to a slightly better (~10\%) or to the same sensitivity as when using one large mass window.
 
@@ -272,6 +305,7 @@ The real benefit of splitting into mass categories becomes obvious when defining
  \caption{Distribution of the test statistic  $q = -2 \ln(L_{\BulkG}/L_{\PWpr})$ for a \BulkG (blue) and \PWpr signal hypothesis.}
  \label{fig:searchI:signalsep}
  \end{figure}
+ 
  
 With the high-purity and low-purity categories as defined above for each mass window combination, this leaves us with six different signal categories. They are as follows:
 \begin{itemize}
