@@ -99,15 +99,35 @@ A large difference in slope in the jet \PT and dijet invariant mass spectrum dep
 
 \subsection{Developing a new W-tagger}
 \label{sec:searchII:puppisoftdrop}
-As mentioned in the introduction to this chapter, early studies had shown that the PUPPI pileup subtraction algorithm yielded superior resolution on large-cone jet observables like the jet mass. We therefore wanted to check whether the Softdrop jet mass, and its observed sensitivity to the Underlying Event, would be improved if a better pileup subtraction algorithm was applied pre-clustering.
-Two interesting observations were made. Softdrop used together with PUPPI pileup subtraction displayed a much smaller \PT-dependent shift than CHS+Softdrop, % which was good. However, if applying the CMS recommended L2 and L3 jet energy corrections (see Section~\ref{}) to the jet groomed mass in order to shift the mean of the mass distribution to the real W-mass (80 GeV), however, the current available jet energy corrections seem to introduce a shift in PUPPI softdrop mass as a function of the jet \pt. The L2L3 corrected and uncorrected PUPPI softdrop mass is shown in the two bottom plots in Figure~\ref{fig:wtagSimMass} with the corresponding jet energy corrections as a function of jet transverse momenta in Figure~\ref{fig:JEC}. A significant slope in JEC as a function of \pt is observed for PUPPI, while not present for pruned jets. In order to have a jet mass independent of \pt and with a peak at the correct W-mass, we derive jet mass corrections for the PUPPI softdrop mass using the procedure described in the following.
-%
-% \begin{figure}[htb]
-% \centering
-% \includegraphics[width=0.45\textwidth]{figures/analysis/search2/AN-16-235/gen_Mass.pdf}
-% \includegraphics[width=0.45\textwidth]{figures/analysis/search2/AN-16-235/gen_PrunedMass.pdf}\\
-% \includegraphics[width=0.45\textwidth]{figures/analysis/search2/AN-16-235/gen_SoftdropMass.pdf}
-% \includegraphics[width=0.45\textwidth]{figures/analysis/search2/AN-16-235/gen_SoftdropMassUnCorr.pdf}\\
-% \caption{Bare mass before grooming algorithms are applied (top left), pruned jet mass distribution (top right) and PUPPPI softdrop mass distribution with L2 and L3 corrections applied (bottom left) and without (bottom right).}
-% \label{fig:wtagSimMass}
-% \end{figure}
+As mentioned in the introduction to this chapter, early studies had shown that the PUPPI pileup subtraction algorithm yielded superior resolution on large-cone jet observables like the jet mass. We therefore wanted to check whether the softdrop jet mass, and its observed sensitivity to the Underlying Event and pileup, would be improved if a better pileup subtraction algorithm was applied pre-clustering.\par
+Two interesting observations were made. Softdrop used together with PUPPI pileup subtraction displayed a much smaller \PT-dependent shift than CHS+Softdrop, as hoped. Figure~\ref{fig:searchII:sdmass} shows the PUPPI softdrop mass for W-jets from a 1 \TeV ($\PT\sim 500 \GeV$) and 4 \TeV ($\PT\sim 2 \TeV$) resonance, exhibiting the desired reduced \PT dependence in jet mass scale. 
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.49\textwidth]{figures/analysis/search2/AN-16-235/plots/gen_SoftdropMassUnCorr.pdf}
+\caption{The  PUPPI softdrop jet mass distribution with no jet energy corrections applied}
+\label{fig:searchII:sdmass}
+\end{figure}
+
+However, when applying centrally provided L2 and L3 jet energy corrections (see Section~\ref{sec:objreco:jec}) to the jet groomed mass, as is recommended, a strong \PT dependence is re-introduced. This effect is not present for the pruned jet mass. Figure~\ref{fig:searchII:wtagmass} show the softdrop (top left) and pruned (top right) jet mass distribution with recommended L2L3 corrections applied. Here, the PUPPI+softdrop jet mass shift is significantly increased with respect to what was observed for the uncorrected mass, while CHS+pruned jet mass is stable. This points to the PUPPI jet energy corrections not being optimal for scalar jet mass variables, while they may be good for correcting jet 4-vectors. The jet energy corrections derived for CHS and PUPPI jets as a function of jet \PT is shown in the bottom plot in Figure~\ref{fig:searchII:wtagmass} . A significant slope in JEC as a function of \PT is measured for PUPPI, while not present for CHS.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.49\textwidth]{figures/analysis/search2/AN-16-235/plots/gen_SoftdropMass.pdf}
+\includegraphics[width=0.49\textwidth]{figures/analysis/search2/AN-16-235/plots/gen_PrunedMass.pdf}\\
+\includegraphics[width=0.49\textwidth]{figures/analysis/search2/AN-16-235/plots/JECvsPT.pdf}
+\caption{Top: PUPPI softdrop mass distribution (top left) and pruned jet mass distribution (top right) with L2 and L3 corrections applied. Bottom: The projection of CHS and PUPPI jet energy corrections versus jet \PT.}
+\label{fig:searchII:wtagmass}
+\end{figure}
+
+In order to minimize \PT dependence in the PUPPI softdrop jet mass, all jet energy corrections to the softdrop jet mass are removed. However, this still leaves a residual \PT dependence and, in addition, the uncorrected mass does not peak at the correct W-mass of 80.4~\GeV. Figure~\ref{fig:searchII:UncorrSD} shows the mean of a Gaussian fit to the uncorrected PUPPI softdrop mass as a function of jet $\pt$ in two different $\eta$ bins (smaller or greater than $|\eta|=1.3$) for W-jets coming from a Bulk Graviton signal sample. A mass shift both as a function of $\eta$ and \PT is observed, together with an average mean significantly lower than the W-mass.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.49\textwidth]{figures/analysis/search2/AN-16-235/plots/RecoPuppiSoftdropMass_vspt.pdf}
+\caption{The mean of a Gaussian fit to the W-jet PUPPI softdrop mass peak as a function of jet \PT in two different $\eta$ bins (smaller or greater than $|\eta|=1.3$). No corrections have been applied to the softdrop mass.}
+\label{fig:searchII:UncorrSD}
+\end{figure}
+
+In order to use PUPPI+softdrop for W-tagging, we therefore derive dedicated jet mass corrections to compensate for two factors: A generator level \PT-dependence, as first observed in \label{sec:searchI:wtagging}, and a reconstruction level \PT- and $\eta$-dependence, most likely caused by UE effects and the growing effective sofdrop radius at low jet \PT.
+
