@@ -244,16 +244,84 @@ The validation of the PUPPI softdrop tagger took place in two steps: We first di
 
 \subsubsection{W-tagging efficiency, jet mass scale and resolution} 
 
-The W-tagging efficiency is measured in a semi-leptonic $\textrm{t}\bar{\textrm{t}}$ enriched data region. This is obtained through requiring a final state compatible with having two b-jets and two \PW bosons, where one of the bosons decay leptonically and the other one hadronically. This final state is illustrated in Figure~\ref{fig:search2:ttsemilep}
+The W-tagging efficiency is measured using real boosted \PW-jets in a semi-leptonic $\textrm{t}\bar{\textrm{t}}$ enriched data sample. This sample is obtained through requiring a final state compatible with two b-jets and two \PW bosons, where one of the bosons decay leptonically and the other one hadronically. There are several good reasons to use this channel: Top quark pair production events are plentifully produced at the LHC, we can ensure a high purity of the sample through high-energy lepton, b-tag and missing energy requirements and lastly we can ensure that the \PW jets are boosted by requiring the leptonic leg, together with the hadronic \PW candidate, to have high transverse momentum. The final state is illustrated in Figure~\ref{fig:search2:ttsemilep}, with the object of interest being the AK R=0.8 jet containing the two quark daughters of the hadronically decaying \PW.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.49\textwidth]{figures/analysis/search2/misc/semileptt.pdf}
-\caption{A top quark pair decaying into two b quarks and two \PW bosons, one of which decays leptinically and one on which decays hadronically}
+\caption{A top quark pair decaying into two b quarks and two \PW bosons, one of which decays leptonically and one on which decays hadronically}
 \label{fig:searchII:fakerate}
 \end{figure}
 
-The 
+The \PW can decay either to an electron or a muon, both final states ("channels") are used in the analysis. We select events by first requiring a high-energy lepton at trigger level, with an online \PT above 45 \GeV for the muon and 135 \GeV for the electron. This requires an offline muon(electron) \PT threshold of 53(120) \GeV. Offline, we further require a high missing energy of 40(80) \GeV in the muon(electron) channel.The leptonic \PW four-vector is then reconstructed by solving a second order equation assuming the real \PW mass
+\begin{equation*}
+\end{equation*}
+
+ and at least one b-tagged AK R=0.4 jet.
+
+\par A summary of the final selection criteria is presented in Table~\ref{tab:cutsummary}.
+
+\begin{table}[h!]
+\footnotesize
+\begin{center}
+\caption{Summary of the final selections.}
+\label{tab:cutsummary}
+\begin{tabular}{lcc}
+\hline 
+\multicolumn{1}{c}{\textbf{Selection}} & \textbf{Value} & \textbf{Comments}\\
+\hline
+\multicolumn{1}{c}{\texttt{Tight} Lepton selection}\\
+\cline{1-1}
+Electron $\PT$ & $\PT > 120 \GeV$    & \\
+Muon $\PT$ & $\PT > 53 \GeV$ & \\
+Electron $\eta$ & $|\eta|_{\text{SC}} <2.5$ except [1.4442, 1.566] range & Avoid the ECAL gap.\\
+Muon $\eta$  & $|\eta|<2.1$  & \\
+\hline
+\multicolumn{1}{c}{\texttt{Loose} Lepton selection}\\
+\cline{1-1}
+Electron $\PT$ & $\PT > 35 \GeV$    & \\
+Muon $\PT$ & $\PT > 20 \GeV$ & \\
+Electron $\eta$ & $|\eta|_{\text{SC}} <2.5$ except [1.4442, 1.566] range & Avoid the ECAL gap.\\
+Muon $\eta$  & $|\eta|<2.4$  & \\
+\hline
+\multicolumn{1}{c}{AK8 jet selections}\\
+\cline{1-1}
+Jet $\PT$ &  $\PT >200~\GeV$ & Used for hadronic \\
+Jet $\eta$  & $|\eta|<2.4$ & W reconstruction \\
+\hline
+\multicolumn{1}{c}{AK4 jet selections}\\
+\cline{1-1}
+Jet $\PT$ &  $\PT >30~\GeV$ & Used for b-tag \\
+Jet $\eta$  & $|\eta|<2.4$ & jet selection\\
+\hline
+\multicolumn{1}{c}{\ETmiss selections}\\
+\cline{1-1}
+\ETmiss (electron ch.) &  \ETmiss$>80~\GeV$ & \\
+\ETmiss (muon ch.) & \ETmiss$>40~\GeV$ & \\
+\hline
+\multicolumn{1}{c}{Boson selections}\\
+\cline{1-1}
+Pruned/softdrop jet mass (signal)        & $ 40 < m_{jet}^{p/sd} < 150 \GeV$ &  \\
+Leptonic W $\PT$      &  $\PT > 200 \GeV$     & \\
+Hadronic W $\PT$      &  $\PT > 200 \GeV$     & \\
+\hline
+\multicolumn{1}{c}{Veto}\\
+\cline{1-1}
+Number of \texttt{loose} electrons & 0    & in addition to \texttt{tight} lepton \\
+Number of \texttt{loose} muons & 0    & in addition to \texttt{tight} lepton \\
+Number of b-tagged jets           & >0    & PF iCSV medium working point \\
+% \hline
+% \multicolumn{1}{c}{Diboson selections}\\
+% \cline{1-1}
+% 2- to 1-subjettiness ratio (high purity) & $\tau_{21} < 0.60$                & \\
+% 2- to 1-subjettiness ratio (low purity) & $0.60 \leq \tau_{21} < 0.75$ &\\
+% \hline				       
+\end{tabular}
+\end{center}
+\end{table}
+
+
+
 \subsubsection{W-tagging mistagging rate measurement} 
 
 We additionally measure the W-tagging fake rate in data in a QCD dijet enriched region and compare this to the prediction from QCD MC using the three different combination of generators described above (\HERWIG{++}, \PYTHIA and \MADGRAPH+\PYTHIA).
