@@ -90,15 +90,58 @@ For each PF block, the reconstruction proceeds in the following order.
 First, muons are reconstructed and their corresponding PF elements removed from the PF block. Then the electrons are reconstructed, with the hopes of removing their corresponding bremsstrahlung photons from the list of PF elements. Energetic photons are reconstructed in the same step. Finally, neutral and charged hadrons are reconstructed.
 
 \subsubsection{Muons}
-
+\label{sec:objreco:muons}
 First, isolated global muons are selected by requiring the sum of track \PT and calorimeter energy deposits within a cone of $\Delta R = 0.3$ not belonging to the muon track, to be smaller than 10 \% of the muon \PT.
 If the muons are non-isolated, they are required to pass the tight muon requirement~\cite{1748-0221-7-10-P10002} and have at least three matching track segments in the muon detector or have matched calorimeter deposits compatible with being a minimum ionizing particle.
 Muons failing both the requirements above are kept if the standalone muon track is of high quality and have a lot of hits in the muon detectors, otherwise they are discarded.
-The muon momentum is defined from the inner tracker measurement if the muon \PT is less than 200 \GeV. Otherwise, its chosen according to the track fit with the smallest $\chi^2$ probability.
+The muon momentum is defined from the inner tracker measurement if the muon \PT is less than 200 \GeV. Otherwise, its chosen according to the track fit with the smallest $\chi^2$ probability. \newline
+
+Muons used in this thesis are required to pass an isolation requirement in order to suppress the background from QCD multijet events where jet constituents are identified as muons. For this, a cone of radius $\Delta R = 0.3$ is constructed around the muon direction. The isolation parameter is defined as the scalar sum of the transverse momenta of all additional reconstructed tracks within the cone, divided by the muon \PT{}. Muon candidates with an isolation parameter less
+than 0.1 are considered isolated and are used for further analysis. \newline
+Further, the following selection criteria are applied:
+\begin{itemize}
+  \item The $\chi^2$ of the global muon track fit must be less than 10
+  \item At least one muon-chamber hit is included in the global-muon track fit. The global muon track fit must include at least one muon chamber hit
+  \item Muon segments in at least two of the muon stations must be matched to the muon tracker track  
+  \item The inner tracker track must be no more than 2 millimeters from the primary vertex in the xy plane and no more than 5 millimeters in the longitudinal direction
+ \item At least one hit in the pixel detector.
+ \item At least six layers of the inner tracker must contain hits.
+ \item At least three matching track segments must be found in the
+muon detectors
+\end{itemize}
+
 
 \subsubsection{Electrons}
+\label{sec:objreco:electrons}
 The electrons are seeded from a GSF track, as described in Section~\ref{subsub:objreco:electrontracking}. To differentiate electrons from charged hadrons, the energy deposit in the HCAL within a distance of 0.15 in the $\eta-\phi$ plane of the supercluster , is required to be less than 10 \% of that of the supercluster. The electron candidate must further pass a requirement on the output of a dedicated electron-identification BDT, using inputs such as track-cluster distance, track $\chi^2$ and number of hits as input.  In this step, isolated photons are also reconstructed, seeded from ECAL superclusters with $|E_T>10 \GeV|$ and no link to a GSF track.
-All the tracks and calorimeter deposits used to reconstruct electrons and isolated photons are further removed from the list of PF blocks.
+All the tracks and calorimeter deposits used to reconstruct electrons and isolated photons are further removed from the list of PF blocks. \newline
+
+Only electrons passing the following requirements are used in this thesis:
+% \begin{table}[h!]
+% \begin{center}
+% \begin{tabular}{|l|c|c|}
+% \hline
+%  Variable  &  Barrel  &  Endcap  \\
+%  E_{T}  &  $>$; 35 \GeV  &  $>$; 35 \GeV  \\
+%  &eta; range  &  &$&eta;_{sc}&$ $<$; 1.4442  &  1.566 $<$; &$&eta;_{sc}&$ $<$; 2.5  \\
+%  isEcalDriven  &  =1  &  =1  \\
+%  &$&Delta;&eta;_{in}^{seed}$&$  &  $<$; 0.004  &  $<$; 0.006  \\
+%  &$&Delta;&phi;_{in}&$  &  $<$; 0.06  &  $<$; 0.06  \\
+%  !H/E  &  $<$;1/E + 0.05  &  $<$; 5/E + 0.05  \\
+%  full 5x5 &sigma;_{i&eta;i&eta;}  &  n/a  &  $<$;0.03  \\
+%  full 5x5 E^{2x5}$/E^{5x5}$  & $>$;0.94 OR E^{1x5}$/E^{5x5}$ $>$; 0.83 &  n/a  \\
+%  EM + Had Depth 1 Isolation  &  $<$;2+0.03*Et +0.28*rho  &  $<$;2.5 +0.28*rho for Et$<$;50 else  \\
+%   &  $<$;2.5+0.03*(Et-50) +0.28*rho  \\
+%  Track Isol: Trk Pt  &  $<$;5 for Et$<$;95 else  &  $<$;5 for Et$<$;100 else  \\
+%    $<$;5 + 1.5*rho  &  $<$;5 + 0.5*rho  \\
+%  Inner Layer Lost Hits  &  $<$;=1  &  $<$;=1  \\
+%  &$dxy&$  &  $<$;0.02  &  $<$;0.05  \\
+% \end{tabular}
+% \caption{Summary of the HEEP electron requirements.}
+% \label{tab:objreco:HEEP}
+% \end{center}
+% \end{table}
+
 
 \subsubsection{Hadrons}
 Finally, after the removal of muons and electrons, the remaining hadrons and non-isolated photons are identified. HCAL clusters with no track link are defined as neutral hadrons, while ECAL clusters with no track link are defined as photons (photons are exclusively associated to the ECAL deposits as neutral hadrons leave only 3 \% of their energy in the ECAL).
@@ -267,9 +310,20 @@ After L1 corrections are applied, corrections to account for the detector respon
 \begin{equation}
   \textrm{R}_{\textrm{particle}}=\frac{p_{\textrm{T,reco}}}{p_{\textrm{T,particle}}}
   \end{equation}
- These are derived in bins of particle level \PT and reconstructed $\eta$: The L2 relative corrections are intended to uniform the detector response and are derived as a function of $\eta$, while the L3 absolute corrections are derived as a function of jet \PT.
+ These are derived in bins of particle level \PT and reconstructed $\eta$: The L2 relative corrections are intended to uniform the detector response and are derived as a function of $\eta$, while the L3 absolute corrections are derived as a function of jet \PT. These corrections are applied both to data and to MC.
  
 \subsubsection{Residual data corrections}
+
+After L1 and L2L3 corrections are applied, two additional corrections are derived for data only in order to account for any residual discrepancies between data and MC. This is done by looking at the transverse momentum balance between a jet which is to be calibrated, and some reference object (either another jet, a Z boson or a photon). If the jet energy scale is not equal to one, a \PT imbalance will be visible. The measurements are performed in a data dijet sample, where the statistical uncertainty is small but the energy of the reference object poorly measured, as well as in $\PZ(\mu\mu)$+jet, $\PZ(ee)$+jet and $\gamma$+jet samples, where the energy of the \PZ and $\gamma$ is very well known but the statistics are small. \newline
+The  "L2 relative" residual correction is measured in dijet events by comparing the measured \PT of the reference jet, required to be central with $\eta<1.3$, to that of the calibration jet, with an unconstrained $\eta$. This is done as a function of jet $\eta$, in bins of average jet \PT.
+The "L3 relative" residual correction, is instead measured in $\PW/\gamma+\textrm{jet}$ events by comparing the measured jet \PT to the \PT of the precisely measured $\PZ/\gamma$, as a function of jet\PT.
+The response, 
+\begin{equation*}
+R_{\textrm{jet,\PT}}=\frac{p_{T,\textrm{jet}}}{p_{T,\textrm{ref}}}
+\end{equation*}
+is then evaluated in data and in simulation. The ratio of the two, $R_{\textrm{data}}/R_{\textrm{MC}}$, defines the residual corrections.\newline\newline
+
+The above description of jet energy corrections in CMS is meant as a rough, instructive summary only. A full description of the measurement techniques used in CMS, can be found in~\cite{jme_jinst}. 
 
 \section{Jet substructure reconstruction}
 \label{sec:objreco:substructure}
