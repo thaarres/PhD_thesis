@@ -1,0 +1,2618 @@
+void cx()
+{
+//=========Macro generated from canvas: cx/cx
+//=========  (Tue Jun 12 14:06:05 2018) by ROOT version6.02/05
+   TCanvas *cx = new TCanvas("cx", "cx",0,0,800,600);
+   gStyle->SetOptFit(1);
+   gStyle->SetOptStat(0);
+   gStyle->SetOptTitle(0);
+   cx->Range(29.63415,-0.006341463,224.7561,0.04243902);
+   cx->SetFillColor(0);
+   cx->SetBorderMode(0);
+   cx->SetBorderSize(2);
+   cx->SetTickx(1);
+   cx->SetTicky(1);
+   cx->SetLeftMargin(0.13);
+   cx->SetRightMargin(0.05);
+   cx->SetTopMargin(0.05);
+   cx->SetBottomMargin(0.13);
+   cx->SetFrameFillStyle(0);
+   cx->SetFrameBorderMode(0);
+   cx->SetFrameFillStyle(0);
+   cx->SetFrameBorderMode(0);
+   Double_t xAxis1[81] = {55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, 117, 119, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 149, 151, 153, 155, 157, 159, 161, 163, 165, 167, 169, 171, 173, 175, 177, 179, 181, 183, 185, 187, 189, 191, 193, 195, 197, 199, 201, 203, 205, 207, 209, 211, 213, 215}; 
+   
+   TH1D *px_0
+1 = new TH1D("px_0
+1","histo ( Projection X )",80, xAxis1);
+   px_0
+1->SetBinContent(1,0.02412914);
+   px_0
+1->SetBinContent(2,0.02356182);
+   px_0
+1->SetBinContent(3,0.02293962);
+   px_0
+1->SetBinContent(4,0.02232097);
+   px_0
+1->SetBinContent(5,0.02175293);
+   px_0
+1->SetBinContent(6,0.02126906);
+   px_0
+1->SetBinContent(7,0.0208871);
+   px_0
+1->SetBinContent(8,0.0206013);
+   px_0
+1->SetBinContent(9,0.02038925);
+   px_0
+1->SetBinContent(10,0.02022096);
+   px_0
+1->SetBinContent(11,0.02006911);
+   px_0
+1->SetBinContent(12,0.01991306);
+   px_0
+1->SetBinContent(13,0.0197401);
+   px_0
+1->SetBinContent(14,0.01954578);
+   px_0
+1->SetBinContent(15,0.01933501);
+   px_0
+1->SetBinContent(16,0.01911696);
+   px_0
+1->SetBinContent(17,0.01890479);
+   px_0
+1->SetBinContent(18,0.01870976);
+   px_0
+1->SetBinContent(19,0.01853698);
+   px_0
+1->SetBinContent(20,0.01838688);
+   px_0
+1->SetBinContent(21,0.01825317);
+   px_0
+1->SetBinContent(22,0.01812745);
+   px_0
+1->SetBinContent(23,0.01800015);
+   px_0
+1->SetBinContent(24,0.01786389);
+   px_0
+1->SetBinContent(25,0.01771221);
+   px_0
+1->SetBinContent(26,0.01754244);
+   px_0
+1->SetBinContent(27,0.01735358);
+   px_0
+1->SetBinContent(28,0.01714599);
+   px_0
+1->SetBinContent(29,0.01692189);
+   px_0
+1->SetBinContent(30,0.01668308);
+   px_0
+1->SetBinContent(31,0.01643166);
+   px_0
+1->SetBinContent(32,0.0161693);
+   px_0
+1->SetBinContent(33,0.0158969);
+   px_0
+1->SetBinContent(34,0.01561408);
+   px_0
+1->SetBinContent(35,0.01532069);
+   px_0
+1->SetBinContent(36,0.01501697);
+   px_0
+1->SetBinContent(37,0.0147013);
+   px_0
+1->SetBinContent(38,0.01437336);
+   px_0
+1->SetBinContent(39,0.01403276);
+   px_0
+1->SetBinContent(40,0.01367911);
+   px_0
+1->SetBinContent(41,0.01331301);
+   px_0
+1->SetBinContent(42,0.01293449);
+   px_0
+1->SetBinContent(43,0.01254544);
+   px_0
+1->SetBinContent(44,0.01214723);
+   px_0
+1->SetBinContent(45,0.01174167);
+   px_0
+1->SetBinContent(46,0.01133093);
+   px_0
+1->SetBinContent(47,0.01091789);
+   px_0
+1->SetBinContent(48,0.01050372);
+   px_0
+1->SetBinContent(49,0.01009177);
+   px_0
+1->SetBinContent(50,0.009683404);
+   px_0
+1->SetBinContent(51,0.00928037);
+   px_0
+1->SetBinContent(52,0.008884265);
+   px_0
+1->SetBinContent(53,0.008496116);
+   px_0
+1->SetBinContent(54,0.008116947);
+   px_0
+1->SetBinContent(55,0.007746957);
+   px_0
+1->SetBinContent(56,0.00738718);
+   px_0
+1->SetBinContent(57,0.007037821);
+   px_0
+1->SetBinContent(58,0.006698981);
+   px_0
+1->SetBinContent(59,0.006370869);
+   px_0
+1->SetBinContent(60,0.006053954);
+   px_0
+1->SetBinContent(61,0.005748146);
+   px_0
+1->SetBinContent(62,0.005454036);
+   px_0
+1->SetBinContent(63,0.005171348);
+   px_0
+1->SetBinContent(64,0.004900425);
+   px_0
+1->SetBinContent(65,0.004640879);
+   px_0
+1->SetBinContent(66,0.004392836);
+   px_0
+1->SetBinContent(67,0.004156227);
+   px_0
+1->SetBinContent(68,0.00393053);
+   px_0
+1->SetBinContent(69,0.003715707);
+   px_0
+1->SetBinContent(70,0.00351152);
+   px_0
+1->SetBinContent(71,0.003317352);
+   px_0
+1->SetBinContent(72,0.00313304);
+   px_0
+1->SetBinContent(73,0.002958069);
+   px_0
+1->SetBinContent(74,0.002792093);
+   px_0
+1->SetBinContent(75,0.002634771);
+   px_0
+1->SetBinContent(76,0.002485704);
+   px_0
+1->SetBinContent(77,0.00234443);
+   px_0
+1->SetBinContent(78,0.002210774);
+   px_0
+1->SetBinContent(79,0.002084166);
+   px_0
+1->SetBinContent(80,0.001964373);
+   px_0
+1->SetMinimum(0);
+   px_0
+1->SetMaximum(0.04);
+   px_0
+1->SetEntries(1);
+   px_0
+1->SetLineStyle(0);
+   px_0
+1->GetXaxis()->SetTitle("m_{jet1} (proj. x) [GeV]");
+   px_0
+1->GetXaxis()->SetNdivisions(505);
+   px_0
+1->GetXaxis()->SetLabelFont(42);
+   px_0
+1->GetXaxis()->SetLabelSize(0.035);
+   px_0
+1->GetXaxis()->SetTitleSize(0.035);
+   px_0
+1->GetXaxis()->SetTitleFont(42);
+   px_0
+1->GetYaxis()->SetTitle("A.U");
+   px_0
+1->GetYaxis()->SetNdivisions(505);
+   px_0
+1->GetYaxis()->SetLabelFont(42);
+   px_0
+1->GetYaxis()->SetLabelOffset(0.007);
+   px_0
+1->GetYaxis()->SetLabelSize(0.05);
+   px_0
+1->GetYaxis()->SetTitleSize(0.06);
+   px_0
+1->GetYaxis()->SetTitleFont(42);
+   px_0
+1->GetZaxis()->SetLabelFont(42);
+   px_0
+1->GetZaxis()->SetLabelOffset(0.007);
+   px_0
+1->GetZaxis()->SetLabelSize(0.05);
+   px_0
+1->GetZaxis()->SetTitleSize(0.06);
+   px_0
+1->GetZaxis()->SetTitleFont(42);
+   px_0
+1->Draw("HIST");
+   Double_t xAxis2[81] = {55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, 117, 119, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 149, 151, 153, 155, 157, 159, 161, 163, 165, 167, 169, 171, 173, 175, 177, 179, 181, 183, 185, 187, 189, 191, 193, 195, 197, 199, 201, 203, 205, 207, 209, 211, 213, 215}; 
+   
+   TH1D *pxMC_0
+2 = new TH1D("pxMC_0
+2"," ( Projection X )",80, xAxis2);
+   pxMC_0
+2->SetBinContent(1,0.02620583);
+   pxMC_0
+2->SetBinContent(2,0.02528438);
+   pxMC_0
+2->SetBinContent(3,0.03906262);
+   pxMC_0
+2->SetBinContent(4,0.02045965);
+   pxMC_0
+2->SetBinContent(5,0.02086362);
+   pxMC_0
+2->SetBinContent(6,0.02004217);
+   pxMC_0
+2->SetBinContent(7,0.01874365);
+   pxMC_0
+2->SetBinContent(8,0.0175725);
+   pxMC_0
+2->SetBinContent(9,0.01863877);
+   pxMC_0
+2->SetBinContent(10,0.01787992);
+   pxMC_0
+2->SetBinContent(11,0.01832591);
+   pxMC_0
+2->SetBinContent(12,0.01900215);
+   pxMC_0
+2->SetBinContent(13,0.01771475);
+   pxMC_0
+2->SetBinContent(14,0.0178707);
+   pxMC_0
+2->SetBinContent(15,0.01873768);
+   pxMC_0
+2->SetBinContent(16,0.0181512);
+   pxMC_0
+2->SetBinContent(17,0.01622665);
+   pxMC_0
+2->SetBinContent(18,0.01816699);
+   pxMC_0
+2->SetBinContent(19,0.01675406);
+   pxMC_0
+2->SetBinContent(20,0.01709363);
+   pxMC_0
+2->SetBinContent(21,0.01667291);
+   pxMC_0
+2->SetBinContent(22,0.01641982);
+   pxMC_0
+2->SetBinContent(23,0.01606929);
+   pxMC_0
+2->SetBinContent(24,0.01657119);
+   pxMC_0
+2->SetBinContent(25,0.01795384);
+   pxMC_0
+2->SetBinContent(26,0.01386618);
+   pxMC_0
+2->SetBinContent(27,0.02128124);
+   pxMC_0
+2->SetBinContent(28,0.01766576);
+   pxMC_0
+2->SetBinContent(29,0.0192778);
+   pxMC_0
+2->SetBinContent(30,0.01647811);
+   pxMC_0
+2->SetBinContent(31,0.01828063);
+   pxMC_0
+2->SetBinContent(32,0.01546335);
+   pxMC_0
+2->SetBinContent(33,0.01613575);
+   pxMC_0
+2->SetBinContent(34,0.01521525);
+   pxMC_0
+2->SetBinContent(35,0.01748051);
+   pxMC_0
+2->SetBinContent(36,0.01532359);
+   pxMC_0
+2->SetBinContent(37,0.01271044);
+   pxMC_0
+2->SetBinContent(38,0.01336679);
+   pxMC_0
+2->SetBinContent(39,0.01294542);
+   pxMC_0
+2->SetBinContent(40,0.01341441);
+   pxMC_0
+2->SetBinContent(41,0.01573878);
+   pxMC_0
+2->SetBinContent(42,0.01441293);
+   pxMC_0
+2->SetBinContent(43,0.01229595);
+   pxMC_0
+2->SetBinContent(44,0.01282296);
+   pxMC_0
+2->SetBinContent(45,0.01199991);
+   pxMC_0
+2->SetBinContent(46,0.01117631);
+   pxMC_0
+2->SetBinContent(47,0.01116117);
+   pxMC_0
+2->SetBinContent(48,0.00936672);
+   pxMC_0
+2->SetBinContent(49,0.01018759);
+   pxMC_0
+2->SetBinContent(50,0.01110398);
+   pxMC_0
+2->SetBinContent(51,0.01073042);
+   pxMC_0
+2->SetBinContent(52,0.007458274);
+   pxMC_0
+2->SetBinContent(53,0.01018914);
+   pxMC_0
+2->SetBinContent(54,0.009150955);
+   pxMC_0
+2->SetBinContent(55,0.007827714);
+   pxMC_0
+2->SetBinContent(56,0.006502418);
+   pxMC_0
+2->SetBinContent(57,0.007035839);
+   pxMC_0
+2->SetBinContent(58,0.007385627);
+   pxMC_0
+2->SetBinContent(59,0.007495356);
+   pxMC_0
+2->SetBinContent(60,0.005649508);
+   pxMC_0
+2->SetBinContent(61,0.005874974);
+   pxMC_0
+2->SetBinContent(62,0.004977207);
+   pxMC_0
+2->SetBinContent(63,0.005292278);
+   pxMC_0
+2->SetBinContent(64,0.004106477);
+   pxMC_0
+2->SetBinContent(65,0.004712573);
+   pxMC_0
+2->SetBinContent(66,0.004075861);
+   pxMC_0
+2->SetBinContent(67,0.004444677);
+   pxMC_0
+2->SetBinContent(68,0.003986785);
+   pxMC_0
+2->SetBinContent(69,0.005978294);
+   pxMC_0
+2->SetBinContent(70,0.003698959);
+   pxMC_0
+2->SetBinContent(71,0.003341822);
+   pxMC_0
+2->SetBinContent(72,0.003694716);
+   pxMC_0
+2->SetBinContent(73,0.003055389);
+   pxMC_0
+2->SetBinContent(74,0.003043526);
+   pxMC_0
+2->SetBinContent(75,0.002475599);
+   pxMC_0
+2->SetBinContent(76,0.002573755);
+   pxMC_0
+2->SetBinContent(77,0.002632654);
+   pxMC_0
+2->SetBinContent(78,0.00229282);
+   pxMC_0
+2->SetBinContent(79,0.002383371);
+   pxMC_0
+2->SetBinContent(80,0.002277626);
+   pxMC_0
+2->SetBinError(1,0.002314633);
+   pxMC_0
+2->SetBinError(2,0.002091151);
+   pxMC_0
+2->SetBinError(3,0.01947535);
+   pxMC_0
+2->SetBinError(4,0.001283186);
+   pxMC_0
+2->SetBinError(5,0.001446553);
+   pxMC_0
+2->SetBinError(6,0.00141706);
+   pxMC_0
+2->SetBinError(7,0.001438626);
+   pxMC_0
+2->SetBinError(8,0.001239569);
+   pxMC_0
+2->SetBinError(9,0.001083649);
+   pxMC_0
+2->SetBinError(10,0.00107509);
+   pxMC_0
+2->SetBinError(11,0.001235176);
+   pxMC_0
+2->SetBinError(12,0.001573453);
+   pxMC_0
+2->SetBinError(13,0.00101718);
+   pxMC_0
+2->SetBinError(14,0.001126639);
+   pxMC_0
+2->SetBinError(15,0.001595779);
+   pxMC_0
+2->SetBinError(16,0.001391854);
+   pxMC_0
+2->SetBinError(17,0.001057995);
+   pxMC_0
+2->SetBinError(18,0.001243);
+   pxMC_0
+2->SetBinError(19,0.001393178);
+   pxMC_0
+2->SetBinError(20,0.001454021);
+   pxMC_0
+2->SetBinError(21,0.0009614403);
+   pxMC_0
+2->SetBinError(22,0.001173068);
+   pxMC_0
+2->SetBinError(23,0.001066395);
+   pxMC_0
+2->SetBinError(24,0.001051342);
+   pxMC_0
+2->SetBinError(25,0.00158674);
+   pxMC_0
+2->SetBinError(26,0.00104532);
+   pxMC_0
+2->SetBinError(27,0.002155352);
+   pxMC_0
+2->SetBinError(28,0.001725172);
+   pxMC_0
+2->SetBinError(29,0.001962834);
+   pxMC_0
+2->SetBinError(30,0.001427457);
+   pxMC_0
+2->SetBinError(31,0.001820586);
+   pxMC_0
+2->SetBinError(32,0.001331806);
+   pxMC_0
+2->SetBinError(33,0.001248228);
+   pxMC_0
+2->SetBinError(34,0.00113773);
+   pxMC_0
+2->SetBinError(35,0.001859588);
+   pxMC_0
+2->SetBinError(36,0.001141413);
+   pxMC_0
+2->SetBinError(37,0.001105008);
+   pxMC_0
+2->SetBinError(38,0.0009972492);
+   pxMC_0
+2->SetBinError(39,0.001139178);
+   pxMC_0
+2->SetBinError(40,0.00104761);
+   pxMC_0
+2->SetBinError(41,0.00184489);
+   pxMC_0
+2->SetBinError(42,0.001717287);
+   pxMC_0
+2->SetBinError(43,0.001093076);
+   pxMC_0
+2->SetBinError(44,0.00142983);
+   pxMC_0
+2->SetBinError(45,0.0007018509);
+   pxMC_0
+2->SetBinError(46,0.0009728381);
+   pxMC_0
+2->SetBinError(47,0.001555165);
+   pxMC_0
+2->SetBinError(48,0.0008679105);
+   pxMC_0
+2->SetBinError(49,0.001046672);
+   pxMC_0
+2->SetBinError(50,0.001134947);
+   pxMC_0
+2->SetBinError(51,0.001547703);
+   pxMC_0
+2->SetBinError(52,0.000527473);
+   pxMC_0
+2->SetBinError(53,0.00130593);
+   pxMC_0
+2->SetBinError(54,0.000866142);
+   pxMC_0
+2->SetBinError(55,0.0005663423);
+   pxMC_0
+2->SetBinError(56,0.0004767916);
+   pxMC_0
+2->SetBinError(57,0.001083518);
+   pxMC_0
+2->SetBinError(58,0.0009188679);
+   pxMC_0
+2->SetBinError(59,0.001129044);
+   pxMC_0
+2->SetBinError(60,0.0005202659);
+   pxMC_0
+2->SetBinError(61,0.0004639819);
+   pxMC_0
+2->SetBinError(62,0.0004077901);
+   pxMC_0
+2->SetBinError(63,0.0004359811);
+   pxMC_0
+2->SetBinError(64,0.0003669556);
+   pxMC_0
+2->SetBinError(65,0.0004161227);
+   pxMC_0
+2->SetBinError(66,0.0003663165);
+   pxMC_0
+2->SetBinError(67,0.0004024631);
+   pxMC_0
+2->SetBinError(68,0.0003669044);
+   pxMC_0
+2->SetBinError(69,0.001480329);
+   pxMC_0
+2->SetBinError(70,0.0003567549);
+   pxMC_0
+2->SetBinError(71,0.0003360789);
+   pxMC_0
+2->SetBinError(72,0.001045946);
+   pxMC_0
+2->SetBinError(73,0.0003079017);
+   pxMC_0
+2->SetBinError(74,0.0003051047);
+   pxMC_0
+2->SetBinError(75,0.0002493981);
+   pxMC_0
+2->SetBinError(76,0.0002802024);
+   pxMC_0
+2->SetBinError(77,0.000294794);
+   pxMC_0
+2->SetBinError(78,0.0002630875);
+   pxMC_0
+2->SetBinError(79,0.0002717684);
+   pxMC_0
+2->SetBinError(80,0.000255527);
+   pxMC_0
+2->SetEntries(2047.18);
+
+   Int_t ci;      // for color index setting
+   TColor *color; // for color definition with alpha
+   ci = TColor::GetColor("#ff9900");
+   pxMC_0
+2->SetFillColor(ci);
+   pxMC_0
+2->SetLineStyle(0);
+   pxMC_0
+2->SetMarkerStyle(20);
+   pxMC_0
+2->SetMarkerSize(0.5);
+   pxMC_0
+2->GetXaxis()->SetTitle(" []");
+   pxMC_0
+2->GetXaxis()->SetLabelFont(42);
+   pxMC_0
+2->GetXaxis()->SetLabelSize(0.035);
+   pxMC_0
+2->GetXaxis()->SetTitleSize(0.035);
+   pxMC_0
+2->GetXaxis()->SetTitleFont(42);
+   pxMC_0
+2->GetYaxis()->SetLabelFont(42);
+   pxMC_0
+2->GetYaxis()->SetLabelOffset(0.007);
+   pxMC_0
+2->GetYaxis()->SetLabelSize(0.05);
+   pxMC_0
+2->GetYaxis()->SetTitleSize(0.06);
+   pxMC_0
+2->GetYaxis()->SetTitleFont(42);
+   pxMC_0
+2->GetZaxis()->SetLabelFont(42);
+   pxMC_0
+2->GetZaxis()->SetLabelOffset(0.007);
+   pxMC_0
+2->GetZaxis()->SetLabelSize(0.05);
+   pxMC_0
+2->GetZaxis()->SetTitleSize(0.06);
+   pxMC_0
+2->GetZaxis()->SetTitleFont(42);
+   pxMC_0
+2->Draw("PEsame");
+   Double_t xAxis3[81] = {55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, 117, 119, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 149, 151, 153, 155, 157, 159, 161, 163, 165, 167, 169, 171, 173, 175, 177, 179, 181, 183, 185, 187, 189, 191, 193, 195, 197, 199, 201, 203, 205, 207, 209, 211, 213, 215}; 
+   
+   TH1D *px_1
+3 = new TH1D("px_1
+3","histo ( Projection X )",80, xAxis3);
+   px_1
+3->SetBinContent(1,0.01718429);
+   px_1
+3->SetBinContent(2,0.01674452);
+   px_1
+3->SetBinContent(3,0.01626545);
+   px_1
+3->SetBinContent(4,0.01579322);
+   px_1
+3->SetBinContent(5,0.01536488);
+   px_1
+3->SetBinContent(6,0.01500616);
+   px_1
+3->SetBinContent(7,0.01473042);
+   px_1
+3->SetBinContent(8,0.01453243);
+   px_1
+3->SetBinContent(9,0.01439411);
+   px_1
+3->SetBinContent(10,0.01429161);
+   px_1
+3->SetBinContent(11,0.01420326);
+   px_1
+3->SetBinContent(12,0.01411246);
+   px_1
+3->SetBinContent(13,0.01400864);
+   px_1
+3->SetBinContent(14,0.01388741);
+   px_1
+3->SetBinContent(15,0.01375181);
+   px_1
+3->SetBinContent(16,0.01360835);
+   px_1
+3->SetBinContent(17,0.01346689);
+   px_1
+3->SetBinContent(18,0.01333614);
+   px_1
+3->SetBinContent(19,0.01322012);
+   px_1
+3->SetBinContent(20,0.01311939);
+   px_1
+3->SetBinContent(21,0.01302944);
+   px_1
+3->SetBinContent(22,0.01294422);
+   px_1
+3->SetBinContent(23,0.01285689);
+   px_1
+3->SetBinContent(24,0.01276228);
+   px_1
+3->SetBinContent(25,0.01265577);
+   px_1
+3->SetBinContent(26,0.01253557);
+   px_1
+3->SetBinContent(27,0.01240086);
+   px_1
+3->SetBinContent(28,0.01225176);
+   px_1
+3->SetBinContent(29,0.0120896);
+   px_1
+3->SetBinContent(30,0.01191545);
+   px_1
+3->SetBinContent(31,0.01173056);
+   px_1
+3->SetBinContent(32,0.01153603);
+   px_1
+3->SetBinContent(33,0.01133248);
+   px_1
+3->SetBinContent(34,0.01111978);
+   px_1
+3->SetBinContent(35,0.010898);
+   px_1
+3->SetBinContent(36,0.01066766);
+   px_1
+3->SetBinContent(37,0.01042775);
+   px_1
+3->SetBinContent(38,0.01017824);
+   px_1
+3->SetBinContent(39,0.009918903);
+   px_1
+3->SetBinContent(40,0.009649406);
+   px_1
+3->SetBinContent(41,0.009370102);
+   px_1
+3->SetBinContent(42,0.009080838);
+   px_1
+3->SetBinContent(43,0.008782975);
+   px_1
+3->SetBinContent(44,0.008477387);
+   px_1
+3->SetBinContent(45,0.008165365);
+   px_1
+3->SetBinContent(46,0.007848603);
+   px_1
+3->SetBinContent(47,0.007529353);
+   px_1
+3->SetBinContent(48,0.007208526);
+   px_1
+3->SetBinContent(49,0.006888846);
+   px_1
+3->SetBinContent(50,0.006571488);
+   px_1
+3->SetBinContent(51,0.006257894);
+   px_1
+3->SetBinContent(52,0.005949439);
+   px_1
+3->SetBinContent(53,0.00564709);
+   px_1
+3->SetBinContent(54,0.005351735);
+   px_1
+3->SetBinContent(55,0.005063747);
+   px_1
+3->SetBinContent(56,0.004784046);
+   px_1
+3->SetBinContent(57,0.004513041);
+   px_1
+3->SetBinContent(58,0.004250922);
+   px_1
+3->SetBinContent(59,0.003998032);
+   px_1
+3->SetBinContent(60,0.003754875);
+   px_1
+3->SetBinContent(61,0.003521489);
+   px_1
+3->SetBinContent(62,0.003298397);
+   px_1
+3->SetBinContent(63,0.003085425);
+   px_1
+3->SetBinContent(64,0.002882769);
+   px_1
+3->SetBinContent(65,0.002690097);
+   px_1
+3->SetBinContent(66,0.002507412);
+   px_1
+3->SetBinContent(67,0.00233453);
+   px_1
+3->SetBinContent(68,0.002170925);
+   px_1
+3->SetBinContent(69,0.002016446);
+   px_1
+3->SetBinContent(70,0.001870738);
+   px_1
+3->SetBinContent(71,0.001733249);
+   px_1
+3->SetBinContent(72,0.001603794);
+   px_1
+3->SetBinContent(73,0.001481868);
+   px_1
+3->SetBinContent(74,0.001367187);
+   px_1
+3->SetBinContent(75,0.001259495);
+   px_1
+3->SetBinContent(76,0.001158474);
+   px_1
+3->SetBinContent(77,0.001063795);
+   px_1
+3->SetBinContent(78,0.0009753532);
+   px_1
+3->SetBinContent(79,0.0008927303);
+   px_1
+3->SetBinContent(80,0.0008157615);
+   px_1
+3->SetEntries(1);
+   px_1
+3->SetLineColor(99);
+   px_1
+3->SetLineStyle(0);
+   px_1
+3->SetMarkerColor(99);
+   px_1
+3->GetXaxis()->SetLabelFont(42);
+   px_1
+3->GetXaxis()->SetLabelSize(0.035);
+   px_1
+3->GetXaxis()->SetTitleSize(0.035);
+   px_1
+3->GetXaxis()->SetTitleFont(42);
+   px_1
+3->GetYaxis()->SetLabelFont(42);
+   px_1
+3->GetYaxis()->SetLabelOffset(0.007);
+   px_1
+3->GetYaxis()->SetLabelSize(0.05);
+   px_1
+3->GetYaxis()->SetTitleSize(0.06);
+   px_1
+3->GetYaxis()->SetTitleFont(42);
+   px_1
+3->GetZaxis()->SetLabelFont(42);
+   px_1
+3->GetZaxis()->SetLabelOffset(0.007);
+   px_1
+3->GetZaxis()->SetLabelSize(0.05);
+   px_1
+3->GetZaxis()->SetTitleSize(0.06);
+   px_1
+3->GetZaxis()->SetTitleFont(42);
+   px_1
+3->Draw("HISTsame");
+   Double_t xAxis4[81] = {55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, 117, 119, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 149, 151, 153, 155, 157, 159, 161, 163, 165, 167, 169, 171, 173, 175, 177, 179, 181, 183, 185, 187, 189, 191, 193, 195, 197, 199, 201, 203, 205, 207, 209, 211, 213, 215}; 
+   
+   TH1D *pxMC_1
+4 = new TH1D("pxMC_1
+4"," ( Projection X )",80, xAxis4);
+   pxMC_1
+4->SetBinContent(1,0.01862283);
+   pxMC_1
+4->SetBinContent(2,0.01817776);
+   pxMC_1
+4->SetBinContent(3,0.02938924);
+   pxMC_1
+4->SetBinContent(4,0.01437635);
+   pxMC_1
+4->SetBinContent(5,0.01482035);
+   pxMC_1
+4->SetBinContent(6,0.01414625);
+   pxMC_1
+4->SetBinContent(7,0.01309473);
+   pxMC_1
+4->SetBinContent(8,0.01212445);
+   pxMC_1
+4->SetBinContent(9,0.01307622);
+   pxMC_1
+4->SetBinContent(10,0.01241282);
+   pxMC_1
+4->SetBinContent(11,0.01295611);
+   pxMC_1
+4->SetBinContent(12,0.01368504);
+   pxMC_1
+4->SetBinContent(13,0.01244787);
+   pxMC_1
+4->SetBinContent(14,0.01265464);
+   pxMC_1
+4->SetBinContent(15,0.01342696);
+   pxMC_1
+4->SetBinContent(16,0.01297348);
+   pxMC_1
+4->SetBinContent(17,0.0114821);
+   pxMC_1
+4->SetBinContent(18,0.01283368);
+   pxMC_1
+4->SetBinContent(19,0.0117642);
+   pxMC_1
+4->SetBinContent(20,0.01214692);
+   pxMC_1
+4->SetBinContent(21,0.01189789);
+   pxMC_1
+4->SetBinContent(22,0.01178007);
+   pxMC_1
+4->SetBinContent(23,0.01147921);
+   pxMC_1
+4->SetBinContent(24,0.01186233);
+   pxMC_1
+4->SetBinContent(25,0.01303112);
+   pxMC_1
+4->SetBinContent(26,0.009660448);
+   pxMC_1
+4->SetBinContent(27,0.01576061);
+   pxMC_1
+4->SetBinContent(28,0.01266578);
+   pxMC_1
+4->SetBinContent(29,0.01408252);
+   pxMC_1
+4->SetBinContent(30,0.01191057);
+   pxMC_1
+4->SetBinContent(31,0.01323458);
+   pxMC_1
+4->SetBinContent(32,0.01100886);
+   pxMC_1
+4->SetBinContent(33,0.01163885);
+   pxMC_1
+4->SetBinContent(34,0.01093445);
+   pxMC_1
+4->SetBinContent(35,0.01279612);
+   pxMC_1
+4->SetBinContent(36,0.01088545);
+   pxMC_1
+4->SetBinContent(37,0.008893692);
+   pxMC_1
+4->SetBinContent(38,0.009579739);
+   pxMC_1
+4->SetBinContent(39,0.009043229);
+   pxMC_1
+4->SetBinContent(40,0.009224252);
+   pxMC_1
+4->SetBinContent(41,0.01123507);
+   pxMC_1
+4->SetBinContent(42,0.01023318);
+   pxMC_1
+4->SetBinContent(43,0.008462458);
+   pxMC_1
+4->SetBinContent(44,0.009037185);
+   pxMC_1
+4->SetBinContent(45,0.008311536);
+   pxMC_1
+4->SetBinContent(46,0.007663265);
+   pxMC_1
+4->SetBinContent(47,0.007640284);
+   pxMC_1
+4->SetBinContent(48,0.006297869);
+   pxMC_1
+4->SetBinContent(49,0.007077052);
+   pxMC_1
+4->SetBinContent(50,0.007685126);
+   pxMC_1
+4->SetBinContent(51,0.007449773);
+   pxMC_1
+4->SetBinContent(52,0.004730107);
+   pxMC_1
+4->SetBinContent(53,0.006898368);
+   pxMC_1
+4->SetBinContent(54,0.006255478);
+   pxMC_1
+4->SetBinContent(55,0.005029047);
+   pxMC_1
+4->SetBinContent(56,0.004026939);
+   pxMC_1
+4->SetBinContent(57,0.004545722);
+   pxMC_1
+4->SetBinContent(58,0.004858222);
+   pxMC_1
+4->SetBinContent(59,0.004718512);
+   pxMC_1
+4->SetBinContent(60,0.003541444);
+   pxMC_1
+4->SetBinContent(61,0.00343373);
+   pxMC_1
+4->SetBinContent(62,0.002880784);
+   pxMC_1
+4->SetBinContent(63,0.003140886);
+   pxMC_1
+4->SetBinContent(64,0.002263673);
+   pxMC_1
+4->SetBinContent(65,0.002799228);
+   pxMC_1
+4->SetBinContent(66,0.002335381);
+   pxMC_1
+4->SetBinContent(67,0.002541799);
+   pxMC_1
+4->SetBinContent(68,0.002314471);
+   pxMC_1
+4->SetBinContent(69,0.003910309);
+   pxMC_1
+4->SetBinContent(70,0.0020367);
+   pxMC_1
+4->SetBinContent(71,0.001567196);
+   pxMC_1
+4->SetBinContent(72,0.002091484);
+   pxMC_1
+4->SetBinContent(73,0.001382644);
+   pxMC_1
+4->SetBinContent(74,0.001588784);
+   pxMC_1
+4->SetBinContent(75,0.001086216);
+   pxMC_1
+4->SetBinContent(76,0.001299749);
+   pxMC_1
+4->SetBinContent(77,0.001078796);
+   pxMC_1
+4->SetBinContent(78,0.001007858);
+   pxMC_1
+4->SetBinContent(79,0.0009531115);
+   pxMC_1
+4->SetBinContent(80,0.0009715301);
+   pxMC_1
+4->SetBinError(1,0.001846236);
+   pxMC_1
+4->SetBinError(2,0.001668611);
+   pxMC_1
+4->SetBinError(3,0.01558009);
+   pxMC_1
+4->SetBinError(4,0.001020833);
+   pxMC_1
+4->SetBinError(5,0.00115238);
+   pxMC_1
+4->SetBinError(6,0.001129857);
+   pxMC_1
+4->SetBinError(7,0.001144819);
+   pxMC_1
+4->SetBinError(8,0.0009870449);
+   pxMC_1
+4->SetBinError(9,0.000860418);
+   pxMC_1
+4->SetBinError(10,0.0008503125);
+   pxMC_1
+4->SetBinError(11,0.0009839823);
+   pxMC_1
+4->SetBinError(12,0.001257766);
+   pxMC_1
+4->SetBinError(13,0.000809876);
+   pxMC_1
+4->SetBinError(14,0.0008980465);
+   pxMC_1
+4->SetBinError(15,0.001274452);
+   pxMC_1
+4->SetBinError(16,0.001110996);
+   pxMC_1
+4->SetBinError(17,0.0008431871);
+   pxMC_1
+4->SetBinError(18,0.0009886891);
+   pxMC_1
+4->SetBinError(19,0.001108431);
+   pxMC_1
+4->SetBinError(20,0.001160839);
+   pxMC_1
+4->SetBinError(21,0.0007656833);
+   pxMC_1
+4->SetBinError(22,0.0009370938);
+   pxMC_1
+4->SetBinError(23,0.0008515601);
+   pxMC_1
+4->SetBinError(24,0.0008365073);
+   pxMC_1
+4->SetBinError(25,0.001267316);
+   pxMC_1
+4->SetBinError(26,0.0008313461);
+   pxMC_1
+4->SetBinError(27,0.001723593);
+   pxMC_1
+4->SetBinError(28,0.00137621);
+   pxMC_1
+4->SetBinError(29,0.001566961);
+   pxMC_1
+4->SetBinError(30,0.001139659);
+   pxMC_1
+4->SetBinError(31,0.001453699);
+   pxMC_1
+4->SetBinError(32,0.001061589);
+   pxMC_1
+4->SetBinError(33,0.0009959185);
+   pxMC_1
+4->SetBinError(34,0.0009072073);
+   pxMC_1
+4->SetBinError(35,0.001486848);
+   pxMC_1
+4->SetBinError(36,0.0009071665);
+   pxMC_1
+4->SetBinError(37,0.000879458);
+   pxMC_1
+4->SetBinError(38,0.0007947309);
+   pxMC_1
+4->SetBinError(39,0.000906833);
+   pxMC_1
+4->SetBinError(40,0.0008266338);
+   pxMC_1
+4->SetBinError(41,0.00147052);
+   pxMC_1
+4->SetBinError(42,0.001369903);
+   pxMC_1
+4->SetBinError(43,0.0008651345);
+   pxMC_1
+4->SetBinError(44,0.001140394);
+   pxMC_1
+4->SetBinError(45,0.0005518681);
+   pxMC_1
+4->SetBinError(46,0.000773007);
+   pxMC_1
+4->SetBinError(47,0.001238763);
+   pxMC_1
+4->SetBinError(48,0.0006885936);
+   pxMC_1
+4->SetBinError(49,0.0008358843);
+   pxMC_1
+4->SetBinError(50,0.0009021266);
+   pxMC_1
+4->SetBinError(51,0.001235005);
+   pxMC_1
+4->SetBinError(52,0.0004029304);
+   pxMC_1
+4->SetBinError(53,0.001039528);
+   pxMC_1
+4->SetBinError(54,0.0006874837);
+   pxMC_1
+4->SetBinError(55,0.0004352236);
+   pxMC_1
+4->SetBinError(56,0.0003775573);
+   pxMC_1
+4->SetBinError(57,0.0008623788);
+   pxMC_1
+4->SetBinError(58,0.0007316799);
+   pxMC_1
+4->SetBinError(59,0.0008928151);
+   pxMC_1
+4->SetBinError(60,0.0004104506);
+   pxMC_1
+4->SetBinError(61,0.0003523606);
+   pxMC_1
+4->SetBinError(62,0.0003098458);
+   pxMC_1
+4->SetBinError(63,0.0003335171);
+   pxMC_1
+4->SetBinError(64,0.0002804642);
+   pxMC_1
+4->SetBinError(65,0.0003253556);
+   pxMC_1
+4->SetBinError(66,0.000285097);
+   pxMC_1
+4->SetBinError(67,0.0003098611);
+   pxMC_1
+4->SetBinError(68,0.000285947);
+   pxMC_1
+4->SetBinError(69,0.00118239);
+   pxMC_1
+4->SetBinError(70,0.0002723873);
+   pxMC_1
+4->SetBinError(71,0.0002380168);
+   pxMC_1
+4->SetBinError(72,0.0008340635);
+   pxMC_1
+4->SetBinError(73,0.0002182499);
+   pxMC_1
+4->SetBinError(74,0.0002398757);
+   pxMC_1
+4->SetBinError(75,0.0001803817);
+   pxMC_1
+4->SetBinError(76,0.0002204004);
+   pxMC_1
+4->SetBinError(77,0.0002002821);
+   pxMC_1
+4->SetBinError(78,0.0001929824);
+   pxMC_1
+4->SetBinError(79,0.0001857588);
+   pxMC_1
+4->SetBinError(80,0.0001859089);
+   pxMC_1
+4->SetEntries(1545.673);
+
+   ci = TColor::GetColor("#ff9900");
+   pxMC_1
+4->SetFillColor(ci);
+   pxMC_1
+4->SetLineColor(99);
+   pxMC_1
+4->SetLineStyle(0);
+   pxMC_1
+4->SetMarkerColor(99);
+   pxMC_1
+4->SetMarkerStyle(20);
+   pxMC_1
+4->SetMarkerSize(0.5);
+   pxMC_1
+4->GetXaxis()->SetTitle(" []");
+   pxMC_1
+4->GetXaxis()->SetLabelFont(42);
+   pxMC_1
+4->GetXaxis()->SetLabelSize(0.035);
+   pxMC_1
+4->GetXaxis()->SetTitleSize(0.035);
+   pxMC_1
+4->GetXaxis()->SetTitleFont(42);
+   pxMC_1
+4->GetYaxis()->SetLabelFont(42);
+   pxMC_1
+4->GetYaxis()->SetLabelOffset(0.007);
+   pxMC_1
+4->GetYaxis()->SetLabelSize(0.05);
+   pxMC_1
+4->GetYaxis()->SetTitleSize(0.06);
+   pxMC_1
+4->GetYaxis()->SetTitleFont(42);
+   pxMC_1
+4->GetZaxis()->SetLabelFont(42);
+   pxMC_1
+4->GetZaxis()->SetLabelOffset(0.007);
+   pxMC_1
+4->GetZaxis()->SetLabelSize(0.05);
+   pxMC_1
+4->GetZaxis()->SetTitleSize(0.06);
+   pxMC_1
+4->GetZaxis()->SetTitleFont(42);
+   pxMC_1
+4->Draw("PEsame");
+   Double_t xAxis5[81] = {55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, 117, 119, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 149, 151, 153, 155, 157, 159, 161, 163, 165, 167, 169, 171, 173, 175, 177, 179, 181, 183, 185, 187, 189, 191, 193, 195, 197, 199, 201, 203, 205, 207, 209, 211, 213, 215}; 
+   
+   TH1D *px_2
+5 = new TH1D("px_2
+5","histo ( Projection X )",80, xAxis5);
+   px_2
+5->SetBinContent(1,0.007054026);
+   px_2
+5->SetBinContent(2,0.007009684);
+   px_2
+5->SetBinContent(3,0.006950596);
+   px_2
+5->SetBinContent(4,0.006881605);
+   px_2
+5->SetBinContent(5,0.006803134);
+   px_2
+5->SetBinContent(6,0.006716107);
+   px_2
+5->SetBinContent(7,0.006621324);
+   px_2
+5->SetBinContent(8,0.00651991);
+   px_2
+5->SetBinContent(9,0.006412365);
+   px_2
+5->SetBinContent(10,0.006298718);
+   px_2
+5->SetBinContent(11,0.00617974);
+   px_2
+5->SetBinContent(12,0.006057338);
+   px_2
+5->SetBinContent(13,0.005934145);
+   px_2
+5->SetBinContent(14,0.005813326);
+   px_2
+5->SetBinContent(15,0.00569788);
+   px_2
+5->SetBinContent(16,0.005590058);
+   px_2
+5->SetBinContent(17,0.005491733);
+   px_2
+5->SetBinContent(18,0.005403693);
+   px_2
+5->SetBinContent(19,0.005326256);
+   px_2
+5->SetBinContent(20,0.005258714);
+   px_2
+5->SetBinContent(21,0.005199543);
+   px_2
+5->SetBinContent(22,0.005146751);
+   px_2
+5->SetBinContent(23,0.005097966);
+   px_2
+5->SetBinContent(24,0.005050951);
+   px_2
+5->SetBinContent(25,0.005004279);
+   px_2
+5->SetBinContent(26,0.004956899);
+   px_2
+5->SetBinContent(27,0.004908885);
+   px_2
+5->SetBinContent(28,0.004860508);
+   px_2
+5->SetBinContent(29,0.004812694);
+   px_2
+5->SetBinContent(30,0.004766086);
+   px_2
+5->SetBinContent(31,0.004721434);
+   px_2
+5->SetBinContent(32,0.004679016);
+   px_2
+5->SetBinContent(33,0.004638772);
+   px_2
+5->SetBinContent(34,0.004600132);
+   px_2
+5->SetBinContent(35,0.004562403);
+   px_2
+5->SetBinContent(36,0.004524672);
+   px_2
+5->SetBinContent(37,0.00448611);
+   px_2
+5->SetBinContent(38,0.004446151);
+   px_2
+5->SetBinContent(39,0.004404514);
+   px_2
+5->SetBinContent(40,0.004361337);
+   px_2
+5->SetBinContent(41,0.004316978);
+   px_2
+5->SetBinContent(42,0.004271912);
+   px_2
+5->SetBinContent(43,0.004226633);
+   px_2
+5->SetBinContent(44,0.004181836);
+   px_2
+5->SetBinContent(45,0.004137954);
+   px_2
+5->SetBinContent(46,0.004095205);
+   px_2
+5->SetBinContent(47,0.004053819);
+   px_2
+5->SetBinContent(48,0.004013846);
+   px_2
+5->SetBinContent(49,0.003975303);
+   px_2
+5->SetBinContent(50,0.003937908);
+   px_2
+5->SetBinContent(51,0.003901667);
+   px_2
+5->SetBinContent(52,0.003866346);
+   px_2
+5->SetBinContent(53,0.003831543);
+   px_2
+5->SetBinContent(54,0.00379716);
+   px_2
+5->SetBinContent(55,0.003762486);
+   px_2
+5->SetBinContent(56,0.003727368);
+   px_2
+5->SetBinContent(57,0.003690927);
+   px_2
+5->SetBinContent(58,0.003652862);
+   px_2
+5->SetBinContent(59,0.003612561);
+   px_2
+5->SetBinContent(60,0.003569531);
+   px_2
+5->SetBinContent(61,0.003523347);
+   px_2
+5->SetBinContent(62,0.003473786);
+   px_2
+5->SetBinContent(63,0.003420627);
+   px_2
+5->SetBinContent(64,0.003364047);
+   px_2
+5->SetBinContent(65,0.003304098);
+   px_2
+5->SetBinContent(66,0.003241013);
+   px_2
+5->SetBinContent(67,0.003175261);
+   px_2
+5->SetBinContent(68,0.003107185);
+   px_2
+5->SetBinContent(69,0.003037207);
+   px_2
+5->SetBinContent(70,0.002965955);
+   px_2
+5->SetBinContent(71,0.002893719);
+   px_2
+5->SetBinContent(72,0.002820789);
+   px_2
+5->SetBinContent(73,0.002747501);
+   px_2
+5->SetBinContent(74,0.002674069);
+   px_2
+5->SetBinContent(75,0.002600509);
+   px_2
+5->SetBinContent(76,0.002526966);
+   px_2
+5->SetBinContent(77,0.002453382);
+   px_2
+5->SetBinContent(78,0.002379747);
+   px_2
+5->SetBinContent(79,0.002306041);
+   px_2
+5->SetBinContent(80,0.002232239);
+   px_2
+5->SetLineColor(9);
+   px_2
+5->SetLineStyle(0);
+   px_2
+5->SetMarkerColor(9);
+   px_2
+5->GetXaxis()->SetLabelFont(42);
+   px_2
+5->GetXaxis()->SetLabelSize(0.035);
+   px_2
+5->GetXaxis()->SetTitleSize(0.035);
+   px_2
+5->GetXaxis()->SetTitleFont(42);
+   px_2
+5->GetYaxis()->SetLabelFont(42);
+   px_2
+5->GetYaxis()->SetLabelOffset(0.007);
+   px_2
+5->GetYaxis()->SetLabelSize(0.05);
+   px_2
+5->GetYaxis()->SetTitleSize(0.06);
+   px_2
+5->GetYaxis()->SetTitleFont(42);
+   px_2
+5->GetZaxis()->SetLabelFont(42);
+   px_2
+5->GetZaxis()->SetLabelOffset(0.007);
+   px_2
+5->GetZaxis()->SetLabelSize(0.05);
+   px_2
+5->GetZaxis()->SetTitleSize(0.06);
+   px_2
+5->GetZaxis()->SetTitleFont(42);
+   px_2
+5->Draw("HISTsame");
+   Double_t xAxis6[81] = {55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, 117, 119, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 149, 151, 153, 155, 157, 159, 161, 163, 165, 167, 169, 171, 173, 175, 177, 179, 181, 183, 185, 187, 189, 191, 193, 195, 197, 199, 201, 203, 205, 207, 209, 211, 213, 215}; 
+   
+   TH1D *pxMC_2
+6 = new TH1D("pxMC_2
+6"," ( Projection X )",80, xAxis6);
+   pxMC_2
+6->SetBinContent(1,0.007288256);
+   pxMC_2
+6->SetBinContent(2,0.007106704);
+   pxMC_2
+6->SetBinContent(3,0.005709094);
+   pxMC_2
+6->SetBinContent(4,0.006812143);
+   pxMC_2
+6->SetBinContent(5,0.00557771);
+   pxMC_2
+6->SetBinContent(6,0.005907918);
+   pxMC_2
+6->SetBinContent(7,0.006470784);
+   pxMC_2
+6->SetBinContent(8,0.006185474);
+   pxMC_2
+6->SetBinContent(9,0.005746044);
+   pxMC_2
+6->SetBinContent(10,0.006215062);
+   pxMC_2
+6->SetBinContent(11,0.005400585);
+   pxMC_2
+6->SetBinContent(12,0.00490069);
+   pxMC_2
+6->SetBinContent(13,0.005288544);
+   pxMC_2
+6->SetBinContent(14,0.005390643);
+   pxMC_2
+6->SetBinContent(15,0.005218868);
+   pxMC_2
+6->SetBinContent(16,0.005289598);
+   pxMC_2
+6->SetBinContent(17,0.004892703);
+   pxMC_2
+6->SetBinContent(18,0.005422081);
+   pxMC_2
+6->SetBinContent(19,0.005265846);
+   pxMC_2
+6->SetBinContent(20,0.004511202);
+   pxMC_2
+6->SetBinContent(21,0.004821278);
+   pxMC_2
+6->SetBinContent(22,0.004486421);
+   pxMC_2
+6->SetBinContent(23,0.004540089);
+   pxMC_2
+6->SetBinContent(24,0.004440333);
+   pxMC_2
+6->SetBinContent(25,0.004187487);
+   pxMC_2
+6->SetBinContent(26,0.004738877);
+   pxMC_2
+6->SetBinContent(27,0.004127052);
+   pxMC_2
+6->SetBinContent(28,0.005035888);
+   pxMC_2
+6->SetBinContent(29,0.004351317);
+   pxMC_2
+6->SetBinContent(30,0.00386078);
+   pxMC_2
+6->SetBinContent(31,0.004779646);
+   pxMC_2
+6->SetBinContent(32,0.004707334);
+   pxMC_2
+6->SetBinContent(33,0.00391212);
+   pxMC_2
+6->SetBinContent(34,0.004414536);
+   pxMC_2
+6->SetBinContent(35,0.003640056);
+   pxMC_2
+6->SetBinContent(36,0.004547088);
+   pxMC_2
+6->SetBinContent(37,0.004139518);
+   pxMC_2
+6->SetBinContent(38,0.00426313);
+   pxMC_2
+6->SetBinContent(39,0.003885685);
+   pxMC_2
+6->SetBinContent(40,0.00469274);
+   pxMC_2
+6->SetBinContent(41,0.004419441);
+   pxMC_2
+6->SetBinContent(42,0.003913144);
+   pxMC_2
+6->SetBinContent(43,0.004372454);
+   pxMC_2
+6->SetBinContent(44,0.004047563);
+   pxMC_2
+6->SetBinContent(45,0.004481164);
+   pxMC_2
+6->SetBinContent(46,0.004308282);
+   pxMC_2
+6->SetBinContent(47,0.003934312);
+   pxMC_2
+6->SetBinContent(48,0.004099447);
+   pxMC_2
+6->SetBinContent(49,0.003629328);
+   pxMC_2
+6->SetBinContent(50,0.003739242);
+   pxMC_2
+6->SetBinContent(51,0.003640047);
+   pxMC_2
+6->SetBinContent(52,0.004083918);
+   pxMC_2
+6->SetBinContent(53,0.004129727);
+   pxMC_2
+6->SetBinContent(54,0.00357665);
+   pxMC_2
+6->SetBinContent(55,0.003981223);
+   pxMC_2
+6->SetBinContent(56,0.003593833);
+   pxMC_2
+6->SetBinContent(57,0.003645635);
+   pxMC_2
+6->SetBinContent(58,0.003151204);
+   pxMC_2
+6->SetBinContent(59,0.003805451);
+   pxMC_2
+6->SetBinContent(60,0.003896049);
+   pxMC_2
+6->SetBinContent(61,0.004196661);
+   pxMC_2
+6->SetBinContent(62,0.003713507);
+   pxMC_2
+6->SetBinContent(63,0.003750225);
+   pxMC_2
+6->SetBinContent(64,0.003353667);
+   pxMC_2
+6->SetBinContent(65,0.002966263);
+   pxMC_2
+6->SetBinContent(66,0.002835439);
+   pxMC_2
+6->SetBinContent(67,0.003145106);
+   pxMC_2
+6->SetBinContent(68,0.003097018);
+   pxMC_2
+6->SetBinContent(69,0.002918628);
+   pxMC_2
+6->SetBinContent(70,0.003328604);
+   pxMC_2
+6->SetBinContent(71,0.003158093);
+   pxMC_2
+6->SetBinContent(72,0.002639131);
+   pxMC_2
+6->SetBinContent(73,0.002878606);
+   pxMC_2
+6->SetBinContent(74,0.003111177);
+   pxMC_2
+6->SetBinContent(75,0.002750279);
+   pxMC_2
+6->SetBinContent(76,0.00217394);
+   pxMC_2
+6->SetBinContent(77,0.002886665);
+   pxMC_2
+6->SetBinContent(78,0.002580014);
+   pxMC_2
+6->SetBinContent(79,0.002747675);
+   pxMC_2
+6->SetBinContent(80,0.002522139);
+   pxMC_2
+6->SetBinError(1,0.000399781);
+   pxMC_2
+6->SetBinError(2,0.0004551233);
+   pxMC_2
+6->SetBinError(3,0.0002562587);
+   pxMC_2
+6->SetBinError(4,0.0004146473);
+   pxMC_2
+6->SetBinError(5,0.0002846082);
+   pxMC_2
+6->SetBinError(6,0.0003152135);
+   pxMC_2
+6->SetBinError(7,0.0004475094);
+   pxMC_2
+6->SetBinError(8,0.0003237785);
+   pxMC_2
+6->SetBinError(9,0.000316881);
+   pxMC_2
+6->SetBinError(10,0.0004480062);
+   pxMC_2
+6->SetBinError(11,0.0003324543);
+   pxMC_2
+6->SetBinError(12,0.0002123568);
+   pxMC_2
+6->SetBinError(13,0.0002573402);
+   pxMC_2
+6->SetBinError(14,0.0003149205);
+   pxMC_2
+6->SetBinError(15,0.000336757);
+   pxMC_2
+6->SetBinError(16,0.0003387005);
+   pxMC_2
+6->SetBinError(17,0.000281713);
+   pxMC_2
+6->SetBinError(18,0.0003634415);
+   pxMC_2
+6->SetBinError(19,0.000361998);
+   pxMC_2
+6->SetBinError(20,0.0002429479);
+   pxMC_2
+6->SetBinError(21,0.0003333396);
+   pxMC_2
+6->SetBinError(22,0.0002474605);
+   pxMC_2
+6->SetBinError(23,0.0002478796);
+   pxMC_2
+6->SetBinError(24,0.0003014394);
+   pxMC_2
+6->SetBinError(25,0.0002437962);
+   pxMC_2
+6->SetBinError(26,0.0003350925);
+   pxMC_2
+6->SetBinError(27,0.0002403524);
+   pxMC_2
+6->SetBinError(28,0.0003627754);
+   pxMC_2
+6->SetBinError(29,0.0003296236);
+   pxMC_2
+6->SetBinError(30,0.0002390866);
+   pxMC_2
+6->SetBinError(31,0.0003595489);
+   pxMC_2
+6->SetBinError(32,0.000360409);
+   pxMC_2
+6->SetBinError(33,0.0002067461);
+   pxMC_2
+6->SetBinError(34,0.0003348622);
+   pxMC_2
+6->SetBinError(35,0.0001545163);
+   pxMC_2
+6->SetBinError(36,0.000379805);
+   pxMC_2
+6->SetBinError(37,0.0003303956);
+   pxMC_2
+6->SetBinError(38,0.0003772945);
+   pxMC_2
+6->SetBinError(39,0.0002732117);
+   pxMC_2
+6->SetBinError(40,0.0004209422);
+   pxMC_2
+6->SetBinError(41,0.0003785756);
+   pxMC_2
+6->SetBinError(42,0.0003022653);
+   pxMC_2
+6->SetBinError(43,0.0003797793);
+   pxMC_2
+6->SetBinError(44,0.0003296803);
+   pxMC_2
+6->SetBinError(45,0.0003796426);
+   pxMC_2
+6->SetBinError(46,0.0003345745);
+   pxMC_2
+6->SetBinError(47,0.0003285838);
+   pxMC_2
+6->SetBinError(48,0.0003317768);
+   pxMC_2
+6->SetBinError(49,0.0002695052);
+   pxMC_2
+6->SetBinError(50,0.0003260322);
+   pxMC_2
+6->SetBinError(51,0.0002723661);
+   pxMC_2
+6->SetBinError(52,0.0003965887);
+   pxMC_2
+6->SetBinError(53,0.0003768778);
+   pxMC_2
+6->SetBinError(54,0.0002991468);
+   pxMC_2
+6->SetBinError(55,0.0003756493);
+   pxMC_2
+6->SetBinError(56,0.0002396559);
+   pxMC_2
+6->SetBinError(57,0.0002995333);
+   pxMC_2
+6->SetBinError(58,0.0002323139);
+   pxMC_2
+6->SetBinError(59,0.0003744618);
+   pxMC_2
+6->SetBinError(60,0.0003957732);
+   pxMC_2
+6->SetBinError(61,0.0004005902);
+   pxMC_2
+6->SetBinError(62,0.0003733024);
+   pxMC_2
+6->SetBinError(63,0.0003526467);
+   pxMC_2
+6->SetBinError(64,0.0003223934);
+   pxMC_2
+6->SetBinError(65,0.0002321781);
+   pxMC_2
+6->SetBinError(66,0.0002587628);
+   pxMC_2
+6->SetBinError(67,0.0002949556);
+   pxMC_2
+6->SetBinError(68,0.0003193261);
+   pxMC_2
+6->SetBinError(69,0.0002902428);
+   pxMC_2
+6->SetBinError(70,0.0003689317);
+   pxMC_2
+6->SetBinError(71,0.0003449221);
+   pxMC_2
+6->SetBinError(72,0.000255215);
+   pxMC_2
+6->SetBinError(73,0.0002918715);
+   pxMC_2
+6->SetBinError(74,0.0003450743);
+   pxMC_2
+6->SetBinError(75,0.000289678);
+   pxMC_2
+6->SetBinError(76,0.0001751865);
+   pxMC_2
+6->SetBinError(77,0.0003427733);
+   pxMC_2
+6->SetBinError(78,0.0003133649);
+   pxMC_2
+6->SetBinError(79,0.0003412725);
+   pxMC_2
+6->SetBinError(80,0.0002864559);
+   pxMC_2
+6->SetEntries(13714.62);
+
+   ci = TColor::GetColor("#ff9900");
+   pxMC_2
+6->SetFillColor(ci);
+   pxMC_2
+6->SetLineColor(9);
+   pxMC_2
+6->SetLineStyle(0);
+   pxMC_2
+6->SetMarkerColor(9);
+   pxMC_2
+6->SetMarkerStyle(20);
+   pxMC_2
+6->SetMarkerSize(0.5);
+   pxMC_2
+6->GetXaxis()->SetTitle(" []");
+   pxMC_2
+6->GetXaxis()->SetLabelFont(42);
+   pxMC_2
+6->GetXaxis()->SetLabelSize(0.035);
+   pxMC_2
+6->GetXaxis()->SetTitleSize(0.035);
+   pxMC_2
+6->GetXaxis()->SetTitleFont(42);
+   pxMC_2
+6->GetYaxis()->SetLabelFont(42);
+   pxMC_2
+6->GetYaxis()->SetLabelOffset(0.007);
+   pxMC_2
+6->GetYaxis()->SetLabelSize(0.05);
+   pxMC_2
+6->GetYaxis()->SetTitleSize(0.06);
+   pxMC_2
+6->GetYaxis()->SetTitleFont(42);
+   pxMC_2
+6->GetZaxis()->SetLabelFont(42);
+   pxMC_2
+6->GetZaxis()->SetLabelOffset(0.007);
+   pxMC_2
+6->GetZaxis()->SetLabelSize(0.05);
+   pxMC_2
+6->GetZaxis()->SetTitleSize(0.06);
+   pxMC_2
+6->GetZaxis()->SetTitleFont(42);
+   pxMC_2
+6->Draw("PEsame");
+   Double_t xAxis7[81] = {55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, 117, 119, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 149, 151, 153, 155, 157, 159, 161, 163, 165, 167, 169, 171, 173, 175, 177, 179, 181, 183, 185, 187, 189, 191, 193, 195, 197, 199, 201, 203, 205, 207, 209, 211, 213, 215}; 
+   
+   TH1D *px_3
+7 = new TH1D("px_3
+7","histo ( Projection X )",80, xAxis7);
+   px_3
+7->SetBinContent(1,0.004564579);
+   px_3
+7->SetBinContent(2,0.00448214);
+   px_3
+7->SetBinContent(3,0.004393704);
+   px_3
+7->SetBinContent(4,0.004307831);
+   px_3
+7->SetBinContent(5,0.004230929);
+   px_3
+7->SetBinContent(6,0.00416527);
+   px_3
+7->SetBinContent(7,0.004108894);
+   px_3
+7->SetBinContent(8,0.004056945);
+   px_3
+7->SetBinContent(9,0.004004228);
+   px_3
+7->SetBinContent(10,0.003947288);
+   px_3
+7->SetBinContent(11,0.003885247);
+   px_3
+7->SetBinContent(12,0.003819699);
+   px_3
+7->SetBinContent(13,0.003753505);
+   px_3
+7->SetBinContent(14,0.003689354);
+   px_3
+7->SetBinContent(15,0.003629042);
+   px_3
+7->SetBinContent(16,0.00357308);
+   px_3
+7->SetBinContent(17,0.003520921);
+   px_3
+7->SetBinContent(18,0.003471594);
+   px_3
+7->SetBinContent(19,0.003423831);
+   px_3
+7->SetBinContent(20,0.003376735);
+   px_3
+7->SetBinContent(21,0.003329625);
+   px_3
+7->SetBinContent(22,0.003282353);
+   px_3
+7->SetBinContent(23,0.003234757);
+   px_3
+7->SetBinContent(24,0.003187142);
+   px_3
+7->SetBinContent(25,0.003139588);
+   px_3
+7->SetBinContent(26,0.003092457);
+   px_3
+7->SetBinContent(27,0.003046068);
+   px_3
+7->SetBinContent(28,0.003000729);
+   px_3
+7->SetBinContent(29,0.00295678);
+   px_3
+7->SetBinContent(30,0.002914434);
+   px_3
+7->SetBinContent(31,0.002873858);
+   px_3
+7->SetBinContent(32,0.00283511);
+   px_3
+7->SetBinContent(33,0.002798106);
+   px_3
+7->SetBinContent(34,0.002762581);
+   px_3
+7->SetBinContent(35,0.002728372);
+   px_3
+7->SetBinContent(36,0.002695276);
+   px_3
+7->SetBinContent(37,0.002663024);
+   px_3
+7->SetBinContent(38,0.002631505);
+   px_3
+7->SetBinContent(39,0.002600582);
+   px_3
+7->SetBinContent(40,0.002570164);
+   px_3
+7->SetBinContent(41,0.002540168);
+   px_3
+7->SetBinContent(42,0.002510515);
+   px_3
+7->SetBinContent(43,0.002481166);
+   px_3
+7->SetBinContent(44,0.002452093);
+   px_3
+7->SetBinContent(45,0.002423337);
+   px_3
+7->SetBinContent(46,0.002394973);
+   px_3
+7->SetBinContent(47,0.002367112);
+   px_3
+7->SetBinContent(48,0.002339864);
+   px_3
+7->SetBinContent(49,0.002313355);
+   px_3
+7->SetBinContent(50,0.002287637);
+   px_3
+7->SetBinContent(51,0.002262808);
+   px_3
+7->SetBinContent(52,0.002238863);
+   px_3
+7->SetBinContent(53,0.002215795);
+   px_3
+7->SetBinContent(54,0.002193596);
+   px_3
+7->SetBinContent(55,0.002172188);
+   px_3
+7->SetBinContent(56,0.002151575);
+   px_3
+7->SetBinContent(57,0.002131669);
+   px_3
+7->SetBinContent(58,0.002112473);
+   px_3
+7->SetBinContent(59,0.002093969);
+   px_3
+7->SetBinContent(60,0.002076157);
+   px_3
+7->SetBinContent(61,0.002059052);
+   px_3
+7->SetBinContent(62,0.002042682);
+   px_3
+7->SetBinContent(63,0.002027015);
+   px_3
+7->SetBinContent(64,0.002012094);
+   px_3
+7->SetBinContent(65,0.001997859);
+   px_3
+7->SetBinContent(66,0.001984358);
+   px_3
+7->SetBinContent(67,0.001971476);
+   px_3
+7->SetBinContent(68,0.001959184);
+   px_3
+7->SetBinContent(69,0.00194742);
+   px_3
+7->SetBinContent(70,0.001936054);
+   px_3
+7->SetBinContent(71,0.001925008);
+   px_3
+7->SetBinContent(72,0.001914163);
+   px_3
+7->SetBinContent(73,0.001903385);
+   px_3
+7->SetBinContent(74,0.001892609);
+   px_3
+7->SetBinContent(75,0.001881685);
+   px_3
+7->SetBinContent(76,0.001870546);
+   px_3
+7->SetBinContent(77,0.001859099);
+   px_3
+7->SetBinContent(78,0.001847309);
+   px_3
+7->SetBinContent(79,0.001835083);
+   px_3
+7->SetBinContent(80,0.001822431);
+   px_3
+7->SetLineColor(8);
+   px_3
+7->SetLineStyle(0);
+   px_3
+7->SetMarkerColor(8);
+   px_3
+7->GetXaxis()->SetLabelFont(42);
+   px_3
+7->GetXaxis()->SetLabelSize(0.035);
+   px_3
+7->GetXaxis()->SetTitleSize(0.035);
+   px_3
+7->GetXaxis()->SetTitleFont(42);
+   px_3
+7->GetYaxis()->SetLabelFont(42);
+   px_3
+7->GetYaxis()->SetLabelOffset(0.007);
+   px_3
+7->GetYaxis()->SetLabelSize(0.05);
+   px_3
+7->GetYaxis()->SetTitleSize(0.06);
+   px_3
+7->GetYaxis()->SetTitleFont(42);
+   px_3
+7->GetZaxis()->SetLabelFont(42);
+   px_3
+7->GetZaxis()->SetLabelOffset(0.007);
+   px_3
+7->GetZaxis()->SetLabelSize(0.05);
+   px_3
+7->GetZaxis()->SetTitleSize(0.06);
+   px_3
+7->GetZaxis()->SetTitleFont(42);
+   px_3
+7->Draw("HISTsame");
+   Double_t xAxis8[81] = {55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, 117, 119, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 149, 151, 153, 155, 157, 159, 161, 163, 165, 167, 169, 171, 173, 175, 177, 179, 181, 183, 185, 187, 189, 191, 193, 195, 197, 199, 201, 203, 205, 207, 209, 211, 213, 215}; 
+   
+   TH1D *pxMC_3
+8 = new TH1D("pxMC_3
+8"," ( Projection X )",80, xAxis8);
+   pxMC_3
+8->SetBinContent(1,0.004629163);
+   pxMC_3
+8->SetBinContent(2,0.004494867);
+   pxMC_3
+8->SetBinContent(3,0.004409507);
+   pxMC_3
+8->SetBinContent(4,0.004451524);
+   pxMC_3
+8->SetBinContent(5,0.004265044);
+   pxMC_3
+8->SetBinContent(6,0.004307718);
+   pxMC_3
+8->SetBinContent(7,0.004033965);
+   pxMC_3
+8->SetBinContent(8,0.004196656);
+   pxMC_3
+8->SetBinContent(9,0.004133843);
+   pxMC_3
+8->SetBinContent(10,0.003728448);
+   pxMC_3
+8->SetBinContent(11,0.00402766);
+   pxMC_3
+8->SetBinContent(12,0.003936108);
+   pxMC_3
+8->SetBinContent(13,0.003600474);
+   pxMC_3
+8->SetBinContent(14,0.00359366);
+   pxMC_3
+8->SetBinContent(15,0.003715326);
+   pxMC_3
+8->SetBinContent(16,0.003688801);
+   pxMC_3
+8->SetBinContent(17,0.003690746);
+   pxMC_3
+8->SetBinContent(18,0.003401454);
+   pxMC_3
+8->SetBinContent(19,0.003517343);
+   pxMC_3
+8->SetBinContent(20,0.003473908);
+   pxMC_3
+8->SetBinContent(21,0.003261648);
+   pxMC_3
+8->SetBinContent(22,0.00337147);
+   pxMC_3
+8->SetBinContent(23,0.003286157);
+   pxMC_3
+8->SetBinContent(24,0.003173499);
+   pxMC_3
+8->SetBinContent(25,0.003077042);
+   pxMC_3
+8->SetBinContent(26,0.003000466);
+   pxMC_3
+8->SetBinContent(27,0.002957808);
+   pxMC_3
+8->SetBinContent(28,0.002917516);
+   pxMC_3
+8->SetBinContent(29,0.003048285);
+   pxMC_3
+8->SetBinContent(30,0.002900514);
+   pxMC_3
+8->SetBinContent(31,0.002605131);
+   pxMC_3
+8->SetBinContent(32,0.002866602);
+   pxMC_3
+8->SetBinContent(33,0.002639255);
+   pxMC_3
+8->SetBinContent(34,0.002633559);
+   pxMC_3
+8->SetBinContent(35,0.002865623);
+   pxMC_3
+8->SetBinContent(36,0.002549005);
+   pxMC_3
+8->SetBinContent(37,0.002554529);
+   pxMC_3
+8->SetBinContent(38,0.00238265);
+   pxMC_3
+8->SetBinContent(39,0.002648257);
+   pxMC_3
+8->SetBinContent(40,0.00252154);
+   pxMC_3
+8->SetBinContent(41,0.0025298);
+   pxMC_3
+8->SetBinContent(42,0.002459928);
+   pxMC_3
+8->SetBinContent(43,0.002334646);
+   pxMC_3
+8->SetBinContent(44,0.002393909);
+   pxMC_3
+8->SetBinContent(45,0.002608199);
+   pxMC_3
+8->SetBinContent(46,0.002565931);
+   pxMC_3
+8->SetBinContent(47,0.002402368);
+   pxMC_3
+8->SetBinContent(48,0.00243414);
+   pxMC_3
+8->SetBinContent(49,0.002413137);
+   pxMC_3
+8->SetBinContent(50,0.002281283);
+   pxMC_3
+8->SetBinContent(51,0.002214763);
+   pxMC_3
+8->SetBinContent(52,0.002292363);
+   pxMC_3
+8->SetBinContent(53,0.002058222);
+   pxMC_3
+8->SetBinContent(54,0.002154957);
+   pxMC_3
+8->SetBinContent(55,0.002187293);
+   pxMC_3
+8->SetBinContent(56,0.002184275);
+   pxMC_3
+8->SetBinContent(57,0.002156646);
+   pxMC_3
+8->SetBinContent(58,0.002301745);
+   pxMC_3
+8->SetBinContent(59,0.001925977);
+   pxMC_3
+8->SetBinContent(60,0.001994103);
+   pxMC_3
+8->SetBinContent(61,0.002252403);
+   pxMC_3
+8->SetBinContent(62,0.001922559);
+   pxMC_3
+8->SetBinContent(63,0.001915982);
+   pxMC_3
+8->SetBinContent(64,0.001876879);
+   pxMC_3
+8->SetBinContent(65,0.002025172);
+   pxMC_3
+8->SetBinContent(66,0.001933504);
+   pxMC_3
+8->SetBinContent(67,0.001869863);
+   pxMC_3
+8->SetBinContent(68,0.002053384);
+   pxMC_3
+8->SetBinContent(69,0.002071671);
+   pxMC_3
+8->SetBinContent(70,0.001860403);
+   pxMC_3
+8->SetBinContent(71,0.002153146);
+   pxMC_3
+8->SetBinContent(72,0.002184407);
+   pxMC_3
+8->SetBinContent(73,0.00203732);
+   pxMC_3
+8->SetBinContent(74,0.001820603);
+   pxMC_3
+8->SetBinContent(75,0.001945133);
+   pxMC_3
+8->SetBinContent(76,0.001901131);
+   pxMC_3
+8->SetBinContent(77,0.001822711);
+   pxMC_3
+8->SetBinContent(78,0.001956577);
+   pxMC_3
+8->SetBinContent(79,0.00189792);
+   pxMC_3
+8->SetBinContent(80,0.00186093);
+   pxMC_3
+8->SetBinError(1,0.0001449696);
+   pxMC_3
+8->SetBinError(2,0.0001344308);
+   pxMC_3
+8->SetBinError(3,0.0001383178);
+   pxMC_3
+8->SetBinError(4,0.000184207);
+   pxMC_3
+8->SetBinError(5,0.0001856702);
+   pxMC_3
+8->SetBinError(6,0.0001367159);
+   pxMC_3
+8->SetBinError(7,0.0001314432);
+   pxMC_3
+8->SetBinError(8,0.0001366644);
+   pxMC_3
+8->SetBinError(9,0.0001347265);
+   pxMC_3
+8->SetBinError(10,0.0001232081);
+   pxMC_3
+8->SetBinError(11,0.0001324263);
+   pxMC_3
+8->SetBinError(12,0.0001349946);
+   pxMC_3
+8->SetBinError(13,0.0001283681);
+   pxMC_3
+8->SetBinError(14,0.0001241228);
+   pxMC_3
+8->SetBinError(15,0.0001345409);
+   pxMC_3
+8->SetBinError(16,0.0001280918);
+   pxMC_3
+8->SetBinError(17,0.0001828066);
+   pxMC_3
+8->SetBinError(18,0.000125989);
+   pxMC_3
+8->SetBinError(19,0.0001278769);
+   pxMC_3
+8->SetBinError(20,0.0001241618);
+   pxMC_3
+8->SetBinError(21,0.000120278);
+   pxMC_3
+8->SetBinError(22,0.0001285463);
+   pxMC_3
+8->SetBinError(23,0.0001258714);
+   pxMC_3
+8->SetBinError(24,0.0001179422);
+   pxMC_3
+8->SetBinError(25,0.0001130971);
+   pxMC_3
+8->SetBinError(26,0.0001177172);
+   pxMC_3
+8->SetBinError(27,0.0001158442);
+   pxMC_3
+8->SetBinError(28,0.0001176953);
+   pxMC_3
+8->SetBinError(29,0.0001719245);
+   pxMC_3
+8->SetBinError(30,0.0001186561);
+   pxMC_3
+8->SetBinError(31,0.0001122136);
+   pxMC_3
+8->SetBinError(32,0.0001175349);
+   pxMC_3
+8->SetBinError(33,0.0001130934);
+   pxMC_3
+8->SetBinError(34,0.0001683457);
+   pxMC_3
+8->SetBinError(35,0.0001192691);
+   pxMC_3
+8->SetBinError(36,0.0001054754);
+   pxMC_3
+8->SetBinError(37,0.0001085699);
+   pxMC_3
+8->SetBinError(38,0.0001033144);
+   pxMC_3
+8->SetBinError(39,0.0001173946);
+   pxMC_3
+8->SetBinError(40,0.0001111643);
+   pxMC_3
+8->SetBinError(41,0.0001105439);
+   pxMC_3
+8->SetBinError(42,0.0001686073);
+   pxMC_3
+8->SetBinError(43,0.0001061914);
+   pxMC_3
+8->SetBinError(44,0.000112858);
+   pxMC_3
+8->SetBinError(45,0.0001200872);
+   pxMC_3
+8->SetBinError(46,0.0001174161);
+   pxMC_3
+8->SetBinError(47,0.0001142599);
+   pxMC_3
+8->SetBinError(48,0.0001058392);
+   pxMC_3
+8->SetBinError(49,0.0001169511);
+   pxMC_3
+8->SetBinError(50,0.0001097155);
+   pxMC_3
+8->SetBinError(51,0.0001080324);
+   pxMC_3
+8->SetBinError(52,0.0001129173);
+   pxMC_3
+8->SetBinError(53,0.0001001519);
+   pxMC_3
+8->SetBinError(54,0.000105366);
+   pxMC_3
+8->SetBinError(55,0.0001104711);
+   pxMC_3
+8->SetBinError(56,0.0001095914);
+   pxMC_3
+8->SetBinError(57,0.0001054204);
+   pxMC_3
+8->SetBinError(58,0.0001640571);
+   pxMC_3
+8->SetBinError(59,9.782544e-05);
+   pxMC_3
+8->SetBinError(60,0.0001006628);
+   pxMC_3
+8->SetBinError(61,0.0001119734);
+   pxMC_3
+8->SetBinError(62,0.0001003462);
+   pxMC_3
+8->SetBinError(63,9.642839e-05);
+   pxMC_3
+8->SetBinError(64,0.0001020314);
+   pxMC_3
+8->SetBinError(65,0.0001577997);
+   pxMC_3
+8->SetBinError(66,9.797655e-05);
+   pxMC_3
+8->SetBinError(67,0.0001018638);
+   pxMC_3
+8->SetBinError(68,0.00010408);
+   pxMC_3
+8->SetBinError(69,0.0001096016);
+   pxMC_3
+8->SetBinError(70,9.6394e-05);
+   pxMC_3
+8->SetBinError(71,0.0002068427);
+   pxMC_3
+8->SetBinError(72,0.000114839);
+   pxMC_3
+8->SetBinError(73,0.0001091598);
+   pxMC_3
+8->SetBinError(74,9.993589e-05);
+   pxMC_3
+8->SetBinError(75,0.0001056951);
+   pxMC_3
+8->SetBinError(76,0.0001060004);
+   pxMC_3
+8->SetBinError(77,9.877735e-05);
+   pxMC_3
+8->SetBinError(78,0.0001108932);
+   pxMC_3
+8->SetBinError(79,0.0001605807);
+   pxMC_3
+8->SetBinError(80,0.0001036533);
+   pxMC_3
+8->SetEntries(39482.32);
+
+   ci = TColor::GetColor("#ff9900");
+   pxMC_3
+8->SetFillColor(ci);
+   pxMC_3
+8->SetLineColor(8);
+   pxMC_3
+8->SetLineStyle(0);
+   pxMC_3
+8->SetMarkerColor(8);
+   pxMC_3
+8->SetMarkerStyle(20);
+   pxMC_3
+8->SetMarkerSize(0.5);
+   pxMC_3
+8->GetXaxis()->SetTitle(" []");
+   pxMC_3
+8->GetXaxis()->SetLabelFont(42);
+   pxMC_3
+8->GetXaxis()->SetLabelSize(0.035);
+   pxMC_3
+8->GetXaxis()->SetTitleSize(0.035);
+   pxMC_3
+8->GetXaxis()->SetTitleFont(42);
+   pxMC_3
+8->GetYaxis()->SetLabelFont(42);
+   pxMC_3
+8->GetYaxis()->SetLabelOffset(0.007);
+   pxMC_3
+8->GetYaxis()->SetLabelSize(0.05);
+   pxMC_3
+8->GetYaxis()->SetTitleSize(0.06);
+   pxMC_3
+8->GetYaxis()->SetTitleFont(42);
+   pxMC_3
+8->GetZaxis()->SetLabelFont(42);
+   pxMC_3
+8->GetZaxis()->SetLabelOffset(0.007);
+   pxMC_3
+8->GetZaxis()->SetLabelSize(0.05);
+   pxMC_3
+8->GetZaxis()->SetTitleSize(0.06);
+   pxMC_3
+8->GetZaxis()->SetTitleFont(42);
+   pxMC_3
+8->Draw("PEsame");
+   
+   TLegend *leg = new TLegend(0.6,0.6,0.85,0.8,NULL,"brNDC");
+   leg->SetBorderSize(0);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(0);
+   TLegendEntry *entry=leg->AddEntry("pxMC_0
+","Simulation (Pythia8)","LP");
+   entry->SetLineColor(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(20);
+   entry->SetMarkerSize(0.5);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("px_0
+","Template","L");
+   entry->SetLineColor(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("px_1
+","1 < m_{jj} < 1.3 TeV","lpf");
+   entry->SetFillStyle(1001);
+   entry->SetLineColor(99);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(99);
+   entry->SetMarkerStyle(1);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("px_2
+","1.3 < m_{jj} < 2 TeV","lpf");
+   entry->SetFillStyle(1001);
+   entry->SetLineColor(9);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(9);
+   entry->SetMarkerStyle(1);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("px_3
+","2 < m_{jj} < 5 TeV","lpf");
+   entry->SetFillStyle(1001);
+   entry->SetLineColor(8);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(8);
+   entry->SetMarkerStyle(1);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   TLatex *   tex = new TLatex(0.95,0.96,"13 TeV (2017)");
+tex->SetNDC();
+   tex->SetTextAlign(31);
+   tex->SetTextFont(42);
+   tex->SetTextSize(0.03);
+   tex->SetLineWidth(2);
+   tex->Draw();
+      tex = new TLatex(0.1669,0.9213,"CMS");
+tex->SetNDC();
+   tex->SetTextAlign(13);
+   tex->SetTextFont(61);
+   tex->SetTextSize(0.0375);
+   tex->SetLineWidth(2);
+   tex->Draw();
+      tex = new TLatex(0.1669,0.8763,"Simulation Preliminary");
+tex->SetNDC();
+   tex->SetTextAlign(13);
+   tex->SetTextFont(52);
+   tex->SetTextSize(0.0285);
+   tex->SetLineWidth(2);
+   tex->Draw();
+   Double_t xAxis9[81] = {55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, 117, 119, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 149, 151, 153, 155, 157, 159, 161, 163, 165, 167, 169, 171, 173, 175, 177, 179, 181, 183, 185, 187, 189, 191, 193, 195, 197, 199, 201, 203, 205, 207, 209, 211, 213, 215}; 
+   
+   TH1D *px_0
+_copy9 = new TH1D("px_0
+_copy9","histo ( Projection X )",80, xAxis9);
+   px_0
+_copy9->SetBinContent(1,0.02412914);
+   px_0
+_copy9->SetBinContent(2,0.02356182);
+   px_0
+_copy9->SetBinContent(3,0.02293962);
+   px_0
+_copy9->SetBinContent(4,0.02232097);
+   px_0
+_copy9->SetBinContent(5,0.02175293);
+   px_0
+_copy9->SetBinContent(6,0.02126906);
+   px_0
+_copy9->SetBinContent(7,0.0208871);
+   px_0
+_copy9->SetBinContent(8,0.0206013);
+   px_0
+_copy9->SetBinContent(9,0.02038925);
+   px_0
+_copy9->SetBinContent(10,0.02022096);
+   px_0
+_copy9->SetBinContent(11,0.02006911);
+   px_0
+_copy9->SetBinContent(12,0.01991306);
+   px_0
+_copy9->SetBinContent(13,0.0197401);
+   px_0
+_copy9->SetBinContent(14,0.01954578);
+   px_0
+_copy9->SetBinContent(15,0.01933501);
+   px_0
+_copy9->SetBinContent(16,0.01911696);
+   px_0
+_copy9->SetBinContent(17,0.01890479);
+   px_0
+_copy9->SetBinContent(18,0.01870976);
+   px_0
+_copy9->SetBinContent(19,0.01853698);
+   px_0
+_copy9->SetBinContent(20,0.01838688);
+   px_0
+_copy9->SetBinContent(21,0.01825317);
+   px_0
+_copy9->SetBinContent(22,0.01812745);
+   px_0
+_copy9->SetBinContent(23,0.01800015);
+   px_0
+_copy9->SetBinContent(24,0.01786389);
+   px_0
+_copy9->SetBinContent(25,0.01771221);
+   px_0
+_copy9->SetBinContent(26,0.01754244);
+   px_0
+_copy9->SetBinContent(27,0.01735358);
+   px_0
+_copy9->SetBinContent(28,0.01714599);
+   px_0
+_copy9->SetBinContent(29,0.01692189);
+   px_0
+_copy9->SetBinContent(30,0.01668308);
+   px_0
+_copy9->SetBinContent(31,0.01643166);
+   px_0
+_copy9->SetBinContent(32,0.0161693);
+   px_0
+_copy9->SetBinContent(33,0.0158969);
+   px_0
+_copy9->SetBinContent(34,0.01561408);
+   px_0
+_copy9->SetBinContent(35,0.01532069);
+   px_0
+_copy9->SetBinContent(36,0.01501697);
+   px_0
+_copy9->SetBinContent(37,0.0147013);
+   px_0
+_copy9->SetBinContent(38,0.01437336);
+   px_0
+_copy9->SetBinContent(39,0.01403276);
+   px_0
+_copy9->SetBinContent(40,0.01367911);
+   px_0
+_copy9->SetBinContent(41,0.01331301);
+   px_0
+_copy9->SetBinContent(42,0.01293449);
+   px_0
+_copy9->SetBinContent(43,0.01254544);
+   px_0
+_copy9->SetBinContent(44,0.01214723);
+   px_0
+_copy9->SetBinContent(45,0.01174167);
+   px_0
+_copy9->SetBinContent(46,0.01133093);
+   px_0
+_copy9->SetBinContent(47,0.01091789);
+   px_0
+_copy9->SetBinContent(48,0.01050372);
+   px_0
+_copy9->SetBinContent(49,0.01009177);
+   px_0
+_copy9->SetBinContent(50,0.009683404);
+   px_0
+_copy9->SetBinContent(51,0.00928037);
+   px_0
+_copy9->SetBinContent(52,0.008884265);
+   px_0
+_copy9->SetBinContent(53,0.008496116);
+   px_0
+_copy9->SetBinContent(54,0.008116947);
+   px_0
+_copy9->SetBinContent(55,0.007746957);
+   px_0
+_copy9->SetBinContent(56,0.00738718);
+   px_0
+_copy9->SetBinContent(57,0.007037821);
+   px_0
+_copy9->SetBinContent(58,0.006698981);
+   px_0
+_copy9->SetBinContent(59,0.006370869);
+   px_0
+_copy9->SetBinContent(60,0.006053954);
+   px_0
+_copy9->SetBinContent(61,0.005748146);
+   px_0
+_copy9->SetBinContent(62,0.005454036);
+   px_0
+_copy9->SetBinContent(63,0.005171348);
+   px_0
+_copy9->SetBinContent(64,0.004900425);
+   px_0
+_copy9->SetBinContent(65,0.004640879);
+   px_0
+_copy9->SetBinContent(66,0.004392836);
+   px_0
+_copy9->SetBinContent(67,0.004156227);
+   px_0
+_copy9->SetBinContent(68,0.00393053);
+   px_0
+_copy9->SetBinContent(69,0.003715707);
+   px_0
+_copy9->SetBinContent(70,0.00351152);
+   px_0
+_copy9->SetBinContent(71,0.003317352);
+   px_0
+_copy9->SetBinContent(72,0.00313304);
+   px_0
+_copy9->SetBinContent(73,0.002958069);
+   px_0
+_copy9->SetBinContent(74,0.002792093);
+   px_0
+_copy9->SetBinContent(75,0.002634771);
+   px_0
+_copy9->SetBinContent(76,0.002485704);
+   px_0
+_copy9->SetBinContent(77,0.00234443);
+   px_0
+_copy9->SetBinContent(78,0.002210774);
+   px_0
+_copy9->SetBinContent(79,0.002084166);
+   px_0
+_copy9->SetBinContent(80,0.001964373);
+   px_0
+_copy9->SetMinimum(0);
+   px_0
+_copy9->SetMaximum(0.04);
+   px_0
+_copy9->SetEntries(1);
+   px_0
+_copy9->SetDirectory(0);
+   px_0
+_copy9->SetLineStyle(0);
+   px_0
+_copy9->GetXaxis()->SetTitle("m_{jet1} (proj. x) [GeV]");
+   px_0
+_copy9->GetXaxis()->SetNdivisions(505);
+   px_0
+_copy9->GetXaxis()->SetLabelFont(42);
+   px_0
+_copy9->GetXaxis()->SetLabelSize(0.035);
+   px_0
+_copy9->GetXaxis()->SetTitleSize(0.035);
+   px_0
+_copy9->GetXaxis()->SetTitleFont(42);
+   px_0
+_copy9->GetYaxis()->SetTitle("A.U");
+   px_0
+_copy9->GetYaxis()->SetNdivisions(505);
+   px_0
+_copy9->GetYaxis()->SetLabelFont(42);
+   px_0
+_copy9->GetYaxis()->SetLabelOffset(0.007);
+   px_0
+_copy9->GetYaxis()->SetLabelSize(0.05);
+   px_0
+_copy9->GetYaxis()->SetTitleSize(0.06);
+   px_0
+_copy9->GetYaxis()->SetTitleFont(42);
+   px_0
+_copy9->GetZaxis()->SetLabelFont(42);
+   px_0
+_copy9->GetZaxis()->SetLabelOffset(0.007);
+   px_0
+_copy9->GetZaxis()->SetLabelSize(0.05);
+   px_0
+_copy9->GetZaxis()->SetTitleSize(0.06);
+   px_0
+_copy9->GetZaxis()->SetTitleFont(42);
+   px_0
+_copy9->Draw("sameaxis");
+   cx->Modified();
+   cx->cd();
+   cx->SetSelected(cx);
+}

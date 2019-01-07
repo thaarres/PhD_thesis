@@ -1,0 +1,1199 @@
+void czSyst()
+{
+//=========Macro generated from canvas: czSyst/czSyst
+//=========  (Tue Jun 12 14:06:06 2018) by ROOT version6.02/05
+   TCanvas *czSyst = new TCanvas("czSyst", "czSyst",0,0,800,600);
+   gStyle->SetOptFit(1);
+   gStyle->SetOptStat(0);
+   gStyle->SetOptTitle(0);
+   czSyst->Range(178.1708,-5.8206,5253.78,0.4917066);
+   czSyst->SetFillColor(0);
+   czSyst->SetBorderMode(0);
+   czSyst->SetBorderSize(2);
+   czSyst->SetLogy();
+   czSyst->SetTickx(1);
+   czSyst->SetTicky(1);
+   czSyst->SetLeftMargin(0.13);
+   czSyst->SetRightMargin(0.05);
+   czSyst->SetTopMargin(0.05);
+   czSyst->SetBottomMargin(0.13);
+   czSyst->SetFrameFillStyle(0);
+   czSyst->SetFrameBorderMode(0);
+   czSyst->SetFrameFillStyle(0);
+   czSyst->SetFrameBorderMode(0);
+   Double_t xAxis30[40] = {838, 890, 944, 1000, 1058, 1118, 1181, 1246, 1313, 1383, 1455, 1530, 1607, 1687, 1770, 1856, 1945, 2037, 2132, 2231, 2332, 2438, 2546, 2659, 2775, 2895, 3019, 3147, 3279, 3416, 3558, 3704, 3854, 4010, 4171, 4337, 4509, 4686, 4869, 5000}; 
+   
+   TH1D *pz_0
+30 = new TH1D("pz_0
+30","histo ( Projection Z )",39, xAxis30);
+   pz_0
+30->SetBinContent(1,0.1243119);
+   pz_0
+30->SetBinContent(2,0.1541645);
+   pz_0
+30->SetBinContent(3,0.146064);
+   pz_0
+30->SetBinContent(4,0.1223456);
+   pz_0
+30->SetBinContent(5,0.09838307);
+   pz_0
+30->SetBinContent(6,0.09730667);
+   pz_0
+30->SetBinContent(7,0.07120126);
+   pz_0
+30->SetBinContent(8,0.051406);
+   pz_0
+30->SetBinContent(9,0.03712188);
+   pz_0
+30->SetBinContent(10,0.02677834);
+   pz_0
+30->SetBinContent(11,0.01905606);
+   pz_0
+30->SetBinContent(12,0.01353988);
+   pz_0
+30->SetBinContent(13,0.009509278);
+   pz_0
+30->SetBinContent(14,0.008027385);
+   pz_0
+30->SetBinContent(15,0.005690116);
+   pz_0
+30->SetBinContent(16,0.004034213);
+   pz_0
+30->SetBinContent(17,0.002897234);
+   pz_0
+30->SetBinContent(18,0.002066935);
+   pz_0
+30->SetBinContent(19,0.001485848);
+   pz_0
+30->SetBinContent(20,0.001245988);
+   pz_0
+30->SetBinContent(21,0.0008952677);
+   pz_0
+30->SetBinContent(22,0.0006413486);
+   pz_0
+30->SetBinContent(23,0.0004693585);
+   pz_0
+30->SetBinContent(24,0.0003369414);
+   pz_0
+30->SetBinContent(25,0.0002462227);
+   pz_0
+30->SetBinContent(26,0.0002077602);
+   pz_0
+30->SetBinContent(27,0.0001515542);
+   pz_0
+30->SetBinContent(28,0.0001108176);
+   pz_0
+30->SetBinContent(29,8.048011e-05);
+   pz_0
+30->SetBinContent(30,6.440991e-05);
+   pz_0
+30->SetBinContent(31,4.63387e-05);
+   pz_0
+30->SetBinContent(32,3.388183e-05);
+   pz_0
+30->SetBinContent(33,2.406301e-05);
+   pz_0
+30->SetBinContent(34,1.855631e-05);
+   pz_0
+30->SetBinContent(35,1.325703e-05);
+   pz_0
+30->SetBinContent(36,9.304495e-06);
+   pz_0
+30->SetBinContent(37,6.54398e-06);
+   pz_0
+30->SetBinContent(38,5.115307e-06);
+   pz_0
+30->SetBinContent(39,2.530804e-06);
+   pz_0
+30->SetMinimum(1e-05);
+   pz_0
+30->SetMaximum(1.5);
+   pz_0
+30->SetEntries(1);
+   pz_0
+30->SetLineStyle(0);
+   pz_0
+30->GetXaxis()->SetTitle("m_{jj} (proj. z) [GeV]");
+   pz_0
+30->GetXaxis()->SetNdivisions(505);
+   pz_0
+30->GetXaxis()->SetLabelFont(42);
+   pz_0
+30->GetXaxis()->SetLabelSize(0.035);
+   pz_0
+30->GetXaxis()->SetTitleSize(0.035);
+   pz_0
+30->GetXaxis()->SetTitleFont(42);
+   pz_0
+30->GetYaxis()->SetTitle("A.U");
+   pz_0
+30->GetYaxis()->SetNdivisions(505);
+   pz_0
+30->GetYaxis()->SetLabelFont(42);
+   pz_0
+30->GetYaxis()->SetLabelOffset(0.007);
+   pz_0
+30->GetYaxis()->SetLabelSize(0.05);
+   pz_0
+30->GetYaxis()->SetTitleSize(0.06);
+   pz_0
+30->GetYaxis()->SetTitleFont(42);
+   pz_0
+30->GetZaxis()->SetLabelFont(42);
+   pz_0
+30->GetZaxis()->SetLabelOffset(0.007);
+   pz_0
+30->GetZaxis()->SetLabelSize(0.05);
+   pz_0
+30->GetZaxis()->SetTitleSize(0.06);
+   pz_0
+30->GetZaxis()->SetTitleFont(42);
+   pz_0
+30->Draw("HIST");
+   Double_t xAxis31[40] = {838, 890, 944, 1000, 1058, 1118, 1181, 1246, 1313, 1383, 1455, 1530, 1607, 1687, 1770, 1856, 1945, 2037, 2132, 2231, 2332, 2438, 2546, 2659, 2775, 2895, 3019, 3147, 3279, 3416, 3558, 3704, 3854, 4010, 4171, 4337, 4509, 4686, 4869, 5000}; 
+   
+   TH1D *pz_PTZUp31 = new TH1D("pz_PTZUp31","histo_PTZUp ( Projection Z )",39, xAxis31);
+   pz_PTZUp31->SetBinContent(1,0.117741);
+   pz_PTZUp31->SetBinContent(2,0.1478595);
+   pz_PTZUp31->SetBinContent(3,0.1419031);
+   pz_PTZUp31->SetBinContent(4,0.120434);
+   pz_PTZUp31->SetBinContent(5,0.09815566);
+   pz_PTZUp31->SetBinContent(6,0.09843213);
+   pz_PTZUp31->SetBinContent(7,0.07305305);
+   pz_PTZUp31->SetBinContent(8,0.05350856);
+   pz_PTZUp31->SetBinContent(9,0.03921401);
+   pz_PTZUp31->SetBinContent(10,0.02871655);
+   pz_PTZUp31->SetBinContent(11,0.02075139);
+   pz_PTZUp31->SetBinContent(12,0.01497666);
+   pz_PTZUp31->SetBinContent(13,0.0106868);
+   pz_PTZUp31->SetBinContent(14,0.009169035);
+   pz_PTZUp31->SetBinContent(15,0.006607858);
+   pz_PTZUp31->SetBinContent(16,0.004764533);
+   pz_PTZUp31->SetBinContent(17,0.003480891);
+   pz_PTZUp31->SetBinContent(18,0.002526936);
+   pz_PTZUp31->SetBinContent(19,0.001849049);
+   pz_PTZUp31->SetBinContent(20,0.001578674);
+   pz_PTZUp31->SetBinContent(21,0.001155218);
+   pz_PTZUp31->SetBinContent(22,0.0008430563);
+   pz_PTZUp31->SetBinContent(23,0.0006286778);
+   pz_PTZUp31->SetBinContent(24,0.0004600185);
+   pz_PTZUp31->SetBinContent(25,0.0003427185);
+   pz_PTZUp31->SetBinContent(26,0.0002949019);
+   pz_PTZUp31->SetBinContent(27,0.0002194302);
+   pz_PTZUp31->SetBinContent(28,0.0001636999);
+   pz_PTZUp31->SetBinContent(29,0.000121328);
+   pz_PTZUp31->SetBinContent(30,9.912884e-05);
+   pz_PTZUp31->SetBinContent(31,7.282241e-05);
+   pz_PTZUp31->SetBinContent(32,5.437768e-05);
+   pz_PTZUp31->SetBinContent(33,3.945002e-05);
+   pz_PTZUp31->SetBinContent(34,3.108577e-05);
+   pz_PTZUp31->SetBinContent(35,2.269745e-05);
+   pz_PTZUp31->SetBinContent(36,1.628512e-05);
+   pz_PTZUp31->SetBinContent(37,1.171123e-05);
+   pz_PTZUp31->SetBinContent(38,9.362221e-06);
+   pz_PTZUp31->SetBinContent(39,4.721629e-06);
+   pz_PTZUp31->SetEntries(1);
+
+   Int_t ci;      // for color index setting
+   TColor *color; // for color definition with alpha
+   ci = TColor::GetColor("#ff00ff");
+   pz_PTZUp31->SetLineColor(ci);
+   pz_PTZUp31->SetLineStyle(0);
+   pz_PTZUp31->GetXaxis()->SetLabelFont(42);
+   pz_PTZUp31->GetXaxis()->SetLabelSize(0.035);
+   pz_PTZUp31->GetXaxis()->SetTitleSize(0.035);
+   pz_PTZUp31->GetXaxis()->SetTitleFont(42);
+   pz_PTZUp31->GetYaxis()->SetLabelFont(42);
+   pz_PTZUp31->GetYaxis()->SetLabelOffset(0.007);
+   pz_PTZUp31->GetYaxis()->SetLabelSize(0.05);
+   pz_PTZUp31->GetYaxis()->SetTitleSize(0.06);
+   pz_PTZUp31->GetYaxis()->SetTitleFont(42);
+   pz_PTZUp31->GetZaxis()->SetLabelFont(42);
+   pz_PTZUp31->GetZaxis()->SetLabelOffset(0.007);
+   pz_PTZUp31->GetZaxis()->SetLabelSize(0.05);
+   pz_PTZUp31->GetZaxis()->SetTitleSize(0.06);
+   pz_PTZUp31->GetZaxis()->SetTitleFont(42);
+   pz_PTZUp31->Draw("HISTsame");
+   Double_t xAxis32[40] = {838, 890, 944, 1000, 1058, 1118, 1181, 1246, 1313, 1383, 1455, 1530, 1607, 1687, 1770, 1856, 1945, 2037, 2132, 2231, 2332, 2438, 2546, 2659, 2775, 2895, 3019, 3147, 3279, 3416, 3558, 3704, 3854, 4010, 4171, 4337, 4509, 4686, 4869, 5000}; 
+   
+   TH1D *pz_PTZDown32 = new TH1D("pz_PTZDown32","histo_PTZDown ( Projection Z )",39, xAxis32);
+   pz_PTZDown32->SetBinContent(1,0.1309063);
+   pz_PTZDown32->SetBinContent(2,0.1603182);
+   pz_PTZDown32->SetBinContent(3,0.1499539);
+   pz_PTZDown32->SetBinContent(4,0.1239627);
+   pz_PTZDown32->SetBinContent(5,0.09835318);
+   pz_PTZDown32->SetBinContent(6,0.09594256);
+   pz_PTZDown32->SetBinContent(7,0.06921495);
+   pz_PTZDown32->SetBinContent(8,0.04925694);
+   pz_PTZDown32->SetBinContent(9,0.03504949);
+   pz_PTZDown32->SetBinContent(10,0.02490566);
+   pz_PTZDown32->SetBinContent(11,0.01745348);
+   pz_PTZDown32->SetBinContent(12,0.01220893);
+   pz_PTZDown32->SetBinContent(13,0.008439378);
+   pz_PTZDown32->SetBinContent(14,0.007009508);
+   pz_PTZDown32->SetBinContent(15,0.004887024);
+   pz_PTZDown32->SetBinContent(16,0.003406907);
+   pz_PTZDown32->SetBinContent(17,0.002405136);
+   pz_PTZDown32->SetBinContent(18,0.001686252);
+   pz_PTZDown32->SetBinContent(19,0.001190867);
+   pz_PTZDown32->SetBinContent(20,0.0009808402);
+   pz_PTZDown32->SetBinContent(21,0.0006919978);
+   pz_PTZDown32->SetBinContent(22,0.0004866253);
+   pz_PTZDown32->SetBinContent(23,0.0003494977);
+   pz_PTZDown32->SetBinContent(24,0.000246148);
+   pz_PTZDown32->SetBinContent(25,0.0001764337);
+   pz_PTZDown32->SetBinContent(26,0.0001459856);
+   pz_PTZDown32->SetBinContent(27,0.0001044004);
+   pz_PTZDown32->SetBinContent(28,7.482243e-05);
+   pz_PTZDown32->SetBinContent(29,5.324505e-05);
+   pz_PTZDown32->SetBinContent(30,4.174153e-05);
+   pz_PTZDown32->SetBinContent(31,2.940936e-05);
+   pz_PTZDown32->SetBinContent(32,2.105601e-05);
+   pz_PTZDown32->SetBinContent(33,1.463915e-05);
+   pz_PTZDown32->SetBinContent(34,1.104803e-05);
+   pz_PTZDown32->SetBinContent(35,7.722864e-06);
+   pz_PTZDown32->SetBinContent(36,5.302219e-06);
+   pz_PTZDown32->SetBinContent(37,3.647073e-06);
+   pz_PTZDown32->SetBinContent(38,2.787581e-06);
+   pz_PTZDown32->SetBinContent(39,1.35297e-06);
+   pz_PTZDown32->SetEntries(1);
+
+   ci = TColor::GetColor("#ff00ff");
+   pz_PTZDown32->SetLineColor(ci);
+   pz_PTZDown32->SetLineStyle(0);
+   pz_PTZDown32->GetXaxis()->SetLabelFont(42);
+   pz_PTZDown32->GetXaxis()->SetLabelSize(0.035);
+   pz_PTZDown32->GetXaxis()->SetTitleSize(0.035);
+   pz_PTZDown32->GetXaxis()->SetTitleFont(42);
+   pz_PTZDown32->GetYaxis()->SetLabelFont(42);
+   pz_PTZDown32->GetYaxis()->SetLabelOffset(0.007);
+   pz_PTZDown32->GetYaxis()->SetLabelSize(0.05);
+   pz_PTZDown32->GetYaxis()->SetTitleSize(0.06);
+   pz_PTZDown32->GetYaxis()->SetTitleFont(42);
+   pz_PTZDown32->GetZaxis()->SetLabelFont(42);
+   pz_PTZDown32->GetZaxis()->SetLabelOffset(0.007);
+   pz_PTZDown32->GetZaxis()->SetLabelSize(0.05);
+   pz_PTZDown32->GetZaxis()->SetTitleSize(0.06);
+   pz_PTZDown32->GetZaxis()->SetTitleFont(42);
+   pz_PTZDown32->Draw("HISTsame");
+   Double_t xAxis33[40] = {838, 890, 944, 1000, 1058, 1118, 1181, 1246, 1313, 1383, 1455, 1530, 1607, 1687, 1770, 1856, 1945, 2037, 2132, 2231, 2332, 2438, 2546, 2659, 2775, 2895, 3019, 3147, 3279, 3416, 3558, 3704, 3854, 4010, 4171, 4337, 4509, 4686, 4869, 5000}; 
+   
+   TH1D *pz_OPTZUp33 = new TH1D("pz_OPTZUp33","histo_OPTZUp ( Projection Z )",39, xAxis33);
+   pz_OPTZUp33->SetBinContent(1,0.1408248);
+   pz_OPTZUp33->SetBinContent(2,0.1682382);
+   pz_OPTZUp33->SetBinContent(3,0.1538007);
+   pz_OPTZUp33->SetBinContent(4,0.1244958);
+   pz_OPTZUp33->SetBinContent(5,0.09689214);
+   pz_OPTZUp33->SetBinContent(6,0.09286036);
+   pz_OPTZUp33->SetBinContent(7,0.06591898);
+   pz_OPTZUp33->SetBinContent(8,0.04623523);
+   pz_OPTZUp33->SetBinContent(9,0.03247229);
+   pz_OPTZUp33->SetBinContent(10,0.022807);
+   pz_OPTZUp33->SetBinContent(11,0.01581924);
+   pz_OPTZUp33->SetBinContent(12,0.01096703);
+   pz_OPTZUp33->SetBinContent(13,0.007522869);
+   pz_OPTZUp33->SetBinContent(14,0.006207808);
+   pz_OPTZUp33->SetBinContent(15,0.004305043);
+   pz_OPTZUp33->SetBinContent(16,0.002988591);
+   pz_OPTZUp33->SetBinContent(17,0.002103269);
+   pz_OPTZUp33->SetBinContent(18,0.001471589);
+   pz_OPTZUp33->SetBinContent(19,0.00103819);
+   pz_OPTZUp33->SetBinContent(20,0.0008550476);
+   pz_OPTZUp33->SetBinContent(21,0.0006037934);
+   pz_OPTZUp33->SetBinContent(22,0.0004253726);
+   pz_OPTZUp33->SetBinContent(23,0.0003063341);
+   pz_OPTZUp33->SetBinContent(24,0.0002165215);
+   pz_OPTZUp33->SetBinContent(25,0.0001558823);
+   pz_OPTZUp33->SetBinContent(26,0.0001296541);
+   pz_OPTZUp33->SetBinContent(27,9.327753e-05);
+   pz_OPTZUp33->SetBinContent(28,6.730203e-05);
+   pz_OPTZUp33->SetBinContent(29,4.825236e-05);
+   pz_OPTZUp33->SetBinContent(30,3.813932e-05);
+   pz_OPTZUp33->SetBinContent(31,2.711143e-05);
+   pz_OPTZUp33->SetBinContent(32,1.959632e-05);
+   pz_OPTZUp33->SetBinContent(33,1.37635e-05);
+   pz_OPTZUp33->SetBinContent(34,1.050023e-05);
+   pz_OPTZUp33->SetBinContent(35,7.42423e-06);
+   pz_OPTZUp33->SetBinContent(36,5.158821e-06);
+   pz_OPTZUp33->SetBinContent(37,3.593394e-06);
+   pz_OPTZUp33->SetBinContent(38,2.782855e-06);
+   pz_OPTZUp33->SetBinContent(39,1.366353e-06);
+   pz_OPTZUp33->SetEntries(1);
+   pz_OPTZUp33->SetLineColor(210);
+   pz_OPTZUp33->SetLineStyle(0);
+   pz_OPTZUp33->GetXaxis()->SetLabelFont(42);
+   pz_OPTZUp33->GetXaxis()->SetLabelSize(0.035);
+   pz_OPTZUp33->GetXaxis()->SetTitleSize(0.035);
+   pz_OPTZUp33->GetXaxis()->SetTitleFont(42);
+   pz_OPTZUp33->GetYaxis()->SetLabelFont(42);
+   pz_OPTZUp33->GetYaxis()->SetLabelOffset(0.007);
+   pz_OPTZUp33->GetYaxis()->SetLabelSize(0.05);
+   pz_OPTZUp33->GetYaxis()->SetTitleSize(0.06);
+   pz_OPTZUp33->GetYaxis()->SetTitleFont(42);
+   pz_OPTZUp33->GetZaxis()->SetLabelFont(42);
+   pz_OPTZUp33->GetZaxis()->SetLabelOffset(0.007);
+   pz_OPTZUp33->GetZaxis()->SetLabelSize(0.05);
+   pz_OPTZUp33->GetZaxis()->SetTitleSize(0.06);
+   pz_OPTZUp33->GetZaxis()->SetTitleFont(42);
+   pz_OPTZUp33->Draw("HISTsame");
+   Double_t xAxis34[40] = {838, 890, 944, 1000, 1058, 1118, 1181, 1246, 1313, 1383, 1455, 1530, 1607, 1687, 1770, 1856, 1945, 2037, 2132, 2231, 2332, 2438, 2546, 2659, 2775, 2895, 3019, 3147, 3279, 3416, 3558, 3704, 3854, 4010, 4171, 4337, 4509, 4686, 4869, 5000}; 
+   
+   TH1D *pz_OPTZDown34 = new TH1D("pz_OPTZDown34","histo_OPTZDown ( Projection Z )",39, xAxis34);
+   pz_OPTZDown34->SetBinContent(1,0.1085583);
+   pz_OPTZDown34->SetBinContent(2,0.1397531);
+   pz_OPTZDown34->SetBinContent(3,0.1372289);
+   pz_OPTZDown34->SetBinContent(4,0.1189431);
+   pz_OPTZDown34->SetBinContent(5,0.09882557);
+   pz_OPTZDown34->SetBinContent(6,0.1008723);
+   pz_OPTZDown34->SetBinContent(7,0.07608201);
+   pz_OPTZDown34->SetBinContent(8,0.05654209);
+   pz_OPTZDown34->SetBinContent(9,0.04198211);
+   pz_OPTZDown34->SetBinContent(10,0.03110401);
+   pz_OPTZDown34->SetBinContent(11,0.02270898);
+   pz_OPTZDown34->SetBinContent(12,0.01653703);
+   pz_OPTZDown34->SetBinContent(13,0.01189129);
+   pz_OPTZDown34->SetBinContent(14,0.01026897);
+   pz_OPTZDown34->SetBinContent(15,0.007440153);
+   pz_OPTZDown34->SetBinContent(16,0.005387264);
+   pz_OPTZDown34->SetBinContent(17,0.003948111);
+   pz_OPTZDown34->SetBinContent(18,0.002872001);
+   pz_OPTZDown34->SetBinContent(19,0.002103726);
+   pz_OPTZDown34->SetBinContent(20,0.0017962);
+   pz_OPTZDown34->SetBinContent(21,0.001313211);
+   pz_OPTZDown34->SetBinContent(22,0.0009566125);
+   pz_OPTZDown34->SetBinContent(23,0.0007114284);
+   pz_OPTZDown34->SetBinContent(24,0.0005187101);
+   pz_OPTZDown34->SetBinContent(25,0.000384748);
+   pz_OPTZDown34->SetBinContent(26,0.0003293482);
+   pz_OPTZDown34->SetBinContent(27,0.0002435992);
+   pz_OPTZDown34->SetBinContent(28,0.0001805121);
+   pz_OPTZDown34->SetBinContent(29,0.0001327932);
+   pz_OPTZDown34->SetBinContent(30,0.0001076093);
+   pz_OPTZDown34->SetBinContent(31,7.835242e-05);
+   pz_OPTZDown34->SetBinContent(32,5.795307e-05);
+   pz_OPTZDown34->SetBinContent(33,4.161866e-05);
+   pz_OPTZDown34->SetBinContent(34,3.244156e-05);
+   pz_OPTZDown34->SetBinContent(35,2.341846e-05);
+   pz_OPTZDown34->SetBinContent(36,1.660169e-05);
+   pz_OPTZDown34->SetBinContent(37,1.178952e-05);
+   pz_OPTZDown34->SetBinContent(38,9.301866e-06);
+   pz_OPTZDown34->SetBinContent(39,4.637364e-06);
+   pz_OPTZDown34->SetEntries(1);
+   pz_OPTZDown34->SetLineColor(210);
+   pz_OPTZDown34->SetLineStyle(0);
+   pz_OPTZDown34->GetXaxis()->SetLabelFont(42);
+   pz_OPTZDown34->GetXaxis()->SetLabelSize(0.035);
+   pz_OPTZDown34->GetXaxis()->SetTitleSize(0.035);
+   pz_OPTZDown34->GetXaxis()->SetTitleFont(42);
+   pz_OPTZDown34->GetYaxis()->SetLabelFont(42);
+   pz_OPTZDown34->GetYaxis()->SetLabelOffset(0.007);
+   pz_OPTZDown34->GetYaxis()->SetLabelSize(0.05);
+   pz_OPTZDown34->GetYaxis()->SetTitleSize(0.06);
+   pz_OPTZDown34->GetYaxis()->SetTitleFont(42);
+   pz_OPTZDown34->GetZaxis()->SetLabelFont(42);
+   pz_OPTZDown34->GetZaxis()->SetLabelOffset(0.007);
+   pz_OPTZDown34->GetZaxis()->SetLabelSize(0.05);
+   pz_OPTZDown34->GetZaxis()->SetTitleSize(0.06);
+   pz_OPTZDown34->GetZaxis()->SetTitleFont(42);
+   pz_OPTZDown34->Draw("HISTsame");
+   Double_t xAxis35[40] = {838, 890, 944, 1000, 1058, 1118, 1181, 1246, 1313, 1383, 1455, 1530, 1607, 1687, 1770, 1856, 1945, 2037, 2132, 2231, 2332, 2438, 2546, 2659, 2775, 2895, 3019, 3147, 3279, 3416, 3558, 3704, 3854, 4010, 4171, 4337, 4509, 4686, 4869, 5000}; 
+   
+   TH1D *pz_TRIGUp35 = new TH1D("pz_TRIGUp35","histo_TRIGUp ( Projection Z )",39, xAxis35);
+   pz_TRIGUp35->SetBinContent(1,0.1944415);
+   pz_TRIGUp35->SetBinContent(2,0.1726854);
+   pz_TRIGUp35->SetBinContent(3,0.1376745);
+   pz_TRIGUp35->SetBinContent(4,0.1088594);
+   pz_TRIGUp35->SetBinContent(5,0.0850687);
+   pz_TRIGUp35->SetBinContent(6,0.08315792);
+   pz_TRIGUp35->SetBinContent(7,0.06049878);
+   pz_TRIGUp35->SetBinContent(8,0.04357874);
+   pz_TRIGUp35->SetBinContent(9,0.031427);
+   pz_TRIGUp35->SetBinContent(10,0.02265442);
+   pz_TRIGUp35->SetBinContent(11,0.01611466);
+   pz_TRIGUp35->SetBinContent(12,0.01144765);
+   pz_TRIGUp35->SetBinContent(13,0.00803878);
+   pz_TRIGUp35->SetBinContent(14,0.00678551);
+   pz_TRIGUp35->SetBinContent(15,0.004809579);
+   pz_TRIGUp35->SetBinContent(16,0.00340982);
+   pz_TRIGUp35->SetBinContent(17,0.002448772);
+   pz_TRIGUp35->SetBinContent(18,0.001746975);
+   pz_TRIGUp35->SetBinContent(19,0.001255829);
+   pz_TRIGUp35->SetBinContent(20,0.001053096);
+   pz_TRIGUp35->SetBinContent(21,0.0007566683);
+   pz_TRIGUp35->SetBinContent(22,0.0005420581);
+   pz_TRIGUp35->SetBinContent(23,0.0003966942);
+   pz_TRIGUp35->SetBinContent(24,0.0002847771);
+   pz_TRIGUp35->SetBinContent(25,0.0002081031);
+   pz_TRIGUp35->SetBinContent(26,0.0001755952);
+   pz_TRIGUp35->SetBinContent(27,0.0001280909);
+   pz_TRIGUp35->SetBinContent(28,9.366102e-05);
+   pz_TRIGUp35->SetBinContent(29,6.802034e-05);
+   pz_TRIGUp35->SetBinContent(30,5.44381e-05);
+   pz_TRIGUp35->SetBinContent(31,3.916463e-05);
+   pz_TRIGUp35->SetBinContent(32,2.863631e-05);
+   pz_TRIGUp35->SetBinContent(33,2.033762e-05);
+   pz_TRIGUp35->SetBinContent(34,1.568346e-05);
+   pz_TRIGUp35->SetBinContent(35,1.12046e-05);
+   pz_TRIGUp35->SetBinContent(36,7.863992e-06);
+   pz_TRIGUp35->SetBinContent(37,5.530854e-06);
+   pz_TRIGUp35->SetBinContent(38,4.323365e-06);
+   pz_TRIGUp35->SetBinContent(39,2.13899e-06);
+   pz_TRIGUp35->SetEntries(1);
+
+   ci = TColor::GetColor("#0000ff");
+   pz_TRIGUp35->SetLineColor(ci);
+   pz_TRIGUp35->SetLineStyle(0);
+   pz_TRIGUp35->SetMarkerStyle(20);
+   pz_TRIGUp35->GetXaxis()->SetLabelFont(42);
+   pz_TRIGUp35->GetXaxis()->SetLabelOffset(0.007);
+   pz_TRIGUp35->GetXaxis()->SetTitleFont(42);
+   pz_TRIGUp35->GetYaxis()->SetLabelFont(42);
+   pz_TRIGUp35->GetYaxis()->SetLabelOffset(0.007);
+   pz_TRIGUp35->GetYaxis()->SetLabelSize(0.05);
+   pz_TRIGUp35->GetYaxis()->SetTitleSize(0.06);
+   pz_TRIGUp35->GetYaxis()->SetTitleFont(42);
+   pz_TRIGUp35->GetZaxis()->SetLabelFont(42);
+   pz_TRIGUp35->GetZaxis()->SetLabelOffset(0.007);
+   pz_TRIGUp35->GetZaxis()->SetLabelSize(0.05);
+   pz_TRIGUp35->GetZaxis()->SetTitleSize(0.06);
+   pz_TRIGUp35->GetZaxis()->SetTitleFont(42);
+   pz_TRIGUp35->Draw("HISTsame");
+   Double_t xAxis36[40] = {838, 890, 944, 1000, 1058, 1118, 1181, 1246, 1313, 1383, 1455, 1530, 1607, 1687, 1770, 1856, 1945, 2037, 2132, 2231, 2332, 2438, 2546, 2659, 2775, 2895, 3019, 3147, 3279, 3416, 3558, 3704, 3854, 4010, 4171, 4337, 4509, 4686, 4869, 5000}; 
+   
+   TH1D *pz_TRIGDown36 = new TH1D("pz_TRIGDown36","histo_TRIGDown ( Projection Z )",39, xAxis36);
+   pz_TRIGDown36->SetBinContent(1,0.07972494);
+   pz_TRIGDown36->SetBinContent(2,0.1329964);
+   pz_TRIGDown36->SetBinContent(3,0.1484162);
+   pz_TRIGDown36->SetBinContent(4,0.1314494);
+   pz_TRIGDown36->SetBinContent(5,0.1086753);
+   pz_TRIGDown36->SetBinContent(6,0.1087148);
+   pz_TRIGDown36->SetBinContent(7,0.07999585);
+   pz_TRIGDown36->SetBinContent(8,0.0578853);
+   pz_TRIGDown36->SetBinContent(9,0.04185628);
+   pz_TRIGDown36->SetBinContent(10,0.03021432);
+   pz_TRIGDown36->SetBinContent(11,0.02151004);
+   pz_TRIGDown36->SetBinContent(12,0.01528651);
+   pz_TRIGDown36->SetBinContent(13,0.01073741);
+   pz_TRIGDown36->SetBinContent(14,0.009064834);
+   pz_TRIGDown36->SetBinContent(15,0.00642583);
+   pz_TRIGDown36->SetBinContent(16,0.004555962);
+   pz_TRIGDown36->SetBinContent(17,0.003271996);
+   pz_TRIGDown36->SetBinContent(18,0.002334323);
+   pz_TRIGDown36->SetBinContent(19,0.001678078);
+   pz_TRIGDown36->SetBinContent(20,0.001407193);
+   pz_TRIGDown36->SetBinContent(21,0.0010111);
+   pz_TRIGDown36->SetBinContent(22,0.0007243298);
+   pz_TRIGDown36->SetBinContent(23,0.0005300874);
+   pz_TRIGDown36->SetBinContent(24,0.0003805375);
+   pz_TRIGDown36->SetBinContent(25,0.000278081);
+   pz_TRIGDown36->SetBinContent(26,0.000234642);
+   pz_TRIGDown36->SetBinContent(27,0.0001711636);
+   pz_TRIGDown36->SetBinContent(28,0.0001251562);
+   pz_TRIGDown36->SetBinContent(29,9.089338e-05);
+   pz_TRIGDown36->SetBinContent(30,7.274387e-05);
+   pz_TRIGDown36->SetBinContent(31,5.233443e-05);
+   pz_TRIGDown36->SetBinContent(32,3.826578e-05);
+   pz_TRIGDown36->SetBinContent(33,2.717651e-05);
+   pz_TRIGDown36->SetBinContent(34,2.09573e-05);
+   pz_TRIGDown36->SetBinContent(35,1.497235e-05);
+   pz_TRIGDown36->SetBinContent(36,1.05084e-05);
+   pz_TRIGDown36->SetBinContent(37,7.390702e-06);
+   pz_TRIGDown36->SetBinContent(38,5.777174e-06);
+   pz_TRIGDown36->SetBinContent(39,2.858263e-06);
+   pz_TRIGDown36->SetEntries(1);
+
+   ci = TColor::GetColor("#0000ff");
+   pz_TRIGDown36->SetLineColor(ci);
+   pz_TRIGDown36->SetLineStyle(0);
+   pz_TRIGDown36->SetMarkerStyle(20);
+   pz_TRIGDown36->GetXaxis()->SetLabelFont(42);
+   pz_TRIGDown36->GetXaxis()->SetLabelOffset(0.007);
+   pz_TRIGDown36->GetXaxis()->SetTitleFont(42);
+   pz_TRIGDown36->GetYaxis()->SetLabelFont(42);
+   pz_TRIGDown36->GetYaxis()->SetLabelOffset(0.007);
+   pz_TRIGDown36->GetYaxis()->SetLabelSize(0.05);
+   pz_TRIGDown36->GetYaxis()->SetTitleSize(0.06);
+   pz_TRIGDown36->GetYaxis()->SetTitleFont(42);
+   pz_TRIGDown36->GetZaxis()->SetLabelFont(42);
+   pz_TRIGDown36->GetZaxis()->SetLabelOffset(0.007);
+   pz_TRIGDown36->GetZaxis()->SetLabelSize(0.05);
+   pz_TRIGDown36->GetZaxis()->SetTitleSize(0.06);
+   pz_TRIGDown36->GetZaxis()->SetTitleFont(42);
+   pz_TRIGDown36->Draw("HISTsame");
+   Double_t xAxis37[40] = {838, 890, 944, 1000, 1058, 1118, 1181, 1246, 1313, 1383, 1455, 1530, 1607, 1687, 1770, 1856, 1945, 2037, 2132, 2231, 2332, 2438, 2546, 2659, 2775, 2895, 3019, 3147, 3279, 3416, 3558, 3704, 3854, 4010, 4171, 4337, 4509, 4686, 4869, 5000}; 
+   
+   TH1D *pz_altshapeUp37 = new TH1D("pz_altshapeUp37","histo_altshapeUp ( Projection Z )",39, xAxis37);
+   pz_altshapeUp37->SetBinContent(1,0.1315286);
+   pz_altshapeUp37->SetBinContent(2,0.1625002);
+   pz_altshapeUp37->SetBinContent(3,0.1529426);
+   pz_altshapeUp37->SetBinContent(4,0.1215237);
+   pz_altshapeUp37->SetBinContent(5,0.09549161);
+   pz_altshapeUp37->SetBinContent(6,0.09680412);
+   pz_altshapeUp37->SetBinContent(7,0.06755036);
+   pz_altshapeUp37->SetBinContent(8,0.04622243);
+   pz_altshapeUp37->SetBinContent(9,0.03457551);
+   pz_altshapeUp37->SetBinContent(10,0.02579116);
+   pz_altshapeUp37->SetBinContent(11,0.01903377);
+   pz_altshapeUp37->SetBinContent(12,0.01361373);
+   pz_altshapeUp37->SetBinContent(13,0.00900536);
+   pz_altshapeUp37->SetBinContent(14,0.007114406);
+   pz_altshapeUp37->SetBinContent(15,0.005048263);
+   pz_altshapeUp37->SetBinContent(16,0.003329949);
+   pz_altshapeUp37->SetBinContent(17,0.002156116);
+   pz_altshapeUp37->SetBinContent(18,0.00157129);
+   pz_altshapeUp37->SetBinContent(19,0.001094373);
+   pz_altshapeUp37->SetBinContent(20,0.0008342705);
+   pz_altshapeUp37->SetBinContent(21,0.000626346);
+   pz_altshapeUp37->SetBinContent(22,0.0004679543);
+   pz_altshapeUp37->SetBinContent(23,0.000328026);
+   pz_altshapeUp37->SetBinContent(24,0.000232579);
+   pz_altshapeUp37->SetBinContent(25,0.0001516654);
+   pz_altshapeUp37->SetBinContent(26,0.0001196388);
+   pz_altshapeUp37->SetBinContent(27,9.167925e-05);
+   pz_altshapeUp37->SetBinContent(28,6.734141e-05);
+   pz_altshapeUp37->SetBinContent(29,4.292713e-05);
+   pz_altshapeUp37->SetBinContent(30,3.848959e-05);
+   pz_altshapeUp37->SetBinContent(31,3.184523e-05);
+   pz_altshapeUp37->SetBinContent(32,2.281358e-05);
+   pz_altshapeUp37->SetBinContent(33,1.725411e-05);
+   pz_altshapeUp37->SetBinContent(34,1.18554e-05);
+   pz_altshapeUp37->SetBinContent(35,7.998323e-06);
+   pz_altshapeUp37->SetBinContent(36,4.755375e-06);
+   pz_altshapeUp37->SetBinContent(37,2.364742e-06);
+   pz_altshapeUp37->SetBinContent(38,1.861227e-06);
+   pz_altshapeUp37->SetBinContent(39,7.908129e-07);
+   pz_altshapeUp37->SetEntries(1);
+
+   ci = TColor::GetColor("#ff0000");
+   pz_altshapeUp37->SetLineColor(ci);
+   pz_altshapeUp37->SetLineStyle(0);
+   pz_altshapeUp37->GetXaxis()->SetLabelFont(42);
+   pz_altshapeUp37->GetXaxis()->SetLabelSize(0.035);
+   pz_altshapeUp37->GetXaxis()->SetTitleSize(0.035);
+   pz_altshapeUp37->GetXaxis()->SetTitleFont(42);
+   pz_altshapeUp37->GetYaxis()->SetLabelFont(42);
+   pz_altshapeUp37->GetYaxis()->SetLabelOffset(0.007);
+   pz_altshapeUp37->GetYaxis()->SetLabelSize(0.05);
+   pz_altshapeUp37->GetYaxis()->SetTitleSize(0.06);
+   pz_altshapeUp37->GetYaxis()->SetTitleFont(42);
+   pz_altshapeUp37->GetZaxis()->SetLabelFont(42);
+   pz_altshapeUp37->GetZaxis()->SetLabelOffset(0.007);
+   pz_altshapeUp37->GetZaxis()->SetLabelSize(0.05);
+   pz_altshapeUp37->GetZaxis()->SetTitleSize(0.06);
+   pz_altshapeUp37->GetZaxis()->SetTitleFont(42);
+   pz_altshapeUp37->Draw("HISTsame");
+   Double_t xAxis38[40] = {838, 890, 944, 1000, 1058, 1118, 1181, 1246, 1313, 1383, 1455, 1530, 1607, 1687, 1770, 1856, 1945, 2037, 2132, 2231, 2332, 2438, 2546, 2659, 2775, 2895, 3019, 3147, 3279, 3416, 3558, 3704, 3854, 4010, 4171, 4337, 4509, 4686, 4869, 5000}; 
+   
+   TH1D *pz_altshapeDown38 = new TH1D("pz_altshapeDown38","histo_altshapeDown ( Projection Z )",39, xAxis38);
+   pz_altshapeDown38->SetBinContent(1,0.1170306);
+   pz_altshapeDown38->SetBinContent(2,0.1456832);
+   pz_altshapeDown38->SetBinContent(3,0.138948);
+   pz_altshapeDown38->SetBinContent(4,0.1226903);
+   pz_altshapeDown38->SetBinContent(5,0.1009648);
+   pz_altshapeDown38->SetBinContent(6,0.09742843);
+   pz_altshapeDown38->SetBinContent(7,0.0747553);
+   pz_altshapeDown38->SetBinContent(8,0.05694679);
+   pz_altshapeDown38->SetBinContent(9,0.03969957);
+   pz_altshapeDown38->SetBinContent(10,0.02769432);
+   pz_altshapeDown38->SetBinContent(11,0.0190036);
+   pz_altshapeDown38->SetBinContent(12,0.01341365);
+   pz_altshapeDown38->SetBinContent(13,0.01000204);
+   pz_altshapeDown38->SetBinContent(14,0.009022023);
+   pz_altshapeDown38->SetBinContent(15,0.006388437);
+   pz_altshapeDown38->SetBinContent(16,0.004868266);
+   pz_altshapeDown38->SetBinContent(17,0.003877835);
+   pz_altshapeDown38->SetBinContent(18,0.002708269);
+   pz_altshapeDown38->SetBinContent(19,0.002009452);
+   pz_altshapeDown38->SetBinContent(20,0.001853596);
+   pz_altshapeDown38->SetBinContent(21,0.001274635);
+   pz_altshapeDown38->SetBinContent(22,0.0008755464);
+   pz_altshapeDown38->SetBinContent(23,0.0006689528);
+   pz_altshapeDown38->SetBinContent(24,0.0004862197);
+   pz_altshapeDown38->SetBinContent(25,0.0003981657);
+   pz_altshapeDown38->SetBinContent(26,0.0003593741);
+   pz_altshapeDown38->SetBinContent(27,0.0002495509);
+   pz_altshapeDown38->SetBinContent(28,0.0001816475);
+   pz_altshapeDown38->SetBinContent(29,0.0001502933);
+   pz_altshapeDown38->SetBinContent(30,0.0001073635);
+   pz_altshapeDown38->SetBinContent(31,6.716416e-05);
+   pz_altshapeDown38->SetBinContent(32,5.012273e-05);
+   pz_altshapeDown38->SetBinContent(33,3.342733e-05);
+   pz_altshapeDown38->SetBinContent(34,2.893087e-05);
+   pz_altshapeDown38->SetBinContent(35,2.188708e-05);
+   pz_altshapeDown38->SetBinContent(36,1.813407e-05);
+   pz_altshapeDown38->SetBinContent(37,1.803825e-05);
+   pz_altshapeDown38->SetBinContent(38,1.400356e-05);
+   pz_altshapeDown38->SetBinContent(39,8.067472e-06);
+   pz_altshapeDown38->SetEntries(1);
+
+   ci = TColor::GetColor("#ff0000");
+   pz_altshapeDown38->SetLineColor(ci);
+   pz_altshapeDown38->SetLineStyle(0);
+   pz_altshapeDown38->GetXaxis()->SetLabelFont(42);
+   pz_altshapeDown38->GetXaxis()->SetLabelSize(0.035);
+   pz_altshapeDown38->GetXaxis()->SetTitleSize(0.035);
+   pz_altshapeDown38->GetXaxis()->SetTitleFont(42);
+   pz_altshapeDown38->GetYaxis()->SetLabelFont(42);
+   pz_altshapeDown38->GetYaxis()->SetLabelOffset(0.007);
+   pz_altshapeDown38->GetYaxis()->SetLabelSize(0.05);
+   pz_altshapeDown38->GetYaxis()->SetTitleSize(0.06);
+   pz_altshapeDown38->GetYaxis()->SetTitleFont(42);
+   pz_altshapeDown38->GetZaxis()->SetLabelFont(42);
+   pz_altshapeDown38->GetZaxis()->SetLabelOffset(0.007);
+   pz_altshapeDown38->GetZaxis()->SetLabelSize(0.05);
+   pz_altshapeDown38->GetZaxis()->SetTitleSize(0.06);
+   pz_altshapeDown38->GetZaxis()->SetTitleFont(42);
+   pz_altshapeDown38->Draw("HISTsame");
+   Double_t xAxis39[40] = {838, 890, 944, 1000, 1058, 1118, 1181, 1246, 1313, 1383, 1455, 1530, 1607, 1687, 1770, 1856, 1945, 2037, 2132, 2231, 2332, 2438, 2546, 2659, 2775, 2895, 3019, 3147, 3279, 3416, 3558, 3704, 3854, 4010, 4171, 4337, 4509, 4686, 4869, 5000}; 
+   
+   TH1D *pz_altshape2Up39 = new TH1D("pz_altshape2Up39","histo_altshape2Up ( Projection Z )",39, xAxis39);
+   pz_altshape2Up39->SetBinContent(1,0.12022);
+   pz_altshape2Up39->SetBinContent(2,0.1484689);
+   pz_altshape2Up39->SetBinContent(3,0.1441982);
+   pz_altshape2Up39->SetBinContent(4,0.1242814);
+   pz_altshape2Up39->SetBinContent(5,0.09890739);
+   pz_altshape2Up39->SetBinContent(6,0.09749296);
+   pz_altshape2Up39->SetBinContent(7,0.07278785);
+   pz_altshape2Up39->SetBinContent(8,0.05341032);
+   pz_altshape2Up39->SetBinContent(9,0.03845379);
+   pz_altshape2Up39->SetBinContent(10,0.02761206);
+   pz_altshape2Up39->SetBinContent(11,0.02013674);
+   pz_altshape2Up39->SetBinContent(12,0.01443278);
+   pz_altshape2Up39->SetBinContent(13,0.009875211);
+   pz_altshape2Up39->SetBinContent(14,0.008108544);
+   pz_altshape2Up39->SetBinContent(15,0.00577339);
+   pz_altshape2Up39->SetBinContent(16,0.004191787);
+   pz_altshape2Up39->SetBinContent(17,0.003015547);
+   pz_altshape2Up39->SetBinContent(18,0.002181488);
+   pz_altshape2Up39->SetBinContent(19,0.001566721);
+   pz_altshape2Up39->SetBinContent(20,0.001307294);
+   pz_altshape2Up39->SetBinContent(21,0.0009691052);
+   pz_altshape2Up39->SetBinContent(22,0.0006951572);
+   pz_altshape2Up39->SetBinContent(23,0.00049803);
+   pz_altshape2Up39->SetBinContent(24,0.0003604916);
+   pz_altshape2Up39->SetBinContent(25,0.0002606978);
+   pz_altshape2Up39->SetBinContent(26,0.0002040365);
+   pz_altshape2Up39->SetBinContent(27,0.0001541192);
+   pz_altshape2Up39->SetBinContent(28,0.0001205974);
+   pz_altshape2Up39->SetBinContent(29,8.450955e-05);
+   pz_altshape2Up39->SetBinContent(30,6.359746e-05);
+   pz_altshape2Up39->SetBinContent(31,4.682233e-05);
+   pz_altshape2Up39->SetBinContent(32,3.796142e-05);
+   pz_altshape2Up39->SetBinContent(33,2.928005e-05);
+   pz_altshape2Up39->SetBinContent(34,2.01007e-05);
+   pz_altshape2Up39->SetBinContent(35,1.03338e-05);
+   pz_altshape2Up39->SetBinContent(36,6.465001e-06);
+   pz_altshape2Up39->SetBinContent(37,5.90216e-06);
+   pz_altshape2Up39->SetBinContent(38,6.570648e-06);
+   pz_altshape2Up39->SetBinContent(39,3.932013e-06);
+   pz_altshape2Up39->SetEntries(1);
+
+   ci = TColor::GetColor("#ffff00");
+   pz_altshape2Up39->SetLineColor(ci);
+   pz_altshape2Up39->SetLineStyle(0);
+   pz_altshape2Up39->GetXaxis()->SetLabelFont(42);
+   pz_altshape2Up39->GetXaxis()->SetLabelSize(0.035);
+   pz_altshape2Up39->GetXaxis()->SetTitleSize(0.035);
+   pz_altshape2Up39->GetXaxis()->SetTitleFont(42);
+   pz_altshape2Up39->GetYaxis()->SetLabelFont(42);
+   pz_altshape2Up39->GetYaxis()->SetLabelOffset(0.007);
+   pz_altshape2Up39->GetYaxis()->SetLabelSize(0.05);
+   pz_altshape2Up39->GetYaxis()->SetTitleSize(0.06);
+   pz_altshape2Up39->GetYaxis()->SetTitleFont(42);
+   pz_altshape2Up39->GetZaxis()->SetLabelFont(42);
+   pz_altshape2Up39->GetZaxis()->SetLabelOffset(0.007);
+   pz_altshape2Up39->GetZaxis()->SetLabelSize(0.05);
+   pz_altshape2Up39->GetZaxis()->SetTitleSize(0.06);
+   pz_altshape2Up39->GetZaxis()->SetTitleFont(42);
+   pz_altshape2Up39->Draw("HISTsame");
+   Double_t xAxis40[40] = {838, 890, 944, 1000, 1058, 1118, 1181, 1246, 1313, 1383, 1455, 1530, 1607, 1687, 1770, 1856, 1945, 2037, 2132, 2231, 2332, 2438, 2546, 2659, 2775, 2895, 3019, 3147, 3279, 3416, 3558, 3704, 3854, 4010, 4171, 4337, 4509, 4686, 4869, 5000}; 
+   
+   TH1D *pz_altshape2Down40 = new TH1D("pz_altshape2Down40","histo_altshape2Down ( Projection Z )",39, xAxis40);
+   pz_altshape2Down40->SetBinContent(1,0.12022);
+   pz_altshape2Down40->SetBinContent(2,0.1484689);
+   pz_altshape2Down40->SetBinContent(3,0.1441982);
+   pz_altshape2Down40->SetBinContent(4,0.1242814);
+   pz_altshape2Down40->SetBinContent(5,0.09890739);
+   pz_altshape2Down40->SetBinContent(6,0.09749296);
+   pz_altshape2Down40->SetBinContent(7,0.07278785);
+   pz_altshape2Down40->SetBinContent(8,0.05341032);
+   pz_altshape2Down40->SetBinContent(9,0.03845379);
+   pz_altshape2Down40->SetBinContent(10,0.02761206);
+   pz_altshape2Down40->SetBinContent(11,0.02013674);
+   pz_altshape2Down40->SetBinContent(12,0.01443278);
+   pz_altshape2Down40->SetBinContent(13,0.009875211);
+   pz_altshape2Down40->SetBinContent(14,0.008108544);
+   pz_altshape2Down40->SetBinContent(15,0.00577339);
+   pz_altshape2Down40->SetBinContent(16,0.004191787);
+   pz_altshape2Down40->SetBinContent(17,0.003015547);
+   pz_altshape2Down40->SetBinContent(18,0.002181488);
+   pz_altshape2Down40->SetBinContent(19,0.001566721);
+   pz_altshape2Down40->SetBinContent(20,0.001307294);
+   pz_altshape2Down40->SetBinContent(21,0.0009691052);
+   pz_altshape2Down40->SetBinContent(22,0.0006951572);
+   pz_altshape2Down40->SetBinContent(23,0.00049803);
+   pz_altshape2Down40->SetBinContent(24,0.0003604916);
+   pz_altshape2Down40->SetBinContent(25,0.0002606978);
+   pz_altshape2Down40->SetBinContent(26,0.0002040365);
+   pz_altshape2Down40->SetBinContent(27,0.0001541192);
+   pz_altshape2Down40->SetBinContent(28,0.0001205974);
+   pz_altshape2Down40->SetBinContent(29,8.450955e-05);
+   pz_altshape2Down40->SetBinContent(30,6.359746e-05);
+   pz_altshape2Down40->SetBinContent(31,4.682233e-05);
+   pz_altshape2Down40->SetBinContent(32,3.796142e-05);
+   pz_altshape2Down40->SetBinContent(33,2.928005e-05);
+   pz_altshape2Down40->SetBinContent(34,2.01007e-05);
+   pz_altshape2Down40->SetBinContent(35,1.03338e-05);
+   pz_altshape2Down40->SetBinContent(36,6.465001e-06);
+   pz_altshape2Down40->SetBinContent(37,5.90216e-06);
+   pz_altshape2Down40->SetBinContent(38,6.570648e-06);
+   pz_altshape2Down40->SetBinContent(39,3.932013e-06);
+   pz_altshape2Down40->SetEntries(1);
+
+   ci = TColor::GetColor("#ffff00");
+   pz_altshape2Down40->SetLineColor(ci);
+   pz_altshape2Down40->SetLineStyle(0);
+   pz_altshape2Down40->GetXaxis()->SetLabelFont(42);
+   pz_altshape2Down40->GetXaxis()->SetLabelSize(0.035);
+   pz_altshape2Down40->GetXaxis()->SetTitleSize(0.035);
+   pz_altshape2Down40->GetXaxis()->SetTitleFont(42);
+   pz_altshape2Down40->GetYaxis()->SetLabelFont(42);
+   pz_altshape2Down40->GetYaxis()->SetLabelOffset(0.007);
+   pz_altshape2Down40->GetYaxis()->SetLabelSize(0.05);
+   pz_altshape2Down40->GetYaxis()->SetTitleSize(0.06);
+   pz_altshape2Down40->GetYaxis()->SetTitleFont(42);
+   pz_altshape2Down40->GetZaxis()->SetLabelFont(42);
+   pz_altshape2Down40->GetZaxis()->SetLabelOffset(0.007);
+   pz_altshape2Down40->GetZaxis()->SetLabelSize(0.05);
+   pz_altshape2Down40->GetZaxis()->SetTitleSize(0.06);
+   pz_altshape2Down40->GetZaxis()->SetTitleFont(42);
+   pz_altshape2Down40->Draw("HISTsame");
+   Double_t xAxis41[40] = {838, 890, 944, 1000, 1058, 1118, 1181, 1246, 1313, 1383, 1455, 1530, 1607, 1687, 1770, 1856, 1945, 2037, 2132, 2231, 2332, 2438, 2546, 2659, 2775, 2895, 3019, 3147, 3279, 3416, 3558, 3704, 3854, 4010, 4171, 4337, 4509, 4686, 4869, 5000}; 
+   
+   TH1D *pzMC_0
+41 = new TH1D("pzMC_0
+41"," ( Projection Z )",39, xAxis41);
+   pzMC_0
+41->SetBinContent(1,0.1630305);
+   pzMC_0
+41->SetBinContent(2,0.1488257);
+   pzMC_0
+41->SetBinContent(3,0.1411679);
+   pzMC_0
+41->SetBinContent(4,0.1190067);
+   pzMC_0
+41->SetBinContent(5,0.1022756);
+   pzMC_0
+41->SetBinContent(6,0.08206714);
+   pzMC_0
+41->SetBinContent(7,0.06472892);
+   pzMC_0
+41->SetBinContent(8,0.04685093);
+   pzMC_0
+41->SetBinContent(9,0.03478004);
+   pzMC_0
+41->SetBinContent(10,0.02621847);
+   pzMC_0
+41->SetBinContent(11,0.01922094);
+   pzMC_0
+41->SetBinContent(12,0.01385358);
+   pzMC_0
+41->SetBinContent(13,0.01014395);
+   pzMC_0
+41->SetBinContent(14,0.007308868);
+   pzMC_0
+41->SetBinContent(15,0.005528679);
+   pzMC_0
+41->SetBinContent(16,0.003901469);
+   pzMC_0
+41->SetBinContent(17,0.002879222);
+   pzMC_0
+41->SetBinContent(18,0.002133536);
+   pzMC_0
+41->SetBinContent(19,0.001572167);
+   pzMC_0
+41->SetBinContent(20,0.001153894);
+   pzMC_0
+41->SetBinContent(21,0.0008685593);
+   pzMC_0
+41->SetBinContent(22,0.0006201739);
+   pzMC_0
+41->SetBinContent(23,0.0004745946);
+   pzMC_0
+41->SetBinContent(24,0.0003442932);
+   pzMC_0
+41->SetBinContent(25,0.0002690745);
+   pzMC_0
+41->SetBinContent(26,0.0001937318);
+   pzMC_0
+41->SetBinContent(27,0.0001511571);
+   pzMC_0
+41->SetBinContent(28,0.0001163247);
+   pzMC_0
+41->SetBinContent(29,8.577147e-05);
+   pzMC_0
+41->SetBinContent(30,6.098787e-05);
+   pzMC_0
+41->SetBinContent(31,4.584987e-05);
+   pzMC_0
+41->SetBinContent(32,3.567167e-05);
+   pzMC_0
+41->SetBinContent(33,2.499768e-05);
+   pzMC_0
+41->SetBinContent(34,1.951136e-05);
+   pzMC_0
+41->SetBinContent(35,1.428589e-05);
+   pzMC_0
+41->SetBinContent(36,1.0497e-05);
+   pzMC_0
+41->SetBinContent(37,7.860096e-06);
+   pzMC_0
+41->SetBinContent(38,5.312957e-06);
+   pzMC_0
+41->SetBinContent(39,3.133914e-06);
+   pzMC_0
+41->SetBinError(1,0.02028332);
+   pzMC_0
+41->SetBinError(2,0.005325722);
+   pzMC_0
+41->SetBinError(3,0.004615526);
+   pzMC_0
+41->SetBinError(4,0.003192004);
+   pzMC_0
+41->SetBinError(5,0.003014574);
+   pzMC_0
+41->SetBinError(6,0.001749108);
+   pzMC_0
+41->SetBinError(7,0.001713239);
+   pzMC_0
+41->SetBinError(8,0.001018673);
+   pzMC_0
+41->SetBinError(9,0.000730256);
+   pzMC_0
+41->SetBinError(10,0.0005254857);
+   pzMC_0
+41->SetBinError(11,0.0003939768);
+   pzMC_0
+41->SetBinError(12,0.0002419613);
+   pzMC_0
+41->SetBinError(13,0.0002034763);
+   pzMC_0
+41->SetBinError(14,9.489064e-05);
+   pzMC_0
+41->SetBinError(15,9.734354e-05);
+   pzMC_0
+41->SetBinError(16,4.763035e-05);
+   pzMC_0
+41->SetBinError(17,3.557655e-05);
+   pzMC_0
+41->SetBinError(18,2.728312e-05);
+   pzMC_0
+41->SetBinError(19,1.930491e-05);
+   pzMC_0
+41->SetBinError(20,1.682052e-05);
+   pzMC_0
+41->SetBinError(21,1.248261e-05);
+   pzMC_0
+41->SetBinError(22,9.786574e-06);
+   pzMC_0
+41->SetBinError(23,8.184235e-06);
+   pzMC_0
+41->SetBinError(24,6.693311e-06);
+   pzMC_0
+41->SetBinError(25,5.665648e-06);
+   pzMC_0
+41->SetBinError(26,4.446236e-06);
+   pzMC_0
+41->SetBinError(27,3.58749e-06);
+   pzMC_0
+41->SetBinError(28,2.925495e-06);
+   pzMC_0
+41->SetBinError(29,2.257916e-06);
+   pzMC_0
+41->SetBinError(30,1.751514e-06);
+   pzMC_0
+41->SetBinError(31,1.378787e-06);
+   pzMC_0
+41->SetBinError(32,1.115262e-06);
+   pzMC_0
+41->SetBinError(33,8.225848e-07);
+   pzMC_0
+41->SetBinError(34,6.76509e-07);
+   pzMC_0
+41->SetBinError(35,5.016631e-07);
+   pzMC_0
+41->SetBinError(36,3.769678e-07);
+   pzMC_0
+41->SetBinError(37,3.038619e-07);
+   pzMC_0
+41->SetBinError(38,2.348369e-07);
+   pzMC_0
+41->SetBinError(39,1.775196e-07);
+   pzMC_0
+41->SetEntries(2047.18);
+
+   ci = TColor::GetColor("#ff9900");
+   pzMC_0
+41->SetFillColor(ci);
+   pzMC_0
+41->SetLineStyle(0);
+   pzMC_0
+41->SetMarkerStyle(20);
+   pzMC_0
+41->SetMarkerSize(0.5);
+   pzMC_0
+41->GetXaxis()->SetTitle(" []");
+   pzMC_0
+41->GetXaxis()->SetLabelFont(42);
+   pzMC_0
+41->GetXaxis()->SetLabelSize(0.035);
+   pzMC_0
+41->GetXaxis()->SetTitleSize(0.035);
+   pzMC_0
+41->GetXaxis()->SetTitleFont(42);
+   pzMC_0
+41->GetYaxis()->SetLabelFont(42);
+   pzMC_0
+41->GetYaxis()->SetLabelOffset(0.007);
+   pzMC_0
+41->GetYaxis()->SetLabelSize(0.05);
+   pzMC_0
+41->GetYaxis()->SetTitleSize(0.06);
+   pzMC_0
+41->GetYaxis()->SetTitleFont(42);
+   pzMC_0
+41->GetZaxis()->SetLabelFont(42);
+   pzMC_0
+41->GetZaxis()->SetLabelOffset(0.007);
+   pzMC_0
+41->GetZaxis()->SetLabelSize(0.05);
+   pzMC_0
+41->GetZaxis()->SetTitleSize(0.06);
+   pzMC_0
+41->GetZaxis()->SetTitleFont(42);
+   pzMC_0
+41->Draw("same");
+   
+   TLegend *leg = new TLegend(0.6,0.55,0.95,0.8,NULL,"brNDC");
+   leg->SetBorderSize(0);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(0);
+   TLegendEntry *entry=leg->AddEntry("pzMC_0
+","Simulation (Pythia8)","LP");
+   entry->SetLineColor(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(20);
+   entry->SetMarkerSize(0.5);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("pz_0
+","Template","L");
+   entry->SetLineColor(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("pz_PTZUp","p_{T} syst. up/down","L");
+
+   ci = TColor::GetColor("#ff00ff");
+   entry->SetLineColor(ci);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("pz_OPTZUp","1/p_{T} syst. up/down","L");
+   entry->SetLineColor(210);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("pz_TRIGUp","Trigger syst. up/down","L");
+
+   ci = TColor::GetColor("#0000ff");
+   entry->SetLineColor(ci);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("pz_altshapeUp","MadGraph syst. up/down","L");
+
+   ci = TColor::GetColor("#ff0000");
+   entry->SetLineColor(ci);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("pz_altshape2Up","Herwig syst. up/down","L");
+
+   ci = TColor::GetColor("#ffff00");
+   entry->SetLineColor(ci);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   TLatex *   tex = new TLatex(0.95,0.96,"13 TeV (2017)");
+tex->SetNDC();
+   tex->SetTextAlign(31);
+   tex->SetTextFont(42);
+   tex->SetTextSize(0.03);
+   tex->SetLineWidth(2);
+   tex->Draw();
+      tex = new TLatex(0.1669,0.9213,"CMS");
+tex->SetNDC();
+   tex->SetTextAlign(13);
+   tex->SetTextFont(61);
+   tex->SetTextSize(0.0375);
+   tex->SetLineWidth(2);
+   tex->Draw();
+      tex = new TLatex(0.1669,0.8763,"Simulation Preliminary");
+tex->SetNDC();
+   tex->SetTextAlign(13);
+   tex->SetTextFont(52);
+   tex->SetTextSize(0.0285);
+   tex->SetLineWidth(2);
+   tex->Draw();
+   Double_t xAxis42[40] = {838, 890, 944, 1000, 1058, 1118, 1181, 1246, 1313, 1383, 1455, 1530, 1607, 1687, 1770, 1856, 1945, 2037, 2132, 2231, 2332, 2438, 2546, 2659, 2775, 2895, 3019, 3147, 3279, 3416, 3558, 3704, 3854, 4010, 4171, 4337, 4509, 4686, 4869, 5000}; 
+   
+   TH1D *pz_0
+_copy42 = new TH1D("pz_0
+_copy42","histo ( Projection Z )",39, xAxis42);
+   pz_0
+_copy42->SetBinContent(1,0.1243119);
+   pz_0
+_copy42->SetBinContent(2,0.1541645);
+   pz_0
+_copy42->SetBinContent(3,0.146064);
+   pz_0
+_copy42->SetBinContent(4,0.1223456);
+   pz_0
+_copy42->SetBinContent(5,0.09838307);
+   pz_0
+_copy42->SetBinContent(6,0.09730667);
+   pz_0
+_copy42->SetBinContent(7,0.07120126);
+   pz_0
+_copy42->SetBinContent(8,0.051406);
+   pz_0
+_copy42->SetBinContent(9,0.03712188);
+   pz_0
+_copy42->SetBinContent(10,0.02677834);
+   pz_0
+_copy42->SetBinContent(11,0.01905606);
+   pz_0
+_copy42->SetBinContent(12,0.01353988);
+   pz_0
+_copy42->SetBinContent(13,0.009509278);
+   pz_0
+_copy42->SetBinContent(14,0.008027385);
+   pz_0
+_copy42->SetBinContent(15,0.005690116);
+   pz_0
+_copy42->SetBinContent(16,0.004034213);
+   pz_0
+_copy42->SetBinContent(17,0.002897234);
+   pz_0
+_copy42->SetBinContent(18,0.002066935);
+   pz_0
+_copy42->SetBinContent(19,0.001485848);
+   pz_0
+_copy42->SetBinContent(20,0.001245988);
+   pz_0
+_copy42->SetBinContent(21,0.0008952677);
+   pz_0
+_copy42->SetBinContent(22,0.0006413486);
+   pz_0
+_copy42->SetBinContent(23,0.0004693585);
+   pz_0
+_copy42->SetBinContent(24,0.0003369414);
+   pz_0
+_copy42->SetBinContent(25,0.0002462227);
+   pz_0
+_copy42->SetBinContent(26,0.0002077602);
+   pz_0
+_copy42->SetBinContent(27,0.0001515542);
+   pz_0
+_copy42->SetBinContent(28,0.0001108176);
+   pz_0
+_copy42->SetBinContent(29,8.048011e-05);
+   pz_0
+_copy42->SetBinContent(30,6.440991e-05);
+   pz_0
+_copy42->SetBinContent(31,4.63387e-05);
+   pz_0
+_copy42->SetBinContent(32,3.388183e-05);
+   pz_0
+_copy42->SetBinContent(33,2.406301e-05);
+   pz_0
+_copy42->SetBinContent(34,1.855631e-05);
+   pz_0
+_copy42->SetBinContent(35,1.325703e-05);
+   pz_0
+_copy42->SetBinContent(36,9.304495e-06);
+   pz_0
+_copy42->SetBinContent(37,6.54398e-06);
+   pz_0
+_copy42->SetBinContent(38,5.115307e-06);
+   pz_0
+_copy42->SetBinContent(39,2.530804e-06);
+   pz_0
+_copy42->SetMinimum(1e-05);
+   pz_0
+_copy42->SetMaximum(1.5);
+   pz_0
+_copy42->SetEntries(1);
+   pz_0
+_copy42->SetDirectory(0);
+   pz_0
+_copy42->SetLineStyle(0);
+   pz_0
+_copy42->GetXaxis()->SetTitle("m_{jj} (proj. z) [GeV]");
+   pz_0
+_copy42->GetXaxis()->SetNdivisions(505);
+   pz_0
+_copy42->GetXaxis()->SetLabelFont(42);
+   pz_0
+_copy42->GetXaxis()->SetLabelSize(0.035);
+   pz_0
+_copy42->GetXaxis()->SetTitleSize(0.035);
+   pz_0
+_copy42->GetXaxis()->SetTitleFont(42);
+   pz_0
+_copy42->GetYaxis()->SetTitle("A.U");
+   pz_0
+_copy42->GetYaxis()->SetNdivisions(505);
+   pz_0
+_copy42->GetYaxis()->SetLabelFont(42);
+   pz_0
+_copy42->GetYaxis()->SetLabelOffset(0.007);
+   pz_0
+_copy42->GetYaxis()->SetLabelSize(0.05);
+   pz_0
+_copy42->GetYaxis()->SetTitleSize(0.06);
+   pz_0
+_copy42->GetYaxis()->SetTitleFont(42);
+   pz_0
+_copy42->GetZaxis()->SetLabelFont(42);
+   pz_0
+_copy42->GetZaxis()->SetLabelOffset(0.007);
+   pz_0
+_copy42->GetZaxis()->SetLabelSize(0.05);
+   pz_0
+_copy42->GetZaxis()->SetTitleSize(0.06);
+   pz_0
+_copy42->GetZaxis()->SetTitleFont(42);
+   pz_0
+_copy42->Draw("sameaxis");
+   czSyst->Modified();
+   czSyst->cd();
+   czSyst->SetSelected(czSyst);
+}

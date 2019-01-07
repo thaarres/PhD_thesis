@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: phd_aarrestad_main.aux
+The style file: auto_generated.bst
+Database file #1: Bibliography.bib
+Warning--I didn't find a database entry for "CMS-PAS-EXO-14-024"
+You've used 56 entries,
+            2537 wiz_defined-function locations,
+            1078 strings with 17894 characters,
+and the built_in function-call counts, 17183 in all, are:
+= -- 1874
+> -- 390
+< -- 5
++ -- 135
+- -- 79
+* -- 1466
+:= -- 2140
+add.period$ -- 87
+call.type$ -- 56
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 56
+duplicate$ -- 1135
+empty$ -- 1757
+format.name$ -- 85
+if$ -- 4541
+int.to.chr$ -- 0
+int.to.str$ -- 56
+missing$ -- 135
+newline$ -- 229
+num.names$ -- 44
+pop$ -- 317
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 650
+stack$ -- 0
+substring$ -- 599
+swap$ -- 485
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 99
+width$ -- 58
+write$ -- 699
+(There was 1 warning)

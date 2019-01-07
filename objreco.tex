@@ -100,6 +100,7 @@ Muons used in this thesis are required to pass an isolation requirement in order
 than 0.1 are considered isolated and are used for further analysis. \newline
 Further, the following selection criteria are applied:
 \begin{itemize}
+  \itemsep0em 
   \item The $\chi^2$ of the global muon track fit must be less than 10
   \item At least one muon-chamber hit is included in the global-muon track fit. The global muon track fit must include at least one muon chamber hit
   \item Muon segments in at least two of the muon stations must be matched to the muon tracker track  
@@ -115,32 +116,52 @@ muon detectors
 \label{sec:objreco:electrons}
 The electrons are seeded from a GSF track, as described in Section~\ref{subsub:objreco:electrontracking}. To differentiate electrons from charged hadrons, the energy deposit in the HCAL within a distance of 0.15 in the $\eta-\phi$ plane of the supercluster , is required to be less than 10 \% of that of the supercluster. The electron candidate must further pass a requirement on the output of a dedicated electron-identification BDT, using inputs such as track-cluster distance, track $\chi^2$ and number of hits as input.  In this step, isolated photons are also reconstructed, seeded from ECAL superclusters with $|E_T>10 \GeV|$ and no link to a GSF track.
 All the tracks and calorimeter deposits used to reconstruct electrons and isolated photons are further removed from the list of PF blocks. \newline
+Only electrons passing certain quality requirements, corresponding to the CMS electron HEEP ID, are used in this thesis. These requirements are listed in Table~\ref{tab:objreco:HEEP}, with the following variable definitions:
+\begin{itemize}
+\itemsep-1em 
+\item \textbf{$E_T$:} The supercluster energy $x \sin(\theta_{track})$ where $\theta_{track}$ is the electron track polar angle measured in the inner tracker layer and extrapolated to the interaction vertex. \newline
+\item \textbf{$\eta^{sc}$:} $\eta$ of the electron supercluster.\newline
+\item \textbf{isEcalDriven}: Electron is found through ECAL requirements rather than through Particle Flow and the tracker.\newline
+\item \textbf{$\Delta \eta_{in}^{seed}$:} $\eta$ difference between the track position measured in the inner layer, extrapolated to the interaction vertex and to the calorimeter, and the $\eta$ of the supercluster. \newline
+\item \textbf{$\Delta\phi_{in}$:}  $\phi$ difference between the track position measured in the inner layer, extrapolated to the interaction vertex and to the calorimeter, and the $\phi$ of the supercluster. \newline
+\item \textbf{H/E:} Ratio of hadronic energy in the calorimeter towers within a cone of radius 0.15 centered at the electrons calorimeter position, to the electromagnetic energy of the supercluster.\newline
+\item \textbf{$\sigma_{i \eta i \eta}$:} Measure of the energy spread in $\eta$ in units of crystals of electron energy in a $5 \times 5$ block centered on the seed crystal.\newline
+\item \textbf{ECAL Isolation:} The transverse electromagnetic energy of all reconstructed hits( with $E > 0.08 \GeV$) in a cone of radius 0.3 centered at the electron calorimeter position, excluding those in an inner cone with a radius of 3 crystals and an $\eta$ strip with a width of 3 crystals.\newline
+\item \textbf{Hadronic Depth Isolation:} Defined as the transverse depth of the hadronic energy in the HCAL inside a cone of 0.3 centered on the electron calorimeter position, excluding towers in a cone of 0.15 radius.\newline
+\item \textbf{Track \PT Isolation:} The sum \PT of the tracks in a $\Delta R$ cone of 0.04 to 0.3, excluding an $\eta$ region of 0.015.\newline
+\item \textbf{$d_{xy}$:} Transverse distance between the electron track and the primary vertex.\newline
+\end{itemize}
 
-Only electrons passing the following requirements are used in this thesis:
-% \begin{table}[h!]
-% \begin{center}
-% \begin{tabular}{|l|c|c|}
-% \hline
-%  Variable  &  Barrel  &  Endcap  \\
-%  E_{T}  &  $>$; 35 \GeV  &  $>$; 35 \GeV  \\
-%  &eta; range  &  &$&eta;_{sc}&$ $<$; 1.4442  &  1.566 $<$; &$&eta;_{sc}&$ $<$; 2.5  \\
-%  isEcalDriven  &  =1  &  =1  \\
-%  &$&Delta;&eta;_{in}^{seed}$&$  &  $<$; 0.004  &  $<$; 0.006  \\
-%  &$&Delta;&phi;_{in}&$  &  $<$; 0.06  &  $<$; 0.06  \\
-%  !H/E  &  $<$;1/E + 0.05  &  $<$; 5/E + 0.05  \\
-%  full 5x5 &sigma;_{i&eta;i&eta;}  &  n/a  &  $<$;0.03  \\
-%  full 5x5 E^{2x5}$/E^{5x5}$  & $>$;0.94 OR E^{1x5}$/E^{5x5}$ $>$; 0.83 &  n/a  \\
-%  EM + Had Depth 1 Isolation  &  $<$;2+0.03*Et +0.28*rho  &  $<$;2.5 +0.28*rho for Et$<$;50 else  \\
-%   &  $<$;2.5+0.03*(Et-50) +0.28*rho  \\
-%  Track Isol: Trk Pt  &  $<$;5 for Et$<$;95 else  &  $<$;5 for Et$<$;100 else  \\
-%    $<$;5 + 1.5*rho  &  $<$;5 + 0.5*rho  \\
-%  Inner Layer Lost Hits  &  $<$;=1  &  $<$;=1  \\
-%  &$dxy&$  &  $<$;0.02  &  $<$;0.05  \\
-% \end{tabular}
-% \caption{Summary of the HEEP electron requirements.}
-% \label{tab:objreco:HEEP}
-% \end{center}
-% \end{table}
+\begin{table}[h!]
+\begin{center}
+  \footnotesize
+\begin{tabular}{|l|c|c|}
+\hline
+ Variable  &  Barrel  &  Endcap  \\
+ \hline
+ $E_{T}$                            &  $>$ 35 \GeV                                                &  $>$ 35 \GeV                                         \\
+ $\eta$ range                       &  $|\eta_{sc}|< 1.4442$                                      &  $1.566<\eta_{sc} < 2.5$                             \\
+ isEcalDriven                       &  yes                                                        &  yes                                                 \\
+ $\Delta \eta_{in}^{seed}$          &  $< 0.004$                                                  &  $< 0.006$                                           \\
+ $\Delta\phi_{in}$                  &  $< 0.06$                                                   &  $< 0.06$                                            \\
+ H/E                                &  $<1/E + 0.05$                                              &  $< 5/E + 0.05$                                      \\
+ full 5x5 $\sigma_{i \eta i \eta}$  &  n/a                                                        &  $<0.03$                                             \\
+ full 5x5 $E^{2x5}/E^{5x5}$         & $>0.94$ OR $E^{1x5}/E^{5x5}> 0.83$                          &  n/a                                                 \\
+ \hline
+ EM$+$Had. Depth Iso.               &  $ < 2+0.03 \times E_T + 0.28 \times \rho$                  & For $E_T < 50 \GeV$: $< 2.5+0.28 \times \rho$        \\
+                                    &                                                             & else: $<2.5+0.03 \times (E_T-50) + 0.28 \times \rho$ \\
+ \hline
+ Track \PT iso.                     & For $E_T < 100 \GeV$: $< 5 \GeV$ / $<5 + 1.5 \times \rho$   &  $<5 + 0.5 \times \rho$                              \\
+                                    & else:  $<5 + 1.5 \times \rho$                               &                                                      \\
+ \hline
+ Inner Layer Lost Hits              &  $\leq 1$                                                   &  $\leq 1$                                            \\
+ $d_{xy}$                           &  $<0.02$                                                    &  $<0.05$                                             \\
+\hline
+\end{tabular}
+\caption{Summary of the electron requirements allied to all electrons used in this analysis.}
+\label{tab:objreco:HEEP}
+\end{center}
+\end{table}
 
 
 \subsubsection{Hadrons}

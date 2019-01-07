@@ -29,6 +29,11 @@
 \usepackage{fancyhdr}
 \usepackage{wrapfig}
 \usepackage{afterpage}
+
+%\usepackage [english]{babel}
+\usepackage [autostyle]{csquotes}
+\MakeOuterQuote{"}
+
 %\usepackage{feynman}
 %\usepackage[colorlinks=true,citecolor=blue,filecolor=blue,linkcolor=blue,urlcolor=blue,pdftex]{hyperref}
 %\usepackage{capt-of} % needed to put table next to a figure and have captions
@@ -41,7 +46,7 @@
 \usepackage{lipsum}
 
 \titleformat{\chapter}[display]
-{\color{CadetBlue}\normalfont\Large\filcenter\sffamily}
+{\color{MidnightBlue}\normalfont\Large\filcenter\sffamily}
 {\vspace*{\fill}
  \titlerule[1pt]%
  \vspace{1pt}%
@@ -54,20 +59,20 @@
 
 
 %\titleformat{\chapter}
-%{\color{CadetBlue}\normalfont\Large\bfseries}
-%{\color{CadetBlue}\thechapter}{1em}{}
+%{\color{MidnightBlue}\normalfont\Large\bfseries}
+%{\color{MidnightBlue}\thechapter}{1em}{}
 
 \titleformat{\section}
-{\color{CadetBlue}\normalfont\Large\bfseries}
-{\color{CadetBlue}\thesection}{1em}{}
+{\color{MidnightBlue}\normalfont\Large\bfseries}
+{\color{MidnightBlue}\thesection}{1em}{}
 
 \titleformat{\subsection}
-{\color{CadetBlue}\normalfont\Large\bfseries}
-{\color{CadetBlue}\thesubsection}{1em}{}
+{\color{MidnightBlue}\normalfont\Large\bfseries}
+{\color{MidnightBlue}\thesubsection}{1em}{}
 
 \titleformat{\subsubsection}
-{\color{CadetBlue}\normalfont\Large\bfseries}
-{\color{CadetBlue}\thesubsection}{1em}{}
+{\color{MidnightBlue}\normalfont\Large\bfseries}
+{\color{MidnightBlue}\thesubsection}{1em}{}
 
 %-------------------------------------------------------------------------------------
 \pagestyle{fancy}
@@ -124,7 +129,7 @@
 \vspace*{\fill}
 \begin{center}
 \Large
-{\color{CadetBlue}\textbf{Abstract}}
+{\color{MidnightBlue}\textbf{Abstract}}
 \input{abstract.tex}
 \end{center}
 \vspace*{\fill}
@@ -137,7 +142,7 @@
 \vspace*{\fill}
 \begin{center}
 \Large
-{\color{CadetBlue}\textbf{Zusammenfassung}}
+{\color{MidnightBlue}\textbf{Zusammenfassung}}
 \end{center}
 \input{Zusammenfassung}
 \vspace*{\fill}

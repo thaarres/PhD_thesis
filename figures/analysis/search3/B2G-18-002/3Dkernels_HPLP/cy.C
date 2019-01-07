@@ -1,0 +1,2618 @@
+void cy()
+{
+//=========Macro generated from canvas: cy/cy
+//=========  (Tue Jun 12 14:05:53 2018) by ROOT version6.02/05
+   TCanvas *cy = new TCanvas("cy", "cy",0,0,800,600);
+   gStyle->SetOptFit(1);
+   gStyle->SetOptStat(0);
+   gStyle->SetOptTitle(0);
+   cy->Range(29.63415,-0.006341463,224.7561,0.04243902);
+   cy->SetFillColor(0);
+   cy->SetBorderMode(0);
+   cy->SetBorderSize(2);
+   cy->SetTickx(1);
+   cy->SetTicky(1);
+   cy->SetLeftMargin(0.13);
+   cy->SetRightMargin(0.05);
+   cy->SetTopMargin(0.05);
+   cy->SetBottomMargin(0.13);
+   cy->SetFrameFillStyle(0);
+   cy->SetFrameBorderMode(0);
+   cy->SetFrameFillStyle(0);
+   cy->SetFrameBorderMode(0);
+   Double_t xAxis10[81] = {55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, 117, 119, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 149, 151, 153, 155, 157, 159, 161, 163, 165, 167, 169, 171, 173, 175, 177, 179, 181, 183, 185, 187, 189, 191, 193, 195, 197, 199, 201, 203, 205, 207, 209, 211, 213, 215}; 
+   
+   TH1D *py_0
+10 = new TH1D("py_0
+10","histo ( Projection Y )",80, xAxis10);
+   py_0
+10->SetBinContent(1,0.02430155);
+   py_0
+10->SetBinContent(2,0.0239993);
+   py_0
+10->SetBinContent(3,0.02365614);
+   py_0
+10->SetBinContent(4,0.02329625);
+   py_0
+10->SetBinContent(5,0.02292666);
+   py_0
+10->SetBinContent(6,0.02255147);
+   py_0
+10->SetBinContent(7,0.02217671);
+   py_0
+10->SetBinContent(8,0.02180979);
+   py_0
+10->SetBinContent(9,0.02145518);
+   py_0
+10->SetBinContent(10,0.02111426);
+   py_0
+10->SetBinContent(11,0.02078592);
+   py_0
+10->SetBinContent(12,0.02046818);
+   py_0
+10->SetBinContent(13,0.0201595);
+   py_0
+10->SetBinContent(14,0.01986028);
+   py_0
+10->SetBinContent(15,0.01957202);
+   py_0
+10->SetBinContent(16,0.01929626);
+   py_0
+10->SetBinContent(17,0.01903524);
+   py_0
+10->SetBinContent(18,0.0187896);
+   py_0
+10->SetBinContent(19,0.01855925);
+   py_0
+10->SetBinContent(20,0.01834194);
+   py_0
+10->SetBinContent(21,0.01813525);
+   py_0
+10->SetBinContent(22,0.01793545);
+   py_0
+10->SetBinContent(23,0.01773887);
+   py_0
+10->SetBinContent(24,0.01754221);
+   py_0
+10->SetBinContent(25,0.01734276);
+   py_0
+10->SetBinContent(26,0.01713886);
+   py_0
+10->SetBinContent(27,0.01692938);
+   py_0
+10->SetBinContent(28,0.01671361);
+   py_0
+10->SetBinContent(29,0.0164913);
+   py_0
+10->SetBinContent(30,0.01626161);
+   py_0
+10->SetBinContent(31,0.01602431);
+   py_0
+10->SetBinContent(32,0.01577819);
+   py_0
+10->SetBinContent(33,0.01552191);
+   py_0
+10->SetBinContent(34,0.01525449);
+   py_0
+10->SetBinContent(35,0.01497469);
+   py_0
+10->SetBinContent(36,0.01468157);
+   py_0
+10->SetBinContent(37,0.01437424);
+   py_0
+10->SetBinContent(38,0.01405284);
+   py_0
+10->SetBinContent(39,0.01371686);
+   py_0
+10->SetBinContent(40,0.01336749);
+   py_0
+10->SetBinContent(41,0.01300544);
+   py_0
+10->SetBinContent(42,0.01263206);
+   py_0
+10->SetBinContent(43,0.01224892);
+   py_0
+10->SetBinContent(44,0.01185776);
+   py_0
+10->SetBinContent(45,0.01146065);
+   py_0
+10->SetBinContent(46,0.01105951);
+   py_0
+10->SetBinContent(47,0.01065625);
+   py_0
+10->SetBinContent(48,0.01025286);
+   py_0
+10->SetBinContent(49,0.0098513);
+   py_0
+10->SetBinContent(50,0.009453274);
+   py_0
+10->SetBinContent(51,0.009060339);
+   py_0
+10->SetBinContent(52,0.008673915);
+   py_0
+10->SetBinContent(53,0.008295403);
+   py_0
+10->SetBinContent(54,0.007925917);
+   py_0
+10->SetBinContent(55,0.007566226);
+   py_0
+10->SetBinContent(56,0.007217009);
+   py_0
+10->SetBinContent(57,0.006878903);
+   py_0
+10->SetBinContent(58,0.006552232);
+   py_0
+10->SetBinContent(59,0.006237042);
+   py_0
+10->SetBinContent(60,0.005933509);
+   py_0
+10->SetBinContent(61,0.005641448);
+   py_0
+10->SetBinContent(62,0.005360792);
+   py_0
+10->SetBinContent(63,0.00509132);
+   py_0
+10->SetBinContent(64,0.00483281);
+   py_0
+10->SetBinContent(65,0.004584936);
+   py_0
+10->SetBinContent(66,0.004347541);
+   py_0
+10->SetBinContent(67,0.004120245);
+   py_0
+10->SetBinContent(68,0.003902955);
+   py_0
+10->SetBinContent(69,0.00369534);
+   py_0
+10->SetBinContent(70,0.00349711);
+   py_0
+10->SetBinContent(71,0.003308135);
+   py_0
+10->SetBinContent(72,0.003128108);
+   py_0
+10->SetBinContent(73,0.002956845);
+   py_0
+10->SetBinContent(74,0.00279409);
+   py_0
+10->SetBinContent(75,0.002639541);
+   py_0
+10->SetBinContent(76,0.002493013);
+   py_0
+10->SetBinContent(77,0.002354121);
+   py_0
+10->SetBinContent(78,0.002222696);
+   py_0
+10->SetBinContent(79,0.002098296);
+   py_0
+10->SetBinContent(80,0.001980724);
+   py_0
+10->SetMinimum(0);
+   py_0
+10->SetMaximum(0.04);
+   py_0
+10->SetEntries(1);
+   py_0
+10->SetLineStyle(0);
+   py_0
+10->GetXaxis()->SetTitle("m_{jet2} (proj. y) [GeV]");
+   py_0
+10->GetXaxis()->SetNdivisions(505);
+   py_0
+10->GetXaxis()->SetLabelFont(42);
+   py_0
+10->GetXaxis()->SetLabelSize(0.035);
+   py_0
+10->GetXaxis()->SetTitleSize(0.035);
+   py_0
+10->GetXaxis()->SetTitleFont(42);
+   py_0
+10->GetYaxis()->SetTitle("A.U");
+   py_0
+10->GetYaxis()->SetNdivisions(505);
+   py_0
+10->GetYaxis()->SetLabelFont(42);
+   py_0
+10->GetYaxis()->SetLabelOffset(0.007);
+   py_0
+10->GetYaxis()->SetLabelSize(0.05);
+   py_0
+10->GetYaxis()->SetTitleSize(0.06);
+   py_0
+10->GetYaxis()->SetTitleFont(42);
+   py_0
+10->GetZaxis()->SetLabelFont(42);
+   py_0
+10->GetZaxis()->SetLabelOffset(0.007);
+   py_0
+10->GetZaxis()->SetLabelSize(0.05);
+   py_0
+10->GetZaxis()->SetTitleSize(0.06);
+   py_0
+10->GetZaxis()->SetTitleFont(42);
+   py_0
+10->Draw("HIST");
+   Double_t xAxis11[81] = {55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, 117, 119, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 149, 151, 153, 155, 157, 159, 161, 163, 165, 167, 169, 171, 173, 175, 177, 179, 181, 183, 185, 187, 189, 191, 193, 195, 197, 199, 201, 203, 205, 207, 209, 211, 213, 215}; 
+   
+   TH1D *pyMC_0
+11 = new TH1D("pyMC_0
+11"," ( Projection Y )",80, xAxis11);
+   pyMC_0
+11->SetBinContent(1,0.02437475);
+   pyMC_0
+11->SetBinContent(2,0.0238506);
+   pyMC_0
+11->SetBinContent(3,0.02280685);
+   pyMC_0
+11->SetBinContent(4,0.02153153);
+   pyMC_0
+11->SetBinContent(5,0.02257518);
+   pyMC_0
+11->SetBinContent(6,0.02098264);
+   pyMC_0
+11->SetBinContent(7,0.0250286);
+   pyMC_0
+11->SetBinContent(8,0.02368469);
+   pyMC_0
+11->SetBinContent(9,0.02065101);
+   pyMC_0
+11->SetBinContent(10,0.02050266);
+   pyMC_0
+11->SetBinContent(11,0.01893608);
+   pyMC_0
+11->SetBinContent(12,0.01966115);
+   pyMC_0
+11->SetBinContent(13,0.0193181);
+   pyMC_0
+11->SetBinContent(14,0.02074098);
+   pyMC_0
+11->SetBinContent(15,0.01952172);
+   pyMC_0
+11->SetBinContent(16,0.01983251);
+   pyMC_0
+11->SetBinContent(17,0.01914007);
+   pyMC_0
+11->SetBinContent(18,0.01856276);
+   pyMC_0
+11->SetBinContent(19,0.01812138);
+   pyMC_0
+11->SetBinContent(20,0.01739647);
+   pyMC_0
+11->SetBinContent(21,0.0173102);
+   pyMC_0
+11->SetBinContent(22,0.01692869);
+   pyMC_0
+11->SetBinContent(23,0.01762557);
+   pyMC_0
+11->SetBinContent(24,0.01765387);
+   pyMC_0
+11->SetBinContent(25,0.01685737);
+   pyMC_0
+11->SetBinContent(26,0.01728076);
+   pyMC_0
+11->SetBinContent(27,0.01651474);
+   pyMC_0
+11->SetBinContent(28,0.01681486);
+   pyMC_0
+11->SetBinContent(29,0.01586017);
+   pyMC_0
+11->SetBinContent(30,0.01684615);
+   pyMC_0
+11->SetBinContent(31,0.01607025);
+   pyMC_0
+11->SetBinContent(32,0.01611042);
+   pyMC_0
+11->SetBinContent(33,0.01498444);
+   pyMC_0
+11->SetBinContent(34,0.0150457);
+   pyMC_0
+11->SetBinContent(35,0.01485678);
+   pyMC_0
+11->SetBinContent(36,0.01383481);
+   pyMC_0
+11->SetBinContent(37,0.01397347);
+   pyMC_0
+11->SetBinContent(38,0.01370434);
+   pyMC_0
+11->SetBinContent(39,0.01362012);
+   pyMC_0
+11->SetBinContent(40,0.01425169);
+   pyMC_0
+11->SetBinContent(41,0.01285893);
+   pyMC_0
+11->SetBinContent(42,0.01280871);
+   pyMC_0
+11->SetBinContent(43,0.01237407);
+   pyMC_0
+11->SetBinContent(44,0.01468739);
+   pyMC_0
+11->SetBinContent(45,0.01164828);
+   pyMC_0
+11->SetBinContent(46,0.0113253);
+   pyMC_0
+11->SetBinContent(47,0.0106109);
+   pyMC_0
+11->SetBinContent(48,0.0105214);
+   pyMC_0
+11->SetBinContent(49,0.01034534);
+   pyMC_0
+11->SetBinContent(50,0.009626152);
+   pyMC_0
+11->SetBinContent(51,0.01030064);
+   pyMC_0
+11->SetBinContent(52,0.008887211);
+   pyMC_0
+11->SetBinContent(53,0.008179947);
+   pyMC_0
+11->SetBinContent(54,0.007862193);
+   pyMC_0
+11->SetBinContent(55,0.008266179);
+   pyMC_0
+11->SetBinContent(56,0.007280268);
+   pyMC_0
+11->SetBinContent(57,0.00706658);
+   pyMC_0
+11->SetBinContent(58,0.006601854);
+   pyMC_0
+11->SetBinContent(59,0.00650659);
+   pyMC_0
+11->SetBinContent(60,0.006139367);
+   pyMC_0
+11->SetBinContent(61,0.005448673);
+   pyMC_0
+11->SetBinContent(62,0.005894281);
+   pyMC_0
+11->SetBinContent(63,0.005398034);
+   pyMC_0
+11->SetBinContent(64,0.00530449);
+   pyMC_0
+11->SetBinContent(65,0.004617268);
+   pyMC_0
+11->SetBinContent(66,0.00452153);
+   pyMC_0
+11->SetBinContent(67,0.004177349);
+   pyMC_0
+11->SetBinContent(68,0.003825123);
+   pyMC_0
+11->SetBinContent(69,0.003896949);
+   pyMC_0
+11->SetBinContent(70,0.003402469);
+   pyMC_0
+11->SetBinContent(71,0.003256839);
+   pyMC_0
+11->SetBinContent(72,0.00311333);
+   pyMC_0
+11->SetBinContent(73,0.003006943);
+   pyMC_0
+11->SetBinContent(74,0.002878563);
+   pyMC_0
+11->SetBinContent(75,0.002759813);
+   pyMC_0
+11->SetBinContent(76,0.002795533);
+   pyMC_0
+11->SetBinContent(77,0.002268176);
+   pyMC_0
+11->SetBinContent(78,0.002224775);
+   pyMC_0
+11->SetBinContent(79,0.002102375);
+   pyMC_0
+11->SetBinContent(80,0.001846045);
+   pyMC_0
+11->SetBinError(1,0.0005499745);
+   pyMC_0
+11->SetBinError(2,0.0005763363);
+   pyMC_0
+11->SetBinError(3,0.0004945865);
+   pyMC_0
+11->SetBinError(4,0.0004253248);
+   pyMC_0
+11->SetBinError(5,0.000508252);
+   pyMC_0
+11->SetBinError(6,0.0004076751);
+   pyMC_0
+11->SetBinError(7,0.002987557);
+   pyMC_0
+11->SetBinError(8,0.002959485);
+   pyMC_0
+11->SetBinError(9,0.000689247);
+   pyMC_0
+11->SetBinError(10,0.0005085933);
+   pyMC_0
+11->SetBinError(11,0.0003821941);
+   pyMC_0
+11->SetBinError(12,0.0004419777);
+   pyMC_0
+11->SetBinError(13,0.0004809763);
+   pyMC_0
+11->SetBinError(14,0.0004932026);
+   pyMC_0
+11->SetBinError(15,0.0004716825);
+   pyMC_0
+11->SetBinError(16,0.0005321072);
+   pyMC_0
+11->SetBinError(17,0.0004898377);
+   pyMC_0
+11->SetBinError(18,0.0004856436);
+   pyMC_0
+11->SetBinError(19,0.0004355367);
+   pyMC_0
+11->SetBinError(20,0.0004027978);
+   pyMC_0
+11->SetBinError(21,0.000409416);
+   pyMC_0
+11->SetBinError(22,0.0003796034);
+   pyMC_0
+11->SetBinError(23,0.000411399);
+   pyMC_0
+11->SetBinError(24,0.0004748027);
+   pyMC_0
+11->SetBinError(25,0.0004624821);
+   pyMC_0
+11->SetBinError(26,0.0004701896);
+   pyMC_0
+11->SetBinError(27,0.0003897749);
+   pyMC_0
+11->SetBinError(28,0.0004684881);
+   pyMC_0
+11->SetBinError(29,0.0003892533);
+   pyMC_0
+11->SetBinError(30,0.0004969802);
+   pyMC_0
+11->SetBinError(31,0.0004444031);
+   pyMC_0
+11->SetBinError(32,0.0004647225);
+   pyMC_0
+11->SetBinError(33,0.0004491758);
+   pyMC_0
+11->SetBinError(34,0.0004255798);
+   pyMC_0
+11->SetBinError(35,0.0004405404);
+   pyMC_0
+11->SetBinError(36,0.0003841846);
+   pyMC_0
+11->SetBinError(37,0.0004500326);
+   pyMC_0
+11->SetBinError(38,0.0004481662);
+   pyMC_0
+11->SetBinError(39,0.000461053);
+   pyMC_0
+11->SetBinError(40,0.00051687);
+   pyMC_0
+11->SetBinError(41,0.0004262643);
+   pyMC_0
+11->SetBinError(42,0.0004716067);
+   pyMC_0
+11->SetBinError(43,0.0004153968);
+   pyMC_0
+11->SetBinError(44,0.002963628);
+   pyMC_0
+11->SetBinError(45,0.00039387);
+   pyMC_0
+11->SetBinError(46,0.00041126);
+   pyMC_0
+11->SetBinError(47,0.0004288863);
+   pyMC_0
+11->SetBinError(48,0.0006611633);
+   pyMC_0
+11->SetBinError(49,0.0004394479);
+   pyMC_0
+11->SetBinError(50,0.0003583086);
+   pyMC_0
+11->SetBinError(51,0.0007056879);
+   pyMC_0
+11->SetBinError(52,0.0003763154);
+   pyMC_0
+11->SetBinError(53,0.0003395118);
+   pyMC_0
+11->SetBinError(54,0.00031123);
+   pyMC_0
+11->SetBinError(55,0.0003852692);
+   pyMC_0
+11->SetBinError(56,0.0003092671);
+   pyMC_0
+11->SetBinError(57,0.000351086);
+   pyMC_0
+11->SetBinError(58,0.0003051847);
+   pyMC_0
+11->SetBinError(59,0.0002835553);
+   pyMC_0
+11->SetBinError(60,0.0002693093);
+   pyMC_0
+11->SetBinError(61,0.0001956593);
+   pyMC_0
+11->SetBinError(62,0.0003410167);
+   pyMC_0
+11->SetBinError(63,0.0003151027);
+   pyMC_0
+11->SetBinError(64,0.0003035134);
+   pyMC_0
+11->SetBinError(65,0.0002190414);
+   pyMC_0
+11->SetBinError(66,0.0002102722);
+   pyMC_0
+11->SetBinError(67,0.0002057915);
+   pyMC_0
+11->SetBinError(68,0.0002086053);
+   pyMC_0
+11->SetBinError(69,0.000242069);
+   pyMC_0
+11->SetBinError(70,0.0001664024);
+   pyMC_0
+11->SetBinError(71,0.0001561211);
+   pyMC_0
+11->SetBinError(72,0.0001613234);
+   pyMC_0
+11->SetBinError(73,0.0001991201);
+   pyMC_0
+11->SetBinError(74,0.0002294226);
+   pyMC_0
+11->SetBinError(75,0.0001723421);
+   pyMC_0
+11->SetBinError(76,0.0001972495);
+   pyMC_0
+11->SetBinError(77,8.864629e-05);
+   pyMC_0
+11->SetBinError(78,0.0001470367);
+   pyMC_0
+11->SetBinError(79,0.000145628);
+   pyMC_0
+11->SetBinError(80,7.691451e-05);
+   pyMC_0
+11->SetEntries(25671.18);
+
+   Int_t ci;      // for color index setting
+   TColor *color; // for color definition with alpha
+   ci = TColor::GetColor("#ff9900");
+   pyMC_0
+11->SetFillColor(ci);
+   pyMC_0
+11->SetLineStyle(0);
+   pyMC_0
+11->SetMarkerStyle(20);
+   pyMC_0
+11->SetMarkerSize(0.5);
+   pyMC_0
+11->GetXaxis()->SetTitle(" []");
+   pyMC_0
+11->GetXaxis()->SetLabelFont(42);
+   pyMC_0
+11->GetXaxis()->SetLabelSize(0.035);
+   pyMC_0
+11->GetXaxis()->SetTitleSize(0.035);
+   pyMC_0
+11->GetXaxis()->SetTitleFont(42);
+   pyMC_0
+11->GetYaxis()->SetLabelFont(42);
+   pyMC_0
+11->GetYaxis()->SetLabelOffset(0.007);
+   pyMC_0
+11->GetYaxis()->SetLabelSize(0.05);
+   pyMC_0
+11->GetYaxis()->SetTitleSize(0.06);
+   pyMC_0
+11->GetYaxis()->SetTitleFont(42);
+   pyMC_0
+11->GetZaxis()->SetLabelFont(42);
+   pyMC_0
+11->GetZaxis()->SetLabelOffset(0.007);
+   pyMC_0
+11->GetZaxis()->SetLabelSize(0.05);
+   pyMC_0
+11->GetZaxis()->SetTitleSize(0.06);
+   pyMC_0
+11->GetZaxis()->SetTitleFont(42);
+   pyMC_0
+11->Draw("PEsame");
+   Double_t xAxis12[81] = {55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, 117, 119, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 149, 151, 153, 155, 157, 159, 161, 163, 165, 167, 169, 171, 173, 175, 177, 179, 181, 183, 185, 187, 189, 191, 193, 195, 197, 199, 201, 203, 205, 207, 209, 211, 213, 215}; 
+   
+   TH1D *py_1
+12 = new TH1D("py_1
+12","histo ( Projection Y )",80, xAxis12);
+   py_1
+12->SetBinContent(1,0.01742463);
+   py_1
+12->SetBinContent(2,0.01720003);
+   py_1
+12->SetBinContent(3,0.01694787);
+   py_1
+12->SetBinContent(4,0.01668643);
+   py_1
+12->SetBinContent(5,0.01642095);
+   py_1
+12->SetBinContent(6,0.01615413);
+   py_1
+12->SetBinContent(7,0.01588982);
+   py_1
+12->SetBinContent(8,0.01563276);
+   py_1
+12->SetBinContent(9,0.01538533);
+   py_1
+12->SetBinContent(10,0.01514774);
+   py_1
+12->SetBinContent(11,0.01491855);
+   py_1
+12->SetBinContent(12,0.01469611);
+   py_1
+12->SetBinContent(13,0.01447922);
+   py_1
+12->SetBinContent(14,0.01426832);
+   py_1
+12->SetBinContent(15,0.01406463);
+   py_1
+12->SetBinContent(16,0.01386935);
+   py_1
+12->SetBinContent(17,0.01368424);
+   py_1
+12->SetBinContent(18,0.01350991);
+   py_1
+12->SetBinContent(19,0.01334647);
+   py_1
+12->SetBinContent(20,0.01319238);
+   py_1
+12->SetBinContent(21,0.013046);
+   py_1
+12->SetBinContent(22,0.0129046);
+   py_1
+12->SetBinContent(23,0.01276545);
+   py_1
+12->SetBinContent(24,0.01262605);
+   py_1
+12->SetBinContent(25,0.01248425);
+   py_1
+12->SetBinContent(26,0.01233867);
+   py_1
+12->SetBinContent(27,0.01218824);
+   py_1
+12->SetBinContent(28,0.01203225);
+   py_1
+12->SetBinContent(29,0.01187032);
+   py_1
+12->SetBinContent(30,0.01170165);
+   py_1
+12->SetBinContent(31,0.01152597);
+   py_1
+12->SetBinContent(32,0.01134233);
+   py_1
+12->SetBinContent(33,0.0111497);
+   py_1
+12->SetBinContent(34,0.0109474);
+   py_1
+12->SetBinContent(35,0.01073457);
+   py_1
+12->SetBinContent(36,0.01051059);
+   py_1
+12->SetBinContent(37,0.0102749);
+   py_1
+12->SetBinContent(38,0.01002772);
+   py_1
+12->SetBinContent(39,0.009768743);
+   py_1
+12->SetBinContent(40,0.009499003);
+   py_1
+12->SetBinContent(41,0.009219104);
+   py_1
+12->SetBinContent(42,0.008930168);
+   py_1
+12->SetBinContent(43,0.008633436);
+   py_1
+12->SetBinContent(44,0.008330314);
+   py_1
+12->SetBinContent(45,0.008022444);
+   py_1
+12->SetBinContent(46,0.007711351);
+   py_1
+12->SetBinContent(47,0.007398551);
+   py_1
+12->SetBinContent(48,0.007085637);
+   py_1
+12->SetBinContent(49,0.006774201);
+   py_1
+12->SetBinContent(50,0.006465625);
+   py_1
+12->SetBinContent(51,0.006161176);
+   py_1
+12->SetBinContent(52,0.005862036);
+   py_1
+12->SetBinContent(53,0.005569361);
+   py_1
+12->SetBinContent(54,0.005284075);
+   py_1
+12->SetBinContent(55,0.005006836);
+   py_1
+12->SetBinContent(56,0.004738219);
+   py_1
+12->SetBinContent(57,0.004478762);
+   py_1
+12->SetBinContent(58,0.004228746);
+   py_1
+12->SetBinContent(59,0.003988228);
+   py_1
+12->SetBinContent(60,0.003757371);
+   py_1
+12->SetBinContent(61,0.003536025);
+   py_1
+12->SetBinContent(62,0.003324152);
+   py_1
+12->SetBinContent(63,0.003121569);
+   py_1
+12->SetBinContent(64,0.002928106);
+   py_1
+12->SetBinContent(65,0.002743502);
+   py_1
+12->SetBinContent(66,0.002567619);
+   py_1
+12->SetBinContent(67,0.002400152);
+   py_1
+12->SetBinContent(68,0.002241016);
+   py_1
+12->SetBinContent(69,0.002089947);
+   py_1
+12->SetBinContent(70,0.001946693);
+   py_1
+12->SetBinContent(71,0.001811146);
+   py_1
+12->SetBinContent(72,0.001683049);
+   py_1
+12->SetBinContent(73,0.001562227);
+   py_1
+12->SetBinContent(74,0.001448474);
+   py_1
+12->SetBinContent(75,0.00134153);
+   py_1
+12->SetBinContent(76,0.001241224);
+   py_1
+12->SetBinContent(77,0.001147224);
+   py_1
+12->SetBinContent(78,0.00105937);
+   py_1
+12->SetBinContent(79,0.0009772901);
+   py_1
+12->SetBinContent(80,0.0009007965);
+   py_1
+12->SetEntries(1);
+   py_1
+12->SetLineColor(99);
+   py_1
+12->SetLineStyle(0);
+   py_1
+12->SetMarkerColor(99);
+   py_1
+12->GetXaxis()->SetLabelFont(42);
+   py_1
+12->GetXaxis()->SetLabelSize(0.035);
+   py_1
+12->GetXaxis()->SetTitleSize(0.035);
+   py_1
+12->GetXaxis()->SetTitleFont(42);
+   py_1
+12->GetYaxis()->SetLabelFont(42);
+   py_1
+12->GetYaxis()->SetLabelOffset(0.007);
+   py_1
+12->GetYaxis()->SetLabelSize(0.05);
+   py_1
+12->GetYaxis()->SetTitleSize(0.06);
+   py_1
+12->GetYaxis()->SetTitleFont(42);
+   py_1
+12->GetZaxis()->SetLabelFont(42);
+   py_1
+12->GetZaxis()->SetLabelOffset(0.007);
+   py_1
+12->GetZaxis()->SetLabelSize(0.05);
+   py_1
+12->GetZaxis()->SetTitleSize(0.06);
+   py_1
+12->GetZaxis()->SetTitleFont(42);
+   py_1
+12->Draw("HISTsame");
+   Double_t xAxis13[81] = {55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, 117, 119, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 149, 151, 153, 155, 157, 159, 161, 163, 165, 167, 169, 171, 173, 175, 177, 179, 181, 183, 185, 187, 189, 191, 193, 195, 197, 199, 201, 203, 205, 207, 209, 211, 213, 215}; 
+   
+   TH1D *pyMC_1
+13 = new TH1D("pyMC_1
+13"," ( Projection Y )",80, xAxis13);
+   pyMC_1
+13->SetBinContent(1,0.01760098);
+   pyMC_1
+13->SetBinContent(2,0.01718663);
+   pyMC_1
+13->SetBinContent(3,0.01628983);
+   pyMC_1
+13->SetBinContent(4,0.01544668);
+   pyMC_1
+13->SetBinContent(5,0.01627038);
+   pyMC_1
+13->SetBinContent(6,0.01509154);
+   pyMC_1
+13->SetBinContent(7,0.01585458);
+   pyMC_1
+13->SetBinContent(8,0.01484099);
+   pyMC_1
+13->SetBinContent(9,0.01433943);
+   pyMC_1
+13->SetBinContent(10,0.01476087);
+   pyMC_1
+13->SetBinContent(11,0.01356127);
+   pyMC_1
+13->SetBinContent(12,0.01416904);
+   pyMC_1
+13->SetBinContent(13,0.01389093);
+   pyMC_1
+13->SetBinContent(14,0.01507506);
+   pyMC_1
+13->SetBinContent(15,0.01417408);
+   pyMC_1
+13->SetBinContent(16,0.01441917);
+   pyMC_1
+13->SetBinContent(17,0.01386952);
+   pyMC_1
+13->SetBinContent(18,0.01344838);
+   pyMC_1
+13->SetBinContent(19,0.01312894);
+   pyMC_1
+13->SetBinContent(20,0.01250855);
+   pyMC_1
+13->SetBinContent(21,0.0125185);
+   pyMC_1
+13->SetBinContent(22,0.01219791);
+   pyMC_1
+13->SetBinContent(23,0.01276097);
+   pyMC_1
+13->SetBinContent(24,0.012827);
+   pyMC_1
+13->SetBinContent(25,0.01214341);
+   pyMC_1
+13->SetBinContent(26,0.01250577);
+   pyMC_1
+13->SetBinContent(27,0.01195431);
+   pyMC_1
+13->SetBinContent(28,0.01219187);
+   pyMC_1
+13->SetBinContent(29,0.01146392);
+   pyMC_1
+13->SetBinContent(30,0.01226396);
+   pyMC_1
+13->SetBinContent(31,0.01167258);
+   pyMC_1
+13->SetBinContent(32,0.0116808);
+   pyMC_1
+13->SetBinContent(33,0.0107505);
+   pyMC_1
+13->SetBinContent(34,0.01084527);
+   pyMC_1
+13->SetBinContent(35,0.01070528);
+   pyMC_1
+13->SetBinContent(36,0.009909798);
+   pyMC_1
+13->SetBinContent(37,0.01003667);
+   pyMC_1
+13->SetBinContent(38,0.009858379);
+   pyMC_1
+13->SetBinContent(39,0.009766123);
+   pyMC_1
+13->SetBinContent(40,0.01020059);
+   pyMC_1
+13->SetBinContent(41,0.009150954);
+   pyMC_1
+13->SetBinContent(42,0.009074674);
+   pyMC_1
+13->SetBinContent(43,0.00877579);
+   pyMC_1
+13->SetBinContent(44,0.008284496);
+   pyMC_1
+13->SetBinContent(45,0.008237653);
+   pyMC_1
+13->SetBinContent(46,0.007812549);
+   pyMC_1
+13->SetBinContent(47,0.007418571);
+   pyMC_1
+13->SetBinContent(48,0.006915522);
+   pyMC_1
+13->SetBinContent(49,0.00719042);
+   pyMC_1
+13->SetBinContent(50,0.006600432);
+   pyMC_1
+13->SetBinContent(51,0.006710603);
+   pyMC_1
+13->SetBinContent(52,0.006057098);
+   pyMC_1
+13->SetBinContent(53,0.005461066);
+   pyMC_1
+13->SetBinContent(54,0.005234194);
+   pyMC_1
+13->SetBinContent(55,0.005590932);
+   pyMC_1
+13->SetBinContent(56,0.00478017);
+   pyMC_1
+13->SetBinContent(57,0.00466827);
+   pyMC_1
+13->SetBinContent(58,0.004306876);
+   pyMC_1
+13->SetBinContent(59,0.004195023);
+   pyMC_1
+13->SetBinContent(60,0.00395014);
+   pyMC_1
+13->SetBinContent(61,0.003346013);
+   pyMC_1
+13->SetBinContent(62,0.003757126);
+   pyMC_1
+13->SetBinContent(63,0.003366646);
+   pyMC_1
+13->SetBinContent(64,0.003283039);
+   pyMC_1
+13->SetBinContent(65,0.002792194);
+   pyMC_1
+13->SetBinContent(66,0.002713743);
+   pyMC_1
+13->SetBinContent(67,0.002465248);
+   pyMC_1
+13->SetBinContent(68,0.002117755);
+   pyMC_1
+13->SetBinContent(69,0.002239402);
+   pyMC_1
+13->SetBinContent(70,0.001912725);
+   pyMC_1
+13->SetBinContent(71,0.001726911);
+   pyMC_1
+13->SetBinContent(72,0.001653059);
+   pyMC_1
+13->SetBinContent(73,0.00163077);
+   pyMC_1
+13->SetBinContent(74,0.001522071);
+   pyMC_1
+13->SetBinContent(75,0.001435722);
+   pyMC_1
+13->SetBinContent(76,0.001415332);
+   pyMC_1
+13->SetBinContent(77,0.001012697);
+   pyMC_1
+13->SetBinContent(78,0.001065428);
+   pyMC_1
+13->SetBinContent(79,0.0009715938);
+   pyMC_1
+13->SetBinContent(80,0.0007925056);
+   pyMC_1
+13->SetBinError(1,0.0004390874);
+   pyMC_1
+13->SetBinError(2,0.0004600817);
+   pyMC_1
+13->SetBinError(3,0.0003938291);
+   pyMC_1
+13->SetBinError(4,0.0003388148);
+   pyMC_1
+13->SetBinError(5,0.000405373);
+   pyMC_1
+13->SetBinError(6,0.0003247882);
+   pyMC_1
+13->SetBinError(7,0.000389638);
+   pyMC_1
+13->SetBinError(8,0.0003533582);
+   pyMC_1
+13->SetBinError(9,0.0003181408);
+   pyMC_1
+13->SetBinError(10,0.0004055884);
+   pyMC_1
+13->SetBinError(11,0.0003042602);
+   pyMC_1
+13->SetBinError(12,0.0003525448);
+   pyMC_1
+13->SetBinError(13,0.0003832953);
+   pyMC_1
+13->SetBinError(14,0.0003934497);
+   pyMC_1
+13->SetBinError(15,0.000376376);
+   pyMC_1
+13->SetBinError(16,0.0004248498);
+   pyMC_1
+13->SetBinError(17,0.0003908232);
+   pyMC_1
+13->SetBinError(18,0.0003873226);
+   pyMC_1
+13->SetBinError(19,0.0003474413);
+   pyMC_1
+13->SetBinError(20,0.0003208411);
+   pyMC_1
+13->SetBinError(21,0.0003263707);
+   pyMC_1
+13->SetBinError(22,0.0003022759);
+   pyMC_1
+13->SetBinError(23,0.0003277182);
+   pyMC_1
+13->SetBinError(24,0.0003789481);
+   pyMC_1
+13->SetBinError(25,0.0003685807);
+   pyMC_1
+13->SetBinError(26,0.000374783);
+   pyMC_1
+13->SetBinError(27,0.0003106033);
+   pyMC_1
+13->SetBinError(28,0.000373781);
+   pyMC_1
+13->SetBinError(29,0.0003103776);
+   pyMC_1
+13->SetBinError(30,0.0003968729);
+   pyMC_1
+13->SetBinError(31,0.0003545392);
+   pyMC_1
+13->SetBinError(32,0.0003708564);
+   pyMC_1
+13->SetBinError(33,0.0003581691);
+   pyMC_1
+13->SetBinError(34,0.0003393134);
+   pyMC_1
+13->SetBinError(35,0.0003512762);
+   pyMC_1
+13->SetBinError(36,0.0003063833);
+   pyMC_1
+13->SetBinError(37,0.0003590015);
+   pyMC_1
+13->SetBinError(38,0.0003578322);
+   pyMC_1
+13->SetBinError(39,0.0003678467);
+   pyMC_1
+13->SetBinError(40,0.0004120784);
+   pyMC_1
+13->SetBinError(41,0.0003397069);
+   pyMC_1
+13->SetBinError(42,0.0003757848);
+   pyMC_1
+13->SetBinError(43,0.0003307527);
+   pyMC_1
+13->SetBinError(44,0.0003448486);
+   pyMC_1
+13->SetBinError(45,0.000313881);
+   pyMC_1
+13->SetBinError(46,0.0003127719);
+   pyMC_1
+13->SetBinError(47,0.0003420443);
+   pyMC_1
+13->SetBinError(48,0.0002959969);
+   pyMC_1
+13->SetBinError(49,0.0003503478);
+   pyMC_1
+13->SetBinError(50,0.0002849538);
+   pyMC_1
+13->SetBinError(51,0.0003539858);
+   pyMC_1
+13->SetBinError(52,0.000299592);
+   pyMC_1
+13->SetBinError(53,0.0002695006);
+   pyMC_1
+13->SetBinError(54,0.0002467904);
+   pyMC_1
+13->SetBinError(55,0.0003065712);
+   pyMC_1
+13->SetBinError(56,0.0002455066);
+   pyMC_1
+13->SetBinError(57,0.0002794744);
+   pyMC_1
+13->SetBinError(58,0.0002424742);
+   pyMC_1
+13->SetBinError(59,0.0002248299);
+   pyMC_1
+13->SetBinError(60,0.0002135449);
+   pyMC_1
+13->SetBinError(61,0.000152614);
+   pyMC_1
+13->SetBinError(62,0.0002710369);
+   pyMC_1
+13->SetBinError(63,0.0002502931);
+   pyMC_1
+13->SetBinError(64,0.0002408711);
+   pyMC_1
+13->SetBinError(65,0.0001731467);
+   pyMC_1
+13->SetBinError(66,0.0001660229);
+   pyMC_1
+13->SetBinError(67,0.0001623154);
+   pyMC_1
+13->SetBinError(68,0.0001330397);
+   pyMC_1
+13->SetBinError(69,0.0001910953);
+   pyMC_1
+13->SetBinError(70,0.0001308968);
+   pyMC_1
+13->SetBinError(71,0.0001208812);
+   pyMC_1
+13->SetBinError(72,0.0001259582);
+   pyMC_1
+13->SetBinError(73,0.0001573472);
+   pyMC_1
+13->SetBinError(74,0.0001814352);
+   pyMC_1
+13->SetBinError(75,0.0001345317);
+   pyMC_1
+13->SetBinError(76,0.0001544386);
+   pyMC_1
+13->SetBinError(77,6.338058e-05);
+   pyMC_1
+13->SetBinError(78,0.0001151939);
+   pyMC_1
+13->SetBinError(79,0.0001133978);
+   pyMC_1
+13->SetBinError(80,5.586156e-05);
+   pyMC_1
+13->SetEntries(62741.86);
+
+   ci = TColor::GetColor("#ff9900");
+   pyMC_1
+13->SetFillColor(ci);
+   pyMC_1
+13->SetLineColor(99);
+   pyMC_1
+13->SetLineStyle(0);
+   pyMC_1
+13->SetMarkerColor(99);
+   pyMC_1
+13->SetMarkerStyle(20);
+   pyMC_1
+13->SetMarkerSize(0.5);
+   pyMC_1
+13->GetXaxis()->SetTitle(" []");
+   pyMC_1
+13->GetXaxis()->SetLabelFont(42);
+   pyMC_1
+13->GetXaxis()->SetLabelSize(0.035);
+   pyMC_1
+13->GetXaxis()->SetTitleSize(0.035);
+   pyMC_1
+13->GetXaxis()->SetTitleFont(42);
+   pyMC_1
+13->GetYaxis()->SetLabelFont(42);
+   pyMC_1
+13->GetYaxis()->SetLabelOffset(0.007);
+   pyMC_1
+13->GetYaxis()->SetLabelSize(0.05);
+   pyMC_1
+13->GetYaxis()->SetTitleSize(0.06);
+   pyMC_1
+13->GetYaxis()->SetTitleFont(42);
+   pyMC_1
+13->GetZaxis()->SetLabelFont(42);
+   pyMC_1
+13->GetZaxis()->SetLabelOffset(0.007);
+   pyMC_1
+13->GetZaxis()->SetLabelSize(0.05);
+   pyMC_1
+13->GetZaxis()->SetTitleSize(0.06);
+   pyMC_1
+13->GetZaxis()->SetTitleFont(42);
+   pyMC_1
+13->Draw("PEsame");
+   Double_t xAxis14[81] = {55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, 117, 119, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 149, 151, 153, 155, 157, 159, 161, 163, 165, 167, 169, 171, 173, 175, 177, 179, 181, 183, 185, 187, 189, 191, 193, 195, 197, 199, 201, 203, 205, 207, 209, 211, 213, 215}; 
+   
+   TH1D *py_2
+14 = new TH1D("py_2
+14","histo ( Projection Y )",80, xAxis14);
+   py_2
+14->SetBinContent(1,0.006852689);
+   py_2
+14->SetBinContent(2,0.006791409);
+   py_2
+14->SetBinContent(3,0.006714331);
+   py_2
+14->SetBinContent(4,0.006625078);
+   py_2
+14->SetBinContent(5,0.006524502);
+   py_2
+14->SetBinContent(6,0.006414137);
+   py_2
+14->SetBinContent(7,0.006296608);
+   py_2
+14->SetBinContent(8,0.006175129);
+   py_2
+14->SetBinContent(9,0.00605289);
+   py_2
+14->SetBinContent(10,0.00593263);
+   py_2
+14->SetBinContent(11,0.005816644);
+   py_2
+14->SetBinContent(12,0.005706295);
+   py_2
+14->SetBinContent(13,0.005602388);
+   py_2
+14->SetBinContent(14,0.005505127);
+   py_2
+14->SetBinContent(15,0.005414517);
+   py_2
+14->SetBinContent(16,0.005330324);
+   py_2
+14->SetBinContent(17,0.005252373);
+   py_2
+14->SetBinContent(18,0.005180057);
+   py_2
+14->SetBinContent(19,0.005112785);
+   py_2
+14->SetBinContent(20,0.005049632);
+   py_2
+14->SetBinContent(21,0.004989778);
+   py_2
+14->SetBinContent(22,0.004932288);
+   py_2
+14->SetBinContent(23,0.004876364);
+   py_2
+14->SetBinContent(24,0.004821456);
+   py_2
+14->SetBinContent(25,0.00476729);
+   py_2
+14->SetBinContent(26,0.004713846);
+   py_2
+14->SetBinContent(27,0.00466147);
+   py_2
+14->SetBinContent(28,0.004610431);
+   py_2
+14->SetBinContent(29,0.004561167);
+   py_2
+14->SetBinContent(30,0.004513996);
+   py_2
+14->SetBinContent(31,0.004469127);
+   py_2
+14->SetBinContent(32,0.004426517);
+   py_2
+14->SetBinContent(33,0.004386071);
+   py_2
+14->SetBinContent(34,0.004347526);
+   py_2
+14->SetBinContent(35,0.004310501);
+   py_2
+14->SetBinContent(36,0.004274681);
+   py_2
+14->SetBinContent(37,0.004239598);
+   py_2
+14->SetBinContent(38,0.004204981);
+   py_2
+14->SetBinContent(39,0.004170463);
+   py_2
+14->SetBinContent(40,0.004135766);
+   py_2
+14->SetBinContent(41,0.004100715);
+   py_2
+14->SetBinContent(42,0.004065138);
+   py_2
+14->SetBinContent(43,0.00402894);
+   py_2
+14->SetBinContent(44,0.003992037);
+   py_2
+14->SetBinContent(45,0.003954375);
+   py_2
+14->SetBinContent(46,0.003915939);
+   py_2
+14->SetBinContent(47,0.003876728);
+   py_2
+14->SetBinContent(48,0.003836749);
+   py_2
+14->SetBinContent(49,0.003795963);
+   py_2
+14->SetBinContent(50,0.003754385);
+   py_2
+14->SetBinContent(51,0.003712049);
+   py_2
+14->SetBinContent(52,0.003668866);
+   py_2
+14->SetBinContent(53,0.003624847);
+   py_2
+14->SetBinContent(54,0.003579974);
+   py_2
+14->SetBinContent(55,0.003534153);
+   py_2
+14->SetBinContent(56,0.003487362);
+   py_2
+14->SetBinContent(57,0.003439549);
+   py_2
+14->SetBinContent(58,0.003390646);
+   py_2
+14->SetBinContent(59,0.003340593);
+   py_2
+14->SetBinContent(60,0.003289321);
+   py_2
+14->SetBinContent(61,0.00323683);
+   py_2
+14->SetBinContent(62,0.003183085);
+   py_2
+14->SetBinContent(63,0.003128071);
+   py_2
+14->SetBinContent(64,0.003071812);
+   py_2
+14->SetBinContent(65,0.003014297);
+   py_2
+14->SetBinContent(66,0.002955607);
+   py_2
+14->SetBinContent(67,0.002895744);
+   py_2
+14->SetBinContent(68,0.002834807);
+   py_2
+14->SetBinContent(69,0.002772814);
+   py_2
+14->SetBinContent(70,0.002709879);
+   py_2
+14->SetBinContent(71,0.002646066);
+   py_2
+14->SetBinContent(72,0.002581454);
+   py_2
+14->SetBinContent(73,0.002516198);
+   py_2
+14->SetBinContent(74,0.002450361);
+   py_2
+14->SetBinContent(75,0.002384062);
+   py_2
+14->SetBinContent(76,0.002317429);
+   py_2
+14->SetBinContent(77,0.002250601);
+   py_2
+14->SetBinContent(78,0.002183726);
+   py_2
+14->SetBinContent(79,0.002116881);
+   py_2
+14->SetBinContent(80,0.002050245);
+   py_2
+14->SetLineColor(9);
+   py_2
+14->SetLineStyle(0);
+   py_2
+14->SetMarkerColor(9);
+   py_2
+14->GetXaxis()->SetLabelFont(42);
+   py_2
+14->GetXaxis()->SetLabelSize(0.035);
+   py_2
+14->GetXaxis()->SetTitleSize(0.035);
+   py_2
+14->GetXaxis()->SetTitleFont(42);
+   py_2
+14->GetYaxis()->SetLabelFont(42);
+   py_2
+14->GetYaxis()->SetLabelOffset(0.007);
+   py_2
+14->GetYaxis()->SetLabelSize(0.05);
+   py_2
+14->GetYaxis()->SetTitleSize(0.06);
+   py_2
+14->GetYaxis()->SetTitleFont(42);
+   py_2
+14->GetZaxis()->SetLabelFont(42);
+   py_2
+14->GetZaxis()->SetLabelOffset(0.007);
+   py_2
+14->GetZaxis()->SetLabelSize(0.05);
+   py_2
+14->GetZaxis()->SetTitleSize(0.06);
+   py_2
+14->GetZaxis()->SetTitleFont(42);
+   py_2
+14->Draw("HISTsame");
+   Double_t xAxis15[81] = {55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, 117, 119, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 149, 151, 153, 155, 157, 159, 161, 163, 165, 167, 169, 171, 173, 175, 177, 179, 181, 183, 185, 187, 189, 191, 193, 195, 197, 199, 201, 203, 205, 207, 209, 211, 213, 215}; 
+   
+   TH1D *pyMC_2
+15 = new TH1D("pyMC_2
+15"," ( Projection Y )",80, xAxis15);
+   pyMC_2
+15->SetBinContent(1,0.006283873);
+   pyMC_2
+15->SetBinContent(2,0.006275901);
+   pyMC_2
+15->SetBinContent(3,0.006253778);
+   pyMC_2
+15->SetBinContent(4,0.005818276);
+   pyMC_2
+15->SetBinContent(5,0.005919234);
+   pyMC_2
+15->SetBinContent(6,0.005521417);
+   pyMC_2
+15->SetBinContent(7,0.01168103);
+   pyMC_2
+15->SetBinContent(8,0.01150469);
+   pyMC_2
+15->SetBinContent(9,0.006709365);
+   pyMC_2
+15->SetBinContent(10,0.005340777);
+   pyMC_2
+15->SetBinContent(11,0.005182758);
+   pyMC_2
+15->SetBinContent(12,0.00524961);
+   pyMC_2
+15->SetBinContent(13,0.005035923);
+   pyMC_2
+15->SetBinContent(14,0.005018128);
+   pyMC_2
+15->SetBinContent(15,0.004880803);
+   pyMC_2
+15->SetBinContent(16,0.004839576);
+   pyMC_2
+15->SetBinContent(17,0.004668645);
+   pyMC_2
+15->SetBinContent(18,0.004671818);
+   pyMC_2
+15->SetBinContent(19,0.004552159);
+   pyMC_2
+15->SetBinContent(20,0.004567794);
+   pyMC_2
+15->SetBinContent(21,0.004347993);
+   pyMC_2
+15->SetBinContent(22,0.004429507);
+   pyMC_2
+15->SetBinContent(23,0.004505143);
+   pyMC_2
+15->SetBinContent(24,0.004446742);
+   pyMC_2
+15->SetBinContent(25,0.0044103);
+   pyMC_2
+15->SetBinContent(26,0.004438918);
+   pyMC_2
+15->SetBinContent(27,0.004339799);
+   pyMC_2
+15->SetBinContent(28,0.004024665);
+   pyMC_2
+15->SetBinContent(29,0.004238118);
+   pyMC_2
+15->SetBinContent(30,0.004244351);
+   pyMC_2
+15->SetBinContent(31,0.004049606);
+   pyMC_2
+15->SetBinContent(32,0.00426719);
+   pyMC_2
+15->SetBinContent(33,0.004008861);
+   pyMC_2
+15->SetBinContent(34,0.004115297);
+   pyMC_2
+15->SetBinContent(35,0.003946421);
+   pyMC_2
+15->SetBinContent(36,0.004158665);
+   pyMC_2
+15->SetBinContent(37,0.003965706);
+   pyMC_2
+15->SetBinContent(38,0.003889289);
+   pyMC_2
+15->SetBinContent(39,0.003804347);
+   pyMC_2
+15->SetBinContent(40,0.004061531);
+   pyMC_2
+15->SetBinContent(41,0.003786427);
+   pyMC_2
+15->SetBinContent(42,0.003863225);
+   pyMC_2
+15->SetBinContent(43,0.003833994);
+   pyMC_2
+15->SetBinContent(44,0.009582451);
+   pyMC_2
+15->SetBinContent(45,0.003682561);
+   pyMC_2
+15->SetBinContent(46,0.004124488);
+   pyMC_2
+15->SetBinContent(47,0.003466591);
+   pyMC_2
+15->SetBinContent(48,0.0047177);
+   pyMC_2
+15->SetBinContent(49,0.003661009);
+   pyMC_2
+15->SetBinContent(50,0.003639648);
+   pyMC_2
+15->SetBinContent(51,0.004751136);
+   pyMC_2
+15->SetBinContent(52,0.003576076);
+   pyMC_2
+15->SetBinContent(53,0.003506393);
+   pyMC_2
+15->SetBinContent(54,0.003397145);
+   pyMC_2
+15->SetBinContent(55,0.003513951);
+   pyMC_2
+15->SetBinContent(56,0.003364353);
+   pyMC_2
+15->SetBinContent(57,0.003273302);
+   pyMC_2
+15->SetBinContent(58,0.003208496);
+   pyMC_2
+15->SetBinContent(59,0.003351552);
+   pyMC_2
+15->SetBinContent(60,0.003221274);
+   pyMC_2
+15->SetBinContent(61,0.003382138);
+   pyMC_2
+15->SetBinContent(62,0.003247081);
+   pyMC_2
+15->SetBinContent(63,0.003024908);
+   pyMC_2
+15->SetBinContent(64,0.003154124);
+   pyMC_2
+15->SetBinContent(65,0.002970726);
+   pyMC_2
+15->SetBinContent(66,0.002918115);
+   pyMC_2
+15->SetBinContent(67,0.00271125);
+   pyMC_2
+15->SetBinContent(68,0.002820134);
+   pyMC_2
+15->SetBinContent(69,0.002819221);
+   pyMC_2
+15->SetBinContent(70,0.002619491);
+   pyMC_2
+15->SetBinContent(71,0.002801928);
+   pyMC_2
+15->SetBinContent(72,0.002598484);
+   pyMC_2
+15->SetBinContent(73,0.002416691);
+   pyMC_2
+15->SetBinContent(74,0.002272881);
+   pyMC_2
+15->SetBinContent(75,0.002326194);
+   pyMC_2
+15->SetBinContent(76,0.002474795);
+   pyMC_2
+15->SetBinContent(77,0.00231493);
+   pyMC_2
+15->SetBinContent(78,0.002123879);
+   pyMC_2
+15->SetBinContent(79,0.002206659);
+   pyMC_2
+15->SetBinContent(80,0.002025523);
+   pyMC_2
+15->SetBinError(1,0.0001079077);
+   pyMC_2
+15->SetBinError(2,0.00011353);
+   pyMC_2
+15->SetBinError(3,0.0001203071);
+   pyMC_2
+15->SetBinError(4,0.0001072983);
+   pyMC_2
+15->SetBinError(5,0.0001105143);
+   pyMC_2
+15->SetBinError(6,0.0001028088);
+   pyMC_2
+15->SetBinError(7,0.005895568);
+   pyMC_2
+15->SetBinError(8,0.005853048);
+   pyMC_2
+15->SetBinError(9,0.001128238);
+   pyMC_2
+15->SetBinError(10,0.0001075343);
+   pyMC_2
+15->SetBinError(11,0.0001002823);
+   pyMC_2
+15->SetBinError(12,0.000106494);
+   pyMC_2
+15->SetBinError(13,0.0001076319);
+   pyMC_2
+15->SetBinError(14,0.0001068807);
+   pyMC_2
+15->SetBinError(15,0.0001070189);
+   pyMC_2
+15->SetBinError(16,0.0001050202);
+   pyMC_2
+15->SetBinError(17,0.0001007965);
+   pyMC_2
+15->SetBinError(18,0.000107863);
+   pyMC_2
+15->SetBinError(19,9.945104e-05);
+   pyMC_2
+15->SetBinError(20,0.0001008889);
+   pyMC_2
+15->SetBinError(21,9.53376e-05);
+   pyMC_2
+15->SetBinError(22,9.737711e-05);
+   pyMC_2
+15->SetBinError(23,0.0001107598);
+   pyMC_2
+15->SetBinError(24,0.0001040302);
+   pyMC_2
+15->SetBinError(25,0.0001114433);
+   pyMC_2
+15->SetBinError(26,0.0001167211);
+   pyMC_2
+15->SetBinError(27,0.0001053953);
+   pyMC_2
+15->SetBinError(28,8.663559e-05);
+   pyMC_2
+15->SetBinError(29,0.0001026918);
+   pyMC_2
+15->SetBinError(30,0.0001061395);
+   pyMC_2
+15->SetBinError(31,0.0001017876);
+   pyMC_2
+15->SetBinError(32,0.0001098579);
+   pyMC_2
+15->SetBinError(33,9.486974e-05);
+   pyMC_2
+15->SetBinError(34,0.0001076887);
+   pyMC_2
+15->SetBinError(35,0.000101406);
+   pyMC_2
+15->SetBinError(36,0.0001111988);
+   pyMC_2
+15->SetBinError(37,0.0001072331);
+   pyMC_2
+15->SetBinError(38,0.0001001909);
+   pyMC_2
+15->SetBinError(39,9.984376e-05);
+   pyMC_2
+15->SetBinError(40,0.0001161361);
+   pyMC_2
+15->SetBinError(41,9.887189e-05);
+   pyMC_2
+15->SetBinError(42,0.0001082823);
+   pyMC_2
+15->SetBinError(43,0.0001113064);
+   pyMC_2
+15->SetBinError(44,0.005864694);
+   pyMC_2
+15->SetBinError(45,0.0001039341);
+   pyMC_2
+15->SetBinError(46,0.0002660431);
+   pyMC_2
+15->SetBinError(47,9.149902e-05);
+   pyMC_2
+15->SetBinError(48,0.001098634);
+   pyMC_2
+15->SetBinError(49,0.0001031897);
+   pyMC_2
+15->SetBinError(50,0.0001052809);
+   pyMC_2
+15->SetBinError(51,0.001102073);
+   pyMC_2
+15->SetBinError(52,0.000109149);
+   pyMC_2
+15->SetBinError(53,0.0001116018);
+   pyMC_2
+15->SetBinError(54,0.0001047347);
+   pyMC_2
+15->SetBinError(55,0.0001149667);
+   pyMC_2
+15->SetBinError(56,0.000105583);
+   pyMC_2
+15->SetBinError(57,0.0001023445);
+   pyMC_2
+15->SetBinError(58,0.000100937);
+   pyMC_2
+15->SetBinError(59,0.0001086532);
+   pyMC_2
+15->SetBinError(60,0.0001047287);
+   pyMC_2
+15->SetBinError(61,0.0001171443);
+   pyMC_2
+15->SetBinError(62,0.000114437);
+   pyMC_2
+15->SetBinError(63,9.850516e-05);
+   pyMC_2
+15->SetBinError(64,0.00010805);
+   pyMC_2
+15->SetBinError(65,0.0001003736);
+   pyMC_2
+15->SetBinError(66,9.680325e-05);
+   pyMC_2
+15->SetBinError(67,9.174824e-05);
+   pyMC_2
+15->SetBinError(68,0.0002568104);
+   pyMC_2
+15->SetBinError(69,0.0001085349);
+   pyMC_2
+15->SetBinError(70,9.509157e-05);
+   pyMC_2
+15->SetBinError(71,0.0001084722);
+   pyMC_2
+15->SetBinError(72,9.519835e-05);
+   pyMC_2
+15->SetBinError(73,8.788062e-05);
+   pyMC_2
+15->SetBinError(74,8.43007e-05);
+   pyMC_2
+15->SetBinError(75,9.722793e-05);
+   pyMC_2
+15->SetBinError(76,0.0001006852);
+   pyMC_2
+15->SetBinError(77,9.175198e-05);
+   pyMC_2
+15->SetBinError(78,7.822717e-05);
+   pyMC_2
+15->SetBinError(79,9.344724e-05);
+   pyMC_2
+15->SetBinError(80,8.328579e-05);
+   pyMC_2
+15->SetEntries(1047.801);
+
+   ci = TColor::GetColor("#ff9900");
+   pyMC_2
+15->SetFillColor(ci);
+   pyMC_2
+15->SetLineColor(9);
+   pyMC_2
+15->SetLineStyle(0);
+   pyMC_2
+15->SetMarkerColor(9);
+   pyMC_2
+15->SetMarkerStyle(20);
+   pyMC_2
+15->SetMarkerSize(0.5);
+   pyMC_2
+15->GetXaxis()->SetTitle(" []");
+   pyMC_2
+15->GetXaxis()->SetLabelFont(42);
+   pyMC_2
+15->GetXaxis()->SetLabelSize(0.035);
+   pyMC_2
+15->GetXaxis()->SetTitleSize(0.035);
+   pyMC_2
+15->GetXaxis()->SetTitleFont(42);
+   pyMC_2
+15->GetYaxis()->SetLabelFont(42);
+   pyMC_2
+15->GetYaxis()->SetLabelOffset(0.007);
+   pyMC_2
+15->GetYaxis()->SetLabelSize(0.05);
+   pyMC_2
+15->GetYaxis()->SetTitleSize(0.06);
+   pyMC_2
+15->GetYaxis()->SetTitleFont(42);
+   pyMC_2
+15->GetZaxis()->SetLabelFont(42);
+   pyMC_2
+15->GetZaxis()->SetLabelOffset(0.007);
+   pyMC_2
+15->GetZaxis()->SetLabelSize(0.05);
+   pyMC_2
+15->GetZaxis()->SetTitleSize(0.06);
+   pyMC_2
+15->GetZaxis()->SetTitleFont(42);
+   pyMC_2
+15->Draw("PEsame");
+   Double_t xAxis16[81] = {55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, 117, 119, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 149, 151, 153, 155, 157, 159, 161, 163, 165, 167, 169, 171, 173, 175, 177, 179, 181, 183, 185, 187, 189, 191, 193, 195, 197, 199, 201, 203, 205, 207, 209, 211, 213, 215}; 
+   
+   TH1D *py_3
+16 = new TH1D("py_3
+16","histo ( Projection Y )",80, xAxis16);
+   py_3
+16->SetBinContent(1,0.003647839);
+   py_3
+16->SetBinContent(2,0.003592026);
+   py_3
+16->SetBinContent(3,0.003530318);
+   py_3
+16->SetBinContent(4,0.003467424);
+   py_3
+16->SetBinContent(5,0.003405873);
+   py_3
+16->SetBinContent(6,0.003346641);
+   py_3
+16->SetBinContent(7,0.003289718);
+   py_3
+16->SetBinContent(8,0.003234726);
+   py_3
+16->SetBinContent(9,0.003181255);
+   py_3
+16->SetBinContent(10,0.003128986);
+   py_3
+16->SetBinContent(11,0.003077633);
+   py_3
+16->SetBinContent(12,0.00302699);
+   py_3
+16->SetBinContent(13,0.002976956);
+   py_3
+16->SetBinContent(14,0.002927397);
+   py_3
+16->SetBinContent(15,0.002878304);
+   py_3
+16->SetBinContent(16,0.002829688);
+   py_3
+16->SetBinContent(17,0.002781637);
+   py_3
+16->SetBinContent(18,0.002734331);
+   py_3
+16->SetBinContent(19,0.002688016);
+   py_3
+16->SetBinContent(20,0.002642965);
+   py_3
+16->SetBinContent(21,0.002599429);
+   py_3
+16->SetBinContent(22,0.002557606);
+   py_3
+16->SetBinContent(23,0.002517563);
+   py_3
+16->SetBinContent(24,0.002479231);
+   py_3
+16->SetBinContent(25,0.002442476);
+   py_3
+16->SetBinContent(26,0.002407049);
+   py_3
+16->SetBinContent(27,0.002372716);
+   py_3
+16->SetBinContent(28,0.002339281);
+   py_3
+16->SetBinContent(29,0.002306611);
+   py_3
+16->SetBinContent(30,0.002274646);
+   py_3
+16->SetBinContent(31,0.002243445);
+   py_3
+16->SetBinContent(32,0.002213044);
+   py_3
+16->SetBinContent(33,0.002183572);
+   py_3
+16->SetBinContent(34,0.002155103);
+   py_3
+16->SetBinContent(35,0.002127718);
+   py_3
+16->SetBinContent(36,0.002101426);
+   py_3
+16->SetBinContent(37,0.00207622);
+   py_3
+16->SetBinContent(38,0.002052061);
+   py_3
+16->SetBinContent(39,0.002028842);
+   py_3
+16->SetBinContent(40,0.002006464);
+   py_3
+16->SetBinContent(41,0.00198481);
+   py_3
+16->SetBinContent(42,0.001963785);
+   py_3
+16->SetBinContent(43,0.001943272);
+   py_3
+16->SetBinContent(44,0.001923242);
+   py_3
+16->SetBinContent(45,0.001903636);
+   py_3
+16->SetBinContent(46,0.001884468);
+   py_3
+16->SetBinContent(47,0.001865721);
+   py_3
+16->SetBinContent(48,0.001847426);
+   py_3
+16->SetBinContent(49,0.001829604);
+   py_3
+16->SetBinContent(50,0.001812269);
+   py_3
+16->SetBinContent(51,0.001795431);
+   py_3
+16->SetBinContent(52,0.00177908);
+   py_3
+16->SetBinContent(53,0.001763216);
+   py_3
+16->SetBinContent(54,0.001747843);
+   py_3
+16->SetBinContent(55,0.001732923);
+   py_3
+16->SetBinContent(56,0.001718454);
+   py_3
+16->SetBinContent(57,0.001704431);
+   py_3
+16->SetBinContent(58,0.001690833);
+   py_3
+16->SetBinContent(59,0.001677662);
+   py_3
+16->SetBinContent(60,0.001664901);
+   py_3
+16->SetBinContent(61,0.001652544);
+   py_3
+16->SetBinContent(62,0.001640567);
+   py_3
+16->SetBinContent(63,0.001628956);
+   py_3
+16->SetBinContent(64,0.001617675);
+   py_3
+16->SetBinContent(65,0.001606709);
+   py_3
+16->SetBinContent(66,0.001596);
+   py_3
+16->SetBinContent(67,0.001585526);
+   py_3
+16->SetBinContent(68,0.001575243);
+   py_3
+16->SetBinContent(69,0.001565118);
+   py_3
+16->SetBinContent(70,0.001555107);
+   py_3
+16->SetBinContent(71,0.001545187);
+   py_3
+16->SetBinContent(72,0.001535322);
+   py_3
+16->SetBinContent(73,0.001525498);
+   py_3
+16->SetBinContent(74,0.001515705);
+   py_3
+16->SetBinContent(75,0.001505922);
+   py_3
+16->SetBinContent(76,0.001496148);
+   py_3
+16->SetBinContent(77,0.001486381);
+   py_3
+16->SetBinContent(78,0.001476608);
+   py_3
+16->SetBinContent(79,0.001466826);
+   py_3
+16->SetBinContent(80,0.001457024);
+   py_3
+16->SetLineColor(8);
+   py_3
+16->SetLineStyle(0);
+   py_3
+16->SetMarkerColor(8);
+   py_3
+16->GetXaxis()->SetLabelFont(42);
+   py_3
+16->GetXaxis()->SetLabelSize(0.035);
+   py_3
+16->GetXaxis()->SetTitleSize(0.035);
+   py_3
+16->GetXaxis()->SetTitleFont(42);
+   py_3
+16->GetYaxis()->SetLabelFont(42);
+   py_3
+16->GetYaxis()->SetLabelOffset(0.007);
+   py_3
+16->GetYaxis()->SetLabelSize(0.05);
+   py_3
+16->GetYaxis()->SetTitleSize(0.06);
+   py_3
+16->GetYaxis()->SetTitleFont(42);
+   py_3
+16->GetZaxis()->SetLabelFont(42);
+   py_3
+16->GetZaxis()->SetLabelOffset(0.007);
+   py_3
+16->GetZaxis()->SetLabelSize(0.05);
+   py_3
+16->GetZaxis()->SetTitleSize(0.06);
+   py_3
+16->GetZaxis()->SetTitleFont(42);
+   py_3
+16->Draw("HISTsame");
+   Double_t xAxis17[81] = {55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, 117, 119, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 149, 151, 153, 155, 157, 159, 161, 163, 165, 167, 169, 171, 173, 175, 177, 179, 181, 183, 185, 187, 189, 191, 193, 195, 197, 199, 201, 203, 205, 207, 209, 211, 213, 215}; 
+   
+   TH1D *pyMC_3
+17 = new TH1D("pyMC_3
+17"," ( Projection Y )",80, xAxis17);
+   pyMC_3
+17->SetBinContent(1,0.003669899);
+   pyMC_3
+17->SetBinContent(2,0.003588816);
+   pyMC_3
+17->SetBinContent(3,0.00349347);
+   pyMC_3
+17->SetBinContent(4,0.003365894);
+   pyMC_3
+17->SetBinContent(5,0.003412552);
+   pyMC_3
+17->SetBinContent(6,0.003307708);
+   pyMC_3
+17->SetBinContent(7,0.00324479);
+   pyMC_3
+17->SetBinContent(8,0.003211174);
+   pyMC_3
+17->SetBinContent(9,0.003094156);
+   pyMC_3
+17->SetBinContent(10,0.003047817);
+   pyMC_3
+17->SetBinContent(11,0.003079474);
+   pyMC_3
+17->SetBinContent(12,0.00293806);
+   pyMC_3
+17->SetBinContent(13,0.002917338);
+   pyMC_3
+17->SetBinContent(14,0.002885015);
+   pyMC_3
+17->SetBinContent(15,0.002805851);
+   pyMC_3
+17->SetBinContent(16,0.002763337);
+   pyMC_3
+17->SetBinContent(17,0.002764282);
+   pyMC_3
+17->SetBinContent(18,0.002651587);
+   pyMC_3
+17->SetBinContent(19,0.002612744);
+   pyMC_3
+17->SetBinContent(20,0.00263421);
+   pyMC_3
+17->SetBinContent(21,0.002443232);
+   pyMC_3
+17->SetBinContent(22,0.002450364);
+   pyMC_3
+17->SetBinContent(23,0.002499895);
+   pyMC_3
+17->SetBinContent(24,0.002351827);
+   pyMC_3
+17->SetBinContent(25,0.00242993);
+   pyMC_3
+17->SetBinContent(26,0.002333609);
+   pyMC_3
+17->SetBinContent(27,0.002360777);
+   pyMC_3
+17->SetBinContent(28,0.002374118);
+   pyMC_3
+17->SetBinContent(29,0.002248038);
+   pyMC_3
+17->SetBinContent(30,0.002192899);
+   pyMC_3
+17->SetBinContent(31,0.002182479);
+   pyMC_3
+17->SetBinContent(32,0.002157522);
+   pyMC_3
+17->SetBinContent(33,0.002165823);
+   pyMC_3
+17->SetBinContent(34,0.002062732);
+   pyMC_3
+17->SetBinContent(35,0.002146436);
+   pyMC_3
+17->SetBinContent(36,0.002008284);
+   pyMC_3
+17->SetBinContent(37,0.002080543);
+   pyMC_3
+17->SetBinContent(38,0.001958565);
+   pyMC_3
+17->SetBinContent(39,0.001993003);
+   pyMC_3
+17->SetBinContent(40,0.001937787);
+   pyMC_3
+17->SetBinContent(41,0.001959491);
+   pyMC_3
+17->SetBinContent(42,0.001812307);
+   pyMC_3
+17->SetBinContent(43,0.001835208);
+   pyMC_3
+17->SetBinContent(44,0.001927272);
+   pyMC_3
+17->SetBinContent(45,0.001832836);
+   pyMC_3
+17->SetBinContent(46,0.001792601);
+   pyMC_3
+17->SetBinContent(47,0.001845655);
+   pyMC_3
+17->SetBinContent(48,0.001783544);
+   pyMC_3
+17->SetBinContent(49,0.001765537);
+   pyMC_3
+17->SetBinContent(50,0.001829171);
+   pyMC_3
+17->SetBinContent(51,0.001685894);
+   pyMC_3
+17->SetBinContent(52,0.001775437);
+   pyMC_3
+17->SetBinContent(53,0.001758549);
+   pyMC_3
+17->SetBinContent(54,0.001740663);
+   pyMC_3
+17->SetBinContent(55,0.001683118);
+   pyMC_3
+17->SetBinContent(56,0.001734743);
+   pyMC_3
+17->SetBinContent(57,0.001665661);
+   pyMC_3
+17->SetBinContent(58,0.001665755);
+   pyMC_3
+17->SetBinContent(59,0.001658478);
+   pyMC_3
+17->SetBinContent(60,0.001591236);
+   pyMC_3
+17->SetBinContent(61,0.001664362);
+   pyMC_3
+17->SetBinContent(62,0.00163722);
+   pyMC_3
+17->SetBinContent(63,0.001651536);
+   pyMC_3
+17->SetBinContent(64,0.001622176);
+   pyMC_3
+17->SetBinContent(65,0.001599293);
+   pyMC_3
+17->SetBinContent(66,0.001630738);
+   pyMC_3
+17->SetBinContent(67,0.001559566);
+   pyMC_3
+17->SetBinContent(68,0.001564058);
+   pyMC_3
+17->SetBinContent(69,0.001563513);
+   pyMC_3
+17->SetBinContent(70,0.001525874);
+   pyMC_3
+17->SetBinContent(71,0.001578532);
+   pyMC_3
+17->SetBinContent(72,0.001531683);
+   pyMC_3
+17->SetBinContent(73,0.001566768);
+   pyMC_3
+17->SetBinContent(74,0.001566687);
+   pyMC_3
+17->SetBinContent(75,0.001563105);
+   pyMC_3
+17->SetBinContent(76,0.001565331);
+   pyMC_3
+17->SetBinContent(77,0.001542914);
+   pyMC_3
+17->SetBinContent(78,0.001556307);
+   pyMC_3
+17->SetBinContent(79,0.001470907);
+   pyMC_3
+17->SetBinContent(80,0.001498381);
+   pyMC_3
+17->SetBinError(1,4.400831e-05);
+   pyMC_3
+17->SetBinError(2,4.562466e-05);
+   pyMC_3
+17->SetBinError(3,4.327155e-05);
+   pyMC_3
+17->SetBinError(4,4.237328e-05);
+   pyMC_3
+17->SetBinError(5,4.494979e-05);
+   pyMC_3
+17->SetBinError(6,4.423173e-05);
+   pyMC_3
+17->SetBinError(7,4.163202e-05);
+   pyMC_3
+17->SetBinError(8,4.858466e-05);
+   pyMC_3
+17->SetBinError(9,4.083237e-05);
+   pyMC_3
+17->SetBinError(10,4.273343e-05);
+   pyMC_3
+17->SetBinError(11,4.601436e-05);
+   pyMC_3
+17->SetBinError(12,3.98997e-05);
+   pyMC_3
+17->SetBinError(13,3.986025e-05);
+   pyMC_3
+17->SetBinError(14,4.010526e-05);
+   pyMC_3
+17->SetBinError(15,3.917096e-05);
+   pyMC_3
+17->SetBinError(16,3.911929e-05);
+   pyMC_3
+17->SetBinError(17,4.451826e-05);
+   pyMC_3
+17->SetBinError(18,3.835958e-05);
+   pyMC_3
+17->SetBinError(19,4.116476e-05);
+   pyMC_3
+17->SetBinError(20,3.855674e-05);
+   pyMC_3
+17->SetBinError(21,3.660248e-05);
+   pyMC_3
+17->SetBinError(22,3.949167e-05);
+   pyMC_3
+17->SetBinError(23,4.271481e-05);
+   pyMC_3
+17->SetBinError(24,3.597615e-05);
+   pyMC_3
+17->SetBinError(25,4.234292e-05);
+   pyMC_3
+17->SetBinError(26,3.905786e-05);
+   pyMC_3
+17->SetBinError(27,3.968799e-05);
+   pyMC_3
+17->SetBinError(28,4.018442e-05);
+   pyMC_3
+17->SetBinError(29,4.139646e-05);
+   pyMC_3
+17->SetBinError(30,4.094895e-05);
+   pyMC_3
+17->SetBinError(31,3.820019e-05);
+   pyMC_3
+17->SetBinError(32,4.119516e-05);
+   pyMC_3
+17->SetBinError(33,3.539314e-05);
+   pyMC_3
+17->SetBinError(34,3.765247e-05);
+   pyMC_3
+17->SetBinError(35,3.851212e-05);
+   pyMC_3
+17->SetBinError(36,3.388341e-05);
+   pyMC_3
+17->SetBinError(37,3.787491e-05);
+   pyMC_3
+17->SetBinError(38,4.209446e-05);
+   pyMC_3
+17->SetBinError(39,3.478762e-05);
+   pyMC_3
+17->SetBinError(40,3.652162e-05);
+   pyMC_3
+17->SetBinError(41,3.997495e-05);
+   pyMC_3
+17->SetBinError(42,3.253505e-05);
+   pyMC_3
+17->SetBinError(43,3.297113e-05);
+   pyMC_3
+17->SetBinError(44,3.740708e-05);
+   pyMC_3
+17->SetBinError(45,3.903848e-05);
+   pyMC_3
+17->SetBinError(46,3.266921e-05);
+   pyMC_3
+17->SetBinError(47,3.609706e-05);
+   pyMC_3
+17->SetBinError(48,3.219465e-05);
+   pyMC_3
+17->SetBinError(49,3.285505e-05);
+   pyMC_3
+17->SetBinError(50,3.651301e-05);
+   pyMC_3
+17->SetBinError(51,3.163967e-05);
+   pyMC_3
+17->SetBinError(52,3.903476e-05);
+   pyMC_3
+17->SetBinError(53,3.605475e-05);
+   pyMC_3
+17->SetBinError(54,3.86357e-05);
+   pyMC_3
+17->SetBinError(55,3.540383e-05);
+   pyMC_3
+17->SetBinError(56,3.626562e-05);
+   pyMC_3
+17->SetBinError(57,3.170775e-05);
+   pyMC_3
+17->SetBinError(58,3.48979e-05);
+   pyMC_3
+17->SetBinError(59,3.253366e-05);
+   pyMC_3
+17->SetBinError(60,3.480431e-05);
+   pyMC_3
+17->SetBinError(61,3.579443e-05);
+   pyMC_3
+17->SetBinError(62,3.264422e-05);
+   pyMC_3
+17->SetBinError(63,3.847427e-05);
+   pyMC_3
+17->SetBinError(64,3.616734e-05);
+   pyMC_3
+17->SetBinError(65,3.56508e-05);
+   pyMC_3
+17->SetBinError(66,3.583977e-05);
+   pyMC_3
+17->SetBinError(67,3.443396e-05);
+   pyMC_3
+17->SetBinError(68,3.218112e-05);
+   pyMC_3
+17->SetBinError(69,3.256719e-05);
+   pyMC_3
+17->SetBinError(70,3.131192e-05);
+   pyMC_3
+17->SetBinError(71,3.864985e-05);
+   pyMC_3
+17->SetBinError(72,3.468651e-05);
+   pyMC_3
+17->SetBinError(73,3.51315e-05);
+   pyMC_3
+17->SetBinError(74,4.365074e-05);
+   pyMC_3
+17->SetBinError(75,3.841845e-05);
+   pyMC_3
+17->SetBinError(76,4.130242e-05);
+   pyMC_3
+17->SetBinError(77,3.524444e-05);
+   pyMC_3
+17->SetBinError(78,4.139945e-05);
+   pyMC_3
+17->SetBinError(79,3.437845e-05);
+   pyMC_3
+17->SetBinError(80,3.195397e-05);
+   pyMC_3
+17->SetEntries(254872.1);
+
+   ci = TColor::GetColor("#ff9900");
+   pyMC_3
+17->SetFillColor(ci);
+   pyMC_3
+17->SetLineColor(8);
+   pyMC_3
+17->SetLineStyle(0);
+   pyMC_3
+17->SetMarkerColor(8);
+   pyMC_3
+17->SetMarkerStyle(20);
+   pyMC_3
+17->SetMarkerSize(0.5);
+   pyMC_3
+17->GetXaxis()->SetTitle(" []");
+   pyMC_3
+17->GetXaxis()->SetLabelFont(42);
+   pyMC_3
+17->GetXaxis()->SetLabelSize(0.035);
+   pyMC_3
+17->GetXaxis()->SetTitleSize(0.035);
+   pyMC_3
+17->GetXaxis()->SetTitleFont(42);
+   pyMC_3
+17->GetYaxis()->SetLabelFont(42);
+   pyMC_3
+17->GetYaxis()->SetLabelOffset(0.007);
+   pyMC_3
+17->GetYaxis()->SetLabelSize(0.05);
+   pyMC_3
+17->GetYaxis()->SetTitleSize(0.06);
+   pyMC_3
+17->GetYaxis()->SetTitleFont(42);
+   pyMC_3
+17->GetZaxis()->SetLabelFont(42);
+   pyMC_3
+17->GetZaxis()->SetLabelOffset(0.007);
+   pyMC_3
+17->GetZaxis()->SetLabelSize(0.05);
+   pyMC_3
+17->GetZaxis()->SetTitleSize(0.06);
+   pyMC_3
+17->GetZaxis()->SetTitleFont(42);
+   pyMC_3
+17->Draw("PEsame");
+   
+   TLegend *leg = new TLegend(0.6,0.6,0.85,0.8,NULL,"brNDC");
+   leg->SetBorderSize(0);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(0);
+   leg->SetFillStyle(0);
+   TLegendEntry *entry=leg->AddEntry("pxMC_0
+","Simulation (Pythia8)","LP");
+   entry->SetLineColor(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(20);
+   entry->SetMarkerSize(0.5);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("px_0
+","Template","L");
+   entry->SetLineColor(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("px_1
+","1 < m_{jj} < 1.3 TeV","lpf");
+   entry->SetFillStyle(1001);
+   entry->SetLineColor(99);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(99);
+   entry->SetMarkerStyle(1);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("px_2
+","1.3 < m_{jj} < 2 TeV","lpf");
+   entry->SetFillStyle(1001);
+   entry->SetLineColor(9);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(9);
+   entry->SetMarkerStyle(1);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("px_3
+","2 < m_{jj} < 5 TeV","lpf");
+   entry->SetFillStyle(1001);
+   entry->SetLineColor(8);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(8);
+   entry->SetMarkerStyle(1);
+   entry->SetMarkerSize(1);
+   entry->SetTextFont(42);
+   leg->Draw();
+   TLatex *   tex = new TLatex(0.95,0.96,"13 TeV (2017)");
+tex->SetNDC();
+   tex->SetTextAlign(31);
+   tex->SetTextFont(42);
+   tex->SetTextSize(0.03);
+   tex->SetLineWidth(2);
+   tex->Draw();
+      tex = new TLatex(0.1669,0.9213,"CMS");
+tex->SetNDC();
+   tex->SetTextAlign(13);
+   tex->SetTextFont(61);
+   tex->SetTextSize(0.0375);
+   tex->SetLineWidth(2);
+   tex->Draw();
+      tex = new TLatex(0.1669,0.8763,"Simulation Preliminary");
+tex->SetNDC();
+   tex->SetTextAlign(13);
+   tex->SetTextFont(52);
+   tex->SetTextSize(0.0285);
+   tex->SetLineWidth(2);
+   tex->Draw();
+   Double_t xAxis18[81] = {55, 57, 59, 61, 63, 65, 67, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, 117, 119, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 149, 151, 153, 155, 157, 159, 161, 163, 165, 167, 169, 171, 173, 175, 177, 179, 181, 183, 185, 187, 189, 191, 193, 195, 197, 199, 201, 203, 205, 207, 209, 211, 213, 215}; 
+   
+   TH1D *py_0
+_copy18 = new TH1D("py_0
+_copy18","histo ( Projection Y )",80, xAxis18);
+   py_0
+_copy18->SetBinContent(1,0.02430155);
+   py_0
+_copy18->SetBinContent(2,0.0239993);
+   py_0
+_copy18->SetBinContent(3,0.02365614);
+   py_0
+_copy18->SetBinContent(4,0.02329625);
+   py_0
+_copy18->SetBinContent(5,0.02292666);
+   py_0
+_copy18->SetBinContent(6,0.02255147);
+   py_0
+_copy18->SetBinContent(7,0.02217671);
+   py_0
+_copy18->SetBinContent(8,0.02180979);
+   py_0
+_copy18->SetBinContent(9,0.02145518);
+   py_0
+_copy18->SetBinContent(10,0.02111426);
+   py_0
+_copy18->SetBinContent(11,0.02078592);
+   py_0
+_copy18->SetBinContent(12,0.02046818);
+   py_0
+_copy18->SetBinContent(13,0.0201595);
+   py_0
+_copy18->SetBinContent(14,0.01986028);
+   py_0
+_copy18->SetBinContent(15,0.01957202);
+   py_0
+_copy18->SetBinContent(16,0.01929626);
+   py_0
+_copy18->SetBinContent(17,0.01903524);
+   py_0
+_copy18->SetBinContent(18,0.0187896);
+   py_0
+_copy18->SetBinContent(19,0.01855925);
+   py_0
+_copy18->SetBinContent(20,0.01834194);
+   py_0
+_copy18->SetBinContent(21,0.01813525);
+   py_0
+_copy18->SetBinContent(22,0.01793545);
+   py_0
+_copy18->SetBinContent(23,0.01773887);
+   py_0
+_copy18->SetBinContent(24,0.01754221);
+   py_0
+_copy18->SetBinContent(25,0.01734276);
+   py_0
+_copy18->SetBinContent(26,0.01713886);
+   py_0
+_copy18->SetBinContent(27,0.01692938);
+   py_0
+_copy18->SetBinContent(28,0.01671361);
+   py_0
+_copy18->SetBinContent(29,0.0164913);
+   py_0
+_copy18->SetBinContent(30,0.01626161);
+   py_0
+_copy18->SetBinContent(31,0.01602431);
+   py_0
+_copy18->SetBinContent(32,0.01577819);
+   py_0
+_copy18->SetBinContent(33,0.01552191);
+   py_0
+_copy18->SetBinContent(34,0.01525449);
+   py_0
+_copy18->SetBinContent(35,0.01497469);
+   py_0
+_copy18->SetBinContent(36,0.01468157);
+   py_0
+_copy18->SetBinContent(37,0.01437424);
+   py_0
+_copy18->SetBinContent(38,0.01405284);
+   py_0
+_copy18->SetBinContent(39,0.01371686);
+   py_0
+_copy18->SetBinContent(40,0.01336749);
+   py_0
+_copy18->SetBinContent(41,0.01300544);
+   py_0
+_copy18->SetBinContent(42,0.01263206);
+   py_0
+_copy18->SetBinContent(43,0.01224892);
+   py_0
+_copy18->SetBinContent(44,0.01185776);
+   py_0
+_copy18->SetBinContent(45,0.01146065);
+   py_0
+_copy18->SetBinContent(46,0.01105951);
+   py_0
+_copy18->SetBinContent(47,0.01065625);
+   py_0
+_copy18->SetBinContent(48,0.01025286);
+   py_0
+_copy18->SetBinContent(49,0.0098513);
+   py_0
+_copy18->SetBinContent(50,0.009453274);
+   py_0
+_copy18->SetBinContent(51,0.009060339);
+   py_0
+_copy18->SetBinContent(52,0.008673915);
+   py_0
+_copy18->SetBinContent(53,0.008295403);
+   py_0
+_copy18->SetBinContent(54,0.007925917);
+   py_0
+_copy18->SetBinContent(55,0.007566226);
+   py_0
+_copy18->SetBinContent(56,0.007217009);
+   py_0
+_copy18->SetBinContent(57,0.006878903);
+   py_0
+_copy18->SetBinContent(58,0.006552232);
+   py_0
+_copy18->SetBinContent(59,0.006237042);
+   py_0
+_copy18->SetBinContent(60,0.005933509);
+   py_0
+_copy18->SetBinContent(61,0.005641448);
+   py_0
+_copy18->SetBinContent(62,0.005360792);
+   py_0
+_copy18->SetBinContent(63,0.00509132);
+   py_0
+_copy18->SetBinContent(64,0.00483281);
+   py_0
+_copy18->SetBinContent(65,0.004584936);
+   py_0
+_copy18->SetBinContent(66,0.004347541);
+   py_0
+_copy18->SetBinContent(67,0.004120245);
+   py_0
+_copy18->SetBinContent(68,0.003902955);
+   py_0
+_copy18->SetBinContent(69,0.00369534);
+   py_0
+_copy18->SetBinContent(70,0.00349711);
+   py_0
+_copy18->SetBinContent(71,0.003308135);
+   py_0
+_copy18->SetBinContent(72,0.003128108);
+   py_0
+_copy18->SetBinContent(73,0.002956845);
+   py_0
+_copy18->SetBinContent(74,0.00279409);
+   py_0
+_copy18->SetBinContent(75,0.002639541);
+   py_0
+_copy18->SetBinContent(76,0.002493013);
+   py_0
+_copy18->SetBinContent(77,0.002354121);
+   py_0
+_copy18->SetBinContent(78,0.002222696);
+   py_0
+_copy18->SetBinContent(79,0.002098296);
+   py_0
+_copy18->SetBinContent(80,0.001980724);
+   py_0
+_copy18->SetMinimum(0);
+   py_0
+_copy18->SetMaximum(0.04);
+   py_0
+_copy18->SetEntries(1);
+   py_0
+_copy18->SetDirectory(0);
+   py_0
+_copy18->SetLineStyle(0);
+   py_0
+_copy18->GetXaxis()->SetTitle("m_{jet2} (proj. y) [GeV]");
+   py_0
+_copy18->GetXaxis()->SetNdivisions(505);
+   py_0
+_copy18->GetXaxis()->SetLabelFont(42);
+   py_0
+_copy18->GetXaxis()->SetLabelSize(0.035);
+   py_0
+_copy18->GetXaxis()->SetTitleSize(0.035);
+   py_0
+_copy18->GetXaxis()->SetTitleFont(42);
+   py_0
+_copy18->GetYaxis()->SetTitle("A.U");
+   py_0
+_copy18->GetYaxis()->SetNdivisions(505);
+   py_0
+_copy18->GetYaxis()->SetLabelFont(42);
+   py_0
+_copy18->GetYaxis()->SetLabelOffset(0.007);
+   py_0
+_copy18->GetYaxis()->SetLabelSize(0.05);
+   py_0
+_copy18->GetYaxis()->SetTitleSize(0.06);
+   py_0
+_copy18->GetYaxis()->SetTitleFont(42);
+   py_0
+_copy18->GetZaxis()->SetLabelFont(42);
+   py_0
+_copy18->GetZaxis()->SetLabelOffset(0.007);
+   py_0
+_copy18->GetZaxis()->SetLabelSize(0.05);
+   py_0
+_copy18->GetZaxis()->SetTitleSize(0.06);
+   py_0
+_copy18->GetZaxis()->SetTitleFont(42);
+   py_0
+_copy18->Draw("sameaxis");
+   cy->Modified();
+   cy->cd();
+   cy->SetSelected(cy);
+}

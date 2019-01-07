@@ -1,0 +1,56 @@
+
+                                     HP                                    
+-----------------------------------------------------------------------------------------------------------------------------
+
+W-tagging SF of          : 0.935 +/- 0.582
+
+W-tagging mean shift     : -1.365 +/- 0.771
+W-tagging sigma enlarge  : 1.025 +/- 0.107
+
+Parameter                 Data                          Simulation                          Data/Simulation
+ < m >              85.775 +/- 0.761                  87.140 +/- 0.123                        0.984 +/- 0.009
+ #sigma             9.016 +/- 0.889                  8.801 +/- 0.315                        1.025 +/- 0.107
+
+
+HP W-tag eff+SF     0.076 +/- 0.016                  0.081 +/- 0.048                        0.935 +/- 0.582
+
+-----------------------------------------------------------------------------------------------------------------------------
+                                EXTREME FAIL                               
+-----------------------------------------------------------------------------------------------------------------------------
+Parameter                     Data                          Simulation                          Data/Simulation
+Extreme fail eff+SF     0.160 +/- 0.008                  0.173 +/- 0.008                        0.922 +/- 0.062
+-----------------------------------------------------------------------------------------------------------------------------
+                                    LP                                     
+-----------------------------------------------------------------------------------------------------------------------------
+
+Parameter                                   Data                          Simulation                          Data/Simulation
+LP W-tag eff+SF ( w/ext fail)         0.764 +/- 0.018                  0.746 +/- 0.048                        1.025 +/- 0.071
+LP W-tag eff+SF (wo/ext fail)         0.924 +/- 0.016                  0.919 +/- 0.048                        1.006 +/- 0.055
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+    Floating Parameter    FinalValue +/-  Error   
+  --------------------  --------------------------
+  eff_ttbar_TotalMC_em_mj    8.1309e-02 +/-  4.75e-02
+  rrv_c_ErfExp_bkg_TotalMC_em_mj   -6.1301e-02 +/-  5.61e-03
+  rrv_c_ErfExp_bkg_TotalMC_failtau2tau1cut_em_mj   -5.6690e-02 +/-  3.16e-04
+  rrv_mean1_gaus_ttbar_TotalMC_em_mj    8.7140e+01 +/-  1.23e-01
+  rrv_number_bkg_TotalMC_em_mj    4.5428e+01 +/-  2.70e+01
+  rrv_number_bkg_TotalMC_failtau2tau1cut_em_mj    1.8801e+03 +/-  2.45e+02
+  rrv_number_total_ttbar_TotalMC_em_mj    7.7897e+02 +/-  9.91e+01
+  rrv_offset_ErfExp_bkg_TotalMC_em_mj    1.4802e+02 +/-  7.83e+00
+  rrv_sigma1_gaus_ttbar_TotalMC_em_mj    8.8006e+00 +/-  3.15e-01
+  rrv_width_ErfExp_bkg_TotalMC_em_mj    4.8774e+01 +/-  2.43e+00
+  
+    Floating Parameter    FinalValue +/-  Error   
+  --------------------  --------------------------
+  eff_ttbar_data_em_mj    7.5990e-02 +/-  1.64e-02
+  rrv_c_ErfExp_bkg_data_em_mj   -6.4911e-02 +/-  5.68e-03
+  rrv_c_ErfExp_bkg_data_failtau2tau1cut_em_mj   -5.7596e-02 +/-  1.24e-03
+  rrv_mean1_gaus_ttbar_data_em_mj    8.5775e+01 +/-  7.61e-01
+  rrv_number_bkg_data_em_mj    5.4604e+01 +/-  1.10e+01
+  rrv_number_bkg_data_failtau2tau1cut_em_mj    1.6103e+03 +/-  7.56e+01
+  rrv_number_total_ttbar_data_em_mj    6.5792e+02 +/-  6.87e+01
+  rrv_offset_ErfExp_bkg_data_em_mj    1.4345e+02 +/-  8.21e+00
+  rrv_sigma1_gaus_ttbar_data_em_mj    9.0163e+00 +/-  8.89e-01
+  rrv_width_ErfExp_bkg_data_em_mj    5.0477e+01 +/-  2.54e+00
