@@ -400,30 +400,137 @@ The uncertainty due to parton showering is not relevant for analyses where no \H
 For the latter systematic uncertainty, accounting for effects due to choice of fit method, we compare the estimated extracted efficiency in \ttbar MC using the two different fit models described above: The new model, where the signal is modeled by a Gaussian peak and the tails of the distribution are absorbed in the background fit model, and the old model, including the tails when calculating the fraction of real \PW jets. Figure~\ref{fig:searchII:gausvstails} shows the fits obtained in the pass and fail regions using the two different models. With the new model only the Gaussian component of the fit contributes to the W-tagging efficiency while, with the old model, a Chebyshev component is additionally contributing to the total W-tagging efficiency.
 \begin{figure}[ht!]
   \centering
-    \includegraphics[width=0.50\textwidth]{figures/vtagging/AN-16-215/2Gauss.pdf}
-    \includegraphics[width=0.50\textwidth]{figures/vtagging/AN-16-215/GausErfExpPass.pdf}\\
-    \includegraphics[width=0.50\textwidth]{figures/vtagging/AN-16-215/GausChebysgev.pdf}
-    \includegraphics[width=0.50\textwidth]{figures/vtagging/AN-16-215/GausErfExpFail.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/vtagging/AN-16-215/2Gauss.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/vtagging/AN-16-215/GausErfExpPass.pdf}\\
+    \includegraphics[width=0.49\textwidth]{figures/vtagging/AN-16-215/GausChebysgev.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/vtagging/AN-16-215/GausErfExpFail.pdf}
   \caption{Fits obtained in the pass (top) and fail (bottom) regions using two different models: An alternative model with tails (top and bottom, left) where the tail component is contributing to the total W-tagging efficiency. When using the default model (top and bottom, right), only the Gaussian component of the fit contributes to the W-tagging efficiency.}
   \label{fig:searchII:gausvstails}
 \end{figure} 
-The estimated efficiencies obtained using the two different methods, corrected for the fraction of W jets in the tails, agree within 0.3-12\% and are listed as systematic uncertainty in Table~\ref{tab:WtagSFs}.\newline
-As the W-tagging scalefactor is evaluated
+The estimated efficiencies obtained using both methods, after being corrected for the fraction of \PW jets in the tails, agree within 0.3-12\% and are listed as systematic uncertainty in Table~\ref{tab:WtagSFs}.\newline
+One additional uncertainty is added. As the W-tagging scalefactor is evaluated in a \ttbar sample, the transverse momentum range is rather limited. When the \PW \PT reaches $\sim 400 \GeV$, the AK8 jet becomes a fully merged top jet with a mass of 170 \GeV and a scale factor measurement becomes impossible. However, the jets used in the analyses presented in this thesis have very high transverse momenta, up to 2-3 \TeV, and we therefore need an estimate of how the uncertainty on the W-tagging scalefactor changes as a function of \PT. This is estimated by comparing the difference in tagging between $\BulkG \rightarrow \PW \PW$ signal MC showered by \PYTHIA{}8 and \HERWIG{++} as a function of \PT, relative to the difference in tagging efficicency between the two at a $\PT \sim 200$~\GeV. This measurement was performed by a separate analysis tea, and found to be $5.90\% \times \ln(\pt/200\GeV)$.
+
+% \begin{figure}[htbp]
+%   \centering
+%     \includegraphics[width=0.50\textwidth]{figures/vtagging/AN-16-215/wtag-ptdependence-tau21tight.pdf}
+%   \caption{Uncertainty on the \pt dependence of the scale factor as a function of \pt, approximated with a logarithmic function.}
+%   \label{fig:ptdependence}
+% \end{figure}
+
+Systematic uncertainties from other sources like lepton identification, b tagging etc. are less than 0.5\% and therefore negligible. Other uncertainties due to jet energy scale and resolution, as well as pileup effects, are evaluated separately for each analysis and not included in the scale factor uncertainty.
+
+\paragraph{Results:}
+The scale factors (SF) for the selection on $\tau_2 / \tau_1 $ and PUPPI $\tau_2 / \tau_1$ are
+extracted by estimating the selection efficiency on both data and
+simulation.  The pruned jet mass or PUPPI softdrop distribution of events that pass and fail
+the $\tau_2 / \tau_1$ or PUPPI $\tau_2 / \tau_1$ selection are fitted
+simultaneously to extract the selection efficiency on the pure W jet
+component.The ratio of data and simulation efficiencies are taken as
+the W-tagging efficiency SF. The resulting scale factors are summarized in Table~\ref{tab:WtagSFs}. The corresponding efficiencies in data and MC are listed in Table~\ref{tab:WtagEffs}
+
+
+% Table for PAS
+\begin{table}[h!]
+   \centering
+   \begin{tabular}{lll}
+   \hline
+   Category & Definition & W scale factor\\
+   \hline
+   High-purity Pruning & ($\tau_2 / \tau_1 < 0.45$)             &$0.94 \pm 0.05~\rm{(stat)} \pm 0.03~\rm{(sys)} \pm 0.003~\rm{(sys)}$\\
+   Low-purity Pruning & ($0.45 < \tau_2 / \tau_1 < 0.75$)       &$1.27 \pm 0.25~\rm{(stat)} \pm 0.13~\rm{(sys)} \pm 0.008~\rm{(sys)}$\\
+   \hline
+   High-purity PUPPI softdrop & ($\tau_2 / \tau_1 < 0.4$)       &$0.97 \pm 0.06~\rm{(stat)} \pm 0.04~\rm{(sys)} \pm 0.06~\rm{(sys)}$\\
+   Low-purity PUPPI softdrop & ($0.45 < \tau_2 / \tau_1 < 0.75$)&$1.13 \pm 0.24~\rm{(stat)} \pm 0.17~\rm{(sys)}  \pm 0.12~\rm{(sys)}$\\
+   \end{tabular}
+   \label{tab:WtagSFs}
+   \caption{Data-to-simulation scale factors for the W-tagging procedure, as extracted from a top enriched data sample and from simulation, for both categories (high purity and low purity) for two different working points. The systematic uncertainties on the scale factor due to the simulation of the \ttbar topogolgy and the choice of the signal and background fit model are listed as well. }
+\end{table}
+
+\begin{table}[!htb]
+ \begin{center}
+\label{tab:WtagEffs}
+ \begin{tabular}{c|c|c|c}
+  Category & & Eff. data & Eff. simulation \\
+  \hline
+  High-purity Pruning & ($\tau_2 / \tau_1 < 0.45$)              & $0.775 \pm 0.041 $& $0.822 \pm 0.033$\\
+  Low-purity Pruning & ($0.45 < \tau_2 / \tau_1 < 0.75$)        & $0.225 \pm 0.041 $& $0.178 \pm 0.033$\\
+  \hline
+  High-purity PUPPI softdrop & ($\tau_2 / \tau_1 < 0.4$)        & $0.785 \pm 0.045 $& $0.81 \pm 0.01$\\
+  Low-purity PUPPI softdrop & ($0.45 < \tau_2 / \tau_1 < 0.75$) & $0.215 \pm 0.057 $& $0.204 \pm 0.041$\\
+ \end{tabular}
+ \caption{Summary of the extracted W-tagging efficiencies.}
+ \end{center}
+\end{table}
 
 
 \begin{figure}[htbp]
-  \centering
-    \includegraphics[width=0.50\textwidth]{figures/vtagging/AN-16-215/wtag-ptdependence-tau21loose.pdf}
-    \includegraphics[width=0.50\textwidth]{figures/vtagging/AN-16-215/wtag-ptdependence-tau21tight.pdf}
-  \caption{Uncertainty on the \pt dependence of the scale factor as a function of \pt, approximated with a logarithmic function.}
-  \label{fig:ptdependence}
-\end{figure} 
+\centering
+\includegraphics[width=0.44\textwidth]{figures/vtagging/AN-16-215/_HP0v45powheg_76X_em_pTbin_200_5000.pdf}
+\includegraphics[width=0.44\textwidth]{figures/vtagging/AN-16-215/_HP0v45powheg_76X_em_fail_pTbin_200_5000.pdf} \\
+\includegraphics[width=0.44\textwidth]{figures/vtagging/AN-16-215/_HP0v40powheg_76X_PuppiSD_em_pTbin_200_5000.pdf}
+\includegraphics[width=0.44\textwidth]{figures/vtagging/AN-16-215/_HP0v40powheg_76X_PuppiSD_em_fail_pTbin_200_5000.pdf}\\
+\caption{Pruned jet mass distribution that pass (left) and fail (right) the $\tau_2 / \tau_1 < 0.45$ (top) and PUPPI $\tau_2 / \tau_1 < 0.40$ selection (bottom). Results of both the fit to data (blue) and simulation(red) are shown. The background components of the fit are shown as short-dashed lines.}
+\label{fig:ttbarControl_nocut}
+\end{figure}
 
-The uncertainty on the \pt dependence of the scale factor, when using it for higher momenta than the range of the \ttbar control sample of \pt~$\sim200$~\GeV was studied with WW signal simulation showered by \PYTHIA{}8 and \HERWIG{++}.
-The difference between \PYTHIA{}8 and \HERWIG{++} relative to the difference in the case of \pt~$\sim 200$~\GeV shown in Fig.~\ref{fig:ptdependence}, is found to be $5.90\% \times \ln(\pt/200\GeV)$ for $\tau_{21} < 0.45$, and is considered as the \PT{} extrapolation uncertainty of $\tau_2 / \tau_1$ scale factor. Contributions from lepton identification, b tagging, \MET scale and underlying event are at $<$ 0.5\% level and negligible.
-Uncertainties due to the jet mass scale/resolution, jet energy scale/resolution, pileup effects of order $1-2$\% depend on the event topology and jet mass selection, and are thus evaluated in the context of each individual analysis.
+To extract corrections to the jet mass scale and resolution, we use the
+mean $\langle m \rangle$ and resolution $\sigma$ value of the Gaussian
+component of the fitted function of the W bosons in the passed
+sample.
+The fits are shown for the
+$\tau_2 / \tau_1 < 0.45$ selection in Fig.~\ref{fig:ttbarControl_nocut} (a) and for the
+PUPPI $\tau_2 / \tau_1 < 0.40$ selection in Fig.~\ref{fig:ttbarControl_nocut} (c), and the
+resulting parameters are summarized in Table~\ref{tab:params}.  We find
+that both the W jet mass scale and resolution in data are larger than
+that in simulation.
+
+\begin{table}[!htb]
+ \begin{center}
+\caption{Summary of the fitted W-mass peak fit parameters.}
+\label{tab:params}
+ \begin{tabular}{c|c|c|c}
+  Parameter & Data & Simulation & Data/Simulation \\
+  \hline
+  Pruning $\langle m \rangle$ &$80.9 \pm 0.6~{\rm \GeV}$ & $82.5 \pm 0.1~{\rm \GeV}$ & $0.980 \pm 0.007$ \\
+  Pruning $\sigma$ & \ $6.7 \pm 0.7~{\rm \GeV}$ & \ $7.5 \pm 0.3~{\rm \GeV}$ & $0.89 \pm 0.10$ \\
+  \hline
+  % PUPPI softdrop $\langle m \rangle$ &$86.8 \pm 0.8~{\rm \GeV}$ & $87.9 \pm 0.2~{\rm \GeV}$ & $0.988 \pm 0.010$ \\
+%   PUPPI softdrop $\sigma$ & \ $9.2 \pm 1.0~{\rm \GeV}$ & \ $8.7 \pm 0.4~{\rm \GeV}$ & $1.07 \pm 0.09$ \\
+  PUPPI softdrop $\langle m \rangle$ &$80.3 \pm 0.8~{\rm \GeV}$ & $81.9 \pm 0.01~{\rm \GeV}$ & $0.98 \pm 0.01$ \\%New mass corrections
+  PUPPI softdrop $\sigma$ & \ $9.0 \pm 0.9~{\rm \GeV}$ & \ $8.5 \pm 0.4~{\rm \GeV}$ & $1.07 \pm 0.12$ \\%New mass corrections
+ \end{tabular}
+ \end{center}
+\end{table}
 
 
+
+
+ % \begin{figure}[htbp]
+%  \centering
+%  \begin{tabular}{cc}
+%  \includegraphics[width=0.45\textwidth]{figures/vtagging/AN-16-215/plots_76X/plots_0v45/model_data_em.pdf}
+%  \includegraphics[width=0.45\textwidth]{figures/vtagging/AN-16-215/plots_76X/plots_0v45/model_TotalMC_em.pdf}\\
+%  \includegraphics[width=0.45\textwidth]{figures/vtagging/AN-16-215/plots_76X/plots_0v45/model_data_failtau2tau1cut_em.pdf}
+%  \includegraphics[width=0.45\textwidth]{figures/vtagging/AN-16-215/plots_76X/plots_0v45/model_TotalMC_failtau2tau1cut_em.pdf}\\
+%  \end{tabular}
+%  \caption{Fit results in data (left) and simulation (right) after simultaneous fit.
+% Top: pass selection($\tau_{21} < 0.45$), bottom: fail selection($\tau_{21} > 0.45$). }
+%  \label{fig:Wtagging_sf_045}
+%  \end{figure}
+%
+%   \begin{figure}[htbp]
+%   \centering
+%   \begin{tabular}{cc}
+%   \includegraphics[width=0.45\textwidth]{figures/vtagging/AN-16-215/model_data_em.pdf}
+%   \includegraphics[width=0.45\textwidth]{figures/vtagging/AN-16-215/model_TotalMC_em.pdf}\\
+%   \includegraphics[width=0.45\textwidth]{figures/vtagging/AN-16-215/model_data_failtau2tau1cut_em.pdf}
+%   \includegraphics[width=0.45\textwidth]{figures/vtagging/AN-16-215/model_TotalMC_failtau2tau1cut_em.pdf}\\
+%   \end{tabular}
+%   \caption{Fit results in data (left) and simulation (right) after simultaneous fit.
+%  Top: pass selection(PUPPI $\tau_{21} < 0.40$), bottom: fail selection(PUPPI $\tau_{21} > 0.40$). }
+%   \label{fig:Wtagging_sf_040}
+%   \end{figure}
+  
 
 \subsection{W-tagging mistagging rate measurement} 
 
