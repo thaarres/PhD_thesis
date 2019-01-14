@@ -263,6 +263,10 @@ F.~Dias\hrefCMSnoop {}{ {et~al.}, ``{Combination of Run-1 Exotic Searches in
 \href{http://www.arXiv.org/abs/1512.03371}{\texttt{arXiv:1512.03371}}.
 %%CITATION = ARXIV:1512.03371;%%.
 
+\bibitem{collreach}
+CERN, ``Collider Reach'', 2019 (accessed January 12, 2019), \url
+  {http://collider-reach.web.cern.ch/}.
+
 \bibitem{Alwall:2014hca}
 J.~Alwall\hrefCMSnoop {}{ {et~al.}, ``{The automated computation of tree-level
   and next-to-leading order differential cross sections, and their matching to

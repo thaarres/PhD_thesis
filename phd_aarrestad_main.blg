@@ -4,45 +4,45 @@ The top-level auxiliary file: phd_aarrestad_main.aux
 The style file: auto_generated.bst
 Database file #1: Bibliography.bib
 Warning--I didn't find a database entry for "CMS-PAS-EXO-14-024"
-You've used 56 entries,
+You've used 57 entries,
             2537 wiz_defined-function locations,
-            1078 strings with 17894 characters,
-and the built_in function-call counts, 17183 in all, are:
-= -- 1874
-> -- 390
+            1082 strings with 17983 characters,
+and the built_in function-call counts, 17319 in all, are:
+= -- 1884
+> -- 395
 < -- 5
-+ -- 135
-- -- 79
-* -- 1466
-:= -- 2140
-add.period$ -- 87
-call.type$ -- 56
++ -- 137
+- -- 80
+* -- 1474
+:= -- 2157
+add.period$ -- 88
+call.type$ -- 57
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 56
-duplicate$ -- 1135
-empty$ -- 1757
-format.name$ -- 85
-if$ -- 4541
+cite$ -- 57
+duplicate$ -- 1145
+empty$ -- 1777
+format.name$ -- 86
+if$ -- 4574
 int.to.chr$ -- 0
-int.to.str$ -- 56
+int.to.str$ -- 57
 missing$ -- 135
-newline$ -- 229
-num.names$ -- 44
-pop$ -- 317
+newline$ -- 232
+num.names$ -- 45
+pop$ -- 323
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 650
+skip$ -- 653
 stack$ -- 0
 substring$ -- 599
-swap$ -- 485
+swap$ -- 487
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 99
-width$ -- 58
-write$ -- 699
+while$ -- 100
+width$ -- 59
+write$ -- 707
 (There was 1 warning)
