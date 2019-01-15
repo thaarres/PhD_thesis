@@ -311,6 +311,23 @@ J.~Alwall\hrefCMSnoop {}{ {et~al.}, ``{The automated computation of tree-level
   Lomax, Debbie L. Hahs-Vaughn'',} \textit{ International Statistical Review}
   \textbf{ 80} (2012), no.~3, 491--491.
 
+\bibitem{1748-0221-8-04-P04013}
+\href {http://stacks.iop.org/1748-0221/8/i=04/a=P04013}{T.~C. collaboration,
+  ``Identification of b-quark jets with the CMS experiment'',} \textit{ Journal
+  of Instrumentation} \textbf{ 8} (2013), no.~04, P04013.
+
+\bibitem{1748-0221-13-05-P05011}
+\href {http://stacks.iop.org/1748-0221/13/i=05/a=P05011}{T.~C. collaboration,
+  ``Identification of heavy-flavour jets with the CMS detector in pp collisions
+  at 13 TeV'',} \textit{ Journal of Instrumentation} \textbf{ 13} (2018),
+  no.~05, P05011.
+
+\bibitem{CMS-PAS-B2G-16-021}
+\href {http://cds.cern.ch/record/2239381}{{CMS Collaboration} Collaboration,
+  ``{Search for massive resonances decaying into WW, WZ, ZZ, qW and qZ in the
+  dijet final state at $\sqrt{s} = 13~\mathrm{TeV}$ using 2016 data}'',}
+  Technical Report CMS-PAS-B2G-16-021, CERN, Geneva, 2016.
+
 \bibitem{Dasgupta:2015yua}
 \hrefCMSnoop {}{M.~Dasgupta, A.~Powling, and A.~Siodmok, ``{On jet substructure
   methods for signal jets}'',} \textit{ JHEP} \textbf{ 08} (2015) 079,
@@ -330,12 +347,6 @@ J.~Alwall\hrefCMSnoop {}{ {et~al.}, ``{The automated computation of tree-level
   -lepton production at hadron colliders'',} \textit{ Phys. Rev. D} \textbf{
   42} (1990) 815,
   \href{http://dx.doi.org/10.1103/PhysRevD.42.815}{\doi{10.1103/PhysRevD.42.815}}.
-
-\bibitem{CMS-PAS-B2G-16-021}
-\href {http://cds.cern.ch/record/2239381}{{CMS Collaboration} Collaboration,
-  ``{Search for massive resonances decaying into WW, WZ, ZZ, qW and qZ in the
-  dijet final state at $\sqrt{s} = 13~\mathrm{TeV}$ using 2016 data}'',}
-  Technical Report CMS-PAS-B2G-16-021, CERN, Geneva, 2016.
 
 \bibitem{PhysRevD.97.072006}
 \hrefCMSnoop {}{{CMS Collaboration} Collaboration, ``Search for massive
@@ -363,15 +374,22 @@ J.~Dolen\hrefCMSnoop {}{ {et~al.}, ``{Thinking outside the ROCs: Designing
 \href{http://www.arXiv.org/abs/1603.00027}{\texttt{arXiv:1603.00027}}.
 %%CITATION = ARXIV:1603.00027;%%.
 
-\bibitem{1748-0221-8-04-P04013}
-\href {http://stacks.iop.org/1748-0221/8/i=04/a=P04013}{T.~C. collaboration,
-  ``Identification of b-quark jets with the CMS experiment'',} \textit{ Journal
-  of Instrumentation} \textbf{ 8} (2013), no.~04, P04013.
+\bibitem{Gallicchio:2011xq}
+\hrefCMSnoop {}{J.~Gallicchio and M.~D. Schwartz, ``{Quark and Gluon Tagging at
+  the LHC}'',} \textit{ Phys. Rev. Lett.} \textbf{ 107} (2011) 172001,
+  \href{http://dx.doi.org/10.1103/PhysRevLett.107.172001}{\doi{10.1103/PhysRevLett.107.172001}},
+\href{http://www.arXiv.org/abs/1106.3076}{\texttt{arXiv:1106.3076}}.
+%%CITATION = ARXIV:1106.3076;%%.
 
-\bibitem{1748-0221-13-05-P05011}
-\href {http://stacks.iop.org/1748-0221/13/i=05/a=P05011}{T.~C. collaboration,
-  ``Identification of heavy-flavour jets with the CMS detector in pp collisions
-  at 13 TeV'',} \textit{ Journal of Instrumentation} \textbf{ 13} (2018),
-  no.~05, P05011.
+\bibitem{stealth}
+J.~A. Aguilar-Saavedra, ``Stealth bosons and where to find them'', 2018, \url
+  {https://indico.cern.ch/event/649482/contributions/2993323/attachments/1688557/2716149/SBAWTFD.pdf}.
+
+\bibitem{Aguilar-Saavedra:2018xpl}
+\hrefCMSnoop {}{J.~A. Aguilar-Saavedra, ``{Running bumps from stealth
+  bosons}'',} \textit{ Eur. Phys. J.} \textbf{ C78} (2018), no.~3, 206,
+  \href{http://dx.doi.org/10.1140/epjc/s10052-018-5717-0}{\doi{10.1140/epjc/s10052-018-5717-0}},
+\href{http://www.arXiv.org/abs/1801.08129}{\texttt{arXiv:1801.08129}}.
+%%CITATION = ARXIV:1801.08129;%%.
 
 \end{thebibliography}\endgroup

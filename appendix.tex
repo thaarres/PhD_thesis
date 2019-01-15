@@ -1,6 +1,6 @@
 \chapter{Search I: Limits per mass category}
 \label{app:search1}
- The asymptotic limits obtained with 2.6 $\textrm{fb}^{-1}$ of 13 TeV CMS data per mass and purity category. The largest significance is found at 2.8-3 TeV in the ZZ high-purity category, where one event at 3 TeV yields a local significance of 2.8 $\sigma$. A 3 parameter fit is the default background fit function for this category, however, a 2 parameter fit could also be used to describe these data. In Figure \ref{fig:Limits_ZZHP} we compare the limits and p-values obtained using a 2 parameter and a 3 parameter fit to describe the background in this category. The significance at 3 TeV is reduced from 2.8 to 1.5 $\sigma$ with a 2 parameter fit, reflecting the fact that the fit is poorly constrained in the high mass tail due to low statistics. The fit to data using both a 2 and 3 parameter fit is the ZZHP category is shown in Figure~\ref{fig:app:ZZHP2vs3p}.
+The asymptotic limits obtained with 2.6 $\textrm{fb}^{-1}$ of 13 TeV CMS data per mass and purity category.
 
 \begin{figure}[h!]
 \centering
@@ -14,7 +14,6 @@
 \label{fig:searchI:Limits_HP}
 \end{figure}
 
-
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.32\textwidth]{figures/analysis/search1/AN-15-211/limits/brazilianFlag_BulkWW_VVLP_new_combined_purity_13TeV_wPDF.pdf}
@@ -27,7 +26,6 @@
 \label{fig:searchI:Limits_LP}
 \end{figure}
 
-
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.32\textwidth]{figures/analysis/search1/AN-15-211/limits/brazilianFlag_BulkWW_WWHP_13TeV_wPDF.pdf}
@@ -39,7 +37,6 @@
 \caption{Expected/observed limits and corresponding p-values obtained for the different mass categories using 2.6 $\textrm{fb}^{-1}$ of CMS data. Here for a Bulk $G\rightarrow WW$ signal in the HP category}
 \label{fig:searchI:Limits_HPBulkWW}
 \end{figure}
-
 
 \begin{figure}[h!]
 \centering
@@ -54,7 +51,6 @@
 \end{figure}
 
 
-
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.32\textwidth]{figures/analysis/search1/AN-15-211/limits/brazilianFlag_BulkZZ_WWHP_13TeV_wPDF.pdf}
@@ -66,8 +62,6 @@
 \caption{Expected/observed limits and corresponding p-values obtained in the different mass categories. Here for a $G\rightarrow ZZ$ signal in the HP category.}
 \label{fig:searchI:Limits_HPBulkZZ}
 \end{figure}
-
-
 
 \begin{figure}[h!]
 \centering
@@ -81,10 +75,6 @@
 \label{fig:searchI:Limits_LPBulkZZ}
 \end{figure}
 
-
-
-
-
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.32\textwidth]{figures/analysis/search1/AN-15-211/limits/brazilianFlag_WZ_WWHP_13TeV_wPDF.pdf}
@@ -97,7 +87,6 @@
 \label{fig:searchI:Limits_HPWZ}
 \end{figure}
 
-
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.32\textwidth]{figures/analysis/search1/AN-15-211/limits/brazilianFlag_WZ_WWLP_13TeV_wPDF.pdf}
@@ -109,9 +98,6 @@
 \caption{Expected/observed limits and corresponding p-values obtained in the different mass categories. Here for a $W'\rightarrow WZ$ signal in the low purity category.}
 \label{fig:searchI:Limits_LPWZ}
 \end{figure}
-
-
-
 
 \begin{figure}[h!]
 \centering
@@ -127,38 +113,198 @@
 \end{figure}
 
 
-\chapter{2016 W-tagging scalefactor measurement}
+\chapter{2016 W-tagging scale factor measurement}
 \label{app:sf16}
-Figures~\ref{fig:searchII:ttfitpruned}  show the \ttbar real \PW (top) and non-\PW (bottom) distributions for jets that passed (left) and failed (right column) the N-subjettiness selections
-$\tau_{21}~<$~0.45.
+Figures~\ref{fig:app:ttfitsd}  show the \ttbar real \PW (top) and non-\PW (bottom) PUPPI softdrop jet mass distributions for jets that passed (left) and failed (right column) the N-subjettiness selections PUPPI
+$\tau_{21}~<$~0.40.
 \begin{figure}[htbp]
   \centering
-    \includegraphics[width=0.49\textwidth]{figures/vtagging/AN-16-215/plots_76X/fits_TTMC/plots_em_HP0v45powheg_76X_MCfits/{_TTbar_realWExoDiBosonAnalysis.WWTree_TTbar_powheg_76X_GausErfExp_ttbar_with_pull}.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/vtagging/AN-16-215/plots_76X/fits_TTMC/plots_em_HP0v45powheg_76X_MCfits/{_TTbar_realW_failtau2tau1cutExoDiBosonAnalysis.WWTree_TTbar_powheg_76X_GausErfExp_ttbar_failtau2tau1cut_with_pull}.pdf}\\
-    \includegraphics[width=0.49\textwidth]{figures/vtagging/AN-16-215/plots_76X/fits_TTMC/plots_em_HP0v45powheg_76X_MCfits/{_TTbar_fakeWExoDiBosonAnalysis.WWTree_TTbar_powheg_76X_ErfExp_ttbar_with_pull}.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/vtagging/AN-16-215/plots_76X/fits_TTMC/plots_em_HP0v45powheg_76X_MCfits/{_TTbar_fakeW_failtau2tau1cutExoDiBosonAnalysis.WWTree_TTbar_powheg_76X_ErfExp_ttbar_failtau2tau1cut_with_pull}.pdf}
-  \caption{Fit to the real \PW (top) and non-\PW (bottom) pruned jet mass distribution for jets that pass (left) and fail (right) the cut on $\tau_{21}~<$~0.45.}
-  \label{fig:app:ttfitpruned}
+    \includegraphics[width=0.49\textwidth]{figures/vtagging/AN-16-215/plots_76X/fits_TTMC/plots_em_HP0v40powheg_76X_PuppiSD_MCfits/{_TTbar_realWExoDiBosonAnalysis.WWTree_TTbar_powheg_76X_GausErfExp_ttbar_with_pull}.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/vtagging/AN-16-215/plots_76X/fits_TTMC/plots_em_HP0v40powheg_76X_PuppiSD_MCfits/{_TTbar_realW_failtau2tau1cutExoDiBosonAnalysis.WWTree_TTbar_powheg_76X_GausErfExp_ttbar_failtau2tau1cut_with_pull}.pdf}\\
+    \includegraphics[width=0.49\textwidth]{figures/vtagging/AN-16-215/plots_76X/fits_TTMC/plots_em_HP0v40powheg_76X_PuppiSD_MCfits/{_TTbar_fakeWExoDiBosonAnalysis.WWTree_TTbar_powheg_76X_ErfExp_ttbar_with_pull}.pdf}
+    \includegraphics[width=0.49\textwidth]{figures/vtagging/AN-16-215/plots_76X/fits_TTMC/plots_em_HP0v40powheg_76X_PuppiSD_MCfits/{_TTbar_fakeW_failtau2tau1cutExoDiBosonAnalysis.WWTree_TTbar_powheg_76X_ErfExp_ttbar_failtau2tau1cut_with_pull}.pdf}
+  \caption{Fit to the real \PW (top) and non-\PW (bottom) softdrop jet mass distribution for jets that pass (left) and fail (right) the cut on PUPPI $\tau_{21}~<$~0.4.}
+  \label{fig:app:ttfitsd}
 \end{figure}
-
+Figures~\ref{fig:app:minorbkrsd} shows the fitted PUPPI softdrop jet mass distributions for the non-dominant backgrounds in the evaluation of the W-tagging scale factors. Here for jets that pass (top) and failed (bottom) the N-subjettiness selections PUPPI
+$\tau_{21}~<$~0.40.
 \begin{figure}[h!]
-  \centering
-    \includegraphics[width=0.30\textwidth]{figures/vtagging/AN-16-215/plots_76X/plots_0v45/plots_em_HP0v45powheg_76X_MCfits/{_STopExoDiBosonAnalysis.WWTree_STop_76X_ErfExpGaus_sp}.pdf}
-    \includegraphics[width=0.30\textwidth]{figures/vtagging/AN-16-215/plots_76X/plots_0v45/plots_em_HP0v45powheg_76X_MCfits/{_WJets0ExoDiBosonAnalysis.WWTree_WJets_76X_ErfExp}.pdf}
-    \includegraphics[width=0.30\textwidth]{figures/vtagging/AN-16-215/plots_76X/plots_0v45/plots_em_HP0v45powheg_76X_MCfits/{_VVExoDiBosonAnalysis.WWTree_VV_76X_ExpGaus}.pdf}\\
-    \includegraphics[width=0.30\textwidth]{figures/vtagging/AN-16-215/plots_76X/plots_0v45/plots_em_HP0v45powheg_76X_MCfits/{_STop_failtau2tau1cutExoDiBosonAnalysis.WWTree_STop_76X_ExpGaus}.pdf}
-    \includegraphics[width=0.30\textwidth]{figures/vtagging/AN-16-215/plots_76X/plots_0v45/plots_em_HP0v45powheg_76X_MCfits/{_WJets0_failtau2tau1cutExoDiBosonAnalysis.WWTree_WJets_76X_ErfExp}.pdf}
-    \includegraphics[width=0.30\textwidth]{figures/vtagging/AN-16-215/plots_76X/plots_0v45/plots_em_HP0v45powheg_76X_MCfits/{_VV_failtau2tau1cutExoDiBosonAnalysis.WWTree_VV_76X_ExpGaus}.pdf}
-  \caption{Fits to the pruned jet mass spectrum for the non-dominant backgrounds (Single top, W+jets and VV respectively) in the pass (top) and fail (bottom) regions.}
-  \label{fig:app:minorbkrpruned}
+   \centering
+    \includegraphics[width=0.30\textwidth]{figures/vtagging/AN-16-215/{_STopExoDiBosonAnalysis.WWTree_STop_76X_ErfExpGaus_sp}.pdf}
+    \includegraphics[width=0.30\textwidth]{figures/vtagging/AN-16-215/{_WJets0ExoDiBosonAnalysis.WWTree_WJets_76X_ErfExp}.pdf}
+    \includegraphics[width=0.30\textwidth]{figures/vtagging/AN-16-215/{_VVExoDiBosonAnalysis.WWTree_VV_76X_ExpGaus}.pdf}\\
+    \includegraphics[width=0.30\textwidth]{figures/vtagging/AN-16-215/{_STop_failtau2tau1cutExoDiBosonAnalysis.WWTree_STop_76X_ErfExpGaus_sp}.pdf}
+    \includegraphics[width=0.30\textwidth]{figures/vtagging/AN-16-215/{_WJets0_failtau2tau1cutExoDiBosonAnalysis.WWTree_WJets_76X_ErfExp}.pdf}
+    \includegraphics[width=0.30\textwidth]{figures/vtagging/AN-16-215/{_VV_failtau2tau1cutExoDiBosonAnalysis.WWTree_VV_76X_ExpGaus}.pdf}
+  \caption{Fits to the PUPPI softdrop jet mass spectrum for the non-dominant backgrounds (Single top, W+jets and VV respectively) in the pass (top) and fail (bottom) regions.}
+  \label{fig:app:minorbkrsd}
 \end{figure}
 
-%
-% \chapter{Softdrop \PT-dependence}
-% \label{app:sdptdep}
-%
-% \chapter{2015 cross-check analysis}
-% \label{app:2015xcheck}
+
+\section{Efficiency scale factors for 12.9 and 35.9 \fbinv} 
+\label{sec:app:wtagsfana}
+
+\chapter{2015 cross-check analysis}
+\label{app:2015xcheck}
+
+\chapter{Background fit checks for 2016 analysis}
+\label{app:2016xcheck}
+
+The background from QCD multijet events is modelled by a smoothly falling distribution in each analysis category. The method consists of a smoothness test of the observed data where the background is assumed to be described by the following empirical probability density function:
+\begin{equation}
+\label{eq:dijet}
+\frac{dN}{dm}= \frac{ P_0(1-m/\sqrt{s})^{P_1} } { (m/\sqrt{s})^{P_2} }
+\end{equation}
+where $m$ is the dijet invariant mass, $\sqrt{s}$ the centre of mass energy, $P_0$ is a normalisation parameter for the probability density function and $P_1$ and $ P_2$ describe the shape. To ensure that this function is sufficient to describe the data in all the different analysis categories, we first perform a test to check that no additional parameters are needed and to check the systematics due to choice of fit function. For these studies we use a data sideband, where one of the two jets is required to have a mass between $20 \GeV < M_{\rm{Softdrop}} < 65 \GeV$. In order to quantify how many parameters are necessary, a Fishers F-test ~\cite{RePEc:bla:istatr:v:80:y:2012:i:3:p:491-491} is performed for the fits to data in the data sideband. The critical value that the test statistic must exceed is chosen to be $\alpha > $ 10\%. If the returned Confidence Level is larger than $\alpha$, the simpler fit is preferred.
+The three parameter fit is compared with the following 2, 4 and 5 parameter functions:
+
+%\begin{linenomath}
+\begin{equation}
+\label{eq:dijet2}
+\frac{dN}{dm}= \frac{ P_0 } { (m/\sqrt{s})^{P_2} }
+\end{equation}
+%\end{linenomath}
+
+%\begin{linenomath}
+\begin{equation}
+\label{eq:dijet4}
+\frac{dN}{dm}= \frac{ P_0(1-m/\sqrt{s})^{P_1} } { (m/\sqrt{s})^{P_2+P_3\times\log(m/\sqrt{s})} }
+\end{equation}
+%\end{linenomath}
+
+%\begin{linenomath}
+\begin{equation}
+\label{eq:dijet5}
+\frac{dN}{dm}= \frac{ P_0(1-m/\sqrt{s})^{P_1} } { (m/\sqrt{s})^{P_2+P_3\times\log(m/\sqrt{s})+P_4\times\log(m/\sqrt{s})^2} }
+\end{equation}
+Additionally, fits with an alternative fit function has also been performed (for the single-tag categories we try both 4 and 5 parameter versions):
+%\begin{linenomath}
+\begin{equation}
+\label{eq:dijet6}
+\frac{dN}{dm}= \frac{ P_0(1-m/\sqrt{s}+P_3(m/\sqrt{s})^2)^{P_1} } { (m/\sqrt{s})^{P_2} }
+\end{equation}
+
+\begin{equation}
+\label{eq:dijet7}
+\frac{dN}{dm}= \frac{ P_0(1-m/\sqrt{s}+P_3(m/\sqrt{s})^2)^{P_1} } { (m/\sqrt{s})^{P_2+P_4\times\log(m/\sqrt{s})} }
+\end{equation}
+%\end{linenomath}
+
+\subsection{Background fit checks in data sideband}
+\label{sec:app:2016bkgfit}
+We perform a test in a data sideband to make sure the fit functions work on real data and to exercise the estimation of number of necessary fit parameters via an F-test.
+% We also check that the systematic changes introduced by choice of fit is well within the statistical uncertainty of the main fit by comparing with an alternate fit function as defined in Equation \ref{eq:dijet6}.
+The sideband is constructed by requiring one of the two jets two have a mass in the low softdrop jet mass sideband, between $20 \GeV < M_{\rm{Softdrop}} < 65 \GeV$, while the full W/Z-tag selections are applied to the other jet. The low-mass jet is also required to pass the $\tau_{21}$ cut corresponding to the given category. For the single-tag category, the sideband is constructed by requiring one of the two jets to have a mass in the low softdrop jet mass sideband, between $20 \GeV < M_{\rm{Softdrop}} < 65 \GeV$ and the other in a high-mass sideband, between $105 \GeV < M_{\rm{Softdrop}} < 200 \GeV$. One of the jets is also required to pass the $\tau_{21}$ cut corresponding to the given category.
+We first check whether the sideband can be used to exercise the F test by checking whether or not there are features introduced in the dijet mass spectrum that may be hard to cover with the fit using QCD MC. To do so we look at the dijet invariant mass spectrum in the signal region divided by the distribution in the sideband. The obtained distributions are shown in Figure~\ref{fig:NPVVvsCat} for three different generators, where the pure Pythia8 QCD samples (top left) has the highest statistics. The  distributions are mostly smooth, but we do see features introduced in the "WW HP" and "ZZ HP" categories which might prove difficult to fit, as well as in the tail of the single-tag categories. These kinks shift around depending on what MC generator is used and do not seem to be a systematic feature caused by the cuts that have been applied, but rather due to limited statistics. We proceed with exercising the F-test in a data sideband, with the caveat that there might be features introduced in the spectrum where statistics are low.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.3\textwidth]{figures/analysis/search2/AN-16-235/plots/MjjSRvsSB_pythia8.pdf}
+\includegraphics[width=0.3\textwidth]{figures/analysis/search2/AN-16-235/plots/MjjSRvsSB_pythia8Madgraph.pdf}
+\includegraphics[width=0.3\textwidth]{figures/analysis/search2/AN-16-235/plots/MjjSRvsSB_herwig.pdf}
+\caption{Dijet mass spectrum in the signal region divided by the dijet mass spectrum in the sidebands using QCD Pythia8 (left), QCD Pythia8+Madgraph (middle) and QCD Herwig$++$ (right) simulated samples. Here for the double W/Z-tag and the single V-tagged HP and LP categories. Some jumps are observed in the high-mass tail of the dijet invariant mass distribution in the high-purity WW/ZZ categories, but otherwise no strange features seem to be induced by using the sideband. }
+\label{fig:NPVVvsCat}
+\end{figure}
+
+Figure \ref{fig:fit-sigmaband} shows the fit to data in the data sideband for the WW and ZZ  mass categories, both in the HP and in the LP n-subjettiness categories. The corresponding residuals, $\chi^2$ and F-test results are shown i Table \ref{tab:qV category, HP} through \ref{tab:WW category, LP}. For the double-tag categories, a two or three parameter function is sufficient to describe the data and we conclude that the function as defined in \ref{eq:dijet} is sufficient for all mass categories. For the single-tag category a five parameter fit seems to be required in order to describe the data and the fit quality is not optimal. To ensure that the fit functions with sufficient number of parameters is able to describe the shape in the single-tag categories, we have additionally looked at the fit quality in QCD MC (see below). Here, the default dijet function seems sufficient to describe the distributions.
+The sideband in the single-tag categories in QCD MC do not show the same features as the data sideband as shown in Figure \ref{fig:qV_sb}.
+% As mentioned above, we evaluate the systematic uncertainty associated with choice of fit function by checking that the use of an alternate function is well within the statistical errors of the main fit.
+ % The red area in Figure \ref{fig:fit-sigmaband} shows the 95 \% confidence interval for the three parameter default fit function as given in Equation \ref{eq:dijet}, as well as the default fit using additional parameters and the alternate function given in Equation \ref{eq:dijet6}. The alternate fit function shown in black lies well within the shaded area in all cases and we conclude that the systematics associated with choice of function is less then the statistical errors of the fit and therefore negligible.
+
+
+
+ \begin{figure}[htb]
+ \centering
+
+ \includegraphics[width=0.43\textwidth]{figures/analysis/search2/AN-16-235/plots/ftest_SB/WWHP_fitComp.pdf}
+ \includegraphics[width=0.43\textwidth]{figures/analysis/search2/AN-16-235/plots/ftest_SB/WWLP_fitComp.pdf}\\
+ \includegraphics[width=0.43\textwidth]{figures/analysis/search2/AN-16-235/plots/ftest_SB/ZZHP_fitComp.pdf}
+ \includegraphics[width=0.43\textwidth]{figures/analysis/search2/AN-16-235/plots/ftest_SB/ZZLP_fitComp.pdf}\\
+ \includegraphics[width=0.43\textwidth]{figures/analysis/search2/AN-16-235/plots/ftest_SB/qVHP_fitComp.pdf}
+ \includegraphics[width=0.43\textwidth]{figures/analysis/search2/AN-16-235/plots/ftest_SB/qVLP_fitComp.pdf}\\
+ \caption{Fitted dijet mass spectrum in the different mass and purity categories in a data sideband: WW high-purity (top left) and low-purity (top right), ZZ high-purity (middle left) and low-purity (middle right), qV high-purity (bottom left) and low-purity (bottom right).}
+ \label{fig:fit-sigmaband}
+ \end{figure}
+
+ \begin{figure}[htb]
+ \centering
+ \includegraphics[width=0.43\textwidth]{figures/analysis/search2/AN-16-235/plots/qVHP_fitComp_qVSB.pdf}
+ \includegraphics[width=0.43\textwidth]{figures/analysis/search2/AN-16-235/plots/qVLP_fitComp_qVSB.pdf}\\
+ \caption{Fitted dijet mass spectrum in the QCD MC sideband: qV high-purity (left) and low-purity (right).}
+ \label{fig:qV_sb}
+ \end{figure}
+
+
+\clearpage
+\input{figures/analysis/search2/AN-16-235/plots/ftest_SB/f-test_VV.tex}
+\input{figures/analysis/search2/AN-16-235/plots/ftest_SB/f-test_qV.tex}
+
+
+
+\subsection{Background fit checks in QCD MC}
+\label{sec:app:2016:mcfit}
+As an additional check, we look at the fit functions in the different signal categories using QCD MC. This is shown in Figure~\ref{fig:bkgfitQCD_VV} for the double and Figure~\ref{fig:bkgfitQCD_qV} for the single tag categories. Here all fit functions and their pull distributions are plotted. The fits are performed in a mass range corresponding to the expected distribution in the different categories for 13 $\textrm{fb}^{-1}$ of data. We have adapted the error bars to correspond to the maximum of the expected Poisson error for 13 $\textrm{fb}^{-1}$ of data and the pure simulation error (accounting for the different weights assigned to the $\pt$-binned QCD MC sample). The reason for this choice is to get an estimate of whether the set of fit functions we plan to use to fit the background distribution in data, and plan to use in order to understand the systematic uncertainty due to our choice of fit function, are appropriate and do not produce fake bumps/kinks. As this distribution is the pure MC simulation curve, whos variation at high masses is much smaller than the expected poisson error for 13 $\textrm{fb}^{-1}$ of data, we expect the $\chi^{2}/\textrm{ndof}$ to be lower than one. In order to protect against the fact that the MC simulation at lower dijet masses does not have more statistics than the expected data for 13 $\textrm{fb}^{-1}$ of data, we use the largest of the Poisson and the MC error. The resulting errors are therefore a mixture of Poisson and the MC error and the $\chi^{2}/\textrm{ndof}$ for the QCD MC fits should not be considered. Fit quality in the form of $\chi^{2}/\textrm{ndof}$ should only be estimated from the fits to data sideband where pure Poisson errors are used
+Overall the fits to QCD MC in the different categories describe the data well, with a two or three parameter function sufficient to describe the distributions. However, due to an under fluctuation of the first bin in the "ZZHP" category, the higher parameter fits are steered by the first bin leading to discrepancies in the tail. This is the lowest statistics category and the danger for underfluctuations does exist. We have investigated the dijet invariant mass distribution down to a dijet invariant mass threshold of 800 GeV to make sure we are not seeing a turn-on effect. This is shown in Figure~\ref{fig:bkgfitQCD_ZZHP}. The fits in the data sideband for the same category (Figure \ref{fig:fit-sigmaband}, middle left) do not show the same trend.
+% For the single-tag categories, the default fit function seems to be sufficient to describe the shape, and do not produce fake bumps/kinks in the pulls.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.45\textwidth]{figures/analysis/search2/AN-16-235/plots/WWHP_fitComp.pdf}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search2/AN-16-235/plots/WWLP_fitComp.pdf}\\
+\includegraphics[width=0.45\textwidth]{figures/analysis/search2/AN-16-235/plots/WZHP_fitComp.pdf}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search2/AN-16-235/plots/WZLP_fitComp.pdf}\\
+\includegraphics[width=0.45\textwidth]{figures/analysis/search2/AN-16-235/plots/ZZHP_fitComp.pdf}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search2/AN-16-235/plots/ZZLP_fitComp.pdf}
+\caption{Background fit for the $M_{jj}$ distribution in QCD MC corresponding to 13 $\textrm{fb}^{-1}$. Here for the high- and low-purity double W/Z-tag category for the three different mass categories: WW category (top), WZ category (middle) and ZZ category (bottom).}
+\label{fig:bkgfitQCD_VV}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.45\textwidth]{figures/analysis/search2/AN-16-235/plots/qVHP_fitComp.pdf}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search2/AN-16-235/plots/qVLP_fitComp.pdf}\\
+\includegraphics[width=0.45\textwidth]{figures/analysis/search2/AN-16-235/plots/qWHP_fitComp.pdf}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search2/AN-16-235/plots/qWLP_fitComp.pdf}\\
+\includegraphics[width=0.45\textwidth]{figures/analysis/search2/AN-16-235/plots/qZHP_fitComp.pdf}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search2/AN-16-235/plots/qZLP_fitComp.pdf}
+\caption{Background fit for the $M_{jj}$ distribution in QCD MC corresponding to 13 $\textrm{fb}^{-1}$. Here for the high- and low-purity single W/Z-tag category for the two different mass categories: wW category (top) and qZ category (bottom).}
+\label{fig:bkgfitQCD_qV}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.45\textwidth]{figures/analysis/search2/AN-16-235/plots/ZZHP_fitComp_mjj800.pdf}
+\caption{Background fit for the $M_{jj}$ distribution in QCD MC corresponding to 13 $\textrm{fb}^{-1}$. Here for the high-purity double Z-tag category using a dijet invariant mass threshold of 800 GeV. No turn-on effect at low invariant masses is observed.}
+\label{fig:bkgfitQCD_ZZHP}
+\end{figure}
+
+
+% \input{plots/f-test_VV.tex}
+
+\subsection{F-test in signal region}
+\label{sec:app:2016:ftest}
+
+The final F-test performed in order to define the number of fit parameters to be used to fit the background in each analysis category, is performed in the signal region. The resulting fits and F-test values for the double tag categories are shown in
+Figure~\ref{fig:bkgfit_sr_vv} and Tables~\ref{tab:WW category, HP} to~\ref{tab:ZZ category, LP}.
+
+The F-test results for the single-tag category are listed in Tables~\ref{tab:qW category, HP} to~\ref{tab:qZ category, LP}.
+Here, a three parameter fit is sufficient for all categories except the "high-purity" qW category where a 5 parameter fit is preferred.
+\input{figures/analysis/search2/AN-16-235/plots/f-test_VV.tex}
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.45\textwidth]{figures/analysis/search2/AN-16-235/plots/WWHP.pdf}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search2/AN-16-235/plots/WWLP.pdf}\\
+\includegraphics[width=0.45\textwidth]{figures/analysis/search2/AN-16-235/plots/WZHP.pdf}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search2/AN-16-235/plots/WZLP.pdf}\\
+\includegraphics[width=0.45\textwidth]{figures/analysis/search2/AN-16-235/plots/ZZHP.pdf}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search2/AN-16-235/plots/ZZLP.pdf}
+\caption{Background fit for the $M_{jj}$ distribution in the data signal region. Here for the high- (left) and low-purity (right) double W/Z-tag categories WW (top), WZ (middle) and ZZ (bottom).}
+\label{fig:bkgfit_sr_vv}
+\end{figure}
+
+\input{figures/analysis/search2/AN-16-235/plots/f-test_qV.tex}
+
 
 % figures/analysis/search1/misc/softdrop_vseta_0p8tev.pdf
 % figures/analysis/search1/misc/softdrop_vseta_2p0tev.pdf
