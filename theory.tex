@@ -1,6 +1,48 @@
 \section{The Standard Model Lagrangian}
+Everything this thesis is built on, has its roots in the Standard Model. The Standard Model of particle physics (SM) adresses the question \emph{What is matter made of?} on the smallest possible scale. It maps the fundamental constituents of the universe together through the forces that bind them, hoping to provide a complete picture of the laws of nature.
 \subsection{Particles and fields}
+It appears that all matter in the universe can be described by a very small collection of fundamental particles, six leptons and six quarks. These are collectively called fermions and are, as far as we can tell, truly elementary (not composed of any other particles).
+Leptons are particles with integer or zero electric charge (defined in units of electron charge). They come in three flavours, or generations, and their mass increases with generation. Each generation of leptons consists of two particles: one charged lepton and one neutrally charged particle denoted \emph{neutrino ($\nu$)}. The three generations can be arranged in a doublet structure, and are as follows
+\begin{equation}
+\label{eqn:lepton_flavor_doublets}
+\begin{pmatrix} e       \\ \nu_e      \end{pmatrix} \qquad
+\begin{pmatrix} \mu     \\ \nu_{\mu}  \end{pmatrix} \qquad
+\begin{pmatrix} \tau    \\ \nu_{\tau} \end{pmatrix}
+\end{equation}
+The leptons come in two states; positively charged and negatively charged, where charged is defined in unit of electron charge $e$. The base state is negatively charged, $e^{-}$, $\mu^{-}$, and $\tau^{-}$,  wheras the positively charged leptons,  $e^{+}$, $\mu^{+}$, and $\tau^{+}$ are considered their anti-particles states.
+Each lepton generation is assigned its own quantum number $L$ which must be conserved after any process. A summary of the lepton properties is listed in Table~\ref{table:theory:lepprop}.
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{|c|c|c| c c c|}
+\hline
+Lepton        & Mass           & Charge & $L_{e}$ & $L_{\mu}$ & $L_{\tau}$ \\
+\hline
+$e^{-}$      & $0.5 \mbox{ MeV}$   & $e$ & 1       & 0         & 0 \\
+$\mu^{-}$    & $106 \mbox{ MeV}$   & $e$ & 0       & 1         & 0 \\
+$\tau^{-}$   & $1777 \mbox{ MeV}$  & $e$ & 0       & 0         & 1 \\
+\hline
+$\nu_{e}$    & $< 3 \mbox{ eV}$       & $0$    & 1       & 0         & 0 \\
+$\nu_{\mu}$  & $< 0.19 \mbox{ MeV}$   & $0$    & 0       & 1         & 0 \\
+$\nu_{\tau}$ & $< 18.2 \mbox{ MeV}$   & $0$    & 0       & 0         & 1 \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Lepton Properties}
+\label{table:theory:lepprop}
+
+\end{table}
+Leptons interact with one another through the $electroweak force$, which will be explained in more detailed in Section~\ref{sec:theory:ew}.\newline
+The other six fundamental matter particles are the \emph{quarks}. They are distingushed from the leptons in that they interact with one another through the strong force, described in Section~\ref{sec:theory:qcd}. Also organized in three generations, the quarks are
+\begin{equation}
+\label{eqn:quark_flavor_doublets}
+\begin{pmatrix} u \\ d \end{pmatrix} \qquad
+\begin{pmatrix} c \\ s \end{pmatrix} \qquad
+\begin{pmatrix} t \\ b \end{pmatrix}
+\end{equation}
+
+
 \subsection{Electroweak theory}
+\label{sec:theory:ew}
 \subsection{The Higgs Mechanism}
 \subsection{Quantum Chromodynamics}
 \label{sec:theory:qcd}
@@ -12,3 +54,4 @@
 \subsubsection{Compositeness}
 \subsection{Heavy Vector Triplet formalism}
 \label{sec:theory:hvt}
+	
