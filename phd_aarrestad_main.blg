@@ -3,10 +3,14 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: phd_aarrestad_main.aux
 The style file: auto_generated.bst
 Database file #1: Bibliography.bib
+Warning--I didn't find a database entry for "softdrop"
+Warning--I didn't find a database entry for "nsubjettiness"
+Warning--I didn't find a database entry for "ddt"
+Warning--I didn't find a database entry for "JME-16-003"
 Warning--I didn't find a database entry for "CMS-PAS-EXO-14-024"
 You've used 60 entries,
             2537 wiz_defined-function locations,
-            1104 strings with 18521 characters,
+            1109 strings with 18565 characters,
 and the built_in function-call counts, 18158 in all, are:
 = -- 1974
 > -- 414
@@ -45,4 +49,4 @@ warning$ -- 0
 while$ -- 105
 width$ -- 62
 write$ -- 744
-(There was 1 warning)
+(There were 5 warnings)
