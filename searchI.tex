@@ -143,6 +143,8 @@ A cut of $|\Delta \eta|_{jj}<1.3$ makes sure to remove the t-channel pole at $\c
 % \item Dijet invariant mass $> 1$ TeV
 % \end{itemize}
 
+In addition the these requirements on the jets themselves, an overlap veto with leptons in the event is applied. Here the overlap $\Delta R(\text{jet},\text{lepton})$ between the jet candidate and a lepton is required to be larger than 0.8. Leptons used for this veto are required to pass the identification requirements described in Section~\ref{sec:objreco:electrons} and~\ref{sec:objreco:muons}, have a transverse momentum larger than 35 (30) GeV and a pseudorapidity smaller than 2.5 (2.4) in case of electrons (muons).
+
 The \PT, $\eta$, dijet invariant mass and $|\Delta \eta|_{jj}$ distribution for the two leading jets in the event after the above preselections have been applied is shown in Figure~\ref{fig:kinematics-all}.
 
 \begin{figure}[h!]
@@ -525,7 +527,7 @@ The W-tagging efficiency is measured using real boosted \PW-jets in a semi-lepto
 \label{fig:search2:ttsemilep}
 \end{figure}
 
-\subsection{Event selection}
+\subsubsection{Event selection}
 \label{sec:searchI:vtag:evsel}
 The \PW can decay either to an electron or a muon, both final states ("channels") are used in the analysis. We select events through triggering and selections on the leptonic leg. First, we require a high-energy lepton at trigger level, with an online \PT above 45 \GeV for the muon and 135 \GeV for the electron. This requires an offline muon(electron) \PT threshold of 53(120) \GeV. The leptons are further required to pass the lepton requirements defined in Section~\ref{sec:objreco:muons} and Section~\ref{sec:objreco:electrons}, and events containing additional leptons (passing the same ID requirements, but looser cuts as defined in Table~\ref{tab:searchII:cutsummary}) are vetoed. Offline, we further require a high missing energy of 40(80) \GeV in the muon(electron) channel. To insure a high signal (boosted hadronic \PW) purity, the leptonic \PW four-vector is reconstructed such that we can put tight momentum requirements on the leptonic leg (ensuring that both tops, and therefore vector bosons, have a high momentum). The leptonic \PW is reconstructed in two steps: First, the unknown z component of the neutrino momentum must be solved for through a second order equation assuming the real \PW mass
 \begin{equation*}
