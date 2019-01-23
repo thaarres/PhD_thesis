@@ -30,7 +30,7 @@ vector bosons. These heavy scalars will decay to lighter bosons, if kinematicall
 Signatures like these would peak in the groomed jet mass spectrum and, depending on what the final bosons decay into, have very different substructure profiles (4- and 4-prong, 2- and 4-prong etc.).\par
 In order to effectively search for such types of signals, or any signal peaking in the softdrop jet mass spectrum, we therefore wanted to build a generic new framework allowing to look for peaks anywhere in the groomed mass - dijet invariant mass spectrum.
 Rather than selecting jets with a groomed mass between 65 and 105 \GeV and look for resonances peaking in the dijet invariant mass, we'd look for resonances peaking anywhere in the three dimensional plane formed by the groomed mass of each jet and their invariant mass.
-The benefits of this procedure, was that it would allow us to scan the full groomed mass spectrum in one analysis. We would first demonstrate the method throught the VV all-hadronic analysis, which is the paper introduced here.
+The benefits of this procedure, was that it would allow us to scan the full groomed mass spectrum in one analysis. We would first demonstrate the method through the VV all-hadronic analysis, which is the paper introduced here.
 \subsection{Analysis strategy}
 The background estimation used in Search I and Search II rely on a one dimensional fit of the dijet invariant mass signal region after a tight jet mass cut (65-105 \GeV) has been applied.
 We now take advantage of the fact that the signal peaks in three dimensions; dijet invariant mass ($\MVV$) and the jet groomed mass of jet 1 and jet 2 ($\MJO$ and $\MJT$),
@@ -295,7 +295,7 @@ The jet mass scale and resolution together with their are estimated in the same 
  \includegraphics[width=0.49\textwidth]{figures/analysis/search3/AN-17-303/vtag/newddt_TopPtRew_2017_pass.pdf}
  \includegraphics[width=0.49\textwidth]{figures/analysis/search3/AN-17-303/vtag/newddt_TopPtRew_2017_fail.pdf}
  \end{tabular}
- \caption{PUPPI softdrop jet mass distribution that pass (left) and fail (right) the \ddt0.43 selection in the \ttbar control sample. The result of the fit to data and simulation are shown by the solid blue and solid red line, respectively. The background components of the fit are shown as dashed-dotted lines. The fit to 2016 data is shown in the upper panels and the fit to 2017 data in the lower panels.}
+ \caption{PUPPI softdrop jet mass distribution that pass (left) and fail (right) the \ddt 0.43 selection in the \ttbar control sample. The result of the fit to data and simulation are shown by the solid blue and solid red line, respectively. The background components of the fit are shown as dashed-dotted lines. The fit to 2016 data is shown in the upper panels and the fit to 2017 data in the lower panels.}
  \label{fig:simFit}
  \end{figure}
  \begin{table}[htbp]
@@ -342,7 +342,8 @@ These are illustrated in Figure~\ref{fig:searchIII:3Dfit} and will be described 
 \subsection{Modeling of the signal}
 The signal shape in three dimensions is defined as a product of the shape of the resonance mass and the jet masses:
 \begin{equation}
-P_{sig}(\MVV,\MJO,\MJT|\theta(M_X) ) = P_{VV}(\MVV|\theta_1(M_X)) \times P_{j1}(\MJO|\theta_2(M_X))\\ \times P_{j2}(\MJT|\theta_2(M_X)).
+	\footnotesize
+	P_{sig}(\MVV,\MJO,\MJT|\theta(M_X) ) = P_{VV}(\MVV|\theta_1(M_X)) \times P_{j1}(\MJO|\theta_2(M_X))\\ \times P_{j2}(\MJT|\theta_2(M_X)).
 \end{equation} 
 The shapes for \MVV, \MJO and \MJT all depend on the hypothesized mass of the new particle ($M_X$) and a set of parameters $\theta=(\theta_1, \theta_2)$ that in principle depend on $M_X$.
 The signal is parametrized by fitting the resonance mass and jet mass line shapes for each mass point, extracting the fitted parameters and then interpolating these as a function of the resonance mass
@@ -359,7 +360,7 @@ The final \MVV shapes as extracted from the parametrization are shown in Figure~
 \resizebox{0.4\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/signalFits/Signal_mVV_ALPHA2.pdf}}\\
 \resizebox{0.4\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/signalFits/Signal_mVV_N1.pdf}}
 \resizebox{0.4\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/signalFits/Signal_mVV_N2.pdf}}
-\caption{The interpolated Crystal-ball parameters for the dijet invariant mass as a function of $M_X$. The small variations for ALPHA2 have been shown to have no effect on the overall modelling.}
+\caption{The interpolated Crystal-ball parameters for the dijet invariant mass as a function of $M_X$. The small variations for ALPHA2 have been shown to have no effect on the overall modeling.}
 \label{fig:MVVShapeParam}
 \end{figure}
 
@@ -371,7 +372,7 @@ The final \MVV shapes as extracted from the parametrization are shown in Figure~
 \label{fig:MVVfromjson}
 \end{figure}
 The same procedure is used to model the jet mass: The \MJO spectrum for each resonance mass hypothesis is fitted using a double Crystal-ball function, the fitted parameters are extracted and interpolated as functions of the resonance mass. 
-This is done separately for $\MJO$ and $\MJT$. The fitted parameters and interpolations are shown in Figure~\ref{fig:MJet1ShapeParam} for \MJO, the corresponding ditributions for \MJT are in Appendix~\ref{app:search3:sigfits}.
+This is done separately for $\MJO$ and $\MJT$. The fitted parameters and interpolations are shown in Figure~\ref{fig:MJet1ShapeParam} for \MJO, the corresponding distributions for \MJT are in Appendix~\ref{app:search3:sigfits}.
 \begin{figure}[htpb]
 \centering
 \resizebox{0.4\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/signalFits_2016/Signal_mjetl1_mean.pdf}}
@@ -406,14 +407,17 @@ The yields are then interpolated as a function of $M_X$. The signal efficiency a
 
 In order to model the QCD multijets background in the three-dimensional \MVV-\MJO-\MJT plane, we use the following conditional product:
 \begin{equation}
-P(\MVV,\MJO,\MJT) = P_{VV}(\MVV|\theta_1) \times P_{cond,1}(\MJO|\MVV,\theta_2) \times P_{cond,2}(\MJT|\MVV,\theta_2).
+	\footnotesize
+	P(\MVV,\MJO,\MJT) = P_{VV}(\MVV|\theta_1) \times P_{cond,1}(\MJO|\MVV,\theta_2) \times P_{cond,2}(\MJT|\MVV,\theta_2).
 \end{equation} 
 This probability density requires a computation of the conditional two-dimensional shapes of $\MJO/\MJT$ given $\MVV$, as well as a one dimensional shape of the $\MVV$ distribution.
 
-The following fit range and binning is used for the three axes: \MJO/\MJT is fitted from 55 to 215 GeV using 2 GeV bins. $\MVV$ is fitted from 1126 to 5500 GeV. The lower bound is chosen such that to avoid complications in the fitting procedure due to trigger turn-on effects, while the upper bound is chosen considering the highest dijet invariant mass found in data as well as avoiding mis-reconstruction effects at very large $m_{jj}$ and low jet masses. For $\MVV$, the "dijet binning" is used. This binning corresponds to the actual dijet mass resolution and is as follows:
+The following fit range and binning is used for the three axes: \MJO/\MJT is fitted from 55 to 215 GeV using 2 GeV bins. $\MVV$ is fitted from 1126 to 5500 GeV. The lower bound is chosen such that to avoid complications in the fitting procedure due to trigger turn-on effects, while the upper bound is chosen considering the highest dijet invariant mass found in data as well as avoiding mis-reconstruction effects at very large $m_{jj}$ and low jet masses. For $\MVV$, the "dijet binning" is used. This binning corresponds to the actual dijet mass resolution and is, in units of \GeV:\newline
 
-1126,1181,1246,1313,1383,1455,1530,1607,1687,1770,1856,1945,2037,2132,2231,2332,2438,2546,\\
-2659,2775,2895,3019,3147,3279,3416,3558,3704,3854,4010,4171,4337,4509,4686,4869,5058,5253,5500
+
+Dijet binning = 1126, 1181, 1246, 1313, 1383, 1455, 1530, 1607, 1687, 1770, 1856, 1945, \\
+2037, 2132, 2231, 2332, 2438, 2546, 2659, 2775, 2895, 3019, 3147, 3279, 3416, 3558, 3704, \\
+3854, 4010, 4171, 4337, 4509, 4686, 4869, 5058, 5253, 5500\newline
 
 
 The background model is built starting from simulation and we encode sufficient nuisance parameters into the fit, allowing the shape
@@ -423,7 +427,7 @@ First, the resonance mass and softdrop jet mass scale and resolution are derived
 For this we use the anti-$k_T$ generated jet collection matched to jets identified as V-jets on reconstruction level.
 We then derived the $\MJ$ and $\MVV$ scale and resolution from a Gaussian fit to $M_{i}(\mathrm{reco})/M_{i}(\mathrm{gen})$ ($i=\MJ$ or $i=\MVV$ ) in bins of generator jet $\PT$.
 Figure~\ref{fig:resoFits} shows the fit to $M_{jet}(\mathrm{reco})/M_{jet}(\mathrm{gen})$ (left) and $M_{jj}(\mathrm{reco})/M_{jj}(\mathrm{gen})$ (right) for an arbitrary bin. The Gaussian mean yields the mass scale and the Gaussian width the mass resolution.
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
 \resizebox{0.4\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/detRes/detectorResolution/debug_fit_mjres_8.png}}
 \resizebox{0.4\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/detRes/detectorResolution/debug_fit_mvvres_8.png}}\\
@@ -432,7 +436,7 @@ The mass resolution is taken as the width of the fitted Gaussian, while the Gaus
 \label{fig:resoFits}
 \end{figure}
 The resonance mass and softdrop jet mass scale and resolution as a function of generator jet $\PT$ is shown in Figure~\ref{fig:ScaleResolution}.
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
 \resizebox{0.4\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/detRes/detectorresolution_resxHisto.png}}
 \resizebox{0.4\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/detRes/detectorresolution_resyHisto.png}}\\
@@ -442,7 +446,7 @@ The resonance mass and softdrop jet mass scale and resolution as a function of g
 \label{fig:ScaleResolution}
 \end{figure}
 The projection of these resolution functions are shown in Figure~\ref{fig:ResolutionProfiles}.
-\begin{figure}[h]
+\begin{figure}[h!]
 \centering
 \resizebox{0.4\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/detRes/detectorresolution_mvv.png}}
 \resizebox{0.4\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/detRes/detectorresolution_mjet.png}}\\
@@ -457,8 +461,8 @@ where $s_{i}, r_{i}$ are the scale and the resolution derived in the previous st
 The resulting kernel values are filled into a 2D histogram. This procedure is performed separately for \MJO and \MJT. To build the one-dimensional template for the dijet invariant mass the same procedure as above is used, with the exception that
 the smearing is done with one-dimensional Gaussian kernel only depending on $\MVV$.
 The templates are then added together to form a three-dimensional PDF. Finally, we fit this 3D PDF to QCD MC in order to remove any residual bias (mainly at the extreme ends of the spectra). The result is a full, smooth shape replacing the prediction from simulation.\par
-As the HPHP category is very limited in statistics, we rather build this template starting from the HPLP templates. This is done by fitting the HPLP 3D PDF to QCD MC in the HPHP category. Figure~\ref{fig:3DkernelsHPLPpythia} and~\ref{fig:3DkernelsHPHPpythia} show the final templates (solid lines) together with the QCD MC (data points) derived from the 2017 MC in the HPLP and HPHP category, respectively. Good agreement between QCD MC and templates in all three dimensions is observed, within statistical uncertainties. The corresponding distributions in 2016 MC can be found in Appendix~\ref{app:search3:2016kernels}.\par
-\begin{figure}[p]
+As the HPHP category is very limited in statistics, we rather build this template starting from the HPLP templates. This is done by fitting the HPLP 3D PDF to QCD MC in the HPHP category. Figure~\ref{fig:3DkernelsHPLPpythia} show the final templates (solid lines) together with the QCD MC (data points) derived from the 2017 MC in the HPLP (top) and HPHP category (bottom). Good agreement between QCD MC and templates in all three dimensions is observed, within statistical uncertainties. The corresponding distributions in 2016 MC can be found in Appendix~\ref{app:search3:2016kernels}.\par
+\begin{figure}[h!]
 \centering
 \resizebox{0.3\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/backgroundFits/3Dkernels_HPLP_pythia_2017/cx.png}}
 \resizebox{0.3\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/backgroundFits/3Dkernels_HPLP_pythia_2017/cy.png}}
@@ -470,7 +474,7 @@ As the HPHP category is very limited in statistics, we rather build this templat
 \label{fig:3DkernelsHPHPpythia}
 \end{figure}
 In order to validate the kernel transfer method, we check that we can fit a higher-statistics HPHP region by loosening the $\tau_{21}^{DDT}$ cut to 0.49. This results in 12 times more background events in the HPHP category, and should uncover whether any degeneracy is present in the fits themselves and whether HPLP indeed is capable of modeling HPHP, without being camouflaged by large error bars. The resulting kernel versus MC spectra are shown in Figure~\ref{fig:looseDDT_closure}. Good closure is observed in all three dimensions, demonstrating that the HPLP kernels adapt well to the HPHP MC data points even when statistics are sufficient, and we consider the method sound.
-\begin{figure}[p]
+\begin{figure}[h!]
 \centering
 \resizebox{0.3\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/backgroundFits/looseDDT_HPHP/cx.png}}
 \resizebox{0.3\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/backgroundFits/looseDDT_HPHP/cy.png}}
@@ -478,130 +482,88 @@ In order to validate the kernel transfer method, we check that we can fit a high
 \caption{Comparison between QCD MC simulation (markers) and kernels derived from generator level quantities (lines) in the HPHP category, using a looser cut on $\tau_{21}^{DDT}$.}
 \label{fig:looseDDT_closure}
 \end{figure}
+\clearpage
 
-\par
-TO BE CONTINUED HERE
+\subsection{Modeling of the resonant background}
+\label{sec:resbkgd}
+In addition to the QCD multijet background, there are a few sub-dominant processes to consider which contain one real vector boson and at least one QCD-jet. These are W+jets, Z+jets and events from \ttbar processes. They are resonant around the W/Z mass in the two softdrop jet mass dimensions and must threfore be treated differently than the non-resonant QCD background. Figure \ref{fig:stack_res_bkg} shows the projections on \MJO (left), \MJT (middle) and \MVV (right).
+\begin{figure}[h!]
+ \includegraphics[width=0.329\textwidth]{figures/analysis/search3/AN-17-303/resonantBkg/CP_background_px_xrange55-215_yrange55-215zrange1126-5000_HPLP.pdf}
+ \includegraphics[width=0.329\textwidth]{figures/analysis/search3/AN-17-303/resonantBkg/CP_background_py_xrange55-215_yrange55-215zrange1126-5000_HPLP.pdf}
+ \includegraphics[width=0.329\textwidth]{figures/analysis/search3/AN-17-303/resonantBkg/CP_background_pz_xrange55-215_yrange55-215zrange1126-5000_HPLP.pdf}
+\caption{Projections of the sub-dominant backgrounds on the jet mass axes \MJO (left) and \MJT (middle), as well as on the dijet invariant mass \MVV (right). Here in the low purity category.}
+\label{fig:stack_res_bkg}
+\end{figure}
+As the jets are randomly sorted, each jet mass dimension contains two contributions: A resonant part consisting of real vector boson jets, peaking around the V mass, and a non-resonant part composed of jets originating from a quark or a gluon, similar to the QCD multijets background. These two contributions are modeled separately as we know that the non-resonant part of the jet mass spectrum is correlated with the dijet invariant mass (like QCD), while the resonant part is not. We additionally want to encode the fact that we know these backgrounds in reality only peaks in one jet mass axis (there is only one real vector boson) by requiring the PDFs to consist of a resonant part on one axis, and a non-resonant part on the other axis. A three dimensional PDF for the sub-dominant backgrounds is built as a product of three one dimensional pdf's as follows:
+\begin{align}
+	\label{eq:searchIII:vjetpdf}
+	P_{res} \left(\MJO, \MJT, \MVV \right) &= P_{VV} \left( \MVV \right) \times  P_{jet1} \left( \MJO, \MJT \right) \times P_{jet2} \left( \MJT, \MJO \right)
+\end{align}
+where
+\begin{align}
+P_{jet1} \left( \MJO, \MJT \right) &= f \times R(\MJT) \times P_{res} ( \MJO ) + (1-f) P_{non-res} (\MJO ) \\
+P_{jet2} \left( \MJT, \MJO \right) &= (1-f) \times R(\MJO) \times P_{res} ( \MJT ) + f P_{non-res} (\MJT )
+\end{align}
+Here, $R(\MJ)$ parametrizes the correlation between \MJO and \MJT and $f$ is a fit parameter that is used to adjust the fraction of real vector boson jets in
+\MJO compared to \MJT. It's value can vary 10\% around $f=0.5$, the expected median when using a random jet sorting.\newline
+As the contribution of the t$\bar{\text{t}}$ background is much smaller than the one coming from V+jets (less than 2\%), it is modeled together with the W+jets contribution. Therefore only two PDFs are built for the resonant background: One for the W+jets and t$\bar{\text{t}}$, and one for Z+jets.\newline
+The available MC statistics in the high purity category is very low and therefore the parametrization of the resonant background is done for the low purity category only, and the resulting shapes are then used for both purity categories. The uncertainties for the different purity categories are, however, included as separate nuisance parameters in the fit.\par
+The non-resonant \MVV PDF is constructed using the same kernel approach as is used to model the QCD multijet background with one minor difference: Due to the low statistics in the high-\MVV tail, an additional smoothing of the jet mass tail using a leveled exponential
+\begin{equation}
+\frac{\text{d} N}{\text{d} m_{jj}} = \frac{P_0 (1-m_{jj}/s)^{P_1}}{(m_{jj}/s)^{P_2}}
+\end{equation}
+is performed. Here, $s$ is the center of mass energy. The function is fitted to the spectrum starting from a dijet mass of 1.1 (2.1)~TeV for high purity (low purity). Two uncertainties on this shape is added in order to accommodate for MC mis-modelig due to higher order QCD and electroweak corrections: One proportional to \MVV and one proportional to 1/\MVV. The resulting \MVV kernels (solid lines) for the W+jets background are shown in Figure \ref{fig:Vjets_mvv} and are compared to MC simulation (markers). The blue line corresponds to the nominal shape, while the red and green lines correspond to the uncertainties proportional to \MVV and 1/\MVV, respectively. The corresponding distributions for the Z+jets background are shown in Appendix~\ref{app:search3:resbkg}.\par
+\begin{figure}[h]
+\centering
+\resizebox{0.49\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/resonantBkg/debug_mVV_kernels_WJets_HPHP.png}}
+\resizebox{0.49\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/resonantBkg/debug_mVV_kernels_WJets_HPLP.png}}\\
+% \resizebox{0.49\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/resonantBkg/debug_mVV_kernels_ZJets_HPHP.pdf}}
+% \resizebox{0.49\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/resonantBkg/debug_mVV_kernels_ZJets_HPLP.pdf}}
+\caption{One dimensional \MVV kernels (solid line) compared to MC (markers) for the W+jets background in the HPHP (left) and HPLP (right) categories. The blue line corresponds to the nominal shape, while the red and green lines correspond to uncertainties proportional to \MVV and 1/\MVV, respectively.}
+\label{fig:Vjets_mvv}
+\end{figure}
+As mentioned above, the modeling of the \MJ spectrum is split into two different PDFs: One describing the resonant and one describing the non-resonant part. We distinguish between the two by requiring the resonant contribution to consist of jets matched to a generated boson within a cone of $\Delta R = 0.8$. A double-sided crystal-ball function is then fitted to the resonant spectrum for W+jets and Z+jets separately. This allows us to fully correlate uncertainties on the mean and width of the \MJ distribution for signal with the corresponding values for W/Z+jets, as these uncertainties affect all jets generated from real vector bosons in the same way. This effectively gives us a way of constraining these parameters directly from data. The parametrization of the resonant part of the jet mass spectrum for \MJO is shown in Figure \ref{fig:Vjets_fits} for W+jets and \ttbar (left) and Z+jets. The small enhancement around 170 \GeV is caused by fully merged top jets and is so small ($<2\%$ in the low purity and $<0.5\%$ in the high purity category) that we do not take it into account in the final PDF.
+\begin{figure}[h!]
+\centering
+\resizebox{0.45\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/resonantBkg/debugJl1_Wjets_TTbar_Res.png}}
+\resizebox{0.45\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/resonantBkg/debugJl1_Zjets_Res.png}}
+\caption{Fit to the resonant part of the V+jets and \ttbar spectrum for W+jets and \ttbar (left) and Z+jets (right).}
+\label{fig:Vjets_fits}
+\end{figure}
+The non-resonant part of the V+jets background is modeled using a simple Gaussian fit to the spectrum of jets not matched to a real vector bosons, as shown in Figure \ref{fig:Vjets_fits_nonRes}.
+\begin{figure}[h!]
+\centering
+\resizebox{0.49\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/resonantBkg/debugJl1_Wjets_TTbar_nonRes.png}}
+\resizebox{0.49\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/resonantBkg/debugJl1_Zjets_nonRes.png}}
+\caption{Fit to the non-resonant part of the V+jets and \ttbar spectrum for W+jets and \ttbar (left) and Z+jets (right).}
+\label{fig:Vjets_fits_nonRes}
+\end{figure}
+For the resonant modeling, correlations between the jet mass \MJ and dijet invariant mass \MVV have been found small enough to be neglected (the jet mass spectrum does not, within statistical uncertainties, depend on the jet \PT). However, there is a strong correlation between the softdrop jet mass of each jet due to the fact that when one of the two jets originates from a real boson peaking around the V mass, the other is bound to be a quark jet. Therefore, the fraction of real boson jets contained in \MJO affects the fraction of real V jets in \MJT. To account for this, the fraction of real V jets versus quark/gluon jets jets, is parametrized as a function of the jet mass. As the jets are randomly sorted, we define the parametrization as
+\begin{align}
+R(\MJ) &= \frac{N_{res,jet1}(\MJT)+N_{res,jet2}(\MJO)}{N_{non-res,jet1}(\MJT) + N_{non-res,jet2}(\MJO)}~.
+\end{align}
+Where $N(\MJ)$ denotes the number of events within a given \MJ window. The resulting ratio is then fitted with a polynomial function, as shown in Figure~\ref{fig:ratio_Vjets}.
+\begin{figure}[h]
+\centering
+\resizebox{0.45\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/resonantBkg/debug_corr_l1_l2_Wjets.pdf}}
+\resizebox{0.45\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/resonantBkg/debug_corr_l1_l2_Zjets.pdf}}
+\caption{Ratio of resonant to non-resonant events in  W+jets (left) and Z+jets (right) as a function of jet mass.}
+\label{fig:ratio_Vjets}
+\end{figure}
+As a closure test, the three dimensional kernel as defined in Equation~\ref{eq:searchIII:vjetpdf} is fitted to the V+jets and \ttbar simulation. Figure~\ref{fig:searchIII:Vjets_closure} shows the fitted kernel (red) together with the MC data points (black markers) in the low (top) and high (bottom) purity categories. Mostly good agreement is observed along all dimensions, with some deviations in the very high \MVV tail in the high purity category. This is, however, a region dominated with very little statistics and is completely swallowed up by the QCD multijets background which has the same shape.
+\begin{figure}[h!]
+\centering
+\resizebox{0.329\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_X-Proj._y_:_0,-1_z_:_0,-1}.png}}
+\resizebox{0.329\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_Y-Proj._x_:_0,-1_z_:_0,-1}.png}}
+\resizebox{0.329\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_Z-Proj._x_:_0,-1_y_:_0,-1}.png}}
+\resizebox{0.329\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_HPHP_X-Proj._y_:_0,-1_z_:_0,-1}.png}}
+\resizebox{0.329\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_HPHP_Y-Proj._x_:_0,-1_z_:_0,-1}.png}}
+\resizebox{0.329\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_HPHP_Z-Proj._x_:_0,-1_y_:_0,-1}.png}}\\
+\caption{Final fits of the complete background model (red line) to the MC simulation of the V+jets backgrounds (black markers) for the high purity category.}
+\label{fig:searchIII:Vjets_closure}
+\end{figure}
+\clearpage
 
 \section{Outlook}
 \label{sec:outlook}
-%
-% \subsection{Modeling of the resonant background}
-% \label{sec:resbkgd}
-% In addition to the main background from QCD multijet processes, there are a few sub-dominant backgrounds to consider containing one real vector boson and at least one QCD-jet. These sub-dominant backgrounds consist of W+jets, Z+jets and events from \ttbar processes. As these backgrounds contain a real vector boson, they are resonant around the W/Z mass in the two softdrop jet mass dimensions. The treatment of these therefore differs to that of the non-resonant QCD background. Figure \ref{fig:stack_res_bkg} shows projections on all mass dimensions of the three background contributions. Since the jets in this analysis are randomly sorted, each jet mass dimension contains two contributions: A resonant part made out of real vector boson jets, clearly peaking around the V mass, and a non-resonant part composed of jets originating from a quark/gluon, similar to the QCD multijets background.
-% \begin{figure}[h!]
-% \includegraphics[width=0.33\textwidth]{figures/analysis/search3/AN-17-303/resonantBkg/CP_background_px_xrange55-215_yrange55-215zrange1126-5000_HPLP.pdf}
-% \includegraphics[width=0.33\textwidth]{figures/analysis/search3/AN-17-303/resonantBkg/CP_background_py_xrange55-215_yrange55-215zrange1126-5000_HPLP.pdf}
-% \includegraphics[width=0.33\textwidth]{figures/analysis/search3/AN-17-303/resonantBkg/CP_background_pz_xrange55-215_yrange55-215zrange1126-5000_HPLP.pdf}
-% \caption{Projections of the sub-dominant backgrounds on the jet mass \MJO (top left) and jet mass \MJT (top right) as well as a projection on the dijet invariant mass \MVV (bottom). All projections shown are using the low purity selections.}
-% \label{fig:stack_res_bkg}
-% \end{figure}
-% These two parts are modeled separately for each jet mass .
-%
-% A three dimensional probability density function for the sub-dominant backgrounds is built as a product of one dimensional pdf's as follows:
-% \begin{align}
-% P_{Vjets} \left(\MJO, \MJT, \MVV \right) &= P_{dijet} \left( \MVV \right) \times  P_{jet1} \left( \MJO, \MJT \right) \times P_{jet2} \left( \MJT, \MJO \right) \\
-% P_{jet1} \left( \MJO, \MJT \right) &= f \times R(\MJT) \times P_{res} ( \MJO ) + (1-f) P_{non-res} (\MJO ) \\
-% P_{jet2} \left( \MJT, \MJO \right) &= (1-f) \times R(\MJO) \times P_{res} ( \MJT ) + f P_{non-res} (\MJT )~.
-% \end{align}
-% The contribution for the resonant and non-resonant part of the \MJ distributions is modelled separately in order to be able to correlate systematic uncertainties between real vector bosons in these background and the potential signal. $R(\MJ)$ parametrizes the correlation between \MJO and \MJT present for this background and $f$ is a fit parameter that is used to adjust the fraction of real vector boson jets in
-% \MJO compared to \MJT. It is fitted within a margin of 10\% around $f=0.5$, which is the value expected for a random sorting of jets.
-%
-% Since the contribution of the t$\bar{\text{t}}$ background is much smaller than the one coming from V+jets it will be modeled together with the W+jets contribution. All in all two different pdf's are built, one for the W+jets and t$\bar{\text{t}}$ background, and one for Z+jets. This  treatment allows us to fit the normalization for real W jets and real Z jets in data separately.
-% Since the statistic available from MC simulation for the high purity category is very low, the parametrization of this background is done only for the low purity category and the results from this are then used for both purity categories. The uncertainties for different categories are however included as separate nuisance parameters in the final fit.
-%
-%
-% For the non-resonant dijet invariant mass shape, the same kernel approach as for the QCD multijet background is used. Since the MC simulations for these minor background contain fewer events than is the case for the QCD multijet backgrounds, the final shapes for high masses are not smooth and have to be put through an additional smoothing procedure. This consists of fitting the tail of the \MVV distribution with a three parameter dijet function
-% \begin{equation}
-% \frac{\text{d} N}{\text{d} m} = \frac{P_0 (1-m/s)^{P_1}}{(m/s)^{P_2}}~,
-% \end{equation}
-% where $s$ is the center of mass energy. The function is fitted to the spectrum starting from a dijet mass of 1.1 (2.1)~TeV. The number of events in the final kernel is taken from the dijet function rather than from the smoothing starting from a mass of 1.4 (3.5)~TeV for high purity (low purity). The final 1D kernels are shown in Figure \ref{fig:Vjets_mvv} compared to MC simulation.
-%
-%
-% \begin{figure}[h]
-% \centering
-% \resizebox{0.49\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/resonantBkg/debug_mVV_kernels_WJets_HPHP.pdf}}
-% \resizebox{0.49\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/resonantBkg/debug_mVV_kernels_WJets_HPLP.pdf}}\\
-% \resizebox{0.49\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/resonantBkg/debug_mVV_kernels_ZJets_HPHP.pdf}}
-% \resizebox{0.49\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/resonantBkg/debug_mVV_kernels_ZJets_HPLP.pdf}}
-% \caption{Final one dimensional kernels for the non-resonant background compared to MC simulation for the HPHP category (left) and HPLP (right). The nominal shape derived from the smoothing procedure can be seen as blue line, alternative shapes derived from varying the slope of the \MVV spectrum are shown in green and red. The \MVV kernels for W+jets are shown on top, while the ones for Z+jets are on the bottom.}
-% \label{fig:Vjets_mvv}
-% \end{figure}
-%
-%
-%
-% The alternative shapes used for this background are derived the same way as done for the non-resonant background and are fitted in the final limit setting to accommodate mismodeling of the distribution for example due to higher order QCD and elektroweak corrections which are not considered in the MC simulation. The modeling of the \MJ spectrum is split into two parts, for the resonant and non-resonant part of the spectrum. The resonant events are separated from the non-resonant ones by requiring that there is a generated boson in a cone of $\Delta R = 0.8$ around the reconstructed merged jet. A double-sided crystal-ball function, which is the same shape also used for the modeling of the signal \MJ shapes, is then fitted to the resonant spectrum for W+jets and Z+jets separately. This treatment allows to fully correlate the uncertainties on the mean and width of the \MJ distribution with the signal, since these uncertainties affect all jets generated from real vector bosons in the same way.
-%
-% In Figure \ref{fig:Vjets_fits} the final fit of a double-sided crystal-ball function to the resonant part of the V+jets spectrum is shown.
-%
-% \begin{figure}[h]
-% \centering
-% \resizebox{0.45\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/resonantBkg/debugJl1_Wjets_TTbar_Res.pdf}}
-% \resizebox{0.45\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/resonantBkg/debugJl2_Wjets_TTbar_Res.pdf}}\\
-% \resizebox{0.45\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/resonantBkg/debugJl1_Zjets_Res.pdf}}
-% \resizebox{0.45\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/resonantBkg/debugJl2_Zjets_Res.pdf}}
-% \caption{Final fits for a double-sided crystal-ball function (blue line) to the resonant part of the V+jets spectrum (black markers) for W+jets (top) and Z+jets (bottom). The left figure shows \MJO the right \MJT, for low purity selections. }
-% \label{fig:Vjets_fits}
-% \end{figure}
-%
-% The modeling of the non-resonant part is less critical since this part of the spectrum is very similar to the shapes observed in QCD and can therefore be in parts absorbed into the extensive modelling of the QCD non-resonant backgrounds. For the sake of a better fit stability the non-resonant part of V+jets background is modeled nonetheless using a simple fit with a Gaussian to the non-resonant part of the spectrum as shown in Figure \ref{fig:Vjets_fits_nonRes}.
-%
-%
-% \begin{figure}[h]
-% \centering
-% \resizebox{0.45\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/resonantBkg/debugJl1_Wjets_TTbar_nonRes.pdf}}
-% \resizebox{0.45\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/resonantBkg/debugJl2_Wjets_TTbar_nonRes.pdf}}\\
-% \resizebox{0.45\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/resonantBkg/debugJl1_Zjets_nonRes.pdf}}
-% \resizebox{0.45\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/resonantBkg/debugJl2_Zjets_nonRes.pdf}}
-% \caption{Final fits for a Gaussian function (red line) to the non-resonant part of the V+jets spectrum (markers) for W+jets (top) and Z+jets (bottom). The left figure shows \MJO the right \MJT, for low purity selections. }
-% \label{fig:Vjets_fits_nonRes}
-% \end{figure}
-%
-%
-% Exhaustive testing shows that correlations between \MJ and the dijet invariant mass are small enough to be neglected in the modeling of these backgrounds, i.e. the shape of the jet mass spectrum does not significantly depend on the momentum of the jets. There is however a correlation between the two jet masses. This correlation stems from the fact that for the V+jets backgrounds one of the two jets in the final state originates from a real boson, while the second is a quark jet. Both of these jets have different distributions which means that depending on the fraction of real boson jets in \MJO the fraction of such jets in \MJT will change. For this reason the fraction real V jets over QCD jets is parametrized as a function of the jet mass. Since a random sorting of jets is used, the parametrization is done once as follows
-% \begin{align}
-% R(\MJ) &= \frac{N_{res,jet1}(\MJT)+N_{res,jet2}(\MJO)}{N_{non-res,jet1}(\MJT) + N_{non-res,jet2}(\MJO)}~.
-% \end{align}
-% Where $N(\MJ)$ denotes the number of events within a window of \MJ. The resulting ratio is fitted with a polynomial function as seen in figure \ref{fig:ratio_Vjets}.
-%
-% \begin{figure}[h]
-% \centering
-% \resizebox{0.49\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/resonantBkg/debug_corr_l1_l2_Wjets.pdf}}
-% \resizebox{0.49\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/resonantBkg/debug_corr_l1_l2_Zjets.pdf}}
-% \caption{Parametrization of the ratio of resonant to non-resonant V+jets events given as a function of the jet mass for W+jets plus t$\bar{\text{t}}$ processes (left) and Z+jets processes (right). }
-% \label{fig:ratio_Vjets}
-% \end{figure}
-%
-%
-% As closure test of the described method the full background model (V+jets contribution and QCD kernels) is fitted to the MC simulation for the minor backgrounds. The results of this fit can be seen in Figure \ref{fig:Vjets_closure} for different slices of \MJ and \MVV projected onto all three jet dimensions. Figure \ref{fig:Vjets_closureHPHP} shows the closure for the high purity category.
-%
-% \begin{figure}[h]
-% \centering
-% \resizebox{0.3\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_X-Proj._y_:_0,-1_z_:_0,-1}.pdf}}
-% \resizebox{0.3\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_Y-Proj._x_:_0,-1_z_:_0,-1}.pdf}}
-% \resizebox{0.3\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_Z-Proj._x_:_0,-1_y_:_0,-1}.pdf}}
-% \resizebox{0.3\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_X-Proj._y_:_0,-1_z_:_1000,1300}.pdf}}
-% \resizebox{0.3\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_X-Proj._y_:_0,-1_z_:_1300,2000}.pdf}}
-% \resizebox{0.3\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_X-Proj._y_:_0,-1_z_:_2000,5000}.pdf}}
-% \resizebox{0.3\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_Y-Proj._x_:_55,65_z_:_0,-1}.pdf}}
-% \resizebox{0.3\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_Y-Proj._x_:_65,85_z_:_0,-1}.pdf}}
-% \resizebox{0.3\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_Y-Proj._x_:_85,105_z_:_0,-1}.pdf}}
-% \resizebox{0.3\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_Y-Proj._x_:_105,215_z_:_0,-1}.pdf}}
-% \resizebox{0.3\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_Z-Proj._x_:_55,65_y_:_0,-1}.pdf}}
-% \resizebox{0.3\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_Z-Proj._x_:_65,85_y_:_0,-1}.pdf}}
-% \resizebox{0.3\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_Z-Proj._x_:_85,105_y_:_0,-1}.pdf}}
-% \resizebox{0.3\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_Z-Proj._x_:_105,215_y_:_0,-1}.pdf}}
-% \caption{Final fits of the complete background model (red line) to the MC simulation of the V+jets backgrounds (black markers) for the low purity category.}
-% \label{fig:Vjets_closure}
-% \end{figure}
-%
-%
-% \begin{figure}[h]
-% \centering
-% \resizebox{0.3\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_HPHP_X-Proj._y_:_0,-1_z_:_0,-1}.pdf}}
-% \resizebox{0.3\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_HPHP_Y-Proj._x_:_0,-1_z_:_0,-1}.pdf}}
-% \resizebox{0.3\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_HPHP_Z-Proj._x_:_0,-1_y_:_0,-1}.pdf}}\\
-% \caption{Final fits of the complete background model (red line) to the MC simulation of the V+jets backgrounds (black markers) for the high purity category.}
-% \label{fig:Vjets_closureHPHP}
-% \end{figure}
-
 
