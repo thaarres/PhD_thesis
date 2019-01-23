@@ -686,7 +686,7 @@ As summarized in Section~\ref{sec:searchIII:sysunc}, we add a list of systematic
 To quantify how much the nuisances we insert differs from the ones preferred by the fit, we compute the pull
 \begin{equation}
 p_{\theta} = (\theta - \theta_{in})/\sigma_\theta
-\end{equation}
+\end{equation}SLAC
 where $\theta_{in}$ is the nuisance value pre-fit, $\theta$ the corresponding parameter post-fit and $\sigma_\theta$ its error.
 and its error bar calculated as the ratio between post- and pre-fit uncertainty.
 Figure~\ref{fig:searchIII:pullsCombo1617} shows the pulls for a signal+background fit to the combined (2016+2017) dataset (left) and when fitting the two separately (right), here using a signal hypothesis corresponding to a 2 \TeV \BulkG.
@@ -705,4 +705,13 @@ Figure~\ref{fig:searchIII:pullsCombo1617} shows the pulls for a signal+backgroun
 \label{sec:outlook}
 In this chapter, we have followed the search for VV resonances in the all-hadronic final state through three stages: From being one of the first ever analysis in the ``boosted'' final state at 13 \TeV and the very first to take advantage of substructure at trigger level, through leading the development of a new W-tagging algorithm and mass corrections now default in CMS and finally ending with the development of a multi-dimensional fit for generic searches in jet groomed mass and dijet invariant mass.\par
 Each analysis has built on significant improvements that came with the analysis before it: The substructure triggers and mass corrected softdrop jet mass are both used for the 3D fit, the early discovery of the softdrop signal efficiency dependence on \PT led us to derive corrections for it. Now the question which remains is: \emph{What comes next?}.\par
-A few ideas were already mentioned in the introduction to Search III, Section~\ref{sec:searchIII}. The natural next step for this search, is an incorporation of the VH(bb) and H(bb)H(bb) final states into the three-dimensional fit. Orthogonality between the three would be done through b-tagging categories, as illust
+A few ideas were already mentioned in the introduction to Search III, Section~\ref{sec:searchIII}. The natural next step for this search is an incorporation of the VH(bb) and H(bb)H(bb) final states into the three-dimensional fit. Orthogonality between the three would be done through b-tagging categories, as illustrated in Figure~\ref{fig:outlook:vvvhhh}.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.79\textwidth]{figures/analysis/search3/misc/VVVHHH.png}
+\caption{The VV, VH(bb) and H(bb)H(bb) analyses could all be incorporated into the multidimensional framework. Orthogonality between the analyses could be ensured through b-tagging categories.}
+\label{fig:outlook:vvvhhh}
+\end{figure}
+This process is already underway, aiming for a publication of the full Run 2 dataset (data collected in 2016, 2017 and 2018) in one common framework.\par
+Beyond that, and perhaps more interestingly, would be the search for generic resonances peaking anywhere in the softdrop jet mass and dijet invariant mass, where the jets themselves could have other compositions than two subjets (for instance a scalar decaying to two vector bosons, whos decay products are merged into one jet; a 4-prong object). One caveat of the current setup is that it constrains the signal to be a 2-pronged object through its n-subjettiness cut. In order for the multi-dimensional framework to be truly generic, the tagger needs to be replaced by a generic anti-QCD tagger.
+
