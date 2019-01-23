@@ -392,4 +392,10 @@ J.~A. Aguilar-Saavedra, ``Stealth bosons and where to find them'', 2018, \url
 \href{http://www.arXiv.org/abs/1801.08129}{\texttt{arXiv:1801.08129}}.
 %%CITATION = ARXIV:1801.08129;%%.
 
+\bibitem{ATLAS-CONF-2018-016}
+\href {https://cds.cern.ch/record/2621302}{{ATLAS Collaboration} Collaboration,
+  ``{Search for diboson resonances in hadronic final states in 79.8 fb$^{-1}$
+  of $pp$ collisions at $\sqrt{s} = 13$ TeV with the ATLAS detector}'',}
+  Technical Report ATLAS-CONF-2018-016, CERN, Geneva, Jun, 2018.
+
 \end{thebibliography}\endgroup

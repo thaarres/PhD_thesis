@@ -553,17 +553,156 @@ Where $N(\MJ)$ denotes the number of events within a given \MJ window. The resul
 As a closure test, the three dimensional kernel as defined in Equation~\ref{eq:searchIII:vjetpdf} is fitted to the V+jets and \ttbar simulation. Figure~\ref{fig:searchIII:Vjets_closure} shows the fitted kernel (red) together with the MC data points (black markers) in the low (top) and high (bottom) purity categories. Mostly good agreement is observed along all dimensions, with some deviations in the very high \MVV tail in the high purity category. This is, however, a region dominated with very little statistics and is completely swallowed up by the QCD multijets background which has the same shape.
 \begin{figure}[h!]
 \centering
-\resizebox{0.329\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_X-Proj._y_:_0,-1_z_:_0,-1}.png}}
-\resizebox{0.329\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_Y-Proj._x_:_0,-1_z_:_0,-1}.png}}
-\resizebox{0.329\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_Z-Proj._x_:_0,-1_y_:_0,-1}.png}}
-\resizebox{0.329\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_HPHP_X-Proj._y_:_0,-1_z_:_0,-1}.png}}
-\resizebox{0.329\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_HPHP_Y-Proj._x_:_0,-1_z_:_0,-1}.png}}
-\resizebox{0.329\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_HPHP_Z-Proj._x_:_0,-1_y_:_0,-1}.png}}\\
+\resizebox{0.32\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_X-Proj._y_:_0,-1_z_:_0,-1}.png}}
+\resizebox{0.32\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_Y-Proj._x_:_0,-1_z_:_0,-1}.png}}
+\resizebox{0.32\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_Z-Proj._x_:_0,-1_y_:_0,-1}.png}}\\
+\resizebox{0.32\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_HPHP_X-Proj._y_:_0,-1_z_:_0,-1}.png}}
+\resizebox{0.32\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_HPHP_Y-Proj._x_:_0,-1_z_:_0,-1}.png}}
+\resizebox{0.32\textwidth}{!}{\includegraphics*{{figures/analysis/search3/AN-17-303/resonantBkg/PostFitVjetsMC_HPHP_Z-Proj._x_:_0,-1_y_:_0,-1}.png}}
 \caption{Final fits of the complete background model (red line) to the MC simulation of the V+jets backgrounds (black markers) for the high purity category.}
 \label{fig:searchIII:Vjets_closure}
 \end{figure}
 \clearpage
 
+\subsection{Systematic uncertainties}
+\label{sec:searchIII:sysunc}
+
+Systematic uncertainties are inserted as nuisance parameters in the fit and affect the normalization and shape of both signal and background.
+
+\subsubsection{Signal normalization uncertainties}
+As all background contributions are data driven, the largest systematic uncertainties affect only the signal.
+\begin{itemize}
+\item {\bf luminosity } 2.6\%(2.3\%) for the 2016(2017) dataset
+\item {\bf $\tau_{21}^{DDT}$ efficiency } 1-12\% systematic uncertainty on the signal efficiency scale factor for the $\tau_{21}^{DDT}$ selection (listed in Table~\ref{tab:wsf_total}). Anti-correlated between the HP and LP categories.
+\item {\bf $\tau_{21}^{DDT}$ \PT{} extrapolation } An additional uncertainty arising from the extrapolation of the V-tagging efficiency scale factors towards higher transverse momenta. Treated as correlated between the $\tau_{21}^{DDT}$ categories and is given as $3.9\% \times \ln(p_T/200~\GeV)$ and $8.5\% \times \ln(p_T/200~\GeV)$ for the LP and HP regions, respectively. 
+\item {\bf PDF and factorization/renormalization scale } 2\% uncertainty on the signal acceptance due to choice of PDFs and factorization/renormalization scale. 
+\end{itemize} 
+
+
+\subsubsection{Background normalization uncertainties}
+The QCD multijet background has a poorly known cross section and is therefore allowed to float within 50\% of the yield expected by simulation. For the resonant V+jets background, the following uncertainties on the normalization is added: One due to cross section ($\sim5\%$), one due to NLO QCD corrections ($\sim10\%$) and one due NLO electroweak corrections ($\sim15-35\%$).
+
+\subsubsection{Signal and resonant background shape uncertainties}
+There are two shape uncertainties correlated between the signal and V+jets background: Systematics due to jet mass scale (JMS) and jet mass resolution (JMR). These are evaluated in a \ttbar control region, listed in Table~\ref{tab:wsf_total}, and affect the mean and width of the jet mass PDFs. 
+Three additional shape uncertainties are added for the signal: Uncertainties due to jet energy scale (JES), jet energy resolution (JER) and PDF. The uncertainty due to JES/JER is evaluated by reweighting the transverse momentum of each MC event in signal MC, then fitting a Gaussian to the dijet invariant mass spectrum and calculating the change in the mean and variance with respect to no reweighting. These are then used as uncertainties on the signal \MVV shape (2\% for the dijet mass scale, 5\% for the resolution).\newline
+Uncertainties due to the PDF are evaluated by reweighting each event according to $\approx$~100 PDF variations. The impact on the signal shapes are again evaluated by fitting a Gaussian to the $m_{jet}$ and $m_{jj}$ distributions before and after changing PDF weights. The obtained variation is $<1\%$ for the 2017 signal MC, but slightly higher in 2016. An overall uncertainty on the acceptance of 3\% is therefore applied. 
+
+
+\subsubsection{Non-resonant background shape uncertianties}
+Alternate shapes for the non-resonant background components are added to the fit through vertical template morphing. This creates nuisance parameters for each additional shape shape, allowing the derived nominal 3D PDF to vary within the respective nuisances to match the data. Shape uncertainties that simultaneously affect all three dimensions are used, totaling to 5 to take all possible effects into account. The first effect accounts for variation of the underlying transverse momentum spectrum and is obtained through an alternate shape produced by varying the jet masses \MJ and dijet mass \MVV by a quantity proportional to \MVV and \MJ. The second effect considered is a variation of the scale, where the corresponding alternate shape is obtained by simultaneously varying \MJ and \MVV up and down by a quantity proportional to 1/\MVV and 1/\MJ.
+Finally, as we do no know a priori whether Nature behaves more like \PYTHIA{8}, \HERWIG{++} or \MADGRAPH{}+\PYTHIA{8}, we account for differences due to MC generation and parton shower modeling by adding three additional shapes corresponding to the PDFs obtained using different QCD MC generators.\newline
+Those five shape uncertainties are assigned very large pre-fit values (allowed to float within 33\%), effectively allowing the simulation to take any value to describe the data. The alternate shapes described above are shown in Figure~\ref{fig:searchIII:sys}, here for the 2017 analysis.
+
+\begin{figure}[h!]
+\centering
+\resizebox{0.3\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/backgroundFits/3Dkernels_HPHP_pythia_2017/cxSyst.png}}
+\resizebox{0.3\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/backgroundFits/3Dkernels_HPHP_pythia_2017/cySyst.png}}
+\resizebox{0.3\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/backgroundFits/3Dkernels_HPHP_pythia_2017/czSyst.png}}\\
+\resizebox{0.3\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/backgroundFits/3Dkernels_HPLP_pythia_2017/cxSyst.png}}
+\resizebox{0.3\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/backgroundFits/3Dkernels_HPLP_pythia_2017/cySyst.png}}
+\resizebox{0.3\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/backgroundFits/3Dkernels_HPLP_pythia_2017/czSyst.png}}
+\caption{The nominal MC data (markers) and smooth nominal kernel obtained from \PYTHIA{8} (black line), together with the five alternate shapes added to the fit as shape nuisance parameters. Here for the high (top) and low (bottom) categories.}
+\label{fig:searchIII:sys}
+\end{figure}
+\clearpage
+
+\subsection{Results}
+The distributions obtained from a combined fit to the observed data in 2016 and 2017 are shown in Fig.~\ref{fig:searchIII:finalPostFit}, with the corresponding predicted and observed number of background events in the signal region summarized in Table~\ref{tab:searchIII:ObsEvents}.
+\begin{table}[b]
+
+\centering
+\begin{tabular}{lcc} 
+ & HPHP & HPLP\\
+ \hline
+ \hline
+W+jets & 113.3 $\pm$ 18.1 & 4257.4 $\pm$ 257.0 \\
+            & 100.4 (exp.) & 4318.0 (exp.)\\
+Z+jets & 46.5 $\pm$ 8.3 & 1747.5 $\pm$ 163.7\\
+           & 50.2 (exp.) & 2159.0 (exp.) \\
+QCD  & 651.6 $\pm$ 4.0 & 51190.5 $\pm$ 313.1 \\
+          & 684.4 (exp.) & 53767.5 (exp.) \\
+\hline
+Observed yield & 778 $\pm$ 28 & 57227 $\pm$ 239\\
+Post-fit total background & 811.4 $\pm$ 20.3 & 57195.5 $\pm$ 436.8\\
+\hline
+\hline
+
+\end{tabular} 
+\caption{Expected and observed yields and their total uncertainty (stat.+sys.) in the two purity categories.} 
+\label{tab:searchIII:ObsEvents}
+\end{table}
+
+\begin{figure}[h!]
+\centering
+\resizebox{0.32\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_HPHP_unblind/PostFitComboHPHP_X-Proj__y___0_-1_z___0_-1.png}}
+\resizebox{0.32\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_HPHP_unblind/PostFitComboHPHP_Y-Proj__x___0_-1_z___0_-1.png}}
+\resizebox{0.32\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_HPHP_unblind/PostFitComboHPHP_Z-Proj__x___0_-1_y___0_-1.png}}\\
+\resizebox{0.32\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_HPLP_unblind/PostFitComboHPLP_X-Proj__y___0_-1_z___0_-1.png}}
+\resizebox{0.32\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_HPLP_unblind/PostFitComboHPLP_Y-Proj__x___0_-1_z___0_-1.png}}
+\resizebox{0.32\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_HPLP_unblind/PostFitComboHPLP_Z-Proj__x___0_-1_y___0_-1.png}}
+\caption{Postfit distribution after a fit to 2016 and 2017 data projected onto the \MJO (left), \MJT (middle), and \MVV (right) axis. Here for the HPHP (top) and HPLP (bottom) category. The background shape uncertainty is shown as a red shaded band,  and the statistical uncertainties of the data are shown as vertical bars. The overlaid signal distribution is arbitrarily normalized.}
+\label{fig:searchIII:finalPostFit}
+\end{figure}
+\subsubsection{Limits}
+As for Search I and Search II, exclusion limits on the cross section of the process $\text{X} \to VV$ are set in the context of the Bulk Graviton model and the HVT model~B scenario (again obtained using the asymptotic $\text{CL}_\text{S}$ method). Figure~\ref{fig:searchIII:limitsCombo} show the resulting expected and observed 95\% confidence level exclusion limits on the signal cross section as a function of the resonance mass for all signal models. The obtained limits are compared with the resonance production cross section times the branching fraction to $\PW\PW$, $\PZ\PZ$ and $\PW\PZ$.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/limits_BulkGWW_combo_2016_2017.png}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/limits_BulkGZZ_combo_2016_2017.png}\\
+\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/limits_WprimeWZ_combo_2016_2017.png}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/limits_ZprimeWW_combo_2016_2017.png}
+\caption{Expected limits obtained combining 35.9\fbinv and 41.4\fbinv of data of data after combining all purity categories for Bulk $G\rightarrow WW$ (top left), Bulk $G\rightarrow ZZ$ 
+(top right), $\PWpr\rightarrow WZ$ (bottom left) and $\PZpr\rightarrow WW$ (bottom right) signals.}
+\label{fig:searchIII:limitsCombo}
+\end{figure}
+To settle the question of whether the 3D fit method yields an improvement upon the 1D search method, we compare the limits obtained above to those obtained using the 1D fit method (the results from SearchII). In Figure~\ref{fig:limitsCompare} we see a 20--30\% improvement for all signal hypothesis with the new method (comparing the 1D and 3D 2016 limits only), and a total gain of about 35---40\% when combining the 2016 and 2017 datasets.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/limits_BulkGWW_compare.png}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/limits_BulkGZZ_compare.png}\\
+\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/limits_WprimeWZ_compare.png}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/limits_ZprimeWW_compare.png}
+\caption{CA comparison of the 3D expected limits split into dataset (2016 and 2017), to that obtained with the 1D fit using 2016 data. Here for $\BulkG\rightarrow WW$ (top left), $\BulkG\rightarrow ZZ$ (top right), $\PWpr\rightarrow WZ$ (bottom left) and $\PZpr\rightarrow WW$ (bottom right) signals.}
+\label{fig:limitsCompare}
+\end{figure}
+In Figure~\ref{fig:limitsCompareATLAS}, we additionally compare the 3D limits to those obtained by the ATLAS collaboration in a similar search~\cite{ATLAS-CONF-2018-016} and find this search to be up to 35\% more sensitive for the two signal scenarios considered (the \BulkG limits can not be compared due to different values of $\tilde{k}$).
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/limits_WprimeWZ_compare_ATLAS.png}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/limits_ZprimeWW_compare_ATLAS.png}
+\caption{A comparison of the limits obtained above, to those by the ATLAS collaboration in a similar search~\cite{ATLAS-CONF-2018-016}. Here for \PWpr (left) and \PZpr (right) signal hypotheses.}
+\label{fig:limitsCompareATLAS}
+\end{figure}
+Finally, in Figure~\ref{fig:limitsPerCat} we show a breakdown of the limits per purity category. As expected, the HPHP category dominates at low mass where background is high and the HPLP category dominates at high mass due to low background and high signal efficiency.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/limit_compare_BulkGWW_per_category.png}
+\caption{Limits split into purity categories (HPHP and HPLP) for a Bulk $G\rightarrow WW$ signal hypothesis.}
+\label{fig:limitsPerCat}
+\end{figure}
+
+\subsubsection{Pulls of nuisance parameters}
+As summarized in Section~\ref{sec:searchIII:sysunc}, we add a list of systematic uncertainties to the fit as nuisance parameters.
+To quantify how much the nuisances we insert differs from the ones preferred by the fit, we compute the pull
+\begin{equation}
+p_{\theta} = (\theta - \theta_{in})/\sigma_\theta
+\end{equation}
+where $\theta_{in}$ is the nuisance value pre-fit, $\theta$ the corresponding parameter post-fit and $\sigma_\theta$ its error.
+and its error bar calculated as the ratio between post- and pre-fit uncertainty.
+Figure~\ref{fig:searchIII:pullsCombo1617} shows the pulls for a signal+background fit to the combined (2016+2017) dataset (left) and when fitting the two separately (right), here using a signal hypothesis corresponding to a 2 \TeV \BulkG.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/postfitchecks/pulls_Combo1617.png}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/postfitchecks/pulls_16_vs_17.png}
+\caption{Pulls of each nuisance parameter for a combined signal+background fit to the combined 2016+2017 dataset (left) and when fitting the two separately.}
+\label{fig:searchIII:pullsCombo1617}
+\end{figure}
+
+
+\clearpage
+
 \section{Outlook}
 \label{sec:outlook}
-
+In this chapter, we have followed the search for VV resonances in the all-hadronic final state through three stages: From being one of the first ever analysis in the ``boosted'' final state at 13 \TeV and the very first to take advantage of substructure at trigger level, through leading the development of a new W-tagging algorithm and mass corrections now default in CMS and finally ending with the development of a multi-dimensional fit for generic searches in jet groomed mass and dijet invariant mass.\par
+Each analysis has built on significant improvements that came with the analysis before it: The substructure triggers and mass corrected softdrop jet mass are both used for the 3D fit, the early discovery of the softdrop signal efficiency dependence on \PT led us to derive corrections for it. Now the question which remains is: \emph{What comes next?}.\par
+A few ideas were already mentioned in the introduction to Search III, Section~\ref{sec:searchIII}. The natural next step for this search, is an incorporation of the VH(bb) and H(bb)H(bb) final states into the three-dimensional fit. Orthogonality between the three would be done through b-tagging categories, as illust
