@@ -145,7 +145,15 @@ The Lorentz Layer (LoLa) is responsible for encoding how particles move in space
   w^m_2\min d^2(x_{\mu,i}^{C},x_{\mu,j}^{C}) 
   \end{pmatrix}
 \end{equation}
-
+Going through from top to bottom, these are: The invariant mass of each four-vector, the transverse momentum, the energy together with a trainable weight, the sum of distances between the four-vector under consideration and every other column with two trainable weights and finally the minimum distance between the four-vector under consideration and every other column, also with two trainable weights. The Minkowski metric enters explicitly in the first and in the last four calculations, where the neural network is told to abide by the rules
+\begin{equation}
+  m^2 (x_{\mu,i}^{C}) = g^{\mu\nu}x_{\mu,i}^{C}x_{\nu,i}^{C}
+\end{equation}
+and
+\begin{equation}
+  d^2 (x_{\mu,i}^{C},x_{\mu,j}^{C}) = (x_{\mu,i}^{C}-x_{\mu,j}^{C})_{\mu} g^{\mu\nu} (x_{\mu,i}^{C}-x_{\mu,j}^{C})_{\nu}
+\end{equation}
+with $g^{\mu,\nu}=[-1,1,1,1]$, when calculating the invariant mass and distance between particles/subjets. This makes the neural network aware of which laws of physics apply when combining four-vectors.  
 \section{Decorrelating from mass and $p_{T}$}
 \section{Performance}
 \section{Model validation}
