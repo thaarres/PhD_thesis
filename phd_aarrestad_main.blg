@@ -8,45 +8,45 @@ Warning--I didn't find a database entry for "nsubjettiness"
 Warning--I didn't find a database entry for "ddt"
 Warning--I didn't find a database entry for "JME-16-003"
 Warning--I didn't find a database entry for "CMS-PAS-EXO-14-024"
-You've used 61 entries,
+You've used 63 entries,
             2537 wiz_defined-function locations,
-            1115 strings with 18799 characters,
-and the built_in function-call counts, 18302 in all, are:
-= -- 1988
-> -- 415
+            1129 strings with 19176 characters,
+and the built_in function-call counts, 18864 in all, are:
+= -- 2046
+> -- 445
 < -- 6
-+ -- 145
-- -- 84
-* -- 1563
-:= -- 2277
-add.period$ -- 94
-call.type$ -- 61
++ -- 154
+- -- 91
+* -- 1616
+:= -- 2354
+add.period$ -- 98
+call.type$ -- 63
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 61
-duplicate$ -- 1214
-empty$ -- 1885
-format.name$ -- 90
-if$ -- 4830
+cite$ -- 63
+duplicate$ -- 1245
+empty$ -- 1936
+format.name$ -- 97
+if$ -- 4975
 int.to.chr$ -- 0
-int.to.str$ -- 61
-missing$ -- 141
-newline$ -- 248
-num.names$ -- 48
-pop$ -- 344
+int.to.str$ -- 63
+missing$ -- 147
+newline$ -- 258
+num.names$ -- 50
+pop$ -- 356
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 687
+skip$ -- 698
 stack$ -- 0
-substring$ -- 617
-swap$ -- 513
+substring$ -- 623
+swap$ -- 522
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 105
-width$ -- 63
-write$ -- 755
+while$ -- 108
+width$ -- 65
+write$ -- 778
 (There were 5 warnings)

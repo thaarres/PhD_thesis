@@ -461,7 +461,7 @@ where $s_{i}, r_{i}$ are the scale and the resolution derived in the previous st
 The resulting kernel values are filled into a 2D histogram. This procedure is performed separately for \MJO and \MJT. To build the one-dimensional template for the dijet invariant mass the same procedure as above is used, with the exception that
 the smearing is done with one-dimensional Gaussian kernel only depending on $\MVV$.
 The templates are then added together to form a three-dimensional PDF. Finally, we fit this 3D PDF to QCD MC in order to remove any residual bias (mainly at the extreme ends of the spectra). The result is a full, smooth shape replacing the prediction from simulation.\par
-As the HPHP category is very limited in statistics, we rather build this template starting from the HPLP templates. This is done by fitting the HPLP 3D PDF to QCD MC in the HPHP category. Figure~\ref{fig:3DkernelsHPLPpythia} show the final templates (solid lines) together with the QCD MC (data points) derived from the 2017 MC in the HPLP (top) and HPHP category (bottom). Good agreement between QCD MC and templates in all three dimensions is observed, within statistical uncertainties. The corresponding distributions in 2016 MC can be found in Appendix~\ref{app:search3:2016kernels}.\par
+As the high purity category is limited by statistics, we rather build this template starting from the low purity templates. This is done by fitting the low purity 3D template to QCD MC in the high purity category. Figure~\ref{fig:searchIII:3Dkernels} show the final templates (solid lines) together with the QCD MC (data points) derived from the 2017 MC in the low purity (top) and high purity category (bottom). Good agreement between simulation and templates in all three dimensions is observed, within statistical uncertainties. The corresponding distributions in 2016 MC can be found in Appendix~\ref{app:search3:2016kernels}.\par
 \begin{figure}[h!]
 \centering
 \resizebox{0.3\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/backgroundFits/3Dkernels_HPLP_pythia_2017/cx.png}}
@@ -471,16 +471,16 @@ As the HPHP category is very limited in statistics, we rather build this templat
 \resizebox{0.3\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/backgroundFits/3Dkernels_HPHP_pythia_2017/cy.png}}
 \resizebox{0.3\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/backgroundFits/3Dkernels_HPHP_pythia_2017/cz.png}}
 \caption{Comparison between QCD MC simulation (markers) and kernels derived from generator level quantities (lines) for the HPHP (top) and HPLP (bottom) categories using 2017 MC. The kernels are shown for \MJO (left), \MJT (middle) and \MVV (right).}
-\label{fig:3DkernelsHPHPpythia}
+\label{fig:searchIII:3Dkernels}
 \end{figure}
-In order to validate the kernel transfer method, we check that we can fit a higher-statistics HPHP region by loosening the $\tau_{21}^{DDT}$ cut to 0.49. This results in 12 times more background events in the HPHP category, and should uncover whether any degeneracy is present in the fits themselves and whether HPLP indeed is capable of modeling HPHP, without being camouflaged by large error bars. The resulting kernel versus MC spectra are shown in Figure~\ref{fig:looseDDT_closure}. Good closure is observed in all three dimensions, demonstrating that the HPLP kernels adapt well to the HPHP MC data points even when statistics are sufficient, and we consider the method sound.
+In order to validate the kernel transfer method, we check that we can fit a higher-statistics high purity region by loosening the $\tau_{21}^{DDT}$ cut to 0.49. This results in 12 times more background events, and should uncover whether any degeneracy is present in the fits themselves and whether the low purity kernel indeed is capable of modeling the high purity region, without being camouflaged by large error bars. The resulting kernel versus MC spectra are shown in Figure~\ref{fig:searchIII:looseDDT_closure}. Good closure is observed in all three dimensions, demonstrating that the HPLP kernels adapt well to the HPHP MC data points even when statistics are sufficient, and we consider the method sound.
 \begin{figure}[h!]
 \centering
 \resizebox{0.3\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/backgroundFits/looseDDT_HPHP/cx.png}}
 \resizebox{0.3\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/backgroundFits/looseDDT_HPHP/cy.png}}
 \resizebox{0.3\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/backgroundFits/looseDDT_HPHP/cz.png}}
 \caption{Comparison between QCD MC simulation (markers) and kernels derived from generator level quantities (lines) in the HPHP category, using a looser cut on $\tau_{21}^{DDT}$.}
-\label{fig:looseDDT_closure}
+\label{fig:searchIII:looseDDT_closure}
 \end{figure}
 \clearpage
 
@@ -701,17 +701,23 @@ Figure~\ref{fig:searchIII:pullsCombo1617} shows the pulls for a signal+backgroun
 
 \clearpage
 
-\section{Outlook}
+\section{Summary and outlook}
 \label{sec:outlook}
-In this chapter, we have followed the search for VV resonances in the all-hadronic final state through three stages: From being one of the first ever analysis in the ``boosted'' final state at 13 \TeV and the very first to take advantage of substructure at trigger level, through leading the development of a new W-tagging algorithm and mass corrections now default in CMS and finally ending with the development of a multi-dimensional fit for generic searches in jet groomed mass and dijet invariant mass.\par
+In this chapter, we have followed the search for VV resonances in the all-hadronic final state through three stages and corresponding publications: From being one of the first ever analysis in the ``boosted'' final state at 13 \TeV and the very first to take advantage of substructure at trigger level, through leading the development of a new W-tagging algorithm and mass corrections now default in CMS and finally ending with the development of a multi-dimensional fit for generic searches in jet groomed mass and dijet invariant mass.\par
 Each analysis has built on significant improvements that came with the analysis before it: The substructure triggers and mass corrected softdrop jet mass are both used for the 3D fit, the early discovery of the softdrop signal efficiency dependence on \PT led us to derive corrections for it. Now the question which remains is: \emph{What comes next?}.\par
-A few ideas were already mentioned in the introduction to Search III, Section~\ref{sec:searchIII}. The natural next step for this search is an incorporation of the VH(bb) and H(bb)H(bb) final states into the three-dimensional fit. Orthogonality between the three would be done through b-tagging categories, as illustrated in Figure~\ref{fig:outlook:vvvhhh}.
+A few ideas were already mentioned in the introduction to Search III, Section~\ref{searchIII}. The natural next step for this search is an incorporation of the VH(bb) and H(bb)H(bb) final states into the three-dimensional fit. Orthogonality between the three is guaranteed through b-tagging categories, as illustrated in Figure~\ref{fig:outlook:vvvhhh}.
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.79\textwidth]{figures/analysis/search3/misc/VVVHHH.png}
-\caption{The VV, VH(bb) and H(bb)H(bb) analyses could all be incorporated into the multidimensional framework. Orthogonality between the analyses could be ensured through b-tagging categories.}
+\includegraphics[width=0.69\textwidth]{figures/analysis/search3/misc/VVVHHH.png}
+\caption{The VV, VH(bb) and H(bb)H(bb) analyses can all be incorporated into the multidimensional framework. Orthogonality between the analyses is ensured through b-tagging categories.}
 \label{fig:outlook:vvvhhh}
 \end{figure}
 This process is already underway, aiming for a publication of the full Run 2 dataset (data collected in 2016, 2017 and 2018) in one common framework.\par
-Beyond that, and perhaps more interestingly, would be the search for generic resonances peaking anywhere in the softdrop jet mass and dijet invariant mass, where the jets themselves could have other compositions than two subjets (for instance a scalar decaying to two vector bosons, whos decay products are merged into one jet; a 4-prong object). One caveat of the current setup is that it constrains the signal to be a 2-pronged object through its n-subjettiness cut. In order for the multi-dimensional framework to be truly generic, the tagger needs to be replaced by a generic anti-QCD tagger.
+Secondly, after 14 \TeV there will not be another increase in the collision center-of-mass energy at the LHC. That means that we want the best possible sensitivity when analyzing the dataset which is to come. One way of doing so is through changing the search method, as we did with the three dimensional fit, another is to work towards a better W-tagger.\par
+Beyond that, and perhaps more interestingly, is the search for generic resonances peaking anywhere in the softdrop jet mass and dijet invariant mass spectrum, where the jets themselves could have other compositions than two subjets (for instance a scalar decaying to two vector bosons, whos decay products are merged into one jet; a 4-prong object). One caveat of the current setup is that it constrains the signal to be a 2-pronged object through its n-subjettiness cut. In order for the multi-dimensional framework to be truly generic, the tagger needs to be replaced by a generic anti-QCD tagger. Such a tagger works as an anomaly detector by encoding the probability density function for quark/gluon jets as a function of certain variables, variables for which signal jets are assumed to have a different probability density.
+In our case, good variables would for instance be groomed mass or substructure, as any generic signal is assumed to be peaking in softdrop mass and have some (unknown) substructure. The tagger itself is given no information about what a potential signal looks like and will only return the probability of any jet being a QCD jet. Such taggers are usually deep neural network (DNN) based where the quark/gluon jet PDF is obtained through training of the network, as demonstrated in~\cite{Heimel:2018mkt,Aguilar-Saavedra:2017rzt}.\newline
+In order for such an encoding to work, the deep neural network needs access to the features distinguishing q/g jets from signal jets without these features being biased towards any signal in particular. The network must learn how to encode ``non-substructure''.\newline
+As a side project in parallel to working on the multi-dimensional fit, I spent the last half year of my PhD working on a deep neural network capable of discriminating q/g jets from W jets in order to improve W-tagging performance and improve the search sensitivity of VV analyses to come. Based solely on jet constituent four-vectors, thee idea is to let the neural network itself compute grooming and substructure like variables, without feeding it any high-level features (like softdrop mass and \nsubj). 
+This type of architecture is, in addition to improving W-tagging performance, ideal for the purpose described above: Encoding QCD in terms of substructure like features. The final chapter of this thesis is therefore dedicated to the two last points: How to improve W-tagging in CMS for future analyses and how to design a neural network capable of learning jet substructure in an unbiased manner.  
+\clearpage
 

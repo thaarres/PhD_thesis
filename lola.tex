@@ -1,7 +1,134 @@
-\section{Machine Learning: The future of high-performance, low-latency taggers}
+\vspace*{\fill}
+\begin{centering}
+\section{Infusing deep neural networks with physics}
+\label{sec:lolaintro}
+\textit{
+I ended the previous chapter by mentioning two ingredients that will become important for future searches with the multi-dimensional fit: A better vector boson tagger, and a generic anti-QCD tagger for signal independent searches. As a side project during my final PhD semester, I worked on a solution for the first, which has the added benefit of being a stepping stone towards the latter. This is what I will cover in the final chapter of this thesis.
+\newline
+\newline
+When applying machine learning to particle physics problems, the input has historically consisted of pre-computed high-level features (quantities based on lower-level variables and certain theoretical assumptions).
+With the rise of deep learning however, computational graphs have achieved an increased capability to find even the smallest correlations in datasets, allowing them to construct complex features on their own. The deep neural network (DNN) I will present in the following is based on the assumption that, given sufficient instructions about the laws of Nature, a neural network should be capable of reconstructing its own high-level features based on lower-level variables only. In addition, if smartly designed, the network should be capable of finding novel correlations and physical features, a-priori unknown, by allocating a physical meaning to the training weights deep within the network. The final question is therefore not ``What can I teach the machine?'', but rather ``What can I learn from the machine?''. The deep neural network I will present here, is trained to discriminate quark/gluon jets from W-jets. However, as I will discuss in the final section of this chapter, it is also the perfect starting point for developing a generic anti-QCD tagger.
+\newline
+\newline
+The work presented in the following has not been published and still qualifies as work in progress. However, I believe developing taggers such as these is of great importance for future versions of the searches presented here, and is something I hope to continue working on in the future.
+}
+\begin{figure}[b!] 
+    \centering
+    \includegraphics[width=6cm]{figures/vtagging/misc/cola.png}
+    \vspace*{10mm}
+    \caption*{\footnotesize{\textit{Work in progress}}}
+\end{figure}
+\end{centering}
+\clearpage
+\vspace*{\fill}
+
 \section{LoLa: A Lorentz Invariance Based Deep Neural Network for W-tagging}
-\subsection{Inputs}
+LoLa is a deep neural network architecture which was first introduced for top tagging~\cite{Butter:2017cot}. It is based on the idea that, given enough information about the laws of Nature, a neural network should be capable of calculating jet substructure observables on its own given only low-level information. The network is designed to discriminate between AK R=0.8 jets originating from W bosons from those originating from quarks or gluons, solely based on the jet constituent four-vectors (variables with little discriminating power on their own) as illustrated in Figure~\ref{fig:lola:4vec}.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.33\textwidth]{figures/vtagging/misc/4vec.png}
+\caption{LoLa uses only jet consituent four-vectors as input in order to discriminate W from light flavor jets.}
+\label{fig:lola:4vec}
+\end{figure}
+Rather than being fed high-level features, the neural network is given tools to perform calculations on Lorentz vectors using the Minkowski metric. Through two novel layers, linear combinations similar to jet clustering and jet substructure algorithms are performed, allowing the algorithm to create its own substructure variables. Additionally, training weights deep within the network correspond to physical quantities reconstructed by the algorithm; distance between particles, masses and energies, linear combinations of particle four-vectors etc.
+Besides the end goal of discriminating Ws from quarks and gluons, one could therefore hope to learn of new correlations separating QCD from vector boson jets.
+
+\subsection{Architecture}
+The LoLa architecture is designed as a four layer deep, feed-forward sequential network doing supervised learning on fixed size input vectors.
+Two novel layers are introduced, the Combination Layer (CoLa) and the Lorentz Layer (LoLa), which perform basic jet clustering and substructure calculations as well as implements the Minkowski metric.
+These two layers are then followed by two fully connected layers, consisting of 100 and 50 nodes respectively, before the final output is computed using a Softmax activation function, yielding output probabilities between 0 and 1. The loss function to be minimized is "categorical crossentropy" (or log loss) where the two categories in use are W versus non-W probabilities. Only the W jet probability is stored.
+The optimizer used in the training is the, now "standard", ADAM optimizer, which adapts the learning rate of the model parameters during training. The code itself is written using the Keras interface with a TensorFlow backend.
+The full architecture with input and output dimension per layer is shown in Figure~\ref{fig:lola:arch}.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.49\textwidth]{figures/vtagging/misc/architecture.png}
+\caption{The full LoLa architecture. ``In'' denotes the dimension of the input tensor to the given layer, ``Out'' is the output tensors dimensions.}
+\label{fig:lola:arch}
+\end{figure}
+In the following, each layer will be explained in detail.
+
+\subsection{Input}
+This algorithm is trained to discriminate between fully merged hadronic W-jets coming from the process $\BulkG \rightarrow WW \rightarrow q\bar{q}q\bar{q}$ (where $M_{\BulkG}=0.6-4.5\TeV$), and quark/gluon jets from a QCD sample generated with \PYTHIA{8}Pythia 8. All jets are clustered with the anti-\kt algorithm with a distance parameter of R=0.8, with the PUPPI pileup removal algorithm applied. In addition, they are required to have $\PT > 200 \GeV$ and $|\eta| < 2.5$. 
+Jets are defined as W-jets if they are matched to a generator level hadronically decaying W bosons, with the following matching criteria:
+The generated vector boson needs to be within $\Delta R < 0.6$ of the jet axis, and the quark decay products need to be within $\Delta R < 0.8$ of the jet axis. The \PT and $\eta$ distribution of signal and background jets, is shown in Figure~\ref{fig:lola:kinematics}.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.49\textwidth]{figures/vtagging/AN-18-099/input/inputs/sig-bkg/jpt.png}
+\includegraphics[width=0.49\textwidth]{figures/vtagging/AN-18-099/input/inputs/sig-bkg/jeta.png}\\
+\includegraphics[width=0.49\textwidth]{figures/vtagging/AN-18-099/input/inputs/sig-bkg/jtau21.png}
+\includegraphics[width=0.49\textwidth]{figures/vtagging/AN-18-099/input/inputs/sig-bkg/msoftdrop_beta0.png}
+\caption{Jet \PT (top left), $\eta$ (top right), \nsubj (bottom left) and softdrop jet mass (bottom right) for signal and background jets.}
+\label{fig:lola:kinematics}
+\end{figure}
+The jet \PT distribution is clearly very different between the two samples and, in order to avoid that the network learns jet \PT to be a discriminating feature, we compute a jet-by-jet weight intended to flatten the \PT spectrum during training (making high mass QCD jets and low mass signal jets count more during training). Figure~\ref{fig:lola:ptweight} shows the jet \PT distribution without any \PT-reweighting applied (solid lines) and after applying a \PT-weight (dashed lines). This weight will be used when computing the neural network loss function for a given jet, a process which will be explained further in Section~\ref{sec:lola:training}.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.49\textwidth]{figures/vtagging/AN-18-099/input/pt_reweighted/postWeight.png}
+\caption{Jet \PT distribution before (solid lines) and after (dashed line) applying a weight intended to flatten the jet \PT spectrum.}
+\label{fig:lola:ptweight}
+\end{figure}
+From these signal and background jets, only the jet constituent four vectors of the 20 highest-\PT particles are used as input to the deep neural network: $E$, $p_x$, $p_y$ and $p_z$. I use 20 constituents as any larger number has a negligible affect on the performance, while performance tends to drop once going below 15. The total number of jet constituents is shown in Figure~\ref{fig:lola:nconst}, and the input variables (here for all constituents) is shown in Figure~\ref{fig:lola:inputs}.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.49\textwidth]{figures/vtagging/AN-18-099/input/inputs/sig-bkg/nconst.png}
+\caption{The number of jet constituents for signal (red) and background (blue). Only the 20 highest-\PT constituents are used during training.}
+\label{fig:lola:nconst}
+\end{figure}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.49\textwidth]{figures/vtagging/AN-18-099/input/inputs/sig-bkg/pe.png}
+\includegraphics[width=0.49\textwidth]{figures/vtagging/AN-18-099/input/inputs/sig-bkg/ppx.png}\\
+\includegraphics[width=0.49\textwidth]{figures/vtagging/AN-18-099/input/inputs/sig-bkg/ppy.png}
+\includegraphics[width=0.49\textwidth]{figures/vtagging/AN-18-099/input/inputs/sig-bkg/ppz.png}
+\caption{Energy (top left), $p_x$ (top right), $p_y$ (bottom left) and $p_z$ (bottom right) for all jet constituents. These values are used as input to the neural network training.}
+\label{fig:lola:inputs}
+\end{figure}
+It is clear that the input variables contain little discriminating power on their own. Therefore, the network must learn how to extract
 \subsection{The Combination Layer}
+\label{sec:cola}
+The Combination Layer is a matrix operation performed on the input matrix in order to perform the following linear combinations of PF constituents, so-called "jet-clustering light".
+\begin{itemize}
+\item Sum of all momenta
+\item Each original constituent momenta
+\item Linear combinations of PF constituents with trainable weights (15 combinations).
+\end{itemize}
 \subsection{The Lorentz Layer}
 \section{Decorrelating from mass and $p_{T}$}
 \section{Performance}
+\section{Model validation}
+\label{sec:validation}
+
+The model is validated on independent samples as an unbiased measure of performance. These samples are listed in Table~\ref{tab:validationSamples}.
+For these studies we require only hadronically decaying W bosons, where the generated W follows the following criteria:
+\begin{itemize}
+\item $ 1000 \GeV < \PT < 1400 \GeV$
+\item $|\eta| < 1.5$
+\item Only use jets where the two W decay products are contained within the jet with $\Delta R < 0.8$
+\end{itemize}
+For the background, we require the same $\PT$ and $\eta$ cuts as for signal. The signal efficiency versus mistagging rate for LoLa compared to
+the standard PUPPI Softdrop + \nsubj tagger, is shown in Figure~\ref{roc_val}. As was pointed out in Section~\ref{sec:training}, a mass cut is not necessary when using LoLa, but have been added to this plot for completeness. A significant improvement in tagging efficiency is observed for LoLa compared to the default tagger. Also marked are the 30 percent signal efficiency working points which are used as reference working points for the following correlation study,
+
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.49\textwidth]{figures/vtagging/AN-18-099/validation/roc_ZpWqqvsQCD.pdf}\\
+
+\caption{Performance of LoLa and  PUPPI Softdrop + $\tau_{21}$background-signal efficiency plane. The PUPPI softdrop jet mass
+selection of $65 < M_{SD} < 105 GeV$, and the 30 percent efficiency points are indicated with symbols.}
+\label{fig:roc_val}
+\end{figure}
+
+
+\begin{figure}[htb]
+\centering
+
+\includegraphics[width=0.49\textwidth]{figures/vtagging/AN-18-099/validation/WtagSigEffvsjpt.pdf}
+\includegraphics[width=0.49\textwidth]{figures/vtagging/AN-18-099/validation/WtagSigEffvsnPV.pdf}\\
+\includegraphics[width=0.49\textwidth]{figures/vtagging/AN-18-099/validation/QCDMistagvsjpt.pdf}
+\includegraphics[width=0.49\textwidth]{figures/vtagging/AN-18-099/validation/QCDMistagvsnPV.pdf}
+
+
+\caption{Top: Efficiency of the LoLa selection corresponding to a 30 percent signal efficiency as a function of (left) \PT and (right) the number of reconstructed vertices. Bottom: Mistag rate of the LoLa selection corresponding to a 30 percent signal efficiency as a function of (left) \PT and (right) the number of reconstructed vertices.}
+\label{fig:eff_val}
+\end{figure}
+\clearpage
