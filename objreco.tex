@@ -24,6 +24,7 @@ Offline, all events are required to have at least one primary vertex reconstruct
 After track reconstruction, what remains is an incoherent collection of tracks, calorimeter clusters and hits in the muon chambers. In order to connect these, CMS uses an algorithm called Particle Flow (PF)~\cite{1748-0221-12-10-P10003} to combine the information obtained from all sub-detectors in order to infer which particles were actually produced in the event.
 The reconstructed physics object in the order of which they are reconstructed are
 \begin{itemize}
+  \itemsep0em 
   \item Muons, through hits in the tracker and in the muon chambers
   \item Charged hadrons, through hits in the tracker and energy deposits in the calorimeters
   \item Neutral hadrons, through energy deposits in the calorimeters but no hits in the tracker
@@ -51,6 +52,7 @@ momentum is required to be ~1. The electron candidates are then fit with a Gauss
 \label{subsub:objreco:muontracking}
 Muon tracking consists of two part: the muon spectrometer allows muons to be identified with high efficiency over the full pseudorapidity range, while maintaining a low background due to the absorbing calorimeter layers upstream. The inner tracker on the other hand, provides an accurate measurement of the muon momentum. Three muon quality flags are defined
 \begin{itemize}
+  \itemsep0em 
   \item Standalone muon: Muon tracks based on hits in the DT or CSC only
   \item Global muon: A standalone muon track matched to a track in the tracker if the track parameters of the two are compatible
   \item Tracker muon: An inner track with $\PT> 0.5 \GeV$, a total momentum greater than 2.5 \GeV and at least one muon segment matching the extrapolated inner track
