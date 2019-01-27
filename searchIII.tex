@@ -240,7 +240,7 @@ Following what was done in Section~\ref{sec:searchI:vtag} and~\ref{sec:searchII:
   \item Fail region: $0.43 < \nsubj \leq 0.79 \sim$ low purity
 \end{itemize}
 The obtained scale factors are listed in Tables~\ref{tab:wsf16} and~\ref{tab:wsf} for 2016 and 2017 data, respectively, with the corresponding simultaneous fits shown in Fig.~\ref{fig:simFit}. 
-The jet mass scale and resolution together with their are estimated in the same fits and also listed in Table~\ref{tab:wsf}. Two additional uncertainties are added: one due to generator differences and one due to NNLO corrections. These are evaluated by comparing the extracted efficiency with and without top \PT reweighting and when using \ttbar simulation produced with different generators. The scale factors, jet mass scale and jet mass resolution with their total uncertainty after adding systematics, are listed in Table~\ref{tab:wsf_total}. As before, the scale factor is added as a scale of the the signal yield and the jet mass scale and resolution are used to smear MC, and are additionally inserted as systematic uncertainties in the final fit (scale up/down).
+The jet mass scale and resolution together with their are estimated in the same fits and also listed in Table~\ref{tab:wsf}. Two additional uncertainties are added: one due to generator differences and one due to NNLO corrections. These are evaluated by comparing the extracted efficiency with and without top \PT reweighting (a weight derived from data in order to better describe the observed \PT distribution. Calculated for each top jet as $w=\exp^{0.0615-0.0005*p_{T,top}}$) and when using \ttbar simulation produced with different generators. The scale factors, jet mass scale and jet mass resolution with their total uncertainty after adding systematics, are listed in Table~\ref{tab:wsf_total}. As before, the scale factor is added as a scale of the the signal yield and the jet mass scale and resolution are used to smear MC, and are additionally inserted as systematic uncertainties in the final fit (scale up/down).
  \begin{table}[htbp]
     \centering
     \begin{tabular}{|lccc|}
@@ -287,7 +287,7 @@ The jet mass scale and resolution together with their are estimated in the same 
     \caption{Jet mass scale, jet mass resolution and $\tau_{21}^{DDT}$ scalefactors as evaluated in the full 2017 Single Muon dataset.}
     \label{tab:wsf}
  \end{table}
- \begin{figure}[htbp]
+ \begin{figure}[h!]
  \centering
  \begin{tabular}{cc}
  \includegraphics[width=0.49\textwidth]{figures/analysis/search3/AN-17-303/vtag/newddt_2016_pass.pdf}
@@ -322,8 +322,45 @@ The jet mass scale and resolution together with their are estimated in the same 
     \end{table}
 
 
-
-As the $\tau_{21}^{DDT}$ working point used for this search is so tight, the statistics when evaluating data to simulation scalefactors are very low in the pass category. A \PT-binned measurement has therefore not been possible. In order to get a feeling for how W-tagging efficiency, jet mass scale and mass resolution scale factors change with jet transverse momentum, we do a measurement in 5 different \PT bins using the looser tagger PUPPI softdrop + \nsubj tagger.
+\subsubsection{\PT dependence}
+As the $\tau_{21}^{DDT}$ working point used for this search is so tight, the statistics when evaluating data to simulation scalefactors are very low in the pass category. A \PT-binned measurement has therefore not been possible. In order to get a feeling for how W-tagging efficiency, PUPPI softdrop jet mass scale and mass resolution scale factors change with jet transverse momentum, we do a measurement in 4 different \PT bins using the looser PUPPI softdrop + \nsubj tagger. The systematics are evaluated the same way as above (one due to top \PT reweighing and one comparing different \ttbar samples). Figure~\ref{fig:searchIII:sfvspt} shows the extracted W-tagging efficiency for data (black markers) and for simulation (red markers) using a PUPPI softdrop + $\nsubj<0.4$ based tagger as a function of jet \PT. The inclusive efficiency measurement is marked with triangles. The lower panel shows the efficiency ratio of data over simulation, corresponding to the W-tagging scale factor. All scale factors are compatible with unity, but the uncertainty on the measurement grows as statistics decrease. The corresponding extracted scale factors are listed in Table~\ref{tab:searchIII:sfptdep}.
+ \begin{figure}[h!]
+ \centering
+ \includegraphics[width=0.49\textwidth]{figures/vtagging/2017_sf/sd_vPt.pdf}
+ \caption{The W-tagging efficiency in data (black circles) and in simulation (red circles) as a function of jet \PT. The \PT-inclusive measurement is marked with triangles. The lower panel shows the efficiency in data divided by the efficiency in simulation, corresponding to the W-tagging uncertainty. The blue bands mark the fit and systematic uncertainties.}
+ \label{fig:searchIII:sfvspt}
+ \end{figure}
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|l|c|c|}
+    \hline
+     Bin & SF $\pm \sqrt{\textrm{Stat.} \pm \textrm{Sys}_{Generator} \pm \textrm{Sys}_{NNLO}}$ & SF $\pm$ Total Unc. \\
+\hline
+200 - 250 GeV  & $1.019  \pm \sqrt{ 0.064^2 + 0.005^2 + 0.022^2 }$ & $1.02 \pm 0.07$\\
+250 - 300 GeV  & $1.058  \pm \sqrt{ 0.055^2 + 0.033^2 + 0.002^2 }$ & $1.06 \pm 0.06$\\
+300 - 350 GeV  & $0.998  \pm \sqrt{ 0.087^2 + 0.035^2 + 0.007^2 }$ & $1.00 \pm 0.09$\\
+350 - 600 GeV  & $0.898  \pm \sqrt{ 0.097^2 + 0.089^2 + 0.007^2 }$ & $0.90 \pm 0.13$\\
+\hline
+$\geq$ 200 GeV & $0.974  \pm \sqrt{ 0.029^2 + 0.055^2 + 0.015^2 }$ & $0.97 \pm 0.06$\\
+    \hline
+    \end{tabular}
+    \caption{The data to simulation scalefactor scale factor for the PUPPI softdrop + \nsubj based tagger in bins of jet \PT. All scalefactors are compatible with unity.}
+    \label{tab:searchIII:sfptdep}
+ \end{table}
+With the observation of this clear trend of an uncertainty increase as a function of \PT, we evaluate a \PT-dependent W-tagging scalefactor uncertainty in the following way: Using signal Monte Carlo generated with two different shower generators, \PYTHIA{8} and \HERWIG{++}, we compute the difference in tagging efficiency between the two at low-\PT, where we have a real measurement in data, and compare that to the difference in tagging efficiency between the two at high-\PT. In other words, we take a double ratio 
+\begin{equation}
+  \sigma_{p_{T,\textrm{Bin}=i}}=\frac{ (\frac{\epsilon_{\PYTHIA}}{\epsilon_{\HERWIG}})_{p_{T,\textrm{Bin}=i}}} {(\frac{\epsilon_{\PYTHIA}}{\epsilon_{\HERWIG}})_{500 \GeV}}
+  \end{equation}
+This parametrization is then applied as a growing uncertainty on the signal yield as a function of resonance mass, where $p_{T,\textrm{Bin}=i}=M_{X,i}/2$, due to an uncertainty on the W-tagging efficiency. In contrast with what was found for the \nsubj based tagger (Section~\ref{sec:searchI:wtagsystematic}), where this uncertainty grew logarithmically with \PT, we find that the corresponding double ratio stabilizes around 1 \TeV when using \ddt and is better described by a sigmoid function. The resulting parametrization is shown in Figure~\ref{fig:searchIII:tau21ptdep}.
+ \begin{figure}[h!]
+ \centering
+ \includegraphics[width=0.49\textwidth]{figures/vtagging/2017_sf/ptdep.png}
+ \caption{The parametrized uncertainty on W-tagging efficiency as a function of resonance mass ($2\times \PT$) extracted using the difference in tagging efficiency between \PYTHIA and \HERWIG{++} Monte Carlo relative to the difference at 500 \GeV}
+ \label{fig:searchIII:tau21ptdep}
+ \end{figure}
+ 
+In addition to measuring the tagging \PT dependence we also extract the change in PUPPI softdrop jet mass scale and resolution as a function of \PT, as this should be roughly the same independent of whether \nsubj or \ddt is used. We find that the jet mass scale ranges between 0.5 and 2.5\%, and the jet mass resolution between 4 and 10\%, the latter measurement not being statistically significant as the uncertainties are large, around $\sim10\%$). We therefore use a fixed uncertainty of 2 and 10\% for the PUPPI softdrop jet mass scale and resolution, respectively, which should be sufficient to cover a broadening and a shift at high \PT.
+   
 \clearpage    
 \subsection{The multidimensional fit}
 As mentioned in the introduction to this chapter, the three-dimensional fit method takes advantage of the fact that the signal peaks in three dimensions; dijet invariant mass ($\MVV$) and the jet groomed mass of jet 1 and jet 2 ($\MJO$ and $\MJT$) and attempt to extract the signal from the three dimensional $\MJO$(x)-$\MJT$(y)-$\MVV$(z) plane.
@@ -336,7 +373,7 @@ In order to do so, four different types of PDFs need to be created in order to h
 \end{figure}
 \begin{itemize}
   \item \textbf{Signal 3D PDF:} Resonant in x, y and z. Parametrized as function of the resonance mass \mX
-  \item \textbf{Non-resonant background:} Non-resonant in x, y and z and dominant background. Created through a foorward folding kernel approach
+  \item \textbf{Non-resonant background:} Non-resonant in x, y and z and dominant background. Created through a forward folding kernel approach
   \item \textbf{Resonant background:} Mainly W/Z+jets (some \ttbar). Resonant in x and y, smoothly falling in z.
   \item \textbf{Alternative shapes:} 5 additional shape uncertainties implemented through vertical morphing  
 \end{itemize}
@@ -355,7 +392,7 @@ For the resonance mass \MVV, the sum of a crystal-ball function and a Gaussian s
 Figure~\ref{fig:MVVShapeParam} shows the derived parameters and interpolation as a function of resonance mass.
 The final \MVV shapes as extracted from the parametrization are shown in Figure~\ref{fig:MVVfromjson}.
 
-\begin{figure}[htpb]
+\begin{figure}[h!]
 \centering
 \resizebox{0.4\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/signalFits/Signal_mVV_MEAN.pdf}}
 \resizebox{0.4\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/signalFits/Signal_mVV_SIGMA.pdf}}\\
@@ -376,7 +413,7 @@ The final \MVV shapes as extracted from the parametrization are shown in Figure~
 \end{figure}
 The same procedure is used to model the jet mass: The \MJO spectrum for each resonance mass hypothesis is fitted using a double Crystal-ball function, the fitted parameters are extracted and interpolated as functions of the resonance mass. 
 This is done separately for $\MJO$ and $\MJT$. The fitted parameters and interpolations are shown in Figure~\ref{fig:MJet1ShapeParam} for \MJO, the corresponding distributions for \MJT are in Appendix~\ref{app:search3:sigfits}.
-\begin{figure}[htpb]
+\begin{figure}[h!]
 \centering
 \resizebox{0.4\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/signalFits_2016/Signal_mjetl1_mean.pdf}}
 \resizebox{0.4\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/signalFits_2016/Signal_mjetl1_sigma.pdf}}\\
@@ -396,7 +433,7 @@ The final \MJO shapes as extracted from the parametrization are shown in Figures
 \end{figure}
 Finally, the signal yield is parametrized as a function of the resonance mass. For each mass point $M_X$ and each purity category, the signal yield per picobarn of cross section is calculated as the integral of the Monte Carlo histogram.
 The yields are then interpolated as a function of $M_X$. The signal efficiency as a function of resonance mass is shown in Figure~\ref{fig:SignalYields}.
-\begin{figure}[htpb]
+\begin{figure}[h!]
 \centering
 \resizebox{0.6\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/signalFits_2016/signalEff.pdf}}
 \caption{Signal efficiency as a function of resonance mass.}
@@ -489,7 +526,7 @@ In order to validate the kernel transfer method, we check that we can fit a high
 
 \subsection{Modeling of the resonant background}
 \label{sec:resbkgd}
-In addition to the QCD multijet background, there are a few sub-dominant processes to consider which contain one real vector boson and at least one QCD-jet. These are W+jets, Z+jets and events from \ttbar processes. They are resonant around the W/Z mass in the two softdrop jet mass dimensions and must threfore be treated differently than the non-resonant QCD background. Figure \ref{fig:stack_res_bkg} shows the projections on \MJO (left), \MJT (middle) and \MVV (right).
+In addition to the QCD multijet background, there are a few sub-dominant processes to consider which contain one real vector boson and at least one QCD-jet. These are W+jets, Z+jets and events from \ttbar processes. They are resonant around the W/Z mass in the two softdrop jet mass dimensions and must therefore be treated differently than the non-resonant QCD background. Figure \ref{fig:stack_res_bkg} shows the projections on \MJO (left), \MJT (middle) and \MVV (right).
 \begin{figure}[h!]
  \includegraphics[width=0.329\textwidth]{figures/analysis/search3/AN-17-303/resonantBkg/CP_background_px_xrange55-215_yrange55-215zrange1126-5000_HPLP.pdf}
  \includegraphics[width=0.329\textwidth]{figures/analysis/search3/AN-17-303/resonantBkg/CP_background_py_xrange55-215_yrange55-215zrange1126-5000_HPLP.pdf}
@@ -515,7 +552,7 @@ The non-resonant \MVV PDF is constructed using the same kernel approach as is us
 \begin{equation}
 \frac{\text{d} N}{\text{d} m_{jj}} = \frac{P_0 (1-m_{jj}/s)^{P_1}}{(m_{jj}/s)^{P_2}}
 \end{equation}
-is performed. Here, $s$ is the center of mass energy. The function is fitted to the spectrum starting from a dijet mass of 1.1 (2.1)~TeV for high purity (low purity). Two uncertainties on this shape is added in order to accommodate for MC mis-modelig due to higher order QCD and electroweak corrections: One proportional to \MVV and one proportional to 1/\MVV. The resulting \MVV kernels (solid lines) for the W+jets background are shown in Figure \ref{fig:Vjets_mvv} and are compared to MC simulation (markers). The blue line corresponds to the nominal shape, while the red and green lines correspond to the uncertainties proportional to \MVV and 1/\MVV, respectively. The corresponding distributions for the Z+jets background are shown in Appendix~\ref{app:search3:resbkg}.\par
+is performed. Here, $s$ is the center of mass energy. The function is fitted to the spectrum starting from a dijet mass of 1.1 (2.1)~TeV for high purity (low purity). Two uncertainties on this shape is added in order to accommodate for MC mis-modeling due to higher order QCD and electroweak corrections: One proportional to \MVV and one proportional to 1/\MVV. The resulting \MVV kernels (solid lines) for the W+jets background are shown in Figure \ref{fig:Vjets_mvv} and are compared to MC simulation (markers). The blue line corresponds to the nominal shape, while the red and green lines correspond to the uncertainties proportional to \MVV and 1/\MVV, respectively. The corresponding distributions for the Z+jets background are shown in Appendix~\ref{app:search3:resbkg}.\par
 \begin{figure}[h]
 \centering
 \resizebox{0.49\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/resonantBkg/debug_mVV_kernels_WJets_HPHP.png}}
@@ -717,7 +754,7 @@ A few ideas were already mentioned in the introduction to Search III, Section~\r
 \end{figure}
 This process is already underway, aiming for a publication of the full Run 2 dataset (data collected in 2016, 2017 and 2018) in one common framework.\par
 Secondly, after 14 \TeV there will not be another increase in the collision center-of-mass energy at the LHC. That means that we want the best possible sensitivity when analyzing the dataset which is to come. One way of doing so is through changing the search method, as we did with the three dimensional fit, another is to work towards a better W-tagger.\par
-Beyond that, and perhaps more interestingly, is the search for generic resonances peaking anywhere in the softdrop jet mass and dijet invariant mass spectrum, where the jets themselves could have other compositions than two subjets (for instance a scalar decaying to two vector bosons, whos decay products are merged into one jet; a 4-prong object). One caveat of the current setup is that it constrains the signal to be a 2-pronged object through its n-subjettiness cut. In order for the multi-dimensional framework to be truly generic, the tagger needs to be replaced by a generic anti-QCD tagger. Such a tagger works as an anomaly detector by encoding the probability density function for quark/gluon jets as a function of certain variables, variables for which signal jets are assumed to have a different probability density.
+Beyond that, and perhaps more interestingly, is the search for generic resonances peaking anywhere in the softdrop jet mass and dijet invariant mass spectrum, where the jets themselves could have other compositions than two subjets (for instance a scalar decaying to two vector bosons, who's decay products are merged into one jet; a 4-prong object). One caveat of the current setup is that it constrains the signal to be a 2-pronged object through its n-subjettiness cut. In order for the multi-dimensional framework to be truly generic, the tagger needs to be replaced by a generic anti-QCD tagger. Such a tagger works as an anomaly detector by encoding the probability density function for quark/gluon jets as a function of certain variables, variables for which signal jets are assumed to have a different probability density.
 In our case, good variables would for instance be groomed mass or substructure, as any generic signal is assumed to be peaking in softdrop mass and have some (unknown) substructure. The tagger itself is given no information about what a potential signal looks like and will only return the probability of any jet being a QCD jet. Such taggers are usually deep neural network (DNN) based where the quark/gluon jet PDF is obtained through training of the network, as demonstrated in~\cite{Heimel:2018mkt,Aguilar-Saavedra:2017rzt}.\newline
 In order for such an encoding to work, the deep neural network needs access to the features distinguishing q/g jets from signal jets without these features being biased towards any signal in particular. The network must learn how to encode ``non-substructure''.\newline
 As a side project in parallel to working on the multi-dimensional fit, I spent the last half year of my PhD working on a deep neural network capable of discriminating q/g jets from W jets in order to improve W-tagging performance and improve the search sensitivity of VV analyses to come. Based solely on jet constituent four-vectors, thee idea is to let the neural network itself compute grooming and substructure like variables, without feeding it any high-level features (like softdrop mass and \nsubj). 
