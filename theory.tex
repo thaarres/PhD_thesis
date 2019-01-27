@@ -1,5 +1,5 @@
-\section{The Standard Model Lagrangian}
-Everything this thesis is built on, has its roots in the Standard Model. The Standard Model of particle physics (SM) addresses the question \emph{What is matter made of?} on the smallest possible scale. It maps the fundamental constituents of the universe together through the forces that bind them, hoping to provide a complete picture of the laws of nature. The Standard Model is formulated as a quantum field theory, where the fundamental particles are fermions who interact with one another through the exchange of bosons. These interaction comes in three forms, each mediated by three different bosons: The electromagnetic force, mediated through photons, the weak force, mediated through W and Z bosons, and the strong force, mediated by gluons. How the fundamental particles interact, also defines which properties they exhibit. In addition, the Standard Model includes a field very different from the others, the Higgs field. The Higgs field is felt by both fermions and bosons and is what gives all particles their mass.\newline
+\section{The Standard Model}
+Everything this thesis is built on, has its roots in the Standard Model. The Standard Model of particle physics (SM) addresses the question \emph{What is matter made of?} on the smallest possible scale. It maps the fundamental constituents of the universe together through the forces that bind them, hoping to provide a complete picture of the laws of nature. The Standard Model is formulated as a quantum field theory, where the fundamental particles are spin-1/2 fermions which interact with one another through the exchange of bosons. These interaction comes in three forms, each mediated by three different types of gauge bosons: The electromagnetic force, mediated through photons, the weak force, mediated through W and Z bosons, and the strong force, mediated by gluons. How the fundamental particles interact, also defines which properties they exhibit. In addition, the Standard Model includes a field very different from the others, the Higgs field. The Higgs field is felt by both fermions and bosons and is what gives all particles their mass.\newline
 One thing the Standard Model fails to incorporate, is the force of gravity. This shortcoming is one of the main motivations for looking for alternative models beyond the Standard Model (BSM), which is the main topic of this thesis.
 
 \subsection{Fundamental particles: Quarks and leptons}
@@ -12,20 +12,21 @@ Leptons are particles with integer or zero electric charge (defined in units of 
 \begin{pmatrix} \tau    \\ \nu_{\tau} \end{pmatrix}
 \end{equation}
 The leptons come in two states; positively charged and negatively charged, where charged is defined in unit of electron charge $e$. The base state is negatively charged, $e^{-}$, $\mu^{-}$, and $\tau^{-}$,  whereas the positively charged leptons,  $e^{+}$, $\mu^{+}$, and $\tau^{+}$ are considered their anti-particles states.
-Each lepton generation is assigned its own quantum number $L$ which must be conserved after any process. A summary of the lepton properties is listed in Table~\ref{table:theory:lepprop}.
+% Each lepton generation is assigned its own quantum number $L$ which must be conserved after any process.
+A summary of the lepton properties is listed in Table~\ref{table:theory:lepprop}.
 \begin{table}[h!]
 \begin{center}
-\begin{tabular}{|c|c|c| c c c|}
+\begin{tabular}{|c|c|c|}% c c c|}
 \hline
-Lepton        & Mass           & Charge & $L_{e}$ & $L_{\mu}$ & $L_{\tau}$ \\
+Lepton        & Mass           & Charge \\%& $L_{e}$ & $L_{\mu}$ & $L_{\tau}$ \\
 \hline
-$e^{-}$      & $0.5 \mbox{ MeV}$   & $e$ & 1       & 0         & 0 \\
-$\mu^{-}$    & $106 \mbox{ MeV}$   & $e$ & 0       & 1         & 0 \\
-$\tau^{-}$   & $1777 \mbox{ MeV}$  & $e$ & 0       & 0         & 1 \\
-\hline
-$\nu_{e}$    & $< 3 \mbox{ eV}$       & $0$    & 1       & 0         & 0 \\
-$\nu_{\mu}$  & $< 0.19 \mbox{ MeV}$   & $0$    & 0       & 1         & 0 \\
-$\nu_{\tau}$ & $< 18.2 \mbox{ MeV}$   & $0$    & 0       & 0         & 1 \\
+$e^{-}$      & $0.5 \mbox{ MeV}$      & $e$ \\%& 1       & 0         & 0 \\
+$\mu^{-}$    & $106 \mbox{ MeV}$      & $e$ \\%& 0       & 1         & 0 \\
+$\tau^{-}$   & $1777 \mbox{ MeV}$     & $e$ \\%& 0       & 0         & 1 \\
+\hline                                      
+$\nu_{e}$    & $< 3 \mbox{ eV}$       & $0$ \\%   & 1       & 0         & 0 \\
+$\nu_{\mu}$  & $< 0.19 \mbox{ MeV}$   & $0$ \\%   & 0       & 1         & 0 \\
+$\nu_{\tau}$ & $< 18.2 \mbox{ MeV}$   & $0$ %   & 0       & 0         & 1 \\
 \hline
 \end{tabular}
 \end{center}
@@ -62,12 +63,22 @@ b & $4.0-4.4 \mbox{ GeV}$     & $-\frac{1}{3} e$            \\%& Bottom = -1 \\
 \end{table}
 These 12 fermions, together with their corresponding anti-particles, represent the fundamental particles of the Universe and build up all matter we see around us. We categorize them through which forces they interact with, the fundamental forces, which also has a large impact on the particles properties.
 There are four fundamental forces that we know of: Gravity, electromagnetism, the weak force and the strong force. Gravity is so weak compared to the other forces, that it can safely be ignored in the energy domain we probe in this thesis. 
-All particles which are electrically charged, interact through the electromagnetic force. In our tables above, that includes the charged leptons ($e$, $\mu$ and $\tau$) and all of the quarks. These interactions are governed by the laws of Quantum Electro Dynamics (QED). All of the fermions, now also including the neutral neutrinos, feel the weak force and undergo weak interactions. The weak force is mediated through vector bosons (W and Z) and it is only due to the fact that the quarks feel this force, that we can look for vector bosons decaying into quarks in this thesis. Finally, we have the strong force. Only quarks interact via the strong force, and it is that interaction that makes the quarks so fundamentally different from electrons and neutrinos. The strong force keeps us from observing quarks as free particles, and keep them in bound states referred to as \emph{hadrons}. Their interaction is governed by the laws of Quantum Chromodynamics (QCD). All of these interactions can be represented in one common framework, the Standard Model.
-\subsection{The Standard Model Fields}
-\label{sec:theory:ew}
+All particles which are electrically charged, interact through the electromagnetic force. In our tables above, that includes the charged leptons ($e$, $\mu$ and $\tau$) and all of the quarks. These interactions are governed by the laws of Quantum Electro Dynamics (QED), and is mediated through the massless and electrically neutral spin-1 photons. All of the fermions, now also including the neutral neutrinos, feel the weak force and undergo weak interactions. The weak force is mediated through vector bosons (W and Z), heavy charged particles of spin-1. Finally, we have the strong force, mediated by the massless and electrically natural spin-1 gluon. Only quarks interact via the strong force, and it is that interaction that makes the quarks so fundamentally different from electrons and neutrinos. The strong force keeps us from observing quarks as free particles, and keep them in bound states referred to as \emph{hadrons}. Their interaction is governed by the laws of Quantum Chromodynamics (QCD). All of these interactions can be represented in one common gauge theory, the Standard Model.
+\subsection{The Standard Model Lagrangian}
+\label{sec:theory:gauge}
+The Standard Model is a quantum field theory where each particle is described as a dynamical field that spreads through all of space-time. These fields are governed by a Lagrangian density function, the Standard Model Lagrangian, where all interactions between the fundamental particles due to the effects of the fundamental forces (not including gravity), can be described as changes in this Lagrangian of quantum fields: The spin-0 Higgs field, the spin-1/2 fermion fields and the spin-1 gauge boson fields. The Standard Model Lagrangian is required to be invariant under local transformations (transformations which are different at every point in spacetime) of its gauge group. All the particle fields are representations of this symmetry group, which obeys global Poincaré symmetry: Invariance under translations in spacetime, rotations in space and boosts. In order to describe the electromagnetic, strong and weak interactions, the gauge group of the Standard Model is the direct product
+\begin{equation}
+  SU(3)_C \otimes SU (2)_L \otimes U(1)_Y
+  \end{equation}
+Each of the three subgroups come with a corresponding gauge field.
+\subsection{The Quantum Chromodynamics sector}
+\label{sec:theory:qcd}
+The group $SU(3)_C$ represents the strong force and the corresponding gluon field tensor $G_{\mu\nu}^a$. $a$ runs over the eight generators of the group, which correspond to eight massless spin-1 gluons. As this is a non-Abelian group (where a group operation on two group elements depend on the order they are written), the gluons are charged with a \emph{color} charge, $C$, and display self-interactions. Quarks, the only fundamental particles interacting with the strong force, are the simplest representation of $SU(3)$. Interactions via the strong force are described by the quantum gauge theory Quantum Chromodynamics (QCD). 
+\subsection{The electroweak sector}
+The electromagnetic and weak interactions arise from the breaking of $SU (2)_L \otimes U(1)_Y$ symmetry. The gauge field tensor of $SU (2)_L$,the group of weak left-handed isospin, is $W_{\mu\nu}^a$ where $a$ runs over the 3 generators of the group. All the fermions listed above have a \emph{chirality}, defined as the projection of the particles spin along its direction of motion. The fermions with a left-handed chirality are in the doublet representation of $SU(2)$ and the fermions of right-handed chirality are in the singlet representation, meaning they do not interact with the gauge bosons of $W_{\mu\nu}^a$ (hence the name weak left-handed isospin). The final group, $U(1)_Y$ of weak hypercharge, is abelian and hence has no self-interaction. The interactions are mediated by a neutral particle with the gauge field tensor $B_{\mu\nu}^a$.
 \subsection{The Higgs Mechanism}
 \subsection{Quantum Chromodynamics}
-\label{sec:theory:qcd}
+
 \section{Beyond Standard Model Physics}
 \subsection{The hierarchy problem and the gravitational force}
 \subsection{Theories of New Physics}
