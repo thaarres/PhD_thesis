@@ -26,7 +26,7 @@ $\tau^{-}$   & $1777 \mbox{ MeV}$     & $e$ \\%& 0       & 0         & 1 \\
 \hline                                      
 $\nu_{e}$    & $< 3 \mbox{ eV}$       & $0$ \\%   & 1       & 0         & 0 \\
 $\nu_{\mu}$  & $< 0.19 \mbox{ MeV}$   & $0$ \\%   & 0       & 1         & 0 \\
-$\nu_{\tau}$ & $< 18.2 \mbox{ MeV}$   & $0$ %   & 0       & 0         & 1 \\
+$\nu_{\tau}$ & $< 18.2 \mbox{ MeV}$   & $0$  \\%   & 0       & 0         & 1 \\
 \hline
 \end{tabular}
 \end{center}
@@ -73,12 +73,17 @@ The Standard Model is a quantum field theory where each particle is described as
 Each of the three subgroups come with a corresponding gauge field.
 \subsection{The Quantum Chromodynamics sector}
 \label{sec:theory:qcd}
-The group $SU(3)_C$ represents the strong force and the corresponding gluon field tensor $G_{\mu\nu}^a$. $a$ runs over the eight generators of the group, which correspond to eight massless spin-1 gluons. As this is a non-Abelian group (where a group operation on two group elements depend on the order they are written), the gluons are charged with a \emph{color} charge, $C$, and display self-interactions. Quarks, the only fundamental particles interacting with the strong force, are the simplest representation of $SU(3)$. Interactions via the strong force are described by the quantum gauge theory Quantum Chromodynamics (QCD). 
+The group $SU(3)_C$ represents the strong force, described by the quantum gauge theory Quantum Chromodynamics (QCD). The gauge field of the group is the gluon field tensor 
+\begin{equation}
+G_{\mu\nu}^a=\partial_{\mu} \mathcal{A}_{\nu}^a-\partial_{\nu} \mathcal{A}_{\mu}^a+g_s f^{abc}\mathcal{A}_{\mu}^b\mathcal{A}_{\nu}^c
+\end{equation}
+where $f^{abc}$ is the $SU(3)_C$ structure constant, $g_s$ is the strong coupling and $a$ runs over the eight generators of the group, which correspond to eight massless spin-1 gluons. The conserved charge in QCD is \emph{color} charge $C$, which can be red, green or blue. As $SU(3)_C$ is a non-Abelian group (where a group operation on two group elements depend on the order they are written), the gluons are charged (with one unit of color, one unit of anti-color) and display self-interactions. These self-interactions have severe consequences: Due to the high amount of interaction
+Quarks, the only fundamental particles interacting with the strong force, are the simplest representation of $SU(3)$ and come with one unit of color/anti-color which gets rotated by the generators during an interaction 
 \subsection{The electroweak sector}
-The electromagnetic and weak interactions arise from the breaking of $SU (2)_L \otimes U(1)_Y$ symmetry. The gauge field tensor of $SU (2)_L$,the group of weak left-handed isospin, is $W_{\mu\nu}^a$ where $a$ runs over the 3 generators of the group. All the fermions listed above have a \emph{chirality}, defined as the projection of the particles spin along its direction of motion. The fermions with a left-handed chirality are in the doublet representation of $SU(2)$ and the fermions of right-handed chirality are in the singlet representation, meaning they do not interact with the gauge bosons of $W_{\mu\nu}^a$ (hence the name weak left-handed isospin). The final group, $U(1)_Y$ of weak hypercharge, is abelian and hence has no self-interaction. The interactions are mediated by a neutral particle with the gauge field tensor $B_{\mu\nu}^a$.
-\subsection{The Higgs Mechanism}
-\subsection{Quantum Chromodynamics}
+The electromagnetic and weak interactions arise from the breaking of $SU (2)_L \otimes U(1)_Y$ symmetry. The gauge field tensor of $SU (2)_L$,the group of weak left-handed isospin $L$, is $W_{\mu\nu}^a$ where $a$ runs over the 3 generators of the group. The final group, $U(1)_Y$ of weak hypercharge $Y$, is abelian and hence has no self-interaction. The interactions are mediated by a neutral particle with the gauge field tensor $B_{\mu\nu}^a$.\newline
+All the fundamental fermions have a \emph{chirality}, defined as the projection of the particles spin along its direction of motion. From observations, the weak interactions is observed to only interact with fermions of left-handed chirality (vector minus axial coupling, V-A). The left-handed fermion fields are therefore in the simplest doublet representation of $SU(2)$ with weak isospin $I=1/2$, where the doublets are as defined in Equation~\ref{eqn:lepton_flavor_doublets} and~\ref{eqn:quark_flavor_doublets}, while the fermions of right-handed chirality are in the singlet representation with weak isospin $I=0$, meaning they do not interact with the gauge bosons of $W_{\mu\nu}^a$.
 
+\subsection{The Higgs Mechanism}
 \section{Beyond Standard Model Physics}
 \subsection{The hierarchy problem and the gravitational force}
 \subsection{Theories of New Physics}
