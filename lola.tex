@@ -128,6 +128,7 @@ the resulting output matrix will have dimensions $4 \times (1+N+M)$ and consists
 \subsection{The Lorentz Layer}
 The Lorentz Layer (LoLa) is responsible for encoding how particles move in space-time through a simple set of rules. Each column (four-vector) of $x_{\mu,i}^{C}$, is used to compute, and afterwards is replaced by, the following $k=7$ features:
 \begin{equation}
+  \label{eq:lola:lola}
   x_{k,i}^{L} = \begin{pmatrix}
   m^2  (x_{\mu,i}^{C})                       \\[1ex]
   \PT  (x_{\mu,i}^{C})                       \\[1ex]
@@ -174,9 +175,9 @@ We clearly see that LoLa performs significantly better than the current baseline
 Despite being a key feature, absolute performance is not all that quantifies how good one tagger is compared to another. One a tagger is planned to be used in physics analysis, there are three key questions one needs to consider:
 \begin{itemize}
     \itemsep0em 
-\item Is the absolute performance better (compared to common methods)?
-\item Is the tagger \PT-dependent?
-\item Does the tagger sculpt the mass spectrum?
+    \item Is the absolute performance better (compared to common methods)?
+    \item Is the tagger \PT-dependent?
+    \item Does the tagger sculpt the mass spectrum?
 \end{itemize}
 These three measures are equally important in quantifying performance and, in the following, I will attempt to explain why this is the case and which approaches are used here in order to tackle them.\par
 
@@ -225,43 +226,61 @@ For completeness, Figure~\ref{fig:lola:nsubjcorr} shows the \nsubj and \ddt disc
 In summary, reweighting strategies as the one described above yield a loss in overall performance, as expected when removing information from the training. However, the \PT dependence of the tagger is strongly reduced, meaning that it might perform better overall in physics analysis when systematic uncertainties are taken into account. There is therefore no clear answer as to which method is better before running a full analysis including systematics for \PT-dependent tagging.
 
 \subsection{Mass sculpting}
-Any smart deep neural network intended to separate Ws from quarks and gluons, will learn the W mass as it is clearly different from the q/g mass. Unfortunately, as these taggers are meant to be used in physics analysis where we often estimate the background in mass sidebands, this has some undesired side effects. If a deep neural network has learned the mass then, after applying a cut on the discriminant, the background jet mass distribution becomes severely sculpted and difficult to constrain.
-% Mass-dependence in itself not a problem, background rate uncertainties are trade-off between efficiency and (analysis-dependent) systematics.
+\label{sec:lola:massculpting}
+Any smart deep neural network intended to separate Ws from quarks and gluons, will inevitably learn the W mass as it clearly is very different from the q/g mass. Unfortunately, as these taggers are meant to be used in physics analysis where we often estimate the background in mass sidebands, this has some undesired side effects. If a deep neural network has learned the mass then, after applying a cut on the discriminant, the background jet mass distribution becomes severely sculpted and difficult to constrain. \newline
+After applying a cut on the LoLa discriminant corresponding to a 1\% mistagging rate, we see in the left plot in Figure~\ref{fig:lola:masssculpt} that the W jet signal shape is nicely retained. In addition, there are no QCD jets left at low mass so no jet mass window is needed when using this tagger, leading to a significantly higher signal acceptance. However, when looking more closely at 
+the QCD background on the right plot of Figure~\ref{fig:lola:masssculpt}, where all histograms are normalized to unit area, we see that the bulk of the remaining 1\% QCD jets is right below the W mass peak and has been sculpted to look exactly like the signal.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.4\textwidth]{figures/vtagging/lola/wLola_v6_500rew-mass-afterCut-sigprob_wLola_v6_500rew.png}
+\includegraphics[width=0.4\textwidth]{figures/vtagging/lola/wLola_v6_500rew-mass-afterCut-sigprob_wLola_v6_500rew_normed.png}
+\caption{The softdrop jet mass distribution before (solid lines) and after (dotted lines) a cut on the LoLa discriminant corresponding to a 1\% mistagging rate has been applied. The left plot shows the real number of events left after the cut, the right is normalized to area.}
+\label{fig:lola:masssculpt}
+\end{figure}
+This mass sculpting is in and on its own not a problem, the tagger still manages to get rid of most of the background. However, in many physics analysis, in order to evaluate the background rate in the data signal region, mass sidebands are used. If the background distribution is peaky rather than smoothly falling, the shape and consequently the expected yield is very difficult to constrain. That leads to large uncertainties on the background rate and might eventually make an analysis less sensitive than when using a tagger with a worse absolute performance, but reduced mass correlation. In addition, if one were to search for peaks in the softdrop jet mass, as is the case for the multidimensional fit, this becomes increasingly difficult when attempting to fit a potential signal peak on top of a peaking background.\newline
+It should again be mentioned, that also for the baseline taggers based on \nsubj, mass sculpting is a known feature. Figure~\ref{fig:lola:masssculpttau} shown the same softdrop jet mass spectrum before and after a cut corresponding to a 1\% mistagging rate on \nsubj (left) and \ddt (right). Here \nsubj clearly exhibits mass sculpting, but not as peaky as was the case for LoLa. \ddt exhibits the least amount of scuplting, but is also the tagger with the worst absolute performance.\par 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.4\textwidth]{figures/vtagging/lola/wLola_v6_500rew-mass-afterCut-ddt_normed.png}
+\includegraphics[width=0.4\textwidth]{figures/vtagging/lola/wLola_v6_500rew-mass-afterCut-jtau21_normed.png}
+\caption{The softdrop jet mass distribution before (solid lines) and after (dotted lines) a cut on \nsubj (left) and \ddt (right). All spectra are normalized to unit area.}
+\label{fig:lola:masssculpttau}
+\end{figure}
 
-% \section{Model validation}
-% \label{sec:validation}
-%
-% The model is validated on independent samples as an unbiased measure of performance. These samples are listed in Table~\ref{tab:validationSamples}.
-% For these studies we require only hadronically decaying W bosons, where the generated W follows the following criteria:
-% \begin{itemize}
-% \item $ 1000 \GeV < \PT < 1400 \GeV$
-% \item $|\eta| < 1.5$
-% \item Only use jets where the two W decay products are contained within the jet with $\Delta R < 0.8$
-% \end{itemize}
-% For the background, we require the same $\PT$ and $\eta$ cuts as for signal. The signal efficiency versus mistagging rate for LoLa compared to
-% the standard PUPPI Softdrop + \nsubj tagger, is shown in Figure~\ref{roc_val}. As was pointed out in Section~\ref{sec:training}, a mass cut is not necessary when using LoLa, but have been added to this plot for completeness. A significant improvement in tagging efficiency is observed for LoLa compared to the default tagger. Also marked are the 30 percent signal efficiency working points which are used as reference working points for the following correlation study,
-%
-%
-% \begin{figure}[htb]
-% \centering
-% \includegraphics[width=0.4\textwidth]{figures/vtagging/AN-18-099/validation/roc_ZpWqqvsQCD.pdf}\\
-%
-% \caption{Performance of LoLa and  PUPPI Softdrop + $\tau_{21}$background-signal efficiency plane. The PUPPI softdrop jet mass
-% selection of $65 < M_{SD} < 105 GeV$, and the 30 percent efficiency points are indicated with symbols.}
-% \label{fig:roc_val}
-% \end{figure}
-%
-%
-% \begin{figure}[htb]
-% \centering
-%
-% \includegraphics[width=0.4\textwidth]{figures/vtagging/AN-18-099/validation/WtagSigEffvsjpt.pdf}
-% \includegraphics[width=0.4\textwidth]{figures/vtagging/AN-18-099/validation/WtagSigEffvsnPV.pdf}\\
-% \includegraphics[width=0.4\textwidth]{figures/vtagging/AN-18-099/validation/QCDMistagvsjpt.pdf}
-% \includegraphics[width=0.4\textwidth]{figures/vtagging/AN-18-099/validation/QCDMistagvsnPV.pdf}
-%
-%
-% \caption{Top: Efficiency of the LoLa selection corresponding to a 30 percent signal efficiency as a function of (left) \PT and (right) the number of reconstructed vertices. Bottom: Mistag rate of the LoLa selection corresponding to a 30 percent signal efficiency as a function of (left) \PT and (right) the number of reconstructed vertices.}
-% \label{fig:eff_val}
-% \end{figure}
-% \clearpage
+I have not yet had the chance to implement a mass decorrelation strategy for LoLa, but I see two ways going forward: The first is, following the example of what was done to decorrelate LoLa from jet \PT, to pass a mass dependent sample weight to the training. LoLa would then be trained with a weight derived to flatten the two dimensional jet mass - jet \PT plane. Another option would be to train LoLa together with an adversarial, a dedicated deep neural network running in parallel to LoLa and attempting to learn the jet mass from the LoLa output. The total loss function would then be a sum of the two, where the better the adversarial is in learning the mass, the worse the total loss function gets. Both these options are something I'd like to explore in the future.\par
+
+In summary, mass- and \PT-dependence are in their own right not a problem for a tagger. The problem occurs when using these taggers in actual physics analyses where background rate uncertainties and tagging \PT depencence uncertainties has a large impact on the final sensitivity. There is a trade-off between signal efficiency and (analysis-dependent) systematics. For LoLa, rather than choosing, I'd like to provide to different taggers: A nominal tagger, where no mass/\PT-decorrelation is attempted, and a decorrelated version. Then both can be tested in a full analysis chain before deciding on which tagger to use when looking at data.
+
+\section{Validation on an independent sample}
+\label{sec:validation}
+LoLa is additionally validated on independent samples as an unbiased measure of performance allowing to compare different CMS W-tagging algorithms to one another: A $\PZpr \rightarrow WW$ sample with $M_{\PZpr}=3\TeV$ produced with MadGraph and a QCD \PYTHIA8 sample in a \PT bin of 1000 to 1400 \GeV. Here, only jets with $ 1000 \GeV < \PT < 1400 \GeV$ and $|\eta| < 1.5$ are used. The signal efficiency versus mistagging rate for LoLa compared to the baseline PUPPI Softdrop + \nsubj tagger, is shown in Figure~\ref{roc_val}. As was pointed out in Section~\ref{sec:training}, a mass cut is not necessary when using LoLa, but has been added to this plot for completeness. A significant improvement in tagging efficiency is observed for LoLa compared to the default tagger, also when being validated on a sample completely independent from the training sample. The cut corresponding to a 30 \% signal efficiency working point are used as reference working points when we will look at the tagging performance as a function of jet \PT and pileup in the following, and is marked by triangles in the plot.
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.4\textwidth]{figures/vtagging/AN-18-099/validation/roc_ZpWqqvsQCD.pdf}\\
+\caption{Performance of LoLa and PUPPI Softdrop + $\tau_{21}$ in the background-signal efficiency plane. The PUPPI softdrop jet mass
+selection of $65 < M_{SD} < 105 GeV$, and the 30 percent efficiency points are indicated with symbols.}
+\label{fig:roc_val}
+\end{figure}
+The signal efficiency and mistagging rate as a function of jet \PT, is shown in Figure~\ref{fig:lola:eff_val_pt}. Again we observe the strong correlation between LoLa tagging efficiency and jet transverse momenta. There is, however, no point in the spectra where the \nsubj tagger has a higher signal over background ratio than LoLa. LoLa performs its worst at very high jet \PT, but in this region the background is very small (dijet invariant masses around 2.5-3 \TeV) so the absolute performance here matters less than at lower \PT
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.4\textwidth]{figures/vtagging/AN-18-099/validation/WtagSigEffvsjpt.pdf}
+\includegraphics[width=0.4\textwidth]{figures/vtagging/AN-18-099/validation/QCDMistagvsjpt.pdf}
+\caption{Efficiency (left) and mistagging rate (right) of the LoLa selection corresponding to a 30 percent signal efficiency as a function of jet \PT.}
+\label{fig:lola:eff_val_pt}
+\end{figure}
+Figure~\ref{fig:lola:eff_val_pu} shows the tagging efficiency and mistagging rate as a function of pileup. Both taggers under study are more or less decorrelated from pileup, with a flat efficiency up to 50 reconstructed primary vertices. In Run 3, this number is of course expected to be significantly higher, around 140-200, and the study should be redone up to a higher number of reconstructed primary vertices.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.4\textwidth]{figures/vtagging/AN-18-099/validation/WtagSigEffvsnPV.pdf}
+\includegraphics[width=0.4\textwidth]{figures/vtagging/AN-18-099/validation/QCDMistagvsnPV.pdf}
+\caption{Efficiency (left) and mistagging rate (right) of the LoLa selection corresponding to a 30 percent signal efficiency as a function of the number of reconstructed vertices.}
+\label{fig:lola:eff_val_pu}
+\end{figure}
+\clearpage
+\section{Summary and outlook}
+\label{sec:lola:outlook}
+In this chapter, we have seen a promising new W-tagging algorithm for future VV searches. Its absolute performance is better than that of the bsaeline PUPPI softdrop + \nsubj tagger up to a jet \PT of at least 1400 \GeV, roughly corresponding to a dijet invariant mass of 2.5-3 \TeV, and could lead to an increase in total signal efficiency from 18 to 43 \% for the searches presented here. With a \PT decorrelation method already in place, it could already now be used for the one dimensional VV search presented in Search I and Search II. However, if to be used in the multidimensional search framework, a mass decorrelation method needs to be established. I have already outlined two possibilities of how to achieve this in Section~\ref{sec:lola:massculpting}, where one of these has already been shown to work in the context of \PT decorrelation. This is, as of this writing, left to future studies.
+\newline
+\newline
+When discussing the future of the multidimensional search, I mentioned how a deep neural network such as the one presented here could be used to encode jet substructure in a way useful in order to develop a generic anti-QCD tagger. This has already been achieved by a parallel analysis team through the use of auto-encoders, published ten days before this writing and documented in~\cite{Heimel:2018mkt}, and has shown very promising results. However, this strategy is, to my knowledge after discussing with the authors, no longer pursued after observing that the auto-encoder version of LoLa was very difficult to decorrelate from the jet mass. It is my belief that this can be overcome by changing some of the features calculated in the Lorentz Layer (in~\cite{Heimel:2018mkt}, only the invariant mass is calculated and the other features listed in Equation~\ref{eq:lola:lola} are stripped away) and this is something I would also like to pursue in future studies in order to achieve the truly generic search for boosted dijet resonances in the \MJO-\MJT-\MVV plane.
