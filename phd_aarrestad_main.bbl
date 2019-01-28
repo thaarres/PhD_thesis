@@ -4,6 +4,14 @@
 \makeatother
 \providecommand{\doi}{\texttt{doi:}\begingroup \urlstyle{tt}\Url}
 
+\bibitem{Pappadopulo:2014qza}
+\hrefCMSnoop {}{D.~Pappadopulo, A.~Thamm, R.~Torre, and A.~Wulzer, ``{Heavy
+  Vector Triplets: Bridging Theory and Data}'',} \textit{ JHEP} \textbf{ 09}
+  (2014) 060,
+  \href{http://dx.doi.org/10.1007/JHEP09(2014)060}{\doi{10.1007/JHEP09(2014)060}},
+\href{http://www.arXiv.org/abs/1402.4431}{\texttt{arXiv:1402.4431}}.
+%%CITATION = ARXIV:1402.4431;%%.
+
 \bibitem{LHC}
 CERN, ``Accelerators and Schedules'', 2018 (accessed November 12, 2018), \url
   {https://beams.web.cern.ch/content/accelerators-schedules}.
@@ -410,5 +418,26 @@ J.~A. Aguilar-Saavedra, ``Stealth bosons and where to find them'', 2018, \url
   \href{http://dx.doi.org/10.1007/JHEP11(2017)163}{\doi{10.1007/JHEP11(2017)163}},
 \href{http://www.arXiv.org/abs/1709.01087}{\texttt{arXiv:1709.01087}}.
 %%CITATION = ARXIV:1709.01087;%%.
+
+\bibitem{Butter:2017cot}
+\hrefCMSnoop {}{A.~Butter, G.~Kasieczka, T.~Plehn, and M.~Russell,
+  ``{Deep-learned Top Tagging with a Lorentz Layer}'',} \textit{ SciPost Phys.}
+  \textbf{ 5} (2018), no.~3, 028,
+  \href{http://dx.doi.org/10.21468/SciPostPhys.5.3.028}{\doi{10.21468/SciPostPhys.5.3.028}},
+\href{http://www.arXiv.org/abs/1707.08966}{\texttt{arXiv:1707.08966}}.
+%%CITATION = ARXIV:1707.08966;%%.
+
+\bibitem{DBLP:journals/corr/KingmaB14}
+\href {http://arxiv.org/abs/1412.6980}{D.~P. Kingma and J.~Ba, ``Adam: {A}
+  Method for Stochastic Optimization'',} \textit{ CoRR} \textbf{ abs/1412.6980}
+  (2014) \href{http://www.arXiv.org/abs/1412.6980}{\texttt{arXiv:1412.6980}}.
+
+\bibitem{chollet2015keras}
+\hrefCMSnoop {}{F.~Chollet {et~al.}, ``Keras''.} \url{https://keras.io}, 2015.
+
+\bibitem{tensorflow2015-whitepaper}
+\href {http://tensorflow.org/}{M.~A. et~al, ``{TensorFlow}: Large-Scale Machine
+  Learning on Heterogeneous Systems'',} 2015.
+\newblock Software available from tensorflow.org.
 
 \end{thebibliography}\endgroup

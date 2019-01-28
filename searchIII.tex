@@ -94,7 +94,7 @@ The triggers used for 2016 data are the same as in Section~\ref{sec:searchI:trig
 \end{itemize}.
 For the results presented here, the analysis threshold is set by the trigger turn-on point (where the combination of all triggers are $>99$ percent efficient). The trigger turn-on is evaluated in the Single Muon dataset, using the \texttt{HLT\_Mu50} and \texttt{HLT\_IsoMu27} triggers as reference triggers.  The trigger turn-on curves as a function of dijet invariant mass and jet soft drop mass are shown in Figure~\ref{fig:searchIII:trigturnon}.
 The combination of all triggers are $>99\%$ efficient above a dijet invariant mass of 1126\GeV and this sets the analysis threshold. 
-\begin{figure}[htb]
+\begin{figure}[h!]
 \centering 
 \includegraphics[width=0.45\textwidth]{figures/analysis/search3/B2G-18-002/Combined_mj1_16vs17.pdf}
 \includegraphics[width=0.45\textwidth]{figures/analysis/search3/B2G-18-002/Combined_mjj_16vs17.pdf}
@@ -164,12 +164,12 @@ The modeling of the trigger turn-on was successful and implemented in the backgr
 \subsection{A mass and \PT decorrelated tagger}
 \label{sec:searchIII:ddt}
 In order to identify W and Z jet candidates, two algorithms are run on the AK8 PUPPI jet: softdrop~\cite{softdrop} and the N-subjettiness ratio $\tau_{21}$~\cite{nsubjettiness}.
-The softdropped jet mass is used to improve the mass resolution of the jet, while N-subjettiness serves as a discriminant by yielding a probability of how compatible the jet is with having N axes. For this search, we require the softdrop-jet mass to be in a window around the W/Z/H/top mass, between 55 and 215 GeV, something which we plan to extend in the future. In order to improve the statistical power of the jet substructure variable $\tau_{21}$ and ensure a minimal sculpting of the jet mass as a function of jet $p_T$,
+The softdrop jet mass is used to improve the mass resolution of the jet, while N-subjettiness serves as a discriminant by yielding a probability of how compatible the jet is with having N axes. For this search, we require the softdrop-jet mass to be in a window around the W/Z/H/top mass, between 55 and 215 GeV, something which we plan to extend in the future. In order to improve the statistical power of the jet substructure variable $\tau_{21}$ and ensure a minimal sculpting of the jet mass as a function of jet $p_T$,
 we decorrelate the variable from the jet softdrop mass and the jet $p_T$-scale dependence following what was done in Ref.~\cite{ddt}.
 This decorrelation is performed by flattening the $\tau_{21}$ profile dependence on $\rho' = log(m^2/p_T/\mu)$, where $\mu$ = 1 GeV.
 Figure~\ref{fig:rho} shows the profile distribution of $\tau_{21}$ as a function of $\rho' = log(m^2/p_T/\mu)$, applying the preselections as listed above together with a softdrop mass cut of $\unit{55}{\GeV} < M_{jet} < \unit{215}{\GeV}$ (right).
 % $\rho = log(m^2/p_T^2)$ (top) and as a function of $\rho' = log(m^2/p_T/\mu)$ (bottom), applying the preselections as listed in~\ref{sec:presel} (left) and after applying a softdrop mass cut of $\unit{55}{\GeV} < M_{jet} < \unit{215}{\GeV}$ (right).
-\begin{figure}[htbp]
+\begin{figure}[h!]
 \centering
 \begin{tabular}{cc}
 % \includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/vtag/rho_pythia.pdf}
@@ -628,7 +628,7 @@ Three additional shape uncertainties are added for the signal: Uncertainties due
 Uncertainties due to the PDF are evaluated by reweighting each event according to $\approx$~100 PDF variations. The impact on the signal shapes are again evaluated by fitting a Gaussian to the $m_{jet}$ and $m_{jj}$ distributions before and after changing PDF weights. The obtained variation is $<1\%$ for the 2017 signal MC, but slightly higher in 2016. An overall uncertainty on the acceptance of 3\% is therefore applied. 
 
 
-\subsubsection{Non-resonant background shape uncertianties}
+\subsubsection{Non-resonant background shape uncertainties}
 Alternate shapes for the non-resonant background components are added to the fit through vertical template morphing. This creates nuisance parameters for each additional shape shape, allowing the derived nominal 3D PDF to vary within the respective nuisances to match the data. Shape uncertainties that simultaneously affect all three dimensions are used, totaling to 5 to take all possible effects into account. The first effect accounts for variation of the underlying transverse momentum spectrum and is obtained through an alternate shape produced by varying the jet masses \MJ and dijet mass \MVV by a quantity proportional to \MVV and \MJ. The second effect considered is a variation of the scale, where the corresponding alternate shape is obtained by simultaneously varying \MJ and \MVV up and down by a quantity proportional to 1/\MVV and 1/\MJ.
 Finally, as we do no know a priori whether Nature behaves more like \PYTHIA{8}, \HERWIG{++} or \MADGRAPH{}+\PYTHIA{8}, we account for differences due to MC generation and parton shower modeling by adding three additional shapes corresponding to the PDFs obtained using different QCD MC generators.\newline
 Those five shape uncertainties are assigned very large pre-fit values (allowed to float within 33\%), effectively allowing the simulation to take any value to describe the data. The alternate shapes described above are shown in Figure~\ref{fig:searchIII:sys}, here for the 2017 analysis.
@@ -647,9 +647,8 @@ Those five shape uncertainties are assigned very large pre-fit values (allowed t
 \clearpage
 
 \subsection{Results}
-The distributions obtained from a combined fit to the observed data in 2016 and 2017 are shown in Fig.~\ref{fig:searchIII:finalPostFit}, with the corresponding predicted and observed number of background events in the signal region summarized in Table~\ref{tab:searchIII:ObsEvents}.
+The distributions obtained from a combined fit to the observed data in 2016 and 2017 are shown in Figure~\ref{fig:searchIII:finalPostFitHP} and\ref{fig:searchIII:finalPostFitLP}, with the corresponding predicted and observed number of background events in the signal region summarized in Table~\ref{tab:searchIII:ObsEvents}. We observe a beautiful double peak from the W(qq) and Z(qq)+jets background, especially clear in the low purity category. This allows us to, for the very first time extract the softdrop jet mass scale and resolution from a V(qq)+jets double peak, which we'll discuss in Section~\ref{sec:searchIII:pulls}. It also gives us the opportunity to measure the V(qq)+jets cross section, a measurement we are currently planning on how to best extract.
 \begin{table}[b]
-
 \centering
 \begin{tabular}{lcc} 
  & HPHP & HPLP\\
@@ -666,7 +665,6 @@ Observed yield & 778 $\pm$ 28 & 57227 $\pm$ 239\\
 Post-fit total background & 811.4 $\pm$ 20.3 & 57195.5 $\pm$ 436.8\\
 \hline
 \hline
-
 \end{tabular} 
 \caption{Expected and observed yields and their total uncertainty (stat.+sys.) in the two purity categories.} 
 \label{tab:searchIII:ObsEvents}
@@ -674,15 +672,21 @@ Post-fit total background & 811.4 $\pm$ 20.3 & 57195.5 $\pm$ 436.8\\
 
 \begin{figure}[h!]
 \centering
-\resizebox{0.32\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_HPHP_unblind/PostFitComboHPHP_X-Proj__y___0_-1_z___0_-1.png}}
-\resizebox{0.32\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_HPHP_unblind/PostFitComboHPHP_Y-Proj__x___0_-1_z___0_-1.png}}
-\resizebox{0.32\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_HPHP_unblind/PostFitComboHPHP_Z-Proj__x___0_-1_y___0_-1.png}}\\
-\resizebox{0.32\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_HPLP_unblind/PostFitComboHPLP_X-Proj__y___0_-1_z___0_-1.png}}
-\resizebox{0.32\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_HPLP_unblind/PostFitComboHPLP_Y-Proj__x___0_-1_z___0_-1.png}}
-\resizebox{0.32\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_HPLP_unblind/PostFitComboHPLP_Z-Proj__x___0_-1_y___0_-1.png}}
-\caption{Postfit distribution after a fit to 2016 and 2017 data projected onto the \MJO (left), \MJT (middle), and \MVV (right) axis. Here for the HPHP (top) and HPLP (bottom) category. The background shape uncertainty is shown as a red shaded band,  and the statistical uncertainties of the data are shown as vertical bars. The overlaid signal distribution is arbitrarily normalized.}
-\label{fig:searchIII:finalPostFit}
+\resizebox{0.49\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_HPHP_unblind/PostFitComboHPHP_X-Proj__y___0_-1_z___0_-1.pdf}}
+\resizebox{0.49\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_HPHP_unblind/PostFitComboHPHP_Y-Proj__x___0_-1_z___0_-1.pdf}}\\
+\resizebox{0.49\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_HPHP_unblind/PostFitComboHPHP_Z-Proj__x___0_-1_y___0_-1.pdf}}
+\caption{Postfit distribution after a fit to 2016 and 2017 data projected onto the \MJO (left), \MJT (middle), and \MVV (right) axis. Here for the high purity category. The background shape uncertainty is shown as a red shaded band, and the statistical uncertainties of the data are shown as vertical bars. The overlaid signal distribution is arbitrarily normalized.}
+\label{fig:searchIII:finalPostFitHP}
 \end{figure}
+\begin{figure}[h!]
+\centering
+\resizebox{0.49\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_HPLP_unblind/PostFitComboHPLP_X-Proj__y___0_-1_z___0_-1.pdf}}
+\resizebox{0.49\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_HPLP_unblind/PostFitComboHPLP_Y-Proj__x___0_-1_z___0_-1.pdf}}\\
+\resizebox{0.49\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_HPLP_unblind/PostFitComboHPLP_Z-Proj__x___0_-1_y___0_-1.pdf}}
+\caption{Postfit distribution after a fit to 2016 and 2017 data projected onto the \MJO (left), \MJT (middle), and \MVV (right) axis. Here for the HPLP (bottom) category. The background shape uncertainty is shown as a red shaded band, and the statistical uncertainties of the data are shown as vertical bars. The overlaid signal distribution is arbitrarily normalized.}
+\label{fig:searchIII:finalPostFitLP}
+\end{figure}
+\clearpage
 \subsubsection{Limits}
 As for Search I and Search II, exclusion limits on the cross section of the process $\text{X} \to VV$ are set in the context of the Bulk Graviton model and the HVT model~B scenario (again obtained using the asymptotic $\text{CL}_\text{S}$ method). Figure~\ref{fig:searchIII:limitsCombo} show the resulting expected and observed 95\% confidence level exclusion limits on the signal cross section as a function of the resonance mass for all signal models. The obtained limits are compared with the resonance production cross section times the branching fraction to $\PW\PW$, $\PZ\PZ$ and $\PW\PZ$.
 \begin{figure}[h!]
@@ -722,11 +726,12 @@ Finally, in Figure~\ref{fig:limitsPerCat} we show a breakdown of the limits per 
 \end{figure}
 
 \subsubsection{Pulls of nuisance parameters}
+\label{sec:searchIII:pulls}
 As summarized in Section~\ref{sec:searchIII:sysunc}, we add a list of systematic uncertainties to the fit as nuisance parameters.
 To quantify how much the nuisances we insert differs from the ones preferred by the fit, we compute the pull
 \begin{equation}
 p_{\theta} = (\theta - \theta_{in})/\sigma_\theta
-\end{equation}SLAC
+\end{equation}
 where $\theta_{in}$ is the nuisance value pre-fit, $\theta$ the corresponding parameter post-fit and $\sigma_\theta$ its error.
 and its error bar calculated as the ratio between post- and pre-fit uncertainty.
 Figure~\ref{fig:searchIII:pullsCombo1617} shows the pulls for a signal+background fit to the combined (2016+2017) dataset (left) and when fitting the two separately (right), here using a signal hypothesis corresponding to a 2 \TeV \BulkG.
@@ -737,7 +742,7 @@ Figure~\ref{fig:searchIII:pullsCombo1617} shows the pulls for a signal+backgroun
 \caption{Pulls of each nuisance parameter for a combined signal+background fit to the combined 2016+2017 dataset (left) and when fitting the two separately.}
 \label{fig:searchIII:pullsCombo1617}
 \end{figure}
-
+We observe that the W-tagging efficiency ("CMS\_VV\_JJ\_tau21\_eff"), the softdrop jet mass scale ("CMS\_scale\_prunedj") and resolution ("CMS\_res\_prunedj") gets pulled and constrained by the W(qq) and Z(qq)+jets mass peaks. In addition, the QCD shape parameters ("CMS\_VV\_JJ\_nonRes\_*") are significantly pulled and constrained by data because of their large pre-fit uncertainty and unknown a-priori pre-fit value (again, we do not know if Nature is \PYTHIA{8}, \HERWIG{++} or \MADGRAPH{}+\PYTHIA{8}. Though from this measurement, \HERWIG{++} seems to take the prize ("altshape2")).
 
 \clearpage
 
