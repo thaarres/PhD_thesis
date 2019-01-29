@@ -4,6 +4,21 @@
 \makeatother
 \providecommand{\doi}{\texttt{doi:}\begingroup \urlstyle{tt}\Url}
 
+\bibitem{Bellazzini:2014yua}
+\hrefCMSnoop {}{B.~Bellazzini, C.~Csáki, and J.~Serra, ``{Composite
+  Higgses}'',} \textit{ Eur. Phys. J.} \textbf{ C74} (2014), no.~5, 2766,
+  \href{http://dx.doi.org/10.1140/epjc/s10052-014-2766-x}{\doi{10.1140/epjc/s10052-014-2766-x}},
+\href{http://www.arXiv.org/abs/1401.2457}{\texttt{arXiv:1401.2457}}.
+%%CITATION = ARXIV:1401.2457;%%.
+
+\bibitem{Contino:2011np}
+\hrefCMSnoop {}{R.~Contino, D.~Marzocca, D.~Pappadopulo, and R.~Rattazzi, ``{On
+  the effect of resonances in composite Higgs phenomenology}'',} \textit{ JHEP}
+  \textbf{ 10} (2011) 081,
+  \href{http://dx.doi.org/10.1007/JHEP10(2011)081}{\doi{10.1007/JHEP10(2011)081}},
+\href{http://www.arXiv.org/abs/1109.1570}{\texttt{arXiv:1109.1570}}.
+%%CITATION = ARXIV:1109.1570;%%.
+
 \bibitem{Pappadopulo:2014qza}
 \hrefCMSnoop {}{D.~Pappadopulo, A.~Thamm, R.~Torre, and A.~Wulzer, ``{Heavy
   Vector Triplets: Bridging Theory and Data}'',} \textit{ JHEP} \textbf{ 09}
@@ -11,6 +26,26 @@
   \href{http://dx.doi.org/10.1007/JHEP09(2014)060}{\doi{10.1007/JHEP09(2014)060}},
 \href{http://www.arXiv.org/abs/1402.4431}{\texttt{arXiv:1402.4431}}.
 %%CITATION = ARXIV:1402.4431;%%.
+
+\bibitem{PhysRevLett.83.3370}
+\hrefCMSnoop {}{L.~Randall and R.~Sundrum, ``Large Mass Hierarchy from a Small
+  Extra Dimension'',} \textit{ Phys. Rev. Lett.} \textbf{ 83} (Oct, 1999)
+  3370--3373,
+  \href{http://dx.doi.org/10.1103/PhysRevLett.83.3370}{\doi{10.1103/PhysRevLett.83.3370}}.
+
+\bibitem{PhysRevD.76.036006}
+\hrefCMSnoop {}{K.~Agashe, H.~Davoudiasl, G.~Perez, and A.~Soni, ``Warped
+  gravitons at the CERN LHC and beyond'',} \textit{ Phys. Rev. D} \textbf{ 76}
+  (Aug, 2007) 036006,
+  \href{http://dx.doi.org/10.1103/PhysRevD.76.036006}{\doi{10.1103/PhysRevD.76.036006}}.
+
+\bibitem{Fitzpatrick:2007qr}
+\hrefCMSnoop {}{A.~L. Fitzpatrick, J.~Kaplan, L.~Randall, and L.-T. Wang,
+  ``{Searching for the Kaluza-Klein Graviton in Bulk RS Models}'',} \textit{
+  JHEP} \textbf{ 09} (2007) 013,
+  \href{http://dx.doi.org/10.1088/1126-6708/2007/09/013}{\doi{10.1088/1126-6708/2007/09/013}},
+\href{http://www.arXiv.org/abs/hep-ph/0701150}{\texttt{arXiv:hep-ph/0701150}}.
+%%CITATION = HEP-PH/0701150;%%.
 
 \bibitem{LHC}
 CERN, ``Accelerators and Schedules'', 2018 (accessed November 12, 2018), \url
