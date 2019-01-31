@@ -1,6 +1,7 @@
 %-------------------------------------------------------------------------------------
 %\documentclass[a4paper, 11pt, oneside, openany]{ThesisStyle}
-\documentclass[a4paper, 11pt, twoside, openany]{ThesisStyle}
+\documentclass[a4paper, 12pt, twoside, openany]{ThesisStyle}
+%\documentclass[12pt,USenglish,a4]{book}
 
 %-------------------------------------------------------------------------------------
 \usepackage{amsmath}
@@ -14,17 +15,15 @@
 \renewcommand{\UrlFont}{\small\tt}
 \usepackage{siunitx} %For SI units
 \usepackage{cite}
-\usepackage[nottoc]{tocbibind}
 \usepackage{multirow}
 \usepackage[left=1.2in, right=1in, top=1in, bottom=1in, includefoot, headheight=13.6pt]{geometry}
+%\newgeometry{left=20mm,right=20mm,top=12.5mm,bottom=2mm}
 \usepackage{array} %allow commands for the table columns specification
 \usepackage{subfigure} %for column figures
 \usepackage{floatflt} %for floating (wrapped) figures
-\usepackage[british]{babel} % For british english hyphenation patterns
+\usepackage[USenglish]{babel} 
 \usepackage[font=small, labelfont=bf]{caption} % Captions
 \usepackage{microtype} % makes pdf look better
-\usepackage[nottoc]{tocbibind} % Table of contents
-\usepackage[hyperindex=true,pdftitle={Search for diboson resonances in the dijet final state with CMS},pdfauthor={Thea Klaeboe  Aarrestad},colorlinks=false,pagebackref=false,citecolor=blue,plainpages=false,filecolor=blue,linkcolor=blue,urlcolor=blue,pdfpagelabels]{hyperref} % colourlinks=false for printing 
 \usepackage{xspace}
 \usepackage{fancyhdr}
 \usepackage{wrapfig}
@@ -32,8 +31,8 @@
 
 %\usepackage [english]{babel}
 \usepackage [autostyle]{csquotes}
-\usepackage{lineno}
-\linenumbers
+%\usepackage{lineno}
+%\linenumbers
 \MakeOuterQuote{"}
 
 %\usepackage{feynman}
@@ -45,7 +44,6 @@
 
 
 \usepackage{titlesec}
-\usepackage{lipsum}
 
 \titleformat{\chapter}[display]
 {\color{MidnightBlue}\normalfont\Large\filcenter\sffamily}
@@ -74,7 +72,7 @@
 
 \titleformat{\subsubsection}
 {\color{MidnightBlue}\normalfont\Large\bfseries}
-{\color{MidnightBlue}\thesubsection}{1em}{}
+{\color{MidnightBlue}\thesubsubsection}{1em}{}
 
 %-------------------------------------------------------------------------------------
 \pagestyle{fancy}
@@ -116,7 +114,8 @@
 %-------------------------------------------------------------------------------------
 %\usepackage{lineno}
 %\linenumbers
-
+\usepackage{geometry}
+\newgeometry{verbose,tmargin=3.5cm,bmargin=3.5cm,lmargin=3cm,rmargin=2.5cm}
 \begin{document}
 
 %TITLE
@@ -151,8 +150,12 @@
 
 % TABLE OF CONTENT
 \newpage\thispagestyle{empty}\mbox{}
-\normalsize
+\setcounter{tocdepth}{2}
+\setcounter{page}{0}
+\pagenumbering{roman}
 \tableofcontents
+\setcounter{secnumdepth}{4}
+\clearpage
 
 %chapter*{Acknowledgements}
 \newpage
@@ -164,18 +167,18 @@
 \input{introduction.tex}
 
 % THEORY
-\chapter{The Standard Model and Beyond} %make HVT chapter, rename formalism
+\chapter{The Standard Model and Beyond} 
 \label{ch:theory}
 \vspace*{\fill}\newpage
 \input{theory.tex}
 \vspace*{\fill}\newpage
 
 % STATSTICS
-\chapter{Statistical Methods} %make HVT chapter, rename formalism
-\label{ch:statmet}
-\vspace*{\fill}\newpage
-\input{statmet.tex}
-\vspace*{\fill}\newpage
+% \chapter{Statistical Methods}
+% \label{ch:statmet}
+% \vspace*{\fill}\newpage
+% \input{statmet.tex}
+% \vspace*{\fill}\newpage
 
 
 % CMS
@@ -213,8 +216,8 @@
 \input{summary.tex}
 
 % APPENDIX		
-\appendix
-\input{appendix.tex}
+%\appendix
+%\input{appendix.tex}
 
 %-------------------------------------------------------------------------------------
 \newpage
