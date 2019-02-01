@@ -1,8 +1,9 @@
 %-------------------------------------------------------------------------------------
 %\documentclass[a4paper, 11pt, oneside, openany]{ThesisStyle}
-\documentclass[a4paper, 12pt, twoside, openany]{ThesisStyle}
-%\documentclass[12pt,USenglish,a4]{book}
-
+%\documentclass[a4paper, 12pt, twoside, openany]{ThesisStyle}
+\documentclass[12pt,USenglish,a4]{book}
+\usepackage{setspace} 
+\onehalfspacing
 %-------------------------------------------------------------------------------------
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -16,7 +17,9 @@
 \usepackage{siunitx} %For SI units
 \usepackage{cite}
 \usepackage{multirow}
-\usepackage[left=1.2in, right=1in, top=1in, bottom=1in, includefoot, headheight=13.6pt]{geometry}
+\usepackage{geometry}
+\geometry{verbose,tmargin=3.5cm,bmargin=3.5cm,lmargin=3cm,rmargin=2.5cm}
+%\usepackage[left=1.2in, right=1in, top=1in, bottom=1in, includefoot, headheight=13.6pt]{geometry}
 %\newgeometry{left=20mm,right=20mm,top=12.5mm,bottom=2mm}
 \usepackage{array} %allow commands for the table columns specification
 \usepackage{subfigure} %for column figures
@@ -63,15 +66,15 @@
 %{\color{MidnightBlue}\thechapter}{1em}{}
 
 \titleformat{\section}
-{\color{MidnightBlue}\normalfont\Large\bfseries}
+{\color{MidnightBlue}\normalfont\large\bfseries}
 {\color{MidnightBlue}\thesection}{1em}{}
 
 \titleformat{\subsection}
-{\color{MidnightBlue}\normalfont\Large\bfseries}
+{\color{MidnightBlue}\normalfont\normalsize\bfseries}
 {\color{MidnightBlue}\thesubsection}{1em}{}
 
 \titleformat{\subsubsection}
-{\color{MidnightBlue}\normalfont\Large\bfseries}
+{\color{MidnightBlue}\normalfont\normalsize\bfseries}
 {\color{MidnightBlue}\thesubsubsection}{1em}{}
 
 %-------------------------------------------------------------------------------------
@@ -114,8 +117,8 @@
 %-------------------------------------------------------------------------------------
 %\usepackage{lineno}
 %\linenumbers
-\usepackage{geometry}
-\newgeometry{verbose,tmargin=3.5cm,bmargin=3.5cm,lmargin=3cm,rmargin=2.5cm}
+%\usepackage{geometry}
+%\newgeometry{verbose,tmargin=3.5cm,bmargin=3.5cm,lmargin=3cm,rmargin=2.5cm}
 \begin{document}
 
 %TITLE
@@ -193,11 +196,6 @@
 \vspace*{\fill}\newpage
 \input{objreco}
 
-% JET SUBSTRUCTURE TECHNIQUES
-%\chapter{Jet substructure} 
-%\label{ch:substr}
-%\input{substr.tex}
-
 % DIBOSON SEARCHES
 \chapter{Diboson resonance searches in CMS}
 \label{ch:diboson}
@@ -216,8 +214,8 @@
 \input{summary.tex}
 
 % APPENDIX		
-%\appendix
-%\input{appendix.tex}
+\appendix
+\input{appendix.tex}
 
 %-------------------------------------------------------------------------------------
 \newpage

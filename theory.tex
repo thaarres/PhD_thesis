@@ -7,9 +7,9 @@ It appears that all matter in the universe can be described by a very small coll
 Leptons are particles with integer or zero electric charge, defined in units of electron charge. They come in three flavors, or generations, and their mass increases with generation. Each generation of leptons consists of two particles: one charged lepton and one neutrally charged particle denoted \emph{neutrino ($\nu$)}. The three generations can be arranged in a doublet structure, and are as follows
 \begin{equation}
 \label{eqn:lepton_flavor_doublets}
-\begin{pmatrix} e       \\ \nu_e      \end{pmatrix} \qquad
-\begin{pmatrix} \mu     \\ \nu_{\mu}  \end{pmatrix} \qquad
-\begin{pmatrix} \tau    \\ \nu_{\tau} \end{pmatrix}
+\begin{pmatrix} \nu_e      \\ e      \end{pmatrix} \qquad
+\begin{pmatrix} \nu_{\mu}  \\ \mu    \end{pmatrix} \qquad
+\begin{pmatrix} \nu_{\tau} \\ \tau   \end{pmatrix}
 \end{equation}
 The charged leptons can be positively or negatively charged, defined in units of electron charge $e$. By convention the leptons of matter are negatively charged, $e^{-}$, $\mu^{-}$, and $\tau^{-}$,  whereas the positively charged leptons,  $e^{+}$, $\mu^{+}$, and $\tau^{+}$ are considered their anti-particles.
 % Each lepton generation is assigned its own quantum number $L$ which must be conserved after any process.
@@ -71,24 +71,60 @@ The Standard Model is a quantum gauge field theory in which each particle is des
   \mathcal{L} = \bar{\Psi}(x^{\mu})(i\lambda^{\mu}\partial_{\mu}-m)\Psi(x^{\mu})
 \end{equation}
 where $\Psi(x^{\mu})$ represents the fermion field as a function of space-time, $\bar{\Psi}=\Psi^{\dagger}\gamma_0$, where $\gamma^0$ is one of the gamma matrices $\gamma^{\mu}$, which is included in order to make $\Psi^{\dagger}\Psi$ invariant under Lorentz transformations, $\lambda^{\mu}$ are the four gamma matrices, and $m$ is the mass of the fermion in question. Any interaction between the fundamental particles due to the fundamental forces, can be described as variations in the Lagrangian of quantum fields and are represented as additional terms in the equation above.\newline
-Being a gauge theory, the Standard Model has the property of gauge invariance, meaning that measurable quantities stay the same despite the fields themselves changing. If observables stay the same after a field transformation, there is a symmetry in the system. The symmetries of the Standard Model arise due to the fact that fermions of a given type are indistinguishable from one another.
+Being a gauge theory, the Standard Model has the property of gauge invariance, meaning that measurable quantities stay the same despite the fields themselves changing. If observables stay the same after a field transformation, there is a symmetry in the system. The symmetries of the Standard Model arise due to the fact that fermions of a given type are indistinguishable from one another. These symmetries result in the presence of \emph{force mediators}, which arise as a representation of infinitesimal generators of some symmetry group.
  %The spin-1/2 fermion fields are arranged in \emph{Weyl spinors}, listen in Equation~\ref{eqn:lepton_flavor_doublets} and~\ref{eqn:quark_flavor_doublets}, which transform differently depending on their quantum numbers. 
 The fermion fields can be arranged as particle multiplets where one transforms into the other under a symmetry transformation. A symmetry transformation produce rotations between the particles of a given multiplet, but never to a field outside of that group. The symmetry group of the Standard Model is the direct product
 \begin{equation}
-  SU(3)_C \otimes SU (2)_L \otimes U(1)_Y
+  SU(3)_C \otimes SU (2)_L \otimes U(1)_Y.
 \end{equation}
-where $SU(3)_C$ is the color $C$ symmetry allowing the rotation of quarks into one another, corresponding to interactions produced by the strong force; and $SU (2)_L \otimes U(1)_Y$ represent the electroweak force with the conserved charges of weak left-handed isospin $L$ and weak hypercharge $Y$. These forces, together with their conserved charges, will be clarified in the following sections.
+$SU(3)_C$ is the color $C$ symmetry allowing the rotation of quarks, arranged in color multiplets, into one another, corresponding to interactions produced by the strong force. The colors are denoted as red, green and blue. $SU (2)_L \otimes U(1)_Y$ represent the electroweak force with weak left-handed isospin $L$ and weak hypercharge $Y$ symmetries, acting on $L$ and $Y$ multiplets, respectively. %These forces, together with their conserved charges, will be clarified in the sections below.
+The particle multiplets of the Standard Model can then be written as $\mathcal{G}_{SM} \ni x=(C,L)_{(Y)}$ (here for the 1st generation only) and are:
+\begin{alignat*}{3}
+Q &= (3,2)_{(1/3)} &&=
+  \begin{pmatrix} 
+    u_r & u_g & u_b \\
+    d_r & d_g & d_b
+    \end{pmatrix} \quad  &&\sim \textrm{quark multiplet} \\[1pt]
+L &= (1,2)_{(-1)} &&= \begin{pmatrix} \nu_e & e \end{pmatrix} \quad &&\sim \textrm{leptonic doublet} \\[1pt]
+u^c &= (\bar{3},1)_{(-4/3)} &&= \begin{pmatrix} u_{\bar{r}}^c & u_{\bar{g}}^c & u_{\bar{b}}^c\end{pmatrix} \quad &&\sim \textrm{anti-up quarks} \\[1pt]
+d^c &= (\bar{3},1)_{(2/3)}  &&= \begin{pmatrix} d_{\bar{r}}^c & d_{\bar{g}}^c & d_{\bar{b}}^c\end{pmatrix} \quad &&\sim \textrm{anti-down quarks} \\[1pt]
+e^c &= (1,1)_{(2)}          && \quad &&\sim \textrm{positron} \\
+\end{alignat*}
+The anti-neutrino is not included here because it is a SM \emph{singlet} and does not transform under the SM group $\mathcal{G}_{SM}$, but it could be written as $\nu^c=(1,1)_(0)$. The positron $e^c$, on the other hand, \emph{is} included as its hypercharge is non-zero and it therefore undergoes $U(1)_Y$ interactions. These five multiplets exist for each of the tree generations.\newline
+The numbers representing each multiplet correspond to which representation it belongs to. For instance, we see that the quark multiplet transforms as a triplet under $SU(3)_C$, a doublet under $SU(2)_L$ and has a non-zero hypercharge, corresponding to a non-trivial representation under $U(1)_Y$. That corresponds to saying that quarks interact through all of the three fundamental interactions. From that notation, it is also clear that leptons do not carry color charge and will only interact via the electroweak interactions.\newline
+From the multiplets above, we see that $u^c$ and $d^c$ transform as singlets under $SU(2)_L$, meaning they do not interacting. This, however, does not mean they do not feel the electroweak force. The electroweak gauge bosons \PW and \PZ are not directly part of $SU(2)_L$, rather, they are a linear combination of $SU(2)_L$ and $U(1)_Y$ and anything with a non-zero weak hypercharge $Y$ will interact with them. This is also true for the photon, which also is a linear combination of $SU(2)_L$ and $U(1)_Y$.\newline
+These interactions; the strong, weak and electromagnetic, will be explained in more detail in the following sections.
 
 \subsubsection{The Quantum Chromodynamics sector}
 \label{sec:theory:qcd}
-The group $SU(3)_C$ represents the strong force, described by the quantum gauge theory Quantum Chromodynamics (QCD). The gauge field of the group, or the field strength, is the gluon field tensor 
+The group $SU(3)_C$ describe the strong interaction mediated by gluons, and is described by the quantum gauge theory Quantum Chromodynamics (QCD). The group is generated by 8 linearly independent matrices, the Gell-Mann matrices $\lambda$~\cite{PhysRev.125.1067} scaled by a factor $1/2$, which do not commute with each other but rather satisfy the commutation relation $[\lambda/2,\lambda/2]=i \sum_k f^{ijk} \lambda_k/2$. This property makes $SU(3)_C$ group \emph{non-Abelian}, which consequently results in the gluons themselves being charged and display self-interactions. Gluons are charged with one unit of color and one unit of anti-color. Quarks, the only fundamental particles interacting with the strong force, are arranged in the simplest representation of $SU(3)$ and come with one unit of color or anti-color. \newline
+The Gell-Mann matrices are collectively referred to as the \emph{group representation} of $SU(3)_C$, because any group element can be can be written as $e^{-i\theta^a g_a}$, where $a$ runs from 1 to 8, $\theta^a$ are real numbers and $g_a$ represent one of the eight linearly independent $\lambda/2$ matrices. That means that, given one representation, one can always find another one through any local gauge transformation that leaves the commutator unchanged.  
+In this case, the group elements are the quark fields, and a local gauge transformation of fields become
 \begin{equation}
-G_{\mu\nu}^a=\partial_{\mu} \mathcal{A}_{\nu}^a-\partial_{\nu} \mathcal{A}_{\mu}^a+g_s f^{abc}\mathcal{A}_{\mu}^b\mathcal{A}_{\nu}^c
+  \Psi(x^{\mu}) \rightarrow e^{ -i g_s \theta^a (\frac{\lambda^a}{2})}
 \end{equation}
-where $f^{abc}$ is the $SU(3)_C$ structure constant, $g_s$ is the strong coupling and $a$ runs over the eight generators of the group, which correspond to eight massless spin-1 gluons. The gauge invariant QCD Lagrangian is given as
-PUT QCD LAGRANGIAN HERE AND EXPLAIN TERM!!
-
-The conserved charge in QCD due to gauge invariance is the \emph{color} charge $C$, referred to as red, green or blue. Quarks, the only fundamental particles interacting with the strong force, are arranged in the simplest representation of $SU(3)$ and come with one unit of color or anti-color. The group elements get rotated by the generators, corresponding to quarks interacting with gluons. As $SU(3)_C$ is a non-Abelian group (where a group operation on two group elements depend on the order they are written), the gluons themselves are charged (with one unit of color, one unit of anti-color) and self-interact. These self-interactions have severe consequences: any bare color charge, like a quark, will be surrounded by a sea of virtual gluons and quarks that share the same color. When probing the quark color at higher and higher energies, corresponding to shorter and shorter distances, the color charge decreases until only the bare charge is visible. There, the quarks are essentially free and can be observed as distinguishable particles. This property is referred to as \emph{asymptotic freedom}. For the same reasons, when going further and further away from a bare color charge, the sea of charges surrounding it makes the observed charge increase. That results in a strong attractive force between color charges at large distances, where the potential energy between the two grows linearly with the distance between them as
+where $g_s$ is the strong coupling and $a$ runs over the eight generators of the group. In order to keep the QCD Lagrangian invariant under such a transformation, an additional term must be added, replacing the partial derivative $\partial_{\mu}$ with
+\begin{equation}
+  D_\mu=\partial_\mu + ig_s \mathcal{A}_{\mu}^a (\frac{\lambda^a}{2}),
+\end{equation}
+where we now have introduced a tensor $\mathcal{A}_{\mu}^a$ that represents the 8 gluon fields.
+The QCD Lagrangian then becomes
+\begin{equation}
+  \label{eq:theory:qcdl}
+   \mathcal{L}_{QCD} =-\frac{1}{4}{\cal F}_{a}^{\mu\nu}{\cal F}^{a}_{\mu\nu}+\bar{\Psi}(x^{\mu})(i\lambda^{\mu}D_{\mu}-m)\Psi(x^{\mu}),
+\end{equation}
+where $F_{\mu\nu}^a$ is the gauge field of the group, the gluon field tensor 
+\begin{equation}
+F_{\mu\nu}^a=\partial_{\mu} \mathcal{A}_{\nu}^a-\partial_{\nu} \mathcal{A}_{\mu}^a+g_s f^{abc}\mathcal{A}_{\mu}^b\mathcal{A}_{\nu}^c.
+\end{equation}
+The first term in Equation~\ref{eq:theory:qcdl} represents the quark-gluon interaction, leading to vertices like the one on the right in Figure~\ref{fig:theory:qcdint}. The second, the gluon field kinetic term, pick up the \emph{structure constant} $f^{abc}$ due to the commutation relation of the $\lambda$ matrices. This term creates self-interactions between the gluon fields, like the two shown on the right in Figure~\ref{fig:theory:qcdint}.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.79\textwidth]{figures/theory/QCD_vtx.pdf}
+\caption{The QCD interaction vertices: Quark interaction with the gluon field (left), and three- (middle) and four-gluon (right) self-interaction vertices.}
+\label{fig:theory:qcdint}
+\end{figure}
+These self-interactions have severe consequences: any bare color charge, like a quark, will be surrounded by a sea of virtual gluons and quarks that share the same color. When probing the quark color at higher and higher energies, corresponding to shorter and shorter distances, the color charge decreases until only the bare charge is visible. There, the quarks are essentially free and can be observed as distinguishable particles. This property is referred to as \emph{asymptotic freedom}. For the same reasons, when going further and further away from a bare color charge, the sea of charges surrounding it makes the observed charge increase. That results in a strong attractive force between color charges at large distances, where the potential energy between the two grows linearly with the distance between them as
 \begin{equation}
   V(r)=-\frac{4\alpha_s}{3r}+kr,
 \end{equation} 
@@ -100,7 +136,10 @@ where $Q$ is the energy of the probe used to measure the charge and $n_f$ is the
 
 \subsection{The electroweak sector}
 \label{sec:theaory:ew}
-The electromagnetic and weak interactions arise from the breaking of $SU (2)_L \otimes U(1)_Y$ symmetry. The gauge field tensor of $SU (2)_L$,the group of weak left-handed isospin $L$, is $W_{\mu\nu}^a$ where $a$ runs over the 3 generators of the group. The final group, $U(1)_Y$ of weak hypercharge $Y$, is abelian and hence has no self-interaction. The interactions are mediated by a neutral particle with the gauge field tensor $B_{\mu\nu}^a$.\newline
+The electromagnetic and weak interactions arise from the breaking of $SU (2)_L \otimes U(1)_Y$ symmetry. The gauge field tensor of the group of weak left-handed isospin, $SU (2)_L$ (the electroweak version of the gluon tensor $\mathcal{A}_{\nu}^a$ we saw above) is $W_{\mu\nu}^a$ where $a$ runs over the 3 generators of the group. 
+
+The latter group, $U(1)_Y$ of weak hypercharge $Y$, is abelian and hence has no self-interaction. The interactions are mediated by a neutral particle with the gauge field tensor $B_{\mu\nu}^a$.\newline
+
 All the fundamental fermions have a \emph{chirality}, defined as the projection of the particles spin along its direction of motion. From observations, the weak interactions is observed to only interact with fermions of left-handed chirality (vector minus axial coupling, V-A). The left-handed fermion fields are therefore in the simplest doublet representation of $SU(2)$ with weak isospin $I=1/2$, where the doublets are as defined in Equation~\ref{eqn:lepton_flavor_doublets} and~\ref{eqn:quark_flavor_doublets}, while the fermions of right-handed chirality are in the singlet representation with weak isospin $I=0$, meaning they do not interact with the gauge bosons of $W_{\mu\nu}^a$.
 
 \subsection{The Higgs Mechanism}
