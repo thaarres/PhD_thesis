@@ -30,7 +30,7 @@ $\nu_{\tau}$ & $< 18.2 \mbox{ MeV}$   & $0$  \\%   & 0       & 0         & 1 \\
 \hline
 \end{tabular}
 \end{center}
-\caption{Lepton Properties}
+\caption{Lepton Properties~\cite{Patrignani:2016xqp}.}
 \label{table:theory:lepprop}
 \end{table}
 Leptons interact with one another through the \emph{electromagnetic and weak force}, which will be explained in more detailed in Section~\ref{sec:theory:ew}.\newline
@@ -80,6 +80,7 @@ The fermion fields can be arranged as particle multiplets where one transforms i
 $SU(3)_C$ is the color $C$ symmetry allowing the rotation of quarks, arranged in color multiplets, into one another, corresponding to interactions produced by the strong force. The colors are denoted as red, green and blue. $SU (2)_L \otimes U(1)_Y$ represent the electroweak force with weak left-handed isospin $L$ and weak hypercharge $Y$ symmetries, acting on $L$ and $Y$ multiplets, respectively. %These forces, together with their conserved charges, will be clarified in the sections below.
 The particle multiplets of the Standard Model can then be written as $\mathcal{G}_{SM} \ni x=(C,L)_{(Y)}$ (here for the 1st generation only) and are:
 \begin{alignat*}{3}
+  \label{eq:theory:multiplets}
 Q &= (3,2)_{(1/3)} &&=
   \begin{pmatrix} 
     u_r & u_g & u_b \\
@@ -103,7 +104,7 @@ In this case, the group elements are the quark fields, and a local gauge transfo
 \begin{equation}
   \Psi(x^{\mu}) \rightarrow e^{ -i g_s \theta^a(x^{\mu}) T^a}\Psi(x^{\mu})
 \end{equation}
-where $g_s$ is the strong coupling, $\theta^a(x^{\mu})$ some arbitrary function and $a$ runs over the eight generators of the group. In order to keep the QCD Lagrangian invariant under such a transformation, an additional term must be added, replacing the partial derivative $\partial_{\mu}$ with
+where $g_s$ is the strong coupling, $\theta^a(x^{\mu})$ some arbitrary function and $a$ runs over the eight generators of the group. In order to keep the QCD Lagrangian invariant under such a transformation, an additional term must be added, replacing the partial derivative $\partial_{\mu}$ with the \emph{covariant derivative}
 \begin{equation}
   D_\mu=\partial_\mu + ig_s \mathcal{A}_{\mu}^a T^a,
 \end{equation}
@@ -135,48 +136,177 @@ where $r$ is the distance between the quarks and $\alpha_s$ is the coupling stre
 where $Q$ is the energy of the probe used to measure the charge and $n_f$ is the number of quark flavors (u, d, c, s, b, t) at that energy. $\alpha_S$ is around 0.1 for energies between 100-1000 \GeV.
 
 \subsection{The electroweak sector}
-\label{sec:theaory:ew}
-The electromagnetic and weak interactions arise from the breaking of $SU (2)_L \otimes U(1)_Y$ symmetry. The symmetry under $SU (2)_L$ is called weak left-handed isospin $L$, and the symmetry under $U(1)_Y$ is the weak hypercharge $Y$.
-The name "left-handed" arise from the fact that \emph{parity} is violated in the electroweak interactions. All the fundamental fermions have a \emph{chirality}, defined as the projection of the particles spin along its direction of motion. From observations, the weak interactions is observed to only interact with fermions of left-handed chirality (vector minus axial coupling, V-A). The left-handed fermion fields are therefore in the simplest doublet representation of $SU(2)$ with weak isospin $I=1/2$, while the fermions of right-handed chirality are in the singlet representation with weak isospin $I=0$, meaning they do not interact with the gauge bosons of $SU (2)_L$. To obtain the correct chiral components $\Psi_L$ and $\Psi_R$,
+\label{sec:theory:ew}
+The electromagnetic and weak interactions arise from the breaking of $SU (2)_L \otimes U(1)_Y$ symmetry. While the unification of the electromagnetic and weak force is obtained under the $SU (2)_L \otimes U(1)_Y$ group, the predicted gauge bosons of such a group are not observed in nature (three charged massless vector bosons, and one neutral massless boson). Rather, the $\PW^{\pm}$, $\PZ^{0}$ and the photon arise from the spontaneous symmetry breaking of $SU (2)_L \otimes U(1)_Y$ to $U(1)_{EM}$. This happens due to the \emph{Higgs mechanism}, and exactly how this occurs will be the topic of Section~\ref{sec:theory:higgs}.\par
+The symmetry under $SU (2)_L$ is called weak left-handed isospin $L$, and the symmetry under $U(1)_Y$ is the weak hypercharge $Y$. The name "left-handed" arise from the fact that \emph{parity} is violated in the electroweak interactions. All the fundamental fermions have a \emph{chirality}, defined as the projection of the particles spin along its direction of motion. From observations, the weak interactions is observed to only interact with fermions of left-handed chirality (vector minus axial coupling, V-A). The left-handed fermion fields are therefore in the simplest doublet representation of $SU(2)$ with weak isospin $I=1/2$, while the fermions of right-handed chirality are in the singlet representation with weak isospin $I=0$, meaning they do not interact with the gauge bosons of $SU (2)_L$. To obtain the correct chiral components $\Psi_L$ and $\Psi_R$,
 The chirality of any fermion $\Psi$ can be defined through the operator $\gamma^5$, the product of the four Dirac matrices~\cite{Pauli:1936gd} $\gamma^5=i\gamma^1\gamma^2\gamma^3\gamma^4$, which has eigenvalues $\pm 1$. Any Dirac field can be projected into its chiral components $\Psi_L$ or $\Psi_R$ through the projection operation
 \begin{equation}
   \Psi_L = \frac{1-\gamma^5}{2} \quad \textrm{and} \quad \Psi_R = \frac{1+\gamma^5}{2}.
   \end{equation}
-The gauge field tensor of the group of $SU (2)_L$ symmetry (similar to the gluon tensor $\mathcal{A}_{\nu}^a$ we saw above) is $W_{\mu\nu}^a$, where $a$ runs over the 3 generators of the group. The conserved charge associated with the group is the \emph{third} component of weak isospin $I_3$, and all weak interactions must preserve $I_3$. The generators of the group are defined as $T_i=\frac{\sigma_i}{2}$, where $\sigma_i$ are the Pauli matrices~\cite{inbook}. The group is non-abelian and the generators follow the commutation relation $[\sigma_i/2,\sigma_j/2]=i \epsilon_{ijk} \sigma_k/2$, where $\epsilon_{ijk}$ is the Levi-Civita permutation symbol~\cite{Duplij2004}. This in turn implies self-interactions between the generators of the group, as was the case for $SU(3)_C$. The left-handed fermion fields are doublets under $SU (2)_L$, while the right-handed components transform as singlets and hence do not interact with the gauge field tensor. \newline
-The latter group, $U(1)_Y$ of weak hypercharge $Y$, is abelian and hence display no self-interaction. The gauge field tensor $B_{\mu\nu}^a$ interacts with both left- and right-handed Dirac fields. As mentioned above, the photon, mediator of the electromagnetic force through electromagnetic charge, is a linear combination of $SU(2)_L$ and $U(1)_Y$. The electric charge is therefore defined through weak isospin and hypercharge as
-\begin{equation}
-  Q = I_3 + \frac{Y}{2}.
-\end{equation}
-Similar to the case for QCD, a local gauge transformation of $SU (2)_L \otimes U(1)_Y$ requires the addition of additional terms in the derivate in order to keep the Lagrangian invariant and the partial derivative $\partial_{\mu}$ is replaced by
+The gauge field tensor of the group of $SU (2)_L$ symmetry is $W_{\mu\nu}^a$, where $a$ runs over the 3 generators of the group. The conserved charge associated with the group is the \emph{third} component of weak isospin $I_3$, and all weak interactions must preserve $I_3$. The generators of the group are defined as $T_i=\frac{\sigma_i}{2}$, where $\sigma_i$ are the Pauli matrices~\cite{inbook}. The group is non-abelian and the generators follow the commutation relation $[\sigma_i/2,\sigma_j/2]=i \epsilon_{ijk} \sigma_k/2$, where $\epsilon_{ijk}$ is the Levi-Civita permutation symbol~\cite{Duplij2004}. This in turn implies self-interactions between the gauge bosons of the group, as was the case for $SU(3)_C$. The left-handed fermion fields are doublets under $SU (2)_L$, while the right-handed components transform as singlets and hence do not interact with the gauge field tensor. \newline
+The latter group, $U(1)_Y$ of weak hypercharge $Y$, is abelian and hence display no self-interaction. The gauge field tensor $B_{\mu\nu}^a$ interacts with both left- and right-handed Dirac fields. Similar to the case for QCD, a local gauge transformation of $SU (2)_L \otimes U(1)_Y$ requires the addition of additional terms in the derivate in order to keep the Lagrangian invariant. The partial derivative $\partial_{\mu}$ is replaced by the covariant derivatives
 \begin{align}
+  \label{eq:theory:ewcov}
   D_\mu \Psi_L &=(\partial_{\mu} + ig_2 T_a W_{\mu}^a + ig_1 \frac{Y}{2} B_{\mu}^a)\Psi_L\\
   D_\mu \Psi_R &=(\partial_{\mu} + ig_1 \frac{Y}{2} B_{\mu}^a)\Psi_R.
 \end{align}
 The electroweak Lagrangian can be written as a sum of four terms
-% \begin{equation}
-%   \label{eq:theory:ewl}
-%    \mathcal{L}_{EW} =-\frac{1}{4}{\cal W}_{a}^{\mu\nu}{\cal W}^{a}_{\mu\nu} - \frac{1}{4}{\cal B}^{\mu\nu}{\cal B}_{\mu\nu} +\bar{\Psi_L}(x^{\mu})(i\lambda^{\mu}D_{\mu}-m)\Psi(x^{\mu}),
-% \end{equation}
 \begin{equation}
   \label{eq:theory:ewl}
-   \mathcal{L}_{EW} = \mathcal{L}_{gauge}+\mathcal{L}_{\phi}+\mathcal{L}_{f}+\mathcal{L}_{Yukawa}.
+   \mathcal{L}_{EW} = \mathcal{L}_{gauge}+\mathcal{L}_{f}+\mathcal{L}_{Yukawa}+\mathcal{L}_{\phi}.
 \end{equation}
 The first term, $\mathcal{L}_{gauge}$, represent the kinetic field tensor and is
 \begin{equation}
   \label{eq:theory:gauge}
-   \mathcal{L}_{gauge} = -\frac{1}{4}{\cal W}_{a}^{\mu\nu}{\cal W}^{a}_{\mu\nu} - \frac{1}{4}{\cal B}^{\mu\nu}{\cal B}_{\mu\nu}
+   \mathcal{L}_{gauge} = -\frac{1}{4}W_{a}^{\mu\nu}W^{a}_{\mu\nu} - \frac{1}{4}{\cal B}^{\mu\nu}{\cal B}_{\mu\nu}
 \end{equation}
 where the gauge field tensors are
 \begin{align}
-W_{\mu\nu}^a &=\partial_{\mu} \mathcal{W}_{\nu}^a-\partial_{\nu} \mathcal{W}_{\mu}^a-g_2\epsilon^{ijk}{\cal W}^{j}_{\mu}{\cal W}^{k}_{\nu} \quad \textrm{, with   } i=1-3\\
-B_{\mu\nu} &=\partial_{\mu} \mathcal{B}_{\nu}-\partial_{\nu} \mathcal{B}_{\mu}.
+W_{\mu\nu}^a &=\partial_{\mu} W_{\nu}^a-\partial_{\nu} W_{\mu}^a-g_2\epsilon^{ijk}W^{j}_{\mu}W^{k}_{\nu} \quad \textrm{, with   } i=1-3\\
+B_{\mu\nu} &=\partial_{\mu} B_{\nu}-\partial_{\nu} B_{\mu}.
 \end{align}
-The non-abelian nature of $SU (2)_L$ lead to trilinear and quadrilinear couplings between the photon and vector bosons as illustrated in Figure~\ref 
-\subsection{The Higgs Mechanism}
+The non-abelian nature of $SU (2)_L$ leads to trilinear and quadrilinear couplings between the photon and vector bosons as illustrated in Figure~\ref{fig:theory:weakint}.\newline
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.99\textwidth]{figures/theory/weak_selfinteraction.png}
+\caption{The electroweak self-interaction vertices: trilinear (left), and quadri-linear (middle and right) vertices.}
+\label{fig:theory:weakint}
+\end{figure}
+The second term describe the boson fields coupling to fermions and is
+\begin{equation}
+  \label{eq:theory:gauge}
+   \mathcal{L}_{f} = \bar{Q}_ii\lambda^{\mu}D_{\mu} Q_i + \bar{u}_i^ci\lambda^{\mu}D_{\mu} u_i^c
+                   + \bar{d}_i^ci\lambda^{\mu}D_{\mu} d_i^c + \bar{L}_ii\lambda^{\mu}D_{\mu} L_i +  
+                     \bar{e}_i^ci\lambda^{\mu}D_{\mu} e^c_i,
+\end{equation}
+where we have expressed each term using the particle multiplets in Equation~\ref{eq:theory:multiplets} and the subscript $i$ runs over the three fermion generations. They all interact differently under $SU(2)_L \times U(1)_Y$ due to their different charges.\newline
+Up until now we have considered the Lagrangian before spontaneous symmetry breaking, where we have three charged massless bosons and one massless neutral boson, a constellation we know to be wrong from observations. When I have referred to interaction vertices, I have loosely referred to W, Z and $\gamma$ vertices without explicitly defining them (and we have only been working with the covariant derivatives as defined in Equation~\ref{eq:theory:ewcov}). We will show in Section~\ref{sec:theory:higgs} that, due to spontaneous symmetry breaking, the charged gauge boson fields $\PW^{\pm}$ in reality are linear combinations of $W_{\mu}^1$ and $W_{\mu}^2$>
+\begin{equation}
+\PW^{\pm} = \frac{1}{\sqrt{2}}(W_{\mu}^1 \mp iW_{\mu}^2).
+\end{equation}
+These are responsible for \emph{charged current interactions}, which turn up-type fermions into their corresponding down-type fermions within the same generation, and vice-versa. The electrically neutral Z boson and the photon fields are expressed in terms of $W_{\mu}^3$ and $B_{\mu}$ through the weak mixing angle~\cite{Weinberg:1979pi} as
+\begin{equation}
+\begin{pmatrix} \gamma \\ \PZ^0 \end{pmatrix}
+  = \begin{pmatrix} \cos \theta_W & \sin \theta_W \\
+                   -\sin \theta_W & \cos \theta_W \end{pmatrix}
+  \begin{pmatrix} B \\ W^3 \end{pmatrix}                   
+\end{equation}
+where $\theta_W$ can be expressed through the $SU (2)_L$ and $U(1)_Y$ couplings $g_1$ and $g_2$ as
+\begin{equation}
+     \cos \theta_W = \frac{g_1}{g^2_1+g^2_2}  \quad \textrm{ and } \quad \sin \theta_W = \frac{g_2}{g^2_1+g^2_2}.        
+\end{equation}
+The electric charge is therefore defined through weak isospin and hypercharge, and is
+\begin{equation}
+  Q = I_3 + \frac{Y}{2}.
+  \end{equation}
+A few of the fermion-boson vertices are shown in Figure~\ref{fig:theory:weakfermionint}
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.39\textwidth]{figures/theory/ew_ch.png}\\
+  \includegraphics[width=0.39\textwidth]{figures/theory/ew_neu.png}
+  \caption{The electroweak fermion interaction vertices. Top: Charged current interaction vertex connecting a charged vector boson $\PW^{\pm}$ to quarks (left) and leptons (right). Bottom: Neutral current interactions between the neutral $\PZ^0$ boson and any fermion (left), and between a $\gamma$ and electrically charged fermions.}
+  \label{fig:theory:weakfermionint}
+  \end{figure}
+The last two terms, $\mathcal{L}_{Yukawa}$ and $\mathcal{L}_{\phi}$, are related to the Higgs boson and represent couplings to the Higgs field: its interactions with itself and the gauge bosons, and the Yukawa interaction with the fermions that generate their masses due to the non-zero Higgs vacuum expectation value. Introduced as an extension to the original SM, the Higgs sector is one of the great accomplishments of particle physics and one of the reasons why the LHC was built. How it arises is what we will turn to next.
 
- 
+\subsection{Spontaneous symmetry breaking and The Higgs Sector}
+\label{sec:theory:higgs}
+The problem of having massless gauge bosons under $SU(2)_L \times U(1)_Y$, while observing massive W and Z bosons, was independently solved by three different groups and has become known as the Englert–Brout-Higgs–Guralnik–Hagen–Kibble mechanism of spontaneous symmetry breaking~\cite{PhysRevLett.13.321,PhysRevLett.13.508,PhysRevLett.13.585}, an accomplishment for which Peter Higgs and Francois Englert shared the 2013 Nobel Prize.\newline
+It began with the realization that the breaking of a local gauge symmetry could give rise to a final mass for the gauge boson involved. This was first discovered in association with superconductivity, where it was found that when a normal metal becomes superconducting the photon field inside the superconductor would acquire a finite mass~\cite{PhysRev.110.827}.
+
+\subsubsection{Spontaneous breaking of a global gauge symmetry}
+In order to achieve spontaneous symmetry breaking, Jeffrey Goldstone~\cite{Goldstone:1961eq} suggested introducing a massive complex scalar field $\phi$ with quantum numbers of the vacuum and then give the field a vacuum expectation value. The field
+\begin{equation}
+\phi = \frac{1}{\sqrt{2}}(\phi_1+i\phi_2)  
+\end{equation}
+would have a Lagrangian of the form
+\begin{equation}
+\mathcal{L} = \partial^{\mu}\bar{\phi}\partial_{\mu}\phi-\mu_0^2\bar{\phi}\phi-\frac{\lambda_0}{6}\bar{\phi}\phi^2,
+\end{equation}
+where $\lambda_0$ is the coupling constant and $\mu_0$ is the mass. The Lagrangian is invariant under $U(1)$, though in this case under a global symmetry and not a local one. If one takes $\mu_0^2$ to be negative, the potential will get a minima along a circle of radius $v$ such that
+\begin{equation}
+  \phi_1^2+\phi_2^2 = v^2 \quad \textrm{and}\quad v^2=\frac{\mu_0^2}{\lambda_0}
+\end{equation}
+and take the form of a "Mexican Hat" as shown in Figure~\ref{fig:theory:higgspot}. 
+  \begin{figure}[h!]
+  \centering
+  \includegraphics[width=0.49\textwidth]{figures/theory/higgspotential.png}
+  \caption{The potential $V(\phi)$ for a complex scalar field with $\mu_0^2<0$~\cite{Ellis:1638469}.}
+  \label{fig:theory:higgspot}
+  \end{figure}
+$v$ is referred to as the vacuum expectation value. The lowest value of the Hamiltonian is now at $\phi=v$ rather than at $\phi=0$. Goldstone then translated the field to a minimum energy position $\phi'=\phi+v$ and gave the field a vacuum expectation value, effectively breaking the symmetry between the two field components but keeping the Lagrangian invariant.
+This complex field can be expanded around the ground state in terms of two real fields $\eta$ and $\epsilon$ that represent deviations from the minimum:
+\begin{equation}
+\phi(x) = \frac{1}{\sqrt{2}}*(v+\eta(x)+i\epsilon(x))
+\end{equation}
+ The Lagrangian then becomes
+\begin{equation}
+\mathcal{L} = \frac{1}{2}(\partial_{\mu}\epsilon)^2 + \frac{1}{2}(\partial_{\mu}\eta)^2+\mu_0^2\eta^2.
+\end{equation}
+The third term has the form of a mass term for the scalar $\eta$ field. However, the $\epsilon$ field has no mass term meaning that the theory contains a massless scalar, referred to as a \emph{Goldstone boson}. This is expressed through \emph{Goldstones theorem}, which states that whenever a continuous symmetry of a physical system is spontaneously broken, massless scalars will occur. So rather than solving the problem of massless vector bosons, the theory acquired a massless scalar not observed in Nature and the gauge theory of weak interactions had to look elsewhere for solutions.
+
+\subsubsection{The Higgs mechanism}
+The solution to the problem came a few years later, in 1964, when spontaneous symmetry breaking of a \emph{local} gauge symmetry was studied gather than a global. For a $U(1)$ symmetry, this requires the Lagrangian to be invariant under $\phi \rightarrow e^{i\theta(x)}\phi$ with the usual derivative replacement
+\begin{equation}
+D_{\mu}=\partial_{\mu}-ie A_{\mu}.
+\end{equation}
+
+After translating the field $\phi$ to its true ground state and writing out the Lagrangian
+\begin{equation}
+  \label{eq:theory:higgsL}
+\mathcal{L} = \frac{1}{2}(\partial_{\mu}\epsilon)^2 + \frac{1}{2}(\partial_{\mu}\eta)^2-v^2\lambda \eta^2+\frac{1}{2}v^2 e^2 A_{\mu} A^{\mu}-ev A_{\mu}\partial^{\mu}\epsilon-\frac{1}{4}F_{a}^{\mu\nu}F^{a}_{\mu\nu}
+\end{equation}
+we see that the particle spectrum now contains a massless Goldstone boson $\epsilon$, a massive scalar $\eta$ and, finally, a massive vector $A_{\mu}$ with $m_A=ev$. After having succeeded with dynamically creating the mass for the gauge field, one had to tackle the problem of the massless scalar. The solution was found through the realization that one of the fields were unphysical; by giving mass to the vector $A_{\mu}$, the polarization degrees of freedom had increased from 2 to 3 through adding a longitudinal polarization. However, this should not be possible when simply translating field variables. It was found that through a simple gauge transformation with a different set of fields
+\begin{equation}
+A_{\mu} \rightarrow A_{\mu}+\frac{1}{ev}\partial_{\mu}\theta,
+\end{equation}
+the Goldstone boson would disappear and turn into the longitudinal polarization of the massive gauge boson and the theory was left with one massive vector gauge boson $A_{\mu}$ and another massive scalar $h$. This is what is referred to as the \emph{Higgs mechanism}.
+
+\subsubsection{The Weinberg-Salam Model}
+The final step is to formulate the Higgs mechanism such that the vector bosons $\PW^{\pm}$ and $\PZ^{0}$ becomes massive, while the photon remains massless. To do so, Sheldon Glashow, Abdus Salam, and Steven Weinberg (all awarded the 1979 Nobel Prize for electroweak unification), added a gauge invariant term to the electroweak Lagrangian of the following form:
+ \begin{align}
+   \label{eq:theory:higgsmass}
+  \mathcal{L}_{Higgs}= \big|(i\partial_{\mu} - g_2 T_a W_{\mu}^a -vg_1 \frac{Y}{2} B_{\mu}^a) \phi\big| ^2-V(\phi)
+ \end{align}
+The $\phi_i$ has to belong to $SU(2) \times U(1)$ multiplets, and the simplest choice is four fields in an isospin doublet of weak hypercharge $Y=1$:
+\begin{equation}
+\phi =  \begin{pmatrix} \phi^{+} \\ \phi^{0} \end{pmatrix}= \begin{pmatrix} \frac{\phi_1+i\phi_2}{\sqrt{2}} \\ \frac{\phi_3+i\phi_4}{\sqrt{2}}\end{pmatrix}.
+\end{equation}
+To generate the masses, the Higgs potential from the section above is used, with a vacuum expectation value of
+\begin{equation}
+\phi_0 = \frac{1}{\sqrt{2}}  \begin{pmatrix} 0 \\ v \end{pmatrix}.
+\end{equation}
+This specific choice of charges, VEV and fields insure that the $U(1)_{em}$ symmetry with $Q=T^3+\frac{Y}{2}$ remains unbroken, keeping the photon massless. The three others break the symmetry and become massive gauge bosons: the $\PW^{+}$, $\PW^{-}$ and $\PZ^{0}$. The mass term for the gauge bosons then finally become
+\begin{align}
+M_W            &=\frac{1}{2}vg_1\\
+M_Z            &=\frac{1}{2}v\sqrt{g_1^2+g_2^2}\\
+\frac{M_W}{M_Z}&=\cos \theta_W.
+\end{align}
+
+As mentioned in Section~\ref{sec:theory:ew}, the fermions also get their mass through interaction with the Higgs field, $\mathcal{L}_{Yukawa}$. This is done the same way as for the boson: an additional $SU(2) \times U(1)$ invariant term for each generation is added, for instance for the electron
+\begin{equation}
+  -G_e \bigg[ \begin{pmatrix} \bar{\nu}_e & \bar{e}\end{pmatrix}_L   \begin{pmatrix} \phi^{+} \\ \phi^{0} \end{pmatrix} e^R +
+  \bar{e}_R  \begin{pmatrix} \phi^{-} & \bar{\phi}^{0} \end{pmatrix}  \begin{pmatrix} \nu_e \\ e\end{pmatrix}_L  \bigg],
+  \end{equation}
+where $G_E$ is the electron coupling. We then spontaneously break the symmetry with
+\begin{equation}
+\phi = \frac{1}{\sqrt{2}}  \begin{pmatrix} 0 \\ v+h(x) \end{pmatrix},
+\end{equation}
+ where the neutral Higgs field $h(x)$ is the only remnant of the Higgs doublet after spontaneous symmetry breaking. After substitution, the final Lagrangian for the electron mass becomes
+ \begin{equation}
+   \mathcal{L}_{Yukawa}^e=-\frac{G_e}{\sqrt{2}}v(\bar{e}_L e_R + \bar{e}_R e_L )(1+\frac{h}{v}).
+\end{equation}
+We can choose $G_e$ such that
+\begin{equation}
+  m_e=-\frac{G_e v}{\sqrt{2}}
+  \end{equation}
+and generate the electron mass as
+\begin{equation}
+  \mathcal{L}_{Yukawa}^e=-m_e \bar{e}e-\frac{m_e}{v} \bar{e}eh.
+\end{equation}  
+In summary, all the fermion masses are generated through the interaction of the fermion fields with the Higgs field. From the equation above, we see that the fermion masses are not predicted from the theory as the coupling $G$ is arbitrary. The Standard Model therefore cannot provide an explanation the difference in hierarchy between the couplings. We also see that the Lagrangian contains an interaction term coupling the Higgs scalar to the fermions and that this term depends on the mass of the fermion. The Higgs boson therefore couples more strongly to heavy fermions than to lighter ones.
+     
 \clearpage
-
 \section{Beyond Standard Model Physics}
 Despite being an extremely successful and predictive theory, the Standard Model has its shortcomings. The most obvious one is its failure to successfully incorporate the gravitational force. Gravity is beautifully described in General Relativity as a classical theory: a force caused by the curvature of space-time in the presence of matter and energy. The theory does not utilize quantum fields and energy is not quantized.
 The scales between the Standard model, a quantum field theory, and General Relativity are completely different: space-time is curved on astronomical scales, where the force of gravity is measurable, while quantum field theories deal with things on the smallest possible scales, where variations in space-time are essentially invisible. Hence, to the Standard Model, space-time is approximately flat and gravity does not exist. In order to have an elegant unified theory of all the forces, attempts has been made to have a quantum field theory of the gravitational force by extending the Standard Model particle family to incorporate a particle to mediate the gravitational force called the \emph{graviton}, a massless gauge boson of spin-2. The problem is that gravity is universally attractive, meaning nothing "cancels" it. That leads to loop divergences that cannot be reabsorbed through renormalization and every effort of integrating gravity in the SM has thus far failed. However, it has been shown that General Relativity is an inevitable consequence of the quantum mechanics of interacting gravitons, which has led to several proposals for extending the SM models to incorporate them.\newline
@@ -185,12 +315,13 @@ Quantum loop corrections of this magnitude only happen for scalar particles such
 Of course, it is possible that the Higgs boson mass just happens to be 125 \GeV due to some fine-tuned, large cancellations that keep the mass from approaching the Planck mass, as is currently held by the Standard Model. However, this is neither very elegant nor very probable without a well-motivated reason why such a cancellation should occur. Rather, in order to resolve the problem of scales, theories Beyond the Standard Model (BSM) have been introduced. The theories that I will probe in this thesis are amongst those.
 
 \subsection{Theories of New Physics}
-A solution to the hierarchy problem comes if one assumes that the Standard Model breaks down at an energy between the weak and Planck scales. One possibility is that around the \TeV scale, the Higgs boson no longer appears to be a single scalar particle. Two BSM models considered in this thesis are compositeness, where the Higgs boson is a composite state of two fermions, and extra dimensional theories, where the Higgs is composite through the holographic principle. NO COMPOSITENESS LINK< NO HOLOGR PRINCIPLE. In this thesis, I will present the study of composite models in the context of the \emph{Heavy Vector Triplet formalism}, described in Section~\ref{sec:theory:hvt}.
+Two Beyond Standard Model theories will be considered in this thesis: Compositeness and extra dimensional theories.
+Compositeness attacks the hierarchy problem by assuming that the Standard Model breaks down at an energy between the weak and Planck scales and that, around the \TeV scale, the Higgs boson no longer appears to be a single scalar particle but a composite state of two fermions. In the following, I will present the study of composite models in the context of the \emph{Heavy Vector Triplet formalism}, described in Section~\ref{sec:theory:hvt}. Warped extra dimensional theories attempt to solve the hierarchy problem by concentrating gravity on another "brane" and letting its strength fall of exponentially through an extra dimension. Both of these, compositeness and extra dimensional theories, will be described in the following.
 
 \subsubsection{Compositeness}
 In composite Higgs models, the Higgs boson is assumed to be a bound state of fundamental constituents held together by some new strong force~\cite{Bellazzini:2014yua,Contino:2011np}. This removes the hierarchy problem since we no longer have an elementary scalar in the Standard Model, hence no loop corrections going to infinity. The compositeness of the Higgs boson becomes apparent at the energy scale $\Lambda$, where $\Lambda$ has to be at least 10 \TeV, since anything below that is ruled out by electroweak precision measurements.
 The Higgs boson is assumed to be a pseudo-Goldstone boson of some approximate symmetry, where pseudo-Goldstone bosons are bosons with a tiny mass that approach zero in the limit of the symmetry becoming exact. The approximate symmetry is broken at the scale $f$, where $\Lambda=4\pi f$. Being a pseudo-Goldstone boson, the Higgs boson mass is protected from divergent quantum loop corrections up to the scale of compositeness and, above that scale, is no longer an elementary scalar.
-The theory is based on the breaking of a large global symmetry $SU(2) \times U(1)$, with Goldstone bosons becoming the longitudinal components of the three predicted gauge bosons of the symmetry group $\mathrm{W}^{\prime\pm}$ and $\PZpr$. These have masses of the order of the compositeness scale
+The theory is based on the breaking of two parallel, large global symmetries $[SU(2)_1 \times U(1)_1]\times[SU(2)_2 \times U(1)_2]$, with Goldstone bosons becoming the longitudinal components of the three predicted gauge bosons of the symmetry group $\mathrm{W}^{\prime\pm}$ and $\PZpr$. These have masses of the order of the compositeness scale
 \begin{equation}\label{eqn:LHvprimeMass}
 M(\mathrm{W}^{\prime\pm}) \simeq M(\PZpr) = \frac{g}{\sin2\theta}f,
 \end{equation}
@@ -234,7 +365,7 @@ In this thesis, we probe two benchmark models called HVT model A and HVT model B
 
 \subsubsection{Warped extra dimensions}
 \label{sec:theory:wed}
-Extra dimensional theories also offer solutions to the hierarchy problem. This thesis focuses on Randall-Sundrum (RS) warped extra dimensional scenarios~\cite{PhysRevLett.83.3370}. In RS models, a new curved spatial dimension $y$ is proposed, leading to a 5-dimensional space-time bounded by two (3+1)-dimensional planes, or \emph{branes}: the UV/Planck and the IR/TeV brane. The new metric now depends on the radius $r$ and the curvature $k^{-1}$ of the new extra dimension
+Extra dimensional theories also offer solutions to the hierarchy problem. This thesis focuses on Randall-Sundrum (RS) warped extra dimensional scenarios~\cite{PhysRevLett.83.3370}. In RS models, a new curved spatial dimension $y$ is proposed, leading to a 5-dimensional space-time bounded by two (3+1)-dimensional planes, or \emph{branes}: the UV/Planck and the IR/TeV brane. The new metric now depends on the radius $r$ and the curvature factor $k$ of the new extra dimension
 \begin{equation}
   ds^2=e^{-2ky}\eta_{\mu\nu}dx^{\mu}dx^{\nu}+dy^2; 0 < y < \pi R
 \end{equation}
@@ -245,8 +376,13 @@ Gravity is concentrated and relatively strong at the Planck brane at $y=0$, whic
 \caption{The RS model predicts an extra dimension where a 5D space-time stretches between two 4D branes: the Planck brane where gravity is concentrate, and the TeV brane where the SM particles are confined.}
 \label{fig:theory:rs1}
 \end{figure}
- Due to the warping, the Planck mass on the Planck brane gets reduced by a factor of $e^{-\pi kR}$ at the TeV brane, thereby solving the hierarchy problem. One distinct prediction of the model, and a way in which we can test its validity, is the prediction of a tower of \TeV-scale excitations with spin-2, so called Kaluza-Klein states, that could be observed in high energy experiments. \newline
-In this thesis, we are more interested in an alternative to the original RS model called the "bulk" scenario~\cite{PhysRevD.76.036006,Fitzpatrick:2007qr}. In this case, the Standard Model particles, besides the Higgs boson, are also allowed to propagate in the bulk. The light 1st and 2nd generation fermions are localized near the Planck brane, yielding small couplings to the Higgs boson that still resides at the \TeV brane, explaining their small masses. Similarly, the top quark is now located near the \TeV brane, resulting in a stronger Yukawa coupling to the Higgs boson. In addition, with the gravitons located near the \TeV brane and the fermions now residing near the Planck brane, the graviton coupling to fermions is strongly suppressed. SM gluons have a flat distribution throughout the bulk, making gluon-gluon production the dominant production channel of gravitons. Due to the weak vector bosons absorbing the Higgs degree of freedom in spontaneous symmetry breaking, their wave-functions fall of steeply near the \TeV brane, resulting in a coupling to the gravitons similar to that of the Higgs and the top. The branching ratios of the Bulk Graviton is shown in Figure~\ref{fig:theory:bulk}.
+ Due to the warping, the Planck mass on the Planck brane gets reduced by a factor of $e^{-\pi kR}$ at the TeV brane, thereby solving the hierarchy problem. The Planck mass on the \TeV brane, which depends on the geometry of the extra dimension, becomes
+\begin{equation}
+  \bar{M}_{Pl}^2=V_1M_*^3,
+  \end{equation} 
+where $V_1$ is the volume of the 1 dimensional added warped dimension and $M_*^3$ is the 5D Planck mass.
+One distinct prediction of the model, and a way in which we can test its validity, is the prediction of a tower of \TeV-scale excitations with spin-2, so called Kaluza-Klein states, that could be observed in high energy experiments. \newline
+In this thesis, we are more interested in an alternative to the original RS model called the "bulk" scenario~\cite{PhysRevD.76.036006,Fitzpatrick:2007qr}. In this case, the Standard Model particles, besides the Higgs boson, are also allowed to propagate in the bulk. The light 1st and 2nd generation fermions are localized near the Planck brane, yielding small couplings to the Higgs boson that still resides at the \TeV brane, explaining their small masses. Similarly, the top quark is now located near the \TeV brane, resulting in a stronger Yukawa coupling to the Higgs boson. In addition, with the gravitons located near the \TeV brane and the fermions now residing near the Planck brane, the graviton coupling to fermions is strongly suppressed. SM gluons have a flat distribution throughout the bulk, making gluon-gluon production the dominant production channel of gravitons. Due to the weak vector bosons absorbing the Higgs degree of freedom in spontaneous symmetry breaking, their wave-functions fall of steeply near the \TeV brane, resulting in a coupling to the gravitons similar to that of the Higgs and the top. The branching ratios of the Bulk Graviton is shown in Figure~\ref{fig:theory:bulk}. The only free parameters of the theory is the mass of the lightest KK graviton and the ratio $\tilde{k} = \frac{k}{\bar{M}_{Pl}}$, which controls the widths of the new resonances:
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.49\textwidth]{figures/theory/BulkGravitonBR_tuomas.png}

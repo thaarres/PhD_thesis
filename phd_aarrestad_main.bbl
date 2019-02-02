@@ -4,6 +4,68 @@
 \makeatother
 \providecommand{\doi}{\texttt{doi:}\begingroup \urlstyle{tt}\Url}
 
+\bibitem{PhysRev.125.1067}
+\hrefCMSnoop {}{M.~Gell-Mann, ``Symmetries of Baryons and Mesons'',} \textit{
+  Phys. Rev.} \textbf{ 125} (Feb, 1962) 1067--1084,
+  \href{http://dx.doi.org/10.1103/PhysRev.125.1067}{\doi{10.1103/PhysRev.125.1067}}.
+
+\bibitem{Pauli:1936gd}
+\hrefCMSnoop {}{W.~Pauli, ``{Mathematical contributions to the theory of
+  Dirac's matrices}'',} \textit{ Ann. Inst. H. Poincare Phys. Theor.} \textbf{
+  6} (1936)
+109--136.
+%%CITATION = INSPIRE-5062;%%.
+
+\bibitem{inbook}
+\hrefCMSnoop {}{R.~Tumulka, ``Pauli Spin Matrices''}, pp.~470--472.
+\newblock 07, 2009.
+\newblock
+  \href{http://dx.doi.org/10.1007/978-3-540-70626-7_142}{\doi{10.1007/978-3-540-70626-7_142}}.
+
+\bibitem{Duplij2004}
+\hrefCMSnoop {}{S.~Duplij and F.~Klinkhamer, ``Levi-Civita Symbol''},
+  pp.~227--227.
+\newblock Springer Netherlands, Dordrecht, 2004.
+\newblock
+  \href{http://dx.doi.org/10.1007/1-4020-4522-0_298}{\doi{10.1007/1-4020-4522-0_298}}.
+
+\bibitem{Weinberg:1979pi}
+\hrefCMSnoop {}{S.~Weinberg, ``{Conceptual Foundations of the Unified Theory of
+  Weak and Electromagnetic Interactions}'',} \textit{ Rev. Mod. Phys.} \textbf{
+  52} (1980) 515--523,
+  \href{http://dx.doi.org/10.1103/RevModPhys.52.515}{\doi{10.1103/RevModPhys.52.515}}.
+[,543(1979)].
+%%CITATION = RMPHA,52,515;%%.
+
+\bibitem{PhysRevLett.13.321}
+\hrefCMSnoop {}{F.~Englert and R.~Brout, ``Broken Symmetry and the Mass of
+  Gauge Vector Mesons'',} \textit{ Phys. Rev. Lett.} \textbf{ 13} (Aug, 1964)
+  321--323,
+  \href{http://dx.doi.org/10.1103/PhysRevLett.13.321}{\doi{10.1103/PhysRevLett.13.321}}.
+
+\bibitem{PhysRevLett.13.508}
+\hrefCMSnoop {}{P.~W. Higgs, ``Broken Symmetries and the Masses of Gauge
+  Bosons'',} \textit{ Phys. Rev. Lett.} \textbf{ 13} (Oct, 1964) 508--509,
+  \href{http://dx.doi.org/10.1103/PhysRevLett.13.508}{\doi{10.1103/PhysRevLett.13.508}}.
+
+\bibitem{PhysRevLett.13.585}
+\hrefCMSnoop {}{G.~S. Guralnik, C.~R. Hagen, and T.~W.~B. Kibble, ``Global
+  Conservation Laws and Massless Particles'',} \textit{ Phys. Rev. Lett.}
+  \textbf{ 13} (Nov, 1964) 585--587,
+  \href{http://dx.doi.org/10.1103/PhysRevLett.13.585}{\doi{10.1103/PhysRevLett.13.585}}.
+
+\bibitem{PhysRev.110.827}
+\hrefCMSnoop {}{P.~W. Anderson, ``Coherent Excited States in the Theory of
+  Superconductivity: Gauge Invariance and the Meissner Effect'',} \textit{
+  Phys. Rev.} \textbf{ 110} (May, 1958) 827--835,
+  \href{http://dx.doi.org/10.1103/PhysRev.110.827}{\doi{10.1103/PhysRev.110.827}}.
+
+\bibitem{Goldstone:1961eq}
+\hrefCMSnoop {}{J.~Goldstone, ``{Field Theories with Superconductor
+  Solutions}'',} \textit{ Nuovo Cim.} \textbf{ 19} (1961) 154--164,
+\href{http://dx.doi.org/10.1007/BF02812722}{\doi{10.1007/BF02812722}}.
+%%CITATION = NUCIA,19,154;%%.
+
 \bibitem{Bellazzini:2014yua}
 \hrefCMSnoop {}{B.~Bellazzini, C.~Csáki, and J.~Serra, ``{Composite
   Higgses}'',} \textit{ Eur. Phys. J.} \textbf{ C74} (2014), no.~5, 2766,
