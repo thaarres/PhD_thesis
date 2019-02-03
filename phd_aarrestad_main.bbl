@@ -4,6 +4,12 @@
 \makeatother
 \providecommand{\doi}{\texttt{doi:}\begingroup \urlstyle{tt}\Url}
 
+\bibitem{Patrignani:2016xqp}
+\hrefCMSnoop {}{{Particle Data Group} Collaboration, ``{Review of Particle
+  Physics}'',} \textit{ Chin. Phys.} \textbf{ C40} (2016), no.~10, 100001,
+\href{http://dx.doi.org/10.1088/1674-1137/40/10/100001}{\doi{10.1088/1674-1137/40/10/100001}}.
+%%CITATION = CHPHD,C40,100001;%%.
+
 \bibitem{PhysRev.125.1067}
 \hrefCMSnoop {}{M.~Gell-Mann, ``Symmetries of Baryons and Mesons'',} \textit{
   Phys. Rev.} \textbf{ 125} (Feb, 1962) 1067--1084,
@@ -65,6 +71,11 @@
   Solutions}'',} \textit{ Nuovo Cim.} \textbf{ 19} (1961) 154--164,
 \href{http://dx.doi.org/10.1007/BF02812722}{\doi{10.1007/BF02812722}}.
 %%CITATION = NUCIA,19,154;%%.
+
+\bibitem{Ellis:1638469}
+\href {http://cds.cern.ch/record/1638469}{J.~Ellis, ``{Higgs Physics}'',}. 52
+  pages, 45 figures, Lectures presented at the ESHEP 2013 School of High-Energy
+  Physics, to appear as part of the proceedings in a CERN Yellow Report.
 
 \bibitem{Bellazzini:2014yua}
 \hrefCMSnoop {}{B.~Bellazzini, C.~Csáki, and J.~Serra, ``{Composite

@@ -100,25 +100,6 @@
 %-------------------------------------------------------------------------------------
 \input{ptdr-definitions.tex}
 
-%-------------------------------------------------------------------------------------
-%redefine the include macro - no page break with includes (doesn't work)
-%\usepackage{filehook}
-%\AtEndOfIncludes{%
-%  \global\let\savedclearpage\clearpage
-%  \global\let\clearpage\relax
-%}
-%\AfterIncludes{%
-%  \global\let\clearpage\savedclearpage
-%}
-
-%-------------------------------------------------------------------------------------
-%-------------------------------------------------------------------------------------
-%-------------------------------------------------------------------------------------
-%-------------------------------------------------------------------------------------
-%\usepackage{lineno}
-%\linenumbers
-%\usepackage{geometry}
-%\newgeometry{verbose,tmargin=3.5cm,bmargin=3.5cm,lmargin=3cm,rmargin=2.5cm}
 \begin{document}
 
 %TITLE
@@ -132,38 +113,38 @@
 % ABSTRACT		
 \vspace*{\fill}
 \begin{center}
-\Large
+\large
 {\color{MidnightBlue}\textbf{Abstract}}
 \end{center}
 \input{abstract.tex}
-
 \vspace*{\fill}
 
-
 \newpage\thispagestyle{empty}\mbox{}
-%\newpage\thispagestyle{empty}\mbox{}
+\newpage\thispagestyle{empty}\mbox{}
 
 % GERMAN ABSTRACT
 \vspace*{\fill}
 \begin{center}
-\Large
+\large
 {\color{MidnightBlue}\textbf{Zusammenfassung}}
 \end{center}
 \input{Zusammenfassung}
 \vspace*{\fill}
 
-% TABLE OF CONTENT
 \newpage\thispagestyle{empty}\mbox{}
-\setcounter{tocdepth}{2}
-\setcounter{page}{0}
-\pagenumbering{roman}
+
+% TABLE OF CONTENT
+%\setcounter{page}{0}
+%\setcounter{tocdepth}{2}
+%\setcounter{secnumdepth}{4}
+%\pagenumbering{roman}
 \tableofcontents
-\setcounter{secnumdepth}{4}
-\clearpage
+\newpage\thispagestyle{empty}\mbox{}
+\newpage\thispagestyle{empty}\mbox{}
 
 %chapter*{Acknowledgements}
-\newpage
-\pagenumbering{arabic}
+%\newpage
+%\pagenumbering{arabic}
 
 % INTRODUCTION
 \chapter*{Introduction}
@@ -204,18 +185,25 @@
 \input{diboson.tex}
 
 % LoLa
-\chapter{A Lorentz Invariance Based Deep Neural Network for W-tagging}
+\chapter{Encoding jet substructure in a deep neural network}
 \label{ch:lola}
 \vspace*{\fill}\newpage
 \input{lola.tex}
 	
 % SUMMARY			
-\chapter{Summary}		
+\chapter{Conclusion and outlook}		
+\label{ch:summary}
 \vspace*{\fill}\newpage			
 \input{summary.tex}
+\clearpage
+
+\newpage\thispagestyle{empty}\mbox{}
 
 % APPENDIX		
 \appendix
+\label{app}
+\vspace*{\fill}\newpage
+
 \input{appendix.tex}
 
 %-------------------------------------------------------------------------------------
