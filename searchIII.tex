@@ -646,6 +646,143 @@ Those five shape uncertainties are assigned very large pre-fit values (allowed t
 \end{figure}
 \clearpage
 
+\section{Background model validation}
+\label{sec:search3:checks}
+In order to convince ourselves that the fit is robust, several checks are performed in simulation and in a data control region before unblinding the data signal region.
+
+\subsection{Variations of QCD multijet predictions}
+First, we check that the main template (generated starting from QCD \PYTHIA{8} MC) can fit predictions from alternate QCD multijets samples in order to demonstrate that systematic uncertainties in the modeling of parton showers are covered by the relevant nuisance parameters. Fits to three different QCD samples are compared: \PYTHIA{8} (nominal), \HERWIG{++} (alternate shape 1) and \MADGRAPH{}+\PYTHIA{8} (alternate shape 2).
+To ensure a smooth data distribution not affected by low statistics present in the MC spectra, we generate a toy dataset under the templates rather than using MC events directly. The postfit distributions after fitting each toy, is shown in Figures~\ref{fig:postfitPythia}-\ref{fig:postfitMadgraph} for the HPHP (top) and HPLP category (bottom).
+\begin{figure}[h!]
+\centering
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfitCombo1617/PostFitcomboPythiaHPHP_X-Proj__y___0_-1_z___0_-1.pdf}}
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfitCombo1617/PostFitcomboPythiaHPHP_Y-Proj__x___0_-1_z___0_-1.pdf}}
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfitCombo1617/PostFitcomboPythiaHPHP_Z-Proj__x___0_-1_y___0_-1.pdf}}\\
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfitCombo1617/PostFitcomboPythiaHPLP_X-Proj__y___0_-1_z___0_-1.pdf}}
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfitCombo1617/PostFitcomboPythiaHPLP_Y-Proj__x___0_-1_z___0_-1.pdf}}
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfitCombo1617/PostFitcomboPythiaHPLP_Z-Proj__x___0_-1_y___0_-1.pdf}}
+\caption{Postfit distributions after a combined fit to a toy datasets generated under the QCD \PYTHIA{8} template. The projections of \MJO (left), \MJT (middle) and \MVV (right) are shown for the HPHP (top) and HPLP (bottom) category.}
+\label{fig:postfitPythia}
+\end{figure}
+\begin{figure}[h!]
+\centering
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfitCombo1617/PostFitcomboHerwigHPHP_X-Proj__y___0_-1_z___0_-1.pdf}}
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfitCombo1617/PostFitcomboHerwigHPHP_Y-Proj__x___0_-1_z___0_-1.pdf}}
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfitCombo1617/PostFitcomboHerwigHPHP_Z-Proj__x___0_-1_y___0_-1.pdf}}\\
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfitCombo1617/PostFitcomboHerwigHPLP_X-Proj__y___0_-1_z___0_-1.pdf}}
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfitCombo1617/PostFitcomboHerwigHPLP_Y-Proj__x___0_-1_z___0_-1.pdf}}
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfitCombo1617/PostFitcomboHerwigHPLP_Z-Proj__x___0_-1_y___0_-1.pdf}}
+\caption{Postfit distributions after a combined fit to a toy datasets generated under the QCD \HERWIG{++} template. The projections of \MJO (left), \MJT (middle) and \MVV (right) are shown for the HPHP (top) and HPLP (bottom) category.}
+\label{fig:postfitHerwig}
+\end{figure}
+
+\begin{figure}[h!]
+\centering
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfitCombo1617/PostFitcomboMadgraphHPHP_X-Proj__y___0_-1_z___0_-1.pdf}}
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfitCombo1617/PostFitcomboMadgraphHPHP_Y-Proj__x___0_-1_z___0_-1.pdf}}
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfitCombo1617/PostFitcomboMadgraphHPHP_Z-Proj__x___0_-1_y___0_-1.pdf}}\\
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfitCombo1617/PostFitcomboMadgraphHPLP_X-Proj__y___0_-1_z___0_-1.pdf}}
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfitCombo1617/PostFitcomboMadgraphHPLP_Y-Proj__x___0_-1_z___0_-1.pdf}}
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfitCombo1617/PostFitcomboMadgraphHPLP_Z-Proj__x___0_-1_y___0_-1.pdf}}
+\caption{Postfit distributions after a combined fit to a toy datasets generated under the QCD QCD \MADGRAPH{}+\PYTHIA{8} template. The projections of \MJO (left), \MJT (middle) and \MVV (right) are shown for the HPHP (top) and HPLP (bottom) category.}
+\label{fig:postfitMadgraph}
+\end{figure}
+To quantify the fit quality of these, a goodness-of-fit test is performed using a saturated model (which is valid when data are non-Gaussian), shown in Figure \ref{fig:gof}. The test statistics are Gaussian distributed and the toy dataset is in good agreement with the background only hypothesis, demonstrating the fits ability to account for differences in QCD multijet predictions.
+\begin{figure}[h!]
+\centering
+\resizebox{0.32\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/gof_pythia.pdf}}
+\resizebox{0.32\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/gof_herwig.pdf}}
+\resizebox{0.32\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/gof_madgraph.pdf}}
+\caption{The likelihood for toys generated around the background-only hypothesis compared to the likelihood value of a toy dataset generated under the \PYTHIA (left), \HERWIG{} (middle) and \MADGRAPH{}+\PYTHIA{8} template (right).}
+\label{fig:gof}
+\end{figure}
+% We also fit the main template, generated under leading order \PYTHIA{8}, to a toy dataset generated from next-to-leading-order \POWHEG{} Monte Carlo, in order to demonstrate that systematic uncertainties in perturbative QCD predictions are covered by the nuisance parameters. Again, we find gaussian distributed likelihood for the toys generated under the background only hypothesis and the generated dataset.
+\subsection{Fit to data control region}
+TO validate the method in data, the 3D fit procedure is tested in a data control region where both jets are required to have $0.43<\tau_{21}^{DDT}\leq0.79$, the so-called LPLP category. The templates are built following the procedure described in Section~\ref{sec:nonresbkgd}. In this category, the contribution of the resonant background is negligible with respect to the dominant QCD multijet background and is removed from the fit. The post-fit distributions in the data control region are shown in Figures~\ref{fig:postfitLPLP_X}--\ref{fig:postfitLPLP_Z} for different jet mass and dijet invariant mass bins.
+\begin{figure}[h!]
+\centering
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_LPLP_2016/PostFitLPLP_X-Proj__y___0_-1_z___1100_1600.png}}
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_LPLP_2016/PostFitLPLP_X-Proj__y___0_-1_z___1600_2700.png}}
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_LPLP_2016/PostFitLPLP_X-Proj__y___0_-1_z___2700_5500.png}}
+\caption{Distributions obtained from the fit to 2016 LPLP data. Here the projections of \MJO are shown for the several ranges of \MVV and for the full \MJT range.}
+\label{fig:postfitLPLP_X}
+\end{figure}
+\begin{figure}[h!]
+\centering
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_LPLP_2016/PostFitLPLP_Y-Proj__x___0_-1_z___1100_1600.png}}
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_LPLP_2016/PostFitLPLP_Y-Proj__x___0_-1_z___1600_2700.png}}
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_LPLP_2016/PostFitLPLP_Y-Proj__x___0_-1_z___2700_5500.png}}
+\caption{Distributions obtained from the fit to 2016 LPLP data. Here the projections of \MJT are shown for the several ranges of \MVV and for the full \MJO range.}
+\label{fig:postfitLPLP_Y}
+\end{figure}
+\begin{figure}[h!]
+\centering
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_LPLP_2016/PostFitLPLP_Z-Proj__x___55_65_y___55_65.png}}
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_LPLP_2016/PostFitLPLP_Z-Proj__x___65_85_y___65_85.png}}
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_LPLP_2016/PostFitLPLP_Z-Proj__x___85_105_y___85_105.png}}\\
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_LPLP_2016/PostFitLPLP_Z-Proj__x___105_170_y___105_170.png}}
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_LPLP_2016/PostFitLPLP_Z-Proj__x___170_190_y___170_190.png}}
+\resizebox{0.30\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_LPLP_2016/PostFitLPLP_Z-Proj__x___190_215_y___190_215.png}}
+\caption{Distributions obtained from the fit to 2016 LPLP data. Here the projections of \MVV are shown for several equal ranges of \MJO and \MJT.}
+\label{fig:postfitLPLP_Z}
+\end{figure}
+A goodness-of-fit check is performed, shown on the left plot in Figure~\ref{fig:gofLPLP}, and we again find that the toys are Gaussian distributed and the LPLP data is in good agreement with the background-only hypothesis. The post-fit value and uncertainty of each nuisance parameter involved in the fit is also studied, where deviations from the pre-fit value is quantified through the ``pull'', defined as $p_{\theta} = (\theta - \theta_{in})/\sigma_\theta$, where, $\theta$ and $\sigma_\theta$ are the post-fit value of the nuisance parameter and its uncertainty, and $\theta_{in}$ the pre-fit value. The pulls for all nuisance parameters are shown in the right plot in Figure~\ref{fig:gofLPLP}, where the uncertianty is defined as the ratio between the post- and pre-fit uncertainties. The post-fit values show a reasonable deviation from the chosen pre-fit values of 0. The uncertainties are strongly constrained by data, as expected given the large pre-fit uncertainty assigned to let the shapes adjust to the real data.
+\begin{figure}[h!]
+\centering
+\resizebox{0.35\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_LPLP_2016/GOF_LPLP.png}}
+\resizebox{0.45\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/postfit_LPLP_2016/pulls.pdf}}
+\caption{Left: the likelihood for toys generated around the background-only fit to LPLP data, compared to the likelihood on data. Data is in good agreement with the background-only hypothesis. Right: pulls of the nuisance parameters for a background-only fit.}
+\label{fig:gofLPLP}
+\end{figure}
+% In addition to the goodness-of-fit check in the data sideband region, we also perform the same test on the data signal region, shown in Figure \ref{fig:gofSR}. Here, very good agreement between the likelihood of data and the background only hypothesis from MC simulation is observed.
+% \begin{figure}[h!]
+% \centering
+% \resizebox{0.45\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/GOF_SR.pdf}}
+% \caption{The likelihood of toys generated around the background-only hypothesis compared to the likelihood on data for the comined 2016 and 2017 datasets.}
+% \label{fig:gofSR}
+% \end{figure}
+% \clearpage
+
+\subsection{Bias test in pseudodata}
+\label{sec:bias}
+Finally, we study whether there is any bias on the extracted signal rate due to the background model. A $\BulkG \rightarrow\PW\PW$ signal, with different mass and signal strength $\mu_\mathrm{in}$, is injected on top of the full background. The signal strength is chosen such that it corresponds to a significance of 4-4.5 standard deviations for each signal mass, resulting in jet mass and dijet invariant mass spectra as shown in Figure~\ref{fig:signalToy}.
+\begin{figure}[h!]
+\centering
+\resizebox{0.3\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/biasTest/2016/PostFitcomboHPHP_X-Proj__y___0_-1_z___0_-1.png}}
+\resizebox{0.3\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/biasTest/2016/PostFitcomboHPHP_Y-Proj__x___0_-1_z___0_-1.png}}
+\resizebox{0.3\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/biasTest/2016/PostFitcomboHPHP_Z-Proj__x___0_-1_y___0_-1.png}}
+\caption{The post-fit distribution after injecting a signal with a mass of 3 \TeV on top of the background in the HPHP (top) and HPLP (bottom) category. are shown separately for the two categories.}
+\label{fig:signalToy}
+\end{figure}
+For each tested signal mass point, a signal plus background fit is performed. The signal normalization is free to float in the fit, which determines the signal strength $\mu$ and its uncertainty $\sigma_\mu$. For each toy, the pull of the signal strength $p_\mu = (\mu-\mu_{in})/\sigma_\mu$ is calculated. The procedure is repeated $\sim 1000$ times for each category, and the cumulative distribution of the pulls is fitted with a Gaussian function to determine the mean and its uncertainty, which represent the bias. This is shown in Figure~\ref{fig:pullsMuCombo16}.
+\begin{figure}[h!]
+\centering
+\resizebox{0.45\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/biasTest/2016/signal_mu_combo_Pythia_1200.pdf}}
+\resizebox{0.45\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/biasTest/2016/signal_mu_combo_Pythia_2000.pdf}}\\
+\resizebox{0.45\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/biasTest/2016/signal_mu_combo_Pythia_3000.pdf}}
+\resizebox{0.45\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/biasTest/2016/signal_mu_combo_Pythia_4500.pdf}}
+\caption{Cumulative distributions of the pulls for the signal strength for 4 different signal mass-points.}
+\label{fig:pullsMuCombo16}
+\end{figure}
+Ideally, the distribution should be Gaussian distributed with a mean around 0 and a width of 1. The bias, as shown in Figure~\ref{fig:bias}, is consistency below 50\% and therefore no additional correction/bias term is introduced.
+\begin{figure}[h!]
+\centering
+\resizebox{0.45\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/biasTest/2016/bias_combo_2016.pdf}}
+\caption{Estimated bias as a function of the resonance mass.}
+\label{fig:bias}
+\end{figure}
+In addition, we calculate the pull for each nuisance parameter and fit the cumulative distribution with a Gaussian in order to determine the mean and its uncertainty, representing the shift of the parameters $\theta$ with respect to the pre-fit values. The results are shown in Figure~\ref{fig:pullsTheta}. The mean of the cumulative distributions of the pulls is found to be zero for all nuisance parameters, as expected. The width of the distribution can range from very small values to about 1, depending on the assigned pre-fit uncertainty and the power of the data to constrain it.
+\begin{figure}[h!]
+\centering
+\resizebox{0.45\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/biasTest/2016/sigma_combo_M1200.pdf}}
+\resizebox{0.45\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/biasTest/2016/sigma_combo_M2000.pdf}}\\
+\resizebox{0.45\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/biasTest/2016/sigma_combo_M3000.pdf}}
+\resizebox{0.45\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/biasTest/2016/sigma_combo_M4500.pdf}}
+\caption{Pulls of the nuisance parameters estimated for the signal masses and strengths under test. Results are shown of the signal+background combined fits of the two HPHP and HPLP categories to toy datasets generated from the nominal \PYTHIA{8} templates corresponding to the 2016 integrated luminosity and signal+background pdf.}
+\label{fig:pullsTheta}
+\end{figure}
+\clearpage
+
 \subsection{Results}
 The distributions obtained from a combined fit to the observed data in 2016 and 2017 are shown in Figure~\ref{fig:searchIII:finalPostFitHP} and\ref{fig:searchIII:finalPostFitLP}, with the corresponding predicted and observed number of background events in the signal region summarized in Table~\ref{tab:searchIII:ObsEvents}. We observe a beautiful double peak from the W(qq) and Z(qq)+jets background, especially clear in the low purity category. This allows us to, for the very first time extract the softdrop jet mass scale and resolution from a V(qq)+jets double peak, which we'll discuss in Section~\ref{sec:searchIII:pulls}. It also gives us the opportunity to measure the V(qq)+jets cross section, a measurement we are currently planning on how to best extract.
 \begin{table}[h!]

@@ -1,18 +1,15 @@
 \section{Track and primary vertex reconstruction}
 The CMS tracker gets traversed by $\mathcal{O}~1000$ charged particles at each bunch crossing, produced by an average of roughly 34 proton-proton interactions happening ~simultaneously. This makes track reconstructions extremely challenging, and is the reason why a high granularity of the tracker is vital.
 The average number or vertices per event for the whole Run 2 is shown in Figure~\ref{fig:objreco:pu}, with a combined average of 34 number of interactions per bunch crossing.
-
 \begin{figure}[h] 
     \centering
     \includegraphics[width=0.49\textwidth]{figures/event_reconstruction/pu.pdf}
     \caption{The average number of vertices per event in CMS during the Run 2 datataking~\cite{CMSlumi}.}
     \label{fig:objreco:pu}
 \end{figure}
-
 Track reconstruction describes the process of taking hits from the pixel and strip detectors, combining them and estimating the momentum and flight direction of the charged particle responsible for producing the hits. It is an extremely computationally heavy process and is based on what is called a combinatorial Kalman filter~\cite{BILLOIR1989390}. A Kalman filter is an algorithm that uses time-dependent observations in order to estimate unknown variables, by proceeding progressively from one measurement to the next, improving the knowledge of the
 trajectory with each new measurement. The track reconstruction software in CMS (called the Combinatorial Track Finder (CTF)) constructs its collection of tracks by iteratively looping over the hits and reconstructing tracks, then removing those which are already used as inputs for a previous track. It starts from a seed in the inner most tracker layers, usually two or three hits, and then extrapolates the seed trajectories searching for additional hits to associate to that candidate. It then disregards tracks that fail certain criteria  based on a $\chi^2$ calculation taking both hit and trajectory uncertainties into account, as well as the number of missing hits.
 The track reconstruction algorithm is effective over the full tracker coverage range up to $|\eta|<2.5$ and can reconstruct particles with momenta as low as 0.1 GeV or particles which are produced up to 60 \cm from the beam line. In the central region, particles with a momentum of 100 GeV have a \PT-resolution of roughly 2.8 \%, a transverse impact parameter resolution of 10 $\micron$ and a longitudinal impact parameter of 30 $\micron$. 
-
 
 In order to define the location and uncertainty of every proton-proton interaction in an event, primary-vertex reconstruction in performed. Primary vertices lie within a radius of a few millimeters of the beam axis and are defined as the common origin of groups of tracks.
 The reconstruction algorithm takes as input the reconstructed tracks from the previous step which pass certain selection criteria, clusters the tracks that share a common origin and then fit for the position of each vertex. Each track must have at least 2 hits in the pixel layers and no less than 5 hits in the pixel+strip as well as a $\chi^2<20$ from a fit to the particle trajectory to be considered as input for the vertex finder. The primary vertex resolution is around 12 \micron in x and 10 \micron in z for vertices with at least 50 tracks.
@@ -33,8 +30,7 @@ The reconstructed physics object in the order of which they are reconstructed ar
 \end{itemize}
 
 How these different particles propagate through the CMS detector is illustrated in Figure~\ref{fig:objreco:PF}.
-
-\begin{figure}[h] 
+\begin{figure}[h!] 
     \centering
     \includegraphics[width=0.79\textwidth]{figures/event_reconstruction/PF.png}
     \caption{Particle interactions in the different subdetectors for a transverse slice through the CMS detector~\cite{1748-0221-12-10-P10003}.}
@@ -137,8 +133,7 @@ Only electrons passing certain quality requirements, corresponding to the CMS el
 \begin{table}[h!]
 \begin{center}
   \footnotesize
-\begin{tabular}{|l|c|c|}
-\hline
+\begin{tabular}{l|c|c}
  Variable  &  Barrel  &  Endcap  \\
  \hline
  $E_{T}$                            &  $>$ 35 \GeV                                                &  $>$ 35 \GeV                                         \\
@@ -150,10 +145,10 @@ Only electrons passing certain quality requirements, corresponding to the CMS el
  full 5x5 $\sigma_{i \eta i \eta}$  &  n/a                                                        &  $<0.03$                                             \\
  full 5x5 $E^{2x5}/E^{5x5}$         & $>0.94$ OR $E^{1x5}/E^{5x5}> 0.83$                          &  n/a                                                 \\
  \hline
- EM$+$Had. Depth Iso.               &  $ < 2+0.03 \times E_T + 0.28 \times \rho$                  & For $E_T < 50 \GeV$: $< 2.5+0.28 \times \rho$        \\
+ EM$+$Had. Depth Iso.               &  $ < 2+0.03 \times E_T + 0.28 \times \rho$                  & $E_T < 50 \GeV$: $< 2.5+0.28 \times \rho$        \\
                                     &                                                             & else: $<2.5+0.03 \times (E_T-50) + 0.28 \times \rho$ \\
  \hline
- Track \PT iso.                     & For $E_T < 100 \GeV$: $< 5 \GeV$ / $<5 + 1.5 \times \rho$   &  $<5 + 0.5 \times \rho$                              \\
+ Track \PT iso.                     & $E_T < 100 \GeV: <5 + 1.5 \times \rho$   &  $<5 + 0.5 \times \rho$                              \\
                                     & else:  $<5 + 1.5 \times \rho$                               &                                                      \\
  \hline
  Inner Layer Lost Hits              &  $\leq 1$                                                   &  $\leq 1$                                            \\
@@ -351,21 +346,16 @@ The above description of jet energy corrections in CMS is meant as a rough, inst
 \section{Jet substructure reconstruction}
 \label{sec:objreco:substructure}
 In analyses looking for highly energetic ("boosted") vector bosons like, a main theme of this thesis, the opening angle between the vector boson quark decay products become so small that the highly boosted boson appears as a single large jet instead of two well-separated smaller jets. The distance between the two quarks, in the case of an hadronic decay, depends on the mass of the vector boson and its \PT and goes as
-
 \begin{equation}  
 \Delta R = \frac{2 M_{V}}{p_{T,V}}.  
 \end{equation}
-
 Above a W boson \PT of 200 GeV, the two quarks are therefore merged into a single large cone jet of size R = 0.8. A sketch of the two different situation is shown in Figure~\ref{fig:objreco:mergedvsunmerged}. If the W \PT is well below 200 GeV, its decay products are well-defined jets in their own right (left). However, once the W transverse momenta starts exceeding 200 GeV, both the quarks are completely contained within a single jet (right).
-   
 \begin{figure}[h] 
     \centering
     \includegraphics[width=0.70\textwidth]{figures/event_reconstruction/merged_vs_unmerged.pdf}
     \caption{If the mass of the resonance is low enough, the quark decay products of each vector boson are well separated and clustered into distinguishable AK4 jets (left). If the transverse momentum of the vector boson is greater than 200 GeV, the vector boson decay products are merged into one single large cone AK8 jet.}
     \label{fig:objreco:mergedvsunmerged}
 \end{figure}
-
-
 In order to distinguish hadronically decaying vector boson from QCD quark/gluon jets, the jet mass would in principle be a good discriminant as we know the W has a mass of around 80 GeV while the quark/gluon mass is close to ~zero. At very high transverse momenta, however, the width (and therefore the mass) of QCD jets may become equally large. In addition, diffuse radiation caused by the Underlying Event and pileup give rise to a significant number of additional particles in the event contributing to the total jet mass.
 Therefore, being able to accurately and efficiently separate highly boosted QCD jets from highly boosted vector bosons, requires other methods.
 In order to get red of UE and pileup, algorithms like PUPPI and CHS can be used. Then, to improve the mass resolution further, dedicated grooming algorithms must be applied.
@@ -384,7 +374,6 @@ If the subjet fails this requirement, it is removed. The remaining subjets are t
 The effect of trimming on real W jets and QCD quark/gluon jets for different values of $r_{sub}$ and $p_{T,frac}$ is shown in Figure~\ref{fig:objreco:trimming}. 
 The best signal mass resolution is obtained with $r_{sub}=0.2$ and $p_{T,frac}=0.03$, which is also the parameter setting that provides the best signal and background 
 discrimination by pushing the QCD jet mass closer to zero. These are the default values of the tuned parameters of the trimming algorithm in CMS ($r_{sub}=0.2$ and $p_{T,frac}=0.03$).
-
 \begin{figure}[h] 
     \centering 
     \includegraphics[height=6cm]{figures/event_reconstruction/sig_trimming.pdf}
@@ -397,13 +386,10 @@ discrimination by pushing the QCD jet mass closer to zero. These are the default
 \label{sec:objreco:pruning}
 The pruning algorithm, in addition to removing soft particles, has an additional requirement on the distance between any recombination that are at wide angle.
 It proceeds by reclustering the jet with the C/A algorithm, requiring at each step that
-
 \begin{equation*}
 \frac{ \textrm{min}(p_{T,i},p_{T,j}) }{ p_{T,P} } > z_{cut} \quad \textrm{ and } \quad \Delta R_{i,j} < D_{cut} = \frac{2 r_{cut} m_{jet}}{\PT}.
 \end{equation*}
-
 The first requirement is a requirement on the hardness of the combination. $p_{T,i}$ and $,p_{T,j}$ correspond to the transverse momenta of each protojet (single particle or group of particles already combined in a previous step) and $p_{T,P}$ is the combined \PT of the two. The protojet with the lowest transverse momenta is removed if its hardness is below $z_{cut}$, or if it forms an angle wider than $D_{cut}$ relative to the axis of the recombination of the two protojets. In CMS, the tuned parameters are set to $r_{cut}=0.5$ and where $z_{cut}=0.1$. Figure~\ref{fig:objreco:pruning} shows the ungroomed as well as the pruned jet mass distribution for signal (left) and background jets. The highest amount of signal and background separation in CMS, is achieved with $r_{cut}=0.5$ and $z_{cut}=0.1$.
-
 \begin{figure}[h] 
     \centering
     \includegraphics[height=6cm]{figures/event_reconstruction/sig_pruning.pdf}
@@ -417,16 +403,14 @@ The first requirement is a requirement on the hardness of the combination. $p_{T
 \subsubsection{Modified Mass Drop Tagger and Soft Drop}
 \label{sec:objreco:softdrop}
 The modified mass drop tagger (mMDT)~\cite{Dasgupta:2013ihk} (a modified version of the originally suggested mass drop tagger ~\cite{Butterworth:2008iy}) is based on the idea that a \PW/\PZ jet is formed by two quark subjets and that, therefore, the mass of each subjet is much smaller than their combined mass (and much smaller than the mass of the boson itself). A QCD jet is, on the other hand, formed by continuous soft radiation, meaning that its heaviest subjet should be close to the mass of the jet itself. The mMDT tagger therefore starts from an already clustered jet, reclusters it with the C/A algorithm and then declusters it again defining subjets $s_1$ and $s_2$. It then looks for a significant mass drop going from total jet mass to the mass of each subjet, and checks that the splitting is not too asymmetric. The modified mass drop condition is generalized through the soft drop declustering method~\cite{Larkoski:2014wba}, simply called Soft Drop, which allows for different types of angular requirements to enter the condition. The Soft Drop condition is the following
-
 \begin{equation*}
 \frac{ \textrm{min}(p_{T,1},p_{T,2}) }{ p_{T,1}+p_{T,2} } > z_{cut} \frac{\Delta R_{12}}{R_0}^\beta.
 \end{equation*}
-
 If no significant mass drop occurred and the splitting is not to asymmetric, the condition is met and the full jet is deemed the softdrop jet. Otherwise only the highest-\PT subjet is kept and the declustering continues. If the jet can not be declustered any further, it can either be removed from consideration, so-called "tagging"-mode, or deemed the final soft-dropped jet, "grooming"-mode. A $\beta=0$ corresponds to the modified mass drop tagger and removes all soft emission from the jet. For $\beta>0$, soft radiation is removed, but some fraction of soft-collinear radiation is kept. Lastly, with $\beta<0$, Soft Drop can remove soft as well as collinear radiation.
 The performance of Soft Drop on W jets and QCD quark/gluon jets for different values of $\beta$ is shown in Figure~\ref{fig:objreco:softdrop}. The modified mass drop tagger (Softdrop with $\beta$=0) with $z_{cut} = 0.1$ is the default Soft Drop settings in CMS, due to it providing the best signal/background discrimination while maintaining an excellent signal mass resolution. 
 
 
-\begin{figure}[h] 
+\begin{figure}[h!] 
     \centering 
     \includegraphics[height=6cm]{figures/event_reconstruction/sig_sd.pdf}
     \includegraphics[height=6cm]{figures/event_reconstruction/bkg_softdrop-noData.pdf}
@@ -437,32 +421,24 @@ The performance of Soft Drop on W jets and QCD quark/gluon jets for different va
 \subsection{N-subjettiness}
 After hopefully having resolved the particle mass with one of the grooming algorithms above, there is still discriminating information to be gathered from the jet structure itself.
 A \PW or \PZ jet consists of two well-defined high-\PT subjets. A quark/gluon jet on the other hand, made from a single parton, consists of several large angle, asymmetric splittings, as illustrated in Figure~\ref{fig:objreco:onevstwoprong}.
-
-\begin{figure}[h] 
+\begin{figure}[h!] 
     \centering 
     \includegraphics[width=0.790\textwidth]{figures/event_reconstruction/tau21_sketch.pdf}
      \caption{A jet stemming from the decay of a \PW will usually have two well-separated high-\pt subjets, while a jet with a single-prong origin consists of several large angel splittings.}
      \label{fig:objreco:onevstwoprong}
  \end{figure}
- 
- The N-subjettiness algorithm~\cite{Thaler:2010tr} takes advantage of this fact by attempting to count the number of hard subelements within a jet. This is quantified through the n-subjettiness variable, $\tau_N$, defined as
- 
-
+The N-subjettiness algorithm~\cite{Thaler:2010tr} takes advantage of this fact by attempting to count the number of hard subelements within a jet. This is quantified through the n-subjettiness variable, $\tau_N$, defined as
  \begin{equation}
  \tau_N = \frac{1}{d_0} \sum_k p_{T,k}\textrm{min}( \Delta R_{1,k},\Delta R_{2,k}...,\Delta R_{N,k})
  \end{equation} 
-
 where k runs over all the jet constituents, $p_{T,k}$ is the constituent transverse momentum and $\Delta R_{i,k}$ is the distance between the constituent and candidate subjet axes. These subjet axes are obtained through a one-pass optimization procedure which minimizes N-subjettiness~\cite{Thaler2012}. The normalization factor in front is given as
-
  \begin{equation}
 d_0 = \sum_k p_{T,k} R_0
  \end{equation} 
-
 where $R_0$ corresponds to the cone size of the initial jet. With this definition, jets with $\tau_N=0$ have most of its constituents aligned along the subjet axes. However, if $\tau_N>>0$, a large fraction of the energy is radiated away from the subjet directions and are more likely to have more than N subjets.
 In CMS, and as recommended by the authors in~\cite{Thaler:2010tr}, the ratio $\tau_2/\tau_1$ is used to discriminate W jets from QCD jets. The reason for this is that, while 
 signal jets are expected to have a large $\tau_1$, quark/gluon can similarly have large $\tau_1$ due to the diffuse radiation present. However, QCD jets with a large $\tau_1$ tend to have an equally large $\tau_2$, while signal jets do not, hence the ratio of the two provides greater separation power. In CMS, the n-subjettiness algorithm is by default applied to ungroomed jets.
 The distribution of $\tau_{21}$ for signal and background jets with different pileup subtraction algorithms applied are shown in Figure~\ref{fig:objreco:tau21}, where $\tau_21$ in combination with PF+PUPPI (green) yields a distribution most similar to the generated one (black).
-
 \begin{figure}[h] 
     \centering 
     \includegraphics[width=0.490\textwidth]{figures/event_reconstruction/sig_tau21.pdf}
@@ -480,14 +456,12 @@ Which combination and which cuts to use is analysis dependent, and have been opt
 \subsubsection{Polarization effects}
 \label{sec:objreco:pol}
 The vector boson polarization has a significant effect on the W-tagging efficiency. The helicity angle $\theta$, defined as the angle between the outgoing quark daughters of the W in the W bosons rest frame relative to its direction of motion~\cite{PhysRevD.86.095031}, is very different for longitudinally polarized vector bosons, \PWL, and transversally polarized vector bosons \PWT ~\cite{Khachatryan:2014vla}. Figure~\ref{fig:objreco:wtwlcostheta} shows the $\cos \theta^*$ distribution for the outgoing quarks from a $\PWL \rightarrow q \bar {q}$ (black) and $\PWT \rightarrow q \bar{q}$ (red) decay, and it can be observed that transversely polarized W bosons decay with the quarks emitted closer to the vector boson direction of motion.
-
 \begin{figure}[h] 
     \centering 
     \includegraphics[width=0.5\textwidth]{figures/event_reconstruction/cosThetaJJ_GEN.png}
      \caption{The helicity angle for generated quarks from $\PWL\rightarrow q\bar{q}$ (black) and $\PWT\rightarrow q\bar{q}$ (red) decays~\cite{Khachatryan:2014vla}.}
      \label{fig:objreco:wtwlcostheta}
  \end{figure}
-
 The consequence of this, is that there is a higher asymmetry in the transverse momenta of the two quarks from a \PWT decay. This in turn makes grooming algorithms, designed to remove soft constituents of a jet, tend to reject particles coming from the softer quark, resulting in a lower jet mass and a drop in tagging efficiency. Figure~\ref{fig:objreco:wtwleff} shows the W-jet tagging efficiency versus q/g jet mistagging rate for a selection on the jet pruned mass of $60 \GeV < m_{pruned} < 100 \GeV$, scanning $\tau_{21}$ cuts (here for CA R=0.8 jets).
 
 \begin{figure}[h] 

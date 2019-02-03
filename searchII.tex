@@ -1,3 +1,17 @@
+\newcommand{\SFWTAGHPWPT} {$1.03 \pm 0.03~\rm{(stat)} \pm 0.04~\rm{(sys)} \pm 0.06~\rm{(sys)}$}
+\newcommand{\SFWTAGLPWPT} {$0.88 \pm 0.12~\rm{(stat)} \pm 0.17~\rm{(sys)} \pm 0.12~\rm{(sys)}$}
+\newcommand{\SFWTAGHPWPL} {\ensuremath{1.01\pm0.03}\xspace}
+\newcommand{\SFWTAGLPWPL} {\ensuremath{0.78\pm0.87}\xspace}
+\newcommand{\UNCWTAGHPWPT} {\ensuremath{13\%}\xspace} 
+\newcommand{\UNCWTAGLPWPT} {\ensuremath{56\%}\xspace}
+\newcommand{\UNCWTAGHPWPL} {\ensuremath{10\%}\xspace}
+\newcommand{\UNCWTAGLPWPL} {\ensuremath{26\%}\xspace}
+\newcommand{\WMASSDATAWPT}{\ensuremath{81.9\pm0.3}\xspace}
+\newcommand{\WRESDATAWPT} {\ensuremath{8.9\pm0.4}\xspace}
+\newcommand{\WMASSMCWPT}  {\ensuremath{82.0\pm0.2}\xspace}
+\newcommand{\WRESMCWPT}   {\ensuremath{8.3\pm0.3}\xspace}
+\newcommand{\JMS}         {$0.999 \pm 0.004~\rm{(stat)} \pm 0.0006~\rm{(sys)}$}
+\newcommand{\JMR}         {$1.08 \pm 0.07~\rm{(stat)} \pm 0.08~\rm{(sys)}$}
 \subsection{Towards robust boosted jet tagging}
 \label{sec:searchII:intro}
 When we first studied W-tagging at 13 \TeV in context with the analysis of the 2015 dataset, Section~\ref{sec:searchI:wtagging}, two interesting correlations were observed:
@@ -61,7 +75,7 @@ The triggers used in this analysis are the same ones as in 2015 (see Section~\re
 Including grooming triggers lowers the 99\% trigger efficiency threshold by around 50(80) \GeV in the single (double) tag category once substructure is requested on the analysis level. Using the or of all triggers, we are safely on the trigger plateau for dijet invariant masses above 955(986) \GeV in the double (single) tag category, setting the analysis threshold at a dijet invariant mass of 955 \GeV for the double tag analysis and 990 \GeV for the single tag analysis. For controlplots, where no groomed mass window is applied, a trigger threshold of 1020 GeV is used.
 \par Trigger efficiencies as a function of the offline softdrop-jet mass for the \\ 
 \texttt{HLT\_AK8PFJet360\_TrimMass30} trigger are shown in Figure~\ref{fig:searchII:grooming-mj-trigger}. Here the jet transverse momentum of one of the jets is required to be at least 600 GeV and no other mass cut is applied. This trigger requires one jet to have a trimmed mass above 30 GeV at HLT level and reaches the trigger plateau for groomed-jet masses around 50 GeV. As reference trigger, the prescaled trigger \texttt{HLT\_PFJet320} is used. 
-\begin{figure}[htb]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.49\textwidth]{figures/analysis/search2/AN-16-235/plots/triggereff-prunedmass_fit.pdf}
 \includegraphics[width=0.49\textwidth]{figures/analysis/search2/AN-16-235/plots/triggereff-sdmass_fit.pdf}
@@ -83,23 +97,23 @@ The same preselections as in Search I, described in \label{sec:search1:preselect
 \end{figure}
 A large difference in slope in the jet \PT and dijet invariant mass spectrum depending on the QCD matrix element or shower generator is observed. Pure \PYTHIA QCD MC describes the data best, while \HERWIG{++} and \amcatnlo{}+\PYTHIA tend to under- or over-estimate the number of high $\PT/\mjj$ jets, respectively. Pure \PYTHIA QCD MC is therefore used for all background checks in this analysis.
 
-
+\clearpage
 \subsection{Developing a new W-tagger}
 \label{sec:searchII:puppisoftdrop}
 As mentioned in the introduction to this chapter, early studies had shown that the PUPPI pileup subtraction algorithm yielded superior resolution on large-cone jet observables like the jet mass. We therefore wanted to check whether the softdrop jet mass, and its observed sensitivity to the Underlying Event and pileup, would be improved if a better pileup subtraction algorithm was applied pre-clustering.\par
 Two interesting observations were made. Softdrop used together with PUPPI pileup subtraction displayed a much smaller \PT-dependent shift than CHS+Softdrop, as hoped. Figure~\ref{fig:searchII:sdmass} shows the PUPPI softdrop mass for W-jets from a 1 \TeV ($\PT\sim 500 \GeV$) and 4 \TeV ($\PT\sim 2 \TeV$) resonance, exhibiting the desired reduced \PT dependence in jet mass scale. 
-\begin{figure}[htb]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.49\textwidth]{figures/analysis/search2/AN-16-235/plots/gen_SoftdropMassUnCorr.pdf}
 \caption{The  PUPPI softdrop jet mass distribution with no jet energy corrections applied}
 \label{fig:searchII:sdmass}
 \end{figure}
 However, when applying centrally provided L2 and L3 jet energy corrections (see Section~\ref{sec:objreco:jec}) to the jet groomed mass, as is recommended, a strong \PT dependence is re-introduced. This effect is not present for the pruned jet mass. Figure~\ref{fig:searchII:wtagmass} show the softdrop (top left) and pruned (top right) jet mass distribution with recommended L2L3 corrections applied. Here, the PUPPI+softdrop jet mass shift is significantly increased with respect to what was observed for the uncorrected mass, while CHS+pruned jet mass is stable. This points to the PUPPI jet energy corrections not being optimal for scalar jet mass variables, while they may be good for correcting jet 4-vectors. The jet energy corrections derived for CHS and PUPPI jets as a function of jet \PT is shown in the bottom plot in Figure~\ref{fig:searchII:wtagmass} . A significant slope in JEC as a function of \PT is measured for PUPPI, while not present for CHS.
-\begin{figure}[htb]
+\begin{figure}[h!]
 \centering
-\includegraphics[width=0.49\textwidth]{figures/analysis/search2/AN-16-235/plots/gen_SoftdropMass.pdf}
-\includegraphics[width=0.49\textwidth]{figures/analysis/search2/AN-16-235/plots/gen_PrunedMass.pdf}\\
-\includegraphics[width=0.49\textwidth]{figures/analysis/search2/AN-16-235/plots/JECvsPT.pdf}
+\includegraphics[width=0.4\textwidth]{figures/analysis/search2/AN-16-235/plots/gen_SoftdropMass.pdf}
+\includegraphics[width=0.4\textwidth]{figures/analysis/search2/AN-16-235/plots/gen_PrunedMass.pdf}\\
+\includegraphics[width=0.4\textwidth]{figures/analysis/search2/AN-16-235/plots/JECvsPT.pdf}
 \caption{Top: PUPPI softdrop mass distribution (top left) and pruned jet mass distribution (top right) with L2 and L3 corrections applied. Bottom: The projection of CHS and PUPPI jet energy corrections versus jet \PT.}
 \label{fig:searchII:wtagmass}
 \end{figure}
@@ -107,14 +121,14 @@ However, when applying centrally provided L2 and L3 jet energy corrections (see 
 \subsubsection{Dedicated PUPPI softdrop mass corrections}
 \label{sec:searchII:masscorr}
 In order to minimize \PT dependence in the PUPPI softdrop jet mass, all jet energy corrections to the softdrop jet mass are removed. However, this still leaves a residual \PT dependence and, in addition, the uncorrected mass does not peak at the correct W-mass of 80.4~\GeV. Figure~\ref{fig:searchII:UncorrSD} shows the mean of a Gaussian fit to the uncorrected PUPPI softdrop mass as a function of jet $\pt$ in two different $\eta$ bins (smaller or greater than $|\eta|=1.3$) for W-jets coming from a Bulk Graviton signal sample. A mass shift both as a function of $\eta$ and \PT is observed, together with an average mean significantly lower than the W-mass.
-\begin{figure}[htbp]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.49\textwidth]{figures/analysis/search2/AN-16-235/plots/RecoPuppiSoftdropMass_vspt.pdf}
 \caption{The mean of a Gaussian fit to the W-jet PUPPI softdrop mass peak as a function of jet \PT in two different $\eta$ bins (smaller or greater than $|\eta|=1.3$). No corrections have been applied to the softdrop mass.}
 \label{fig:searchII:UncorrSD}
 \end{figure}
 In order to use PUPPI+softdrop for W-tagging, we therefore derive dedicated jet mass corrections to compensate for two factors: A generator level \PT-dependence, as first observed in \label{sec:searchI:wtagging}, and a reconstruction level \PT- and $\eta$-dependence, most likely caused by UE effects and the growing effective sofdrop radius at low jet \PT. Figure~\ref{fig:searchII:sdmassshifts} shows the mean of the generated softdrop mass (left) and the normalized difference in reconstructed and generated softdrop mass (right) as a function of jet \PT. The shift in generated softdrop mass at lower \PT is of the order of 2-3$\%$ while the difference between reconstructed and generated softdrop mass is a 5-10$\%$ effect.
-\begin{figure}[htbp]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.49\textwidth]{figures/analysis/search2/AN-16-235/plots/GenSoftdropMass_vspt.pdf}
 \includegraphics[width=0.49\textwidth]{figures/analysis/search2/AN-16-235/plots/MassShift_vspt.pdf}
@@ -129,7 +143,7 @@ w(\pt) &=  A  +B(x^{2})^{-C}          &\sim\textrm{``gen correction''}\\
 w(\pt) &=  A  +Bx+Cx^2+Dx^3+Ex^4+Fx^5 &\sim\textrm{``reco correction''} 
 \end{align*}
 The distribution and corresponding fits for the two weights is shown in Figure~\ref{fig:jmcfits} for the "gen correction" (left) and "reco correction" (right).
-\begin{figure}[htbp]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.45\textwidth]{figures/analysis/search2/AN-16-235/plots/JMC_fit_gen.pdf}
 \includegraphics[width=0.45\textwidth]{figures/analysis/search2/AN-16-235/plots/JMC_fit_reco.pdf}
@@ -142,13 +156,13 @@ M_{SD}=M_{\rm{SD, uncorr}} \times \rm{w_{GEN}} \times \rm{w_{RECO}}
 \end{equation}
 where $w_{GEN}$ and $w_{RECO}$ correspond to the gen and reco corrections respectively and $M_{\rm{SD, uncorr}}$ is the uncorrected PUPPI softdrop mass. \par
 Finally, a closure test is performed in order to check that the corrected PUPPI+softdrop W-jet mass peaks at 80.4 \GeV and is stable with \PT and $\eta$. The fitted mean of the corrected PUPPI softdrop mass peak as a function of jet \PT in two different $\eta$ bins is shown in Figure~\ref{fig:searchII:wtagclosure}. Good closure is observed, with the corrected mass peaking around 80 GeV independent of the jet $\pt$ and $\eta$.The PUPPI softdrop jet mass peak for W/Z-jets from different signal samples after jet mass corrections have been applied is shown in Figure~\ref{fig:search2:corrMass}, for resonances with a mass of 1 and 4 TeV. The corrections applied to Z-jets yield a mass stable with \PT, peaking around the Z mass. 
-\begin{figure}[htbp]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.49\textwidth]{figures/analysis/search2/AN-16-235/plots/ClosureTest_RecoMass.pdf}
 \caption{The mean of the fitted W-jet corrected PUPPI softdrop mass peak as a function of jet $\pt$ in two different $\eta$ bins.}
 \label{fig:searchII:wtagclosure}
 \end{figure}
-\begin{figure}[htbp]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.49\textwidth]{figures/analysis/search2/AN-16-235/plots/SoftdropMass_NEWCORR_wH0.pdf}
 \caption{The W/Z/H-jet corrected PUPPI softdrop mass peak for jets from different signal samples with masses of 1 and 4 TeV.}
@@ -167,7 +181,7 @@ The purpose of this is to de-correlate $\tau_{21}$ from the softdrop mass and \P
 a cut on the $\tau_{21}^{DDT}$ tagging variable. This is tagger that will be further explored and explained in detail in the context of Search III, Section~\ref{sec:searchIII:ddt}.\par
 The background rejection efficiency for QCD light flavor jets as a function of W-jet signal efficiency is shown in Figure~\ref{fig:searchII:roc}
 The efficiency is measured requiring a fixed jet mass window of 65-105 \GeV, while scanning the cut on $\tau_2/\tau_1$.
-\begin{figure}[ht!]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.49\textwidth]{figures/vtagging/JME-16-003/BoostedW/roc_WqqvsQCD_2bins.pdf}
 \caption{The background rejection efficiency for QCD light flavor jets as a function of W-jet signal efficiency. A cut on CHS pruned or PUPPI softdrop jet
@@ -199,16 +213,16 @@ Based on general performance, tagging stability versus pileup and due to theoret
 \label{sec:searchII:wtagsf}
 subsubsection{Efficiency scale factors and mass scale/resolution measurement} 
 \label{sec:searchII:wtagsf}
-In order to measure the W-tagging efficiency, jet mass scale and resolution for the new PUPPI+softdrop based tagger, we use the same procedure as outlined in Section~\ref{sec:searchI:vtag}. We first did an early measurement of the efficiency using 2.3 \fbinv of data collected in 2015, which was published in a jet algorithms performance note~\cite{CMS-PAS-JME-16-003} and served as the first commissioning of the new tagger. We then redid the measurement with 12.9 and 35.9 \fbinv of 2016 data, respectively, for the two analyses presented in this chapter (the latter measurement performed by a separate analysis team). The results shown in the following will be those obtained during the commissioning of the tagger, while those used in the two analyses are listed in Appendix~\ref{app:sf16}.
+In order to measure the W-tagging efficiency, jet mass scale and resolution for the new PUPPI softdrop based tagger, we use the same procedure as outlined in Section~\ref{sec:searchI:vtag}. We first did an early measurement of the efficiency using 2.3 \fbinv of data collected in 2015, which was published in a jet algorithms performance note~\cite{CMS-PAS-JME-16-003} and served as the first commissioning of the new tagger. We then redid the measurement with 12.9 and 35.9 \fbinv of 2016 data, respectively, for the two analyses presented in this chapter (the latter measurement performed by a separate analysis team). The results shown in the following will be those obtained when the tagger was first presented in analysis context, corresponding to the 12.9 \fbinv of early 2016 data.
 In order to better understand the differences between the CHS+pruning and PUPPI+softdrop based taggers, the first efficiency measurement was done in parallel for both algorithms, requiring either a softdrop or a pruned jet mass between 40 \GeV and 150 \GeV. The softdrop mass is computed after PUPPI and the jet mass corrections as described in Section~\ref{sec:searchII:masscorr} are applied, while the pruned mass is corrected with L2L3 jet energy corrections. 
 The method is the same as the one outlined in detail in Section~\ref{sec:searchI:vtag} and fits to matched \ttbar MC and minor backgrounds for the PUPPI softdrop based tagger are skipped here and can be found in Appendix~\ref{app:sf16}.\newline
 The PUPPI softdrop jet mass and PUPPI $\tau_{21}$ variables in data and in MC are shown in Figure~\ref{fig:searchII:ttbarcp} and can be compared to the corresponding plots for the CHS pruned jet mass and CHS \nsubj distributions in Figure~\ref{fig:searchII:ttbarcp}. The data to MC agreement as well as the observed spectra, is very similar between CHS pruning and PUPPI softdrop in this region.
 
-\begin{figure}[ht!]
+\begin{figure}[h!]
 \centering
 \begin{tabular}{cc}
-\includegraphics[width=0.5\textwidth]{figures/vtagging/AN-16-215/Whadr_puppi_softdrop_mu.pdf}
-\includegraphics[width=0.5\textwidth]{figures/vtagging/AN-16-215/Whadr_puppi_tau2tau1_mu.pdf}\\
+\includegraphics[width=0.5\textwidth]{figures/vtagging/AN-16-342/controlplots/Whadr_puppi_softdrop_powheg.pdf}
+\includegraphics[width=0.5\textwidth]{figures/vtagging/AN-16-342/controlplots/Whadr_puppi_tau2tau1_powheg.pdf}\\
 \end{tabular}
 \caption{Distribution of the PUPPI softdrop mass (left) and PUPPI n-subjettiness (right) distribution in the \ttbar control sample.}
 \label{fig:searchII:ttbarcp}
@@ -225,41 +239,38 @@ The quoted systematic uncertainties are evaluated the same was as described in S
 \begin{table}[h!]
    \centering
    \footnotesize
-   \begin{tabular}{|l|l|c|c|c|}
+   \begin{tabular}{l|l|c|c|c}
+    & Working point & Eff. data & Eff. simulation & Scale factor\\
    \hline
-   Category & Working point & Eff. data & Eff. simulation & Scale factor\\
-   \hline
-   HP& $\tau_2 / \tau_1 < 0.4$         & $0.785 \pm 0.045 $& $0.81 \pm 0.01$   &$0.97 \pm 0.06~\rm{(stat)} \pm 0.04~\rm{(sys)} \pm 0.06~\rm{(sys)}$\\
-   LP& $0.45 < \tau_2 / \tau_1 < 0.75$ & $0.215 \pm 0.057 $& $0.204 \pm 0.041$ &$1.13 \pm 0.24~\rm{(stat)} \pm 0.17~\rm{(sys)}  \pm 0.12~\rm{(sys)}$\\
+   HP& $\nsubj < 0.4$         &  $0.839 \pm 0.020 $& $0.817 \pm 0.012$ &\SFWTAGHPWPT\\
+   LP& $0.4 < \nsubj < 0.75$ &  $0.154 \pm 0.020 $& $0.176 \pm 0.012$ &\SFWTAGLPWPT\\
    \hline
    \end{tabular}
    \caption{W-tagging scale factors for both categories the high purity and low purity categories for two taggers: Pruned jet mass + \nsubj and PUPPI softdrop jet mass + PUPPI \nsubj. }
    \label{tab:searchII:WtagSFs}
 \end{table}
-
-
-\begin{figure}[htbp]
+\begin{figure}[h!]
 \centering
 % \includegraphics[width=0.44\textwidth]{figures/analysis/search2/AN-16-235/plots/TotalFit__HP0v40powheg_PuppiSD.pdf}      %12.9 fbinv
 % \includegraphics[width=0.44\textwidth]{figures/analysis/search2/AN-16-235/plots/TotalFit__HP0v40powheg_PuppiSD_fail.pdf} %12.9 fbinv
-\includegraphics[width=0.44\textwidth]{figures/vtagging/AN-16-215/_HP0v40powheg_76X_PuppiSD_em_pTbin_200_5000.pdf}
-\includegraphics[width=0.44\textwidth]{figures/vtagging/AN-16-215/_HP0v40powheg_76X_PuppiSD_em_fail_pTbin_200_5000.pdf}\\
-\caption{PUPPI softdrop jet mass distribution that pass (left) and fail (right) the PUPPI $\tau_2 / \tau_1 < 0.40$ selection. Results of both the fit to data (blue) and simulation (red) are shown and the background components of the fit are shown as short-dashed lines. (!RATHER REPLACE BY 12.9INVFB MEASUREMENT)}
+\includegraphics[width=0.44\textwidth]{figures/vtagging/AN-16-342/model_TotalMC_em_powheg.pdf}
+\includegraphics[width=0.44\textwidth]{figures/vtagging/AN-16-342/model_TotalMC_failtau2tau1cut_em_powheg.pdf}\\
+\caption{PUPPI softdrop jet mass distribution that pass (left) and fail (right) the PUPPI $\tau_2 / \tau_1 < 0.40$ selection. Results of both the fit to data (blue) and simulation (red) are shown and the background components of the fit are shown as short-dashed lines.}
 \label{fig:searchII:simfit}
 \end{figure}
 
 Both scale factors are comparable to unity, within uncertainties. We additionally extract the jet mass scale and jet mass resolution from the mean and width, respectively, of the Gaussian
 component of the total fit in the pass region. These are summarized in Table~\ref{tab:searchII:wtagparams}.  As for pruning (Table~\ref{tab:searchI:params}), we find that the W jet mass scale is larger in simulation than in data, of roughly 2\%.
-The jet mass resolution, on the other hand, is larger in data, of roughly 7\%, whereas for pruning the resolution is larger in simulation (11\%). However, both are statistically insignificant and comparable with unity within uncertainties.
+The jet mass resolution, on the other hand, is larger in data, of roughly 8\%, whereas for pruning the resolution is larger in simulation (11\%). However, both are statistically insignificant and comparable with unity within uncertainties.
 
 \begin{table}[!htb]
  \begin{center}
-
+ \footnotesize
  \begin{tabular}{c|c|c|c}
   Parameter & Data & Simulation & Data/Simulation \\
   \hline
-  PUPPI softdrop $\langle m \rangle$ & $80.3 \pm 0.8~{\rm \GeV}$ & $81.9 \pm 0.01~{\rm \GeV}$ & $0.98 \pm 0.01$ \\%New mass corrections
-  PUPPI softdrop $\sigma$            & $ 9.0 \pm 0.9~{\rm \GeV}$ &  $8.5 \pm 0.4~{\rm \GeV}$  & $1.07 \pm 0.12$ \\%New mass corrections
+  PUPPI softdrop $\langle m \rangle$ & \WMASSDATAWPT~\GeV & \WMASSMCWPT~\GeV  &\JMS \\%New mass corrections
+  PUPPI softdrop $\sigma$            & \WRESDATAWPT~\GeV  & \WRESMCWPT~\GeV   & \JMR \\%New mass corrections
   \hline
  \end{tabular}
  \caption{Summary of the fitted W-mass peak fit parameters.}
@@ -300,7 +311,7 @@ a shift and broadening of the \PW-jet mass peak.
 \label{sec:searchII:wmistag}
 We additionally measure the W-tagging fake rate in data in a QCD dijet enriched region and compare this to the prediction from QCD MC using the three different combination of generators: \HERWIG{++}, \PYTHIA and \MADGRAPH+\PYTHIA.
 Figure~\ref{fig:searchII:fakerate} shows the mistag rate as a function of \PT for three different taggers: CHS pruning + \nsubj, PUPPI softdrop + PUPPI \nsubj and PUPPI softdrop + \ddt.
-\begin{figure}[htbp]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.49\textwidth]{figures/vtagging/JME-16-003/BoostedW/BkgEff_DataMC_herwig_pT.pdf}
 \includegraphics[width=0.49\textwidth]{figures/vtagging/JME-16-003/BoostedW/BkgEff_DataMC_Pythia8_pT.pdf}\\
@@ -312,7 +323,7 @@ The fraction of jets that pass the $m_{\mathrm{jet}}$ + $\tau_2/\tau_1$ selectio
 We find a substantial difference in the modeling of substructure variables between the different generators, most likely coming from their very different description of gluon radiation (dominant in QCD multijet events).
 The best description is obtained with \HERWIG{++}, while all three generators model the tagging \PT dependence well.
 We additionally study the difference in the total quark/gluon-content for the two PUPPI softdrop based taggers: \nsubj and \ddt. Figure~\ref{fig:searchII:qgfakerate} shows the stacked relative q/g content in a Pythia 8 QCD dijet sample for a cut on PUPPI \nsubj and \ddt. We see that the quark content increases as a function of jet \PT when cutting on the DDT, while it decreases when cutting on \nsubj.
-\begin{figure}[htbp]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.49\textwidth]{figures/vtagging/JME-16-003/BoostedW/qgFakeRate_Pythia8_pT.pdf}
 \caption{ 
@@ -387,8 +398,7 @@ qZ & 3 & 3 \\
 
 \subsection{Signal modeling}
 The signal is modeled from signal MC in the same way as was done in Section~\ref{sec:searchI:sig}, assuming a Gaussian core and an exponential tail. The interpolated signal shapes for $\rm{q}^* \rightarrow \rm{q}\PW$ and $\rm{q}^* \rightarrow \rm{q}\PZ$ in their most sensitive analysis categories ($\rm{q}\PW$ and $\rm{q}\PZ$,respectively) are shown in Figure \ref{fig:searchII:interpolation}. The signal shapes for the double-tag category can be compared to those in Figure~\ref{fig:searchI:sigfit}.
- 
-\begin{figure}[htbp]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.49\textwidth]{figures/analysis/search2/AN-16-235/plots/interpolation_QstarQZ_DijetMassHighPuriqZ.pdf}
 \includegraphics[width=0.49\textwidth]{figures/analysis/search2/AN-16-235/plots/interpolation_QstarQW_DijetMassHighPuriqW.pdf}\\
@@ -396,12 +406,11 @@ The signal is modeled from signal MC in the same way as was done in Section~\ref
 \label{fig:searchII:interpolation}
 \end{figure}
 
-
 \subsection{Systematic uncertainties}
 The largest sources of systematic uncertainty for this analysis is, as for Search I, related to the signal modeling and are due to the uncertainty in the tagging efficiency of the W/Z-tagger, the jet energy/mass scale, the jet energy/mass resolution and integrated luminosity. The W/Z tagging uncertainty is estimated in $\rm{t\bar{t}}$ events, as described in Section~\ref{sec:searchI:vtag}, and yield uncertainties on the scale factors for the HP and LP tagging categories.
 The \pt- and $\eta$-dependent jet energy scale and resolution uncertainties on the resonance shape were approximated by a constant 2\% and 10\% uncertainty in Search I (Section~\ref{sec:searchI:wtagsystematic}) and are not expected to change for the 2016 analysis. The jet energy response and resolution uncertainty are taken into account as shape uncertainty by shifting and widening the signal resonance model,
 while all other signal uncertainties only affect the yield. The list of most relevant systematic uncertainties are listed in Table~\ref{tab:searchII:VV_systematicssummary_signal}.
-\begin{table}[htb]
+\begin{table}[h!]
   \centering
   \begin{tabular}{lccc}
     \hline
@@ -449,7 +458,7 @@ times the branching fraction to $\PW\PZ$ and $\PW\PW$ for spin-1 particles predi
 For the HVT model B, we exclude \PWpr(\PZpr) resonances with masses below 2.7 (2.6)~\TeV. The signal cross section uncertainties are displayed as a red checked band and result in an additional uncertainty on the resonance mass limits of 0.05 (0.04)~\TeV.
 The cross section limits for $\PZpr \rightarrow \PW\PW$ and $\rm G_{bulk}\rightarrow\PW\PW$ are not identical due to the different acceptance for those two signal scenarios.
 
-\begin{figure}[htbp]
+\begin{figure}[h!]
 \centering
      \includegraphics[width=0.45\textwidth]{figures/analysis/search2/B2G-16-021/figures/limits/brazilianFlag_ZprimeWW_new_combined_13TeV.pdf}
      \includegraphics[width=0.45\textwidth]{figures/analysis/search2/B2G-16-021/figures/limits/brazilianFlag_WZ_new_combined_13TeV.pdf}\\
@@ -464,8 +473,7 @@ Limits are set in the context of a spin-1 neutral \PZpr (left) and charged \PWpr
 Figure~\ref{fig:limitCombined_qV} shows the corresponding exclusion limits for excited quarks decaying into q\PW and q\PZ.
 We exclude excited quark resonances decaying into q\PW and q\PZ with masses below 5.0 and 3.9~\TeV, respectively.
 The signal cross section uncertainties are displayed as a red checked band and result in an additional uncertainty on the resonance mass limits of 0.1~\TeV.
-
-\begin{figure}[htbp]
+\begin{figure}[h!]
 \centering
      \includegraphics[width=0.45\textwidth]{figures/analysis/search2/B2G-16-021/figures/limits/brazilianFlag_qW_new_combined_13TeV.pdf}
      \includegraphics[width=0.45\textwidth]{figures/analysis/search2/B2G-16-021/figures/limits/brazilianFlag_qZ_new_combined_13TeV.pdf}\\
@@ -475,15 +483,12 @@ decaying into qW (left) or qZ (right). Signal cross section uncertainties are di
 \label{fig:searchII:limitCombined_qV}
 \end{figure}
 
-
-
 \subsubsection{Full 2016 dataset}   
 \label{sec:searchII:brg17001res}
 
 The results obtained with the full $\sim 36$ \fbinv of 2016 data are as follows:
 For a \BulkG we exclude production cross sections in a range from 36.0~fb, at a resonance mass of 1.3\TeV, to 0.6~fb at resonance masses above 3.6\TeV. \PWpr(\PZpr) resonances are excluded with masses below 3.2 (2.7)\TeV for the HVT model B, in addition to \PWpr resonances with a mass between 3.3 and 3.6 \TeV. For excited quark resonances, we can exclude the production of $\rm{q}^*$ decaying to qW or qZ for masses below 5.0 and 4.7 TeV.
 Figure~\ref{fig:searchII:limitCombined_VV} and~\ref{fig:searchII:limitCombined_qV} show the resulting 95\% confidence level expected and observed exclusion limits on the signal cross section as a function of the resonance mass for VV and QV resonances, respectively.
-
 \begin{figure}[h!]
 \centering
     \includegraphics[width=0.49\textwidth]{figures/analysis/search2/B2G-17-001/figures/brazilianFlag_BulkWW_VVnew_new_combined_13TeV.pdf}
@@ -492,7 +497,6 @@ Figure~\ref{fig:searchII:limitCombined_VV} and~\ref{fig:searchII:limitCombined_q
 \caption{Observed (solid line) and expected (dashed line) 95\% CL upper limits on the production cross section of a narrow resonance decaying into two vector bosons for different signal hypotheses: A \PZpr or \BulkG resonance decaying into \WW (top left), a \PZpr decaying into \PW\PZ (top right) and a bulk graviton decaying into \ZZ (bottom).}
 \label{fig:searchII:limitCombined_VV}
 \end{figure}
-
 \begin{figure}[ht!]
 \centering
     \includegraphics[width=0.49\textwidth]{figures/analysis/search2/B2G-17-001/figures/brazilianFlag_qW_qVnew_new_combined_13TeV.pdf}
