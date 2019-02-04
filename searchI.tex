@@ -3,7 +3,7 @@ On June 2nd 2015, the day before CMS recorded its first ever 13 TeV event, a pre
 It was an analysis of the full ATLAS Run 1 dataset, corresponding to 20.3 \fbinv, searching for heavy resonances decaying to vector bosons in the all-hadronic state. The analysis documented a 3.4 $\sigma$ excess for a heavy resonance decaying to \PW\PZ around 2 \TeV.
 The corresponding CMS analysis, published the previous year, had a 1.3 $\sigma$ excess at roughly the same resonance mass, but mostly compatible with a \PW\PW final state hypothesis~\cite{Khachatryan:1700394}. Figure~\ref{fig:searchI:8tev} shows the corresponding dijet invariant mass spectrum as seen by ATLAS (left) and the upper limit on the production times the cross section for a $G_{Bulk}$ decaying to \PW\PW (right)  as documented by CMS.
 
-\begin{figure}[ht] 
+\begin{figure}[h!] 
     \centering
     \includegraphics[width=0.4\textwidth]{figures/analysis/search1/misc/atlas_8tev.png}
     \includegraphics[width=0.4\textwidth]{figures/analysis/search1/misc/EXO-12-024_gWW.pdf}
@@ -13,7 +13,7 @@ The corresponding CMS analysis, published the previous year, had a 1.3 $\sigma$ 
 
 The two measurements were found to be compatible, favoring a heavy resonance with a production cross section of around 5 \fbinv and a mass between 1.9 and 2.0 TeV decaying to either \PW\PW, \PW\PZ or \PZ\PZ~\cite{Dias:2015mhm}. Figure~\ref{fig:searchI:8tevcombo} show the obtained p-value of the ATLAS (red) and CMS (blue) search as well as their combination (black).  
 
-\begin{figure}[ht] 
+\begin{figure}[h!] 
     \centering
     \includegraphics[width=0.25\textwidth]{figures/analysis/search1/misc/CMS_ATLAS_BulkWW_JJ_dijetfit_p.png}
     \includegraphics[width=0.25\textwidth]{figures/analysis/search1/misc/CMS_ATLAS_BulkZZ_JJ_dijetfit_p.png}
@@ -26,7 +26,7 @@ The combination of the two excesses and the timing of the ATLAS paper, naturally
 In addition, one of the main benefits of increasing the LHC center-of-mass energy from 8 to 13 \TeV, was that the partonic luminosity would increase.
 That meant that you could expect them same number of signal events as you would expect for the full 8 \TeV dataset ($\sim 20 \fbinv$), for a considerably smaller 13 \TeV dataset. Figure~\ref{fig:searchI:8vs13reach} shows the system mass that can be probed with 3 \fbinv of 13 \TeV data (y-axis), the expected 2015 integrated luminosity, as a function of the probe-able system mass with 20 \fbinv of 8 \TeV data (x-axis) for different partonic channels. The probable 13 \TeV mass is defined by finding the system mass which results in the same number of expected events at 8 \TeV, if assuming cross sections scale with partonic luminosity and $1/m^2$. Three different partonic scattering channels are considered: qq, qg and gg. We see that, for instance for a resonance with a mass of 2000 \GeV, the reach at 13 \TeV is 2241(gg), 2091(gq), 1851(qq, one type) and 2046(qq, all types) \GeV.
 
-\begin{figure}[ht] 
+\begin{figure}[h!] 
     \centering
     \includegraphics[width=0.50\textwidth]{figures/analysis/search1/misc/colliderReach.png}
     \caption{The system mass that can probed with 3 \fbinv of 13 \TeV data (y-axis) as a function of the probe-able system mass with 20 \fbinv of 8 \TeV data (x-axis) for different partonic channels (Generated with~\cite{collreach}).}
@@ -40,7 +40,7 @@ The pressure on seeing early results with 13 TeV data in the VV all-hadronic fin
 
 When a resonance X with a mass above 1 TeV decays into a vector boson pair, the bosons have a very high energy ($\tilde\PT=\mX/2=500 \GeV$, assuming X is produced at rest). The boson is co-called "boosted". The decay products of a hadronically decaying boosted vector boson, will therefore not appear as back-to-back in the lab frame but rather be very collimated, as described in Section~\ref{sec:objreco:substructure}. This results in a final state with two large high-\PT jets, where an AK R=0.8 jet is expected to fully contain the two quarks coming from the vector boson decay. This is illustrated in Figure~\ref{fig:searchI:merged}.
 
-\begin{figure}[ht] 
+\begin{figure}[h!] 
     \centering
     \includegraphics[width=0.70\textwidth]{figures/event_reconstruction/WWqqqq_merged_small.pdf}
     \caption{If a heavy ($>1 \TeV$) resonance decays into vector bosons, the transverse momentum of each boson will be large and its decay products are merged into one single large cone AK8 jet.}
@@ -51,7 +51,7 @@ The two jets are both expected to have a mass around the \PW of \PZ mass, and so
 
 The main background for such an analysis, is QCD multijet events. As mentioned in Section~\ref{sec:objreco:substructure}, quark/gluon jets can obtain a high mass due to diffuse radiation and QCD processes have such a large cross section that the number of QCD jets with a mass compatible with the W mass can be large. In order to discriminate between the two, we take advantage of three properties: 1. The groomed mass of signal and background jets should be very different, 2. signal jets should appear two-prong like, quark/gluon jets not, and 3. the dijet invariant mass for a signal process should peak around the resonance mass while the QCD spectrum is predicted to be smoothly falling (we will get back to why this assumption is justified in Section~\ref{sec:searchI:bkg}). The strategy therefore consists of performing a smoothness test on \mjj of the observed data, a so-called "bump-hunt", by assuming that the signal will appear as a bump on top of a smooth distribution. This is illustrated in Figure~\ref{fig:searchI:bumphunt}.
 
-\begin{figure}[ht] 
+\begin{figure}[h!] 
     \centering
     \includegraphics[width=0.49\textwidth]{figures/analysis/search1/misc/sigExtraction.pdf}
     \caption{The search strategy consists of looking for signal "bumps" in the dijet invariant mass on top of a smoothly falling QCD multijet background.}
@@ -520,7 +520,7 @@ The signal shape is extracted from signal MC with masses in the range from 1 to 
 
 As seen in Figure~\label{fig:wtag}, some discrepancy is observed in the \nsubj distribution between data and MC. This can lead to a bias in the signal efficiency estimation and we therefore measure the real data signal efficiency in an orthogonal data sample.
 The W-tagging efficiency is measured using real boosted \PW-jets in a semi-leptonic $\textrm{t}\bar{\textrm{t}}$ enriched data sample. This region is mainly quark-enriched, as opposed to the QCD gluon-enriched region we saw previously, and substructure variables are better described here. The sample is obtained through requiring a final state compatible with two b-jets and two \PW bosons, where one of the bosons decay leptonically and the other one hadronically. There are several good reasons to use this channel: Top quark pair production events are plentifully produced at the LHC, we can ensure a high purity of the sample through high-energy lepton, b-tag and missing energy requirements and lastly we can ensure that the \PW jets are boosted by requiring the leptonic leg, together with the hadronic \PW candidate, to have high transverse momentum. The final state is illustrated in Figure~\ref{fig:search2:ttsemilep}, with the object of interest being the AK R=0.8 jet containing the two quark daughters of the hadronically decaying \PW.
-\begin{figure}[htbp]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.49\textwidth]{figures/analysis/search2/misc/semileptt.pdf}
 \caption{A top quark pair decaying into two b quarks and two \PW bosons, one of which decays leptonically and one on which decays hadronically}
@@ -606,8 +606,8 @@ $\Delta \phi(W_{AK8},W_{lep}) $ & $> 2$     & \\
 \begin{figure}[ht!]
 \centering
 \begin{tabular}{cc}
-\includegraphics[width=0.5\textwidth]{figures/vtagging/AN-16-215/Whadr_pruned_mu.pdf}
-\includegraphics[width=0.5\textwidth]{figures/vtagging/AN-16-215/Whadr_tau21_mu.pdf}\\
+\includegraphics[width=0.4\textwidth]{figures/vtagging/AN-16-215/Whadr_pruned_mu.pdf}
+\includegraphics[width=0.4\textwidth]{figures/vtagging/AN-16-215/Whadr_tau21_mu.pdf}\\
 % \includegraphics[width=0.5\textwidth]{figures/vtagging/AN-16-215/Whadr_puppi_softdrop_mu.pdf}
 % \includegraphics[width=0.5\textwidth]{figures/vtagging/AN-16-215/Whadr_puppi_tau2tau1_mu.pdf}\\
 \end{tabular}
@@ -634,12 +634,12 @@ f^{\rm sig}(m_{j}) &= F_{\rm Gaus}(m_{j}) + F_{\rm ExpErf}(m_{j})               
 Figure~\ref{fig:searchI:ttfitpruned} shows the fitted PUPPI softdrop mass spectrum for \ttbar real \PW (top) and non-\PW (bottom) distributions for jets that passed (left) and failed (right column) the N-subjettiness selection PUPPI $\tau_{21}~<$~0.4.
 The corresponding plots for the jet pruned mass can be found in Figure~\ref{app:sf16}.
 
-\begin{figure}[htbp]
+\begin{figure}[h!]
   \centering
-      \includegraphics[width=0.49\textwidth]{figures/vtagging/AN-16-215/plots_76X/fits_TTMC/plots_em_HP0v45powheg_76X_MCfits/{_TTbar_realWExoDiBosonAnalysis.WWTree_TTbar_powheg_76X_GausErfExp_ttbar_with_pull}.pdf}
-      \includegraphics[width=0.49\textwidth]{figures/vtagging/AN-16-215/plots_76X/fits_TTMC/plots_em_HP0v45powheg_76X_MCfits/{_TTbar_realW_failtau2tau1cutExoDiBosonAnalysis.WWTree_TTbar_powheg_76X_GausErfExp_ttbar_failtau2tau1cut_with_pull}.pdf}\\
-      \includegraphics[width=0.49\textwidth]{figures/vtagging/AN-16-215/plots_76X/fits_TTMC/plots_em_HP0v45powheg_76X_MCfits/{_TTbar_fakeWExoDiBosonAnalysis.WWTree_TTbar_powheg_76X_ErfExp_ttbar_with_pull}.pdf}
-      \includegraphics[width=0.49\textwidth]{figures/vtagging/AN-16-215/plots_76X/fits_TTMC/plots_em_HP0v45powheg_76X_MCfits/{_TTbar_fakeW_failtau2tau1cutExoDiBosonAnalysis.WWTree_TTbar_powheg_76X_ErfExp_ttbar_failtau2tau1cut_with_pull}.pdf}
+      \includegraphics[width=0.3\textwidth]{figures/vtagging/AN-16-215/plots_76X/fits_TTMC/plots_em_HP0v45powheg_76X_MCfits/{_TTbar_realWExoDiBosonAnalysis.WWTree_TTbar_powheg_76X_GausErfExp_ttbar_with_pull}.pdf}
+      \includegraphics[width=0.3\textwidth]{figures/vtagging/AN-16-215/plots_76X/fits_TTMC/plots_em_HP0v45powheg_76X_MCfits/{_TTbar_realW_failtau2tau1cutExoDiBosonAnalysis.WWTree_TTbar_powheg_76X_GausErfExp_ttbar_failtau2tau1cut_with_pull}.pdf}\\
+      \includegraphics[width=0.3\textwidth]{figures/vtagging/AN-16-215/plots_76X/fits_TTMC/plots_em_HP0v45powheg_76X_MCfits/{_TTbar_fakeWExoDiBosonAnalysis.WWTree_TTbar_powheg_76X_ErfExp_ttbar_with_pull}.pdf}
+      \includegraphics[width=0.3\textwidth]{figures/vtagging/AN-16-215/plots_76X/fits_TTMC/plots_em_HP0v45powheg_76X_MCfits/{_TTbar_fakeW_failtau2tau1cutExoDiBosonAnalysis.WWTree_TTbar_powheg_76X_ErfExp_ttbar_failtau2tau1cut_with_pull}.pdf}
     \caption{Fit to the real \PW (top) and non-\PW (bottom) pruned jet mass distribution for jets that pass (left) and fail (right) the cut on $\tau_{21}~<$~0.45.}
   \label{fig:searchI:ttfitpruned}
 \end{figure}
@@ -694,17 +694,17 @@ The uncertainty due to different ME generators (\POWHEG versus \MADGRAPH) corres
 For the systematic uncertainty accounting for effects due to choice of fit method, we compare the estimated extracted efficiency in \ttbar MC using the two different fit models described above: The new model, where the signal is modeled by a Gaussian peak and the tails of the distribution are absorbed in the background fit model, and the old model, including the tails when calculating the fraction of real \PW jets. Figure~\ref{fig:searchII:gausvstails} shows the fits obtained in the pass and fail regions using the two different models. With the new model only the Gaussian component of the fit contributes to the W-tagging efficiency while, with the old model, a Chebyshev component is additionally contributing to the total W-tagging efficiency.
 \begin{figure}[ht!]
   \centering
-    \includegraphics[width=0.49\textwidth]{figures/vtagging/AN-16-215/2Gauss.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/vtagging/AN-16-215/GausErfExpPass.pdf}\\
-    \includegraphics[width=0.49\textwidth]{figures/vtagging/AN-16-215/GausChebysgev.pdf}
-    \includegraphics[width=0.49\textwidth]{figures/vtagging/AN-16-215/GausErfExpFail.pdf}
+    \includegraphics[width=0.33\textwidth]{figures/vtagging/AN-16-215/2Gauss.pdf}
+    \includegraphics[width=0.33\textwidth]{figures/vtagging/AN-16-215/GausErfExpPass.pdf}\\
+    \includegraphics[width=0.33\textwidth]{figures/vtagging/AN-16-215/GausChebysgev.pdf}
+    \includegraphics[width=0.33\textwidth]{figures/vtagging/AN-16-215/GausErfExpFail.pdf}
   \caption{Fits obtained in the pass (top) and fail (bottom) regions using two different models: An alternative model with tails (top and bottom, left) where the tail component is contributing to the total W-tagging efficiency. When using the default model (top and bottom, right), only the Gaussian component of the fit contributes to the W-tagging efficiency.}
   \label{fig:searchII:gausvstails}
 \end{figure} 
 The estimated efficiencies obtained using both methods, after being corrected for the fraction of \PW jets in the tails, agree within 0.3(0.8)\% and are listed as systematic uncertainty in Table~\ref{tab:searchI:WtagSFs}.\newline
 One additional uncertainty is added. As the W-tagging scale factor is evaluated in a \ttbar sample, the transverse momentum range is rather limited. When the \PW \PT reaches $\sim 400 \GeV$, the AK8 jet becomes a fully merged top jet with a mass of 170 \GeV and a scale factor measurement becomes impossible. However, the jets used in the analyses presented in this thesis have very high transverse momenta, up to 2-3 \TeV, and we therefore need an estimate of how the uncertainty on the W-tagging scalefactor changes as a function of \PT. This is estimated by comparing the difference in tagging between $\BulkG \rightarrow \PW \PW$ signal MC showered by \PYTHIA{}8 and \HERWIG{++} as a function of \PT, relative to the difference in tagging efficiency between the two at a $\PT \sim 200$~\GeV. This measurement was performed by a separate analysis team, and found to be $5.90\% \times \ln(\pt/200\GeV)$.
 
-% \begin{figure}[htbp]
+% \begin{figure}[h!]
 %   \centering
 %     \includegraphics[width=0.50\textwidth]{figures/vtagging/AN-16-215/wtag-ptdependence-tau21tight.pdf}
 %   \caption{Uncertainty on the \pt dependence of the scale factor as a function of \pt, approximated with a logarithmic function.}
@@ -733,7 +733,7 @@ The corresponding fits are shown in Figure~\ref{fig:searchII:simfit}, with the c
 \end{table}
 
 
-\begin{figure}[htbp]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.44\textwidth]{figures/vtagging/AN-16-215/_HP0v45powheg_76X_em_pTbin_200_5000.pdf}
 \includegraphics[width=0.44\textwidth]{figures/vtagging/AN-16-215/_HP0v45powheg_76X_em_fail_pTbin_200_5000.pdf} \\
