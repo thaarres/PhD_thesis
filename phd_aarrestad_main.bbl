@@ -379,6 +379,15 @@ F.~Dias\hrefCMSnoop {}{ {et~al.}, ``{Combination of Run-1 Exotic Searches in
 \href{http://www.arXiv.org/abs/1512.03371}{\texttt{arXiv:1512.03371}}.
 %%CITATION = ARXIV:1512.03371;%%.
 
+\bibitem{Khachatryan:2016yji}
+\hrefCMSnoop {}{{CMS} Collaboration, ``{Search for massive WH resonances
+  decaying into the $\ell \nu \mathrm{b} \overline{\mathrm{b}} $ final state at
+  $\sqrt{s}=8$ $~\text {TeV}$}'',} \textit{ Eur. Phys. J.} \textbf{ C76}
+  (2016), no.~5, 237,
+  \href{http://dx.doi.org/10.1140/epjc/s10052-016-4067-z}{\doi{10.1140/epjc/s10052-016-4067-z}},
+\href{http://www.arXiv.org/abs/1601.06431}{\texttt{arXiv:1601.06431}}.
+%%CITATION = ARXIV:1601.06431;%%.
+
 \bibitem{collreach}
 CERN, ``Collider Reach'', 2019 (accessed January 12, 2019), \url
   {http://collider-reach.web.cern.ch/}.
@@ -398,6 +407,12 @@ J.~Alwall\hrefCMSnoop {}{ {et~al.}, ``{The automated computation of tree-level
   \href{http://dx.doi.org/10.1016/j.cpc.2008.01.036}{\doi{10.1016/j.cpc.2008.01.036}},
 \href{http://www.arXiv.org/abs/0710.3820}{\texttt{arXiv:0710.3820}}.
 %%CITATION = ARXIV:0710.3820;%%.
+
+\bibitem{2011123}
+\hrefCMSnoop {}{S.~C. et~al., ``Search for resonances in the dijet mass
+  spectrum from 7 TeV pp collisions at CMS'',} \textit{ Physics Letters B}
+  \textbf{ 704} (2011), no.~3, 123 -- 142,
+  \href{http://dx.doi.org/https://doi.org/10.1016/j.physletb.2011.09.015}{\doi{https://doi.org/10.1016/j.physletb.2011.09.015}}.
 
 \bibitem{Punzi:2003bu}
 \hrefCMSnoop {}{G.~Punzi, ``{Sensitivity of searches for new signals and its

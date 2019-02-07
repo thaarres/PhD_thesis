@@ -646,11 +646,11 @@ Those five shape uncertainties are assigned very large pre-fit values (allowed t
 \end{figure}
 \clearpage
 
-\section{Background model validation}
+\subsection{Background model validation}
 \label{sec:search3:checks}
 In order to convince ourselves that the fit is robust, several checks are performed in simulation and in a data control region before unblinding the data signal region.
 
-\subsection{Variations of QCD multijet predictions}
+\subsubsection{Variations of QCD multijet predictions}
 First, we check that the main template (generated starting from QCD \PYTHIA{8} MC) can fit predictions from alternate QCD multijets samples in order to demonstrate that systematic uncertainties in the modeling of parton showers are covered by the relevant nuisance parameters. Fits to three different QCD samples are compared: \PYTHIA{8} (nominal), \HERWIG{++} (alternate shape 1) and \MADGRAPH{}+\PYTHIA{8} (alternate shape 2).
 To ensure a smooth data distribution not affected by low statistics present in the MC spectra, we generate a toy dataset under the templates rather than using MC events directly. The postfit distributions after fitting each toy, is shown in Figures~\ref{fig:postfitPythia}-\ref{fig:postfitMadgraph} for the HPHP (top) and HPLP category (bottom).
 \begin{figure}[h!]
@@ -743,7 +743,7 @@ A goodness-of-fit check is performed, shown on the left plot in Figure~\ref{fig:
 % \end{figure}
 % \clearpage
 
-\subsection{Bias test in pseudodata}
+\subsubsection{Bias test in pseudodata}
 \label{sec:bias}
 Finally, we study whether there is any bias on the extracted signal rate due to the background model. A $\BulkG \rightarrow\PW\PW$ signal, with different mass and signal strength $\mu_\mathrm{in}$, is injected on top of the full background. The signal strength is chosen such that it corresponds to a significance of 4-4.5 standard deviations for each signal mass, resulting in jet mass and dijet invariant mass spectra as shown in Figure~\ref{fig:signalToy}.
 \begin{figure}[h!]
