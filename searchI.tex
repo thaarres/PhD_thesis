@@ -274,46 +274,42 @@ Low-purity    & $\tau_{\rm{21, jet1}} < 0.45$, $0.45 < \tau_{\rm{21, jet2}} < 0.
 
 \subsection{Background modeling}
 \label{sec:searchI:bkg}
-We assume that the QCD multijets background can be described by a smooth, monotonically decreasing function, similar to what is done in previous CMS analyses looking for bumps in the dijet invariant mass spectrum~\cite{Chatrchyan:2012ypy,CMS-PAS-EXO-12-059}. The search is then performed through a smoothness test directly on unblinded data. We assume that the QCD multijet background in the different analysis categories can be described by smooth, monotonically decreasing functions of 2 or 3 parameters
+We assume that the QCD multijets background can be described by a smooth, monotonically decreasing function, which is parametrizable. This is similar to what is done in previous CMS analyses looking for bumps in the dijet invariant mass spectrum~\cite{Chatrchyan:2012ypy,CMS-PAS-EXO-12-059}. The search is then performed by fitting the sum of the functions for background and signal to the dijet invariant mass spectrum in data. Neither data control regions nor simulated samples are used directly by this method. The background functions are of the following form:
 \begin{equation}
 \label{eq:dijet1}
 \frac{dN}{d\mjj}= \frac{ P_0 } { (\mjj/\sqrt{s})^{P_2} }\quad\quad\quad{\rm and}
 \quad\quad\quad\quad
 \frac{dN}{d\mjj}= \frac{ P_0(1-\mjj/\sqrt{s})^{P_1} } { (\mjj/\sqrt{s})^{P_2} }\:\:,
 \end{equation}
-where $m$ is the dijet invariant mass, $\sqrt{s}$ the centre of mass energy and $P_0$ is a normalization parameter for the probability density function and $P_1$ and $ P_2$ describe the shape. The number of fit parameters is decided through a Fishers F-test~\cite{RePEc:bla:istatr:v:80:y:2012:i:3:p:491-491}. In this test, we start from the 2 parameter function and compare the goodness of fit ($\chi^2$ divided by degrees of freedom) when fitting the data signal region with a 2, 3, 4 and 5 parameter function. We then check at 10\% confidence level (CL) if additional parameters are needed to model the background distribution. The 4 and 5 parameter functions are
+where $m$ is the dijet invariant mass, $\sqrt{s}$ is the center-of-mass energy, $P_0$ is a normalization parameter for the probability density function, and $P_1$ and $ P_2$ describe the shape. The number of fit parameters is decided through a Fisher's F-test~\cite{RePEc:bla:istatr:v:80:y:2012:i:3:p:491-491}. In this test, we start from the 2-parameter function and compare the goodness of fit ($\chi^2$ divided by degrees of freedom) when fitting the data signal region with a 2, 3, 4 and 5 parameter function. If the confidence level is less than 10\%, we add additional parameters to model the background distribution. The 4- and 5-parameter functions are
 \begin{align}
 \label{eq:dijet2}
-\frac{dN}{d \mjj} &= \frac{ P_0(1-\mjj/\sqrt{s})^{P_1} } {(\mjj/\sqrt{s})^{P_2+P_3\times\log(\mjj/\sqrt{s})} }\\
-\frac{dN}{d \mjj} &= \frac{ P_0(1-\mjj/\sqrt{s})^{P_1} } {(\mjj/\sqrt{s})^{P_2+P_3\times\log(\mjj/\sqrt{s})+P_4\times\log(\mjj/\sqrt{s})^2} }
+\frac{dN}{d \mjj} &= \frac{ P_0(1-\mjj/\sqrt{s})^{P_1} } {(\mjj/\sqrt{s})^{P_2+P_3\times\log(\mjj/\sqrt{s})} }\quad{\rm and}\\
+\frac{dN}{d \mjj} &= \frac{ P_0(1-\mjj/\sqrt{s})^{P_1} } {(\mjj/\sqrt{s})^{P_2+P_3\times\log(\mjj/\sqrt{s})+P_4\times\log(\mjj/\sqrt{s})^2} },
 \end{align}
-where $P_3$ and $P_4$ are additional free parameters. As an additional cross check, an alternative fit function is also tested:
+where $P_3$ and $P_4$ are additional free parameters. As an additional crosscheck, an alternative fit function is also tested:
 \begin{equation}
 \label{eq:dijet4}
 \frac{dN}{d\mjj} = \frac{ P_0(1-\mjj / \sqrt{s}+P_3(\mjj / \sqrt{s})^2)^{P_1} } { (\mjj/\sqrt{s})^{P_2} }.
 \end{equation}
-
-The fit range is chosen such that it start where the trigger efficiency has reached its plateau to avoid bias from trigger inefficiency, and extends to the bin after the highest $m_{VV}$ mass point. The binning chosen for the fit follows the detector resolution as in~\cite{Chatrchyan:2012ypy,CMS-PAS-EXO-12-059}. Before unblinding the signal region, we check that the QCD dijet invariant mass spectrum is expected to be smooth from the distribution in QCD MC as well as exercise the F-test in QCD MC and in a data sideband.\par
-The fits to data in the signal region using the different fit functions, are shown in Figure \ref{fig:searchI:fit-dataVV}, and the corresponding F-test output are given in Table \ref{tab:WW_enriched} through Table \ref{tab:ZZ_enriched}. The findings can be summarized as follows: for the WW enriched category a 2 parameter fit is sufficient to describe the data in both the high- and low-purity categories. In the WZ category, a two parameter fit is sufficient in the high-purity category, while three parameters are needed for the low-purity category. For the ZZ category, a 3 parameter fit is needed for both purity categories. The 2 and 3 parameters fit functions as defined in Equation \ref{eq:dijet2} will therefore be used to model the background component in the simultaneous signal and background fit.
-\par
-
+The fit range is chosen such that it starts where the trigger efficiency has reached its plateau to avoid bias from trigger inefficiency, and extends to the bin after the highest $m_{VV}$ mass point. The binning chosen for the fit follows the detector resolution as in Refs.~\cite{Chatrchyan:2012ypy,CMS-PAS-EXO-12-059}. Before unblinding the signal region, we check that the QCD dijet invariant mass spectrum is expected to be smooth from the distribution in QCD MC as well as exercise the F-test in QCD MC and in a data sideband.\par
+The fits to data in the signal region using the different fit functions are shown in Figure \ref{fig:searchI:fit-dataVV}, and the corresponding F-test output are given in Tables~\ref{tab:WW_enriched} through~\ref{tab:ZZ_enriched}. The findings can be summarized as follows: for the WW enriched category, a 2-parameter fit is sufficient to describe the data in both the high- and low-purity categories. In the WZ category, a 2-parameter fit is sufficient in the high-purity category, while three parameters are needed for the low-purity category. For the ZZ category, a 3-parameter fit is needed for both purity categories. The 2- and 3-parameter fit functions as defined in Equation \ref{eq:dijet2} will therefore be used to model the background component in the simultaneous signal and background fit.
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.43\textwidth]{figures/analysis/search1/AN-15-211/ftest/no5par/WWHP_fitComp.pdf}
-\includegraphics[width=0.43\textwidth]{figures/analysis/search1/AN-15-211/ftest/no5par/WWLP_fitComp.pdf}\\
-\includegraphics[width=0.43\textwidth]{figures/analysis/search1/AN-15-211/ftest/no5par/WZHP_fitComp.pdf}
-\includegraphics[width=0.43\textwidth]{figures/analysis/search1/AN-15-211/ftest/no5par/WZLP_fitComp.pdf}\\
-\includegraphics[width=0.43\textwidth]{figures/analysis/search1/AN-15-211/ftest/no5par/ZZHP_fitComp.pdf}
-\includegraphics[width=0.43\textwidth]{figures/analysis/search1/AN-15-211/ftest/no5par/ZZLP_fitComp.pdf}\\
-\caption{Fitted dijet mass spectrum in the different mass and purity categories in data for the double V-tag category. A 2 parameter fit is sufficient to describe the data for the WW (HP and LP) and WZ (LP) enriched categories. For the ZZ enriched (HP and LP) and WZ (HP) categories, a 3 parameter fit is needed.}
+\includegraphics[width=0.32\textwidth]{figures/analysis/search1/AN-15-211/ftest/no5par/WWHP_fitComp.pdf}
+\includegraphics[width=0.32\textwidth]{figures/analysis/search1/AN-15-211/ftest/no5par/WZHP_fitComp.pdf}
+\includegraphics[width=0.32\textwidth]{figures/analysis/search1/AN-15-211/ftest/no5par/ZZHP_fitComp.pdf}\\
+\includegraphics[width=0.32\textwidth]{figures/analysis/search1/AN-15-211/ftest/no5par/WWLP_fitComp.pdf}
+\includegraphics[width=0.32\textwidth]{figures/analysis/search1/AN-15-211/ftest/no5par/WZLP_fitComp.pdf}
+\includegraphics[width=0.32\textwidth]{figures/analysis/search1/AN-15-211/ftest/no5par/ZZLP_fitComp.pdf}
+\caption{Fitted dijet mass spectrum in the different mass and purity categories in data. A 2-parameter fit is sufficient to describe the data in the WW- (HP and LP) and WZ-enriched (LP) categories. For the ZZ- (HP and LP) and WZ-enriched (HP) categories, a 3-parameter fit is needed.}
 \label{fig:searchI:fit-dataVV}
 \end{figure}
-
 \begin{table}[h!]
 \centering
 \begin{tabular}{|l c c c |}
 \hline
-\multicolumn{4}{|c|}{WW enriched, HP}\\
+\multicolumn{4}{|c|}{WW-enriched, HP}\\
 \hline
 Function & Residuals & $\chi^2$ & ndof \\
 \hline
@@ -329,7 +325,7 @@ Fishers34  & -1.456 &CL &1.0\\
 \quad
 \begin{tabular}{|l c c c |}
 \hline
-\multicolumn{4}{|c|}{WW enriched, LP}\\
+\multicolumn{4}{|c|}{WW-enriched, LP}\\
 \hline
 Function & Residuals & $\chi^2$ & ndof \\
 \hline
@@ -342,16 +338,14 @@ Fishers23 & -1.723& CL & 1.0\\
 Fishers34 & -1.191& CL & 1.0\\
 \hline
 \end{tabular}
-\caption{Residuals, $\chi^{2}$, and degrees of freedom for the WW enriched HP and LP categories. A 2 parameter fit is needed to describe the data in both categories.}
+\caption{Residuals, $\chi^{2}$, and degrees of freedom for the WW-enriched HP and LP categories. A 2-parameter fit is needed to describe the data in both categories.}
 \label{tab:WW_enriched}
 \end{table}
-
-
 \begin{table}[h!]
 \centering
 \begin{tabular}{|l c c c |}
 \hline
-\multicolumn{4}{|c|}{WZ enriched, HP}\\
+\multicolumn{4}{|c|}{WZ-enriched, HP}\\
 \hline
 Function & Residuals & $\chi^2$ & ndof \\
 \hline
@@ -367,7 +361,7 @@ Fishers34 & -0.491& CL & 1.0\\
 \quad
 \begin{tabular}{|l c c c |}
 \hline
-\multicolumn{4}{|c|}{WZ enriched, LP}\\
+\multicolumn{4}{|c|}{WZ-enriched, LP}\\
 \hline
 Function & Residuals & $\chi^2$ & ndof \\
 \hline
@@ -380,17 +374,14 @@ Fishers23 & 55.258& CL & 0.0\\
 Fishers34 & 0.078& CL & 0.783\\
 \hline
 \end{tabular}
-\caption{Residuals, $\chi^{2}$, and degrees of freedom for the WZ enriched HP (left) and LP (right) categories. A 2 parameter fit is sufficient to describe the data in the high-purity category, while three parameters are needed for the low-purity category.}
+\caption{Residuals, $\chi^{2}$, and degrees of freedom for the WZ-enriched HP (left) and LP (right) categories. A 2-parameter fit is sufficient to describe the data in the high-purity category, while three parameters are needed for the low-purity category.}
 \label{tab:WZ_enriched}
 \end{table}
-
-
-
 \begin{table}[h!]
 \centering
 \begin{tabular}{|l c c c |}
 \hline
-\multicolumn{4}{|c|}{ZZ enriched, HP}\\
+\multicolumn{4}{|c|}{ZZ-enriched, HP}\\
 \hline
 Function & Residuals & $\chi^2$ & ndof \\
 \hline
@@ -406,7 +397,7 @@ Fishers34 & 1.246& CL & 0.290\\
 \quad
 \begin{tabular}{|l c c c |}
 \hline
-\multicolumn{4}{|c|}{ZZ enriched, LP}\\
+\multicolumn{4}{|c|}{ZZ-enriched, LP}\\
 \hline
 Function & Residuals & $\chi^2$ & ndof \\
 \hline
@@ -419,7 +410,7 @@ Fishers23 & 40.438& CL & 0.0\\
 Fishers34 & 0.356& CL & 0.56\\
 \hline
 \end{tabular}
-\caption{Residuals, $\chi^{2}$, and degrees of freedom for the ZZ enriched LP and HP categories. A 3 parameter fit is sufficient to describe the data in both categories.}
+\caption{Residuals, $\chi^{2}$, and degrees of freedom for the ZZ-enriched LP and HP categories. A 3-parameter fit is sufficient to describe the data in both categories.}
 \label{tab:ZZ_enriched}
 \end{table}
 
@@ -427,18 +418,17 @@ Fishers34 & 0.356& CL & 0.56\\
 \subsection{Signal modeling}
 \label{sec:searchI:sig}
 
-The signal shape is extracted from signal MC with masses in the range from 1 to 4 TeV. A linear interpolation provides shapes for the mass points in between in steps of 100 GeV. From these shapes, pdf models are constructed as composite models with a Gaussian core due to detector resolution and an exponential tail to account for parton distribution function effects. Parametric shape uncertainties due to jet energy scale and resolution uncertainties are inserted by variations of the Gaussian peak position and width. The dijet invariant mass shape for different benchmark model signals are shown in Figure \ref{fig:searchI:sigfit}. The signal and background components are then simultaneously fitted to the data points.
+The signal shape is extracted from signal MC with resonance masses in the range from 1 to 4 TeV. A linear interpolation provides shapes for the mass points in between in steps of 100 GeV. From these shapes, signal shape models are constructed as composite models with a Gaussian core due to detector resolution and an exponential tail to account for parton distribution function effects. Parametric shape uncertainties due to jet energy scale and resolution uncertainties are inserted by variations of the Gaussian peak position and width. The dijet invariant mass shape for different benchmark model signals is shown in Figure \ref{fig:searchI:sigfit}. The signal and background components are then simultaneously fitted to the data points.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.49\textwidth]{figures/analysis/search1/B2G-16-004/Figure_005-a.pdf}
-\caption{Dijet invariant mass from signal MC used to extract the signal shape. Here for 1.2, 2, 3 and 4 TeV resonances.}
+\caption{Dijet invariant mass from signal MC used to extract the signal shape, shown here for resonances with masses of 1.2, 2, 3, and 4 TeV.}
 \label{fig:searchI:sigfit}
 \end{figure}
 \clearpage
 
 \subsection{V-tagging scale factors}
 \label{sec:searchI:vtag}
-
 As seen in Figure~\label{fig:wtag}, some discrepancy is observed in the \nsubj distribution between data and MC. This can lead to a bias in the signal efficiency estimation and we therefore measure the real data signal efficiency in an orthogonal data sample.
 The W-tagging efficiency is measured using real boosted \PW-jets in a semi-leptonic $\textrm{t}\bar{\textrm{t}}$ enriched data sample. This region is mainly quark-enriched, as opposed to the QCD gluon-enriched region we saw previously, and substructure variables are better described here. The sample is obtained through requiring a final state compatible with two b-jets and two \PW bosons, where one of the bosons decay leptonically and the other one hadronically. There are several good reasons to use this channel: Top quark pair production events are plentifully produced at the LHC, we can ensure a high purity of the sample through high-energy lepton, b-tag and missing energy requirements and lastly we can ensure that the \PW jets are boosted by requiring the leptonic leg, together with the hadronic \PW candidate, to have high transverse momentum. The final state is illustrated in Figure~\ref{fig:search2:ttsemilep}, with the object of interest being the AK R=0.8 jet containing the two quark daughters of the hadronically decaying \PW.
 \begin{figure}[h!]
@@ -783,7 +773,7 @@ As mentioned in Section~\ref{sec:searchI:samples}, we set limits on three differ
 
 
 The statistics are too low to exclude the excess around 2 \TeV observed in the corresponding Run 1 analysis and in addition an under-fluctuation in data is present in this region. The largest excess is observed for a $\BulkG \rightarrow \ZZ$ hypothesis at a resonance mass of 2.8-3 TeV, around 2.3 $\sigma$.
-This is driven by the ZZ high-purity category, the category with the lowest statistics, where one event at 3 TeV yields a local significance of 2.8 $\sigma$. A 3 parameter fit is the default background fit function for this category, however, a 2 parameter fit could also be used to describe these data. In Figure \ref{fig:searchI:Limits_ZZHP} we compare the limits and p-values obtained using a 2 parameter and a 3 parameter fit to describe the background in this category. The significance at 3 TeV is reduced from 2.8 to 1.5 $\sigma$ with a 2 parameter fit, reflecting the fact that the fit is poorly constrained in the high mass tail due to low statistics. The fit to data using both a 2 and 3 parameter fit in the ZZHP category is shown in Figure~\ref{fig:app:ZZHP2vs3p} and we in addition see that the 2 parameter fit lies within the fit uncertainties of the nominal fit.\newline
+This is driven by the ZZ high-purity category, the category with the lowest statistics, where one event at 3 TeV yields a local significance of 2.8 $\sigma$. A 3-parameter fit is the default background fit function for this category, however, a 2-parameter fit could also be used to describe these data. In Figure \ref{fig:searchI:Limits_ZZHP} we compare the limits and p-values obtained using a 2-parameter and a 3-parameter fit to describe the background in this category. The significance at 3 TeV is reduced from 2.8 to 1.5 $\sigma$ with a 2-parameter fit, reflecting the fact that the fit is poorly constrained in the high mass tail due to low statistics. The fit to data using both a 2 and 3-parameter fit in the ZZHP category is shown in Figure~\ref{fig:app:ZZHP2vs3p} and we in addition see that the 2-parameter fit lies within the fit uncertainties of the nominal fit.\newline
 \newline
 
 \begin{figure}[h!]
