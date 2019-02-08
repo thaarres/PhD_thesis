@@ -59,7 +59,7 @@
 
 \titleformat{\chapter}[display]
 {\color{Black}\normalfont\Large\filcenter\sffamily}
-{\vspace*{\fill}
+{%\vspace*{\fill}
  %\titlerule[1pt]%
  %\vspace{1pt}%
  %\titlerule
@@ -160,10 +160,10 @@
 \label{ch:Introduction}
 \input{introduction.tex}
 
+\part{Theoretical background}
 % THEORY
-\chapter{The Standard Model and Beyond} 
 \label{ch:theory}
-\vspace*{\fill}\newpage
+%\vspace*{\fill}\newpage
 \input{theory.tex}
 
 % STATSTICS
@@ -173,35 +173,38 @@
 % \input{statmet.tex}
 % \vspace*{\fill}\newpage
 
-
+\part{Experimental setup}
 % CMS
-\chapter{Experimental setup}
+%\chapter{The CMS detector}
 \label{ch:CMS}
-\vspace*{\fill}\newpage
+%\vspace*{\fill}\newpage
 \input{cms.tex}
 
 % OBJECT RECONSTRUCTION
 \chapter{Event reconstruction} %..and simulation
 \label{ch:objreco}
-\vspace*{\fill}\newpage
+%\vspace*{\fill}\newpage
 \input{objreco}
 
+\part{Diboson resonance searches in CMS}
 % DIBOSON SEARCHES
-\chapter{Diboson resonance searches in CMS}
+%\chapter{Diboson resonance searches in CMS}
 \label{ch:diboson}
-\vspace*{\fill}\newpage
+%\vspace*{\fill}\newpage
 \input{diboson.tex}
 
+\part{Encoding jet substructure in a deep neural network}
 % LoLa
-\chapter{Encoding jet substructure in a deep neural network}
+%\chapter{Encoding jet substructure in a deep neural network}
 \label{ch:lola}
-\vspace*{\fill}\newpage
+%\vspace*{\fill}\newpage
 \input{lola.tex}
-	
+
+\part{Conclusion and outlook}	
 % SUMMARY			
-\chapter{Conclusion and outlook}		
+%\chapter{Conclusion and outlook}		
 \label{ch:summary}
-\vspace*{\fill}\newpage			
+%\vspace*{\fill}\newpage			
 \input{summary.tex}
 \clearpage
 

@@ -1,4 +1,4 @@
-\section{The Large Hadron Collider}
+\chapter{The Large Hadron Collider}
 In March 1984, the European Organization for Nuclear Research CERN) and the European Committee for Future Accelerators (ECFA) 
 held a workshop in Lausanne entitled "Large Hadron Collider in the LEP Tunnel". 
 This is history's first written mention of the Large Hadron Collider (LHC) and the topic under discussion 
@@ -71,8 +71,7 @@ Integrated luminosity   &                                            &         &
 \end{table}
 
 
-\section{The CMS detector}
-
+\chapter{The CMS detector}
 The Compact Muon Solenoid (CMS) detector is true to its name. With a diameter of 15 meters and a weight of 14000 tons, it is 60\% smaller but twice as heavy as its counterpart, the ATLAS detector.
 Its large weight is due to its solenoid: A superconducting niobium titanium coil circulating 18500 Amps and capable of generating a magnetic field of 3.8 Tesla, making it the worlds largest and most powerful magnet. Together with its corresponding iron return yoke, responsible for returning the escaping magnetic flux, it accounts for 90\% of the total detector weight.
 The CMS detector is cylindrically symmetric and organized such that the inner tracking system begins at a radius of around 3 cm from the beam pipe. It consists of an inner silicon pixel detector and an outer silicon strip tracker, stretching out to a radius of roughly 1.2 meters. Following the tracker are two calorimeter layers: the electromagnetic calorimeter (ECAL) consisting of lead tungstate scintillating crystals and responsible for measuring the energy of electromagnetically interacting particles, followed by the hadronic calorimeter (HCAL) that measures the energy of hadrons.
@@ -84,7 +83,7 @@ Contrary to "standard" configurations for general purpose detectors, the CMS cal
     \label{fig:cms:CMS}
 \end{figure}
 
-\subsection{Coordinate system}
+\section{Coordinate system}
 To describe locations within the CMS detector, a Euclidian space coordinate system is used. Here, the positive z axis points along the beam pipe towards the west, the positive x axis points towards the center of the LHC ring, and the positive y axis up towards the surface of the earth. Due to the cylindrical symmetry of the detector, polar coordinates are more convenient and most frequently encountered. In this scheme, the azimuthal angle $\phi$ is measured in the xy-plane, where $\phi=0$ correspond to the positive x axis and $\phi=\pi/2$ correspond to the positive y axis. The polar angle $\theta$ is measured with respect to the z axis, $\theta=0$ aligning with the positive and $\theta=\pi$ with the negative z axis. To define a particles' angle with respect to the beam line, the pseudorapidity $\eta = -\ln{}\textrm{tan}(\theta/2)$ is preferred over $\theta$. This is due to the fact that particle production is approximately constant as a function of pseudorapidity and, more importantly, because differences in pseudorapidity are Lorentz invariant under boosts along the z-axis when assuming massless particles.
 To measure angular difference between particles in the detector, the variable $\Delta \textrm{R}=\sqrt{\Delta \eta^2+\Delta \phi^2}$ is used, which is also Lorentz invariant under longitudinal boosts. A summary of the CMS coordinate system together with some example values are shown in Figure~\ref{fig:cms:coordinates}.
 \begin{figure}[h] 
@@ -94,7 +93,7 @@ To measure angular difference between particles in the detector, the variable $\
     \label{fig:cms:coordinates}
 \end{figure}
 
-\subsection{Tracking detectors}
+\section{Tracking detectors}
 The CMS tracker is responsible for accurately reconstructing the momentum of charged particles and consists of two sub-detectors. Closest to the interaction point, and where the particle intensity is the highest, the silicon pixel detector is located. Upgraded in 2017, from the so-called Phase-0 to the Phase-1 detector, it is structured with four cylindrical barrel layers at radii 2.9, 6.8, 10.9 and 16.0 \cm (the barrel pixel detector) and three disks in each of the forward regions placed at a distance from the nominal interaction point of 29.1, 39.6 and 51.6 \cm (the forward pixel detector). A sketch of the current Phase-1 pixel detector compared to the Phase-0 detector is shown in Figure~\ref{fig:cms:pixel}. The sensors located closest to the beam pipe are subject to hit intensities of $\mathcal{O}( \textrm{MHz}/\textrm{mm}^2 )$ such that strict constraints on the sensor pixel size are required in order to minimize occupancy in the detector. The sensor pixels are 100 \micron x 150 \micron with a thickness of 285 \micron, and when counting both barrel and forward pixel detectors, sum up to a total of 124 million channels. The sensors are mounted on detector modules each with 16 read-out chips, where the type of readout chip depends on how close the module is to the beam pipe. The inner layer uses readout chips with a rate capability of 600 MHz/$\cm^2$, while for the outer layers, readout chips with a rate capability of up to 200 MHz/$\textrm{cm}^2$ are sufficient.
 \begin{figure}[h] 
     \centering  
@@ -114,7 +113,7 @@ The tracker has a coverage of up to $|\eta|<2.6$ and a resolution of roughly $\s
     \label{fig:cms:tracker}
 \end{figure}
 
-\subsection{Electromagnetic calorimeter}
+\section{Electromagnetic calorimeter}
 Surrounding the tracking detectors is the electromagnetic crystal calorimeter (ECAL). Consisting of 75 848 laterally segmented scintillating lead tungstate ($\textrm{PbWO}_4$) crystals, it was designed to have the best possible photon energy and position resolution in order to resolve a Higgs boson decaying into two photons, one of the cleanest discovery channels of the Higgs boson. 
 With a design energy resolution of 0.5\% above 100 \GeV for photons and electrons, the choice of detector material for the ECAL has been its most crucial design feature. 
 In order to withstand the high doses of radiation and the high magnetic field present within the detector, while at the same time generating well-defined signal responses within the 25 nanoseconds between particle collisions, an extremely dense and transparent material capable of producing fast and clean photon bursts when hit, is required. 
@@ -136,7 +135,7 @@ Having no longitudinal segmentation, the ECAL relies on an accurate reconstructi
 The obtained energy resolution of the ECAL can be parametrized in three parts: a stochastic, a noise, and a constant term~\cite{Adzic:2007mi}. It is given as
 
 \begin{equation*}
-  \frac{\sigma \textrm{E}}{\textrm{E}} = \frac{2.8 \%}{\sqrt{\textrm{E}}}\oplus\frac{0.128 \GeV}{\textrm{E}}\oplus 0.3 \%,
+  \frac{\sigma_{\textrm{E}}}{\textrm{E}} = \frac{2.8 \%}{\sqrt{\textrm{E}}}\oplus\frac{12 \%}{\textrm{E}}\oplus 0.3 \%,
 \end{equation*}
 
 in which the constant values were estimated using an electron test beam. The constant term of $0.3 \%$ is dominated by the non-uniformity in longitudinal light collection~\cite{1742-6596-587-1-012001}, and one of the main goals of the detector design was to get this term below 1\%. The energy resolution as a function of electron energy is shown in Figure~\ref{fig:cms:ecal-res}.
@@ -148,7 +147,7 @@ in which the constant values were estimated using an electron test beam. The con
 \end{figure}
 
 
-\subsection{Hadronic calorimeter}
+\section{Hadronic calorimeter}
 Outside the electromagnetic calorimeter is the hadronic calorimeter (HCAL). The HCAL is a sampling calorimeter, meaning it consists of alternating layers of dense brass absorber material and plastic scintillators. When a particle hits an absorber plate, it interacts with the absorber material and generates a shower of secondary particles which themselves generate new particle showers. These particles then generate light in the scintillating material which is proportional to their energy, and summing up the total amount of generated light over consecutive layers within a region, called a "tower", is representative of the initial particles energy. It is the combined response of the ECAL and the HCAL that are responsible for measuring the energy of quarks, gluons and neutrinos through the reconstruction of particle jet energy and missing transverse energy. The hadron calorimeter is split into four regions: the inner (HB) and outer (HO) barrel, the endcap (HE) and the forward region (HF).A schematic of the CMS HCAL is shown in Figure~\ref{fig:cms:hcal}.
 \begin{figure}[h] 
     \centering
@@ -161,7 +160,7 @@ It consists of 36 identical wedges, each of which weigh 26 tonnes, split into tw
 A photograph of the wedges taken during installation is shown in Figure~\ref{fig:cms:hcal-wedges}. 
 \begin{figure}[h] 
     \centering
-    \includegraphics[width=0.6\textwidth]{figures/cms/hcal-2000-010_02.jpg}
+    \includegraphics[width=0.45\textwidth]{figures/cms/hcal-2000-010_02.jpg}
     \caption{The installation of the barrel HCAL wedges, consisting of alternating layers of brass absorber plates and plastic scintillator, each weighing roughly 26 tonnes~\cite{Veillet:41645}.}
     \label{fig:cms:hcal-wedges}
 \end{figure}
@@ -185,10 +184,10 @@ The energy resolution of the CMS ECAL and HCAL detectors for pions is measured i
 \end{figure}
 The typical electronics noise of the HCAL is measured to be $~200 \MeV$ per tower. The inclusion of the HO improves the resolution by 10\% for a pion energy of 300 GeV. The final energy resolution parametrization when using ECAL+HB+HO is given by a stochastic and a constant term, as was the case for the ECAL detector, and is
 \begin{equation*}
-  \frac{\sigma \textrm{E}}{\textrm{E}} = \frac{84.7 \%}{\sqrt{\textrm{E}}}\oplus 7.4 \%.
+  \frac{\sigma_{\textrm{E}}}{\textrm{E}} = \frac{84.7 \%}{\sqrt{\textrm{E}}}\oplus 7.4 \%.
 \end{equation*}
 
-\subsection{Muon chambers}
+\section{Muon chambers}
 The outer part of the CMS detector is dedicated to performing muon identification, momentum measurements, and triggering.
 The muon system is made up of three types of gaseous particle detectors: drift tube (DT) chambers, cathode strip chambers (CSCs), and resistive plate chambers (RPCs), all integrated into the magnetic return yoke structure.
 In the barrel region, where particle rates are low and the magnetic field uniform, DT chambers are used and cover the pseudorapidity region $|\eta|< 1.2$. In the endcap regions, however, the muon rates and background levels are considerably higher and the magnetic field itself is large and non-uniform. Therefore, CSCs with finer segmentation, higher radiation resistance, and faster signal collection are used, and cover the region $0.9 < |\eta|< 2.4$.
@@ -200,7 +199,7 @@ To ensure accurate muon triggering, RPCs are used as a complimentary dedicated m
     \label{fig:cms:muon-sys}
 \end{figure}
 
-\section{Trigger system}
+\chapter{The CMS trigger system}
 With bunches in CMS colliding at a rate of 40 MHz, there are only 25 nanoseconds between collisions available to process event data. For typical instantaneous luminosities, one billion collisions take place every second, and with an event size of roughly 1 MB, it is impossible for all of these events to be read out and stored to disk. The CMS triggering system is therefore designed to make ultra fast high-quality decisions about which events are interesting and which events are not.
 The first stage of triggering, called Level 1 (L1), is designed to reduce the event rate to a maximum of 100 kHz through custom-designed hardware. It uses coarse data from the muons system and calorimeters in order to make a decision on whether the event should be recorded or not, a decision that needs to happen within $3.2 \mu s$. During this time, the full event data from each sub-detector is stored in detector front-end electronics, awaiting the L1 decision. The information used by L1 is gathered in three steps. First, trigger primitives are created. For the muon system, these consist of track segments from each of the three types of muon detectors. For the calorimeter, trigger primitives are generated by calculating the transverse energy in a trigger tower ( $\Delta \eta- \Delta \phi$ of 0.087 x 0.087) and assigning it to the correct bunch crossing. Trigger primitives from the calorimeter are then passed on to a regional trigger, which defines electrons, muons and jet candidates. Some of this information is passed to the regional muon trigger in order to provide information about whether the particle is minimum ionizing. The global muon trigger then combines track information with calorimeter information and selects a maximum of four muon candidates and calculates their momentum, position, charge and quality. The output from the regional calorimeter trigger is also passed to a global calorimeter trigger which provides information about the jets, total transverse energy and missing energy in the event. Combining the information from the global muon trigger and the global calorimeter trigger, the L1 trigger decides whether to keep the event or not by combining several decisions by simple logic operations (AND/OR/NOT), forming up to 128 algorithms.
 

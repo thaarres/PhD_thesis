@@ -1,4 +1,4 @@
-\subsection{A small bump}
+\section{A small bump}
 On June 2nd, 2015, the day before CMS recorded its first ever 13 TeV event, a pre-print appeared on the arXiv titled, "Search for high-mass diboson resonances with boson-tagged jets in proton-proton collisions at $\sqrt{s} = 8$ \TeV with the ATLAS detector"~\cite{Aad2015}.
 It was an analysis of the full ATLAS Run 1 dataset, corresponding to 20.3 \fbinv, searching for heavy resonances decaying to vector bosons in the all-hadronic state. The analysis documented a 3.4 $\sigma$ excess for a heavy resonance decaying to WZ with a mass of around 2 \TeV.
 The corresponding CMS analysis, published the previous year, had a 1.3 $\sigma$ excess at roughly the same resonance mass, but was mostly compatible compatible with a WW final state hypothesis~\cite{Khachatryan:1700394}. Figure~\ref{fig:searchI:8tev} shows the corresponding dijet invariant mass spectrum as seen by ATLAS (left) and the upper limit on the production times the cross section for a $G_{Bulk}$ decaying to WW (right) as documented by CMS.
@@ -31,7 +31,7 @@ One could therefore expect the same number of signal events in the 20 \fbinv dat
 \end{figure}
 We therefore expected that the small excess observed in the VV all-hadronic final state would be observable in the 2015 dataset if the signal was genuine.
 
-\subsection{Analysis strategy}
+\section{Analysis strategy}
 
 When a resonance X with a mass above 1 TeV decays into a vector-boson pair, the bosons have a very high energy ($\tilde\PT=\mX/2=500 \GeV$, assuming X is produced at rest) is referred to as boosted. The decay products of a hadronically decaying boosted vector boson will therefore not appear as back-to-back in the lab frame but rather be collimated, as described in Section~\ref{sec:objreco:substructure}. This results in a final state with two high-pt, large-radius jets, such that the AK algorithm with an R=0.8 is expected to fully contain the two quarks coming from the vector boson decay. This is illustrated in Figure~\ref{fig:searchI:merged}.
 \begin{figure}[h!] 
@@ -50,16 +50,16 @@ The main background for such an analysis is QCD multijet events. As mentioned in
 \end{figure}
 The benefit of such a method is that there is no need for a simulation of the background and the strategy is simple and robust. The disadvantage is that the analysis is intrinsically limited to regions where the dijet invariant mass spectrum is smooth and hence regions with discontinuities due to trigger turn-ons or kinematic selections must be avoided.
 
-\subsection{Data and simulated samples}
+\section{Data and simulated samples}
 \label{sec:searchI:samples}
 The data analyzed in this search correspond to a total integrated luminosity of 2.7\fbinv collected at a center-of mass energy of 13 \TeV between June and December 2015. The instantaneous luminosity of the LHC during this run was around half of the design luminosity ($0.5 \times 10^{34} \percms$), with an average number of primary vertices per event of $<\mu>=13$. \par
 The bulk graviton model (see Section~\ref{sec:theory:wed}) and the HVT model (\PWpr{} and \PZpr{}, see Section~\ref{sec:theory:hvt}) are used as benchmark signal processes. In these models, the vector gauge bosons are produced with a longitudinal polarization in more than 99\% of the cases, which leads to a 24\% higher acceptance per boson for reasons explained in Section~\ref{sec:objreco:pol}. For the HVT model, a scenario (model B) with $g_{\rm V}=3$, $c_{\rm H}=-0.976243$, and $c_{\rm F}=1.02433$ is chosen, where the heavy resonance predominantly couple to bosons and the coupling to fermions is suppressed. The bulk graviton samples were generated with $\ktilde = 0.5$. The resonance masses considered lie in the range 1.2 to 4 \TeV and are generated under the assumption of a natural width negligible with respect to the experimental resolution (narrow-width approximation). All signal samples are generated at leading order with \amcatnlo{} v2.2.2~\cite{Alwall:2014hca}. \par
 Simulated samples of the production of QCD multijet events are generated to leading order using \PYTHIA version 8.205~\cite{Sjostrand:2007gs} with the CUETP8M1 tune~\cite{Khachatryan:2015pea} and are used to validate the analysis procedure.
 
 
-\subsection{Event selection}
+\section{Event selection}
 
-\subsubsection{Triggering}
+\subsection{Triggering}
 \label{sec:searchI:trigger}
 The first selection to be confronted in any analysis is the trigger selection. Due to an overwhelming QCD background in all-hadronic final states, the threshold for fully-hadronic triggers is very large in order to keep the trigger rate low (preferably around 10-30 Hz). In this analysis, we therefore decided to take advantage of triggers that place requirements on the jet's groomed mass in addition to the "standard" jet triggers based on the scalar sum of jet transverse energy \HT. These "boosted" triggers were never before tested in data, and this analysis was the first published result taking advantage of grooming at the trigger level in CMS. The following \HT-based High Level Triggers (HLT), referred to as inclusive triggers in the following, are used:
 \begin{itemize}
@@ -95,7 +95,7 @@ As a measure of the performance of the grooming triggers, we have in addition lo
 \label{fig:searchI:grooming-mj-trigger}
 \end{figure}
 
-\subsubsection{Preselection} 
+\subsection{Preselection} 
 \label{sec:searchI:preselection}
 After trigger selections, and the corresponding requirement of a dijet invariant mass above 1 \TeV to ensure a smoothy falling background, we begin the process of maximizing the signal significance while keeping the background low. This is done by optimizing the selection requirements on the jets. The jets used in this analysis are clustered with the anti-\kt{} jet clustering algorithm with a clustering parameter of $R=0.8$ (see Section ~\ref{sec:objreco:jets}) to allow containment of the full vector-boson decay products. Since a minimum transverse momentum of 200 \GeV is required for the decay products of a W/Z to be fully contained within an R=0.8 jet, events are further selected by requiring at least two jets with $\PT > \unit{200}{\GeV}$. These are in addition required to be central, with an $|\eta| < 2.4$. The two highest \PT jets in the event passing these criteria are selected as potential vector boson candidates. As our main background is QCD multijet events, we further take advantage of the fact that the angular distribution between these, mainly t-channel, processes are very different from the s-channel signal processes under study. The crossection for QCD t-channel processes as a function of the opening angle with respect to the beam axis ($\theta*$), exhibit a pole around $\cos \theta*=1$, meaning QCD t-channel jets are mostly produced in the forward direction, with an opening angle with respect to the beam axis close to zero. The signal jets on the other hand, produced through an s-channel process, are concentrated in the barrel region. We therefore require the jets to have a separation of $|\Delta\eta|<1.3$ in order to reduce the QCD multijets background. The distribution of $|\Delta\eta|$ between the two highest-\PT jets for QCD, as well as for different signal scenarios, is shown in Figure~\ref{fig:searchI:detaopt}.
 \begin{figure}[h!]
@@ -115,7 +115,7 @@ A cut of $|\Delta \eta|_{jj}<1.3$ removes the t-channel pole at $\cos \theta* = 
 \label{fig:kinematics-all}
 \end{figure}
 
-\subsubsection{Vector boson tagging}
+\subsection{Vector boson tagging}
 \label{sec:searchI:wtagging}
 After preselections, we take advantage of the jet substructure algorithms described in Section~\ref{sec:objreco:substructure} to further separate boosted W/Z jets from the QCD multijet background. In the 8 \TeV analysis~\cite{Khachatryan:1700394} published the previous year, the pruning algorithm was the chosen grooming algorithm of CMS. However, recent progress had been made in the development of alternative grooming algorithms that had favorable properties from a theoretical point of view (see Sections~\ref{sec:objreco:grooming} and ~\ref{sec:searchII:puppisoftdrop}). We therefore studied two different grooming algorithms: pruning and softdrop (with $\beta=0$ and $z_{cut} = 0.1$). A comparison of the jet mass for W, Z, and H jets after either the softdrop (dotted lines) or pruning (solid lines) algorithms were applied is shown in Figure~\ref{fig:searchI:sdvspruning}.
  \begin{figure}[h!]
@@ -181,7 +181,7 @@ The signal efficiency when applying only the pruned jet mass selection is around
 \label{fig:wtag}
 \end{figure}
 
-\subsubsection{Analysis categorization}
+\subsection{Analysis categorization}
 As the analysis requires two W/Z-tags, we always require one HP-tagged jet and then divide into LP and HP categories depending on whether the other jet is of high or low purity. In addition, in order to further enhance the analysis sensitivity, we further split the pruned jet mass window into a W and a Z boson window where the W window is defined as $65 {\GeV} < m_{p} < 85 {\GeV}$ and the Z boson window as $85 {\GeV} < m_{p} < 105 {\GeV}$. This has the added benefit of allowing us to discriminate between a \BulkG decaying to \WW or \ZZ, and a \PWpr decaying into \WZ by separating these events into categories. The signal yield will be higher in the WZ category for a \PWpr decaying to a W and Z boson than for a \BulkG decaying to \WW or \ZZ. Figure~\ref{fig:searchI:massCatWpr} shows the relative expected signal yield (left) and expected limits (left) in the different mass categories for a \PWpr with a mass of 2 TeV.
  \begin{figure}
  \centering
@@ -272,7 +272,7 @@ Low-purity    & $\tau_{\rm{21, jet1}} < 0.45$, $0.45 < \tau_{\rm{21, jet2}} < 0.
 \end{table}
 \clearpage
 
-\subsection{Background modeling}
+\section{Background modeling}
 \label{sec:searchI:bkg}
 We assume that the QCD multijets background can be described by a smooth, monotonically decreasing function, which is parametrizable. This is similar to what is done in previous CMS analyses looking for bumps in the dijet invariant mass spectrum~\cite{Chatrchyan:2012ypy,CMS-PAS-EXO-12-059}. The search is then performed by fitting the sum of the functions for background and signal to the dijet invariant mass spectrum in data. Neither data control regions nor simulated samples are used directly by this method. The background functions are of the following form:
 \begin{equation}
@@ -415,7 +415,7 @@ Fishers34 & 0.356& CL & 0.56\\
 \end{table}
 
 \clearpage
-\subsection{Signal modeling}
+\section{Signal modeling}
 \label{sec:searchI:sig}
 
 The signal shape is extracted from signal MC with resonance masses in the range from 1 to 4 TeV. A linear interpolation provides shapes for the mass points in between in steps of 100 GeV. From these shapes, signal shape models are constructed as composite models with a Gaussian core due to detector resolution and an exponential tail to account for parton distribution function effects. Parametric shape uncertainties due to jet energy scale and resolution uncertainties are inserted by variations of the Gaussian peak position and width. The dijet invariant mass shape for different benchmark model signals is shown in Figure \ref{fig:searchI:sigfit}. The signal and background components are then simultaneously fitted to the data points.
@@ -427,7 +427,7 @@ The signal shape is extracted from signal MC with resonance masses in the range 
 \end{figure}
 \clearpage
 
-\subsection{V-tagging scale factors}
+\section{V-tagging scale factors}
 \label{sec:searchI:vtag}
 As seen in Figure~\label{fig:wtag}, some discrepancy is observed in the \nsubj distribution between data and MC. This can lead to a bias in the signal efficiency estimation and we therefore measure the real data signal efficiency in an orthogonal data sample.
 The W-tagging efficiency is measured using real boosted \PW-jets in a semi-leptonic $\textrm{t}\bar{\textrm{t}}$ enriched data sample. This region is mainly quark-enriched, as opposed to the QCD gluon-enriched region we saw previously, and substructure variables are better described here. The sample is obtained through requiring a final state compatible with two b-jets and two \PW bosons, where one of the bosons decay leptonically and the other one hadronically. There are several good reasons to use this channel: Top quark pair production events are plentifully produced at the LHC, we can ensure a high purity of the sample through high-energy lepton, b-tag and missing energy requirements and lastly we can ensure that the \PW jets are boosted by requiring the leptonic leg, together with the hadronic \PW candidate, to have high transverse momentum. The final state is illustrated in Figure~\ref{fig:search2:ttsemilep}, with the object of interest being the AK R=0.8 jet containing the two quark daughters of the hadronically decaying \PW.
@@ -438,7 +438,7 @@ The W-tagging efficiency is measured using real boosted \PW-jets in a semi-lepto
 \label{fig:search2:ttsemilep}
 \end{figure}
 
-\subsubsection{Event selection}
+\subsection{Event selection}
 \label{sec:searchI:vtag:evsel}
 The \PW can decay either to an electron or a muon, both final states ("channels") are used in the analysis. We select events through triggering and selections on the leptonic leg. First, we require a high-energy lepton at trigger level, with an online \PT above 45 \GeV for the muon and 135 \GeV for the electron. This requires an offline muon(electron) \PT threshold of 53(120) \GeV. The leptons are further required to pass the lepton requirements defined in Section~\ref{sec:objreco:muons} and Section~\ref{sec:objreco:electrons}, and events containing additional leptons (passing the same ID requirements, but looser cuts as defined in Table~\ref{tab:searchII:cutsummary}) are vetoed. Offline, we further require a high missing energy of 40(80) \GeV in the muon(electron) channel. To insure a high signal (boosted hadronic \PW) purity, the leptonic \PW four-vector is reconstructed such that we can put tight momentum requirements on the leptonic leg (ensuring that both tops, and therefore vector bosons, have a high momentum). The leptonic \PW is reconstructed in two steps: First, the unknown z component of the neutrino momentum must be solved for through a second order equation assuming the real \PW mass
 \begin{equation*}
@@ -526,7 +526,7 @@ $\Delta \phi(W_{AK8},W_{lep}) $ & $> 2$     & \\
 \label{fig:searchI:ttbarcp}
 \end{figure}
 
-\subsubsection{Fitting procedure}
+\subsection{Fitting procedure}
 For this measurement, what we are interested in is to extract and compare the W-tagging efficiency of the combined jet mass and \nsubj selection in data and in MC. We are additionally interested in the difference in jet mass scale (mean of the \PW jet mass peak) and jet mass resolution (width of \PW jet mass peak), as this also affects the signal jet mass shape and therefore efficiency. In order to study these variables, we look at the pruned jet mass spectrum between 40 and 150 \GeV in two regions: 
 \begin{itemize}
 \itemsep0em 
@@ -598,7 +598,7 @@ where $\epsilon_{fail}$ is the ratio between the number of events with $\tau_2/\
   SF_{LP} = \frac{1-\epsilon_{HP}(\textrm{data})}{1-\epsilon_{HP}(\textrm{sim})}
 \end{equation}
 
-\subsubsection{Systematic uncertainties}
+\subsection{Systematic uncertainties}
 \label{sec:searchI:wtagsystematic}
 As systematic uncertainties, we consider effects due to differences in \ttbar simulation as well as effects due to choice of fit method. The former is evaluated by comparing the extracted scale factor when using \ttbar MC samples produced with different matrix element (ME) and shower generators: \POWHEG (NLO) interfaced with \PYTHIA{8} , \MADGRAPH (LO) QCD interfaced with \HERWIG{++} and \POWHEG interfaced with \HERWIG{++}.
 The uncertainty due to different ME generators (\POWHEG versus \MADGRAPH) correspond to 3(13)\% and are listed in Table~\ref{tab:searchI:WtagSFs} as the first quoted systematic uncertainty. The uncertainty due to parton showering (\PYTHIA{8} versus \HERWIG{++}) is 8.6\%, but are not relevant for analyses where no \HERWIG{++} based simulation is used, as is the case for the search presented in this chapter. 
@@ -624,7 +624,7 @@ One additional uncertainty is added. As the W-tagging scale factor is evaluated 
 
 Systematic uncertainties from other sources (lepton identification, b tagging etc.) are less than 0.5\% and therefore negligible.
 
-\subsubsection{Results}
+\subsection{Fit results}
 The simultaneous fit as described above is then performed both for data and for simulation, where we take the ratio of data and MC efficiencies as efficiency scale factors.
 The corresponding fits are shown in Figure~\ref{fig:searchII:simfit}, with the corresponding extracted efficiencies and scale factors summarized in Table~\ref{tab:searchI:WtagSFs}.
 
@@ -675,7 +675,7 @@ Howver, the jet mass resolution scale factor has a large uncertainty attached to
  \end{center}
 \end{table}
 
-\subsubsection{Impact on search variables}
+\subsection{Impact on search variables}
 \label{sec:searchI:wtagimpact}
 
 The obtained W-tagging scale factors are used as a scale of the signal yield. As we require two W-tagged jets, either HPHP or HPLP, the actual scale factors for the high-purity signal yield is $\textrm{SF}_{HP}\times\textrm{SF}_{HP}$ and for the low-purity category $\textrm{SF}_{HP}\times\textrm{SF}_{LP}$. The signal yields are then
@@ -691,7 +691,7 @@ The jet mass scale and resolution are used to scale and smear the signal Monte C
 % \sigma_{rel}^{HPLP} &= 1.28 \times 1.06 = 1.36\\
 % \end{align*}
   
-\subsection{Systematic uncertainties}
+\section{Systematic uncertainties}
 \label{sec:searchI:sys}
 
 The uncertainty on the background parametrization is statistical only and is taken as the covariance matrix of the dijet fit function. As demonstrated in the F-test, we study different background parameterizations and we have found these to be within the fit uncertainty of the nominal fit. The remaining uncertainties concern the signal shape and yield and are listen in Table~\ref{tab:searchI:sys}. Jet reconstruction uncertainties affect both the signal yield and she signal shape. These are evaluated by rescaling the jet four-momenta according to uncertainties on the jet energy scale and resolution and recomputing the signal efficiency. The difference in efficiency with and without smearing/scaling is taken as systematic uncertainties, as described above.
@@ -729,7 +729,7 @@ The jet mass/energy scale and resolution also affect the signal shape, and are a
 
 \clearpage
 
-\subsection{Results}
+\section{Results}
 \label{sec:searchI:results}
 The background fits for each analysis category in the data signal region are shown in Figure \ref{fig:search1:bkgfitMassCat}. Here a background only fit is performed while, as described above, a simultaneous fit is used for the limit setting procedure. The filled area correspond to the 1 sigma error band of the background fit, obtained using linear error propagation.
 
@@ -755,7 +755,7 @@ with
 \end{equation}
 Here $\sigma$ is the signal strength scaling the expected number of signal events in the $i$-th dijet invariant mass bin $N_i(S)$, $N_i(B)$ is the expected number of background events in dijet invariant mass bin $i$ and $n_i$ is the observed number of events in the $ith$ dijet invariant mass bin. The background per bin $N_i(B)$ is estimated from the background component of the best signal+background fit to the data points with the signal cross section set to zero. The number of signal events in the $i$-th dijet invariant mass bin, $N_i(S)$, is then estimated from the signal templates, where only a dijet invariant mass in a 20\% window around the resonance mass is considered, containing most of the signal contribution while making sure to keep a good description of the core.
 
-\subsection{Limits: All-hadronic analysis}
+\section{Limits: All-hadronic analysis}
 \label{sec:searchI:results4q}
 As mentioned in Section~\ref{sec:searchI:samples}, we set limits on three different signal scenarios: $\BulkG \rightarrow \WW$, $\BulkG \rightarrow \ZZ$ and $\PWpr \rightarrow WZ$, with a $\ktilde = 0.5$ for the \BulkG. Figure \ref{fig:searchI:Limits_CombNew} shows the asymptotic limits at 95 \% confidence level on signal cross section as a function of the resonance mass obtained with 2.7 \fbinv of 13 \TeV CMS data after combining all mass and purity categories (top). The corresponding p-values are shown in the bottom panel.
 
@@ -796,7 +796,7 @@ This is driven by the ZZ high-purity category, the category with the lowest stat
 
 The lack of constraint on the fit in the dijet invariant mass tail when statistics are very low, is a drawback of a method relying fully on a parametric fit and reduces the analysis sensitivity in the high-\mjj region. In Search II (Section~\ref{searchII}) we will keep taking advantage of the dijet fit, however, the integrated luminosity is $\sim 15$ times higher, resulting in more datapoints in the \mjj tail which further constrains the fit. In Search III (Section~\ref{searchIII}), we will explore alternate methods which allow more control over the background shape across the full mass spectrum. 
 
-\subsection{Limits: Semi-leptonic and all-hadronic combination}
+\section{Limits: Semi-leptonic and all-hadronic combination}
 \label{sec:searchI:resultsComb}
 
 To maximize the search sensitivity, we combine the results obtained above with those of the corresponding semi-leptonic analysis. We assume the uncertainties on luminosity, V-tagging efficiency, jet mass scale and resolution to be fully correlated.

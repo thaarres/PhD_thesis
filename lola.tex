@@ -1,5 +1,5 @@
 \vspace*{\fill}
-\section{Infusing deep neural networks with physics}
+\section*{Infusing deep neural networks with physics}
 \label{sec:lolaintro}
 \begin{centering}
 \textit{
@@ -169,7 +169,7 @@ The performance of these three different taggers, is shown in Figure~\ref{fig:lo
 \end{figure}
 We clearly see that LoLa performs significantly better than the current baseline W-taggers based on \nsubj and \ddt, with a roughly 20\% higher signal efficiency at a given mistagging rate. LoLa also has a higher signal acceptance, as it can be used without a mass window applied. If LoLa were to replace the tagger used in Search II (a better comparison than Search III as the latter uses a rather unconventional mass window), which has a signal efficiency of $\sim42\%$ at a $2\%$ mistagging rate for a single jet, the signal efficiency for the same mistagging rate would be 65\%, a 55\% increase. For an analysis requiring two tagged jets, that would imply going from an 18 to a 43\% total signal efficiency, a significant gain.
 
-\section{\PT and mass dependence}
+\section{Dependence on jet mass and \PT}
 Despite being a key feature, absolute performance is not all that quantifies how good one tagger is compared to another. One a tagger is planned to be used in physics analysis, there are three key questions one needs to consider:
 \begin{itemize}
     \itemsep0em 
@@ -178,8 +178,6 @@ Despite being a key feature, absolute performance is not all that quantifies how
     \item Does the tagger sculpt the mass spectrum?
 \end{itemize}
 These three measures are equally important in quantifying performance and, in the following, I will attempt to explain why this is the case and which approaches are used here in order to tackle them.\par
-
-
 Any deep neural network trained to distinguish W jets from q/g jets, will naturally learn that \PT and mass are discriminating features unless it is penalized for it. Figure~\ref{fig:lola:corr} shows the LoLa discriminant as a function of jet \PT and softdrop jet mass. 
 \begin{figure}[h!]
 \centering
@@ -190,7 +188,7 @@ Any deep neural network trained to distinguish W jets from q/g jets, will natura
 \end{figure}
 A strong correlation is observed both for signal and for background jets (closer to 1 means more signal like), with a rising slope as a function of \PT (meaning the network interprets a higher jet \PT as more signal like) and a bump around the W mass for both signal and for background.
 
-\subsection{\PT decorrelation}
+\subsection{\PT-decorrelation}
 A tagger which is \PT dependent is a problem for the following reasons: Firstly, the signal efficiency is variable, which requires a working point that scales with \PT. That in itself is not problematic and can easily be computed. However, it implies that when computing efficiency scale factors from data, a range of different scale factors for different working points is required. In addition, the performance is measured at low \PT, a region where the tagging efficiency can be substantially different from the analysis signal region due to the strong \PT correlation present. Finally, the dijet invariant mass is intrinsically linked to the \PT spectrum, meaning that any \PT dependence in addition can introduce sculpting of the dijet invariant mass spectrum.\newline
 From the top left plot in Figure~\ref{fig:lola:kinematics}, one clearly sees that the jet \PT distribution is very different for signal and for background. In order to avoid that the network learns jet \PT to be a discriminating feature, I therefore compute a jet-by-jet weight intended to flatten the jet \PT spectrum. This weight is passed as a sample weight to the training set, reweighting each jets contribution to the total loss (making high mass QCD jets and low mass signal jets count more). Figure~\ref{fig:lola:ptweight} shows the jet \PT distribution without any \PT-reweighting applied (solid lines) and after applying a \PT-weight (dashed lines).
 \begin{figure}[h!]
@@ -222,7 +220,7 @@ For completeness, Figure~\ref{fig:lola:nsubjcorr} shows the \nsubj and \ddt disc
 \label{fig:lola:nsubjcorr}
 \end{figure}
 In summary, reweighting strategies as the one described above yield a loss in overall performance, as expected when removing information from the training. However, the \PT dependence of the tagger is strongly reduced, meaning that it might perform better overall in physics analysis when systematic uncertainties are taken into account. There is therefore no clear answer as to which method is better before running a full analysis including systematics for \PT-dependent tagging.
-
+ 
 \subsection{Mass sculpting}
 \label{sec:lola:massculpting}
 Any smart deep neural network intended to separate Ws from quarks and gluons, will inevitably learn the W mass as it clearly is very different from the q/g mass. Unfortunately, as these taggers are meant to be used in physics analysis where we often estimate the background in mass sidebands, this has some undesired side effects. If a deep neural network has learned the mass then, after applying a cut on the discriminant, the background jet mass distribution becomes severely sculpted and difficult to constrain. \newline
