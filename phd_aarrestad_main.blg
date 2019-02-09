@@ -9,45 +9,45 @@ Warning--I didn't find a database entry for "ddt"
 Warning--I didn't find a database entry for "JME-16-003"
 Warning--I didn't find a database entry for "CMS-PAS-EXO-14-024"
 Warning--empty publisher in inbook
-You've used 87 entries,
+You've used 88 entries,
             2537 wiz_defined-function locations,
-            1323 strings with 24109 characters,
-and the built_in function-call counts, 27195 in all, are:
-= -- 2967
-> -- 653
+            1332 strings with 24350 characters,
+and the built_in function-call counts, 27481 in all, are:
+= -- 2995
+> -- 670
 < -- 6
-+ -- 224
-- -- 137
-* -- 2313
-:= -- 3394
-add.period$ -- 139
-call.type$ -- 87
++ -- 229
+- -- 141
+* -- 2349
+:= -- 3437
+add.period$ -- 141
+call.type$ -- 88
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 88
-duplicate$ -- 1733
-empty$ -- 2778
-format.name$ -- 143
-if$ -- 7159
+cite$ -- 89
+duplicate$ -- 1747
+empty$ -- 2805
+format.name$ -- 147
+if$ -- 7229
 int.to.chr$ -- 0
-int.to.str$ -- 87
-missing$ -- 211
-newline$ -- 355
-num.names$ -- 72
-pop$ -- 507
+int.to.str$ -- 88
+missing$ -- 214
+newline$ -- 360
+num.names$ -- 73
+pop$ -- 512
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 995
+skip$ -- 997
 stack$ -- 0
 substring$ -- 1073
-swap$ -- 729
+swap$ -- 731
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 169
-width$ -- 89
-write$ -- 1079
+while$ -- 170
+width$ -- 90
+write$ -- 1092
 (There were 6 warnings)

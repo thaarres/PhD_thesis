@@ -353,9 +353,10 @@ The best signal mass resolution is obtained with $r_{sub}=0.2$ and $p_{T,frac}=0
 \label{sec:objreco:pruning}
 The pruning algorithm, in addition to removing soft particles, has an additional requirement on the distance between any recombination that is at wide angle.
 It proceeds by reclustering the jet with the C/A algorithm, requiring at each step that
-\begin{equation*}
+\begin{equation}
+  \label{eq:pruning}
 \frac{ \textrm{min}(p_{T,i},p_{T,j}) }{ p_{T,P} } > z_{cut} \quad \textrm{ and } \quad \Delta R_{i,j} < D_{cut} = \frac{2 r_{cut} m_{jet}}{\PT}.
-\end{equation*}
+\end{equation}
 The first requirement is a requirement on the hardness of the combination. The variables $p_{T,i}$ and $p_{T,j}$ correspond to the transverse momenta of each protojet (single particle or group of particles already combined in a previous step) and $p_{T,P}$ is the combined \PT of the two. The protojet with the lowest transverse momenta is removed if its hardness is below $z_{cut}$, or if it forms an angle wider than $D_{cut}$ relative to the axis of the recombination of the two protojets. In CMS, the tuned parameters are set to $r_{cut}=0.5$ and where $z_{cut}=0.1$. Figure~\ref{fig:objreco:pruning} shows the ungroomed as well as the pruned jet mass distribution for signal (left) and background (right) jets. The highest amount of signal and background separation in CMS, is achieved with $r_{cut}=0.5$ and $z_{cut}=0.1$.
 \begin{figure}[h!] 
     \centering
@@ -368,9 +369,10 @@ The first requirement is a requirement on the hardness of the combination. The v
 \subsubsection{Modified Mass Drop Tagger and Soft Drop}
 \label{sec:objreco:softdrop}
 The modified mass drop tagger (mMDT)~\cite{Dasgupta:2013ihk} (a modified version of the originally suggested mass drop tagger ~\cite{Butterworth:2008iy}) is based on the idea that a \PW or \PZ jet is formed by two quark subjets and that, therefore, the mass of each subjet is much smaller than their combined mass (and much smaller than the mass of the boson itself). A QCD jet is, on the other hand, formed by continuous soft radiation, meaning that its heaviest subjet should be close to the mass of the jet itself. The mMDT tagger therefore starts from an already clustered jet, reclusters it with the C/A algorithm and then declusters it again, defining subjets $s_1$ and $s_2$. It then looks for a significant mass drop going from the total jet mass to the mass of each subjet, and checks that the splitting is not too asymmetric. The modified mass drop condition is generalized through the soft drop declustering method~\cite{Larkoski:2014wba}, simply called Soft Drop, which allows for different types of angular requirements to enter the condition. The Soft Drop condition is the following,
-\begin{equation*}
+\begin{equation}
+  \label{eq:softdrop}
 \frac{ \textrm{min}(p_{T,1},p_{T,2}) }{ p_{T,1}+p_{T,2} } > z_{cut} \frac{\Delta R_{12}}{R_0}^\beta.
-\end{equation*}
+\end{equation}
 If no significant mass drop occurred and the splitting is not too asymmetric, the condition is met and the full jet is deemed the softdrop jet. Otherwise only the highest-\PT subjet is kept and the declustering continues. If the jet can not be declustered any further, it can either be removed from consideration, so-called "tagging"-mode, or deemed the final soft-dropped jet, "grooming"-mode. A $\beta=0$ corresponds to the modified mass drop tagger and removes all soft emission from the jet. For $\beta>0$, soft radiation is removed, but some fraction of soft-collinear radiation is kept. Lastly, with $\beta<0$, Soft Drop can remove soft as well as collinear radiation.
 The performance of Soft Drop on W jets and QCD quark/gluon jets for different values of $\beta$ is shown in Figure~\ref{fig:objreco:softdrop}. The modified mass drop tagger (Softdrop with $\beta$=0) with $z_{cut} = 0.1$ is the default Soft Drop settings in CMS, due to it providing the best signal/background discrimination while maintaining an excellent signal mass resolution. 
 \begin{figure}[h!] 
@@ -386,7 +388,7 @@ The performance of Soft Drop on W jets and QCD quark/gluon jets for different va
 After using the algorithms above, there is still information in the jet structure itself that can distinguish W/Z jets from quark/gluon jets. A \PW or \PZ jet consists of two well-defined high-\PT subjets. A quark/gluon jet instead is made from a single parton, and consists of several large angle, asymmetric splittings, as illustrated in Figure~\ref{fig:objreco:onevstwoprong}.
 \begin{figure}[h!] 
     \centering 
-    \includegraphics[width=0.790\textwidth]{figures/event_reconstruction/tau21_sketch.pdf}
+    \includegraphics[width=0.690\textwidth]{figures/event_reconstruction/tau21_sketch.pdf}
      \caption{A jet stemming from the decay of a \PW will usually have two well-separated high-\pt subjets, while a jet with a single-prong origin consists of several large angel splittings.}
      \label{fig:objreco:onevstwoprong}
  \end{figure}
@@ -410,8 +412,8 @@ In CMS, and as recommended by the authors in~\cite{Thaler:2010tr}, the ratio $\t
 The distribution of $\tau_{21}$ for signal and background jets with different pileup subtraction algorithms applied is shown in Figure~\ref{fig:objreco:tau21}, where \nsubj in combination with PF+PUPPI (green), yields a distribution most similar to the generated one (black).
 \begin{figure}[h!] 
     \centering 
-    \includegraphics[width=0.490\textwidth]{figures/event_reconstruction/sig_tau21.pdf}
-    \includegraphics[width=0.490\textwidth]{figures/event_reconstruction/bkg_tau21.pdf}
+    \includegraphics[width=0.40\textwidth]{figures/event_reconstruction/sig_tau21.pdf}
+    \includegraphics[width=0.40\textwidth]{figures/event_reconstruction/bkg_tau21.pdf}
      \caption{The distribution of the n-subjettiness ratio $\tau_{21}$ for signal jets (left) and background jets (right) with different combinations of pileup subtraction algorithms applied. The solid lines corresponds to the $\tau_{21}$ distribution with no mass cut applied, while the dotted lines are within a mass window of 60-100 \GeV~\cite{CMS-PAS-JME-14-001}.}
      \label{fig:objreco:tau21}
  \end{figure}

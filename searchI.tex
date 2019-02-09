@@ -63,12 +63,14 @@ Simulated samples of the production of QCD multijet events are generated to lead
 \label{sec:searchI:trigger}
 The first selection to be confronted in any analysis is the trigger selection. Due to an overwhelming QCD background in all-hadronic final states, the threshold for fully-hadronic triggers is very large in order to keep the trigger rate low (preferably around 10-30 Hz). In this analysis, we therefore decided to take advantage of triggers that place requirements on the jet's groomed mass in addition to the "standard" jet triggers based on the scalar sum of jet transverse energy \HT. These "boosted" triggers were never before tested in data, and this analysis was the first published result taking advantage of grooming at the trigger level in CMS. The following \HT-based High Level Triggers (HLT), referred to as inclusive triggers in the following, are used:
 \begin{itemize}
+  \itemsep0em 
 \item {HLT\_PFHT650\_WideJetMJJ900DEtaJJ1p5},
 \item {HLT\_PFHT650\_WideJetMJJ950DEtaJJ1p5}, and
 \item {HLT\_PFHT800}.
 \end{itemize}
 Here, \emph{PFHT650} refers to a total \HT of at least 650 GeV. \emph{WideJet} means jets reconstructed with the \emph{wide jet algorithm}~\cite{2011123}, an algorithm inspired by jet grooming intended to reduce sensitivity to gluon radiation. The two AK R=0.4 jets with the largest \PT in the event are used as seeds. Geometrically close jets are then combined into the closest jet seed if they are within $\Delta R = \sqrt{(\Delta \eta)^2+\Delta \phi)^2}$, and these two jets form a dijet system used for further selections. \emph{MJJ900} refers to a wide-jet dijet mass of at least 900 GeV, and \emph{DetaJJ1p5} means there is an additional cut on the $|\Delta \eta|$ between the two wide jets for reasons that will be explained below. In addition, two triggers based on jet grooming are used. These require a trimmed jet mass (see Section 3.5.1) of 30 and 50 GeV, yielding the triggers:
 \begin{itemize}
+  \itemsep0em 
 \item {HLT\_AK8PFJet360\_TrimMass30} and
 \item {HLT\_AK8PFHT700\_TrimR0p1PT0p03Mass50}.
 \end{itemize}
@@ -523,7 +525,7 @@ $\Delta \phi(W_{AK8},W_{lep}) $ & $> 2$     & \\
 \caption{Distribution of pruned jet mass (left) and n-subjettiness (right) in the \ttbar control sample.} 
 \label{fig:searchI:ttbarcp}
 \end{figure}
-
+\clearpage
 \subsection{Fitting procedure}
 For this measurement, what we are interested in is to extract and compare the W-tagging efficiency of the combined selection of jet mass and \nsubj in data and MC. We are additionally interested in the difference in jet-mass scale (mean of the W-jet mass peak) and jet-mass resolution (width of the W-jet mass peak), as this also affects the shape of the signal jet mass and therefore the tagging efficiency. In order to study these variables, we look at the pruned jet mass spectrum between 40 and 150 \GeV in two regions: 
 \begin{itemize}
@@ -531,76 +533,63 @@ For this measurement, what we are interested in is to extract and compare the W-
   \item Pass region: $0 <  \nsubj \leq 0.45 \sim$ high purity , and
   \item Fail region: $0.45 < \nsubj \leq 0.75\sim$ low purity.
 \end{itemize}
-Our goal is to understand what the real fraction of merged W jets is in the pass category and in the fail category, assuming that the sum of the two correspond to a 100\% selection efficiency (the amount of W jets falling outside of this region is negligible).
-The strategy is as follows: We first derive probability density functions (PDFs) which describe the distribution of fully merged W jets and non-W jets in \ttbar, both in the pass and in the fail region. The PDFs describing real W jets and non-W jets are added with a fraction which is left floating: the fit decides what the fraction of real W to non-W jets is in the pass and in the fail region. A simultaneous fit of pass and fail regions is then performed (using the two composite PDFs), where the fraction of real W jets in both pass and fail regions is constrained such that, if the signal efficiency in the pass region is $\epsilon_S$, the signal efficiency in the fail region is ($1-\epsilon_S$). This is done by letting the normalization of the PDF describing real \PW jets in the pass category be defined as the \textit{total} real W boson yield in the pass and fail regions combined multiplied by some fraction, $\epsilon_S$. The normalization of the PDF describing real \PW jets in the fail category is then the total real yield of W bosons multiplied by ($1-\epsilon_S$).\newline
-To understand which part of the \ttbar jet mass distribution contains real, merged W jets and which are only pure combinatorial background, non-W jets, we start from \ttbar MC.
+Our goal is to understand what the real fraction of merged W jets is in the pass category and in the fail category, assuming that the sum of the two correspond to a 100\% selection efficiency (the amount of W boson jets falling outside of this region is negligible).
+The strategy is as follows: We first derive probability density functions (PDFs) which describe the distribution of fully merged W boson jets and non-W boson jets in \ttbar, both in the pass and in the fail region. The PDFs describing real W jets and non-W jets are added with a fraction which is left floating: the fit decides what the fraction of real W to non-W jets is in the pass and in the fail region. A simultaneous fit of pass and fail regions is then performed (using the two composite PDFs), where the fraction of real W jets in both pass and fail regions is constrained such that, if the signal efficiency in the pass region is $\epsilon_S$, the signal efficiency in the fail region is ($1-\epsilon_S$). This is done by letting the normalization of the PDF describing real W jets in the pass category be defined as the total real W boson yield in the pass and fail regions combined, multiplied by some fraction, $\epsilon_S$. The normalization of the PDF describing real W boson jets in the fail category is then the total real W boson yield in the pass and fail regions combined, multiplied by ($1-\epsilon_S$).\par
+To understand which part of the \ttbar jet mass distribution contains real, merged W boson jets and which are only pure combinatorial background, non-W jets, we start from \ttbar MC.
 By matching the AK8 jet with quarks coming from the hadronic W boson at generator level, in a cone of $\Delta R < 0.8$, we can access the real merged W and non-merged W softdrop mass shapes.
 The real W and non-W PDFs for jets that pass and fail the N-subjettiness selection $\nsubj < 0.45$, are found to be well described by the following functions:
 \begin{align*} 
 f_{\rm bkg}(m_{j}) &= F_{\textrm{ExpErf}} = e^{c_0m_{j}} \cdot \frac{1 + {\rm Erf}((m_{j}-a)/b)}{2}  &\sim\textrm{for non-\PW jets in both pass and fail }\\
 f^{\rm sig}(m_{j}) &= F_{\rm Gaus}(m_{j}) + F_{\rm ExpErf}(m_{j})                                    &\sim\textrm{for real \PW jets in both pass and fail}
 \end{align*}
-Figure~\ref{fig:searchI:ttfitpruned} shows the fitted PUPPI softdrop mass spectrum for real W jets (upper) and non-W jets (lower) in \ttbar for jets that passed (left column) and failed (right column) the N-subjettiness selection, PUPPI $\tau_{21}<0.45$. The corresponding plots for the pruned jet mass can be found in Appendix~\ref{app:sf16}.
+Figure~\ref{fig:searchI:ttfitpruned} shows the fitted pruned jet mass spectrum for real W jets (upper) and non-W jets (lower) in \ttbar for jets that passed (left column) and failed (right column) the N-subjettiness selection $\tau_{21}<0.45$.
 
 \begin{figure}[h!]
-  \centering
-      \includegraphics[width=0.3\textwidth]{figures/vtagging/AN-16-215/plots_76X/fits_TTMC/plots_em_HP0v45powheg_76X_MCfits/{_TTbar_realWExoDiBosonAnalysis.WWTree_TTbar_powheg_76X_GausErfExp_ttbar_with_pull}.pdf}
-      \includegraphics[width=0.3\textwidth]{figures/vtagging/AN-16-215/plots_76X/fits_TTMC/plots_em_HP0v45powheg_76X_MCfits/{_TTbar_realW_failtau2tau1cutExoDiBosonAnalysis.WWTree_TTbar_powheg_76X_GausErfExp_ttbar_failtau2tau1cut_with_pull}.pdf}\\
-      \includegraphics[width=0.3\textwidth]{figures/vtagging/AN-16-215/plots_76X/fits_TTMC/plots_em_HP0v45powheg_76X_MCfits/{_TTbar_fakeWExoDiBosonAnalysis.WWTree_TTbar_powheg_76X_ErfExp_ttbar_with_pull}.pdf}
-      \includegraphics[width=0.3\textwidth]{figures/vtagging/AN-16-215/plots_76X/fits_TTMC/plots_em_HP0v45powheg_76X_MCfits/{_TTbar_fakeW_failtau2tau1cutExoDiBosonAnalysis.WWTree_TTbar_powheg_76X_ErfExp_ttbar_failtau2tau1cut_with_pull}.pdf}
-    \caption{Fit to the real \PW (top) and non-\PW (bottom) pruned jet mass distribution for jets that pass (left) and fail (right) the cut on $\tau_{21}~<$~0.45.}
+  \centering \includegraphics[width=0.3\textwidth]{figures/vtagging/AN-16-215/plots_76X/fits_TTMC/plots_em_HP0v45powheg_76X_MCfits/{_TTbar_realWExoDiBosonAnalysis.WWTree_TTbar_powheg_76X_GausErfExp_ttbar_with_pull}.pdf} \includegraphics[width=0.3\textwidth]{figures/vtagging/AN-16-215/plots_76X/fits_TTMC/plots_em_HP0v45powheg_76X_MCfits/{_TTbar_realW_failtau2tau1cutExoDiBosonAnalysis.WWTree_TTbar_powheg_76X_GausErfExp_ttbar_failtau2tau1cut_with_pull}.pdf}\\ \includegraphics[width=0.3\textwidth]{figures/vtagging/AN-16-215/plots_76X/fits_TTMC/plots_em_HP0v45powheg_76X_MCfits/{_TTbar_fakeWExoDiBosonAnalysis.WWTree_TTbar_powheg_76X_ErfExp_ttbar_with_pull}.pdf} \includegraphics[width=0.3\textwidth]{figures/vtagging/AN-16-215/plots_76X/fits_TTMC/plots_em_HP0v45powheg_76X_MCfits/{_TTbar_fakeW_failtau2tau1cutExoDiBosonAnalysis.WWTree_TTbar_powheg_76X_ErfExp_ttbar_failtau2tau1cut_with_pull}.pdf}
+    \caption{Fit to the real W (upper) and non-W (lower) boson pruned jet mass distribution for jets that pass (left) and fail (right) the cut on $\tau_{21}~<$~0.45.}
   \label{fig:searchI:ttfitpruned}
 \end{figure}
-These shapes constitute the fit functions used for the simultaneous fit. As can be seen from the fit to real \PW jets in the pass region, the distribution is not purely Gaussian and have a tail at higher groomed masses. This tail depends on the matching requirements used to define real merged \PW jets and is unphysical. We therefore assume that the distribution of real W-jets can be described by a Gaussian only, allowing the exponential error function  used to describe non W-jets to cover the contribution from the tails, hereby taking the number of real W-jets as the integral of the Gaussian shape only. This eliminates two additional fit functions, corresponding to six free parameters from the fit. 
-In older estimations of the W-tagging scale factor based on the same procedure~\cite{CMS-PAS-B2G-16-021}), the functions used to describe the tail of the real W-jet distributions were also taken into account as contributing to the real W-jet tagging efficiency. These two calculations tests two extremes:
-The new method assumes a Gaussian peak, absorbing the tails into the background function making the fit more robust, while the old method assumes a Gaussian peak with tails estimated from matched MC. The latter uses a more precise definition of real \PW jets, but a less robust fit. Both methods were investigated and we found that the absorption of tails into the background function resulted in a decrease in the relative uncertainty on the final scale factor of 50 $\%$ and an overall improvement on the fit quality, reducing the fit $\chi^2$ by 15 $\%$. The fit parameters of the functions used to describe non W-jets in both the pass and in the fail region, are further constrained using the values obtained from matched \ttbar MC. The W-tagging scale factors ($SF_{HP}$), for the high purity selection ($\nsubj<0.45$), are then extracted estimating the cut efficiency ($\epsilon_{HP}$) on both data and simulated samples fitting, simultaneously, pass and fail samples:
+These shapes constitute the fit functions used for the simultaneous fit. As can be seen from the fit to real W jets in the pass region, the distribution is not purely Gaussian and has a tail at higher groomed masses. This tail depends on the matching requirements used to define real merged W jets and is unphysical. We therefore assume that the distribution of real W jets can be described by a Gaussian only, allowing the exponential error function  used to describe non W-jets to cover the contribution from the tails, thereby taking the number of real W jets as the integral of the Gaussian shape only. This eliminates two additional fit functions, corresponding to six free parameters from the fit.  In older estimations of the W-tagging scale factor based on the same procedure~\cite{CMS-PAS-B2G-16-021}), the functions used to describe the tail of the real W-jet distributions were also taken into account as contributing to the real W-jet tagging efficiency. These two calculations test two extremes: the new method assumes a Gaussian peak, absorbing the tails into the background function making the fit more robust, while the old method assumes a Gaussian peak with tails estimated from matched MC. The latter uses a more precise definition of real W jets, but yields a less robust fit. Both methods were investigated and we found that the absorption of tails into the background function resulted in a decrease in the relative uncertainty on the final scale factor of 50\% and an overall improvement on the fit quality, reducing the fit $\chi^2$ by 15\%. The fit parameters of the functions used to describe non-W jets in both the pass and in the fail region are further constrained using the values obtained from matched \ttbar MC. The W-tagging scale factors ($SF_{HP}$) for the high purity selection ($\nsubj<0.45$) are then extracted by estimating the selection efficiency ($\epsilon_{HP}$) for both data and simulated samples by fitting, simultaneously, the pass and fail categories:
 \begin{align*}
 \footnotesize
-    L_{\rm pass} &= \prod_{i}^{N_{\rm evt}^{pass}} \bigg[N_{\rm W}\cdot\epsilon_{HP}\cdot f_{\rm pass}^{\rm sig}(m_{j}) + N_{\rm 2}\cdot f_{\rm pass}^{\rm bkg}(m_{j})+ \sum_{j=\textrm{ST,VV,WJet}} N^{j}_{\rm pass}\cdot f_{\rm pass}^{j}\bigg]\\
-    L_{\rm fail} &= \prod_{i}^{N_{\rm evt}^{fail}} \bigg[N_{\rm W}\cdot(1-\epsilon_{HP})\cdot f^{\rm sig}_{\rm fail}(m_{j}) + N_{\rm 3}\cdot f_{\rm fail}^{\rm bkg}(m_{j})+ \sum_{j=\textrm{ST,VV,WJet}} N^{j}_{\rm fail}\cdot f_{\rm fail}^{j}\bigg]
+    L_{\rm pass} &= \prod_{i}^{N_{\rm evt}^{pass}} \bigg[N_{\rm W}\cdot\epsilon_{HP}\cdot f_{\rm pass}^{\rm sig}(m_{j}) + N_{\rm 2}\cdot f_{\rm pass}^{\rm bkg}(m_{j})+ \sum_{j=\textrm{ST,VV,WJet}} N^{j}_{\rm pass}\cdot f_{\rm pass}^{j}\bigg],\\
+    L_{\rm fail} &= \prod_{i}^{N_{\rm evt}^{fail}} \bigg[N_{\rm W}\cdot(1-\epsilon_{HP})\cdot f^{\rm sig}_{\rm fail}(m_{j}) + N_{\rm 3}\cdot f_{\rm fail}^{\rm bkg}(m_{j})+ \sum_{j=\textrm{ST,VV,WJet}} N^{j}_{\rm fail}\cdot f_{\rm fail}^{j}\bigg],
 \end{align*}
-where $N_{W}$ is the number of real W jets, $N_{2}$ and $N_{3}$ are the number of combinatorial background events passing and failing the \nsubj cut respectively. $N_{j}$ and $f_{j}$, with $j$ = ST, VV, WJet, are the normalizations and shapes of the minor backgrounds (single top, VV, W+jets) which are fixed from simulation. The fit functions used are
+where $N_{W}$ is the number of real W boson jets, $N_{2}$ and $N_{3}$ are the number of combinatorial background events passing and failing the \nsubj selection, respectively, and $N_{j}$ and $f_{j}$, with $j$ = ST, VV, WJet, are the normalizations and shapes of the minor backgrounds (single top, VV, W+jets), which are fixed from simulation. The fit functions used are:
 \begin{alignat*}{3}
     f_{\rm pass}^{\rm sTop} &= F_{\rm ErfExpGaus}(x) = &&\frac{1 + {\rm Erf}((x-a)/b)}{2} \cdot e^{-(x-x_{0})^{2}/2\sigma^{2}}\\
-    f_{\rm fail}^{\rm sTop} &= F_{\rm ExpGaus}(x)    = &&e^{ax} \cdot e^{-(x-b)^{2}/2s^{2}}\\
-    f_{\rm pass}^{\rm VV}   &= F_{\rm ExpGaus}(x)    = &&e^{ax} \cdot e^{-(x-b)^{2}/2s^{2}}\\
-    f_{\rm fail}^{\rm VV}   &= F_{\rm ExpGaus}(x)    = &&e^{ax} \cdot e^{-(x-b)^{2}/2s^{2}}\\
-    f_{\rm pass}^{\rm wjet} &= F_{\rm ErfExp}(x)     = &&e^{c_0x} \cdot \frac{1 + {\rm Erf}((x-a)/b)}{2}\\
-    f_{\rm fail}^{\rm wjet} &= F_{\rm ErfExp}(x)     = &&e^{c_0x} \cdot \frac{1 + {\rm Erf}((x-a)/b)}{2}
+    f_{\rm fail}^{\rm sTop} &= F_{\rm ExpGaus}(x)    = &&e^{ax} \cdot e^{-(x-b)^{2}/2s^{2}},\\
+    f_{\rm pass}^{\rm VV}   &= F_{\rm ExpGaus}(x)    = &&e^{ax} \cdot e^{-(x-b)^{2}/2s^{2}},\\
+    f_{\rm fail}^{\rm VV}   &= F_{\rm ExpGaus}(x)    = &&e^{ax} \cdot e^{-(x-b)^{2}/2s^{2}},\\
+    f_{\rm pass}^{\rm wjet} &= F_{\rm ErfExp}(x)     = &&e^{c_0x} \cdot \frac{1 + {\rm Erf}((x-a)/b)}{2},\\
+    f_{\rm fail}^{\rm wjet} &= F_{\rm ErfExp}(x)     = &&e^{c_0x} \cdot \frac{1 + {\rm Erf}((x-a)/b)}{2},
 \end{alignat*}
 with the corresponding distributions shown in Figure~\ref{fig:searchII:minorbkr}.
 \begin{figure}[h!]
-   \centering
-    \includegraphics[width=0.30\textwidth]{figures/vtagging/AN-16-215/plots_76X/plots_0v45/plots_em_HP0v45powheg_76X_MCfits/{_STopExoDiBosonAnalysis.WWTree_STop_76X_ErfExpGaus_sp}.pdf}
-    \includegraphics[width=0.30\textwidth]{figures/vtagging/AN-16-215/plots_76X/plots_0v45/plots_em_HP0v45powheg_76X_MCfits/{_WJets0ExoDiBosonAnalysis.WWTree_WJets_76X_ErfExp}.pdf}
-    \includegraphics[width=0.30\textwidth]{figures/vtagging/AN-16-215/plots_76X/plots_0v45/plots_em_HP0v45powheg_76X_MCfits/{_VVExoDiBosonAnalysis.WWTree_VV_76X_ExpGaus}.pdf}\\
-    \includegraphics[width=0.30\textwidth]{figures/vtagging/AN-16-215/plots_76X/plots_0v45/plots_em_HP0v45powheg_76X_MCfits/{_STop_failtau2tau1cutExoDiBosonAnalysis.WWTree_STop_76X_ExpGaus}.pdf}
-    \includegraphics[width=0.30\textwidth]{figures/vtagging/AN-16-215/plots_76X/plots_0v45/plots_em_HP0v45powheg_76X_MCfits/{_WJets0_failtau2tau1cutExoDiBosonAnalysis.WWTree_WJets_76X_ErfExp}.pdf}
-    \includegraphics[width=0.30\textwidth]{figures/vtagging/AN-16-215/plots_76X/plots_0v45/plots_em_HP0v45powheg_76X_MCfits/{_VV_failtau2tau1cutExoDiBosonAnalysis.WWTree_VV_76X_ExpGaus}.pdf}
-  \caption{Fits to the pruned jet mass spectrum for the non-dominant backgrounds (Single top, W+jets and VV respectively) in the pass (top) and fail (bottom) regions.}
+   \centering \includegraphics[width=0.30\textwidth]{figures/vtagging/AN-16-215/plots_76X/plots_0v45/plots_em_HP0v45powheg_76X_MCfits/{_STopExoDiBosonAnalysis.WWTree_STop_76X_ErfExpGaus_sp}.pdf} \includegraphics[width=0.30\textwidth]{figures/vtagging/AN-16-215/plots_76X/plots_0v45/plots_em_HP0v45powheg_76X_MCfits/{_WJets0ExoDiBosonAnalysis.WWTree_WJets_76X_ErfExp}.pdf} \includegraphics[width=0.30\textwidth]{figures/vtagging/AN-16-215/plots_76X/plots_0v45/plots_em_HP0v45powheg_76X_MCfits/{_VVExoDiBosonAnalysis.WWTree_VV_76X_ExpGaus}.pdf}\\ \includegraphics[width=0.30\textwidth]{figures/vtagging/AN-16-215/plots_76X/plots_0v45/plots_em_HP0v45powheg_76X_MCfits/{_STop_failtau2tau1cutExoDiBosonAnalysis.WWTree_STop_76X_ExpGaus}.pdf} \includegraphics[width=0.30\textwidth]{figures/vtagging/AN-16-215/plots_76X/plots_0v45/plots_em_HP0v45powheg_76X_MCfits/{_WJets0_failtau2tau1cutExoDiBosonAnalysis.WWTree_WJets_76X_ErfExp}.pdf} \includegraphics[width=0.30\textwidth]{figures/vtagging/AN-16-215/plots_76X/plots_0v45/plots_em_HP0v45powheg_76X_MCfits/{_VV_failtau2tau1cutExoDiBosonAnalysis.WWTree_VV_76X_ExpGaus}.pdf}
+  \caption{Fits to the pruned jet mass spectrum for the non-dominant backgrounds (Single top, W+jets and VV respectively) in the pass (upper) and fail (lower) regions.}
   \label{fig:searchII:minorbkr}
 \end{figure} 
 The floating parameters of the fit (besides the PDF shape parameters themselves) are the rates $N_{W}$, $N_{2}$ and $N_{3}$, and the mean and sigma of the W-mass distribution defined in
-$f^{\rm sig}_{\rm pass}(m_{j})$ and $f^{\rm sig}_{\rm fail}(m_{j})$. The ratio between data and simulation efficiencies are then taken as the W-tagging scale factor:
+$f^{\rm sig}_{\rm pass}(m_{j})$ and $f^{\rm sig}_{\rm fail}(m_{j})$. The ratio between data and simulation efficiencies is then taken as the W-tagging scale factor:
 \begin{equation}
   \label{SF}
-  SF_{HP}= \frac{\epsilon_{HP}(\textrm{data})}{\epsilon_{HP}(\textrm{sim})}
+  SF_{HP}= \frac{\epsilon_{HP}(\textrm{data})}{\epsilon_{HP}(\textrm{sim})}.
 \end{equation}
 Considering that, both for data and simulation, $\epsilon_{HP}+\epsilon_{LP}+\epsilon_{fail} = 1$, the scale factor for low purity category can be defined as:
 \begin{equation*}
-  SF_{LP} = \frac{1-\epsilon_{HP}(\textrm{data})-\epsilon_{fail}(\textrm{data})}{1-\epsilon_{HP}(\textrm{sim})-\epsilon_{fail}(\textrm{sim})}
+  SF_{LP} = \frac{1-\epsilon_{HP}(\textrm{data})-\epsilon_{fail}(\textrm{data})}{1-\epsilon_{HP}(\textrm{sim})-\epsilon_{fail}(\textrm{sim})},
 \end{equation*}
 where $\epsilon_{fail}$ is the ratio between the number of events with $\tau_2/\tau_1 > 0.75$ and the total number of events. As mentioned previously, the number of real \PW jets with $\tau_2/\tau_1 > 0.75$  is negligible and the definition of the low purity scale factor simplifies to
 \begin{equation}
-  SF_{LP} = \frac{1-\epsilon_{HP}(\textrm{data})}{1-\epsilon_{HP}(\textrm{sim})}
+  SF_{LP} = \frac{1-\epsilon_{HP}(\textrm{data})}{1-\epsilon_{HP}(\textrm{sim})}.
 \end{equation}
 
 \subsection{Systematic uncertainties}
 \label{sec:searchI:wtagsystematic}
-As systematic uncertainties, we consider effects due to differences in \ttbar simulation as well as effects due to choice of fit method. The former is evaluated by comparing the extracted scale factor when using \ttbar MC samples produced with different matrix element (ME) and shower generators: \POWHEG (NLO) interfaced with \PYTHIA{8} , \MADGRAPH (LO) QCD interfaced with \HERWIG{++} and \POWHEG interfaced with \HERWIG{++}.
-The uncertainty due to different ME generators (\POWHEG versus \MADGRAPH) correspond to 3(13)\% and are listed in Table~\ref{tab:searchI:WtagSFs} as the first quoted systematic uncertainty. The uncertainty due to parton showering (\PYTHIA{8} versus \HERWIG{++}) is 8.6\%, but are not relevant for analyses where no \HERWIG{++} based simulation is used, as is the case for the search presented in this chapter. 
-For the systematic uncertainty accounting for effects due to choice of fit method, we compare the estimated extracted efficiency in \ttbar MC using the two different fit models described above: The new model, where the signal is modeled by a Gaussian peak and the tails of the distribution are absorbed in the background fit model, and the old model, including the tails when calculating the fraction of real \PW jets. Figure~\ref{fig:searchII:gausvstails} shows the fits obtained in the pass and fail regions using the two different models. With the new model only the Gaussian component of the fit contributes to the W-tagging efficiency while, with the old model, a Chebyshev component is additionally contributing to the total W-tagging efficiency.
-\begin{figure}[ht!]
+As systematic uncertainties, we consider effects due to differences between \ttbar simulation as well as effects due to the choice of fit method. The former is evaluated by comparing the extracted scale factor when using \ttbar MC samples produced with three different combinations of matrix element (ME) and shower generators: \POWHEG (NLO) interfaced with \PYTHIA{8} , \MADGRAPH (LO) QCD interfaced with \HERWIG{++}, and \POWHEG interfaced with \HERWIG{++}. The uncertainty due to different ME generators (\POWHEG versus \MADGRAPH) corresponds to 3(13)\% and is listed in Table~\ref{tab:searchI:WtagSFs} as the first quoted systematic uncertainty. The uncertainty due to parton showering (\PYTHIA{8} versus \HERWIG{++}) is 8.6\%, but is not relevant for analyses where no \HERWIG{++} based simulation is used, as is the case for the search presented in this chapter. 
+For the systematic uncertainty accounting for effects due to choice of fit method, we compare the estimated extracted efficiency in \ttbar MC using the two different fit models described above: the new model, where the signal is modeled by a Gaussian peak and the tails of the distribution are absorbed in the background fit model, and the old model, including the tails when calculating the fraction of real W jets. Figure~\ref{fig:searchII:gausvstails} shows the fits obtained in the pass and fail regions using the two different models. With the new model only the Gaussian component of the fit contributes to the W-tagging efficiency while, with the old model, a Chebyshev component is additionally contributing to the total W-tagging efficiency.
+\begin{figure}[h!]
   \centering
     \includegraphics[width=0.33\textwidth]{figures/vtagging/AN-16-215/2Gauss.pdf}
     \includegraphics[width=0.33\textwidth]{figures/vtagging/AN-16-215/GausErfExpPass.pdf}\\
@@ -609,54 +598,44 @@ For the systematic uncertainty accounting for effects due to choice of fit metho
   \caption{Fits obtained in the pass (top) and fail (bottom) regions using two different models: An alternative model with tails (top and bottom, left) where the tail component is contributing to the total W-tagging efficiency. When using the default model (top and bottom, right), only the Gaussian component of the fit contributes to the W-tagging efficiency.}
   \label{fig:searchII:gausvstails}
 \end{figure} 
-The estimated efficiencies obtained using both methods, after being corrected for the fraction of \PW jets in the tails, agree within 0.3(0.8)\% and are listed as systematic uncertainty in Table~\ref{tab:searchI:WtagSFs}.\newline
-One additional uncertainty is added. As the W-tagging scale factor is evaluated in a \ttbar sample, the transverse momentum range is rather limited. When the \PW \PT reaches $\sim 400 \GeV$, the AK8 jet becomes a fully merged top jet with a mass of 170 \GeV and a scale factor measurement becomes impossible. However, the jets used in the analyses presented in this thesis have very high transverse momenta, up to 2-3 \TeV, and we therefore need an estimate of how the uncertainty on the W-tagging scalefactor changes as a function of \PT. This is estimated by comparing the difference in tagging between $\BulkG \rightarrow \PW \PW$ signal MC showered by \PYTHIA{}8 and \HERWIG{++} as a function of \PT, relative to the difference in tagging efficiency between the two at a $\PT \sim 200$~\GeV. This measurement was performed by a separate analysis team, and found to be $5.90\% \times \ln(\pt/200\GeV)$.
-
+The estimated efficiencies obtained using both methods, after being corrected for the fraction of W jets in the tails, agree within 0.3(0.8)\% and are listed as a systematic uncertainty in Table~\ref{tab:searchI:WtagSFs}.\par
+One additional uncertainty is added. As the W-tagging scale factor is evaluated in a \ttbar sample, the transverse momentum range is rather limited. When the W-jet \PT reaches $\sim 400 \GeV$, the AK8 jet becomes a fully merged top jet with a mass of 170 \GeV and a scale factor measurement becomes impossible. However, the jets used in the analyses presented in this thesis have very high transverse momenta, up to 2-3 \TeV, and we therefore need an estimate of how the uncertainty on the W-tagging scale factor changes as a function of \PT. This is estimated by comparing the difference in tagging efficiency between $\BulkG \rightarrow \PW \PW$ signal MC showered by \PYTHIA{8} as compared to \HERWIG{++} as a function of jet \PT, relative to the difference in tagging efficiency between the two at a $\PT \sim 200$~\GeV. This measurement was performed by a separate analysis team, and found to be $5.90\% \times \ln(\pt/200\GeV)$.
 % \begin{figure}[h!]
 %   \centering
 %     \includegraphics[width=0.50\textwidth]{figures/vtagging/AN-16-215/wtag-ptdependence-tau21tight.pdf}
 %   \caption{Uncertainty on the \pt dependence of the scale factor as a function of \pt, approximated with a logarithmic function.}
 %   \label{fig:ptdependence}
 % \end{figure}
-
-Systematic uncertainties from other sources (lepton identification, b tagging etc.) are less than 0.5\% and therefore negligible.
+Systematic uncertainties from other sources (lepton identification, b tagging, etc.) are less than 0.5\% and therefore negligible.
 
 \subsection{Fit results}
-The simultaneous fit as described above is then performed both for data and for simulation, where we take the ratio of data and MC efficiencies as efficiency scale factors.
-The corresponding fits are shown in Figure~\ref{fig:searchII:simfit}, with the corresponding extracted efficiencies and scale factors summarized in Table~\ref{tab:searchI:WtagSFs}.
-
+The simultaneous fit as described above is then performed both for data and for simulation, where we take the ratio of data and MC efficiencies as efficiency scale factors. The corresponding fits are shown in Figure~\ref{fig:searchII:simfit}, with the corresponding extracted efficiencies and scale factors summarized in Table~\ref{tab:searchI:WtagSFs}.
 \begin{table}[h!]
    \centering
    \footnotesize
-   \begin{tabular}{| l | c | c | c | c |}
+   \begin{tabular}{ l | c | c | c | c }
+    & Working point & Eff. data & Eff. simulation & Scale factor\\
    \hline
-   Category & Working point & Eff. data & Eff. simulation & Scale factor\\
-   \hline
-   HP&$\tau_2 / \tau_1 < 0.45$& $0.775 \pm 0.041 $& $0.822 \pm 0.033$ &$0.94 \pm 0.05~\rm{(stat)} \pm 0.03~\rm{(sys)} \pm 0.003~\rm{(sys)}$\\
-   LP&$0.45 < \tau_2 / \tau_1 < 0.75$& $0.225 \pm 0.041 $& $0.178 \pm 0.033$ &$1.27 \pm 0.25~\rm{(stat)} \pm 0.13~\rm{(sys)} \pm 0.008~\rm{(sys)}$\\
+   HP&$\nsubj < 0.45$& $0.775 \pm 0.041 $& $0.822 \pm 0.033$ &$0.94 \pm 0.05~\rm{(stat)} \pm 0.03~\rm{(sys)} \pm 0.003~\rm{(sys)}$\\
+   LP&$0.45 < \nsubj < 0.75$& $0.225 \pm 0.041 $& $0.178 \pm 0.033$ &$1.27 \pm 0.25~\rm{(stat)} \pm 0.13~\rm{(sys)} \pm 0.008~\rm{(sys)}$\\
    \hline
    \end{tabular}
    \caption{Efficiencies in data and in MC together with the corresponding W-tagging scale factors for the high purity and low purity categories. }
    \label{tab:searchI:WtagSFs}
 \end{table}
-
-
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.44\textwidth]{figures/vtagging/AN-16-215/_HP0v45powheg_76X_em_pTbin_200_5000.pdf}
 \includegraphics[width=0.44\textwidth]{figures/vtagging/AN-16-215/_HP0v45powheg_76X_em_fail_pTbin_200_5000.pdf} \\
-\caption{Pruned jet mass distribution that pass (left) and fail (right) the $\tau_2 / \tau_1 < 0.45$ selection. Results of both the fit to data (blue) and simulation(red) are shown. The background components of the fit are shown as short-dashed lines.}
+\caption{Pruned jet mass distribution that pass (left) and fail (right) the $\nsubj < 0.45$ selection. Results of both the fit to data (blue) and simulation(red) are shown. The background components of the fit are shown as short-dashed lines.}
 \label{fig:searchII:simfit}
 \end{figure}
-
-We additionally extract the jet mass scale and jet mass resolution, used to scale and smear the jet mass signal shape in the limit setting procedure. These values are taken from the mean $\langle m \rangle$ and width $\sigma$ of the Gaussian
+\noindent We additionally extract the jet mass scale and jet mass resolution, used to scale and smear the jet mass signal shape in the limit setting procedure. These values are taken from the mean $\langle m \rangle$ and width $\sigma$ of the Gaussian
 component of the simultaneous fit in the pass region and are summarized in Table~\ref{tab:searchI:params}. Both the jet mass scale as well as the jet mass resolution is larger in simulation than in data with a relative difference of 2 and 10\%, respectively.
-Howver, the jet mass resolution scale factor has a large uncertainty attached to it and is statistically insignificant (in agreement with unity within uncertainty).
-
-\begin{table}[!htb]
+However, the jet mass resolution scale factor has a large uncertainty attached to it and is statistically insignificant (in agreement with unity within uncertainty).
+\begin{table}[!h]
  \begin{center}
-
- \begin{tabular}{|l|c|c|c}
+ \begin{tabular}{l|c|c|c}
   Parameter & Data & Simulation & Data/Simulation \\
   \hline
   Pruning $\langle m \rangle$ &$80.9 \pm 0.6~{\rm \GeV}$   & $82.5 \pm 0.1~{\rm \GeV}$  & $0.980 \pm 0.007$ \\
@@ -674,8 +653,7 @@ Howver, the jet mass resolution scale factor has a large uncertainty attached to
 
 \subsection{Impact on search variables}
 \label{sec:searchI:wtagimpact}
-
-The obtained W-tagging scale factors are used as a scale of the signal yield. As we require two W-tagged jets, either HPHP or HPLP, the actual scale factors for the high-purity signal yield is $\textrm{SF}_{HP}\times\textrm{SF}_{HP}$ and for the low-purity category $\textrm{SF}_{HP}\times\textrm{SF}_{LP}$. The signal yields are then
+The obtained W-tagging scale factors are used as a scale of the signal yield. As we require two W-tagged jets, either HP or LP, the actual scale factors for the high-purity signal yield is $\textrm{SF}_{HP}\times\textrm{SF}_{HP}$ and for the low-purity category $\textrm{SF}_{HP}\times\textrm{SF}_{LP}$. The signal yields are then
 \begin{align*}
 N_{S}^{HP} &= N_{\textrm{HP tot. yield}} \times \textrm{SF}_{HP} \times \textrm{SF}_{HP}\\
 N_{S}^{LP} &= N_{\textrm{LP tot. yield}} \times \textrm{SF}_{HP} \times \textrm{SF}_{LP}\\
@@ -690,11 +668,10 @@ The jet mass scale and resolution are used to scale and smear the signal Monte C
   
 \section{Systematic uncertainties}
 \label{sec:searchI:sys}
-
-The uncertainty on the background parametrization is statistical only and is taken as the covariance matrix of the dijet fit function. As demonstrated in the F-test, we study different background parameterizations and we have found these to be within the fit uncertainty of the nominal fit. The remaining uncertainties concern the signal shape and yield and are listen in Table~\ref{tab:searchI:sys}. Jet reconstruction uncertainties affect both the signal yield and she signal shape. These are evaluated by rescaling the jet four-momenta according to uncertainties on the jet energy scale and resolution and recomputing the signal efficiency. The difference in efficiency with and without smearing/scaling is taken as systematic uncertainties, as described above.
+The uncertainty on the background parametrization is statistical only and is taken as the covariance matrix of the dijet fit function. As demonstrated in the F-test, we study different background parameterizations and we have found these to be within the fit uncertainty of the nominal fit. The remaining uncertainties concern the signal shape and yield and are listed in Table~\ref{tab:searchI:sys}. Jet reconstruction uncertainties affect both the signal yield and the signal shape. These are evaluated by rescaling the jet four-momenta according to uncertainties on the jet energy scale and resolution and recomputing the signal efficiency. The difference in efficiency with and without smearing/scaling is taken as a systematic uncertainty, as described above.
 The jet mass/energy scale and resolution also affect the signal shape, and are added as uncertainties in the peak position and width of the Gaussian component of the signal PDFs.
-
 \begin{table}[h!]
+  \footnotesize
   \centering
   \begin{tabular}{lccc}
     \hline
@@ -719,7 +696,7 @@ The jet mass/energy scale and resolution also affect the signal shape, and are a
     V tagging \pt-dependence         & Migration            & 7--14                & 5--11\\
     \hline
   \end{tabular}
-  \caption{Summary of  systematic uncertainties and the quantities they affect. Migration uncertainties result in events switching between the purity/mass categories and changes the efficiency in each category, but do not affect the total signal efficiency.}
+  \caption{Summary of the systematic uncertainties and the quantities they affect. Migration uncertainties result in events switching between the purity/mass categories and change the efficiency in each category, but do not affect the total signal efficiency.}
   \label{tab:searchI:sys}
 \end{table}
 
@@ -728,21 +705,20 @@ The jet mass/energy scale and resolution also affect the signal shape, and are a
 
 \section{Results}
 \label{sec:searchI:results}
-The background fits for each analysis category in the data signal region are shown in Figure \ref{fig:search1:bkgfitMassCat}. Here a background only fit is performed while, as described above, a simultaneous fit is used for the limit setting procedure. The filled area correspond to the 1 sigma error band of the background fit, obtained using linear error propagation.
-
+The background fits for each analysis category in the data signal region are shown in Figure \ref{fig:search1:bkgfitMassCat}. Here a background-only fit is performed while, as described above, a simultaneous fit is used for the limit-setting procedure. The filled area corresponds to the $1 \sigma$ error band of the background fit, obtained using linear error propagation.
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.44\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassHighPuriWW.pdf}
-\includegraphics[width=0.44\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassLowPuriWW.pdf}\\
-\includegraphics[width=0.44\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassHighPuriWZ.pdf}
-\includegraphics[width=0.44\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassLowPuriWZ.pdf}\\
-\includegraphics[width=0.44\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassHighPuriZZ.pdf}
-\includegraphics[width=0.44\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassLowPuriZZ.pdf}\\
-\caption{Fit to data in the signal region using the background fit only for the different mass and purity categories. The filled red area correspond to the 1 sigma statistical error of the fit.}
+\includegraphics[width=0.327\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassHighPuriWW.pdf}
+\includegraphics[width=0.327\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassHighPuriWZ.pdf}
+\includegraphics[width=0.327\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassHighPuriZZ.pdf}\\
+\includegraphics[width=0.327\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassLowPuriWW.pdf}
+\includegraphics[width=0.327\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassLowPuriWZ.pdf}
+\includegraphics[width=0.327\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassLowPuriZZ.pdf}
+\caption{Fit to data in the signal region using the background fit only for the different mass and purity categories. The filled red area correspond to the $1 \sigma$  statistical error of the fit.}
 \label{fig:search1:bkgfitMassCat}
 \end{figure}
 
-We proceed by setting limits on the cross section of the process $\text{X} \to \VV$, using the asymptotic $\textrm{CL}_\textrm{S}$ method as described in Section~\ref{sec:theory:statmet}. The binned likelihood is defined as
+We proceed by setting limits on the cross section of the process $\text{X} \to \VV$, using the asymptotic $\textrm{CL}_\textrm{S}$ method~\cite{CLs}. The binned likelihood is defined as
 \begin{equation}
 L = \prod_i\frac{\mu^{n_i}_ie^{-\mu_i}}{n_i!}
 \end{equation}
@@ -750,12 +726,12 @@ with
 \begin{equation}
 \mu_i=\sigma \cdot N_i(S)+N_i(B)
 \end{equation}
-Here $\sigma$ is the signal strength scaling the expected number of signal events in the $i$-th dijet invariant mass bin $N_i(S)$, $N_i(B)$ is the expected number of background events in dijet invariant mass bin $i$ and $n_i$ is the observed number of events in the $ith$ dijet invariant mass bin. The background per bin $N_i(B)$ is estimated from the background component of the best signal+background fit to the data points with the signal cross section set to zero. The number of signal events in the $i$-th dijet invariant mass bin, $N_i(S)$, is then estimated from the signal templates, where only a dijet invariant mass in a 20\% window around the resonance mass is considered, containing most of the signal contribution while making sure to keep a good description of the core.
+Here $\sigma$ is the signal strength scaling the expected number of signal events in the $i$-th dijet invariant-mass bin $N_i(S)$, $N_i(B)$ is the expected number of background events in dijet invariant-mass bin $i$ and $n_i$ is the observed number of events in the $ith$ dijet invariant-mass bin. The background per bin $N_i(B)$ is estimated from the background component of the best signal and background fit to the data points with the signal cross section set to zero. The number of signal events in the $i$-th dijet invariant mass bin, $N_i(S)$, is then estimated from the signal templates, where only a dijet invariant mass in a 20\% window around the resonance mass is considered, containing most of the signal contribution while making sure to keep a good description of the core.
 
-\section{Limits: All-hadronic analysis}
+\section{Limits}
+\subsection{All-hadronic analysis only}
 \label{sec:searchI:results4q}
-As mentioned in Section~\ref{sec:searchI:samples}, we set limits on three different signal scenarios: $\BulkG \rightarrow \WW$, $\BulkG \rightarrow \ZZ$ and $\PWpr \rightarrow WZ$, with a $\ktilde = 0.5$ for the \BulkG. Figure \ref{fig:searchI:Limits_CombNew} shows the asymptotic limits at 95 \% confidence level on signal cross section as a function of the resonance mass obtained with 2.7 \fbinv of 13 \TeV CMS data after combining all mass and purity categories (top). The corresponding p-values are shown in the bottom panel.
-
+As mentioned in Section~\ref{sec:searchI:samples}, we set limits on three different signal scenarios: $\BulkG \rightarrow \WW$, $\BulkG \rightarrow \ZZ$, and $\PWpr \rightarrow WZ$, with a $\ktilde = 0.5$ for the \BulkG. Figure \ref{fig:searchI:Limits_CombNew} shows the asymptotic limits at 95 \% confidence level on the signal cross section as a function of its resonance mass obtained with 2.7 \fbinv of 13 \TeV CMS data after combining all mass and purity categories (top). The corresponding p-values are shown in the bottom panel.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.32\textwidth]{figures/analysis/search1/AN-15-211/limits/brazilianFlag_BulkWW_new_combined_13TeV.pdf}
@@ -764,64 +740,45 @@ As mentioned in Section~\ref{sec:searchI:samples}, we set limits on three differ
 \includegraphics[width=0.32\textwidth]{figures/analysis/search1/AN-15-211/pvalues/pvalue_BulkWWin_combined_new.pdf}
 \includegraphics[width=0.32\textwidth]{figures/analysis/search1/AN-15-211/pvalues/pvalue_WZin_combined_new.pdf}
 \includegraphics[width=0.32\textwidth]{figures/analysis/search1/AN-15-211/pvalues/pvalue_BulkZZin_combined_new.pdf}\\
-\caption{Expected and observed limits with corresponding p-values obtained using 2.6 $\textrm{fb}^{-1}$ of CMS data after combining all mass and purity categories. Here for a Bulk $G\rightarrow WW$ (left), $W'\rightarrow WZ$ (middle) and $G\rightarrow ZZ$ (right) signal.}
+\caption{Expected and observed limits with corresponding p-values obtained using 2.7 \fbinv of CMS data after combining all mass and purity categories. Here for a Bulk $G\rightarrow WW$ (left), $W'\rightarrow WZ$ (middle), and $G\rightarrow ZZ$ (right) signal.}
 \label{fig:searchI:Limits_CombNew}
 \end{figure}
-
-
-The statistics are too low to exclude the excess around 2 \TeV observed in the corresponding Run 1 analysis and in addition an under-fluctuation in data is present in this region. The largest excess is observed for a $\BulkG \rightarrow \ZZ$ hypothesis at a resonance mass of 2.8-3 TeV, around 2.3 $\sigma$.
-This is driven by the ZZ high-purity category, the category with the lowest statistics, where one event at 3 TeV yields a local significance of 2.8 $\sigma$. A 3-parameter fit is the default background fit function for this category, however, a 2-parameter fit could also be used to describe these data. In Figure \ref{fig:searchI:Limits_ZZHP} we compare the limits and p-values obtained using a 2-parameter and a 3-parameter fit to describe the background in this category. The significance at 3 TeV is reduced from 2.8 to 1.5 $\sigma$ with a 2-parameter fit, reflecting the fact that the fit is poorly constrained in the high mass tail due to low statistics. The fit to data using both a 2 and 3-parameter fit in the ZZHP category is shown in Figure~\ref{fig:app:ZZHP2vs3p} and we in addition see that the 2-parameter fit lies within the fit uncertainties of the nominal fit.\newline
-\newline
-
+The statistics are too low to exclude the excess around 2 \TeV observed in the corresponding Run 1 analysis and, in addition, an under-fluctuation in data is present in this region. The largest excess of 2.8 $\sigma$ is observed for a $\BulkG \rightarrow \ZZ$ hypothesis at a resonance mass of 2.8-3 TeV. This is driven by the high-purity ZZ mass category, the category with the lowest statistics, and is caused by one event. A 3-parameter fit is the default background fit function for this category, however, a 2-parameter fit could also be used to describe these data. In Figure \ref{fig:searchI:Limits_ZZHP} we compare the limits and p-values obtained using a 2-parameter and a 3-parameter fit to describe the background in this category. The significance at 3 TeV is reduced from 2.8 to 1.5 $\sigma$ with a 2-parameter fit, reflecting the fact that the fit is poorly constrained in the high mass tail due to low statistics. The fit to data using both a 2 and 3-parameter fit in the ZZ high-purity category is shown in Figure~\ref{fig:app:ZZHP2vs3p}, where we see that the 2-parameter fit lies within the fit uncertainties of the nominal fit.
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.49\textwidth]{figures/analysis/search1/AN-15-211/limits/brazilianFlag_BulkZZ_ZZHP_13TeV.pdf}
-\includegraphics[width=0.49\textwidth]{figures/analysis/search1/AN-15-211/limits/brazilianFlag_BulkZZ_ZZHP_2parFit__13TeV.pdf}\\
-\includegraphics[width=0.49\textwidth]{figures/analysis/search1/AN-15-211/pvalues/pvalue_BulkZZinZZ_high_purity.pdf}
-\includegraphics[width=0.49\textwidth]{figures/analysis/search1/AN-15-211/pvalues/pvalue_BulkZZinZZ_high_purity_2par.pdf}
-\caption{Expected/observed limits and corresponding p-values obtained in the ZZHP category using a 3 (left) and two (right) parameter fit to describe the background. The significance at 3 TeV is reduced from 2.8 to 1.5 $\sigma$.}
+\includegraphics[width=0.4\textwidth]{figures/analysis/search1/AN-15-211/limits/brazilianFlag_BulkZZ_ZZHP_13TeV.pdf}
+\includegraphics[width=0.4\textwidth]{figures/analysis/search1/AN-15-211/limits/brazilianFlag_BulkZZ_ZZHP_2parFit__13TeV.pdf}\\
+\includegraphics[width=0.4\textwidth]{figures/analysis/search1/AN-15-211/pvalues/pvalue_BulkZZinZZ_high_purity.pdf}
+\includegraphics[width=0.4\textwidth]{figures/analysis/search1/AN-15-211/pvalues/pvalue_BulkZZinZZ_high_purity_2par.pdf}
+\caption{Expected and observed limits (top) and the corresponding p-values (bottom) obtained in the ZZ high-purity category using a 3- (left) and 2-parameter (right) fit to describe the background. The significance at 3 TeV is reduced from 2.8 to 1.5 $\sigma$.}
 \label{fig:searchI:Limits_ZZHP}
 \end{figure}
-
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.49\textwidth]{figures/analysis/search1/misc/CMS-PAS-EXO-15-002_Figure_004-e.pdf}
-\caption{Background fit to data in the ZZHP category using the default 3 (red) and an alternate 2 (blue) parameter fit to describe the background.}
+\includegraphics[width=0.4\textwidth]{figures/analysis/search1/misc/CMS-PAS-EXO-15-002_Figure_004-e.pdf}
+\caption{Background fit to data in the ZZHP category using the nominal 3- (red) and an alternate 2-parameter (blue) fit to describe the background.}
 \label{fig:app:ZZHP2vs3p}
 \end{figure}
+The lack of constraint on the fit in the dijet invariant mass tail when statistics are very low is a drawback of a method relying fully on a parametric fit and reduces the analysis sensitivity in the high-\mjj region. In Search II (Section~\ref{searchII}) we will keep taking advantage of the dijet fit, however, the integrated luminosity is $\sim 15$ times higher, resulting in more datapoints in the \mjj tail which further constrains the fit. In Search III (Section~\ref{searchIII}), we will explore alternate methods which allow more control over the background shape across the full mass spectrum. 
 
-
-The lack of constraint on the fit in the dijet invariant mass tail when statistics are very low, is a drawback of a method relying fully on a parametric fit and reduces the analysis sensitivity in the high-\mjj region. In Search II (Section~\ref{searchII}) we will keep taking advantage of the dijet fit, however, the integrated luminosity is $\sim 15$ times higher, resulting in more datapoints in the \mjj tail which further constrains the fit. In Search III (Section~\ref{searchIII}), we will explore alternate methods which allow more control over the background shape across the full mass spectrum. 
-
-\section{Limits: Semi-leptonic and all-hadronic combination}
+\subsection{Semi-leptonic and all-hadronic combination}
 \label{sec:searchI:resultsComb}
-
-To maximize the search sensitivity, we combine the results obtained above with those of the corresponding semi-leptonic analysis. We assume the uncertainties on luminosity, V-tagging efficiency, jet mass scale and resolution to be fully correlated.
-
-The obtained exclusion limits are shown in Figure~\ref{fig:searchI:limitCombined} shows the resulting expected and observed
-exclusion limits. As before, we consider a scenario where only either a \PWpr or \PZpr resonance is expected, called the singlet hypothesis (upper two plots). In addition, we set limits on the triplet hypothesis, assuming the \PWpr and \PZpr bosons to be degenerate in mass (bottom left plot).
-Due to larger branching fracion, the all-hadronic analysis sets stronger upper limits than the semi-leptonic analysis above 1.7\TeV for \PZpr and $>$ 1.3\TeV for \PWpr ($\cal B$($\PW\PW\to\qqbar\qqbar$) = 44\%, $\cal B$($\PW\PW\to\ell\Pgn\qqbar$) = 31\%, $\cal B$($\PW\PZ\to\qqbar\qqbar$) = 46\%, and $\cal B$($\PW\PZ\to\ell\Pgn\qqbar$) = 16\%). 
+To maximize the search sensitivity, we combine the results obtained above with those of the corresponding semi-leptonic analysis. We assume the uncertainties on luminosity, V-tagging efficiency, and jet mass scale and resolution to be fully correlated. The obtained exclusion limits in Figure~\ref{fig:searchI:limitCombined} show the resulting expected and observed exclusion limits after combining the two analyses. As before, we consider a scenario where only either a \PWpr or \PZpr resonance is expected, called the singlet hypothesis (upper two plots). In addition, we set limits on the triplet hypothesis, assuming the \PWpr and \PZpr bosons to be degenerate in mass (bottom left plot). The all-hadronic analysis sets stronger upper limits than the semi-leptonic analysis above 1.7\TeV for a \PZpr and $>$ 1.3\TeV for a \PWpr. The improvement in sensitivity is due to the higher branching fraction, such that $\cal B$($\PW\PW\to\qqbar\qqbar$) = 44\%, $\cal B$($\PW\PW\to\ell\Pgn\qqbar$) = 31\%, $\cal B$($\PW\PZ\to\qqbar\qqbar$) = 46\%, and $\cal B$($\PW\PZ\to\ell\Pgn\qqbar$) = 16\%. 
 The analysis sensitivity for \BulkG is too weak to set limits, but cross sections between 3--1200\unit{fb} are excluded.
-For the HVT model A and B, \PWpr is excluded below $< 2.0$ and $2.2 \TeV$, respectively. \PZpr resonances are excluded below $< 1.6~(1.7)\TeV$ for HVT model B(A). If assuming a HVT Model A(B) triplet hypothesis, resonances below $< 2.3$($< 2.4$) \TeV are excluded.
-
-
-\begin{figure}[!htb]
+For the HVT models A and B, a \PWpr is excluded below $2.0$ and $2.2 \TeV$, respectively, and \PZpr resonances are excluded below $1.7~(1.6)\TeV$ assuming a HVT model A(B). Assuming a HVT Model A(B) triplet hypothesis, resonances below 2.3 (2.4) \TeV are excluded.
+\begin{figure}[!h]
 \centering
-     \includegraphics[width=0.49\textwidth]{figures/analysis/search1/B2G-16-004//EXOVVhvt_JJLVJZPRIME13_UL_Asymptotic_log.pdf}%
-     \includegraphics[width=0.49\textwidth]{figures/analysis/search1/B2G-16-004//EXOVVhvt_JJLVJWPRIME13_UL_Asymptotic_log.pdf}\\     
-     \includegraphics[width=0.49\textwidth]{figures/analysis/search1/B2G-16-004//EXOVVhvt_JJLVJHVT13_UL_Asymptotic_log.pdf}%
-     \includegraphics[width=0.49\textwidth]{figures/analysis/search1/B2G-16-004//EXOVVbulkg_ALL13_UL_Asymptotic_log.pdf}
+\includegraphics[width=0.49\textwidth]{figures/analysis/search1/B2G-16-004//EXOVVhvt_JJLVJZPRIME13_UL_Asymptotic_log.pdf}
+\includegraphics[width=0.49\textwidth]{figures/analysis/search1/B2G-16-004//EXOVVhvt_JJLVJWPRIME13_UL_Asymptotic_log.pdf}\\     
+\includegraphics[width=0.49\textwidth]{figures/analysis/search1/B2G-16-004//EXOVVhvt_JJLVJHVT13_UL_Asymptotic_log.pdf}%
+\includegraphics[width=0.49\textwidth]{figures/analysis/search1/B2G-16-004//EXOVVbulkg_ALL13_UL_Asymptotic_log.pdf}
 \caption{Observed (black solid) and expected (black dashed) 95\% CL upper limits on the production of a narrow-width resonance decaying to 
-a pair of vector bosons for different signal hypotheses. In the upper plots, limits are set in the context of a spin-1 neutral \PZpr (left) and charged \PWpr (right)
-resonances, and compared with the prediction of the HVT Models A and B. In the lower left plot, limits are set in the same model under the triplet hypothesis (\PWpr and \PZpr).
-In the lower right plot, limits are set in the context of a bulk graviton with $\ktilde =0.5$ and compared with the prediction.
+a pair of vector bosons for different signal hypotheses. In the upper plots, limits are set in the context of a spin-1 neutral \PZpr (left) and charged \PWpr (right) resonance, and compared with the prediction of the HVT Models A and B. In the lower left plot, limits are set in the same model under the triplet hypothesis (\PWpr and \PZpr of degenerate mass). In the lower right plot, limits are set in the context of a bulk graviton with $\ktilde =0.5$ and compared with the prediction.
 }
 \label{fig:searchI:limitCombined}
 \end{figure}
-
-\par
-The combined results would therefore just exclude a $\PWpr$ with a mass around 2 \TeV, the favored candidate to explain the 8 \TeV diboson excess.
-However, Bulk Graviton signals were still far from excluded and, with the expected ten times increase in luminosity in 2016, we were excited to keep on searching.
+The combined results would therefore just exclude a $\PWpr$ with a mass around 2 \TeV, the favored candidate to explain the diboson excess observed in 8 TeV data.
+However, Bulk Graviton signals were still far from excluded and, with the expected increase in luminosity of a factor of ten in 2016, we were excited to keep on searching.
 
 % Figure~\ref{fig:hvtscan} shows a scan of the coupling parameters and the corresponding observed 95\% CL exclusion
 % contours in the HVT model for the combined analyses. The parameters

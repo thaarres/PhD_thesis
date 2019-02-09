@@ -459,6 +459,14 @@ J.~Alwall\hrefCMSnoop {}{ {et~al.}, ``{The automated computation of tree-level
   dijet final state at $\sqrt{s} = 13~\mathrm{TeV}$ using 2016 data}'',}
   Technical Report CMS-PAS-B2G-16-021, CERN, Geneva, 2016.
 
+\bibitem{CLs}
+\hrefCMSnoop {}{G.~Cowan, K.~Cranmer, E.~Gross, and O.~Vitells, ``Asymptotic
+  formulae for likelihood-based tests of new physics'',} \textit{ The European
+  Physical Journal C} \textbf{ 71} (Feb, 2011)
+  \href{http://dx.doi.org/10.1140/epjc/s10052-011-1554-0}{\doi{10.1140/epjc/s10052-011-1554-0}},
+\href{http://www.arXiv.org/abs/1007.1727}{\texttt{arXiv:1007.1727}}.
+%%CITATION = arXiv:hep-ph/1007.1727;%%.
+
 \bibitem{Dasgupta:2015yua}
 \hrefCMSnoop {}{M.~Dasgupta, A.~Powling, and A.~Siodmok, ``{On jet substructure
   methods for signal jets}'',} \textit{ JHEP} \textbf{ 08} (2015) 079,

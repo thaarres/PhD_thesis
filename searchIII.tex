@@ -1,23 +1,22 @@
 \section{Small bumps and tri-bosons}
-Ever since the ATLAS observation of a 3.4 $\sigma$ excess in the search for VV resonances in the all-hadronic final state~\cite{Aad2015}, several little bumps kept re-appearing near 2 TeV. These were not statistically insignificant, as we've already seen in Search I and Search II, but rather small elusive enhancements, illustrated by the collection of ATLAS/CMS observations in Figure~\ref{fig:searchIII:bumps}.
-\begin{figure}[ht] 
+In addition to the observation of a 3.4 $\sigma$ excess in the search for diboson resonances in the all-hadronic final state by ATLAS~\cite{Aad2015}, several little bumps near 2 TeV were observed in other datasets. These were not statistically significant, but rather elusive enhancements, as illustrated by the collection of dijet invariant mass distributions observed by ATLAS and CMS in Figure~\ref{fig:searchIII:bumps}.
+\begin{figure}[h!] 
     \centering
     %\includegraphics[height=0.3\textwidth]{figures/analysis/search1/misc/atlas_8tev.png}
     %\includegraphics[height=0.3\textwidth]{figures/analysis/search1/misc/EXO-12-024_gWW.pdf}\\
-    \includegraphics[height=0.2\textwidth]{figures/analysis/search3/misc/bumps2.pdf}\\
-    \includegraphics[height=0.2\textwidth]{figures/analysis/search3/misc/bumps1.pdf}\\
-    \caption{Several small bumps observed in VV resonance searches in the all-hadronic final state, both in ATLAS and in CMS~\cite{stealth}.}
+    \includegraphics[height=0.3\textwidth]{figures/analysis/search3/misc/bumps2.pdf}\\
+    \includegraphics[height=0.3\textwidth]{figures/analysis/search3/misc/bumps1.pdf}\\
+    \caption{Several small bumps have been observed in diboson resonance searches in the all-hadronic final state, both in ATLAS and in CMS~\cite{stealth}.}
     \label{fig:searchIII:bumps}
 \end{figure}
-Due to their small size and the way the excesses seemed to slightly shift around, these were obviously not diboson resonances. However, could they be caused by us catching the tails of some non-SM boson with a mass slightly different from that of a SM vector boson, as illustrated in Figure~\ref{fig:searchIII:tails}?
+Due to their small size and the way the excesses appeared to slightly shift around, these were obviously not diboson resonances. However, a proposal was made that they could be caused by the observation of the tail of a non-SM boson with a mass slightly different from that of a SM vector boson, as illustrated in Figure~\ref{fig:searchIII:tails}.
 \begin{figure}[ht] 
     \centering
     \includegraphics[width=0.3\textwidth]{figures/analysis/search3/misc/tails.png}
-    \caption{Slight excesses in diboson analyses could be caused by catching the tail of a non-SM object peaking at slightly higher/lower jet mass than at the W/Z mass.}
+    \caption{The small excesses in diboson searches could be caused by the observation of the tail of a non-SM object, peaking at a groomed jet mass slightly higher or lower than that of a W/Z boson.}
     \label{fig:searchIII:tails}
 \end{figure}
-Further, these could be 4-pronged objects rather than 2-prong, which would cause the excess to vary in size depending on the 4-prong efficiency of the analysis specific W-tagger used.\newline
-An explanation for the observed excesses was proposed in~\cite{Aguilar-Saavedra:2018xpl}. This paper pointed out that, if particles like \PWpr and \PZpr exist, an extended scalar sector is needed in order to give mass to the
+Further, these could be 4-pronged objects rather than 2-prong, which would cause the excess to vary in size depending on the 4-prong efficiency of the analysis specific W-tagger in use. An explanation for the observed excesses was proposed in~\cite{Aguilar-Saavedra:2018xpl}. This paper pointed out that, if particles like \PWpr and \PZpr exist, an extended scalar sector is needed in order to give mass to the
 vector bosons. These heavy scalars will decay to lighter bosons, if kinematically allowed, leading to multiboson signals from cascade decays. Some example signatures are illustrated in Figure~\ref{fig:searchIII:tribosons}.
 \begin{figure}[ht] 
     \centering
@@ -27,43 +26,28 @@ vector bosons. These heavy scalars will decay to lighter bosons, if kinematicall
     \caption{A \PWpr decaying to a neutral $\rm{H}^0$ and a charged $\rm{H}^{\pm}$ scalar particle leading to a quadriboson final state (left), and a \PWpr decaying to a neutral scalar particle $\rm{H}^0$ and a \PW leading to a triboson final state (middle and right)~\cite{Aguilar-Saavedra:2018xpl}.}
     \label{fig:searchIII:tribosons}
 \end{figure}
-Signatures like these would peak in the groomed jet mass spectrum and, depending on what the final bosons decay into, have very different substructure profiles (4- and 4-prong, 2- and 4-prong etc.).\par
-In order to effectively search for such types of signals, or any signal peaking in the softdrop jet mass spectrum, we therefore wanted to build a generic new framework allowing to look for peaks anywhere in the groomed mass - dijet invariant mass spectrum.
-Rather than selecting jets with a groomed mass between 65 and 105 \GeV and look for resonances peaking in the dijet invariant mass, we'd look for resonances peaking anywhere in the three dimensional plane formed by the groomed mass of each jet and their invariant mass.
-The benefits of this procedure, was that it would allow us to scan the full groomed mass spectrum in one analysis. We would first demonstrate the method through the VV all-hadronic analysis, which is the paper introduced here.
+Signatures like these would peak in the groomed jet mass spectrum and, depending on what the final bosons decay into, have very different substructure profiles.\par
+In order to efficiently search for such types of signals, or any signal peaking in the softdrop jet mass spectrum, we decided to build a generic framework that would allow searching for peaks anywhere in the groomed mass and dijet invariant mass spectrum.
+Rather than selecting jets with a groomed mass between 65 and 105 \GeV and then searching for resonances peaking in the dijet invariant mass, we would attempt to look for resonances peaking anywhere in the three dimensional space formed by the groomed mass of each jet and their invariant mass, scanning the full groomed mass spectrum in one analysis. We would first demonstrate the method through the VV all-hadronic analysis, which is the paper introduced here.
+
 \section{Analysis strategy}
-The background estimation used in Search I and Search II rely on a one dimensional fit of the dijet invariant mass signal region after a tight jet mass cut (65-105 \GeV) has been applied.
-We now take advantage of the fact that the signal peaks in three dimensions; dijet invariant mass ($\MVV$) and the jet groomed mass of jet 1 and jet 2 ($\MJO$ and $\MJT$),
-and attempt to extract the signal from the three dimensional $\MVV$-$\MJO$-$\MJT$ plane.
+The background estimation used in Search I and Search II rely on a one dimensional fit of the dijet invariant mass signal region after a tight jet mass selection has been applied. We now take advantage of the fact that the signal peaks in three dimensions; dijet invariant mass ($\MVV$) and the jet groomed mass of jet 1 and jet 2 ($\MJO$ and $\MJT$), and attempt to extract the signal from the three dimensional $\MVV$-$\MJO$-$\MJT$ plane.
 \begin{figure}[h!] 
     \centering
     \includegraphics[width=0.79\textwidth]{figures/analysis/search3/misc/1Dvs3D.png}
-    \caption{The one dimensional VV analysis versus the three dimensional fit.}
+    \caption{The one dimensional diboson analysis versus the three dimensional fit.}
     \label{fig:searchIII:1Dvs3D}
 \end{figure}
-The benefits of doing so is that we now can perform different searches in the $WW, WZ, ZZ, WH$ or $XX$ final states encoded in the same analysis.
-Additionally, tight jet mass cuts are no longer needed as we fit the full jet mass line-shape to extract the signal. This effectively increases our signal statistics
-as a large fraction of the $W$ and $Z$ signal fall outside the above mass window.
-Fitting the jet groomed mass and resonance mass together also allow us to add nuisance parameters that simultaneously affect the jet groomed mass and the resonance mass, fully accounting for the correlation between the variables.
-We would model the background starting from simulation, rather than the dijet fit to data, which would allow us to model peaky distributions like a trigger turn-on. This could allow the search to go even lower in \MVV, something we will discuss further in Section~\ref{sec:searchIII:trigger}. \newline
-This chapter, and its corresponding publication, is an analysis of the 2016 and 2017 dataset, corresponding to $\sim 80 \fbinv$, and serves as the first documentation and demonstration of the novel three-dimensional fit method. In Section~\ref{sec:searchIII:outlook}, I'll discuss how we plan to take this framework further in searches for VH and HH as well as for generic resonances peaking in jet softdrop mass.
+The benefits of doing so is that we can search for resonances decaying to WW, WZ, ZZ, WH or XX in the same analysis.
+Additionally, a jet mass selection is no longer needed as we fit the full jet mass line-shape to extract the signal. This effectively increases the signal statistics as a large fraction of the W and Z signal falls outside the mass window. Fitting the jet groomed mass and resonance mass together also allows for the addition of nuisance parameters that simultaneously affect the jet groomed mass and the resonance mass, fully accounting for the correlation between the variables. Finally, we would model the background starting from simulation, rather than from a dijet fit to data. This would allow for the modeling of non-smooth distributions, and could allow the search to go even lower in dijet invariant mass, something we will discuss further in Section~\ref{sec:searchIII:trigger}. Replacing the parametric fit by a simulation-based model, would also reduce the fit sensitivity to background fluctuations in the extreme tails of the dijet invariant mass spectrum. \par
+This chapter presents a novel three-dimensional fit method in the search for diboson resonances in the all-hadronic final state, and is based on 77.3 \fbinv of data collected in 2016 and 2017. The method allows to search for VV, VH and HH resonances in one common framework, and could also be used to search for any signal with a final state peaking in the jet groomed mass spectrum.
 \section{Data and simulated samples}
 The data analyzed in this search consists of 35.9 \fbinv of data collected in 2016 ands 41.4 \fbinv of data collected in 2017, yielding a total of 77.3 \fbinv.\newline
-The simulated samples are the same as those described in Section~\ref{sec:searchII:samples}, with specific detector conditions to match the 2016 and 2017 dataset.
+The simulated samples are the same as those described in Section~\ref{sec:searchII:samples}.
 
 \section{Event selection}
-Events are selected following the same criteria as in Search I and Search II (see Section~\ref{sec:searchI:preselection}) and can be summarized as follows:
-\begin{itemize}
-    \itemsep0em 
-\item PF jet Tight ID applied
-\item Jet $\eta < 2.5$
-\item Jet \pt $> 200$ GeV
-\item $|\Delta\eta|_{jj} < 1.3$
-\end{itemize} 
-The two jets with the highest groomed jet mass in the event are selected as potential vector boson candidates. In addition, the dijet invariant mass is required to be $> 1126$ GeV in order to be on the trigger plateau.
-As already mentioned in the introduction, the background modeling used in this analysis is capable of modeling turn-ons and is something we explored. However, while the background modeling was reliable, we found it difficult to extract a signal peaking on top of a turn-on and had to abandon the trigger modeling for this first demonstration of the method. More details will be given in Section~\ref{sec:searchIII:trigger}.\newline 
-
-The dijet invariant mass and $|\Delta\eta|_{jj}$ distribution for the two leading jets in the event after the above preselections have been applied is shown in Figure~\ref{fig:Mjj-all}. The jet \PT{} and $\eta$ distributions for signal and for background is shown in Figure~\ref{fig:kinematics-all}. 
+Events are selected following the same criteria as in Search I and Search II (see Section~\ref{sec:searchI:preselection}) and can be summarized as follows: we require two AK8 jets with PUPPI pileup subtraction applied, and with $\eta < 2.5$ and \pt $> 200$ GeV. The two jets are further required to be separated by $|\Delta\eta|_{jj} < 1.3$. The two jets with the highest softdrop jet mass in the event are selected as potential vector boson candidates. In addition, the dijet invariant mass is required to be $> 1126$ GeV in order to be on the trigger plateau.
+As already mentioned in the introduction, the background modeling used in this analysis is capable of modeling trigger turn-ons. We explored the possibility of starting the analysis below the trigger plateau, however, while the background modeling was found to be reliable, the extraction of a signal peaking on top of a turn-on was difficult, and we therefore had to abandon the modeling of the trigger turn-on for this first demonstration of the method. More details will be given in Section~\ref{sec:searchIII:trigger}. The dijet invariant mass and $|\Delta\eta|_{jj}$ distribution for the two leading jets in the event after the above preselections have been applied is shown in Figure~\ref{fig:Mjj-all} and the jet \PT{} and $\eta$ distributions for signal and for background is shown in Figure~\ref{fig:kinematics-all}. 
 
 \begin{figure}[h!]
 \centering
@@ -79,14 +63,15 @@ The dijet invariant mass and $|\Delta\eta|_{jj}$ distribution for the two leadin
 \includegraphics[width=0.450\textwidth]{figures/analysis/search3/AN-17-303/controlPlots/looseSel_Jet_2_p_T.pdf}\\
 \includegraphics[width=0.450\textwidth]{figures/analysis/search3/AN-17-303/controlPlots/looseSel_Jet_1_eta.pdf}
 \includegraphics[width=0.450\textwidth]{figures/analysis/search3/AN-17-303/controlPlots/looseSel_Jet_2_eta.pdf}
-\caption{Jet \PT{} (top) and $\eta$ (bottom) of the leading (left) and second leading (right) jet in the event. The signal is scaled by an arbitrary number.}
+\caption{Jet \PT{} (top) and $\eta$ (bottom) of the first (left) and second (right) selected jet in the event. The signal is scaled by an arbitrary number.}
 \label{fig:kinematics-all}
 \end{figure}
 
 \section{Triggering}
 \label{sec:searchIII:trigger}
-The triggers used for 2016 data are the same as in Section~\ref{sec:searchI:trigger}, while the thresholds in 2017 have increased in order to push the trigger rate to a level acceptable for the increased luminosity. The triggers used for 2017 data are
+The triggers used for the data collected in 2016 are the same as in Section~\ref{sec:searchI:trigger}, while the thresholds in 2017 have increased in order to push the trigger rate to a level acceptable for the increased luminosity. The triggers used for 2017 data are
 \begin{itemize}
+  \itemsep0em
 \item {HLT\_PFHT1050}
 \item {HLT\_AK8PFJet500}
 \item {HLT\_AK8PFJet360/380/400/420\_TrimMass30}
@@ -104,7 +89,7 @@ The combination of all triggers are $>99\%$ efficient above a dijet invariant ma
 
 \subsection{Trigger turn-on modeling}
 \label{sec:searchIII:triggermodeling}
-The analysis threshold for searches depending on the dijet fit is set by the trigger turn-on point as the analysis relies on a background fit of the dijet invariant mass spectrum with a smoothly falling function. As the background modeling for this analysis does not depend on a smoothly falling spectrum (as will be described in detail in Section~\ref{sec:searchIII:fit3d}), and in order to compensate for a loss in acceptance due to increased trigger thresholds, we attempted to model the trigger turn-on directly from data and apply a trigger weight in simulation.
+The analysis threshold for searches depending on the dijet fit is set by the trigger turn-on point as the analysis relies on a background fit of the dijet invariant mass spectrum with a smoothly falling function. Since the background modeling for this analysis does not depend on a smoothly falling spectrum (as will be described in detail in Section~\ref{sec:searchIII:fit3d}), and in order to compensate for a loss in acceptance due to increased trigger thresholds, we attempted to model the trigger turn-on directly from data and apply a trigger weight in simulation.
 To do so, we first study the one dimensional trigger turn-ons versus dijet invariant mass and softdrop jet mass to understand where in $\MVV$ and $\MJO$/$\MJT$ the triggers are fully efficient. We then derive a three dimensional histogram of the trigger efficiency versus dijet invariant mass ($\MVV$) and the jet groomed mass of jet 1 and jet 2 ($\MJO$ and $\MJT$), where each bin corresponds to the trigger efficiency for a given value of $\MVV$-$\MJO$-$\MJT$. The procedure is as follows: From the one dimensional histograms, the points of full efficiency versus $\MVV$, $\MJO$ and $\MJT$
 are defined. For every bin above this threshold, the trigger efficiency is fixed to one (100 percent efficiency). For all bins below this trigger threshold, we fit slices of $\MVV$ with a sigmoid function, evaluate the trigger weights from this function, and set the bin content of
 the three dimensional weight histogram accordingly. For every bin below this point, the trigger weight is extracted by fitting slices of $\MVV$ in each bin of $\MJO/\MJT$.
@@ -138,7 +123,7 @@ the trigger weight of each bin $\MVV$-$\MJO$-$\MJT$ is extracted from the fit an
 % \label{fig:triggerWeights}
 % \end{figure}
 Figure~\ref{fig:triggerProj} shows the total projections on each axis for the full trigger weight histogram.
-\begin{figure}[htb]
+\begin{figure}[h!]
 \centering
 \includegraphics[width=0.3\textwidth]{figures/analysis/search3/AN-17-303/trigger/3D_x.png}
 \includegraphics[width=0.3\textwidth]{figures/analysis/search3/AN-17-303/trigger/3D_y.png}
@@ -886,7 +871,8 @@ We observe that the W-tagging efficiency ("CMS\_VV\_JJ\_tau21\_eff"), the softdr
 \chapter{Summary and outlook}
 \label{sec:searchIII:outlook}
 In this chapter, we have followed the search for VV resonances in the all-hadronic final state through three stages and corresponding publications: From being one of the first ever analysis in the ``boosted'' final state at 13 \TeV and the very first to take advantage of substructure at trigger level, through leading the development of a new W-tagging algorithm and mass corrections now default in CMS and finally ending with the development of a multi-dimensional fit for generic searches in jet groomed mass and dijet invariant mass.\par
-Each analysis has built on significant improvements that came with the analysis before it: The substructure triggers and mass corrected softdrop jet mass are both used for the 3D fit, the early discovery of the softdrop signal efficiency dependence on \PT led us to derive corrections for it. Now the question which remains is: \emph{What comes next?}.\par
+Each analysis has built on findings and improvements that came with the analysis before it: The substructure triggers and mass corrected softdrop jet mass are both used for the 3D fit; the early discovery of the softdrop signal efficiency dependence on \PT led us to derive corrections for it; and the observed lack of constraint on the fit in the dijet invariant mass tail when statistics were low, led us to explore alternate methods starting from simulation when building up the 3D fit.
+Now the question which remains is: \emph{What comes next?}.\par
 A few ideas were already mentioned in the introduction to Search III, Section~\ref{searchIII}. The natural next step for this search is an incorporation of the VH(bb) and H(bb)H(bb) final states into the three-dimensional fit. Orthogonality between the three is guaranteed through b-tagging categories, as illustrated in Figure~\ref{fig:outlook:vvvhhh}.
 \begin{figure}[h!]
 \centering
