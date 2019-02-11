@@ -3,42 +3,37 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: phd_aarrestad_main.aux
 The style file: auto_generated.bst
 Database file #1: Bibliography.bib
-Warning--I didn't find a database entry for "softdrop"
-Warning--I didn't find a database entry for "nsubjettiness"
-Warning--I didn't find a database entry for "ddt"
-Warning--I didn't find a database entry for "JME-16-003"
-Warning--I didn't find a database entry for "CMS-PAS-EXO-14-024"
 Warning--empty publisher in inbook
-You've used 88 entries,
+You've used 89 entries,
             2537 wiz_defined-function locations,
-            1332 strings with 24350 characters,
-and the built_in function-call counts, 27481 in all, are:
-= -- 2995
-> -- 670
+            1326 strings with 24088 characters,
+and the built_in function-call counts, 27664 in all, are:
+= -- 3006
+> -- 683
 < -- 6
-+ -- 229
-- -- 141
-* -- 2349
-:= -- 3437
++ -- 233
+- -- 144
+* -- 2361
+:= -- 3462
 add.period$ -- 141
-call.type$ -- 88
+call.type$ -- 89
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 89
-duplicate$ -- 1747
-empty$ -- 2805
-format.name$ -- 147
-if$ -- 7229
+cite$ -- 90
+duplicate$ -- 1758
+empty$ -- 2828
+format.name$ -- 150
+if$ -- 7274
 int.to.chr$ -- 0
-int.to.str$ -- 88
-missing$ -- 214
-newline$ -- 360
-num.names$ -- 73
-pop$ -- 512
+int.to.str$ -- 89
+missing$ -- 216
+newline$ -- 364
+num.names$ -- 74
+pop$ -- 522
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 997
+skip$ -- 1000
 stack$ -- 0
 substring$ -- 1073
 swap$ -- 731
@@ -47,7 +42,7 @@ text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 170
-width$ -- 90
-write$ -- 1092
-(There were 6 warnings)
+while$ -- 171
+width$ -- 91
+write$ -- 1100
+(There was 1 warning)

@@ -4,7 +4,7 @@ One thing the Standard Model fails to incorporate is the force of gravity. This 
 
 \section{Fundamental particles: quarks and leptons}
 It appears that all matter in the universe can be described by a very small collection of fundamental particles, six leptons and six quarks. These are collectively called fermions and are, as far as we can tell, truly elementary (not composed of any other particles).
-Leptons are particles with integer or zero electric charge, defined in units of electron charge. They come in three flavors, or generations, and their mass increases with generation. Each generation of leptons consists of two particles: one charged lepton and one neutrally charged particle denoted \emph{neutrino ($\nu$)}. The three generations can be arranged in a doublet structure, and are as follows
+Leptons are particles with integer or zero electric charge, defined in units of electron charge. They come in three flavors, or generations, and their mass increases with generation. Each generation of leptons consists of two particles: one charged lepton and one neutrally charged particle denoted as \emph{neutrino ($\nu$)}. The three generations can be arranged in a doublet structure, and are as follows.
 \begin{equation}
 \label{eqn:lepton_flavor_doublets}
 \begin{pmatrix} \nu_e      \\ e      \end{pmatrix} \qquad
@@ -33,8 +33,8 @@ $\nu_{\tau}$ & $< 18.2 \mbox{ MeV}$   & $0$  \\%   & 0       & 0         & 1 \\
 \caption{Lepton Properties~\cite{Patrignani:2016xqp}.}
 \label{table:theory:lepprop}
 \end{table}
-Leptons interact with one another through the \emph{electromagnetic and weak force}, which will be explained in more detailed in Section~\ref{sec:theory:ew}.\newline
-The other six fundamental particles of matter are the \emph{quarks}. They are distinguished from the leptons in that they, in addition to interactions through the weak and electromagnetic forces, interact with one another through the \emph{strong force}, described in Section~\ref{sec:theory:qcd}. This force binds the quarks together to form baryons (like protons and neutrons) or mesons (like pions), and in addition, keeps the quarks from being observed as free particles such that they are only visible through their baryon or meson bound states (commonly referred to as \emph{hadrons}). Also organized in three generations, the six quarks are called \textit{up}, \textit{down}, \textit{charm}, \textit{strange}, \textit{top} and \textit{bottom}, and are organized in flavor doublets as follow
+Leptons interact with one another through the \emph{electromagnetic and weak forces}, which will be explained in more detailed in Section~\ref{sec:theory:ew}.\newline
+The other six fundamental particles of matter are the \emph{quarks}. They are distinguished from the leptons in that they, in addition to interacting through the weak and electromagnetic forces, interact with one another through the \emph{strong force}, described in Section~\ref{sec:theory:qcd}. This force binds the quarks together to form baryons (like protons and neutrons) or mesons (like pions), and in addition, keeps the quarks from being observed as free particles such that they are only visible through their baryon or meson bound states (commonly referred to as \emph{hadrons}). Also organized in three generations, the six quarks are called \textit{up}, \textit{down}, \textit{charm}, \textit{strange}, \textit{top} and \textit{bottom}, and are organized in flavor doublets as follow
 \begin{equation}
 \label{eqn:quark_flavor_doublets}
 \begin{pmatrix} u \\ d \end{pmatrix} \qquad
@@ -91,17 +91,17 @@ u^c &= (\bar{3},1)_{(-4/3)} &&= \begin{pmatrix} u_{\bar{r}}^c & u_{\bar{g}}^c & 
 d^c &= (\bar{3},1)_{(2/3)}  &&= \begin{pmatrix} d_{\bar{r}}^c & d_{\bar{g}}^c & d_{\bar{b}}^c\end{pmatrix} \quad &&\sim \textrm{anti-down quarks} \\[1pt]
 e^c &= (1,1)_{(2)}          && \quad &&\sim \textrm{positron} \\
 \end{alignat}
-The anti-neutrino is not included here because it is a SM \emph{singlet} and does not transform under the SM group $\mathcal{G}_{SM}$, but it could be written as $\nu^c=(1,1)_(0)$. The positron $e^c$, on the other hand, \emph{is} included as its hypercharge is non-zero and it therefore undergoes $U(1)_Y$ interactions. These five multiplets exist for each of the tree generations.\newline
-The numbers representing each multiplet correspond to which representation it belongs to. For instance, we see that the quark multiplet transforms as a triplet under $SU(3)_C$, a doublet under $SU(2)_L$ and has a non-zero hypercharge, corresponding to a non-trivial representation under $U(1)_Y$. That corresponds to saying that quarks interact through all of the three fundamental interactions. From that notation, it is also clear that leptons do not carry color charge and will only interact via the electroweak interactions.\newline
+The anti-neutrino is not included here because it is a SM \emph{singlet} and does not transform under the SM group $\mathcal{G}_{SM}$, but it could be written as $\nu^c=(1,1)_{(0)}$. The positron $e^c$, on the other hand, \emph{is} included as its hypercharge is non-zero and it therefore undergoes $U(1)_Y$ interactions. These five multiplets exist for each of the three generations.\newline
+The numbers representing each multiplet correspond to which representation it belongs to. For instance, we see that the quark multiplet transforms as a triplet under $SU(3)_C$, a doublet under $SU(2)_L$ and has a non-zero hypercharge, corresponding to a non-trivial representation under $U(1)_Y$. That corresponds to saying that quarks interact through all of the three fundamental interactions. From that notation, it is also clear that leptons do not carry color charge, and will only interact via the electroweak interactions.\newline
 From the multiplets above, we see that $u^c$ and $d^c$ transform as singlets under $SU(2)_L$, meaning they do not interact. This, however, does not mean they do not feel the electroweak force. The electroweak gauge bosons \PW and \PZ are not directly part of $SU(2)_L$, rather, they are a linear combination of $SU(2)_L$ and $U(1)_Y$ and anything with a non-zero weak hypercharge $Y$ will interact with them. This is also true for the photon, which also is a linear combination of $SU(2)_L$ and $U(1)_Y$. These interactions; the strong, weak and electromagnetic, will be explained in more detail in the following sections.
 
 \subsection{The quantum chromodynamics sector}
 \label{sec:theory:qcd}
-The group $SU(3)_C$ describes the strong interaction mediated by gluons, and is described by the quantum gauge theory Quantum Chromodynamics (QCD). The group is generated by 8 linearly independent matrices $T^a=\frac{\lambda^a}{2}$, where $\lambda^a$ are the Gell-Mann matrices~\cite{PhysRev.125.1067}. The generator matrices do not commute with one another, but rather satisfy the commutation relation $[\lambda^i/2,\lambda^j/2]=i f^{ijk} \lambda_k/2$. This property makes the $SU(3)_C$ group \emph{non-Abelian}, which consequently results in the gluons themselves being charged and display self-interactions. Gluons are charged with one unit of color and one unit of anti-color. Quarks, the only fundamental particles interacting with the strong force, are arranged in the simplest representation of $SU(3)$ and come with one unit of color or anti-color. \par
+The group $SU(3)_C$ describes the strong interaction mediated by gluons, and is described by the quantum gauge theory Quantum Chromodynamics (QCD). The group is generated by 8 linearly independent matrices $T^a=\frac{\lambda^a}{2}$, where $\lambda^a$ are the Gell-Mann matrices~\cite{PhysRev.125.1067}. The generator matrices do not commute with one another, but rather satisfy the commutation relation $[\lambda^i/2,\lambda^j/2]=i f^{ijk} \lambda_k/2$. This property makes the $SU(3)_C$ group \emph{non-Abelian}, which consequently results in the gluons themselves being charged and displaying self-interactions. Gluons are charged with one unit of color and one unit of anti-color. Quarks, the only fundamental particles interacting with the strong force, are arranged in the simplest representation of $SU(3)$ and come with one unit of color or anti-color. \par
 The generators are collectively referred to as the \emph{group representation} of $SU(3)_C$. Any group element can be can be written as $e^{-i\theta^a g_a}$, where $a$ runs from 1 to 8, $\theta^a$ are real numbers and $g_a$ represent one of the eight linearly independent $\lambda/2$ matrices (generators). Given one representation, one can always find another one through any local gauge transformation that leaves the commutator unchanged.  
-In this case, the group elements are the quark fields, and a local gauge transformation of fields become
+In this case, the group elements are the quark fields, and a local gauge transformation of fields becomes
 \begin{equation}
-  \Psi(x^{\mu}) \rightarrow e^{ -i g_s \theta^a(x^{\mu}) T^a}\Psi(x^{\mu})
+  \Psi(x^{\mu}) \rightarrow e^{ -i g_s \theta^a(x^{\mu}) T^a}\Psi(x^{\mu}),
 \end{equation}
 where $g_s$ is the strong coupling, $\theta^a(x^{\mu})$ some arbitrary function and $a$ runs over the eight generators of the group. In order to keep the Lagrangian in Equation~\ref{eq:theory:freeLag} invariant under such a transformation, an additional term must be added, replacing the partial derivative $\partial_{\mu}$ with the \emph{covariant derivative}
 \begin{equation}
@@ -121,7 +121,7 @@ The first term in Equation~\ref{eq:theory:qcdl} represents the quark-gluon inter
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.79\textwidth]{figures/theory/QCD_vtx.pdf}
-\caption{The QCD interaction vertices: Quark interaction with the gluon field (left), and three- (middle) and four-gluon (right) self-interaction vertices.}
+\caption{The QCD interaction vertices: quark interaction with the gluon field (left), and three-gluon (middle) and four-gluon (right) self-interaction vertices.}
 \label{fig:theory:qcdint}
 \end{figure}
 These self-interactions have severe consequences: any bare color charge, like a quark, will be surrounded by a sea of virtual gluons and quarks that share the same color. When probing the quark color at higher and higher energies, corresponding to shorter and shorter distances, the color charge decreases until only the bare charge is visible. There, the quarks are essentially free and can be observed as distinguishable particles. This property is referred to as \emph{asymptotic freedom}. For the same reasons, when going further and further away from a bare color charge, the sea of charges surrounding it makes the observed charge increase. That results in a strong attractive force between color charges at large distances, where the potential energy between the two grows linearly with the distance between them as
@@ -134,17 +134,16 @@ When the distance between the quarks grows very large, this potential energy is 
  \begin{equation}
    \alpha_S(Q)=-\frac{6\pi}{33-2n_f}\ln(Q/\Lambda_{QCD})
  \end{equation}
-where $Q$ is the energy of the probe used to measure the charge and $n_f$ is the number of quark flavors (u, d, c, s, b, t) at that energy. $\alpha_S$ is around 0.1 for energies between 100-1000 \GeV.
+where $Q$ is the energy of the probe used to measure the charge and $n_f$ is the number of quark flavors (u, d, c, s, b, t) at that energy. The value $\alpha_S$ is around 0.1 for energies between 100-1000 \GeV.
 
 \subsection{The electroweak sector}
 \label{sec:theory:ew}
 The electromagnetic and weak interactions arise from the breaking of $SU (2)_L \otimes U(1)_Y$ symmetry. While the unification of the electromagnetic and weak force is obtained under the $SU (2)_L \otimes U(1)_Y$ group, the predicted gauge bosons of such a group are not observed in nature: three charged massless vector bosons and one neutral massless boson. Rather, the $\PW^{\pm}$, $\PZ^{0}$ and the photon arise from the spontaneous symmetry breaking of $SU (2)_L \otimes U(1)_Y$ to $U(1)_{EM}$. This happens due to the \emph{Higgs mechanism}, and exactly how this occurs will be the topic of Section~\ref{sec:theory:higgs}.\par
-The symmetry under $SU (2)_L$ is called weak left-handed isospin $L$, and the symmetry under $U(1)_Y$ is the weak hypercharge $Y$. The name "left-handed" arise from the fact that \emph{parity} is violated in the electroweak interactions. All the fundamental fermions have a \emph{chirality}, defined as the projection of the particles spin along its direction of motion. Weak interactions are only observed for fermions of left-handed chirality (vector minus axial coupling, V-A). While the left-handed fermion fields are in the simplest doublet representation of $SU(2)$ with weak isospin $I=1/2$, the fermions of right-handed chirality are therefore in the singlet representation with weak isospin $I=0$, meaning they do not interact with the gauge bosons of $SU (2)_L$. The chirality of any fermion $\Psi$ can be defined through the operator $\gamma^5$, the product of the four Dirac matrices~\cite{Pauli:1936gd} $\gamma^5=i\gamma^1\gamma^2\gamma^3\gamma^4$. Any fermion field can be projected into its chiral components $\Psi_L$ or $\Psi_R$ through the projection operation
+The symmetry under $SU (2)_L$ is called weak left-handed isospin $L$, and the symmetry under $U(1)_Y$ is the weak hypercharge $Y$. The name "left-handed" arise from the fact that \emph{parity} is violated in the electroweak interactions. All the fundamental fermions have a \emph{chirality}, defined as the projection of the particles spin along its direction of motion. Charged weak interactions are only observed for fermions of left-handed chirality (vector minus axial coupling, V-A). While the left-handed fermion fields are in the simplest doublet representation of $SU(2)$ with weak isospin $I=1/2$, the fermions of right-handed chirality are therefore in the singlet representation with weak isospin $I=0$, meaning they do not interact with the gauge bosons of $SU (2)_L$. The chirality of any fermion $\Psi$ can be defined through the operator $\gamma^5$, the product of the four Dirac matrices~\cite{Pauli:1936gd} $\gamma^5=i\gamma^1\gamma^2\gamma^3\gamma^4$. Any fermion field can be projected into its chiral components $\Psi_L$ or $\Psi_R$ through the projection operation
 \begin{equation}
   \Psi_L = \frac{1-\gamma^5}{2} \quad \textrm{and} \quad \Psi_R = \frac{1+\gamma^5}{2}.
   \end{equation}
-The gauge field tensor of the group of $SU (2)_L$ symmetry is $W_{\mu\nu}^a$, where $a$ runs over the 3 generators of the group. The conserved charge associated with the group is the \emph{third} component of weak isospin $I_3$, and all weak interactions must preserve $I_3$. The generators of the group are defined as $T_i=\frac{\sigma_i}{2}$, where $\sigma_i$ are the Pauli matrices~\cite{inbook}. As for $SU (3)_C$, the group is non-abelian and the generators follow the commutation relation $[\sigma_i/2,\sigma_j/2]=i \epsilon_{ijk} \sigma_k/2$, where $\epsilon_{ijk}$ is the Levi-Civita permutation symbol~\cite{Duplij2004}. This in turn implies self-interactions between the gauge bosons of the group.\par
-The latter group, $U(1)_Y$ of weak hypercharge $Y$, is abelian and hence display no self-interaction. The gauge field tensor $B_{\mu\nu}^a$ interacts with both left- and right-handed fermion fields. Similar to the case for QCD, a local gauge transformation of $SU (2)_L \otimes U(1)_Y$ requires the addition of additional terms in the derivate in order to keep the Lagrangian invariant. The partial derivative $\partial_{\mu}$ is replaced by the covariant derivatives
+The gauge field tensor of the group of $SU (2)_L$ symmetry is $W_{\mu\nu}^a$, where $a$ runs over the 3 generators of the group. The conserved charge associated with the group is the \emph{third} component of weak isospin $I_3$, and all weak interactions must preserve $I_3$. The generators of the group are defined as $T_i=\frac{\sigma_i}{2}$, where $\sigma_i$ are the Pauli matrices~\cite{inbook}. As for $SU (3)_C$, the group is non-abelian and the generators follow the commutation relation $[\sigma_i/2,\sigma_j/2]=i \epsilon_{ijk} \sigma_k/2$, where $\epsilon_{ijk}$ is the Levi-Civita permutation symbol~\cite{Duplij2004}. This in turn implies self-interactions between the gauge bosons of the group. The latter group, $U(1)_Y$ of weak hypercharge $Y$, is abelian and hence displays no self-interaction. The gauge field tensor $B_{\mu\nu}^a$ interacts with both left- and right-handed fermion fields. Similar to the case for QCD, a local gauge transformation of $SU (2)_L \otimes U(1)_Y$ requires the addition of additional terms in the derivate in order to keep the Lagrangian invariant. The partial derivative $\partial_{\mu}$ is replaced by the covariant derivatives
 \begin{align}
   \label{eq:theory:ewcov}
   D_\mu \Psi_L &=(\partial_{\mu} + ig_2 T_a W_{\mu}^a + ig_1 \frac{Y}{2} B_{\mu}^a)\Psi_L\\
@@ -162,7 +161,7 @@ After the substitution, the electroweak Lagrangian can be written as a sum of fo
 \end{equation}
 where the gauge field tensors are
 \begin{align}
-W_{\mu\nu}^a &=\partial_{\mu} W_{\nu}^a-\partial_{\nu} W_{\mu}^a-g_2\epsilon^{ijk}W^{j}_{\mu}W^{k}_{\nu} \quad \textrm{, with   } i=1-3\\
+W_{\mu\nu}^a &=\partial_{\mu} W_{\nu}^a-\partial_{\nu} W_{\mu}^a-g_2\epsilon^{ijk}W^{j}_{\mu}W^{k}_{\nu} \quad \textrm{, with   } i=1-3\textrm{ and}\\
 B_{\mu\nu} &=\partial_{\mu} B_{\nu}-\partial_{\nu} B_{\mu}.
 \end{align}
 The non-abelian nature of $SU (2)_L$ leads to trilinear and quadrilinear couplings between the photon and vector bosons as illustrated in Figure~\ref{fig:theory:weakint}.
@@ -184,7 +183,7 @@ Up until now we have considered the Lagrangian before spontaneous symmetry break
 \begin{equation}
 \PW^{\pm} = \frac{1}{\sqrt{2}}(W_{\mu}^1 \mp iW_{\mu}^2).
 \end{equation}
-These are responsible for \emph{charged current interactions}, which turn up-type fermions into their corresponding down-type fermions within the same generation, and vice-versa. The electrically neutral Z boson and the photon fields are expressed in terms of $W_{\mu}^3$ and $B_{\mu}$ through the weak mixing angle~\cite{Weinberg:1979pi} as
+These are responsible for \emph{charged-current interactions}, which turn up-type fermions into their corresponding down-type fermions within the same generation, and vice-versa. The electrically neutral Z boson and the photon fields are expressed in terms of $W_{\mu}^3$ and $B_{\mu}$ through the weak mixing angle~\cite{Weinberg:1979pi} as
 \begin{equation}
 \begin{pmatrix} \gamma \\ \PZ^0 \end{pmatrix}
   = \begin{pmatrix} \cos \theta_W & \sin \theta_W \\
@@ -204,7 +203,7 @@ A few of the fermion-boson vertices are shown in Figure~\ref{fig:theory:weakferm
   \centering
   \includegraphics[width=0.45\textwidth]{figures/theory/ew_ch.png}\\
   \includegraphics[width=0.45\textwidth]{figures/theory/ew_neu.png}
-  \caption{The electroweak fermion interaction vertices. Top: Charged current interaction vertex connecting a charged vector boson $\PW^{\pm}$ to quarks (left) and leptons (right). Bottom: Neutral current interactions between the neutral $\PZ^0$ boson and any fermion (left), and between a $\gamma$ and electrically charged fermions.}
+  \caption{The electroweak fermion interaction vertices. Top: charged-current interaction vertex connecting a charged vector boson $\PW^{\pm}$ to quarks (left) and leptons (right). Bottom: neutral-current interactions between the neutral $\PZ^0$ boson and any fermion (left), and between a $\gamma$ and electrically charged fermions.}
   \label{fig:theory:weakfermionint}
   \end{figure}
 The last two terms, $\mathcal{L}_{Yukawa}$ and $\mathcal{L}_{\phi}$, are related to the Higgs boson and represent couplings to the Higgs field: the Yukawa interaction term which generates masses for the fermions due to the non-zero Higgs vacuum expectation value, and the Higgs bosons interactions with itself and with the gauge bosons. Introduced as an extension to the original Standard Model, the Higgs sector is one of the greatest accomplishments of particle physics in the 20th century and one of the reasons why the LHC was built. How it arises is what we will turn to next.
@@ -215,7 +214,7 @@ The problem of having massless gauge bosons under $SU(2)_L \times U(1)_Y$, while
 It began with the realization that the breaking of a local gauge symmetry could give rise to a final mass for the gauge boson involved. This was first discovered in association with superconductivity, where it was found that when a normal metal becomes superconducting the photon field inside the superconductor would acquire a finite mass~\cite{PhysRev.110.827}.
 
 \subsubsection{Spontaneous breaking of a global gauge symmetry}
-In order to achieve spontaneous symmetry breaking, Jeffrey Goldstone~\cite{Goldstone:1961eq} suggested introducing a massive complex scalar field $\phi$ with quantum numbers of the vacuum and then give the field a vacuum expectation value. The field
+In order to achieve spontaneous symmetry breaking, Jeffrey Goldstone~\cite{Goldstone:1961eq} suggested introducing a massive complex scalar field $\phi$ with quantum numbers of the vacuum and then giving the field a vacuum expectation value. The field
 \begin{equation}
 \phi = \frac{1}{\sqrt{2}}(\phi_1+i\phi_2)  
 \end{equation}
@@ -225,7 +224,7 @@ would have a Lagrangian of the form
 \end{equation}
 where $\lambda_0$ is the coupling constant and $\mu_0$ is the mass. The Lagrangian is invariant under $U(1)$, though in this case under a global symmetry and not a local one. If one takes $\mu_0^2$ to be negative, the potential will get a minima along a circle of radius $v$ such that
 \begin{equation}
-  \phi_1^2+\phi_2^2 = v^2 \quad \textrm{and}\quad v^2=\frac{\mu_0^2}{\lambda_0}
+  \phi_1^2+\phi_2^2 = v^2 \quad \textrm{and}\quad v^2=\frac{\mu_0^2}{\lambda_0},
 \end{equation}
 and take the form of a "Mexican Hat" as shown in Figure~\ref{fig:theory:higgspot}. 
   \begin{figure}[h!]
@@ -243,31 +242,31 @@ This complex field can be expanded around the ground state in terms of two real 
 \begin{equation}
 \mathcal{L} = \frac{1}{2}(\partial_{\mu}\epsilon)^2 + \frac{1}{2}(\partial_{\mu}\eta)^2+\mu_0^2\eta^2 + \textrm{ additional terms}.
 \end{equation}
-The third term has the form of a mass term for the scalar $\eta$ field. However, the $\epsilon$ field has no mass term meaning that the theory contains a massless scalar, referred to as a \emph{Goldstone boson}. This is expressed through \emph{Goldstones theorem}, which states that whenever a continuous symmetry of a physical system is spontaneously broken, massless scalars will occur. Rather than providing a mass term for the vector bosons, the theory acquired one massive scalar and one massless scalar not observed in nature, requiring the gauge theory of weak interactions to look for solutions elsewhere.
+The third term has the form of a mass term for the scalar $\eta$ field. However, the $\epsilon$ field has no mass term, meaning that the theory contains a massless scalar, referred to as a \emph{Goldstone boson}. This is expressed through \emph{Goldstone's theorem}, which states that whenever a continuous symmetry of a physical system is spontaneously broken, massless scalars will occur. Rather than providing a mass term for the vector bosons, the theory acquired one massive scalar and one massless scalar not observed in nature, requiring the gauge theory of weak interactions to look for solutions elsewhere.
 
 \subsubsection{The Higgs mechanism}
-The solution to the problem came a few years later, in 1964, when spontaneous symmetry breaking of a \emph{local} gauge symmetry was studied gather than a global. For a $U(1)$ symmetry, this requires the Lagrangian to be invariant under $\phi \rightarrow e^{i\theta(x)}\phi$ with the derivative replacement
+The solution to the problem came a few years later, in 1964, when spontaneous symmetry breaking of a \emph{local} gauge symmetry was studied gather than a global. For a $U(1)$ symmetry, this requires the Lagrangian to be invariant under $\phi \rightarrow e^{i\theta(x)}\phi$, with the derivative replacement
 \begin{equation}
 D_{\mu}=\partial_{\mu}-ie A_{\mu}.
 \end{equation}
-After translating the field $\phi$ to its true ground state and writing out the Lagrangian
+After translating the field $\phi$ to its true ground state and writing out the Lagrangian,
 \begin{equation}
   \label{eq:theory:higgsL}
-\mathcal{L} = \frac{1}{2}(\partial_{\mu}\epsilon)^2 + \frac{1}{2}(\partial_{\mu}\eta)^2-v^2\lambda \eta^2+\frac{1}{2}v^2 e^2 A_{\mu} A^{\mu}-ev A_{\mu}\partial^{\mu}\epsilon-\frac{1}{4}F_{a}^{\mu\nu}F^{a}_{\mu\nu}
+\mathcal{L} = \frac{1}{2}(\partial_{\mu}\epsilon)^2 + \frac{1}{2}(\partial_{\mu}\eta)^2-v^2\lambda \eta^2+\frac{1}{2}v^2 e^2 A_{\mu} A^{\mu}-ev, A_{\mu}\partial^{\mu}\epsilon-\frac{1}{4}F_{a}^{\mu\nu}F^{a}_{\mu\nu}
 \end{equation}
-we see that the particle spectrum now contains a massless Goldstone boson $\epsilon$, a massive scalar $\eta$ and, finally, a massive vector $A_{\mu}$ with $m_A=ev$. Despite the success of having dynamically created the mass for the gauge field, one had to tackle the problem of the massless scalar. The solution was found through the realization that one of the fields were unphysical; by giving mass to the vector $A_{\mu}$, the polarization degrees of freedom had increased from 2 to 3 through adding a longitudinal polarization. However, this should not be possible when simply translating field variables. It was found that through a simple gauge transformation with a different set of fields
+we see that the particle spectrum now contains a massless Goldstone boson $\epsilon$, a massive scalar $\eta$ and, finally, a massive vector $A_{\mu}$ with $m_A=ev$. Despite the success of having dynamically created the mass for the gauge field, one had to tackle the problem of the massless scalar. The solution was found through the realization that one of the fields was unphysical; by giving mass to the vector $A_{\mu}$, the polarization degrees of freedom had increased from 2 to 3 through adding a longitudinal polarization. However, this should not be possible when simply translating field variables. It was found that through a simple gauge transformation with a different set of fields
 \begin{equation}
 A_{\mu} \rightarrow A_{\mu}+\frac{1}{ev}\partial_{\mu}\theta,
 \end{equation}
-the Goldstone boson would disappear and turn into the longitudinal polarization of the massive gauge boson and the theory was left with one massive vector gauge boson $A_{\mu}$ and another massive scalar $h$. This is what is referred to as the \emph{Higgs mechanism}.
+the Goldstone boson would disappear and turn into the longitudinal polarization of the massive gauge boson and that the theory was left with one massive vector gauge boson, $A_{\mu}$, and another massive scalar, $h$. This is what is referred to as the \emph{Higgs mechanism}.
 
 \subsubsection{The Weinberg-Salam Model}
-The final step is to formulate the Higgs mechanism such that the vector bosons $\PW^{\pm}$ and $\PZ^{0}$ become massive, while the photon remains massless. To do so Sheldon Glashow, Abdus Salam, and Steven Weinberg (all awarded the 1979 Nobel Prize for electroweak unification), added a gauge invariant term to the electroweak Lagrangian of the following form:
+The final step is to formulate the Higgs mechanism such that the vector bosons $\PW^{\pm}$ and $\PZ^{0}$ become massive, while the photon remains massless. To do so Sheldon Glashow, Abdus Salam, and Steven Weinberg (all awarded the 1979 Nobel Prize for electroweak unification), added a gauge-invariant term to the electroweak Lagrangian of the following form:
  \begin{align}
    \label{eq:theory:higgsmass}
-  \mathcal{L}_{Higgs}= \big|(i\partial_{\mu} - g_2 T_a W_{\mu}^a -vg_1 \frac{Y}{2} B_{\mu}^a) \phi\big| ^2-V(\phi)
+  \mathcal{L}_{Higgs}= \big|(i\partial_{\mu} - g_2 T_a W_{\mu}^a -vg_1 \frac{Y}{2} B_{\mu}^a) \phi\big| ^2-V(\phi).
  \end{align}
-The $\phi_i$ has to belong to $SU(2) \times U(1)$ multiplets, and the simplest constellation corresponds to four fields in an isospin doublet of weak hypercharge $Y=1$:
+The $\phi_i$ has to belong to $SU(2) \times U(1)$ multiplets, and the simplest configuration corresponds to four fields in an isospin doublet of weak hypercharge $Y=1$:
 \begin{equation}
 \phi =  \begin{pmatrix} \phi^{+} \\ \phi^{0} \end{pmatrix}= \begin{pmatrix} \frac{\phi_1+i\phi_2}{\sqrt{2}} \\ \frac{\phi_3+i\phi_4}{\sqrt{2}}\end{pmatrix}.
 \end{equation}
@@ -283,7 +282,7 @@ with the Weinberg angle $\theta_W$ defined as
 \begin{equation}
 \textrm{with}\quad\frac{M_W}{M_Z}=\cos \theta_W.
 \end{equation}
-As mentioned in Section~\ref{sec:theory:ew}, the fermions also get their masses through interacting with the Higgs field, corresponding to the $\mathcal{L}_{Yukawa}$ term in the electroweak Lagrangian. This is done the same way as for the bosons: an additional $SU(2) \times U(1)$ invariant term for each generation is added, for instance for the electron
+\par As mentioned in Section~\ref{sec:theory:ew}, the fermions also get their masses through interacting with the Higgs field, corresponding to the $\mathcal{L}_{Yukawa}$ term in the electroweak Lagrangian in Equation~\ref{eq:theory:ewl}. This is done in the same way as for the bosons: an additional $SU(2) \times U(1)$ invariant term for each generation is added, for instance for the electron:
 \begin{equation}
   -G_e \bigg[ \begin{pmatrix} \bar{\nu}_e & \bar{e}\end{pmatrix}_L   \begin{pmatrix} \phi^{+} \\ \phi^{0} \end{pmatrix} e^R +
   \bar{e}_R  \begin{pmatrix} \phi^{-} & \bar{\phi}^{0} \end{pmatrix}  \begin{pmatrix} \nu_e \\ e\end{pmatrix}_L  \bigg],
@@ -298,7 +297,7 @@ where $G_E$ is the electron coupling. We then spontaneously break the symmetry w
 \end{equation}
 We can choose $G_e$ such that
 \begin{equation}
-  m_e=-\frac{G_e v}{\sqrt{2}}
+  m_e=-\frac{G_e v}{\sqrt{2}},
   \end{equation}
 and generate the electron mass as
 \begin{equation}
@@ -330,7 +329,7 @@ M(\mathrm{W}^{\prime\pm}) \simeq M(\PZpr) = \frac{g}{\sin2\theta}f,
 \begin{aligned}
 \Gamma(\mathrm{W}^{\prime\pm} \to \ell\nu, \PZpr \to \ell\ell) & = \frac{g^2\cot^2\theta}{96\pi}M\\
 \Gamma(\mathrm{W}^{\prime\pm} \to \mathrm{q}\bar{\mathrm{q}}^\prime,\PZpr \to \qqbar) & = \frac{g^2\cot^2\theta}{32\pi}M\\
-\Gamma(\mathrm{W}^{\prime\pm} \to \PW\PZ,\PZpr \to \PW\PW) & = \frac{g^2\cot^22\theta}{192\pi}M
+\Gamma(\mathrm{W}^{\prime\pm} \to \PW\PZ,\PZpr \to \PW\PW) & = \frac{g^2\cot^22\theta}{192\pi}M.
 \end{aligned} 
 \end{equation}
 Decays into fermions therefore dominate at $\cot\theta \geq 1/2$, whereas decays into bosons are enhanced for very low $\cot\theta$. These generic composite models can be studied with the Heavy Vector Triplet formalism.
@@ -365,9 +364,9 @@ In this thesis, we probe two benchmark models called HVT model A and HVT model B
 
 \section{Warped extra dimensions}
 \label{sec:theory:wed}
-Extra dimensional theories also offer solutions to the hierarchy problem. This thesis focuses on Randall-Sundrum (RS) warped extra dimensional scenarios~\cite{PhysRevLett.83.3370}. In RS models, a new curved spatial dimension $y$ is proposed, leading to a 5-dimensional space-time bounded by two (3+1)-dimensional planes, or \emph{branes}: the UV/Planck and the IR/TeV brane. The new metric now depends on the radius $r$ and the curvature factor $k$ of the new extra dimension
+Extra dimensional theories also offer solutions to the hierarchy problem. This thesis focuses on Randall-Sundrum (RS) warped extra dimensional scenarios~\cite{PhysRevLett.83.3370}. In RS models, a new curved spatial dimension $y$ is proposed, leading to a 5-dimensional space-time bounded by two (3+1)-dimensional planes, or \emph{branes}: the UV/Planck and the IR/TeV brane. The new metric now depends on the radius $r$ and the curvature factor $k$ of the new extra dimension, with
 \begin{equation}
-  ds^2=e^{-2ky}\eta_{\mu\nu}dx^{\mu}dx^{\nu}+dy^2; 0 < y < \pi R
+  ds^2=e^{-2ky}\eta_{\mu\nu}dx^{\mu}dx^{\nu}+dy^2; 0 < y < \pi R.
 \end{equation}
 Gravity is concentrated and relatively strong at the Planck brane at $y=0$, which is separated from us by the fifth dimension. Our observed four-dimensional reality and the Standard Model particles reside at the \TeV brane, at $y=\pi R$. Only gravity, transmitted through gravitons, is allowed to propagate through the warped 5D space-time (the "bulk") and is not confined to either brane. Figure~\ref{fig:theory:rs1} illustrates how the branes and the bulk are connected.
 \begin{figure}[h!]
@@ -382,7 +381,7 @@ Gravity is concentrated and relatively strong at the Planck brane at $y=0$, whic
   \end{equation} 
 where $V_1$ is the volume of the 1 dimensional added warped dimension and $M_*^3$ is the 5D Planck mass.
 One distinct prediction of the model, and a way in which we can test its validity, is the prediction of a tower of \TeV-scale excitations with spin-2, so called Kaluza-Klein states, that could be observed in high energy experiments. \newline
-In this thesis, we are more interested in an alternative to the original RS model called the "bulk" scenario~\cite{PhysRevD.76.036006,Fitzpatrick:2007qr}. In this case, the Standard Model particles, besides the Higgs boson, are also allowed to propagate in the bulk. The light 1st and 2nd generation fermions are localized near the Planck brane, yielding small couplings to the Higgs boson that still resides at the \TeV brane, explaining their small masses. Similarly, the top quark is now located near the \TeV brane, resulting in a stronger Yukawa coupling to the Higgs boson. In addition, with the gravitons located near the \TeV brane and the fermions now residing near the Planck brane, the graviton coupling to fermions is strongly suppressed. SM gluons have a flat distribution throughout the bulk, making gluon-gluon production the dominant production channel of gravitons. Due to the weak vector bosons absorbing the Higgs degree of freedom in spontaneous symmetry breaking, their wave-functions fall of steeply near the \TeV brane, resulting in a coupling to the gravitons similar to that of the Higgs and the top. The only free parameters of the theory is the mass of the lightest KK graviton and the ratio $\tilde{k} = \frac{k}{\bar{M}_{Pl}}$, which controls the widths of the new resonances. The branching ratios of the Bulk Graviton is shown in Figure~\ref{fig:theory:bulk}.
+In this thesis, we are more interested in an alternative to the original RS model called the "bulk" scenario~\cite{PhysRevD.76.036006,Fitzpatrick:2007qr}. In this case, the Standard Model particles, besides the Higgs boson, are also allowed to propagate in the bulk. The light 1st and 2nd generation fermions are localized near the Planck brane, yielding small couplings to the Higgs boson that still resides at the \TeV brane, explaining their small masses. Similarly, the top quark is now located near the \TeV brane, resulting in a stronger Yukawa coupling to the Higgs boson. In addition, with the gravitons located near the \TeV brane and the fermions now residing near the Planck brane, the graviton coupling to fermions is strongly suppressed. SM gluons have a flat distribution throughout the bulk, making gluon-gluon production the dominant production channel of gravitons. Due to the weak vector bosons absorbing the Higgs degree of freedom in spontaneous symmetry breaking, their wave-functions fall off steeply near the \TeV brane, resulting in a coupling to the gravitons similar to that of the Higgs and the top. The only free parameters of the theory is the mass of the lightest KK graviton and the ratio $\tilde{k} = \frac{k}{\bar{M}_{Pl}}$, which controls the widths of the new resonances. The branching ratios of the Bulk Graviton is shown in Figure~\ref{fig:theory:bulk}.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.49\textwidth]{figures/theory/BulkGravitonBR_tuomas.png}
