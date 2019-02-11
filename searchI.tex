@@ -708,24 +708,24 @@ The jet mass/energy scale and resolution also affect the signal shape, and are a
 The background fits for each analysis category in the data signal region are shown in Figure \ref{fig:search1:bkgfitMassCat}. Here a background-only fit is performed while, as described above, a simultaneous fit is used for the limit-setting procedure. The filled area corresponds to the $1 \sigma$ error band of the background fit, obtained using linear error propagation.
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.327\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassHighPuriWW.pdf}
-\includegraphics[width=0.327\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassHighPuriWZ.pdf}
-\includegraphics[width=0.327\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassHighPuriZZ.pdf}\\
-\includegraphics[width=0.327\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassLowPuriWW.pdf}
-\includegraphics[width=0.327\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassLowPuriWZ.pdf}
-\includegraphics[width=0.327\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassLowPuriZZ.pdf}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassHighPuriWW.pdf}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassLowPuriWW.pdf}\\
+\includegraphics[width=0.45\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassHighPuriWZ.pdf}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassLowPuriWZ.pdf}\\
+\includegraphics[width=0.45\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassHighPuriZZ.pdf}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search1/AN-15-211/fits/MLfits/BkgFit_DijetMassLowPuriZZ.pdf}
 \caption{Fit to data in the signal region using the background fit only for the different mass and purity categories. The filled red area correspond to the $1 \sigma$  statistical error of the fit.}
 \label{fig:search1:bkgfitMassCat}
 \end{figure}
 No excess is observed, and we proceed by setting upper limits on the cross section times branching ratio of the process $\text{X} \to \VV$, using the asymptotic $\textrm{CL}_\textrm{S}$ method~\cite{CLs}. The binned likelihood is defined as
 \begin{equation}
-L = \prod_i\frac{\mu^{n_i}_ie^{-\mu_i}}{n_i!}
+L = \prod_i\frac{\mu^{n_i}_ie^{-\mu_i}}{n_i!},
 \end{equation}
 with
 \begin{equation}
-\mu_i=\sigma \cdot N_i(S)+N_i(B)
+\mu_i=\sigma \cdot N_i(S)+N_i(B).
 \end{equation}
-Here $\sigma$ is the signal strength scaling the expected number of signal events in the $i$-th dijet invariant-mass bin $N_i(S)$, $N_i(B)$ is the expected number of background events in dijet invariant-mass bin $i$ and $n_i$ is the observed number of events in the $ith$ dijet invariant-mass bin. The background per bin $N_i(B)$ is estimated from the background component of the best signal and background fit to the data points with the signal cross section set to zero. The number of signal events in the $i$-th dijet invariant mass bin, $N_i(S)$, is then estimated from the signal templates, where only a dijet invariant mass in a 20\% window around the resonance mass is considered, containing most of the signal contribution while making sure to keep a good description of the core.
+Here $\sigma$ is the signal strength scaling the expected number of signal events in the $i$-th dijet invariant-mass bin $N_i(S)$, $N_i(B)$ is the expected number of background events in dijet invariant-mass bin $i$ and $n_i$ is the observed number of events in the $ith$ dijet invariant-mass bin. The background per bin $N_i(B)$ is estimated from the background component of the best signal and background fit to the data points, with the signal cross section set to zero. The number of signal events in the $i$-th dijet invariant mass bin, $N_i(S)$, is estimated from the signal templates, considering only dijet invariant massed in a 20\% window around the resonance mass, containing most of the signal contribution while making sure to keep a good description of the core.
 
 \section{Limits}
 \subsection{All-hadronic analysis only}
@@ -745,16 +745,16 @@ As mentioned in Section~\ref{sec:searchI:samples}, we set limits on three differ
 The statistics are too low to exclude the excess around 2 \TeV observed in the corresponding Run 1 analysis and, in addition, an under-fluctuation in data is present in this region. The largest excess of 2.8 $\sigma$ is observed for a $\BulkG \rightarrow \ZZ$ hypothesis at a resonance mass of 2.8-3 TeV. This is driven by the high-purity ZZ mass category, the category with the lowest statistics, and is caused by one event. A 3-parameter fit is the default background fit function for this category, however, a 2-parameter fit could also be used to describe these data. In Figure \ref{fig:searchI:Limits_ZZHP} we compare the limits and p-values obtained using a 2-parameter and a 3-parameter fit to describe the background in this category. The significance at 3 TeV is reduced from 2.8 to 1.5 $\sigma$ with a 2-parameter fit, reflecting the fact that the fit is poorly constrained in the high mass tail due to low statistics. The fit to data using both a 2 and 3-parameter fit in the ZZ high-purity category is shown in Figure~\ref{fig:app:ZZHP2vs3p}, where we see that the 2-parameter fit lies within the fit uncertainties of the nominal fit.
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.4\textwidth]{figures/analysis/search1/AN-15-211/limits/brazilianFlag_BulkZZ_ZZHP_13TeV.pdf}
-\includegraphics[width=0.4\textwidth]{figures/analysis/search1/AN-15-211/limits/brazilianFlag_BulkZZ_ZZHP_2parFit__13TeV.pdf}\\
-\includegraphics[width=0.4\textwidth]{figures/analysis/search1/AN-15-211/pvalues/pvalue_BulkZZinZZ_high_purity.pdf}
-\includegraphics[width=0.4\textwidth]{figures/analysis/search1/AN-15-211/pvalues/pvalue_BulkZZinZZ_high_purity_2par.pdf}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search1/AN-15-211/limits/brazilianFlag_BulkZZ_ZZHP_13TeV.pdf}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search1/AN-15-211/limits/brazilianFlag_BulkZZ_ZZHP_2parFit__13TeV.pdf}\\
+\includegraphics[width=0.45\textwidth]{figures/analysis/search1/AN-15-211/pvalues/pvalue_BulkZZinZZ_high_purity.pdf}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search1/AN-15-211/pvalues/pvalue_BulkZZinZZ_high_purity_2par.pdf}
 \caption{Expected and observed limits (top) and the corresponding p-values (bottom) obtained in the ZZ high-purity category using a 3- (left) and 2-parameter (right) fit to describe the background. The significance at 3 TeV is reduced from 2.8 to 1.5 $\sigma$.}
 \label{fig:searchI:Limits_ZZHP}
 \end{figure}
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.4\textwidth]{figures/analysis/search1/misc/CMS-PAS-EXO-15-002_Figure_004-e.pdf}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search1/misc/CMS-PAS-EXO-15-002_Figure_004-e.pdf}
 \caption{Background fit to data in the ZZHP category using the nominal 3- (red) and an alternate 2-parameter (blue) fit to describe the background.}
 \label{fig:app:ZZHP2vs3p}
 \end{figure}

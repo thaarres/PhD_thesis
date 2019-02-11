@@ -334,8 +334,14 @@ In addition to measuring the dependence of the tagging efficiency on jet \PT, we
 \clearpage    
 \section{The multidimensional fit}
 \label{sec:searchIII:fit3d}
-The three-dimensional fit method is based on the assumption that the signal peaks in three dimensions: the dijet invariant mass ($\MVV$), the groomed jet mass of the first jet ($\MJO)$, and the groomed jet mass of the second jet ($\MJT$), in order to extract a possible signal from the three-dimensional $\MJO$-$\MJT$-$\MVV$ (x,y,z) plane.
-In order to obtain a complete three-dimensional model, four different types of probability density functions (PDF's) need to be derived:
+The three-dimensional fit method is based on the assumption that the signal peaks in three dimensions: the dijet invariant mass ($\MVV$), the groomed jet mass of the first jet ($\MJO)$, and the groomed jet mass of the second jet ($\MJT$), in order to extract a possible signal from the three-dimensional $\MJO$-$\MJT$-$\MVV$ (x,y,z) plane.\newline
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.99\textwidth]{figures/analysis/search3/misc/3Dfit.png}
+\caption{An illustration of the shape of the signal and the relative background contributions in the three dimensions $\MJO$(x), $\MJT$(y) and $\MVV$(z). }
+\label{fig:searchIII:3Dfit}
+\end{figure}
+\noindent In order to obtain a complete three-dimensional model, four different types of probability density functions (PDF's) need to be derived:
 \begin{itemize}
    \itemsep0em
   \item \textbf{signal:} a PDF resonant in $\MJO$, $\MJT$ and $\MVV$,
@@ -344,12 +350,6 @@ In order to obtain a complete three-dimensional model, four different types of p
   \item \textbf{alternative shapes:} five additional shape uncertainties for the non-resonant background.
 \end{itemize}
 These are illustrated in Figure~\ref{fig:searchIII:3Dfit} and will be described in detail in the following.
-\begin{figure}[h!]
-\centering
-\includegraphics[width=0.99\textwidth]{figures/analysis/search3/misc/3Dfit.png}
-\caption{An illustration of the shape of the signal and the relative background contributions in the three dimensions $\MJO$(x), $\MJT$(y) and $\MVV$(z). }
-\label{fig:searchIII:3Dfit}
-\end{figure}
 \clearpage
 
 \subsection{Modeling of the signal}
@@ -570,9 +570,9 @@ As all background contributions are data driven, the largest systematic uncertai
 \begin{itemize}
   \itemsep0em
 \item {\bf luminosity: } 2.6\%(2.3\%) for the 2016(2017) dataset,
-\item {\bf $\tau_{21}^{DDT}$ efficiency: } a 1-12\% systematic uncertainty on the signal efficiency scale factor for the \ddt selection (listed in Table~\ref{tab:wsf_total}), treated as anti-correlated between the HP and LP categories,
-\item {\bf $\tau_{21}^{DDT}$ \PT{} extrapolation: } an additional uncertainty arising from the extrapolation of the V-tagging efficiency scale factors up to higher transverse momenta, treated as correlated between the \ddt categories, and 
-\item {\bf PDF and factorization/renormalization scale: } a fixed 2\% uncertainty on the signal acceptance due to the choice of parton density function and factorization/renormalization scale. 
+\item {\bf $\tau_{21}^{DDT}$ efficiency: } 1-12\% uncertainty on the W-tagging efficiency scale factor for the \ddt selection (listed in Table~\ref{tab:wsf_total}), treated as anti-correlated between the purity categories,
+\item {\bf $\tau_{21}^{DDT}$ \PT{} extrapolation: } uncertainty arising from the extrapolation of the V-tagging efficiency scale factors up to higher transverse momenta, treated as correlated between the \ddt categories, and 
+\item {\bf parton distribution function: } a fixed 2\% uncertainty on the signal acceptance due to the choice of parton distribution function and factorization/renormalization scale. 
 \end{itemize} 
 
 
@@ -587,7 +587,13 @@ Uncertainties due to the choice of parton density function are evaluated by rewe
 
 \subsection{Non-resonant background shape}
 Alternate shapes for the non-resonant background components are added to the fit through vertical template morphing. This creates nuisance parameters for each additional shape shape, allowing the derived nominal 3D PDF to vary within the respective nuisances to match the data. Shape uncertainties that simultaneously affect all three dimensions are used, with a total of 5 needed to account for possible effects. The first effect accounts for any variations of the transverse momentum spectrum between data and MC and is obtained from an alternate shape produced by varying the jet masses \MJ and dijet mass \MVV by a quantity proportional to \MJ and \MVV. The second effect we consider is a variation of the scale, where the corresponding alternate shape is obtained by simultaneously varying \MJ and \MVV up and down by a quantity proportional to 1/\MVV and 1/\MJ.
-Finally, as we do not know a priori whether Nature behaves more like \PYTHIA{8}, \HERWIG{++}, or \MADGRAPH{}+\PYTHIA{8}, we account for differences due to MC generation and parton-shower modeling by adding three additional shapes corresponding to the three-dimensional templates obtained using different QCD MC generators. Those five shape uncertainties are assigned very large pre-fit values (allowed to float within 33\%), effectively allowing the simulation to take any value to describe the data. The alternate shapes described above are shown in Figure~\ref{fig:searchIII:sys}, here for the 2017 analysis.
+\begin{figure}[h!]
+\centering
+\resizebox{0.99\textwidth}{!}{\includegraphics*{figures/analysis/search3/misc/nonResUnc.png}}
+\caption{QCD Monte Carlo predictions differ significantly between generators. Since we do not know a-priori whether Nature behaves more like \PYTHIA{8}, \HERWIG{++}, or \MADGRAPH{}+\PYTHIA{8}, we allow the 3D template to assume the shape predicted by any of them by adding three additional shapes to the fit, corresponding to the 3D templates obtained using different QCD MC generators.}
+\label{nonResUnc}
+\end{figure}
+Finally, as we do not know a-priori whether Nature behaves more like \PYTHIA{8}, \HERWIG{++}, or \MADGRAPH{}+\PYTHIA{8}, we account for differences due to MC generation and parton-shower modeling by adding three additional shapes corresponding to the three-dimensional templates obtained using different QCD MC generators, illustrated in Figure~\ref{nonResUnc}. Those five shape uncertainties are assigned very large pre-fit values (allowed to float within 33\%), effectively allowing the simulation to take any value to describe the data. The alternate shapes described above are shown in Figure~\ref{fig:searchIII:sys}, here for the 2017 analysis.
 \begin{figure}[h!]
 \centering
 \resizebox{0.45\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/backgroundFits/3Dkernels_HPHP_pythia_2017/cxSyst.png}}
