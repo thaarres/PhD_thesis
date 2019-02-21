@@ -1,7 +1,7 @@
 void Combined_mjj_16vs17()
 {
 //=========Macro generated from canvas: c1/c1
-//=========  (Fri Jun 15 12:14:24 2018) by ROOT version6.06/01
+//=========  (Tue Feb 12 11:57:20 2019) by ROOT version6.06/01
    TCanvas *c1 = new TCanvas("c1", "c1",0,0,800,600);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
@@ -637,13 +637,6 @@ tex->SetNDC();
    tex->SetTextSize(0.0612);
    tex->SetLineWidth(2);
    tex->Draw();
-      tex = new TLatex(0.1578,0.8267,"Preliminary");
-tex->SetNDC();
-   tex->SetTextAlign(13);
-   tex->SetTextFont(52);
-   tex->SetTextSize(0.046512);
-   tex->SetLineWidth(2);
-   tex->Draw();
    
    TPaveText *pt = new TPaveText(0.6893233,0.1529268,0.8095489,0.452439,"brNDC");
    pt->SetBorderSize(0);
@@ -656,7 +649,7 @@ tex->SetNDC();
    AText = pt->AddText("p_{T} > 200 GeV");
    AText = pt->AddText("|\Delta \eta_{jj}| < 1.3");
    AText = pt->AddText("m_{SD} > 55 GeV");
-   AText = pt->AddText("");
+   AText = pt->AddText("All triggers");
    pt->Draw();
    c1->Modified();
    c1->cd();

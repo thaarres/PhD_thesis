@@ -270,6 +270,15 @@ Figure~\ref{fig:lola:eff_val_pu} shows the tagging efficiency and mistagging rat
 \label{fig:lola:eff_val_pu}
 \end{figure}
 \clearpage
+% \chapter{What \textit{does} LoLa learn?}
+% \label{sec:lola:learn}
+% As a first study of what features LoLa learns, one can remove features in the LoLa and Cola layers. The first thing to check
+%
+% Compare nominal training to training after removing variables sensitive to mass and pT
+% Remove CoLa column that passes  sum of all 4-momentum (4 vector of “full jet”)
+% not much impact on overall performance
+% Remove Lola mass and pT  variables reduce performance significantly
+% worst when removing Σpμ and m+pT (like removing jet mass/pT)
 \chapter{Summary}
 \label{sec:lola:outlook}
 In this part of the thesis, we have seen a promising new W-tagging algorithm for future VV searches. Its absolute performance is better than that of the baseline PUPPI softdrop + \nsubj tagger up to a jet \PT of at least 1400 \GeV, roughly corresponding to a dijet invariant mass of 2.5-3 \TeV, and could lead to an increase in total signal efficiency from 18 to 43 \% for the searches presented here. With a \PT decorrelation method already in place, it could already now be used for the one dimensional VV search presented in Search I and Search II. However, if to be used in the multidimensional search framework, a mass decorrelation method needs to be established. I have already outlined two possibilities of how to achieve this in Section~\ref{sec:lola:massculpting}, where one of these has already been shown to work in the context of \PT-decorrelation. This is, as of this writing, left to future studies.

@@ -1,3 +1,14 @@
+\newcommand{\MassExclWPr}{3.7\xspace} % in TeV
+\newcommand{\MassExclZPr}{3.5\xspace}
+\newcommand{\MassExclVPr}{V.V\xspace}
+\newcommand{\BulkGMassMin}{1.2\xspace} %UPDATE
+\newcommand{\BulkGMassMinXsec}{9\xspace} % in fb
+\newcommand{\BulkGMassMax}{5.2\xspace}
+\newcommand{\BulkGMassMaxXsec}{0.2\xspace} %UPDATE
+\newcommand{\BulkGWWMassMinXsec}{9\xspace} % in fb
+\newcommand{\BulkGWWMassMaxXsec}{0.2\xspace}
+\newcommand{\BulkGZZMassMinXsec}{13\xspace} % in fb
+\newcommand{\BulkGZZMassMaxXsec}{0.2\xspace}
 \section{Small bumps and tri-bosons}
 In addition to the observation of a $3.4 \sigma$ excess in the search for diboson resonances in the all-hadronic final state by ATLAS~\cite{Aad2015}, not confirmed by subsequent searches, several little bumps near 2 TeV were observed in data collected at center-of-mass energies of 8 and 13 TeV, as illustrated by the dijet invariant mass distributions observed by ATLAS and CMS in Figure~\ref{fig:searchIII:bumps}. These were not statistically significant, and are expected due to statistical fluctuations, however, only a coherent analysis would be able to determine if a new physics signal could be partly responsible for any of these excesses in the dijet invariant mass of V jets.
 \begin{figure}[h!] 
@@ -20,16 +31,15 @@ Further, these could be 4-pronged objects rather than 2-prong, which would cause
 vector bosons. These heavy scalars would decay to lighter bosons, if kinematically allowed, leading to a cascade of decays that produced signals of multiple bosons in a single jet. Some example signatures are illustrated in Figure~\ref{fig:searchIII:tribosons}.
 \begin{figure}[h!] 
     \centering
-    \includegraphics[height=2cm]{figures/analysis/search3/misc/quadri.pdf}
-    \includegraphics[height=2cm]{figures/analysis/search3/misc/tri1.pdf}
-    \includegraphics[height=2cm]{figures/analysis/search3/misc/tri2.pdf}
+    \includegraphics[height=3cm]{figures/analysis/search3/misc/quadri.pdf}
+    \includegraphics[height=3cm]{figures/analysis/search3/misc/tri1.pdf}
+    \includegraphics[height=3cm]{figures/analysis/search3/misc/tri2.pdf}
     \caption{A \PWpr decaying to a neutral $\rm{H}^0$ and a charged $\rm{H}^{\pm}$ scalar particle leading to a quadriboson final state (left), and a \PWpr decaying to a neutral scalar particle $\rm{H}^0$ and a \PW leading to a triboson final state (middle and right)~\cite{Aguilar-Saavedra:2018xpl}.}
     \label{fig:searchIII:tribosons}
 \end{figure}
 Signatures like these would peak in the groomed-jet mass spectrum and, depending on what the final bosons decay into, have very different substructure profiles.\par
 In order to efficiently search for such types of signals, or any signal peaking in the jet mass spectrum, we decided to build a generic framework that would allow searching for peaks anywhere in the jet-mass and dijet invariant mass spectrum.
-Rather than selecting jets with a groomed mass between 65 and 105 \GeV and then searching for resonances peaking in the dijet invariant mass, we would attempt to look for resonances peaking anywhere in the three-dimensional space formed by the groomed mass of each jet and their dijet invariant mass, scanning the full groomed mass spectrum in a single analysis. We would first demonstrate the new method in context of the diboson all-hadronic search since this was an analysis we were familiar with and which would allow for a straight forward comparison of the obtained results. \clearpage
-
+Rather than selecting jets with a groomed mass between 65 and 105 \GeV and then searching for resonances peaking in the dijet invariant mass, we would attempt to look for resonances peaking anywhere in the three-dimensional space formed by the groomed mass of each jet and their dijet invariant mass, scanning the full groomed mass spectrum in a single analysis. We would first demonstrate the new method in context of the diboson all-hadronic search since this was an analysis we were familiar with and which would allow for a straight forward comparison of the obtained results.
 \section{Analysis strategy}
 The background estimation used in Search I and Search II relies on a one-dimensional fit of the dijet invariant mass of the signal region after a tight selection on the jet mass has been applied. Since the signal will peak in all three dimensions, mainly the dijet invariant mass $\MVV$, and the mass of jet 1 and jet 2 ($\MJO$ and $\MJT$), we will extract the signal from the three-dimensional plane of $\MVV$-$\MJO$-$\MJT$.
 \begin{figure}[h!] 
@@ -38,7 +48,7 @@ The background estimation used in Search I and Search II relies on a one-dimensi
     \caption{The one dimensional diboson analysis versus the three dimensional fit.}
     \label{fig:searchIII:1Dvs3D}
 \end{figure}
-The benefits of doing so are that we can search for resonances decaying to WW, WZ, ZZ, WH, or XX, where X is a new hypothetical boson, in the same analysis. Additionally, a jet-mass selection is no longer needed as we fit the full jet mass line-shape to extract the signal. This effectively increases the signal statistics since a large fraction of the W and Z signal falls outside the mass window. Fitting the groomed-jet mass and resonance mass together also allows for the addition of nuisance parameters that simultaneously affect both in order to fully account for the correlation between the variables. Finally, we would model the background starting from simulation, rather than from a dijet fit to data. This allows the background shape to assume non-smooth distributions, and could allow the search to probe lower dijet masses, something we will discuss further in Section~\ref{sec:searchIII:trigger}. Replacing the parametric fit by a simulation-based model would also reduce the fit sensitivity to background fluctuations in the extreme tails of the dijet invariant mass spectrum. \par
+The benefits of doing so are that we can search for resonances decaying to VV (V=W/Z), VH (H=Higgs), HH, VX, VH, XX, or XY, where X and Y are new hypothetical bosons, in the same analysis. Additionally, a jet-mass selection is no longer needed as we fit the full jet mass line-shape to extract the signal. This effectively increases the signal statistics since a large fraction of the W and Z signal falls outside the mass window. Fitting the groomed-jet mass and resonance mass together also allows for the addition of nuisance parameters that simultaneously affect both in order to fully account for the correlation between the variables. Finally, we would model the background starting from simulation, rather than from a dijet fit to data. This allows the background shape to assume non-smooth distributions, and could allow the search to probe lower dijet masses, something we will discuss further in Section~\ref{sec:searchIII:trigger}. Replacing the parametric fit by a simulation-based model would also reduce the fit sensitivity to background fluctuations in the extreme tails of the dijet invariant mass spectrum. \par
 This chapter presents a novel three-dimensional fit method in the search for diboson resonances in the all-hadronic final state, and is based on 77.3 \fbinv of data collected in 2016 and 2017. The data collected in 2016 was already analyzed in the context of Search II, but is reanalyzed here in order to compare the performance of the three-dimensional fit to that of the one dimensional search.
 
 \section{Data and simulated samples}
@@ -64,6 +74,7 @@ Events are selected following the same criteria as in Search I and Search II (se
 \label{fig:kinematics-all}
 \end{figure}
 
+\clearpage
 \section{Triggering}
 \label{sec:searchIII:trigger}
 The triggers used for the data collected in 2016 are the same as in Section~\ref{sec:searchI:trigger}, while the thresholds in 2017 have increased in order to push the trigger rate to a level acceptable for the increased luminosity. The triggers used for 2017 data are
@@ -74,15 +85,23 @@ The triggers used for the data collected in 2016 are the same as in Section~\ref
 \item {HLT\_AK8PFJet360/380/400/420\_TrimMass30}
 \item {HLT\_AK8PFHT750/800/850/900\_TrimMass50}.
 \end{itemize}
-As in Section~\ref{sec:searchI:trigger}, the trigger names indicate the primary selection criteria, with the terms "PF", "HT", and "AK8" being previously explained. The term "JetXXX" refers to the lower value of the \PT selection criteria of the jet, "HTXXX" refers to the HT requirement, and "TrimMassYY" refers to the trimmed-jet mass selection applied to least one jet. For the results presented here, the analysis threshold is set by the value of \MVV such that the combination of all triggers are greater than $99 \%$ efficient. The trigger turn-on is evaluated in an orthogonal data set in which the presence of a single muon with a \PT above 27 or 50 GeV is required. The trigger turn-on curves as a function of the dijet invariant mass and the softdrop-jet mass are shown in Figure~\ref{fig:searchIII:trigturnon}.
-The combination of all triggers are greater than $99\%$ efficient above a dijet invariant mass of 1126 \GeV and this sets the analysis threshold. 
+As in Section~\ref{sec:searchI:trigger}, the trigger names indicate the primary selection criteria, with the terms "PF", "HT", and "AK8" being previously explained. The term "JetXXX" refers to the lower value of the \PT selection criteria of the jet, "HTXXX" refers to the HT requirement, and "TrimMassYY" refers to the trimmed-jet mass selection applied to least one jet. For the results presented here, the analysis threshold is set by the value of \MVV such that the combination of all triggers are greater than $99 \%$ efficient. The trigger turn-on is evaluated in an orthogonal data set in which the presence of a single muon with a \PT above 27 or 50 GeV is required. The trigger efficiency as a function of dijet invariant mass using a combination of all triggers (left), and as a function of the jet soft drop mass for the grooming-based triggers only (right) are shown in Figure~\ref{fig:trigturnon}. The grooming-based triggers in the 2017 data set do not fully reach the trigger plateau as the triggers where unavailable during one data taking period, corresponding to 4.8 \fbinv. 
 \begin{figure}[h!]
 \centering 
 \includegraphics[width=0.45\textwidth]{figures/analysis/search3/B2G-18-002/Combined_mj1_16vs17.pdf}
 \includegraphics[width=0.45\textwidth]{figures/analysis/search3/B2G-18-002/Combined_mjj_16vs17.pdf}
-\caption{Trigger turn-on curves in the 2016 and 2017 datasets. Left: the trigger efficiency as a function of offline softdrop-jet mass for the trigger requiring an online trimmed-jet mass of at least 30 GeV. Right: the trigger efficiency as a function of dijet invariant mass for events passing any of the analysis triggers.}
-\label{fig:searchIII:trigturnon}
+\caption{Left: trigger efficiency as a function of the dijet invariant mass using a combination of all analysis triggers. Right: trigger efficiency as a function of the jet softdrop mass for triggers requiring an online trimmed mass of at least 30 or 50 \GeV.}
+\label{fig:trigturnon}
 \end{figure}
+The corresponding turn-on excluding the data taken without grooming-based triggers included, is shown in Figure~\ref{fig:trigturnon_noRunB}. Here we see the that the trigger efficiency as a function of jet softdrop mass reaches the trigger plateau at the same point as in 2016.
+\begin{figure}[h!]
+\centering 
+\includegraphics[width=0.45\textwidth]{figures/analysis/search3/B2G-18-002/Combined_noRunB_mj1_16vs17.pdf}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search3/B2G-18-002/Combined_noRunB_mjj_16vs17.pdf}
+\caption{Left: trigger efficiency as a function of the dijet invariant mass using a combination of all analysis triggers. Right: trigger efficiency as a function of the jet softdrop mass for triggers requiring an online trimmed mass of at least 30 or 50 \GeV. Here after excluding the data taken in 2017 without grooming-based triggers included.}
+\label{fig:trigturnon_noRunB}
+\end{figure}
+The combination of all triggers are $>99\%$ efficient above a dijet invariant mass of 1126 (990) \GeV for the 2017 (2016) dataset. Since the point of full efficiency is largest in the 2017 dataset, this sets the analysis threshold. 
 
 \subsection{Trigger turn-on modeling}
 \label{sec:searchIII:triggermodeling}
@@ -142,7 +161,7 @@ In order to identify W-jet and Z-jet candidates we utilize the softdrop algorith
 \begin{equation}
 \rho' = log(m^2/p_T/\mu) \textrm{, where $\mu$ = 1 GeV}.
 \end{equation}
-Figure~\ref{fig:rho} shows the profile distribution of $\tau_{21}$ as a function of $\rho'$ after applying the preselections listed above together with a softdrop mass selection of $\unit{55} < m_{sd} < \unit{215}{\GeV}$.
+Figure~\ref{fig:rho} shows the profile distribution of $\tau_{21}$ as a function of $\rho'$ for QCD jets after applying the preselections listed above together with a softdrop mass selection of $\unit{55} < m_{sd} < \unit{215}{\GeV}$.
 % before (left) and after (right) applying a softdrop mass selection of $\unit{55}{\GeV} < m_{sd} < \unit{215}{\GeV}$ (right).
 \begin{figure}[h!]
 \centering
@@ -182,19 +201,37 @@ Which selections on \ddt to be used are chosen in the following way. First, we c
 \caption{The $\tau_{21}^{DDT}$ cut corresponding to the highest Punzi significance for a given signal resonance mass, here for a Bulk $G\rightarrow WW$ (left) and a Bulk $G\rightarrow ZZ$ (right) signal.}
 \label{fig:punzi}
 \end{figure}
-The cut maximizing the Punzi significance at lower resonance mass, where the background is highest, is chosen as the "high purity" (HP) working point.
-This corresponds to $\tau_{21}^{DDT} \leq 0.43$. We then proceed by finding which selections on \ddt contains at least 95\% of the signal, and out of those select the one that optimizes the Punzi significance. This is found to be $0.43<\tau_{21}^{DDT}\leq0.79$, and is classified as the low purity (LP) category. The purpose of this category is to enhance the overall sensitivity of the analysis, especially where the background is low.
-Figure~\ref{fig:roc} shows the W-jet signal efficiency versus QCD light-flavor jet mistag rate comparing three different taggers: the \nsubj-based tagger, the \ddt tagger tuned especially for this analysis with $\ensuremath{M} = -0.080$, and an older tuning of the \ddt using $\ensuremath{M} = -0.063$, as studied in Section~\ref{sec:searchII:vtagperf}. The retuned \ddt tagger has a higher signal efficiency for a given mistagging rate than the other taggers in this study.
+The cut maximizing the Punzi significance at lower resonance mass, where the background is highest, is chosen as the "high-purity" (HP) working point.
+This corresponds to $\tau_{21}^{DDT} \leq 0.43$. We then proceed by finding which selections on \ddt contains at least 95\% of the signal, and out of those select the one that optimizes the Punzi significance. This is found to be $0.43<\tau_{21}^{DDT}\leq0.79$, and is classified as the low purity (LP) category. The purpose of this category is to enhance the overall sensitivity of the analysis, especially where the background is low.\par
+Figure~\ref{fig:searchIII:roc} shows the performance of $\tau_{21}$ and $\tau_{21}^{DDT}$ (2016 and 2017 tune) in the background-signal efficiency plane (top). We observe a significant gain in signal efficiency at a fixed mistag rate with the decorrelated taggers, when not using a tight jet groomed mass selection (recall: a window of $\unit{55}{\GeV} < M_{SD} < \unit{215}{\GeV}$ is used in this analysis). That is because we are taking advantage of far more information when computing the DDT: subjettiness, and the ratio of jet groomed mass and momentum. All these have a distribution which is different between quark/gluon jets and W-jets, leading to a larger separation between signal and background, as can be seen when comparing the distributions of the different taggers in the left plot of Figure~\ref{fig:searchIII:m2pt}. The distribution of $log(m_{SD}^2/p_T)$ is shown on the right in Figure~\ref{fig:searchIII:m2pt}, and it it clear that the variable adds discriminating power.
 \begin{figure}[h!]
 \centering
 \begin{tabular}{cc}
-\includegraphics[width=0.49\textwidth]{figures/analysis/search3/AN-17-303/vtag/LoLa-comp-roc-simple.png}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/vtag/rocTau21s.pdf}
 \end{tabular}
 \caption{Performance of $\tau_{21}$ and $\tau_{21}^{DDT}$ (2016 and 2017 tune) in the background-signal efficiency plane.}
-\label{fig:roc}
+\label{fig:searchIII:roc}
 \end{figure}
-In addition to a selection on \ddt, a selection on $\rho = log(m^2/p_T^2) < -1.8 $ is applied to all jets.
-The reason for this is that, while the distribution of $\rho$ is expected to be flat as a function of jet transverse momentum for QCD jets, this only holds in the region where perturbative contributions dominate and breaks down at around $\rho = log(m^2/p_T^2) < -2.0$ due to the AK8 cone size being too small to contain the full jet at high masses. The \ddt decorrelation is therefore only valid in a region below $\rho < -1.8 $. This has a negligible effect on the signal, which mainly peaks around a jet mass of 80 GeV and has jets with relatively high transverse momenta. Figure~\ref{fig:wtagCP} shows the distributions of the PUPPI softdrop jet mass, the \ddt, and the \nsubj variable for simulation and for data. The softdrop jet mass in the signal distribution peaks nicely around the W mass, while the multijets background spectrum is peaked at lower softdrop masses.
+\begin{figure}[h!]
+\centering
+\begin{tabular}{cc}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/vtag/compare_tau21s.pdf}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/vtag/logm2pt.pdf}
+\end{tabular}
+\caption{Distribution of $\tau_{21}$ and $\tau_{21}^{DDT}$ with the old and the new tune (left) and comparison of $log(m^2/p_T)$ for signal and background jets (right).}
+\label{fig:searchIII:m2pt}
+\end{figure}\noindent 
+In addition to cutting on $\tau_{21}^{DDT}$, a selection on $\rho = log(m^2/p_T^2) < -1.8 $ is applied. This is in order to avoid configurations where the jet mass is high, but the jet transverse momentum is low. In these cases, the AK8 cone size is too small to contain the full jet, affecting both the jet mass resolution and the \ddt tagging efficiency. These edge effects are difficult to model in simulation and we therefore avoid this region in the following. Figure~\ref{fig:rhoDDT} shows the profile distribution of \ddt versus $\rho$ for QCD jets, where a clear deviation from the observed linear spectra is observed above a $\rho$ of -1.8.
+\begin{figure}[h!]
+\centering
+\begin{tabular}{cc}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/vtag/rho_pythia_FullSel_rhoClosure.pdf}
+\end{tabular}
+\caption{Profile distributions of $\tau_{21}^{DDT}$ as a function of $\rho = log(m^2/p_T^2)$, where $\mu$ = 1 GeV. The DDT breaks down above $\rho=-1.8$. }
+\label{fig:rhoDDT}
+\end{figure}
+ Note that this has a negligible effect on signal jets, which mainly peak around 80 GeV and have a high jet transverse momenta.
+Figure~\ref{fig:wtagCP} shows the distributions of the PUPPI softdrop jet mass, the \ddt, and the \nsubj variable for simulation and for data. The softdrop jet mass in the signal distribution peaks nicely around the W mass, while the multijets background spectrum is peaked at lower softdrop masses.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.450\textwidth]{figures/analysis/search3/B2G-18-002/looseSel_Jet_1_softdrop_mass.pdf}
@@ -208,10 +245,10 @@ The reason for this is that, while the distribution of $\rho$ is expected to be 
 Following what was done in Section~\ref{sec:searchI:vtag} and~\ref{sec:searchII:wtagsf}, we derive W-tagging scale factors in order to correct the efficiency in MC of the selection on \ddt, by estimating the ratio of the selection efficiencies in data and in simulation. The softdrop jet mass range is fitted from 55 to 215 \GeV, and the two categories of purity are:
 \begin{itemize}
 \itemsep0em
-  \item pass region: $0 <  \ddt \leq 0.43 \sim$ high purity,
+  \item pass region: $0 <  \ddt \leq 0.43 \sim$ high-purity,
   \item fail region: $0.43 < \nsubj \leq 0.79 \sim$ low purity.
 \end{itemize}
-The obtained scale factors, jet-mass scale and resolution together with their statistical uncertainty are listed in Tables~\ref{tab:wsf16} and~\ref{tab:wsf} for 2016 and 2017 data, respectively. The corresponding simultaneous fits are shown in Figure~\ref{fig:simFit}. In addition to the statistical uncertainty, two systematic uncertainties are evaluated: one due to generator differences and one due to NNLO corrections. The former is evaluated by comparing the resulting scale factors when using \ttbar simulation produced with different generators. The latter is evaluated by comparing the extracted efficiency with and without top-\PT reweighting. This weight is derived from data in order to better describe the observed \PT distribution in \ttbar and is calculated for each top jet as $w=\exp^{0.0615-0.0005*p_{T,top}}$. The W tagging scale factors, jet mass scale, and jet mass resolution, with their total uncertainty after adding systematics, are listed in Table~\ref{tab:wsf_total}. As before, the scale factor is used to scale the signal yield and the jet mass scale and resolution are used to smear the MC.
+The obtained scale factors, jet-mass scale and resolution together with their statistical uncertainty are listed in Tables~\ref{tab:wsf16} and~\ref{tab:wsf} for 2016 and 2017 data, respectively. The corresponding simultaneous fits are shown in Figure~\ref{fig:simFit}. The W-tagging efficiency in this region is lower than what is expected for signal jets, around 7\% compared to 35\%. This is expected as the measurement in \ttbar is dominated by W-jets with a \PT of around 200\GeV, just where the W decay products merge into a single jet, whereas the signal jets mostly have a transverse momentum above 600\GeV. The signal efficiency for $\nsubj^{DDT}$ increases at a function of jet \PT, as can be seen from Figure~\ref{fig:SignalYields}, whereas the background efficiency is flat by design. In addition to the statistical uncertainty, two systematic uncertainties are evaluated: one due to generator differences and one due to NNLO corrections. The former is evaluated by comparing the resulting scale factors when using \ttbar simulation produced with different generators. The latter is evaluated by comparing the extracted efficiency with and without top-\PT reweighting. This weight is derived from data in order to better describe the observed \PT distribution in \ttbar and is calculated for each top jet as $w=\exp^{0.0615-0.0005*p_{T,top}}$. The W tagging scale factors, jet mass scale, and jet mass resolution, with their total uncertainty after adding systematics, are listed in Table~\ref{tab:wsf_total}. As before, the scale factor is used to scale the signal yield and the jet mass scale and resolution are used to smear the MC. The difference in jet mass scale between data and simulation is around 2\%, and the jet mass resolution scale factor is roughly 8\%.
  \begin{table}[h!]
     \centering
     \begin{tabular}{|lccc|}
@@ -269,7 +306,7 @@ The obtained scale factors, jet-mass scale and resolution together with their st
  \caption{PUPPI softdrop jet mass distribution for events that pass (left) and fail (right) the $\ddt<0.43$ selection in the \ttbar control sample. The result of the fit to data and simulation is shown by the solid blue and solid red line, respectively. The background components of the fit are shown as dashed-dotted lines. The fit to 2016 data is shown in the upper panels and the fit to 2017 data in the lower panels.}
  \label{fig:simFit}
  \end{figure}
- \begin{table}[htbp]
+ \begin{table}[h!]
     \centering
      \begin{tabular}{|l|c|c|}
      \hline
@@ -291,9 +328,9 @@ The obtained scale factors, jet-mass scale and resolution together with their st
        \caption{Final jet mass scale, jet mass resolution, and $\tau_{21}^{DDT}$ scalefactors with statistical and systematic uncertainties.}
        \label{tab:wsf_total}
     \end{table}
-
-
+\clearpage
 \subsection{\PT-dependence}
+\label{sec:searchIII:vtagpt}
 The $\tau_{21}^{DDT}$ selection criteria used for this search is restrictive to favor better signal significance, but results in small event samples of the data and simulation needed to produce the scale factors. In order to determine the dependence of the W-tagging efficiency, and the PUPPI softdrop jet-mass scale and resolution on the transverse momentum of the jets, we divide the sample into 4 different jet-\PT bins using the looser softdrop + \nsubj tagger, and compute the scale factors per bin. The systematic uncertainties are evaluated the same way as above (one due to top-\PT reweighting and one comparing different \ttbar samples). Figure~\ref{fig:searchIII:sfvspt} shows the extracted W-tagging efficiency for data (black markers) and for simulation (red markers) using a tagger based on PUPPI softdrop with a requirement of $\nsubj<0.4$, as a function of jet \PT. The inclusive efficiency measurement is marked with triangles. The lower panel shows the efficiency ratio of data over simulation, corresponding to the W-tagging scale factor. All scale factors are compatible with unity, but the uncertainty on the measurement grows as statistics decrease. The corresponding extracted scale factors are listed in Table~\ref{tab:searchIII:sfptdep}.
  \begin{figure}[h!]
  \centering
@@ -320,15 +357,16 @@ $\geq$ 200 GeV & $0.974  \pm \sqrt{ 0.029^2 + 0.055^2 + 0.015^2 }$ & $0.97 \pm 0
  \end{table}
 With the observation of this clear trend of an uncertainty increase as a function of \PT, we evaluate a \PT-dependent W-tagging scale factor uncertainty in the following way: using signal Monte Carlo generated with two different shower generators, \PYTHIA{8} and \HERWIG{++}, we compute the difference in tagging efficiency between the two samples at low-\PT, where we have a real measurement in data, and compare that to the difference in tagging efficiency between the two at high-\PT. In other words, we take a double ratio 
 \begin{equation}
-  \sigma_{p_{T,\textrm{Bin}=i}}=\frac{ (\frac{\epsilon_{\PYTHIA}}{\epsilon_{\HERWIG}})_{p_{T,\textrm{Bin}=i}}} {(\frac{\epsilon_{\PYTHIA}}{\epsilon_{\HERWIG}})_{500 \GeV}},
+  \sigma_{p_{T,\textrm{Bin}=i}}=\frac{ (\frac{\epsilon_{\PYTHIA}}{\epsilon_{\HERWIG}})_{p_{T,\textrm{Bin}=i}}} {(\frac{\epsilon_{\PYTHIA}}{\epsilon_{\HERWIG}})_{300 \GeV}},
   \end{equation}
-where $\sigma_{p_{T,\textrm{Bin}=i}}$ is the uncertainty on the scale factor on \PT bin $i$. In contrast with what was found for the \nsubj-based tagger in Section~\ref{sec:searchI:wtagsystematic}, where this uncertainty grew logarithmically with \PT, we find that the corresponding double ratio stabilizes around 1 \TeV when using \ddt, and that it is better described by a sigmoid function. The resulting parametrization of $\sigma_{p_{T}}$ using a sigmoid fit, is shown in Figure~\ref{fig:searchIII:tau21ptdep}.
+where $\sigma_{p_{T,\textrm{Bin}=i}}$ is the uncertainty on the scale factor on \PT bin $i$. In contrast with what was found for the \nsubj-based tagger in Section~\ref{sec:searchI:wtagsystematic}, where this uncertainty grew logarithmically with \PT, we find that the corresponding double ratio stabilizes around 1 \TeV in the high-purity category when using \ddt, and that it is better described by a sigmoid function. The uncertainty for the low-purity category is still well described by a logarithmic function. The resulting parametrization of $\sigma_{p_{T}}$ using a sigmoid fit, is shown in Figure~\ref{fig:searchIII:tau21ptdep}.
  \begin{figure}[h!]
  \centering
- \includegraphics[width=0.49\textwidth]{figures/vtagging/2017_sf/ptdep.png}
- \caption{The parametrized uncertainty on the W-tagging efficiency scale factor as a function of resonance mass (typically $2\times \PT$).}
+ \includegraphics[width=0.49\textwidth]{figures/vtagging/2017_sf/ptdep.pdf}
+ \caption{The parametrized uncertainty on the W-tagging efficiency scale factor as a function of the jet \PT.}
  \label{fig:searchIII:tau21ptdep}
  \end{figure}
+In my personal opinion, this way of defining an uncertainty is rather random and ad hoc. We already know there is a large difference in the modeling of substructure variables between generators, and there is no good reason to believe the difference between \PYTHIA{8} and \HERWIG{++} provides a reasonable description of the magnitude of the uncertainty. In an analysis using two jets this is a very large and overly conservative systematic uncertainty that is impossible to constrain from data. I would rather prefer to use the measured scale factor uncertainties in data and extrapolate these, but the above method was used in previous searches and is therefore the method of choice for the Jet Physics Object Group at CMS. I will therefore continue using these uncertainties for the presented analysis, but will attempt to change this for future searches.
 In addition to measuring the dependence of the tagging efficiency on jet \PT, we  also extract the change in softdrop jet-mass scale and resolution as a function of \PT. We find that the jet-mass scale in data divided by MC ranges between 0.5 and 2.5\% for the \PT bins considered, and the jet-mass resolution varies between 4 and 10\%, the latter measurement not being statistically significant as the uncertainties are large, around 10\%. For this analysis, we therefore use a fixed uncertainty of 2 and 10\% for the softdrop jet-mass scale and resolution, respectively, to cover any broadening or shift at high \PT not described by the simulation.
    
 \clearpage    
@@ -389,7 +427,7 @@ The same procedure is used to model the jet mass; the \MJ spectrum for each reso
 \caption{The interpolated double Crystal-ball parameters for the softdrop jet mass as a function of $M_X$. To improve the stability of the fit some parameters are set constant.}
 \label{fig:MJet1ShapeParam}
 \end{figure}
-The final \MJO shapes, as extracted from the parametrizatio,n are shown in Figures~\ref{fig:MJfromjson}.
+The final \MJO shapes, as extracted from the parametrization are shown in Figures~\ref{fig:MJfromjson}.
 \begin{figure}[h!]
 \centering
 \resizebox{0.6\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/signalFits/signalShapes_mJ_All.pdf}}
@@ -562,38 +600,48 @@ As a closure test, the three-dimensional kernel as defined in Equation~\ref{eq:s
 
 \section{Systematic uncertainties}
 \label{sec:searchIII:sysunc}
+The background estimate for each signal mass hypothesis is obtained by fitting the signal and background three-dimensional probability density functions obtained above, to the observed data in each analysis category. We follow the modified frequentist prescription (CLs) criterion, evaluated using asymptotic expressions described in Ref.~\cite{CLs}.
+Systematic uncertainties are treated as nuisance parameters and profiled in the statistical interpretation using log-normal priors, while Gaussian priors are used for shape uncertainties. The uncertainties entering the fit are listed in Table~\ref{tab:systematics}.
+\begin{table}[h!]
+  \centering
+  \footnotesize
+  \begin{tabular}{llcc}
+    \hline
+    Source                        & Relevant quantity      & HPHP unc. (\%)  & HPLP unc. (\%)\\
+    \hline
+    PDFs                      & Signal yield                  & \multicolumn{2}{c}{3}\\
+    W-tagging efficiency      & Signal+ V+jets yield       & 25 (21)              & 13 (11) \\ %W-tagging efficiency      & Signal+ V+jets yield       & 12 (10)              & 1 \\ 
+    W-tagging \PT-dependence  & Signal+ V+jets yield       & 5-60       & 5-44 \\ 
+    Integrated luminosity     & Signal+ V+jets yield       & \multicolumn{2}{c}{2.3 (2.6)}\\
+    \hline
+    QCD normalization         & Background yield              & \multicolumn{2}{c}{50}\\
+    V+jets normalization      & Background yield              & \multicolumn{2}{c}{10}\\
+    V+jets ratio              & Migration                     & \multicolumn{2}{c}{10}\\
+    \hline
+    PDFs                      & Signal \MVV/\MJ shape         & \multicolumn{2}{c}{$<1$}\\
+    Jet energy scale          & Signal \MVV shape             & \multicolumn{2}{c}{2}\\
+    Jet energy resolution     & Signal \MVV shape             & \multicolumn{2}{c}{5}\\
+    Jet mass scale            & Signal + V+jets \MJ shape   & \multicolumn{2}{c}{1}\\
+    Jet mass resolution       & Signal + V+jets \MJ shape   & \multicolumn{2}{c}{8}\\
+    \hline
+    QCD \HERWIG{++}           & QCD shape                     & \multicolumn{2}{c}{33}\\
+    QCD \MADGRAPH{}+\PYTHIA{8}& QCD shape                     & \multicolumn{2}{c}{33}\\
+    \PT-variations            & QCD shape                     & \multicolumn{2}{c}{33}\\
+    Scale-variations          & QCD shape                     & \multicolumn{2}{c}{33}\\
+    High-\MJ turn-on          & QCD shape                     & \multicolumn{2}{c}{33}\\
+    \hline
+    \PT-variations            & V+jets \MVV shape             & \multicolumn{2}{c}{33}\\
+    \hline
+  \end{tabular}
+  \caption{Summary of the systematic uncertainties and the quantities they affect. Numbers in parenthesis correspond to uncertainties for the 2016 analysis, when these differ from 2017. }
+  \label{tab:systematics}
+\end{table}
+Here, V+jets ratio describes the ratio between W+jets and Z+jets events and is allowed to float by 10\%. The W-tagging efficiency scale factor is fully anti-correlated between the HP and LP categories (3--10\%), and fully correlated between signal and +jets. The \PT-dependence uncertainty of the scale factor arises from the extrapolation of the W-tagging efficiency scale factors, which are measured in \ttbar{} events where the jet has a \pt around 200\GeV, towards higher transverse momenta. This uncertainty is estimated in signal MC and is based on the difference in tagging efficiency between \PYTHIA{} and \HERWIG{++} as a function of \pt relative to the difference at 200\GeV. This is considered as correlated between the $\nsubj^{DDT}$ categories and is defined in Section~\ref{sec:searchIII:vtagpt}.
+The shape uncertainties on \MJ are considered fully correlated between signal and V+Jets, allowing for the data to constrain these parameters. These affect the mean and the width of the signal and V+jets PDFs.
 
-Systematic uncertainties are inserted as nuisance parameters in the fit and affect the normalization and shape of both signal and background.
-
-\subsection{Signal normalization}
-As all background contributions are data driven, the largest systematic uncertainties affect only the signal and are as follows:
-\begin{itemize}
-  \itemsep0em
-\item {\bf luminosity: } 2.6\%(2.3\%) for the 2016(2017) dataset,
-\item {\bf $\tau_{21}^{DDT}$ efficiency: } 1-12\% uncertainty on the W-tagging efficiency scale factor for the \ddt selection (listed in Table~\ref{tab:wsf_total}), treated as anti-correlated between the purity categories,
-\item {\bf $\tau_{21}^{DDT}$ \PT{} extrapolation: } uncertainty arising from the extrapolation of the V-tagging efficiency scale factors up to higher transverse momenta, treated as correlated between the \ddt categories, and 
-\item {\bf parton distribution function: } a fixed 2\% uncertainty on the signal acceptance due to the choice of parton distribution function and factorization/renormalization scale. 
-\end{itemize} 
-
-
-\subsection{Background normalization}
-The QCD multijet background has a poorly known cross section and is therefore allowed to float within 50\% of the yield expected by simulation. For the resonant V+jets background, the following uncertainties on the normalization are added: one due to the cross section ($\sim5\%$), one due to NLO QCD corrections ($\sim10\%$), and one due NLO electroweak corrections ($\sim15-35\%$).
-
-\subsection{Signal and resonant background shape}
-There are two shape uncertainties correlated between the signal and V+jets background: systematics due to the jet-mass scale (JMS) and jet-mass resolution (JMR), affecting the mean and width of the jet mass PDFs. These systematics were evaluated in Section~\ref{sec:searchIII:wtagSF} and are listed in Table~\ref{tab:wsf_total}. 
-Three additional shape uncertainties are added for the signal only: uncertainties due to the jet energy scale (JES), the jet energy resolution (JER) and due to the choice of parton density function for the signal. The uncertainties due to JES and JER are evaluated by reweighting the transverse momentum of each event in signal MC, then fitting a Gaussian to the dijet invariant mass spectrum and calculating the change in the mean and variance with respect to no reweighting applied. These correspond to a 2\% uncertainty on the signal \MVV shape and a 5\% uncertainty on the \MVV resolution.\newline
-Uncertainties due to the choice of parton density function are evaluated by reweighting each event according to $\approx$~100 PDF variations. The impact on the signal shapes are again evaluated by fitting a Gaussian to the $m_{jet}$ and $m_{jj}$ distributions before and after changing PDF weights. The obtained variation is less than $1\%$ for the 2017 signal MC, but slightly higher in 2016. An overall uncertainty on the acceptance of 3\% is therefore applied. 
-
-
-\subsection{Non-resonant background shape}
-Alternate shapes for the non-resonant background components are added to the fit through vertical template morphing. This creates nuisance parameters for each additional shape shape, allowing the derived nominal 3D PDF to vary within the respective nuisances to match the data. Shape uncertainties that simultaneously affect all three dimensions are used, with a total of 5 needed to account for possible effects. The first effect accounts for any variations of the transverse momentum spectrum between data and MC and is obtained from an alternate shape produced by varying the jet masses \MJ and dijet mass \MVV by a quantity proportional to \MJ and \MVV. The second effect we consider is a variation of the scale, where the corresponding alternate shape is obtained by simultaneously varying \MJ and \MVV up and down by a quantity proportional to 1/\MVV and 1/\MJ.
-\begin{figure}[h!]
-\centering
-\resizebox{0.99\textwidth}{!}{\includegraphics*{figures/analysis/search3/misc/nonResUnc.png}}
-\caption{QCD Monte Carlo predictions differ significantly between generators. Since we do not know a-priori whether Nature behaves more like \PYTHIA{8}, \HERWIG{++}, or \MADGRAPH{}+\PYTHIA{8}, we allow the 3D template to assume the shape predicted by any of them by adding three additional shapes to the fit, corresponding to the 3D templates obtained using different QCD MC generators.}
-\label{nonResUnc}
-\end{figure}
-Finally, as we do not know a-priori whether Nature behaves more like \PYTHIA{8}, \HERWIG{++}, or \MADGRAPH{}+\PYTHIA{8}, we account for differences due to MC generation and parton-shower modeling by adding three additional shapes corresponding to the three-dimensional templates obtained using different QCD MC generators, illustrated in Figure~\ref{nonResUnc}. Those five shape uncertainties are assigned very large pre-fit values (allowed to float within 33\%), effectively allowing the simulation to take any value to describe the data. The alternate shapes described above are shown in Figure~\ref{fig:searchIII:sys}, here for the 2017 analysis.
+Uncertainties on the background shape are added as alternate PDFs to the fit through vertical template morphing. This creates nuisance parameters for each shape that simultaneously affect all three dimensions. We define five shape nuisance parameters in total. The first effect corresponds to a variation of the underlying transverse momentum spectrum and the corresponding template is obtained by simultaneously varying jet masses and \MVV by a quantity proportional to \MVV and \MJ. The second effect is a variation of the scale and is taken into account through an alternate shape obtained by simultaneously varying the jet masses and \MVV by a quantity proportional to 1/\MVV and 1/\MJ.
+Three additional alternate shapes that simultaneously affect resonance mass and jet groomed mass are also added in order to take into account differences in MC generation and modeling of parton shower. Since the choice of QCD MC used to generate the nominal template is random, we insert additional templates derived using all available QCD MC: \HERWIG{++}, \MADGRAPH{}+\PYTHIA{8} and \POWHEG{}. This allows us to include all background knowledge we have available into the fit. Finally, in order to account for an expected \MVV turn-on in the extreme large-\MJ ($>175 \GeV$) and low-\MVV($<1200 \GeV$) region, an additional shape uncertainty parametrizing any discrepancy between the three-dimensional template and QCD MC is added to the fit. Note that the latter shape uncertainty only affects the region above $\MJ >175 \GeV$ and below $\MVV<1200 \GeV$, far from where signal is expected.
+The above nuisance parameters are assigned very large pre-fit values, allowed to float within 33--50\%, effectively allowing the simulation enough flexibility to adapt to data. The alternate shapes described above are shown in Figure~\ref{fig:searchIII:sys}.
 \begin{figure}[h!]
 \centering
 \resizebox{0.45\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/backgroundFits/3Dkernels_HPHP_pythia_2017/cxSyst.png}}
@@ -694,14 +742,13 @@ A goodness-of-fit check is performed, shown on the left plot in Figure~\ref{fig:
 \caption{Left: the likelihood for toys generated around the background-only fit to LPLP data, compared to the likelihood on data. Data is in good agreement with the background-only hypothesis. Right: pulls of the nuisance parameters for a background-only fit.}
 \label{fig:gofLPLP}
 \end{figure}
-% In addition to the goodness-of-fit check in the data sideband region, we also perform the same test on the data signal region, shown in Figure \ref{fig:gofSR}. Here, very good agreement between the likelihood of data and the background only hypothesis from MC simulation is observed.
-% \begin{figure}[h!]
-% \centering
-% \resizebox{0.45\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/GOF_SR.pdf}}
-% \caption{The likelihood of toys generated around the background-only hypothesis compared to the likelihood on data for the comined 2016 and 2017 datasets.}
-% \label{fig:gofSR}
-% \end{figure}
-% \clearpage
+In addition to the goodness-of-fit check in the LPLP data sideband region, we perform the same test on the data signal region. This is shown in Figure \ref{fig:gofSR}. Good agreement between the observed fit result in data and the background only hypothesis from MC simulation is observed.
+\begin{figure}[h!]
+\centering
+\resizebox{0.45\textwidth}{!}{\includegraphics*{figures/analysis/search3/AN-17-303/postfitchecks/GOF_SR.pdf}}
+\caption{Distribution of the likelihood for toys generated around the background-only hypothesis compared to the likelihood on data for the full combination of 2016 and 2017 data.}
+\label{fig:gofSR}
+\end{figure}
 
 \subsection{Bias test in pseudodata}
 \label{sec:bias}
@@ -786,40 +833,69 @@ Post-fit total background & 811.4 $\pm$ 20.3 & 57195.5 $\pm$ 436.8\\
 \clearpage
 
 \subsection{Limits}
-As for Search I and Search II, exclusion limits on the cross section of the process $\text{X} \to VV$ are set in the context of the Bulk Graviton model and the HVT model~B scenario (again obtained using the asymptotic $\text{CL}_\text{S}$ method). Figure~\ref{fig:searchIII:limitsCombo} show the resulting expected and observed exclusion limits at 95 \% confidence level on the signal cross section times branching fraction as a function of the resonance mass for a $\BulkG\rightarrow WW$ (top left), $\BulkG\rightarrow ZZ$ (top right), $\PWpr\rightarrow WZ$ (bottom left) and $\PZpr\rightarrow WW$ (bottom right) signal. The obtained limits are compared with the resonance's production cross section times the branching fraction to $\PW\PW$, $\PZ\PZ$ and $\PW\PZ$.
+As for Search I and Search II, exclusion limits on the cross section of the process $\text{X} \to VV$ are set in the context of the Bulk Graviton model and the HVT model~B scenario (again obtained using the asymptotic $\text{CL}_\text{S}$ method). Figure~\ref{fig:searchIII:limitsCombo} show the resulting expected and observed exclusion limits at 95 \% confidence level on the signal cross section times branching fraction as a function of the resonance mass for a $\BulkG\rightarrow WW$ (top left), $\BulkG\rightarrow ZZ$ (top right), $\PWpr\rightarrow WZ$ (bottom left) and $\PZpr\rightarrow WW$ (bottom right) signal. The obtained limits are compared with the resonance's production cross section times the branching fraction to $\PW\PW$, $\PZ\PZ$ and $\PW\PZ$. For the heavy vector triplet model~B, we exclude at 95\% confidence level \PWpr and \PZpr spin-1 resonances with masses below \MassExclWPr and \MassExclZPr\TeV, respectively. In the narrow-width bulk graviton model, lower limits on the production cross sections are set in the range from \BulkGWWMassMinXsec\unit{fb} for a resonance mass of \BulkGMassMin\TeV, down to \BulkGWWMassMaxXsec\unit{fb} for high resonance masses above \BulkGMassMax\TeV for $\BulkG\rightarrow \PW\PW$. In the case of $\BulkG\rightarrow \PZ\PZ$, lower cross section limits are \BulkGZZMassMinXsec\unit{fb} and \BulkGZZMassMaxXsec\unit{fb} for bulk graviton masses of \BulkGMassMin and \BulkGMassMax\TeV, respectively.
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/limits_BulkGWW_combo_2016_2017.png}
-\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/limits_BulkGZZ_combo_2016_2017.png}\\
-\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/limits_WprimeWZ_combo_2016_2017.png}
-\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/limits_ZprimeWW_combo_2016_2017.png}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/limits_BulkGWW_combo_2016_2017.pdf}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/limits_BulkGZZ_combo_2016_2017.pdf}\\
+\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/limits_WprimeWZ_combo_2016_2017.pdf}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/limits_ZprimeWW_combo_2016_2017.pdf}
 \caption{Expected limits obtained combining 35.9\fbinv and 41.4\fbinv of data of data after combining all purity categories for Bulk $G\rightarrow WW$ (top left), Bulk $G\rightarrow ZZ$ 
 (top right), $\PWpr\rightarrow WZ$ (bottom left) and $\PZpr\rightarrow WW$ (bottom right) signals.}
 \label{fig:searchIII:limitsCombo}
 \end{figure}
-To answer the question of whether the 3D fit method yields an improvement upon the 1D search method, we compare the limits obtained above to those obtained using the 1D fit method (the results from Search II). In Figure~\ref{fig:limitsCompare} we see a 20--30\% improvement for all signal hypotheses with the new method (comparing the 1D and 3D 2016 limits only), and a total gain of about 35---40\% when combining the 2016 and 2017 datasets.
+\subsubsection{Comparison with 1D fit}
+\label{sec:limitcompare}
+The analysis of the 2016 dataset and corresponding limits obtained using the 3D fit method, can be compared to the limits using the 1D fit in Search II in order to estimate whether there is a sensitivity gain. One caveat of this comparison is that the analysis performed using the 1D method does not apply jet energy resolution smearing to the jets, and hence uses an overly optimistic assumption on the dijet invariant mass resolution. The difference in resonance mass resolution with and without jet energy resolution smearing is shown in Figure~\ref{fig:jerCompare} for the 2016 (left) and 2017 (right) signal samples. With JER smearing applied, the resonance mass resolution is worse and the peak broadens by 5\%.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/comparison_studies/signal_testMjj_2016.pdf}
+\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/comparison_studies/2017_w_wo_JER.pdf}
+\caption{Right: A comparison of the resonance mass resolution with (turquoise) and without (blue) jet energy resolution (JER) smearing using 2016 signal samples. Left: A comparison of the resonance mass resolution with (red) and without (black) jet energy resolution (JER) smearing using 2017 signal samples. In both cases, the mass resolution is worse after smearing, and has a roughly 8-10\% larger width.}
+\label{fig:jerCompare}
+\end{figure}
+Figure~\ref{fig:limitsCompare} shows the expected limits based on analyses of the 2016 dataset, either using the new 3D fit method, where the jets have been smeared (blabla line) or not (blabla line), or using the 1D dijet method. We obtain X--X\% improvement with the 3D method, which is reduced to X\% due to JER smearing being applied and about 35---40\% improvement when combining the two datasets with respect to the individual results.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/limits_BulkGWW_compare.png}
-\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/limits_BulkGZZ_compare.png}\\
-\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/limits_WprimeWZ_compare.png}
-\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/limits_ZprimeWW_compare.png}
-\caption{A comparison of the expected upper limits using the three-dimensional fit method split into datasets (2016 and 2017), to that obtained with the one-dimensional fit using 2016 data. Here for $\BulkG\rightarrow WW$ (top left), $\BulkG\rightarrow ZZ$ (top right), $\PWpr\rightarrow WZ$ (bottom left) and $\PZpr\rightarrow WW$ (bottom right) signals.}
+\caption{Expected limits using 35.9~\fbinv of data for a Bulk $G\rightarrow WW$ signal using the 3D fit method, where the jets have had JER smearing applied (red line) or not (yellow line), and using the 1D fit method (dotted black line).}
 \label{fig:limitsCompare}
 \end{figure}
-In Figure~\ref{fig:limitsCompareATLAS}, we additionally compare the 3D limits to those obtained by the ATLAS collaboration in a similar search~\cite{ATLAS-CONF-2018-016} and find the search presented here to be up to 35\% more sensitive for the two signal scenarios considered, $\PWpr\rightarrow WZ$ and $\PZpr\rightarrow WW$ (the \BulkG limits can not be compared due to different values of $\tilde{k}$).
+
+\subsubsection{Comparison between datasets}
+\label{sec:limitcomparedataset}
+We additionally compare the sensitivity between the 2016 and 2017 datasets. Also here there is one important caveat: for the 2016 analysis, pileup was removed from the jets using the charged hadron subtraction algorithm, whereas in 2017 the PUPPI algorithm was used. In both cases, the softdrop jet mass was obtained from a PUPPI cleaned soft-dropped jet (in the 2016 analysis, the CHS jet was matched to a PUPPI soft-dropped jet in order to obtain the mass. The jet four-vector still relies on CHS). The reason for this switch is that, while for a pileup between 20-30 the CHS and PUPPI algorithms have a similar performance, once the average number of interactions per event is above 30 the PUPPI algorithm has been shown to achieve a better resolution for large-radius jet observables. In 2016 the average PU was 27 whereas in 2017 it was 38, a 40 \% increase. However, despite being better in term of groomed jet-mass resolution, PUPPI pileup subtraction has a worse dijet invariant mass resolution than CHS pileup subtracted jets. This is most likely due to PUPPI removing far more (PU) tracks than CHS and, if these PU tracks happen to be associated to a large calorimeter energy deposit, some of the energy might be lost. This creates a tail at lower dijet invariant masses, as shown in Figure~\ref{fig:puppiCHScompare}.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/comparison_studies/signal_testMjj_compYears.pdf}
+\caption{A comparison of the resonance mass resolution obtained from 2017 signal samples based on PUPPI jets (red) and 2016 signal samples based on CHS jets (blue).}
+\label{fig:puppiCHScompare}
+\end{figure}
+Figure~\ref{fig:limitsCompare2} shows the expected limits obtained with the new 3D fit method using 35.9 \fbinv of 2016 data (beige dashed line), 41.4\fbinv of 2017 data (pink dashed line) and when combining the two yielding a total of 77.3 \fbinv of data (dotted black line). These are compared to the results obtained using the 1D fit in Search II (solid purple line). A 35---40\% improvement is obtained when combining the two datasets with respect to the individual results, and we observe that the 2017 limits are slightly worse than the 2016 ones due to the above mentioned switch to PUPPI. For the full Run 2 legacy paper combining 2016, 2017, and 2018 data, we will perform a thorough study comparing CHS to PUPPI.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/compareAll_BulkGWW.png}
+\caption{Expected limits for a Bulk $G\rightarrow WW$ signal using 35.9 (beige dashed line), 41.4 (pink dashed line), and 77.3~\fbinv of data using the 3D fit method (dotted black line), and using 35.9 \fbinv of 2016 data and the 1D fit method (solid purple line).}
+\label{fig:limitsCompare2}
+\end{figure}
+\subsubsection{Comparison with ATLAS}
+\label{sec:limitcompareatlas}
+Figure~\ref{fig:limitsCompareATLAS} shows the comparison with the expected limits obtained by the ATLAS collaboration in a similar search for a VV resonance decaying to hadrons~\cite{ATLAS-CONF-2018-016}, for \PWpr and \PZpr signal hypotheses. For both signal hypotheses we obtain similar, or slightly better results by up to 35 \%.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/limits_WprimeWZ_compare_ATLAS.png}
 \includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/limits_ZprimeWW_compare_ATLAS.png}
-\caption{A comparison of the limits obtained above, to those by the ATLAS collaboration in a similar search~\cite{ATLAS-CONF-2018-016}. Here for \PWpr (left) and \PZpr (right) signal hypotheses.}
+\caption{Comparison with the expected limits obtained by the ATLAS collaboration in a similar search for a VV resonance decaying to hadrons~\cite{ATLAS-CONF-2018-016}, for \PWpr (left) and \PZpr (right) signal hypotheses.}
 \label{fig:limitsCompareATLAS}
 \end{figure}
-Finally, in Figure~\ref{fig:limitsPerCat} we show a breakdown of the limits per purity category. As expected, the HP category dominates at low masses where the background is high, and the LP category dominates at high masses due to the low amount of background events.
+\subsubsection{Limits per category}
+\label{sec:limitcomparecat}
+In Fig.~\ref{fig:limitsPerCat} we also show the expected limits for a Bulk $G\rightarrow WW$ signal separately for 2016 and 2017, and for the two HPHP and HPLP categories. As a result of the jet substructure selections optimization,
+the HPHP category dominates at low masses while the HPLP adds sensitivity at higher values of the signal mass.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.45\textwidth]{figures/analysis/search3/AN-17-303/limits/limit_compare_BulkGWW_per_category.png}
-\caption{Limits split into purity categories (HP and LP) for a Bulk $G\rightarrow WW$ signal hypothesis.}
+\caption{Comparison of the sensitivity of the two HPHP and HPLP categories for a Bulk $G\rightarrow WW$ signal hypothesis.}
 \label{fig:limitsPerCat}
 \end{figure}
 

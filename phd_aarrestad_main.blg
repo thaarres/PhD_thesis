@@ -3,46 +3,47 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: phd_aarrestad_main.aux
 The style file: auto_generated.bst
 Database file #1: Bibliography.bib
+Warning--I didn't find a database entry for "B2G17001"
 Warning--empty publisher in inbook
-You've used 89 entries,
+You've used 90 entries,
             2537 wiz_defined-function locations,
-            1326 strings with 24088 characters,
-and the built_in function-call counts, 27664 in all, are:
-= -- 3006
-> -- 683
+            1337 strings with 24370 characters,
+and the built_in function-call counts, 27962 in all, are:
+= -- 3037
+> -- 688
 < -- 6
-+ -- 233
-- -- 144
-* -- 2361
-:= -- 3462
-add.period$ -- 141
-call.type$ -- 89
++ -- 235
+- -- 145
+* -- 2383
+:= -- 3500
+add.period$ -- 142
+call.type$ -- 90
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 90
-duplicate$ -- 1758
-empty$ -- 2828
-format.name$ -- 150
-if$ -- 7274
+cite$ -- 91
+duplicate$ -- 1780
+empty$ -- 2860
+format.name$ -- 151
+if$ -- 7354
 int.to.chr$ -- 0
-int.to.str$ -- 89
-missing$ -- 216
-newline$ -- 364
-num.names$ -- 74
-pop$ -- 522
+int.to.str$ -- 90
+missing$ -- 219
+newline$ -- 367
+num.names$ -- 75
+pop$ -- 529
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1000
+skip$ -- 1013
 stack$ -- 0
-substring$ -- 1073
-swap$ -- 731
+substring$ -- 1081
+swap$ -- 741
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 171
-width$ -- 91
-write$ -- 1100
-(There was 1 warning)
+while$ -- 173
+width$ -- 92
+write$ -- 1112
+(There were 2 warnings)

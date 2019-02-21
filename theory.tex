@@ -20,17 +20,17 @@ A summary of the lepton properties is listed in Table~\ref{table:theory:lepprop}
 \hline
 Lepton        & Mass           & Charge \\%& $L_{e}$ & $L_{\mu}$ & $L_{\tau}$ \\
 \hline
-$e^{-}$      & $0.5 \mbox{ MeV}$      & $e$ \\%& 1       & 0         & 0 \\
-$\mu^{-}$    & $106 \mbox{ MeV}$      & $e$ \\%& 0       & 1         & 0 \\
-$\tau^{-}$   & $1777 \mbox{ MeV}$     & $e$ \\%& 0       & 0         & 1 \\
+$e^{-}$      & $0.51 \mbox{ MeV}$      & $e$ \\%& 1       & 0         & 0 \\
+$\mu^{-}$    & $105.7 \mbox{ MeV}$      & $e$ \\%& 0       & 1         & 0 \\
+$\tau^{-}$   & $1776.9 \mbox{ MeV}$     & $e$ \\%& 0       & 0         & 1 \\
 \hline                                      
-$\nu_{e}$    & $< 3 \mbox{ eV}$       & $0$ \\%   & 1       & 0         & 0 \\
-$\nu_{\mu}$  & $< 0.19 \mbox{ MeV}$   & $0$ \\%   & 0       & 1         & 0 \\
-$\nu_{\tau}$ & $< 18.2 \mbox{ MeV}$   & $0$  \\%   & 0       & 0         & 1 \\
+$\nu_{i}$, $i=e,\mu,\tau$ & $\sum_i m_i < 0.170 \mbox{ eV}$       & $0$ \\%   & 1       & 0         & 0 \\
+% $\nu_{\mu}$  & $< 0.19 \mbox{ MeV}$   & $0$ \\%   & 0       & 1         & 0 \\
+% $\nu_{\tau}$ & $< 18.2 \mbox{ MeV}$   & $0$  \\%   & 0       & 0         & 1 \\
 \hline
 \end{tabular}
 \end{center}
-\caption{Lepton Properties~\cite{Patrignani:2016xqp}.}
+\caption{Lepton Properties~\cite{Patrignani:2016xqp,refId0}.}
 \label{table:theory:lepprop}
 \end{table}
 Leptons interact with one another through the \emph{electromagnetic and weak forces}, which will be explained in more detailed in Section~\ref{sec:theory:ew}.\newline
@@ -91,7 +91,7 @@ u^c &= (\bar{3},1)_{(-4/3)} &&= \begin{pmatrix} u_{\bar{r}}^c & u_{\bar{g}}^c & 
 d^c &= (\bar{3},1)_{(2/3)}  &&= \begin{pmatrix} d_{\bar{r}}^c & d_{\bar{g}}^c & d_{\bar{b}}^c\end{pmatrix} \quad &&\sim \textrm{anti-down quarks} \\[1pt]
 e^c &= (1,1)_{(2)}          && \quad &&\sim \textrm{positron} \\
 \end{alignat}
-The anti-neutrino is not included here because it is a SM \emph{singlet} and does not transform under the SM group $\mathcal{G}_{SM}$, but it could be written as $\nu^c=(1,1)_{(0)}$. The positron $e^c$, on the other hand, \emph{is} included as its hypercharge is non-zero and it therefore undergoes $U(1)_Y$ interactions. These five multiplets exist for each of the three generations.\newline
+The right-handed neutrino (which in needed to generate a Dirac mass for the neutrinos) is not included here because it is a SM \emph{singlet} and does not transform under the SM group $\mathcal{G}_{SM}$, but it could be written as $\nu^c=(1,1)_{(0)}$. The positron $e^c$, on the other hand, \emph{is} included as its hypercharge is non-zero and it therefore undergoes $U(1)_Y$ interactions. These five multiplets exist for each of the three generations.\newline
 The numbers representing each multiplet correspond to which representation it belongs to. For instance, we see that the quark multiplet transforms as a triplet under $SU(3)_C$, a doublet under $SU(2)_L$ and has a non-zero hypercharge, corresponding to a non-trivial representation under $U(1)_Y$. That corresponds to saying that quarks interact through all of the three fundamental interactions. From that notation, it is also clear that leptons do not carry color charge, and will only interact via the electroweak interactions.\newline
 From the multiplets above, we see that $u^c$ and $d^c$ transform as singlets under $SU(2)_L$, meaning they do not interact. This, however, does not mean they do not feel the electroweak force. The electroweak gauge bosons \PW and \PZ are not directly part of $SU(2)_L$, rather, they are a linear combination of $SU(2)_L$ and $U(1)_Y$ and anything with a non-zero weak hypercharge $Y$ will interact with them. This is also true for the photon, which also is a linear combination of $SU(2)_L$ and $U(1)_Y$. These interactions; the strong, weak and electromagnetic, will be explained in more detail in the following sections.
 
@@ -220,7 +220,7 @@ In order to achieve spontaneous symmetry breaking, Jeffrey Goldstone~\cite{Golds
 \end{equation}
 would have a Lagrangian of the form
 \begin{equation}
-\mathcal{L} = \partial^{\mu}\bar{\phi}\partial_{\mu}\phi-\mu_0^2\bar{\phi}\phi-\frac{\lambda_0}{6}\bar{\phi}\phi^2,
+\mathcal{L} = \partial^{\mu}\bar{\phi}\partial_{\mu}\phi-\mu_0^2\bar{\phi}\phi-\frac{\lambda_0}{6}(\bar{\phi}\phi)^2,
 \end{equation}
 where $\lambda_0$ is the coupling constant and $\mu_0$ is the mass. The Lagrangian is invariant under $U(1)$, though in this case under a global symmetry and not a local one. If one takes $\mu_0^2$ to be negative, the potential will get a minima along a circle of radius $v$ such that
 \begin{equation}
@@ -308,9 +308,9 @@ In summary, all the fermion masses are generated through the interaction of the 
 \clearpage
 \chapter{Beyond Standard Model Physics}
 \section{Shortcomings of the Standard Model}
-Despite being an extremely successful and predictive theory, the Standard Model has its shortcomings. The most obvious one is its failure to successfully incorporate the gravitational force. Gravity is beautifully described in General Relativity as a classical theory: a force caused by the curvature of space-time in the presence of matter and energy. The theory does not utilize quantum fields and energy is not quantized.
-The scales between the Standard Model, a quantum field theory, and General Relativity are completely different: space-time is curved on astronomical scales, where the force of gravity is measurable, while quantum field theories deal with things on the smallest possible scales, where variations in space-time are essentially invisible. Hence, to the Standard Model, space-time is approximately flat and gravity does not exist. In order to have an elegant unified theory of all the forces, attempts has been made to have a quantum field theory of the gravitational force by extending the Standard Model particle family to incorporate a particle to mediate the gravitational force called the \emph{graviton}, a massless gauge boson of spin-2. The problem is that gravity is universally attractive, meaning nothing "cancels" it. That leads to loop divergences that cannot be reabsorbed through renormalization and every effort of integrating gravity in the SM has thus far failed. 
-%However, it has been shown that General Relativity is an inevitable consequence of the quantum mechanics of interacting gravitons, which has led to several proposals for extending the SM models to incorporate them.\newline
+Despite being an extremely successful and predictive theory, the Standard Model has its shortcomings. The most obvious one is its failure to successfully unite with the gravitational force at very high energies (or, correspondingly, short distances). Gravity is beautifully described in General Relativity (GR) as a classical theory: a force caused by the curvature of space-time in the presence of matter and energy. The theory does not utilize quantum fields and energy is not quantized.
+The scales between the Standard Model, a quantum field theory (QFT), and General Relativity are completely different: space-time is curved on astronomical scales, where the force of gravity is measurable, while quantum field theories deal with things on the smallest possible scales, where variations in space-time are essentially invisible. Hence, to the Standard Model, space-time is approximately flat and gravity does not exist. In order to have an elegant unified theory of all the forces, attempts has been made to have a quantum field theory of the gravitational force by extending the Standard Model particle family to incorporate a particle to mediate the gravitational force called the \emph{graviton}, a massless gauge boson of spin-2. The problem is that gravity is universally attractive, meaning nothing "cancels" it. That leads to loop divergences that cannot be reabsorbed through renormalization and every effort of integrating gravity in the SM in a renormalizable way has thus far failed. 
+However, it has been shown that the Standard Model and General Relativity are fully compatible in the low-curvature and low-energy regime, and that GR is an inevitable consequence of the quantum mechanics of interacting gravitons. The full non-linear structure of GR can be derived through QFT, yielding graviton couplings to the SM which are uniquely determined. This has led to several proposals for extending the SM in order to incorporate the force mediating gravitons. \newline
 In addition to the difficulties of incorporating gravity into a quantum field theory framework, problems occur at small distances at which quantum gravitational effects would become apparent, the Planck scale. This can be represented by the Planck mass, the mass of the smallest possible black hole. When comparing the Planck mass to the masses of the electroweak bosons \PW and \PZ, we find that the Planck mass is $10^{16}$ times heavier than the electroweak bosons, such that there is a \emph{hierarchy} between the mass scales of gravity and the electroweak forces. The reason why this observed hierarchy occurs has to do with the Higgs vacuum expectation value (VEV): the Higgs field has a measured vacuum expectation value of 246 GeV and this is, as discussed in the section above, what gives the W and Z bosons their mass. However, when actually calculating the Higgs VEV and taking all loop corrections into account, it would receive corrections on the order of the Planck energy, yielding a Higgs boson mass $10^{16}$ times larger than observed. This is called the \emph{hierarchy problem}.
 Quantum loop corrections of this magnitude only happen for scalar particles such as the Higgs boson. Fermions are protected from such divergences through their chiral structure, and gauge bosons are protected through gauge invariance. The question is then why the Higgs VEV, and consequently the Higgs, W and Z boson masses are so much smaller than the natural mass scale.\newline
 Of course, it is possible that the Higgs boson mass just happens to be 125 \GeV due to some fine-tuned, large cancellations that keeps the mass from approaching the Planck mass, as is currently held by the Standard Model. However, this is neither very elegant nor very probable without a well-motivated reason why such a cancellation should occur. Rather, in order to resolve the problem of scales, theories Beyond the Standard Model (BSM) have been introduced. The theories that I will probe in this thesis are amongst those.\par

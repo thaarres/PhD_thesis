@@ -106,6 +106,17 @@ The asymptotic limits obtained with 2.6 $\textrm{fb}^{-1}$ of 13 TeV CMS data pe
 
 \chapter{Search II}
 \vspace*{\fill}\newpage
+\section{mMDT and underlying event}
+\label{app:sdue}
+Signal jets groomed with mMDT using a $y_{cut}$ definition, $min(p^2_{T,s_1}, p^2_{T,s_2})\Delta R(s_1,s_2)/m^2_{j} > y_{cut}$, rather than a $z_{cut}$ definition (as is default in CMS), $\frac{ \textrm{min}(p_{T,i},p_{T,j}) }{ p_{T,P} } > z_{cut} $, were found to be far more sensitive to the underlying event than pruned jets~\cite{Dasgupta:2015yua}. Figure~\ref{fig:searchII:ue} shows the signal efficiency for pruning (left) and softdrop (right) as a function of jet transverse momenta when including final state radiation (FSR) only, final and initial state radiation (ISR), hadronization, and hadronization with an underlying event component added.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.79\textwidth]{figures/analysis/search2/misc/pruningvssd_ue.pdf}
+\caption{The signal efficiency for pruning (left) and softdrop (mMDT) (right) as a function of jet \PT when adding FSR, ISR, hadronization and UE. The UE has a severe impact on the softdrop efficiency for signal jets~\cite{Dasgupta:2015yua}. }
+\label{fig:searchII:ue}
+\end{figure}
+At parton level, as well as after hadronization, the two algorithms perform very similar as a function of \PT. However, once UE contamination is added, the softdrop tagging efficiency is severely affected. This can be explained by the larger effective radius considered by the mMDT algorithm ( $\propto \mV/\PT \sqrt{z_{cut}(1-z_{cut})}$ ) in comparison to pruning ( $\propto \mV/\PT$ ), as can be seen from Equations~\ref{eq:softdrop} and \ref{eq:pruning}. This observation corresponds very well with the shift in jet mass we observed for softdrop as a function of \PT in Section~\ref{sec:searchI:wtagging}: as the jet \PT decreases, the mMDT effective radius increases and the jet mass mean shifts to higher values, due to absorbing more background radiation.
+\clearpage
 \section{W-tagging scale factor: Additional plots}
 \label{app:sf16}
 Figures~\ref{fig:app:ttfitsd} shows the \ttbar real \PW (top) and non-\PW (bottom) PUPPI softdrop jet mass distributions for jets that passed (left) and failed (right column) the N-subjettiness selections PUPPI
