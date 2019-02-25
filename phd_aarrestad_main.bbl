@@ -261,14 +261,6 @@ J.~POG, ``Jet Identification: Recommendations for 13TeV data analysis'', 2018
   ``{Pileup Removal Algorithms}'',} Technical Report CMS-PAS-JME-14-001, CERN,
   Geneva, 2014.
 
-\bibitem{Dasgupta:2013ihk}
-\hrefCMSnoop {}{M.~Dasgupta, A.~Fregoso, S.~Marzani, and G.~P. Salam,
-  ``{Towards an understanding of jet substructure}'',} \textit{ JHEP} \textbf{
-  09} (2013) 029,
-  \href{http://dx.doi.org/10.1007/JHEP09(2013)029}{\doi{10.1007/JHEP09(2013)029}},
-\href{http://www.arXiv.org/abs/1307.0007}{\texttt{arXiv:1307.0007}}.
-%%CITATION = ARXIV:1307.0007;%%.
-
 \bibitem{Butterworth:2008iy}
 \hrefCMSnoop {}{J.~M. Butterworth, A.~R. Davison, M.~Rubin, and G.~P. Salam,
   ``{Jet substructure as a new Higgs search channel at the LHC}'',} \textit{
@@ -276,6 +268,14 @@ J.~POG, ``Jet Identification: Recommendations for 13TeV data analysis'', 2018
   \href{http://dx.doi.org/10.1103/PhysRevLett.100.242001}{\doi{10.1103/PhysRevLett.100.242001}},
 \href{http://www.arXiv.org/abs/0802.2470}{\texttt{arXiv:0802.2470}}.
 %%CITATION = ARXIV:0802.2470;%%.
+
+\bibitem{Dasgupta:2013ihk}
+\hrefCMSnoop {}{M.~Dasgupta, A.~Fregoso, S.~Marzani, and G.~P. Salam,
+  ``{Towards an understanding of jet substructure}'',} \textit{ JHEP} \textbf{
+  09} (2013) 029,
+  \href{http://dx.doi.org/10.1007/JHEP09(2013)029}{\doi{10.1007/JHEP09(2013)029}},
+\href{http://www.arXiv.org/abs/1307.0007}{\texttt{arXiv:1307.0007}}.
+%%CITATION = ARXIV:1307.0007;%%.
 
 \bibitem{Larkoski:2014wba}
 \hrefCMSnoop {}{A.~J. Larkoski, S.~Marzani, G.~Soyez, and J.~Thaler, ``{Soft
@@ -578,5 +578,13 @@ I.~Goodfellow, Y.~Bengio, and A.~Courville, ``Deep Learning''.
 \href {http://tensorflow.org/}{M.~A. et~al, ``{TensorFlow}: Large-Scale Machine
   Learning on Heterogeneous Systems'',} 2015.
 \newblock Software available from tensorflow.org.
+
+\bibitem{Salam:2016yht}
+\hrefCMSnoop {}{G.~P. Salam, L.~Schunk, and G.~Soyez, ``{Dichroic subjettiness
+  ratios to distinguish colour flows in boosted boson tagging}'',} \textit{
+  JHEP} \textbf{ 03} (2017) 022,
+  \href{http://dx.doi.org/10.1007/JHEP03(2017)022}{\doi{10.1007/JHEP03(2017)022}},
+\href{http://www.arXiv.org/abs/1612.03917}{\texttt{arXiv:1612.03917}}.
+%%CITATION = ARXIV:1612.03917;%%.
 
 \end{thebibliography}\endgroup

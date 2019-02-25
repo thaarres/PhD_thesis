@@ -187,6 +187,7 @@ Any deep neural network trained to distinguish W jets from quark and gluon jets 
 A strong correlation between the LoLa discriminant and jet mass and \PT, is observed both for signal and for background jets (closer to 1 means more signal like), with a rising slope as a function of \PT (meaning the network interprets a higher jet \PT as being more signal-like) and a bump around the W mass for both signal and for background.
 
 \subsection{\PT-decorrelation}
+\label{sec:lola:ptdep}
 A tagger which is \PT-dependent is problematic due to the following reasons: firstly, the signal efficiency is variable, which requires a working point that scales with \PT. That in itself is not problematic and can easily be computed. However, it implies that when computing efficiency scale factors from data, a range of different scale factors for different working points is required. In addition, the scale factors are measured at low \PT, a region where the tagging efficiency can be substantially different from the analysis signal region due to the strong \PT-correlation present. Finally, the dijet invariant mass is intrinsically linked to the \PT-spectrum, meaning that any \PT-dependence can introduce sculpting of the dijet invariant mass spectrum. From the top left plot in Figure~\ref{fig:lola:kinematics}, one clearly sees that the jet \PT distribution is very different for signal and for background. In order to avoid that the network learns jet \PT to be a discriminating feature, I therefore compute a jet-by-jet weight intended to flatten the jet \PT spectrum. This weight is passed as a sample weight to the training set, reweighting the contribution from each jet to the total loss (making high-mass QCD jets and low-mass signal jets count more). Figure~\ref{fig:lola:ptweight} shows the jet \PT-distribution without any \PT-reweighting applied (solid lines) and after applying a \PT-weight (dashed lines).
 \begin{figure}[h!]
 \centering
@@ -270,15 +271,27 @@ Figure~\ref{fig:lola:eff_val_pu} shows the tagging efficiency and mistagging rat
 \label{fig:lola:eff_val_pu}
 \end{figure}
 \clearpage
-% \chapter{What \textit{does} LoLa learn?}
-% \label{sec:lola:learn}
-% As a first study of what features LoLa learns, one can remove features in the LoLa and Cola layers. The first thing to check
-%
-% Compare nominal training to training after removing variables sensitive to mass and pT
-% Remove CoLa column that passes  sum of all 4-momentum (4 vector of “full jet”)
-% not much impact on overall performance
-% Remove Lola mass and pT  variables reduce performance significantly
-% worst when removing Σpμ and m+pT (like removing jet mass/pT)
+\section{What \textit{does} LoLa learn?}
+\label{sec:lola:learn}
+As a first study of what features LoLa learns, one can remove features in the LoLa and Cola layers. The first thing to check is what happens after removing variables sensitive to the jet mass and \PT. This is shown in Figure~\ref{fig:lola:nminus1_masspt}.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.69\textwidth]{figures/vtagging/lola/roc-compare.png}
+\caption{Performance after removing jet mass momentum and mass.}
+\label{fig:lola:nminus1_masspt}
+\end{figure}
+The light blue line, no $\sum \PT$, corresponds to removing the first column of CoLa which passes the sum of all particle four-momenta to LoLa. This has little impact on the total performance, meaning the algorithm does not rely on the jet axis being defined.
+Removing the Lola variables that correspond to the invariant mass or \PT of the particles/pseudo-jets (green line) reduce the performance significantly, which explains the large drop in tagging efficiency that was observed in Section~\ref{sec:lola:ptdep} when decorrelating the tagger from jet \PT. The worst performance is obtained when removing both the first CoLa column, which roughly corresponds to the jet axis, as well as the invariant mass and \PT LoLa variables (pink line). This implies that a significant part of what LoLa learns is, as suspected, related to the jet mass and \PT.
+We can also systematically go through the CoLa and LoLa variables and systematically removing one after the other. This is shown in Figure~\ref{fig:lola:nminus1}.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.69\textwidth]{figures/vtagging/AN-18-099/input/ROC_Nminus1.png}
+\caption{Performance after removing components of CoLa or LoLa}
+\label{fig:lola:nminus1}
+\end{figure}
+
+\clearpage
+
 \chapter{Summary}
 \label{sec:lola:outlook}
 In this part of the thesis, we have seen a promising new W-tagging algorithm for future VV searches. Its absolute performance is better than that of the baseline PUPPI softdrop + \nsubj tagger up to a jet \PT of at least 1400 \GeV, roughly corresponding to a dijet invariant mass of 2.5-3 \TeV, and could lead to an increase in total signal efficiency from 18 to 43 \% for the searches presented here. With a \PT decorrelation method already in place, it could already now be used for the one dimensional VV search presented in Search I and Search II. However, if to be used in the multidimensional search framework, a mass decorrelation method needs to be established. I have already outlined two possibilities of how to achieve this in Section~\ref{sec:lola:massculpting}, where one of these has already been shown to work in the context of \PT-decorrelation. This is, as of this writing, left to future studies.

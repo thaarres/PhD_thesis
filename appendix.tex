@@ -1,3 +1,49 @@
+\clearpage
+\chapter{V-tagging}
+\vspace*{\fill}\newpage
+\label{app:vtag}
+\section{mMDT and underlying event}
+\label{app:sdue}
+Signal jets groomed with mMDT using a $y_{cut}$ definition, $min(p^2_{T,s_1}, p^2_{T,s_2})\Delta R(s_1,s_2)/m^2_{j} > y_{cut}$, rather than a $z_{cut}$ definition (as is default in CMS), $\frac{ \textrm{min}(p_{T,i},p_{T,j}) }{ p_{T,P} } > z_{cut} $, were found to be far more sensitive to the underlying event than pruned jets~\cite{Dasgupta:2015yua}. Figure~\ref{fig:searchII:ue} shows the signal efficiency for pruning (left) and softdrop (right) as a function of jet transverse momenta when including final state radiation (FSR) only, final and initial state radiation (ISR), hadronization, and hadronization with an underlying event component added.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.79\textwidth]{figures/analysis/search2/misc/pruningvssd_ue.pdf}
+\caption{The signal efficiency for pruning (left) and softdrop (mMDT) (right) as a function of jet \PT when adding FSR, ISR, hadronization and UE. The UE has a severe impact on the softdrop efficiency for signal jets~\cite{Dasgupta:2015yua}. }
+\label{fig:searchII:ue}
+\end{figure}
+At parton level, as well as after hadronization, the two algorithms perform very similar as a function of \PT. However, once UE contamination is added, the softdrop tagging efficiency is severely affected. This can be explained by the larger effective radius considered by the mMDT algorithm ( $\propto \mV/\PT \sqrt{z_{cut}(1-z_{cut})}$ ) in comparison to pruning ( $\propto \mV/\PT$ ), as can be seen from Equations~\ref{eq:softdrop} and \ref{eq:pruning}. This observation corresponds very well with the shift in jet mass we observed for softdrop as a function of \PT in Section~\ref{sec:searchI:wtagging}: as the jet \PT decreases, the mMDT effective radius increases and the jet mass mean shifts to higher values, due to absorbing more background radiation.
+\clearpage
+\section{N-subjettiness on groomed jets}
+\label{app:vtag:dichroic}
+In CMS, n-subjettiness is by default calculated on un-groomed jets. A proposal was made in Ref.~\cite{Salam:2016yht} to, when calculating n-subjettiness, calculate $\tau_2$ on softdrop $\beta=2$ jets (less aggressive groomer) $\tau_1$ on softdrop $\beta=0$ jets (more aggressive groomer. This would emphasize the jet hard substructure when calculating 1-subjettiness and the full color radiation pattern when calculating 2-subjettiness. In the above mentioned reference, this was shown to increase the signal significance by 25\% (at 2 TeV) for a given mistagging rate, as shown in Figure~\ref{fig:app:dichroic} and also reduce non-perturbative effects by a factor of 2 to 3.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.79\textwidth]{figures/vtagging/dichroic/arXiv-161203917.pdf}
+\caption{Using a dichroic tagger has been to increase the signal significance by 25\% at a jet \PT of 2 TeV and reduce non-perturbative effects by a factor of 2 to 3~\cite{Salam:2016yht}.}
+\label{fig:app:dichroic}
+\end{figure}
+In this section, we study the performance of n-subjettiness when used in combination with different versions of softdrop, varying the $\beta$-parameter. Different values of $\beta$ results in the algorithm removing more or less radiation. In this section we study three groomer definitions: mMDT (softdrop with $\beta=0$), softdrop with $\beta=2$ and the un-groomed (plain) mass. The mass distribution after applying these algorithms is shown in Figure~\ref{fig:app:massplots}. The current CMS default for V-tagging at the time of this study was softdrop $\beta=0$ and \nsubj, where \nsubj was calculated on the un-groomed jet.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.45\textwidth]{figures/vtagging/dichroic/massplots.png}
+\caption{The bare PUPPI (turquoise), softdrop $\beta=0$ (blue), and softdrop $\beta=2$ (red) jet-mass.}
+\label{fig:app:massplots}
+\end{figure}
+N-subjettiness can be calculated starting from un-groomed jets or jets groomed with different algorithms. Going from the most to the least aggressive, the ones studies here are \nsubj on softdrop $\beta=0$ jets,\nsubj on softdrop $\beta=2$ jets, dichroic \nsubj ($\tau_2$ from softdrop $\beta=2$ and $\tau_1$ from softdrop $\beta=0$ jets) or \nsubj calculated on un-groomed jets. The distributions of these are shown in Figure~\ref{fig:app:tau21plots}.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.45\textwidth]{figures/vtagging/dichroic/tau21plots.png}
+\caption{N-subjettiness distributions after the algorithm has been applied to un-groomed jets (brown, CMS default), or on jets groomed with softdrop $\beta=0$ (red), softdrop $\beta=2$ (turquoise) or a mix of both, so-called dichroic (blue), where softdrop $\beta=0$ is used for $\tau_1$ and softdrop $\beta=2$ is used for $\tau_2$).}
+\label{fig:app:tau21plots}
+\end{figure}
+The performance in the signal efficiency versus mistagging rate plane for different versions of \nsubj, is shown in Figure~\ref{fig:app:dichroic}. A cut on the softdrop $\beta=0$ jet-mass of 65-105 GeV is applied by default for all taggers. The CMS default tagger, \nsubj in combination with softdrop $\beta=0$ has the lowest signal efficiency for a given mistagging rate. The best performance is achieved when calculating n-subjettiness on softdrop $\beta=0$ groomed jets. No huge gain in performance using is observed when using a dichroic tagger.
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.45\textwidth]{figures/vtagging/dichroic/dichroic.png}
+\caption{Performance of a tagger consisting of a selection on the softdrop $\beta=0$ jet mass of 65-105 GeV and a cut on n-subjettiness computed on groomed or un-groomed jets}
+\label{fig:app:dichroic}
+\end{figure}
+
 \chapter{Search I: Limits per mass category}
 \vspace*{\fill}\newpage
 \section{Limits per mass category}
@@ -106,17 +152,6 @@ The asymptotic limits obtained with 2.6 $\textrm{fb}^{-1}$ of 13 TeV CMS data pe
 
 \chapter{Search II}
 \vspace*{\fill}\newpage
-\section{mMDT and underlying event}
-\label{app:sdue}
-Signal jets groomed with mMDT using a $y_{cut}$ definition, $min(p^2_{T,s_1}, p^2_{T,s_2})\Delta R(s_1,s_2)/m^2_{j} > y_{cut}$, rather than a $z_{cut}$ definition (as is default in CMS), $\frac{ \textrm{min}(p_{T,i},p_{T,j}) }{ p_{T,P} } > z_{cut} $, were found to be far more sensitive to the underlying event than pruned jets~\cite{Dasgupta:2015yua}. Figure~\ref{fig:searchII:ue} shows the signal efficiency for pruning (left) and softdrop (right) as a function of jet transverse momenta when including final state radiation (FSR) only, final and initial state radiation (ISR), hadronization, and hadronization with an underlying event component added.
-\begin{figure}[h!]
-\centering
-\includegraphics[width=0.79\textwidth]{figures/analysis/search2/misc/pruningvssd_ue.pdf}
-\caption{The signal efficiency for pruning (left) and softdrop (mMDT) (right) as a function of jet \PT when adding FSR, ISR, hadronization and UE. The UE has a severe impact on the softdrop efficiency for signal jets~\cite{Dasgupta:2015yua}. }
-\label{fig:searchII:ue}
-\end{figure}
-At parton level, as well as after hadronization, the two algorithms perform very similar as a function of \PT. However, once UE contamination is added, the softdrop tagging efficiency is severely affected. This can be explained by the larger effective radius considered by the mMDT algorithm ( $\propto \mV/\PT \sqrt{z_{cut}(1-z_{cut})}$ ) in comparison to pruning ( $\propto \mV/\PT$ ), as can be seen from Equations~\ref{eq:softdrop} and \ref{eq:pruning}. This observation corresponds very well with the shift in jet mass we observed for softdrop as a function of \PT in Section~\ref{sec:searchI:wtagging}: as the jet \PT decreases, the mMDT effective radius increases and the jet mass mean shifts to higher values, due to absorbing more background radiation.
-\clearpage
 \section{W-tagging scale factor: Additional plots}
 \label{app:sf16}
 Figures~\ref{fig:app:ttfitsd} shows the \ttbar real \PW (top) and non-\PW (bottom) PUPPI softdrop jet mass distributions for jets that passed (left) and failed (right column) the N-subjettiness selections PUPPI
@@ -143,7 +178,6 @@ $\tau_{21}~<$~0.40.
   \caption{Fits to the PUPPI softdrop jet mass spectrum for the non-dominant backgrounds (Single top, W+jets and VV respectively) in the pass (top) and fail (bottom) regions.}
   \label{fig:app:minorbkrsd}
 \end{figure}
-
 \clearpage
 \section{Efficiency scale factors for 2.5 \fbinv} 
 \label{sec:app:wtagsfana}

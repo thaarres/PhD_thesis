@@ -161,8 +161,7 @@ A closure test is performed in order to check that the corrected PUPPI softdrop 
 
 \subsection{W-tagging performance}
 \label{sec:searchII:vtagperf}
-The new PUPPI softdrop based V tagger uses a softdrop jet mass window of $65 \GeV < m_{SD} < 105 \GeV$ in combination with a selection of PUPPI $\tau_{21}<0.4$.
-We compare its performance to that of the CHS pruning-based tagger used in Search I as well as to that of a "DDT-transformed" \nsubj-based tagger~\cite{Dolen:2016kst}. The \ddt variable is a linear transformation of \nsubj given as
+The new PUPPI softdrop based V tagger uses a softdrop jet mass window of $65 \GeV < m_{SD} < 105 \GeV$ in combination with a selection of PUPPI $\tau_{21}<0.4$. The CMS default is to compute the \nsubj variable starting from un-groomed jets, but it can also be computed from already groomed jets. I briefly studied calculating \nsubj starting from soft-dropped jets, summarized in Appendix~\ref{app:vtag:dichroic}, where I found a small gain in performance when calculating \nsubj starting from jets groomed with softdrop $\beta=0$. This is something that needs further study, and is left for future work. We compare the performance of the PUPPI softdrop based V tagger to that of the CHS pruning-based tagger used in Search I, as well as to that of a "DDT-transformed" \nsubj-based tagger~\cite{Dolen:2016kst}. The \ddt variable is a linear transformation of \nsubj given as
 \begin{equation}
 \label{eq:searchII:ddt}
 \tau_{21}^{DDT} = \tau_{21} + M \times \log \bigg( \frac{m^2}{p_T \times 1 \textrm{ GeV}}\bigg)
