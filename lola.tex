@@ -271,26 +271,24 @@ Figure~\ref{fig:lola:eff_val_pu} shows the tagging efficiency and mistagging rat
 \label{fig:lola:eff_val_pu}
 \end{figure}
 \clearpage
-\section{What \textit{does} LoLa learn?}
+\section{What does LoLa learn?}
 \label{sec:lola:learn}
-As a first study of what features LoLa learns, one can remove features in the LoLa and Cola layers. The first thing to check is what happens after removing variables sensitive to the jet mass and \PT. This is shown in Figure~\ref{fig:lola:nminus1_masspt}.
+As a first study of what features LoLa learns, we remove features from the LoLa and CoLa layers. The first thing to investigate is what happens after removing variables sensitive to the jet mass and \PT. This is shown in Figure~\ref{fig:lola:nminus1_masspt}. The light blue line, no $\sum \PT$, corresponds to removing the first column of CoLa which passes the sum of all particle four-momenta to LoLa. This has little impact on the total performance, meaning the algorithm does not rely on the jet axis being defined.
+Removing the Lola variables that correspond to the invariant mass or \PT of the particles/pseudo-jets (green line) reduce the performance significantly, which explains the large drop in tagging efficiency that was observed in Section~\ref{sec:lola:ptdep} when decorrelating the tagger from jet \PT. The worst performance is obtained when removing both the first CoLa column, which roughly corresponds to the jet axis, as well as the invariant mass and \PT LoLa variables (pink line). This implies that a significant part of what LoLa learns is, as suspected, related to the jet mass and \PT.
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.69\textwidth]{figures/vtagging/lola/roc-compare.png}
+\includegraphics[width=0.59\textwidth]{figures/vtagging/lola/roc-compare.png}
 \caption{Performance after removing jet mass momentum and mass.}
 \label{fig:lola:nminus1_masspt}
 \end{figure}
-The light blue line, no $\sum \PT$, corresponds to removing the first column of CoLa which passes the sum of all particle four-momenta to LoLa. This has little impact on the total performance, meaning the algorithm does not rely on the jet axis being defined.
-Removing the Lola variables that correspond to the invariant mass or \PT of the particles/pseudo-jets (green line) reduce the performance significantly, which explains the large drop in tagging efficiency that was observed in Section~\ref{sec:lola:ptdep} when decorrelating the tagger from jet \PT. The worst performance is obtained when removing both the first CoLa column, which roughly corresponds to the jet axis, as well as the invariant mass and \PT LoLa variables (pink line). This implies that a significant part of what LoLa learns is, as suspected, related to the jet mass and \PT.
-We can also systematically go through the CoLa and LoLa variables and systematically removing one after the other. This is shown in Figure~\ref{fig:lola:nminus1}.
+We can also go through the CoLa and LoLa variables and systematically remove one after the other. This is shown in Figure~\ref{fig:lola:nminus1}. The first entry in the legend correspond to the full nominal training (not \PT-weighted) using all features of CoLa and LoLa (blue). The following four entries correspond to removing columns of the CoLa matrix: the first column corresponding to the full jet four-vector (orange), removing the identity matrix which passes through each and every jet constituent (green), allowing the construction of five rather than 15 pseudo-jets (pink) and a combination of all of the above (brown). Removing any of these has very little impact on the absolute performance as quantified through the area under the curve (AUC) given in parenthesis. This indicates that the CoLa layer has little impact on the absolute performance in terms of tagging efficiency, though it might become important when attempting to train a signal-independent tagger. The next five entries correspond to removing quantities from the LoLa layer: the invariant mass (purple), transverse momentum (gray), energy (red), minimum of all distances (yellow), and the sum of all distances (turquoise). The largest drop in performance is observed when removing the transverse momenta from the training, as was also observed above, whereas removing any other quantity has a minor effect as long as the others are kept. The final legend entry, corresponding to the light green curve, is the performance after removing everything but the sum and minimum of distances between four-vectors. This leads to a large drop in efficiency.
 \begin{figure}[h!]
 \centering
-\includegraphics[width=0.69\textwidth]{figures/vtagging/AN-18-099/input/ROC_Nminus1.png}
-\caption{Performance after removing components of CoLa or LoLa}
+\includegraphics[width=0.59\textwidth]{figures/vtagging/AN-18-099/input/ROC_Nminus1.png}
+\caption{Performance after removing components of CoLa or LoLa.}
 \label{fig:lola:nminus1}
 \end{figure}
-
-\clearpage
+Except for the jet \PT, no single variable or CoLa column seems to contain a significant amount of information that cannot be replaced by any of the other variables. However, when removing all information except for the distances between four-vectors, a significantly larger performance drop is observed than when removing \PT only. This implies that there is information in LoLa besides the jet \PT that improves the performance, but that this information can be replaced by one of the other variables. Different combinations of LoLa variables therefore need to be studied in the search for a clear performance drop or gain. A complimentary strategy is to look at the LoLa and CoLa weights post-training to check which ones have the largest magnitude, which would in a more direct way quantify the important features of the network. In order to really understand what LoLa learns, further studies are therefore needed and are, as of this writing, currently ongoing.
 
 \chapter{Summary}
 \label{sec:lola:outlook}
