@@ -1,10 +1,10 @@
 \section{Track and primary vertex reconstruction}
 The CMS tracker gets traversed by $\mathcal{O}(1000)$ charged particles at each bunch crossing, produced by several proton-proton interactions happening ~simultaneously. This makes track reconstructions extremely challenging, and is the reason why a high granularity of the tracker is vital.
-The average number or vertices per event for the whole Run 2 data taking period is shown in Figure~\ref{fig:objreco:pu}, with an average of 34 interactions per bunch crossing.
+The average number or interactions per event for the whole Run 2 data taking period is shown in Figure~\ref{fig:objreco:pu}, with an average of 34 interactions per bunch crossing.
 \begin{figure}[h!] 
     \centering
     \includegraphics[width=0.49\textwidth]{figures/event_reconstruction/pu.pdf}
-    \caption{The average number of vertices per event in CMS for the whole Run 2 data taking period~\cite{CMSlumi}.}
+    \caption{The average number of interactions per event in CMS for the whole Run 2 data taking period~\cite{CMSlumi}.}
     \label{fig:objreco:pu}
 \end{figure}
 Track reconstruction encompasses the process of taking hits from the pixel and strip detectors, combining them into particle trajectories, and then estimating the momentum and flight direction of the charged particle responsible for producing the hits. It is a computationally heavy process and at CMS it is based on what is called a combinatorial Kalman filter~\cite{BILLOIR1989390}. A Kalman filter is an algorithm that uses time-dependent observations in order to estimate unknown variables, by proceeding progressively from one measurement to the next, improving the knowledge of the
@@ -223,7 +223,7 @@ The most common jet clustering algorithms used in hadron colliders are the Cambr
   \label{eq:objreco:jetclustering2}  
   d_{iB} &= p_{ti}^{2p},
   \end{align}  
-  where $d_{ij}$ is a measure of the relative transverse momenta between the particles, $\Delta R^2_{ij}$ is the distance between them in the $\eta-\phi$ plane (which can be roughly translated into a jet radius), $\Delta R^2$ corresponds to a distance parameter which controls the extension of the jet and $d_{iB}$ is the distance between the particle and the beam. The parameter $p$ is what separates the three algorithms from one another and controls the relative power of energy versus geometrical
+  where $d_{ij}$ is the so-called $k_T$ distance between particle $i$ and $j$, $\Delta R^2_{ij}$ is the distance between them in the $\eta-\phi$ plane, $\Delta R^2$ corresponds to a radius parameter which controls the extension of the jet and $d_{iB}$ is the distance between the particle and the beam. The parameter $p$ is what separates the three algorithms from one another and controls the relative power of energy versus geometrical
 scales. For the anti-\kt algorithm, it is defined as $p=-1$; for the \kt algorithm, $p=1$; and in the case of the C/A algorithm, $p=0$. The consequences of these choices are explained in detail below.
   \item Find the minimum distance of $d_{ij}$ and $d_{iB}$.
   \item If this is $d_{ij}$, recombine particles $i$ and $j$ and return to step 1.
@@ -265,7 +265,7 @@ The default jet clustering algorithm in CMS is the anti-\kt algorithm~\cite{Cacc
 \subsection{PF jets in CMS}
 Jet algorithms in CMS mainly use the four-vectors of PF candidates as input and a pileup removal algorithm is usually applied before clustering occurs. If using CHS (Section~\ref{subsub:objreco:chs}), charged hadrons not associated to the primary vertex are discarded before clustering. If PUPPI is used (Section~\ref{subsub:objreco:puppi}), all the PF candidates are reweighted based on how likely they are to have originated from pileup. 
 For the anti-\kt algorithm, CMS by default uses two jet cone sizes: R=0.4 and R=0.8. Jets with R=0.4, called PFAK4, are used for single-prong jets while the larger R=0.8 jets, PFAK8, are more often used when looking for jets containing multiple hard quarks/gluons in order to contain all the hadronization products.\par
- These jets are further required to pass certain jet identification requirements provided by the JetMET POG~\cite{jetID_JME}, in order to distinguish them from fake jets. All jets used in this analysis are required to pass the \textit{tight ID} requirements which are as follows:
+These jets are further required to pass certain jet identification requirements in order to distinguish them from fake jets~\cite{jetID_JME}, called \textit{tight ID}, which are as follows:
 \begin{itemize}
   \itemsep0em 
 \item the jet must contain at least two PF constituents;
@@ -293,7 +293,7 @@ These are illustrated in Figure~\ref{fig:objreco:jec}.
 \end{figure}
 
 \subsubsection{L1 offset correction}
-The largest correction is the L1 pileup offset correction, which is meant to subtract the additional energy in a jet due to pileup. This is done on an event-by-event basis through the \textit{jet area method} which uses the effective area of the jet multiplied by the average event energy density to calculate the size of the offset energy to be subtracted from each jet. An additional \PT- and $\eta$-dependent term is added in order to account for different pileup densities in different parts of the detector and for different jet energies. For data, an additional scalefactor to account for data and simulation differences is computed. This is done by constructing a \textit{Random Cone (RC)} centered at a given $\eta,\phi$ and dividing the energy density within that cone in data, evaluated in a dataset with no hard interactions (\textit{Zero Bias}), by that of the true energy offset in simulation
+The largest correction (for low-\PT jets) is the L1 pileup offset correction, which is meant to subtract the additional energy in a jet due to pileup. This is done on an event-by-event basis through the \textit{jet area method} which uses the effective area of the jet multiplied by the average event energy density to calculate the size of the offset energy to be subtracted from each jet. An additional \PT- and $\eta$-dependent term is added in order to account for different pileup densities in different parts of the detector and for different jet energies. For data, an additional scale factor to account for data and simulation differences is computed. This is done by constructing a \textit{Random Cone (RC)} centered at a given $\eta,\phi$ and dividing the energy density within that cone in data, evaluated in a dataset with no hard interactions (\textit{Zero Bias}), by that of the true energy offset in simulation. Note that this correction is not applied to PUPPI jets since the additional energy due to pileup has already been removed by the PUPPI algorithm.
 
 \subsubsection{L2 relative and L3 absolute corrections}
 After L1 corrections are applied, corrections to account for the detector response to hadrons are derived based on the true detector response in QCD MC. The simulated particle response is defined as the ratio
@@ -305,7 +305,7 @@ After L1 corrections are applied, corrections to account for the detector respon
 \subsubsection{Residual data corrections}
 
 After L1, L2, and L3 corrections are applied, two additional corrections are derived only for data in order to account for any residual discrepancies between data and MC. This is done by looking at the transverse momentum balance between a jet which is to be calibrated, and some reference object (either another jet, a Z boson, or a photon). If the jet energy scale is not equal to one, a \PT imbalance will be visible. The measurements are performed in a data sample of dijets, where the statistical uncertainty is small but the energy of the reference object poorly measured, as well as in $\PZ(\mu\mu)$+jet, $\PZ(ee)$+jet and $\gamma$+jet samples, where the energy of the \PZ and $\gamma$ is very well known but the statistics are small. \newline
-The  "L2 relative" residual correction is measured in dijet events by comparing the measured \PT of the reference jet, required to be central with $\eta<1.3$, to that of the calibration jet, with an unconstrained $\eta$. This is done as a function of jet $\eta$, in bins of average jet \PT. The "L3 relative" residual correction, is instead measured in $\PW/\gamma+\textrm{jet}$ events by comparing the measured jet \PT to the \PT of the precisely measured $\PZ/\gamma$, as a function of jet \PT.
+The  "L2 relative" residual correction is measured in dijet events by comparing the measured \PT of the reference jet, required to be central with $\eta<1.3$, to that of the calibration jet, with an unconstrained $\eta$. This is done as a function of jet $\eta$, in bins of average jet \PT. The "L3 relative" residual correction, is instead measured in $\PZ/\gamma+\textrm{jet}$ events by comparing the measured jet \PT to the \PT of the precisely measured $\PZ/\gamma$, as a function of jet \PT.
 The response, 
 \begin{equation*}
 R_{\textrm{jet,\PT}}=\frac{p_{T,\textrm{jet}}}{p_{T,\textrm{ref}}}
@@ -327,7 +327,7 @@ Above a W boson \PT of 200 GeV, the two quarks are therefore merged into a singl
     \label{fig:objreco:mergedvsunmerged}
 \end{figure}
 In order to distinguish jets from hadronically decaying vector bosons, either W or Z bosons, from those of quarks or gluons produced by QCD, the jet mass would in principle be a good discriminant since we know the W boson has a mass of around 80 GeV while the quark or gluon mass is close to zero. At very high transverse momenta, however, the width (and therefore the mass) of QCD jets may become equally large. In addition, diffuse radiation caused by the underlying event and pileup give rise to a significant number of additional particles in the event contributing to the total jet mass.
-Therefore, being able to accurately and efficiently separate highly boosted QCD jets from highly boosted vector bosons requires other methods. In order to remove the underlying event and pileup, algorithms like PUPPI and CHS can be used. In order to improve the mass resolution further, dedicated grooming algorithms must be applied.
+Therefore, being able to accurately and efficiently separate highly boosted QCD jets from highly boosted vector bosons requires other methods. In order to remove the underlying event and pileup, algorithms like PUPPI can be used. In order to improve the mass resolution further, dedicated grooming algorithms must be applied.
 
 \subsection{Grooming}
 \label{sec:objreco:grooming}
@@ -419,10 +419,49 @@ The distribution of $\tau_{21}$ for signal and background jets with different pi
      \label{fig:objreco:tau21}
  \end{figure}
 
+\subsection{Decorrelated n-subjettiness}
+\label{sec:objreco:ddt}
+The n-subjettiness variable described above is highly correlated with the jet mass. This leads to an undesired sculpting of the groomed jet mass distribution when applying a flat cut on \nsubj. The softdrop jet-mass distribution for gluon jets after successive cuts on \nsubj is shown in Figure~\ref{fig:objreco:sculpt}.
+\begin{figure}[h!] 
+    \centering 
+    \includegraphics[width=0.49\textwidth]{figures/event_reconstruction/sdmassvstau21.png}
+     \caption{The softdrop jet-mass distribution for gluon jets after successive cuts on \nsubj in steps of 0.02, going from 1.0 to 0.0~\cite{Dolen:2016kst}.}
+     \label{fig:objreco:sculpt}
+ \end{figure}
+This has the undesired effect of making the QCD background more peak-like rather than smoothly falling, which consequently makes QCD more difficult to distinguish from the W-jet signal. The shape and position of this sculpted mass peak depends on the jet \PT, which makes background estimation through jet mass sidebands difficult. In order to solve both of these issues, a tagging observable that is uncorrelated with the jet mass and that maintains a similar mass shape independent of the jet \PT was proposed, called \emph{Designing decorrelated taggers (DDT)}~\cite{Dolen:2016kst}. This decorrelation is done by flattening the $\tau_{21}$ profile dependence on $\rho'$, where $\rho'$ is defined by
+\begin{equation}
+\rho' = log(m^2/p_T/\mu) \textrm{, where $\mu$ = 1 GeV}.
+\end{equation}
+The \nsubj profile distribution as a function of $\rho'$ for W-jets and QCD-jets is shown in Figure~\ref{fig:objreco:tau21profileRho}.
+\begin{figure}[h!] 
+    \centering 
+    \includegraphics[width=0.49\textwidth]{figures/event_reconstruction/rho_vs_tau21.png}
+     \caption{The \nsubj profile distribution as a function of $\rho'$ for W-jets (hollow markers) and QCD-jets (solid) in different bins of jet \PT~\cite{Dolen:2016kst}.}
+     \label{fig:objreco:tau21profileRho}
+ \end{figure}
+There is no dependence of the \nsubj profile of QCD jets on the jet \PT when plotted versus $\rho'$, and there exists a linear relationship between \nsubj and $\rho'$. In order to design a mass- and \PT-decorrelated \nsubj variable, \ddt, a linear transformation of \nsubj is defined as
+\begin{equation}
+\label{eq:searchII:ddt}
+\tau_{21}^{DDT} = \tau_{21} + M \times \log \bigg( \frac{m^2}{p_T \times 1 \textrm{ GeV}}\bigg),
+\end{equation}
+where $M=-0.063$ is obtained from a fit of the \nsubj profile against the variable $\rho^{'}$ shown in Figure~\ref{fig:objreco:tau21profileRho}. The \ddt profile distribution as a function of $\rho'$ for W-jets and QCD-jets is shown in Figure~\ref{fig:objreco:tau21ddtprofileRho}, displaying the desired decorrelated behavior.
+\begin{figure}[h!] 
+    \centering 
+    \includegraphics[width=0.49\textwidth]{figures/event_reconstruction/rho_vs_tau21ddt.png}
+     \caption{The \ddt profile distribution as a function of $\rho'$ for W-jets (hollow markers) and QCD-jets (solid) in different bins of jet \PT~\cite{Dolen:2016kst}.}
+     \label{fig:objreco:tau21ddtprofileRho}
+ \end{figure}
+The effect on the jet groomed mass after applying a flat cut on \ddt is shown in Figure~\ref{fig:objreco:sculptDDT}. The sculpting of the jet mass is significantly reduced through the decorrelating procedure, resulting in a tagger with a minimal mass- and \PT-dependence.
+\begin{figure}[h!] 
+    \centering 
+    \includegraphics[width=0.49\textwidth]{figures/event_reconstruction/sdmassvsddt.png}
+     \caption{The softdrop jet-mass distribution for gluon jets after successive cuts on \ddt in steps of 0.02, going from 1.0 to 0.0~\cite{Dolen:2016kst}.}
+     \label{fig:objreco:sculptDDT}
+ \end{figure}
+\clearpage
 \subsection{Vector boson tagging}
 In order to discriminate \PW and \PZ bosons from quark/gluon jets a combination of a groomer and shape-tagger (like n-subjettiness) is usually used.
 Typical values for tagging W jets is a groomed jet mass between 60 and 100 \GeV and $\tau_{21}<0.5$. The exact combination and value of cuts is analysis dependent, and has been optimized for each search presented in this thesis. The details are thoroughly explained in each section.
-
 
 \subsubsection{Polarization effects}
 \label{sec:objreco:pol}
@@ -455,7 +494,8 @@ The tagging efficiency for transversely polarized W bosons (green) is significan
 \section{Monte Carlo Event Generators}
 Monte Carlo event generators offer a realistic estimate of high-energy collisions on an event-by-event basis, allowing us to estimate signal and background processes accurately. Simulated events are usually produced in three steps, beginning with the hard process through hadronization and decay. First, a matrix element generator simulates the hard scattering process and subsequent decays. Secondly, the showering and hadronization of unstable particles is performed and, lastly, the final-state particles are passed through a full detector simulation in order to reproduce a range of experimental effects.\par
 General-purpose Monte Carlo (GPMC) generators, like \HERWIG++~\cite{Bahr:2008pv} and \PYTHIA8~\cite{Sjostrand:2014zea}, deal with both perturbative as well as hadronization phenomena, simulating an event all the way up until detector simulation. In \HERWIG++ and \PYTHIA8, the hardest processes are only simulated at the lowest order of perturbative expansion, meaning $2 \rightarrow 2$ or $2 \rightarrow 3$ scatterings. In order to have  tree-level matrix elements with an arbitrary final-state multiplicity, they can be combined with programs used to generate parton-level events at higher accuracy, which are then processed through showering and hadronization with the GPMC generators. One popular program for generating matrix elements is \MADGRAPH~\cite{Aad2015}. This, however, still correspond to a tree-level (leading order) approach. To go to next-to-leading-order (NLO), meaning the inclusion of virtual corrections, two methods exist: \MCATNLO~\cite{Frixione:2002ik,Frixione:2003ei} and \POWHEG~\cite{Frixione:2007vw}. These combine the full next-to-leading-order prediction for inclusive processes with the subsequent parton showers, either by a subtraction method regularizing the real contributions, or by a matrix-element correction of the parton shower branching probability. After hadronization, all final state particles are passed through a full simulation of the CMS detector. This is done with \GEANTfour~\cite{AGOSTINELLI2003250}, which models the interaction and showering of particles with materials, and outputs position-dependent energy deposits.\par
-For the work presented in this thesis, simulated samples of the Standard Model background processes are used to optimize the analysis and in some cases provide flexible background templates. QCD multijet production is simulated with four generator configurations: 1. \PYTHIA standalone, 2. the LO mode of \MADGRAPH matched with \PYTHIA, 3. \POWHEG matched with \PYTHIA and 4. \HERWIG{++}~2.7.1 with tune CUETHS1~\cite{Khachatryan:2015pea}. Top-quark pair production is modeled with \POWHEG and showered with \PYTHIA unless otherwise stated. W+jets and Z+jets production are simulated with the leading-order (LO) mode of \MADGRAPH matched with \PYTHIA. Signal samples are generated with standalone \PYTHIA. All samples are processed through a \GEANTfour-based simulation of the CMS detector. To simulate the effect of additional proton-proton collisions within the same or adjacent bunch crossings (pileup), additional inelastic events are generated using \PYTHIA and superimposed on the hard-scattering events. The simulated MC events are finally weighted to reproduce the distribution of the number of pileup interactions observed in data.
+% For the work presented in this thesis, simulated samples of the Standard Model background processes are used to optimize the analysis and in some cases provide flexible background templates. QCD multijet production is simulated with four generator configurations: 1. \PYTHIA standalone, 2. the LO mode of \MADGRAPH matched with \PYTHIA, 3. \POWHEG matched with \PYTHIA and 4. \HERWIG{++}~2.7.1 with tune CUETHS1~\cite{Khachatryan:2015pea}. Top-quark pair production is modeled with \POWHEG and showered with \PYTHIA unless otherwise stated. W+jets and Z+jets production are simulated with the leading-order (LO) mode of \MADGRAPH matched with \PYTHIA. Signal samples are generated with standalone \PYTHIA. All samples are processed through a \GEANTfour-based simulation of the CMS detector.
+To simulate the effect of additional proton-proton collisions within the same or adjacent bunch crossings (pileup), additional inelastic events are generated using \PYTHIA and superimposed on the hard-scattering events. The simulated MC events are finally weighted to reproduce the distribution of the number of pileup interactions observed in data.
 \begin{figure}[h!] 
     \centering 
     \includegraphics[width=0.89\textwidth]{figures/event_reconstruction/MCgen.png}

@@ -21,7 +21,7 @@ The two measurements were found to be compatible, favoring a heavy resonance wit
 \end{figure}
 The combination of the excesses and the timing of the ATLAS paper, naturally led to some excitement, and in the coming weeks, the arXiv was flooded with theory papers attempting an explanation of the deviations.\newline
 In addition, one of the main benefits of increasing the LHC center-of-mass energy from 8 to 13 \TeV was that the partonic luminosity would increase.
-One could therefore expect the same number of signal events in the 20 \fbinv data set collected with a center-of-mass energy of 8 TeV, for a considerably smaller luminosity with a center-of-mass energy of 13 TeV. Figure~\ref{fig:searchI:8vs13reach} shows the system mass that can be probed with the expected 2015 integrated luminosity of 3 \fbinv collected with a center-of-mass energy of 13 TeV, as a function of the probeable mass with 20 \fbinv of 8 TeV data for different partonic channels of qq, qg, and gg. For example, a 2 \TeV mass resonance would be observable in both datasets.
+One could therefore expect the same number of signal events in the 20 \fbinv data set collected with a center-of-mass energy of 8 TeV, for a considerably smaller luminosity with a center-of-mass energy of 13 TeV. Figure~\ref{fig:searchI:8vs13reach} shows the system mass that can be probed with the expected 2015 integrated luminosity of 3 \fbinv collected with a center-of-mass energy of 13 TeV, as a function of the probe-able mass with 20 \fbinv of 8 TeV data for different partonic channels of qq, qg, and gg. For example, a 2 \TeV mass resonance would be observable in both datasets.
 % The probable 13 \TeV mass is defined by finding the system mass which results in the same number of expected events at 8 \TeV, if assuming cross sections scale with partonic luminosity and $1/m^2$. Three different partonic scattering channels are considered: qq, qg and gg. We see that, for instance for a resonance with a mass of 2000 \GeV, the reach at 13 \TeV is 2241(gg), 2091(gq), 1851(qq, one type) and 2046(qq, all types) \GeV.
 \begin{figure}[h!] 
     \centering
@@ -68,13 +68,13 @@ The first selection to be confronted in any analysis is the trigger selection. D
 \item {HLT\_PFHT650\_WideJetMJJ950DEtaJJ1p5}, and
 \item {HLT\_PFHT800}.
 \end{itemize}
-Here, \emph{PFHT650} refers to a total \HT of at least 650 GeV. \emph{WideJet} means jets reconstructed with the \emph{wide jet algorithm}~\cite{2011123}, an algorithm inspired by jet grooming intended to reduce sensitivity to gluon radiation. The two AK R=0.4 jets with the largest \PT in the event are used as seeds. Geometrically close jets are then combined into the closest jet seed if they are within $\Delta R = \sqrt{(\Delta \eta)^2+\Delta \phi)^2}$, and these two jets form a dijet system used for further selections. \emph{MJJ900} refers to a wide-jet dijet mass of at least 900 GeV, and \emph{DetaJJ1p5} means there is an additional cut on the $|\Delta \eta|$ between the two wide jets for reasons that will be explained below. In addition, two triggers based on jet grooming are used. These require a trimmed jet mass (see Section 3.5.1) of 30 and 50 GeV, yielding the triggers:
+Here, \emph{PFHT650} refers to a total \HT of at least 650 GeV. \emph{WideJet} means jets reconstructed with the \emph{wide jet algorithm}~\cite{2011123}, an algorithm designed to improve the jet response for gluon-initiated jets by picking up final state radiation around the gluon. The two AK R=0.4 jets with the largest \PT in the event are used as seeds. Geometrically close jets are then combined into the closest jet seed if they are within $\Delta R = \sqrt{(\Delta \eta)^2+\Delta \phi)^2}$, and these two jets form a dijet system used for further selections. \emph{MJJ900} refers to a wide-jet dijet mass of at least 900 GeV, and \emph{DetaJJ1p5} means there is an additional cut on the $|\Delta \eta|$ between the two wide jets for reasons that will be explained below. In addition, two triggers based on jet grooming are used. These require a trimmed jet mass (see Section 3.5.1) of 30 and 50 GeV together with a selection on the jet \PT or total event \HT, yielding the triggers:
 \begin{itemize}
   \itemsep0em 
 \item {HLT\_AK8PFJet360\_TrimMass30} and
 \item {HLT\_AK8PFHT700\_TrimR0p1PT0p03Mass50}.
 \end{itemize}
-The tuneable parameters for the trimming algorithm are set to $r_{sub}=0.2$ and $p_{T,frac}=0.03$. The trigger requiring a trimmed jet mass of at least 30 GeV is seeded by single-object Level 1 triggers with jet $p_T$ thresholds of 176 or 200 GeV, and the remaining triggers require an online \HT of at least 150 or 175 GeV.\par
+The tunable parameters for the trimming algorithm are set to $r_{sub}=0.2$ and $p_{T,frac}=0.03$.  The trigger requiring a trimmed jet mass of at least 30 GeV, in addition requires a jet \PT of at least 360 \GeV, while the second trimmed mass trigger requires a total \HT above 700 \GeV. The TrimMass30 trigger is seeded by single-object Level 1 triggers with jet $p_T$ thresholds of 176 or 200 GeV, and all the remaining triggers require an online \HT of at least 150 or 175 GeV.\par
 In order to avoid any kinks in the dijet invariant mass spectrum due to the presence of a trigger turn-on, we determine the dijet invariant mass at which the analysis triggers are fully efficient ($>99\%$), and only consider signal events above this value. In order to estimate the trigger efficiency, we use a trigger with a lower \HT threshold of 650 GeV as a reference trigger. This trigger has a prescale of 40, meaning events are only recorded one out of 40 times. It is seeded by L1 \HT triggers with thresholds of 150 or 175 GeV. We then define the efficiency as
 \begin{equation*}
 \textrm{Efficiency} = \frac{N_{trigger+ref}}{N_{ref}}  
@@ -106,7 +106,7 @@ After trigger selections, and the corresponding requirement of a dijet invariant
 \caption{ $|\Delta\eta|$  between the two highest-\PT jets for QCD jets and jets stemming from different signal scenarios.}
 \label{fig:searchI:detaopt}
 \end{figure}
-A cut of $|\Delta \eta|_{jj}<1.3$ removes the t-channel pole at $\cos \theta* = 1$ and is in addition found to yield the highest signal sensitivity. In addition to these requirements on the jets themselves, a veto on jets overlapping with leptons is applied. Here the overlap $\Delta R(\text{jet},\text{lepton})$ between the jet candidate and a lepton is required to be larger than 0.8. Leptons used for this veto are required to pass the identification requirements described in Section~\ref{sec:objreco:electrons} and~\ref{sec:objreco:muons}, have a transverse momentum larger than 35 (30) GeV, and a pseudorapidity smaller than 2.5 (2.4) in the case of electrons (muons). The \PT, $\eta$, dijet invariant mass, and $|\Delta \eta|_{jj}$ distribution for the two leading jets in the event after the above preselections have been applied is shown in Figure~\ref{fig:kinematics-all}.
+A cut of $|\Delta \eta|_{jj}<1.3$ removes the t-channel pole at $\cos \theta* = 1$ and is in addition found to yield the highest signal sensitivity. In addition to these requirements on the jets themselves, a veto on jets overlapping with leptons is applied in order to ensure orthogonally between the corresponding semi-leptonic analysis. Here the overlap $\Delta R(\text{jet},\text{lepton})$ between the jet candidate and a lepton is required to be larger than 0.8. Leptons used for this veto are required to pass the identification requirements described in Section~\ref{sec:objreco:electrons} and~\ref{sec:objreco:muons}, have a transverse momentum larger than 35 (30) GeV, and a pseudorapidity smaller than 2.5 (2.4) in the case of electrons (muons). The \PT, $\eta$, dijet invariant mass, and $|\Delta \eta|_{jj}$ distribution for the two leading jets in the event after the above preselections have been applied is shown in Figure~\ref{fig:kinematics-all}.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.4\textwidth]{figures/analysis/search1/AN-15-211/controlplots/silverjson/Pt_WSignal.pdf}
@@ -259,13 +259,13 @@ Dijet invariant mass     & $\mjj >1\TeV$\\
 \multicolumn{1}{c}{\mJ{} categories}\\
 \cline{1-1}
 WW & $ 65 < {\mJ}_{1} < 85\GeV$, $ 65 < {\mJ}_{2} < 85\GeV$\\
-WZ & $ 65 < {\mJ}_{1} < 85\GeV$, $ 85 < {\mJ}_{2} < 105\GeV$\\
+WZ & $ 65 < {\mJ}_{1/2} < 85\GeV$, $ 85 < {\mJ}_{2/1} < 105\GeV$\\
 ZZ & $ 85 < {\mJ}_{1} < 105\GeV$, $ 85 < {\mJ}_{2} < 105\GeV$\\
 \hline
 \multicolumn{1}{c}{\nsubj{} categories}\\
 \cline{1-1}
-High-purity   & $\tau_{\rm{21, jet1}} < 0.45$, $\tau_{\rm{21, jet2}} < 0.45$\\
-Low-purity    & $\tau_{\rm{21, jet1}} < 0.45$, $0.45 < \tau_{\rm{21, jet2}} < 0.75$\\
+High-purity   & $\tau_{\rm{21, jet1}} \leq 0.45$, $\tau_{\rm{21, jet2}} \leq 0.45$\\
+Low-purity    & $\tau_{\rm{21, jet1/jet2}} \leq 0.45$, $0.45 < \tau_{\rm{21, jet2/jet1}} \leq 0.75$\\
 \hline						       
 \end{tabular}
 \caption{The full analysis selections, and the signal categories based on the pruned jet mass and \nsubj values.}
@@ -283,7 +283,11 @@ We assume that the QCD multijets background can be described by a smooth, monoto
 \quad\quad\quad\quad
 \frac{dN}{d\mjj}= \frac{ P_0(1-\mjj/\sqrt{s})^{P_1} } { (\mjj/\sqrt{s})^{P_2} }\:\:,
 \end{equation}
-where $m$ is the dijet invariant mass, $\sqrt{s}$ is the center-of-mass energy, $P_0$ is a normalization parameter for the probability density function, and $P_1$ and $ P_2$ describe the shape. The number of fit parameters is decided through a Fisher's F-test~\cite{RePEc:bla:istatr:v:80:y:2012:i:3:p:491-491}. In this test, we start from the 2-parameter function and compare the goodness of fit ($\chi^2$ divided by degrees of freedom) when fitting the data signal region with a 2, 3, 4 and 5 parameter function. If the confidence level is less than 10\%, we add additional parameters to model the background distribution. The 4- and 5-parameter functions are
+where $m$ is the dijet invariant mass, $\sqrt{s}$ is the center-of-mass energy, $P_0$ is a normalization parameter for the probability density function, and $P_1$ and $ P_2$ describe the shape. The number of fit parameters is decided through a Fisher's F-test~\cite{RePEc:bla:istatr:v:80:y:2012:i:3:p:491-491}. In this test, we start from the 2-parameter function and compare the goodness of fit (quantified through the sum of residuals) when fitting the data signal region with a 2, 3, 4 and 5 parameter function. The Fishers test statistic $\textrm{Fishers}_{xy}$ is
+\begin{equation}
+\textrm{Fishers}_{12}=\frac{ \frac{RSS_1-RSS_2}{p_2-p_1}}{\frac{RSS_2}{n-p2}},
+\end{equation}
+where $RSS_i$ is the residual sum of squares of model $i$, $p_2$ is the number of parameters of model 2 and $p_1$ is the number of parameters of model 1 with $p_2>p_1$, and $n$ correspond to the number of data points. The model with more parameters will always fit the data at least as well as the model with less parameters, but the F statistic defines whether model 2 yields a significantly better fit to the data, quantified through a confidence level (CL) of the simpler function being correct. In our case, if the confidence level is less than 10\%, we add additional parameters to model the background distribution. The 4- and 5-parameter functions are
 \begin{align}
 \label{eq:dijet2}
 \frac{dN}{d \mjj} &= \frac{ P_0(1-\mjj/\sqrt{s})^{P_1} } {(\mjj/\sqrt{s})^{P_2+P_3\times\log(\mjj/\sqrt{s})} }\quad{\rm and}\\
@@ -294,8 +298,14 @@ where $P_3$ and $P_4$ are additional free parameters. As an additional crosschec
 \label{eq:dijet4}
 \frac{dN}{d\mjj} = \frac{ P_0(1-\mjj / \sqrt{s}+P_3(\mjj / \sqrt{s})^2)^{P_1} } { (\mjj/\sqrt{s})^{P_2} }.
 \end{equation}
-The fit range is chosen such that it starts where the trigger efficiency has reached its plateau to avoid bias from trigger inefficiency, and extends to the bin after the highest $m_{VV}$ mass point. The binning chosen for the fit follows the detector resolution as in Refs.~\cite{Chatrchyan:2012ypy,CMS-PAS-EXO-12-059}, and is referred to as the "dijet binning". Before unblinding the signal region, we check that the QCD dijet invariant mass spectrum is expected to be smooth from the distribution in QCD MC as well as exercise the F-test in QCD MC and in a data sideband.\par
-The fits to data in the signal region using the different fit functions are shown in Figure \ref{fig:searchI:fit-dataVV}, and the corresponding F-test output are given in Tables~\ref{tab:WW_enriched} through~\ref{tab:ZZ_enriched}. The findings can be summarized as follows: for the WW enriched category, a 2-parameter fit is sufficient to describe the data in both the high- and low-purity categories. In the WZ category, a 2-parameter fit is sufficient in the high-purity category, while three parameters are needed for the low-purity category. For the ZZ category, a 3-parameter fit is needed for both purity categories. The 2- and 3-parameter fit functions as defined in Equation \ref{eq:dijet2} will therefore be used to model the background component in the simultaneous signal and background fit.
+The fit range is chosen such that it starts where the trigger efficiency has reached its plateau to avoid bias from trigger inefficiency, and extends to the bin after the highest $m_{VV}$ mass point. The binning chosen for the fit follows the detector resolution as in Refs.~\cite{Chatrchyan:2012ypy,CMS-PAS-EXO-12-059}, and is referred to as the "dijet binning". In units of \GeV, the binning is as follows:
+
+\noindent Dijet binning = 1000,1058, 1126, 1181, 1246, 1313, 1383, 1455, 1530, 1607, 1687, 1770, 1856, 1945, \\
+2037, 2132, 2231, 2332, 2438, 2546, 2659, 2775, 2895, 3019, 3147, 3279, 3416, 3558, 3704, \\
+3854, 4010, 4171, 4337, 4509, 4686, 4869, 5058, 5253, 5500.\newline
+
+Before unblinding the signal region, we check that the QCD dijet invariant mass spectrum is expected to be smooth from the distribution in QCD MC as well as exercise the F-test in QCD MC and in a data sideband.\par
+The fits to data in the signal region using the different fit functions are shown in Figure \ref{fig:searchI:fit-dataVV}, and the corresponding F-test results are given in Tables~\ref{tab:WW_enriched} through~\ref{tab:ZZ_enriched}. The findings can be summarized as follows: for the WW enriched category, a 2-parameter fit is sufficient to describe the data in both the high- and low-purity categories. In the WZ category, a 2-parameter fit is sufficient in the high-purity category, while three parameters are needed for the low-purity category. For the ZZ category, a 3-parameter fit is needed for both purity categories. The 2- and 3-parameter fit functions as defined in Equation \ref{eq:dijet2} will therefore be used to model the background component in the simultaneous signal and background fit.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.32\textwidth]{figures/analysis/search1/AN-15-211/ftest/no5par/WWHP_fitComp.pdf}
@@ -320,8 +330,8 @@ Function & Residuals & $\chi^2$ & ndof \\
 4 par & 0.040 & 8.030 & 9 \\
 \hline
 \hline
-Fishers23  & -0.053 &CL &1.0\\
-Fishers34  & -1.456 &CL &1.0\\
+$\textrm{Fishers}_{23}$  & -0.053 &CL &1.0\\
+$\textrm{Fishers}_{34}$  & -1.456 &CL &1.0\\
 \hline
 \end{tabular}
 \quad
@@ -336,11 +346,11 @@ Function & Residuals & $\chi^2$ & ndof \\
 4 par & 0.324 & 13.680 & 15 \\
 \hline
 \hline
-Fishers23 & -1.723& CL & 1.0\\
-Fishers34 & -1.191& CL & 1.0\\
+$\textrm{Fishers}_{23}$ & -1.723& CL & 1.0\\
+$\textrm{Fishers}_{34}$ & -1.191& CL & 1.0\\
 \hline
 \end{tabular}
-\caption{Residuals, $\chi^{2}$, and degrees of freedom for the WW-enriched HP and LP categories. A 2-parameter fit is needed to describe the data in both categories.}
+\caption{Residuals, $\chi^{2}$, degrees of freedom, and F-test statistic, with its corresponding confidence level, for the WW-enriched HP and LP categories. A 2-parameter fit is needed to describe the data in both categories.}
 \label{tab:WW_enriched}
 \end{table}
 \begin{table}[h!]
@@ -356,8 +366,8 @@ Function & Residuals & $\chi^2$ & ndof \\
 4 par & 0.048 & 8.370 & 14 \\
 \hline
 \hline
-Fishers23 & -2.598& CL & 1.0\\
-Fishers34 & -0.491& CL & 1.0\\
+$\textrm{Fishers}_{23}$ & -2.598& CL & 1.0\\
+$\textrm{Fishers}_{34}$ & -0.491& CL & 1.0\\
 \hline
 \end{tabular}
 \quad
@@ -372,11 +382,11 @@ Function & Residuals & $\chi^2$ & ndof \\
 4 par & 0.269 & 11.421 & 18 \\
 \hline
 \hline
-Fishers23 & 55.258& CL & 0.0\\
-Fishers34 & 0.078& CL & 0.783\\
+$\textrm{Fishers}_{23}$ & 55.258& CL & 0.0\\
+$\textrm{Fishers}_{34}$ & 0.078& CL & 0.783\\
 \hline
 \end{tabular}
-\caption{Residuals, $\chi^{2}$, and degrees of freedom for the WZ-enriched HP (left) and LP (right) categories. A 2-parameter fit is sufficient to describe the data in the high-purity category, while three parameters are needed for the low-purity category.}
+\caption{Residuals, $\chi^{2}$, degrees of freedom, and F-test statistic, with its corresponding confidence level, for the WZ-enriched HP (left) and LP (right) categories. A 2-parameter fit is sufficient to describe the data in the high-purity category, while three parameters are needed for the low-purity category.}
 \label{tab:WZ_enriched}
 \end{table}
 \begin{table}[h!]
@@ -392,8 +402,8 @@ Function & Residuals & $\chi^2$ & ndof \\
 4 par & 0.124 & 9.781 & 9 \\
 \hline
 \hline
-Fishers23 & 6.302& CL & 0.029\\
-Fishers34 & 1.246& CL & 0.290\\
+$\textrm{Fishers}_{23}$ & 6.302& CL & 0.029\\
+$\textrm{Fishers}_{34}$ & 1.246& CL & 0.290\\
 \hline
 \end{tabular}
 \quad
@@ -408,11 +418,11 @@ Function & Residuals & $\chi^2$ & ndof \\
 4 par & 0.118 & 17.394 & 13 \\
 \hline
 \hline
-Fishers23 & 40.438& CL & 0.0\\
-Fishers34 & 0.356& CL & 0.56\\
+$\textrm{Fishers}_{23}$ & 40.438& CL & 0.0\\
+$\textrm{Fishers}_{34}$ & 0.356& CL & 0.56\\
 \hline
 \end{tabular}
-\caption{Residuals, $\chi^{2}$, and degrees of freedom for the ZZ-enriched LP and HP categories. A 3-parameter fit is sufficient to describe the data in both categories.}
+\caption{Residuals, $\chi^{2}$, degrees of freedom, and F-test statistic, with its corresponding confidence level,m for the ZZ-enriched LP and HP categories. A 3-parameter fit is sufficient to describe the data in both categories.}
 \label{tab:ZZ_enriched}
 \end{table}
 

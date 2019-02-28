@@ -297,6 +297,12 @@ J.~POG, ``Jet Identification: Recommendations for 13TeV data analysis'', 2018
   Energy Physics} \textbf{ 2012} (Feb, 2012) 93,
   \href{http://dx.doi.org/10.1007/JHEP02(2012)093}{\doi{10.1007/JHEP02(2012)093}}.
 
+\bibitem{Dolen:2016kst}
+J.~Dolen\hrefCMSnoop {}{ {et~al.}, ``{Thinking outside the ROCs: Designing
+  Decorrelated Taggers (DDT) for jet substructure}'',}
+\href{http://www.arXiv.org/abs/1603.00027}{\texttt{arXiv:1603.00027}}.
+%%CITATION = ARXIV:1603.00027;%%.
+
 \bibitem{PhysRevD.86.095031}
 S.~Bolognesi\hrefCMSnoop {}{ {et~al.}, ``Spin and parity of a single-produced
   resonance at the LHC'',} \textit{ Phys. Rev. D} \textbf{ 86} (Nov, 2012)
@@ -510,12 +516,6 @@ J.~Alwall\hrefCMSnoop {}{ {et~al.}, ``{The automated computation of tree-level
   \href{http://dx.doi.org/10.1140/epjc/s10052-007-0490-5}{\doi{10.1140/epjc/s10052-007-0490-5}},
 \href{http://www.arXiv.org/abs/0706.2569}{\texttt{arXiv:0706.2569}}.
 %%CITATION = ARXIV:0706.2569;%%.
-
-\bibitem{Dolen:2016kst}
-J.~Dolen\hrefCMSnoop {}{ {et~al.}, ``{Thinking outside the ROCs: Designing
-  Decorrelated Taggers (DDT) for jet substructure}'',}
-\href{http://www.arXiv.org/abs/1603.00027}{\texttt{arXiv:1603.00027}}.
-%%CITATION = ARXIV:1603.00027;%%.
 
 \bibitem{Gallicchio:2011xq}
 \hrefCMSnoop {}{J.~Gallicchio and M.~D. Schwartz, ``{Quark and Gluon Tagging at

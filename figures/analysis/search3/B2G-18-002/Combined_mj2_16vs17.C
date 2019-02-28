@@ -1,12 +1,12 @@
 void Combined_mj2_16vs17()
 {
 //=========Macro generated from canvas: c3/c3
-//=========  (Tue Feb 12 11:57:20 2019) by ROOT version6.06/01
-   TCanvas *c3 = new TCanvas("c3", "c3",0,0,800,600);
+//=========  (Mon Feb 25 14:22:39 2019) by ROOT version6.06/01
+   TCanvas *c3 = new TCanvas("c3", "c3",50,72,800,600);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
    c3->SetHighLightColor(2);
-   c3->Range(-30.745,-0.2487437,225.4633,1.635678);
+   c3->Range(-30.745,0.2175879,225.4633,1.599497);
    c3->SetFillColor(0);
    c3->SetBorderMode(0);
    c3->SetBorderSize(2);
@@ -19,7 +19,7 @@ void Combined_mj2_16vs17()
    c3->SetFrameFillStyle(0);
    c3->SetFrameBorderMode(0);
    
-   Double_t _fx3005[43] = {
+   Double_t _fx3007[43] = {
    2.5,
    7.5,
    12.5,
@@ -63,7 +63,7 @@ void Combined_mj2_16vs17()
    202.5,
    207.5,
    212.5};
-   Double_t _fy3005[43] = {
+   Double_t _fy3007[43] = {
    0.6689835,
    0.6926771,
    0.7105031,
@@ -107,7 +107,7 @@ void Combined_mj2_16vs17()
    1,
    1,
    1};
-   Double_t _felx3005[43] = {
+   Double_t _felx3007[43] = {
    2.5,
    2.5,
    2.5,
@@ -151,7 +151,7 @@ void Combined_mj2_16vs17()
    2.5,
    2.5,
    2.5};
-   Double_t _fely3005[43] = {
+   Double_t _fely3007[43] = {
    0.009859222,
    0.01138194,
    0.01359553,
@@ -195,7 +195,7 @@ void Combined_mj2_16vs17()
    0.01561453,
    0.01254541,
    0.01462095};
-   Double_t _fehx3005[43] = {
+   Double_t _fehx3007[43] = {
    2.5,
    2.5,
    2.5,
@@ -239,7 +239,7 @@ void Combined_mj2_16vs17()
    2.5,
    2.5,
    2.5};
-   Double_t _fehy3005[43] = {
+   Double_t _fehy3007[43] = {
    0.009761305,
    0.0112277,
    0.01334785,
@@ -283,7 +283,7 @@ void Combined_mj2_16vs17()
    0,
    0,
    0};
-   TGraphAsymmErrors *grae = new TGraphAsymmErrors(43,_fx3005,_fy3005,_felx3005,_fehx3005,_fely3005,_fehy3005);
+   TGraphAsymmErrors *grae = new TGraphAsymmErrors(43,_fx3007,_fy3007,_felx3007,_fehx3007,_fely3007,_fehy3007);
    grae->SetName("");
    grae->SetTitle("");
    grae->SetFillColor(1);
@@ -298,36 +298,36 @@ void Combined_mj2_16vs17()
    grae->SetMarkerStyle(8);
    grae->SetMarkerSize(1.1);
    
-   TH1F *Graph_Graph3005 = new TH1F("Graph_Graph3005","",100,0,236.5);
-   Graph_Graph3005->SetMinimum(0);
-   Graph_Graph3005->SetMaximum(1.5);
-   Graph_Graph3005->SetDirectory(0);
-   Graph_Graph3005->SetStats(0);
-   Graph_Graph3005->SetLineStyle(0);
-   Graph_Graph3005->SetMarkerStyle(20);
-   Graph_Graph3005->GetXaxis()->SetTitle("Jet 2 softdrop mass (GeV)");
-   Graph_Graph3005->GetXaxis()->SetRange(1,91);
-   Graph_Graph3005->GetXaxis()->SetLabelFont(42);
-   Graph_Graph3005->GetXaxis()->SetLabelOffset(0.007);
-   Graph_Graph3005->GetXaxis()->SetLabelSize(0.05);
-   Graph_Graph3005->GetXaxis()->SetTitleSize(0.06);
-   Graph_Graph3005->GetXaxis()->SetTitleFont(42);
-   Graph_Graph3005->GetYaxis()->SetTitle("Efficiency / 5 GeV");
-   Graph_Graph3005->GetYaxis()->SetLabelFont(42);
-   Graph_Graph3005->GetYaxis()->SetLabelOffset(0.007);
-   Graph_Graph3005->GetYaxis()->SetLabelSize(0.05);
-   Graph_Graph3005->GetYaxis()->SetTitleSize(0.06);
-   Graph_Graph3005->GetYaxis()->SetTitleFont(42);
-   Graph_Graph3005->GetZaxis()->SetLabelFont(42);
-   Graph_Graph3005->GetZaxis()->SetLabelOffset(0.007);
-   Graph_Graph3005->GetZaxis()->SetLabelSize(0.05);
-   Graph_Graph3005->GetZaxis()->SetTitleSize(0.06);
-   Graph_Graph3005->GetZaxis()->SetTitleFont(42);
-   grae->SetHistogram(Graph_Graph3005);
+   TH1F *Graph_Graph3007 = new TH1F("Graph_Graph3007","",100,0,236.5);
+   Graph_Graph3007->SetMinimum(0.4);
+   Graph_Graph3007->SetMaximum(1.5);
+   Graph_Graph3007->SetDirectory(0);
+   Graph_Graph3007->SetStats(0);
+   Graph_Graph3007->SetLineStyle(0);
+   Graph_Graph3007->SetMarkerStyle(20);
+   Graph_Graph3007->GetXaxis()->SetTitle("Jet 2 softdrop mass (GeV)");
+   Graph_Graph3007->GetXaxis()->SetRange(1,91);
+   Graph_Graph3007->GetXaxis()->SetLabelFont(42);
+   Graph_Graph3007->GetXaxis()->SetLabelOffset(0.007);
+   Graph_Graph3007->GetXaxis()->SetLabelSize(0.05);
+   Graph_Graph3007->GetXaxis()->SetTitleSize(0.06);
+   Graph_Graph3007->GetXaxis()->SetTitleFont(42);
+   Graph_Graph3007->GetYaxis()->SetTitle("Efficiency / 5 GeV");
+   Graph_Graph3007->GetYaxis()->SetLabelFont(42);
+   Graph_Graph3007->GetYaxis()->SetLabelOffset(0.007);
+   Graph_Graph3007->GetYaxis()->SetLabelSize(0.05);
+   Graph_Graph3007->GetYaxis()->SetTitleSize(0.06);
+   Graph_Graph3007->GetYaxis()->SetTitleFont(42);
+   Graph_Graph3007->GetZaxis()->SetLabelFont(42);
+   Graph_Graph3007->GetZaxis()->SetLabelOffset(0.007);
+   Graph_Graph3007->GetZaxis()->SetLabelSize(0.05);
+   Graph_Graph3007->GetZaxis()->SetTitleSize(0.06);
+   Graph_Graph3007->GetZaxis()->SetTitleFont(42);
+   grae->SetHistogram(Graph_Graph3007);
    
    grae->Draw("amp");
    
-   Double_t _fx3006[43] = {
+   Double_t _fx3008[43] = {
    2.5,
    7.5,
    12.5,
@@ -371,7 +371,7 @@ void Combined_mj2_16vs17()
    202.5,
    207.5,
    212.5};
-   Double_t _fy3006[43] = {
+   Double_t _fy3008[43] = {
    0.6282528,
    0.6483318,
    0.650708,
@@ -415,7 +415,7 @@ void Combined_mj2_16vs17()
    0.9896907,
    0.9770115,
    0.9775281};
-   Double_t _felx3006[43] = {
+   Double_t _felx3008[43] = {
    2.5,
    2.5,
    2.5,
@@ -459,7 +459,7 @@ void Combined_mj2_16vs17()
    2.5,
    2.5,
    2.5};
-   Double_t _fely3006[43] = {
+   Double_t _fely3008[43] = {
    0.007900753,
    0.01018549,
    0.01244762,
@@ -503,7 +503,7 @@ void Combined_mj2_16vs17()
    0.01509568,
    0.02058415,
    0.02013774};
-   Double_t _fehx3006[43] = {
+   Double_t _fehx3008[43] = {
    2.5,
    2.5,
    2.5,
@@ -547,7 +547,7 @@ void Combined_mj2_16vs17()
    2.5,
    2.5,
    2.5};
-   Double_t _fehy3006[43] = {
+   Double_t _fehy3008[43] = {
    0.007855315,
    0.01009628,
    0.0123121,
@@ -591,7 +591,7 @@ void Combined_mj2_16vs17()
    0.007493456,
    0.01288971,
    0.01260381};
-   grae = new TGraphAsymmErrors(43,_fx3006,_fy3006,_felx3006,_fehx3006,_fely3006,_fehy3006);
+   grae = new TGraphAsymmErrors(43,_fx3008,_fy3008,_felx3008,_fehx3008,_fely3008,_fehy3008);
    grae->SetName("");
    grae->SetTitle("");
    grae->SetFillColor(1);
@@ -604,32 +604,338 @@ void Combined_mj2_16vs17()
    grae->SetMarkerStyle(8);
    grae->SetMarkerSize(1.1);
    
-   TH1F *Graph_Graph3006 = new TH1F("Graph_Graph3006","",100,0,236.5);
-   Graph_Graph3006->SetMinimum(0);
-   Graph_Graph3006->SetMaximum(1.4);
-   Graph_Graph3006->SetDirectory(0);
-   Graph_Graph3006->SetStats(0);
-   Graph_Graph3006->SetLineStyle(0);
-   Graph_Graph3006->SetMarkerStyle(20);
-   Graph_Graph3006->GetXaxis()->SetTitle("Jet 2 softdrop mass (GeV)");
-   Graph_Graph3006->GetXaxis()->SetLabelFont(42);
-   Graph_Graph3006->GetXaxis()->SetLabelOffset(0.007);
-   Graph_Graph3006->GetXaxis()->SetLabelSize(0.05);
-   Graph_Graph3006->GetXaxis()->SetTitleSize(0.06);
-   Graph_Graph3006->GetXaxis()->SetTitleOffset(0.9);
-   Graph_Graph3006->GetXaxis()->SetTitleFont(42);
-   Graph_Graph3006->GetYaxis()->SetTitle("Efficiency / 5 GeV");
-   Graph_Graph3006->GetYaxis()->SetLabelFont(42);
-   Graph_Graph3006->GetYaxis()->SetLabelOffset(0.007);
-   Graph_Graph3006->GetYaxis()->SetLabelSize(0.05);
-   Graph_Graph3006->GetYaxis()->SetTitleSize(0.06);
-   Graph_Graph3006->GetYaxis()->SetTitleFont(42);
-   Graph_Graph3006->GetZaxis()->SetLabelFont(42);
-   Graph_Graph3006->GetZaxis()->SetLabelOffset(0.007);
-   Graph_Graph3006->GetZaxis()->SetLabelSize(0.05);
-   Graph_Graph3006->GetZaxis()->SetTitleSize(0.06);
-   Graph_Graph3006->GetZaxis()->SetTitleFont(42);
-   grae->SetHistogram(Graph_Graph3006);
+   TH1F *Graph_Graph3008 = new TH1F("Graph_Graph3008","",100,0,236.5);
+   Graph_Graph3008->SetMinimum(0);
+   Graph_Graph3008->SetMaximum(1.4);
+   Graph_Graph3008->SetDirectory(0);
+   Graph_Graph3008->SetStats(0);
+   Graph_Graph3008->SetLineStyle(0);
+   Graph_Graph3008->SetMarkerStyle(20);
+   Graph_Graph3008->GetXaxis()->SetTitle("Jet 2 softdrop mass (GeV)");
+   Graph_Graph3008->GetXaxis()->SetLabelFont(42);
+   Graph_Graph3008->GetXaxis()->SetLabelOffset(0.007);
+   Graph_Graph3008->GetXaxis()->SetLabelSize(0.05);
+   Graph_Graph3008->GetXaxis()->SetTitleSize(0.06);
+   Graph_Graph3008->GetXaxis()->SetTitleOffset(0.9);
+   Graph_Graph3008->GetXaxis()->SetTitleFont(42);
+   Graph_Graph3008->GetYaxis()->SetTitle("Efficiency / 5 GeV");
+   Graph_Graph3008->GetYaxis()->SetLabelFont(42);
+   Graph_Graph3008->GetYaxis()->SetLabelOffset(0.007);
+   Graph_Graph3008->GetYaxis()->SetLabelSize(0.05);
+   Graph_Graph3008->GetYaxis()->SetTitleSize(0.06);
+   Graph_Graph3008->GetYaxis()->SetTitleFont(42);
+   Graph_Graph3008->GetZaxis()->SetLabelFont(42);
+   Graph_Graph3008->GetZaxis()->SetLabelOffset(0.007);
+   Graph_Graph3008->GetZaxis()->SetLabelSize(0.05);
+   Graph_Graph3008->GetZaxis()->SetTitleSize(0.06);
+   Graph_Graph3008->GetZaxis()->SetTitleFont(42);
+   grae->SetHistogram(Graph_Graph3008);
+   
+   grae->Draw("mp");
+   
+   Double_t _fx3009[43] = {
+   2.5,
+   7.5,
+   12.5,
+   17.5,
+   22.5,
+   27.5,
+   32.5,
+   37.5,
+   42.5,
+   47.5,
+   52.5,
+   57.5,
+   62.5,
+   67.5,
+   72.5,
+   77.5,
+   82.5,
+   87.5,
+   92.5,
+   97.5,
+   102.5,
+   107.5,
+   112.5,
+   117.5,
+   122.5,
+   127.5,
+   132.5,
+   137.5,
+   142.5,
+   147.5,
+   152.5,
+   157.5,
+   162.5,
+   167.5,
+   172.5,
+   177.5,
+   182.5,
+   187.5,
+   192.5,
+   197.5,
+   202.5,
+   207.5,
+   212.5};
+   Double_t _fy3009[43] = {
+   0.6525097,
+   0.6770245,
+   0.6757703,
+   0.709637,
+   0.7513514,
+   0.7827225,
+   0.9018987,
+   0.9586207,
+   0.9921875,
+   0.9952381,
+   0.9952381,
+   0.9951923,
+   1,
+   1,
+   1,
+   1,
+   0.9946809,
+   1,
+   1,
+   1,
+   0.9926471,
+   1,
+   0.992126,
+   1,
+   1,
+   1,
+   0.9926471,
+   0.9902913,
+   0.9917355,
+   1,
+   1,
+   1,
+   1,
+   0.9916667,
+   0.9916667,
+   1,
+   1,
+   1,
+   0.9888889,
+   0.990566,
+   1,
+   1,
+   1};
+   Double_t _felx3009[43] = {
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5};
+   Double_t _fely3009[43] = {
+   0.007938768,
+   0.01020397,
+   0.01246876,
+   0.01622579,
+   0.0186323,
+   0.02156192,
+   0.01758102,
+   0.01281906,
+   0.007162286,
+   0.007068398,
+   0.007068398,
+   0.007135559,
+   0.005643393,
+   0.005874235,
+   0.005844352,
+   0.006657123,
+   0.007884733,
+   0.006855754,
+   0.006618771,
+   0.008001755,
+   0.01084513,
+   0.008172518,
+   0.01159884,
+   0.009528096,
+   0.009528096,
+   0.00866567,
+   0.01084513,
+   0.01423726,
+   0.01216233,
+   0.009528096,
+   0.01002705,
+   0.009296788,
+   0.01165455,
+   0.01226161,
+   0.01226161,
+   0.009607779,
+   0.01268391,
+   0.00922216,
+   0.01623786,
+   0.01384364,
+   0.01177399,
+   0.01326993,
+   0.0129703};
+   Double_t _fehx3009[43] = {
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5,
+   2.5};
+   Double_t _fehy3009[43] = {
+   0.007882645,
+   0.0100928,
+   0.01230463,
+   0.01587624,
+   0.01802941,
+   0.02057773,
+   0.01588661,
+   0.01069683,
+   0.004418807,
+   0.003474497,
+   0.003474497,
+   0.003507795,
+   0,
+   0,
+   0,
+   0,
+   0.003879603,
+   0,
+   0,
+   0,
+   0.00535549,
+   0,
+   0.005732956,
+   0,
+   0,
+   0,
+   0.00535549,
+   0.007059866,
+   0.006015618,
+   0,
+   0,
+   0,
+   0,
+   0.006065462,
+   0.006065462,
+   0,
+   0,
+   0,
+   0.008071816,
+   0.006861358,
+   0,
+   0,
+   0};
+   grae = new TGraphAsymmErrors(43,_fx3009,_fy3009,_felx3009,_fehx3009,_fely3009,_fehy3009);
+   grae->SetName("");
+   grae->SetTitle("");
+   grae->SetFillColor(1);
+
+   ci = TColor::GetColor("#bf812d");
+   grae->SetLineColor(ci);
+
+   ci = TColor::GetColor("#bf812d");
+   grae->SetMarkerColor(ci);
+   grae->SetMarkerStyle(24);
+   grae->SetMarkerSize(1.1);
+   
+   TH1F *Graph_Graph3009 = new TH1F("Graph_Graph3009","",100,0,236.5);
+   Graph_Graph3009->SetMinimum(0);
+   Graph_Graph3009->SetMaximum(1.4);
+   Graph_Graph3009->SetDirectory(0);
+   Graph_Graph3009->SetStats(0);
+   Graph_Graph3009->SetLineStyle(0);
+   Graph_Graph3009->SetMarkerStyle(20);
+   Graph_Graph3009->GetXaxis()->SetTitle("Jet 2 softdrop mass (GeV)");
+   Graph_Graph3009->GetXaxis()->SetLabelFont(42);
+   Graph_Graph3009->GetXaxis()->SetLabelOffset(0.007);
+   Graph_Graph3009->GetXaxis()->SetLabelSize(0.05);
+   Graph_Graph3009->GetXaxis()->SetTitleSize(0.06);
+   Graph_Graph3009->GetXaxis()->SetTitleOffset(0.9);
+   Graph_Graph3009->GetXaxis()->SetTitleFont(42);
+   Graph_Graph3009->GetYaxis()->SetTitle("Efficiency / 5 GeV");
+   Graph_Graph3009->GetYaxis()->SetLabelFont(42);
+   Graph_Graph3009->GetYaxis()->SetLabelOffset(0.007);
+   Graph_Graph3009->GetYaxis()->SetLabelSize(0.05);
+   Graph_Graph3009->GetYaxis()->SetTitleSize(0.06);
+   Graph_Graph3009->GetYaxis()->SetTitleFont(42);
+   Graph_Graph3009->GetZaxis()->SetLabelFont(42);
+   Graph_Graph3009->GetZaxis()->SetLabelOffset(0.007);
+   Graph_Graph3009->GetZaxis()->SetLabelSize(0.05);
+   Graph_Graph3009->GetZaxis()->SetTitleSize(0.06);
+   Graph_Graph3009->GetZaxis()->SetTitleFont(42);
+   grae->SetHistogram(Graph_Graph3009);
    
    grae->Draw("mp");
    
@@ -662,6 +968,18 @@ void Combined_mj2_16vs17()
    ci = TColor::GetColor("#bf812d");
    entry->SetMarkerColor(ci);
    entry->SetMarkerStyle(8);
+   entry->SetMarkerSize(1.1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("","2017 (no Run B)","LEP");
+
+   ci = TColor::GetColor("#bf812d");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+
+   ci = TColor::GetColor("#bf812d");
+   entry->SetMarkerColor(ci);
+   entry->SetMarkerStyle(24);
    entry->SetMarkerSize(1.1);
    entry->SetTextFont(42);
    leg->Draw();

@@ -85,7 +85,7 @@ The same preselections as in Search I, described in Section~\ref{sec:searchI:pre
 \caption{Jet \PT{} (top left), $\eta$ (top right), $\Delta \eta_{jj}$ (bottom left) and dijet invariant mass (bottom right) for the two leading jets in the event after loose preselections are applied. The signal is scaled by an arbitrary number.}
 \label{fig:searchII:kinematics-all}
 \end{figure}
-A large difference in slope in the jet \PT and dijet invariant mass spectrum depending on the QCD matrix element or shower generator is observed. Pure \PYTHIA QCD MC describes the data best, while \HERWIG{++} tends to underestimate and \amcatnlo{}+\PYTHIA tends to overestimate the number of high $\PT/\mjj$ jets. Pure \PYTHIA{8} QCD MC is therefore used for all background checks in this analysis.
+A large difference in slope in the jet \PT and dijet invariant mass spectrum depending on the QCD matrix element or shower generator is observed. Pure \PYTHIA QCD MC describes the data best, while \HERWIG{++} tends to underestimate and \amcatnlo{}+\PYTHIA tends to overestimate the number of high $\PT/\mjj$ jets. Comparing these distributions to the ones in Figure~\ref{fig:kinematics-all}, we see that \PYTHIA{8} now yields a far better description of the jet \PT and dijet invariant mass spectrum. This is most likely due to the change in tune from CUETP8M1 to CUETHS1~\cite{Khachatryan:2015pea}. Pure \PYTHIA{8} QCD MC is used for all background checks in this analysis. 
 
 \clearpage
 \section{Developing a new W-tagger}
@@ -98,7 +98,7 @@ Two interesting observations were made. Softdrop used together with PUPPI pileup
 \caption{The PUPPI softdrop jet mass distribution for W boson jets coming from a 1 and 4 TeV resonance assuming different signal hypothesis. The QCD multijet background is shown in gray. No jet energy corrections have been applied to the jets.}
 \label{fig:searchII:sdmass}
 \end{figure}
-However, when applying the recommended L2 and L3 jet energy corrections (see Section~\ref{sec:objreco:jec}) to the jet groomed mass, a strong \PT dependent shift is re-introduced. This effect is not present for the pruned jet mass. Figure~\ref{fig:searchII:wtagmass} shows the softdrop (top left) and pruned (top right) jet mass distributions with recommended L2L3 corrections applied. Here, the PUPPI softdrop jet mass shift as a function of \PT is significantly increased with respect to what was observed for the uncorrected mass, while the CHS pruned jet mass remains stable. This points to the PUPPI jet energy corrections not being optimal for PUPPI soft-dropped jets. Indeed, there is no reason to expect the CMS JEC corrections to work for groomed jets at all as they were derived from un-groomed PUPPI or CHS jets. The fact that they work well for CHS pruned jets is not a given. The jet energy corrections derived for CHS and PUPPI jets as a function of jet \PT are shown in the bottom plot in Figure~\ref{fig:searchII:wtagmass}. A significant slope in JEC as a function of \PT is measured for PUPPI, while not present for CHS.
+However, when applying L2 and L3 jet energy corrections (see Section~\ref{sec:objreco:jec}) to the jet groomed mass, a strong \PT dependent shift is re-introduced. This effect is not present for the pruned jet mass. Figure~\ref{fig:searchII:wtagmass} shows the softdrop (top left) and pruned (top right) jet mass distributions with L2L3 corrections applied. Here, the PUPPI softdrop jet mass shift as a function of \PT is significantly increased with respect to what was observed for the uncorrected mass, while the CHS pruned jet mass remains stable. This points to the PUPPI jet energy corrections not being optimal for PUPPI soft-dropped jets. Indeed, there is no reason to expect the CMS JEC corrections to work for groomed jets at all as they were derived from un-groomed PUPPI or CHS jets. The fact that they work well for CHS pruned jets is not a given. The jet energy corrections derived for CHS and PUPPI jets as a function of jet \PT are shown in the bottom plot in Figure~\ref{fig:searchII:wtagmass}. A significant slope in JEC as a function of \PT is measured for PUPPI, while not present for CHS.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.4\textwidth]{figures/analysis/search2/AN-16-235/plots/gen_SoftdropMass.pdf}
@@ -117,7 +117,7 @@ In order to remove the PUPPI softdrop jet mass dependence on jet \PT, all jet en
 \caption{The mean of a Gaussian fit to the W-jet PUPPI softdrop mass peak as a function of jet \PT in two different $\eta$ bins (smaller or greater than $|\eta|=1.3$). No jet energy corrections have been applied to the softdrop mass.}
 \label{fig:searchII:UncorrSD}
 \end{figure}
-In order to use PUPPI softdrop for W tagging, we therefore derive dedicated jet-mass corrections to compensate for two factors: a generator-level \PT-dependence, as first observed in Section~\ref{sec:searchI:wtagging}, and a reconstruction-level \PT- and $\eta$-dependence, most likely due to calibration (recall, the PUPPI jet energy corrections have been removed). Figure~\ref{fig:searchII:sdmassshifts} shows the mean of the generated softdrop jet mass (left) and the normalized difference in reconstructed and generated softdrop jet mass (right) as a function of jet \PT. The shift in generated softdrop mass at lower \PT is of the order of 2-3$\%$ while the difference between reconstructed and generated softdrop mass is a 5-10$\%$ effect.
+In order to use PUPPI softdrop for W tagging, we therefore derive dedicated jet-mass corrections to compensate for two factors: a generator-level \PT-dependence, as first observed in Section~\ref{sec:searchI:wtagging}, and a reconstruction-level \PT- and $\eta$-dependence due to detector effects (recall, the PUPPI jet energy corrections have been removed). Figure~\ref{fig:searchII:sdmassshifts} shows the mean of the generated softdrop jet mass (left) and the normalized difference in reconstructed and generated softdrop jet mass (right) as a function of jet \PT. The shift in generated softdrop mass at lower \PT is of the order of 2-3$\%$ while the difference between reconstructed and generated softdrop mass is a 5-10$\%$ effect.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.49\textwidth]{figures/analysis/search2/AN-16-235/plots/GenSoftdropMass_vspt.pdf}
@@ -161,13 +161,7 @@ A closure test is performed in order to check that the corrected PUPPI softdrop 
 
 \subsection{W-tagging performance}
 \label{sec:searchII:vtagperf}
-The new PUPPI softdrop based V tagger uses a softdrop jet mass window of $65 \GeV < m_{SD} < 105 \GeV$ in combination with a selection of PUPPI $\tau_{21}<0.4$. The CMS default is to compute the \nsubj variable starting from un-groomed jets, but it can also be computed from already groomed jets. I briefly studied calculating \nsubj starting from soft-dropped jets, summarized in Appendix~\ref{app:vtag:dichroic}, where I found a small gain in performance when calculating \nsubj starting from jets groomed with softdrop $\beta=0$. This is something that needs further study, and is left for future work. We compare the performance of the PUPPI softdrop based V tagger to that of the CHS pruning-based tagger used in Search I, as well as to that of a "DDT-transformed" \nsubj-based tagger~\cite{Dolen:2016kst}. The \ddt variable is a linear transformation of \nsubj given as
-\begin{equation}
-\label{eq:searchII:ddt}
-\tau_{21}^{DDT} = \tau_{21} + M \times \log \bigg( \frac{m^2}{p_T \times 1 \textrm{ GeV}}\bigg)
-\end{equation}
-where $M=-0.063$ is obtained from a fit of $\tau_{21}$ against the variable $\rho^{'}=\log(m^2/\PT/\mu)$ in QCD Monte Carlo, where $\mu = 1 \GeV$.
-The purpose of this is to decorrelate $\tau_{21}$ from the QCD jet softdrop mass and \PT, yielding a mass and dijet invariant mass spectrum minimally sculpted by a cut on the $\tau_{21}^{DDT}$ tagging variable. This tagger will be further explored, and described in detail, in the context of Search III in Section~\ref{sec:searchIII:ddt}.\par
+The new PUPPI softdrop based V tagger uses a softdrop jet mass window of $65 \GeV < m_{SD} < 105 \GeV$ in combination with a selection of PUPPI $\tau_{21}<0.4$. The CMS default is to compute the \nsubj variable starting from un-groomed jets, but it can also be computed from already groomed jets. I briefly studied calculating \nsubj starting from soft-dropped jets, summarized in Appendix~\ref{app:vtag:dichroic}, where I found a small gain in performance when calculating \nsubj starting from jets groomed with softdrop $\beta=0$. This is something that needs further study, and is left for future work. We compare the performance of the PUPPI softdrop based V tagger used together with PUPPI \nsubj or a "DDT-transformed" \nsubj, as described in Section~\ref{sec:objreco:ddt}, to that of the CHS pruning-based tagger used in Search I.\par
 The background rejection efficiency for QCD light-flavor jets as a function of W-jet signal efficiency is shown in Figure~\ref{fig:searchII:roc}.
 The efficiency is measured after requiring a softdrop jet mass selection of $65 \GeV < m_{SD} < 105 \GeV$, while scanning the cut on \nsubj.
 \begin{figure}[h!]
@@ -261,7 +255,7 @@ The W-tagging efficiency scale factors, jet-mass and resolution scales affect th
 
 \subsection{W-tagging mistag rate measurement} 
 \label{sec:searchII:wmistag}
-The W-tagging light-flavor jet mistagging rate is measured in a QCD dijet-enriched region in data and is compared to the prediction from QCD MC using three different combinations of generators: \HERWIG{++}, \PYTHIA{8}, and \MADGRAPH{}+\PYTHIA{8}.
+In order to understand how the modeling of substructure variables differ between MC generators, the W-tagging light-flavor jet mistagging rate is measured in a QCD dijet-enriched region in data, and is compared to the prediction from QCD MC using three different combinations of generators: \HERWIG{++}, \PYTHIA{8}, and \MADGRAPH{}+\PYTHIA{8}.
 Figure~\ref{fig:searchII:fakerate} shows the mistagging rate as a function of jet \PT for three different taggers: CHS pruning and \nsubj, PUPPI softdrop and \nsubj, and PUPPI softdrop and \ddt.
 \begin{figure}[h!]
 \centering

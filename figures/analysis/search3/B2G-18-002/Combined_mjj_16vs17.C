@@ -1,8 +1,8 @@
 void Combined_mjj_16vs17()
 {
 //=========Macro generated from canvas: c1/c1
-//=========  (Tue Feb 12 11:57:20 2019) by ROOT version6.06/01
-   TCanvas *c1 = new TCanvas("c1", "c1",0,0,800,600);
+//=========  (Mon Feb 25 14:22:36 2019) by ROOT version6.06/01
+   TCanvas *c1 = new TCanvas("c1", "c1",50,72,800,600);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
    c1->SetHighLightColor(2);
@@ -591,6 +591,288 @@ void Combined_mjj_16vs17()
    
    grae->Draw("mp");
    
+   Double_t _fx3003[39] = {
+   232,
+   257,
+   283,
+   310.5,
+   339.5,
+   370,
+   402.5,
+   436,
+   471,
+   507.5,
+   545.5,
+   585.5,
+   627.5,
+   671,
+   716.5,
+   764,
+   813,
+   864,
+   917,
+   972,
+   1029,
+   1088,
+   1149.5,
+   1213.5,
+   1279.5,
+   1348,
+   1419,
+   1492.5,
+   1568.5,
+   1647,
+   1728.5,
+   1813,
+   1900.5,
+   1991,
+   2084.5,
+   2181.5,
+   2281.5,
+   2385,
+   2492};
+   Double_t _fy3003[39] = {
+   0.25,
+   0.2058824,
+   0.46875,
+   0.4132231,
+   0.497076,
+   0.4494382,
+   0.4290323,
+   0.2869128,
+   0.1290323,
+   0.0817725,
+   0.08348658,
+   0.09983193,
+   0.1336406,
+   0.1891128,
+   0.2828045,
+   0.3746725,
+   0.5059821,
+   0.6323198,
+   0.7546053,
+   0.884646,
+   0.9426752,
+   0.9813857,
+   0.995092,
+   0.9971056,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1};
+   Double_t _felx3003[39] = {
+   12,
+   13,
+   13,
+   14.5,
+   14.5,
+   16,
+   16.5,
+   17,
+   18,
+   18.5,
+   19.5,
+   20.5,
+   21.5,
+   22,
+   23.5,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31.5,
+   32.5,
+   33.5,
+   35,
+   36,
+   37.5,
+   38.5,
+   40,
+   41.5,
+   43,
+   44.5,
+   46,
+   47.5,
+   49.5,
+   50.5,
+   53,
+   54};
+   Double_t _fely3003[39] = {
+   0.1520055,
+   0.06235348,
+   0.06114741,
+   0.04396061,
+   0.03802652,
+   0.0302236,
+   0.02788715,
+   0.01827368,
+   0.008999084,
+   0.00573308,
+   0.005206032,
+   0.005409455,
+   0.00609591,
+   0.007292013,
+   0.008859097,
+   0.01008061,
+   0.01116639,
+   0.01149228,
+   0.01115015,
+   0.009217533,
+   0.007289587,
+   0.004704521,
+   0.002934788,
+   0.002673823,
+   0.00200998,
+   0.00224572,
+   0.002693206,
+   0.003403257,
+   0.003617584,
+   0.00511568,
+   0.006469679,
+   0.006657123,
+   0.01098588,
+   0.01011534,
+   0.01700089,
+   0.01500281,
+   0.0206716,
+   0.02466578,
+   0.05582399};
+   Double_t _fehx3003[39] = {
+   12,
+   13,
+   13,
+   14.5,
+   14.5,
+   16,
+   16.5,
+   17,
+   18,
+   18.5,
+   19.5,
+   20.5,
+   21.5,
+   22,
+   23.5,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31.5,
+   32.5,
+   33.5,
+   35,
+   36,
+   37.5,
+   38.5,
+   40,
+   41.5,
+   43,
+   44.5,
+   46,
+   47.5,
+   49.5,
+   50.5,
+   53,
+   54};
+   Double_t _fehy3003[39] = {
+   0.2121077,
+   0.07342695,
+   0.06178145,
+   0.04490415,
+   0.03804911,
+   0.03047473,
+   0.02819103,
+   0.01874968,
+   0.009370334,
+   0.005988108,
+   0.00541051,
+   0.005588992,
+   0.00625684,
+   0.007438651,
+   0.0089726,
+   0.01015361,
+   0.01116242,
+   0.0113929,
+   0.01092675,
+   0.008809299,
+   0.006751617,
+   0.004035727,
+   0.00209438,
+   0.001641668,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0};
+   grae = new TGraphAsymmErrors(39,_fx3003,_fy3003,_felx3003,_fehx3003,_fely3003,_fehy3003);
+   grae->SetName("");
+   grae->SetTitle("");
+   grae->SetFillColor(1);
+
+   ci = TColor::GetColor("#bf812d");
+   grae->SetLineColor(ci);
+
+   ci = TColor::GetColor("#bf812d");
+   grae->SetMarkerColor(ci);
+   grae->SetMarkerStyle(24);
+   grae->SetMarkerSize(1.1);
+   
+   TH1F *Graph_Graph3003 = new TH1F("Graph_Graph3003","",100,0,2778.6);
+   Graph_Graph3003->SetMinimum(0);
+   Graph_Graph3003->SetMaximum(1.4);
+   Graph_Graph3003->SetDirectory(0);
+   Graph_Graph3003->SetStats(0);
+   Graph_Graph3003->SetLineStyle(0);
+   Graph_Graph3003->SetMarkerStyle(20);
+   Graph_Graph3003->GetXaxis()->SetTitle("m_{jj} (GeV)");
+   Graph_Graph3003->GetXaxis()->SetLabelFont(42);
+   Graph_Graph3003->GetXaxis()->SetLabelOffset(0.007);
+   Graph_Graph3003->GetXaxis()->SetLabelSize(0.05);
+   Graph_Graph3003->GetXaxis()->SetTitleSize(0.06);
+   Graph_Graph3003->GetXaxis()->SetTitleOffset(0.9);
+   Graph_Graph3003->GetXaxis()->SetTitleFont(42);
+   Graph_Graph3003->GetYaxis()->SetTitle("Efficiency");
+   Graph_Graph3003->GetYaxis()->SetLabelFont(42);
+   Graph_Graph3003->GetYaxis()->SetLabelOffset(0.007);
+   Graph_Graph3003->GetYaxis()->SetLabelSize(0.05);
+   Graph_Graph3003->GetYaxis()->SetTitleSize(0.06);
+   Graph_Graph3003->GetYaxis()->SetTitleFont(42);
+   Graph_Graph3003->GetZaxis()->SetLabelFont(42);
+   Graph_Graph3003->GetZaxis()->SetLabelOffset(0.007);
+   Graph_Graph3003->GetZaxis()->SetLabelSize(0.05);
+   Graph_Graph3003->GetZaxis()->SetTitleSize(0.06);
+   Graph_Graph3003->GetZaxis()->SetTitleFont(42);
+   grae->SetHistogram(Graph_Graph3003);
+   
+   grae->Draw("mp");
+   
    TLegend *leg = new TLegend(0.62,0.72,0.92,0.92,NULL,"brNDC");
    leg->SetBorderSize(0);
    leg->SetLineColor(1);
@@ -620,6 +902,18 @@ void Combined_mjj_16vs17()
    ci = TColor::GetColor("#bf812d");
    entry->SetMarkerColor(ci);
    entry->SetMarkerStyle(8);
+   entry->SetMarkerSize(1.1);
+   entry->SetTextFont(42);
+   entry=leg->AddEntry("","2017 (no Run B)","LEP");
+
+   ci = TColor::GetColor("#bf812d");
+   entry->SetLineColor(ci);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+
+   ci = TColor::GetColor("#bf812d");
+   entry->SetMarkerColor(ci);
+   entry->SetMarkerStyle(24);
    entry->SetMarkerSize(1.1);
    entry->SetTextFont(42);
    leg->Draw();
