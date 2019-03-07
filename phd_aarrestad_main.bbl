@@ -368,14 +368,6 @@ T.~Sjöstrand\hrefCMSnoop {}{ {et~al.}, ``{An Introduction to PYTHIA 8.2}'',}
   no.~3, 250 -- 303,
   \href{http://dx.doi.org/https://doi.org/10.1016/S0168-9002(03)01368-8}{\doi{https://doi.org/10.1016/S0168-9002(03)01368-8}}.
 
-\bibitem{Khachatryan:2015pea}
-\hrefCMSnoop {}{{CMS} Collaboration, ``Event generator tunes obtained from
-  underlying event and multiparton scattering measurements'',} \textit{ Eur.
-  Phys. J. C} \textbf{ 76} (2016) 155,
-  \href{http://dx.doi.org/10.1140/epjc/s10052-016-3988-x}{\doi{10.1140/epjc/s10052-016-3988-x}},
-\href{http://www.arXiv.org/abs/1512.00815}{\texttt{arXiv:1512.00815}}.
-%%CITATION = ARXIV:1512.00815;%%.
-
 \bibitem{Khachatryan:1700394}
 \href {https://cds.cern.ch/record/1700394}{{CMS} Collaboration, ``{Search for
   massive resonances in dijet systems containing jets tagged as W or Z boson
@@ -417,6 +409,14 @@ J.~Alwall\hrefCMSnoop {}{ {et~al.}, ``{The automated computation of tree-level
   \href{http://dx.doi.org/10.1016/j.cpc.2008.01.036}{\doi{10.1016/j.cpc.2008.01.036}},
 \href{http://www.arXiv.org/abs/0710.3820}{\texttt{arXiv:0710.3820}}.
 %%CITATION = ARXIV:0710.3820;%%.
+
+\bibitem{Khachatryan:2015pea}
+\hrefCMSnoop {}{{CMS} Collaboration, ``Event generator tunes obtained from
+  underlying event and multiparton scattering measurements'',} \textit{ Eur.
+  Phys. J. C} \textbf{ 76} (2016) 155,
+  \href{http://dx.doi.org/10.1140/epjc/s10052-016-3988-x}{\doi{10.1140/epjc/s10052-016-3988-x}},
+\href{http://www.arXiv.org/abs/1512.00815}{\texttt{arXiv:1512.00815}}.
+%%CITATION = ARXIV:1512.00815;%%.
 
 \bibitem{2011123}
 \hrefCMSnoop {}{S.~C. et~al., ``Search for resonances in the dijet mass
@@ -534,6 +534,43 @@ J.~A. Aguilar-Saavedra, ``Stealth bosons and where to find them'', 2018, \url
   \href{http://dx.doi.org/10.1140/epjc/s10052-018-5717-0}{\doi{10.1140/epjc/s10052-018-5717-0}},
 \href{http://www.arXiv.org/abs/1801.08129}{\texttt{arXiv:1801.08129}}.
 %%CITATION = ARXIV:1801.08129;%%.
+
+\bibitem{Kallweit:2014xda}
+S.~Kallweit\hrefCMSnoop {}{ {et~al.}, ``{NLO electroweak automation and precise
+  predictions for W+multijet production at the LHC}'',} \textit{ JHEP} \textbf{
+  04} (2015) 012,
+  \href{http://dx.doi.org/10.1007/JHEP04(2015)012}{\doi{10.1007/JHEP04(2015)012}},
+\href{http://www.arXiv.org/abs/1412.5157}{\texttt{arXiv:1412.5157}}.
+%%CITATION = ARXIV:1412.5157;%%.
+
+\bibitem{Kallweit:2015dum}
+S.~Kallweit\hrefCMSnoop {}{ {et~al.}, ``{NLO QCD+EW predictions for V+jets
+  including off-shell vector-boson decays and multijet merging}'',} \textit{
+  JHEP} \textbf{ 04} (2016) 021,
+  \href{http://dx.doi.org/10.1007/JHEP04(2016)021}{\doi{10.1007/JHEP04(2016)021}},
+\href{http://www.arXiv.org/abs/1511.08692}{\texttt{arXiv:1511.08692}}.
+%%CITATION = ARXIV:1511.08692;%%.
+
+\bibitem{Kallweit:2015fta}
+S.~Kallweit\href
+  {https://inspirehep.net/record/1372103/files/arXiv:1505.05704.pdf}{ {et~al.},
+  ``{NLO QCD+EW automation and precise predictions for V+multijet
+  production}'',} in \textit{ {Proceedings, 50th Rencontres de Moriond, QCD and
+  high energy interactions}}, p.~121.
+\newblock 2015.
+\newblock
+\href{http://www.arXiv.org/abs/1505.05704}{\texttt{arXiv:1505.05704}}.
+\newblock
+%%CITATION = ARXIV:1505.05704;%%.
+
+\bibitem{Sirunyan:2284496}
+\href {https://cds.cern.ch/record/2284496}{{CMS Collaboration} Collaboration,
+  ``{Inclusive search for a highly boosted Higgs boson decaying to a bottom
+  quark-antiquark pair}'',} \textit{ Phys. Rev. Lett.} \textbf{ 120} (Sep,
+  2017) 071802. 18 p. Replaced with the published version. Added the journal
+  reference and DOI. All the figures and tables can be found at
+  http://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-17-010
+  (CMS Public Pages).
 
 \bibitem{ATLAS-CONF-2018-016}
 \href {https://cds.cern.ch/record/2621302}{{ATLAS Collaboration} Collaboration,

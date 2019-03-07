@@ -49,7 +49,7 @@ This analysis was published in two steps: an early CMS physics analysis summary 
 As mentioned above, the analysis of the 2016 dataset was done in two steps corresponding to two different datasets: one analysis based on 12.9 \fbinv of early 2016 data, describing the new W-tagger and single V-tag category, and a second paper considering the full 2016 dataset, corresponding to 35.9 \fbinv. Both were collected at a center-of-mass energy of 13 TeV.\par
 The \BulkG and HVT signal samples are modeled in the same way as in 2015. The $\textrm{q}^*$ samples are simulated assuming unpolarized bosons and a compositeness scale $\Lambda$ set equal to the resonance mass. These are generated at leading order using \PYTHIA version 8.212~\cite{Sjostrand:2007gs}. \par
 The standard model background processes of QCD, W+jets, and Z+jets are all simulated to leading order. The W and Z+jets backgrounds are simulated with \amcatnlo~\cite{Alwall:2014hca,Alwall:2007fs}. Three different combinations of matrix element and shower generators are used for QCD as these predictions are known to differ: \PYTHIA-only, the leading order mode of \amcatnlo{} matched with \PYTHIA, and \HERWIG{++}~2.7.1~\cite{Bahr:2008pv} with the CUETHS1 tune~\cite{Khachatryan:2015pea}.
-
+\clearpage
 \section{Event selection}
 \subsection{Triggering}
 The triggers used in this analysis are the same ones as in 2015 (see Section~\ref{sec:searchI:trigger}), however, due to the new single V-tag analysis, the trigger turn-ons have been reevaluated separately with the requirement that either one or two jets have an offline softdrop jet mass above 65 \GeV. Figure~\ref{fig:searchII:trigger-fits} shows the trigger turn-on curves as a function of dijet invariant mass for jets passing one of the \HT-based triggers only (pink markers), one of the grooming triggers only (green markers), and when combining all of them (purple markers). The turn-on curves are shown for all jet pairs passing loose selections as described in Section \ref{sec:searchI:preselection} (top), and for jet pairs where one (bottom left) or both (bottom right) of the jets additionally are required to have a softdrop mass larger than 65 GeV.
@@ -72,7 +72,7 @@ The triggers used in this analysis are the same ones as in 2015 (see Section~\re
 \caption{Efficiency for the trigger requiring an online trimmed jet mass of at least 30 \GeV as a function of the pruned-jet (left) and softdrop-jet (right) mass for jets with $\PT > \unit{600}{\GeV}$.}
 \label{fig:searchII:grooming-mj-trigger}
 \end{figure}
-
+\clearpage
 \subsection{Preselection}
 \label{sec:searchII:presel}
 The same preselections as in Search I, described in Section~\ref{sec:searchI:preselection}, are used; we require two AK8 jets with CHS pileup subtraction applied, and that are required to pass the tight jet-ID requirement, $\PT>200 \GeV$ and $|\eta|<2.5$. The same selection requirement that suppresses t-channel QCD production is required, $|\Delta \eta|<1.3$, together with thresholds on the dijet invariant mass of 955 GeV for the double-tag and 990 GeV for the single-tag analyses. The jet \PT (top left), $\eta$ (top right), $\Delta \eta_{jj}$ (bottom left) and dijet invariant mass (bottom right) for the two leading jets in the event after loose preselections are applied is shown in Figure~\ref{fig:searchII:kinematics-all}.
@@ -87,7 +87,6 @@ The same preselections as in Search I, described in Section~\ref{sec:searchI:pre
 \end{figure}
 A large difference in slope in the jet \PT and dijet invariant mass spectrum depending on the QCD matrix element or shower generator is observed. Pure \PYTHIA QCD MC describes the data best, while \HERWIG{++} tends to underestimate and \amcatnlo{}+\PYTHIA tends to overestimate the number of high $\PT/\mjj$ jets. Comparing these distributions to the ones in Figure~\ref{fig:kinematics-all}, we see that \PYTHIA{8} now yields a far better description of the jet \PT and dijet invariant mass spectrum. This is most likely due to the change in tune from CUETP8M1 to CUETHS1~\cite{Khachatryan:2015pea}. Pure \PYTHIA{8} QCD MC is used for all background checks in this analysis. 
 
-\clearpage
 \section{Developing a new W-tagger}
 \label{sec:searchII:puppisoftdrop}
 As mentioned in the introduction to this chapter, studies had shown that the PUPPI pileup subtraction algorithm yielded superior resolution on large-cone jet observables like the jet mass. We therefore wanted to check whether the softdrop jet mass, and its observed sensitivity to the underlying event and pileup, would be improved if a better pileup subtraction algorithm was applied pre-clustering.\par
@@ -158,7 +157,7 @@ A closure test is performed in order to check that the corrected PUPPI softdrop 
 \caption{The corrected PUPPI softdrop jet mass for W, Z, and H jets from different signal samples with masses of 1 and 4 TeV.}
 \label{fig:search2:corrMass}
 \end{figure}
-
+\clearpage
 \subsection{W-tagging performance}
 \label{sec:searchII:vtagperf}
 The new PUPPI softdrop based V tagger uses a softdrop jet mass window of $65 \GeV < m_{SD} < 105 \GeV$ in combination with a selection of PUPPI $\tau_{21}<0.4$. The CMS default is to compute the \nsubj variable starting from un-groomed jets, but it can also be computed from already groomed jets. I briefly studied calculating \nsubj starting from soft-dropped jets, summarized in Appendix~\ref{app:vtag:dichroic}, where I found a small gain in performance when calculating \nsubj starting from jets groomed with softdrop $\beta=0$. This is something that needs further study, and is left for future work. We compare the performance of the PUPPI softdrop based V tagger used together with PUPPI \nsubj or a "DDT-transformed" \nsubj, as described in Section~\ref{sec:objreco:ddt}, to that of the CHS pruning-based tagger used in Search I.\par

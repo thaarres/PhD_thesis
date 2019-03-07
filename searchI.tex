@@ -283,7 +283,7 @@ We assume that the QCD multijets background can be described by a smooth, monoto
 \quad\quad\quad\quad
 \frac{dN}{d\mjj}= \frac{ P_0(1-\mjj/\sqrt{s})^{P_1} } { (\mjj/\sqrt{s})^{P_2} }\:\:,
 \end{equation}
-where $m$ is the dijet invariant mass, $\sqrt{s}$ is the center-of-mass energy, $P_0$ is a normalization parameter for the probability density function, and $P_1$ and $ P_2$ describe the shape. The number of fit parameters is decided through a Fisher's F-test~\cite{RePEc:bla:istatr:v:80:y:2012:i:3:p:491-491}. In this test, we start from the 2-parameter function and compare the goodness of fit (quantified through the sum of residuals) when fitting the data signal region with a 2, 3, 4 and 5 parameter function. The Fishers test statistic $\textrm{Fishers}_{xy}$ is
+where $m$ is the dijet invariant mass, $\sqrt{s}$ is the center-of-mass energy, $P_0$ is a normalization parameter for the probability density function, and $P_1$ and $ P_2$ describe the shape. The number of fit parameters is decided through a Fisher's F-test~\cite{RePEc:bla:istatr:v:80:y:2012:i:3:p:491-491}. In this test, we start from the 2-parameter function and compare the goodness of fit (quantified through the sum of residuals) when fitting the data signal region with a 2, 3, 4 and 5 parameter function. The Fishers test statistic is
 \begin{equation}
 \textrm{Fishers}_{12}=\frac{ \frac{RSS_1-RSS_2}{p_2-p_1}}{\frac{RSS_2}{n-p2}},
 \end{equation}
@@ -298,14 +298,13 @@ where $P_3$ and $P_4$ are additional free parameters. As an additional crosschec
 \label{eq:dijet4}
 \frac{dN}{d\mjj} = \frac{ P_0(1-\mjj / \sqrt{s}+P_3(\mjj / \sqrt{s})^2)^{P_1} } { (\mjj/\sqrt{s})^{P_2} }.
 \end{equation}
-The fit range is chosen such that it starts where the trigger efficiency has reached its plateau to avoid bias from trigger inefficiency, and extends to the bin after the highest $m_{VV}$ mass point. The binning chosen for the fit follows the detector resolution as in Refs.~\cite{Chatrchyan:2012ypy,CMS-PAS-EXO-12-059}, and is referred to as the "dijet binning". In units of \GeV, the binning is as follows:
+The fit range is chosen such that it starts where the trigger efficiency has reached its plateau to avoid bias from trigger inefficiency, and extends to the bin after the highest $m_{VV}$ mass point. The binning chosen for the fit follows the detector resolution as in Refs.~\cite{Chatrchyan:2012ypy,CMS-PAS-EXO-12-059}, and is referred to as the "dijet binning". In units of \GeV, the binning is as follows:\newline
 
-\noindent Dijet binning = 1000,1058, 1126, 1181, 1246, 1313, 1383, 1455, 1530, 1607, 1687, 1770, 1856, 1945, \\
-2037, 2132, 2231, 2332, 2438, 2546, 2659, 2775, 2895, 3019, 3147, 3279, 3416, 3558, 3704, \\
+\noindent Dijet binning = 1000,1058, 1126, 1181, 1246, 1313, 1383, 1455, 1530, 1607, 1687, 1770, 1856,\\
+1945, 2037, 2132, 2231, 2332, 2438, 2546, 2659, 2775, 2895, 3019, 3147, 3279, 3416, 3558, 3704, \\
 3854, 4010, 4171, 4337, 4509, 4686, 4869, 5058, 5253, 5500.\newline
 
-Before unblinding the signal region, we check that the QCD dijet invariant mass spectrum is expected to be smooth from the distribution in QCD MC as well as exercise the F-test in QCD MC and in a data sideband.\par
-The fits to data in the signal region using the different fit functions are shown in Figure \ref{fig:searchI:fit-dataVV}, and the corresponding F-test results are given in Tables~\ref{tab:WW_enriched} through~\ref{tab:ZZ_enriched}. The findings can be summarized as follows: for the WW enriched category, a 2-parameter fit is sufficient to describe the data in both the high- and low-purity categories. In the WZ category, a 2-parameter fit is sufficient in the high-purity category, while three parameters are needed for the low-purity category. For the ZZ category, a 3-parameter fit is needed for both purity categories. The 2- and 3-parameter fit functions as defined in Equation \ref{eq:dijet2} will therefore be used to model the background component in the simultaneous signal and background fit.
+Before unblinding the signal region, we check that the QCD dijet invariant mass spectrum is expected to be smooth from the distribution in QCD MC as well as exercise the F-test in QCD MC and in a data sideband. The fits to data in the signal region using the different fit functions are shown in Figure \ref{fig:searchI:fit-dataVV}, and the corresponding F-test results are given in Tables~\ref{tab:WW_enriched} through~\ref{tab:ZZ_enriched}. The findings can be summarized as follows: for the WW enriched category, a 2-parameter fit is sufficient to describe the data in both the high- and low-purity categories. In the WZ category, a 2-parameter fit is sufficient in the high-purity category, while three parameters are needed for the low-purity category. For the ZZ category, a 3-parameter fit is needed for both purity categories. The 2- and 3-parameter fit functions as defined in Equation \ref{eq:dijet2} will therefore be used to model the background component in the simultaneous signal and background fit.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.32\textwidth]{figures/analysis/search1/AN-15-211/ftest/no5par/WWHP_fitComp.pdf}
