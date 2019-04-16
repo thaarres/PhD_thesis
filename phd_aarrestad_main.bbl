@@ -175,9 +175,7 @@ A.~Dominguez\href {https://cds.cern.ch/record/1481838}{ {et~al.}, ``{CMS
 \bibitem{Kim:1477844}
 \href {https://cds.cern.ch/record/1477844}{{CMS} Collaboration, ``{CMS
   reconstruction improvement for the muon tracking by the RPC chambers}'',}
-  \textit{ PoS} \textbf{ RPC2012} (Sep, 2012) 045. 9 p. Presented by Minsuk Kim
-  at the XI workshop on Resistive Plate Chambers and Related Detectors -
-  RPC2012, INFN Laboratori Nazionali di Frascati Italy, February 5-10, 2012.
+  \textit{ PoS} \textbf{ RPC2012} (Sep, 2012) 045. 9 p.
 
 \bibitem{CMSlumi}
 CMS, ``CMS Luminosity - public results'', 2018 (accessed December 11, 2018),
@@ -440,10 +438,10 @@ J.~Alwall\hrefCMSnoop {}{ {et~al.}, ``{The automated computation of tree-level
 %%CITATION = ARXIV:1212.1910;%%.
 
 \bibitem{CMS-PAS-EXO-12-059}
-\href {https://cds.cern.ch/record/1519066}{{CMS Collaboration} Collaboration,
-  ``{Search for Narrow Resonances using the Dijet Mass Spectrum with 19.6fb-1
-  of pp Collisions at sqrts=8 TeV}'',} Technical Report CMS-PAS-EXO-12-059,
-  CERN, Geneva, 2013.
+\href {https://cds.cern.ch/record/1519066}{{CMS} Collaboration, ``{Search for
+  Narrow Resonances using the Dijet Mass Spectrum with 19.6fb-1 of pp
+  Collisions at 8 TeV}'',} Technical Report CMS-PAS-EXO-12-059, CERN, Geneva,
+  2013.
 
 \bibitem{RePEc:bla:istatr:v:80:y:2012:i:3:p:491-491}
 \href
@@ -464,10 +462,10 @@ J.~Alwall\hrefCMSnoop {}{ {et~al.}, ``{The automated computation of tree-level
   no.~05, P05011.
 
 \bibitem{CMS-PAS-B2G-16-021}
-\href {http://cds.cern.ch/record/2239381}{{CMS Collaboration} Collaboration,
-  ``{Search for massive resonances decaying into WW, WZ, ZZ, qW and qZ in the
-  dijet final state at $\sqrt{s} = 13~\mathrm{TeV}$ using 2016 data}'',}
-  Technical Report CMS-PAS-B2G-16-021, CERN, Geneva, 2016.
+\href {http://cds.cern.ch/record/2239381}{{CMS} Collaboration, ``{Search for
+  massive resonances decaying into WW, WZ, ZZ, qW and qZ in the dijet final
+  state at $\sqrt{s} = 13~\mathrm{TeV}$ using 2016 data}'',} Technical Report
+  CMS-PAS-B2G-16-021, CERN, Geneva, 2016.
 
 \bibitem{CLs}
 \hrefCMSnoop {}{G.~Cowan, K.~Cranmer, E.~Gross, and O.~Vitells, ``Asymptotic
@@ -498,15 +496,15 @@ J.~Alwall\hrefCMSnoop {}{ {et~al.}, ``{The automated computation of tree-level
   \href{http://dx.doi.org/10.1103/PhysRevD.42.815}{\doi{10.1103/PhysRevD.42.815}}.
 
 \bibitem{PhysRevD.97.072006}
-\hrefCMSnoop {}{{CMS Collaboration} Collaboration, ``Search for massive
-  resonances decaying into $WW$, $WZ$, $ZZ$, $qW$, and $qZ$ with dijet final
-  states at $\sqrt{s}=13\text{ }\text{ }\mathrm{TeV}$'',} \textit{ Phys. Rev.
-  D} \textbf{ 97} (Apr, 2018) 072006,
+\hrefCMSnoop {}{{CMS} Collaboration, ``Search for massive resonances decaying
+  into $WW$, $WZ$, $ZZ$, $qW$, and $qZ$ with dijet final states at
+  $\sqrt{s}=13\text{ }\text{ }\mathrm{TeV}$'',} \textit{ Phys. Rev. D} \textbf{
+  97} (Apr, 2018) 072006,
   \href{http://dx.doi.org/10.1103/PhysRevD.97.072006}{\doi{10.1103/PhysRevD.97.072006}}.
 
 \bibitem{CMS-PAS-JME-16-003}
-\href {http://cds.cern.ch/record/2256875}{{CMS Collaboration} Collaboration,
-  ``{Jet algorithms performance in 13 TeV data}'',} Technical Report
+\href {http://cds.cern.ch/record/2256875}{{CMS} Collaboration, ``{Jet
+  algorithms performance in 13 TeV data}'',} Technical Report
   CMS-PAS-JME-16-003, CERN, Geneva, 2017.
 
 \bibitem{Alwall:2007fs}
@@ -564,19 +562,15 @@ S.~Kallweit\href
 %%CITATION = ARXIV:1505.05704;%%.
 
 \bibitem{Sirunyan:2284496}
-\href {https://cds.cern.ch/record/2284496}{{CMS Collaboration} Collaboration,
-  ``{Inclusive search for a highly boosted Higgs boson decaying to a bottom
-  quark-antiquark pair}'',} \textit{ Phys. Rev. Lett.} \textbf{ 120} (Sep,
-  2017) 071802. 18 p. Replaced with the published version. Added the journal
-  reference and DOI. All the figures and tables can be found at
-  http://cms-results.web.cern.ch/cms-results/public-results/publications/HIG-17-010
-  (CMS Public Pages).
+\href {https://cds.cern.ch/record/2284496}{{CMS} Collaboration, ``{Inclusive
+  search for a highly boosted Higgs boson decaying to a bottom quark-antiquark
+  pair}'',} \textit{ Phys. Rev. Lett.} \textbf{ 120} (Sep, 2017) 071802. 18 p.
 
 \bibitem{ATLAS-CONF-2018-016}
-\href {https://cds.cern.ch/record/2621302}{{ATLAS Collaboration} Collaboration,
-  ``{Search for diboson resonances in hadronic final states in 79.8 fb$^{-1}$
-  of $pp$ collisions at $\sqrt{s} = 13$ TeV with the ATLAS detector}'',}
-  Technical Report ATLAS-CONF-2018-016, CERN, Geneva, Jun, 2018.
+\href {https://cds.cern.ch/record/2621302}{{ATLAS} Collaboration, ``{Search for
+  diboson resonances in hadronic final states in 79.8 fb$^{-1}$ of $pp$
+  collisions at $\sqrt{s} = 13$ TeV with the ATLAS detector}'',} Technical
+  Report ATLAS-CONF-2018-016, CERN, Geneva, Jun, 2018.
 
 \bibitem{Heimel:2018mkt}
 \hrefCMSnoop {}{T.~Heimel, G.~Kasieczka, T.~Plehn, and J.~M. Thompson, ``{QCD
@@ -614,7 +608,6 @@ I.~Goodfellow, Y.~Bengio, and A.~Courville, ``Deep Learning''.
 \bibitem{tensorflow2015-whitepaper}
 \href {http://tensorflow.org/}{M.~A. et~al, ``{TensorFlow}: Large-Scale Machine
   Learning on Heterogeneous Systems'',} 2015.
-\newblock Software available from tensorflow.org.
 
 \bibitem{Salam:2016yht}
 \hrefCMSnoop {}{G.~P. Salam, L.~Schunk, and G.~Soyez, ``{Dichroic subjettiness
